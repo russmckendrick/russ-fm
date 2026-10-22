@@ -114,18 +114,8 @@
   },
   "name": "Nick Mason",
   "popularity": 29,
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/1e/99/811e9991-3d65-a4cc-d6ed-5ba289bcd04f/190295616878.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Rock"
-      ],
-      "id": "1182774",
-      "name": "Nick Mason",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/nick-mason/1182774"
-    },
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='1182774', url='https://music.apple.com/gb/artist/nick-mason/1182774', name='Nick Mason', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/1e/99/811e9991-3d65-a4cc-d6ed-5ba289bcd04f/190295616878.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1182774', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1182774', 'attributes': {'name': 'Nick Mason', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/1e/99/811e9991-3d65-a4cc-d6ed-5ba289bcd04f/190295616878.jpg/{w}x{h}ac.jpg', 'bgColor': '181300', 'textColor1': 'aece4e', 'textColor2': 'd2acd5', 'textColor3': '90a83e', 'textColor4': 'ad8eaa'}, 'url': 'https://music.apple.com/gb/artist/nick-mason/1182774'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1182774/albums', 'data': [{'id': '1499522557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1499522557'}, {'id': '1499522557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1499522557'}, {'id': '1659441385', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1659441385'}, {'id': '1393133766', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1393133766'}, {'id': '1473184698', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1473184698'}, {'id': '1394515037', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1394515037'}, {'id': '991559886', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991559886'}, {'id': '1397421640', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1397421640'}, {'id': '1443198156', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443198156'}, {'id': '1517520550', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517520550'}, {'id': '1467956275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1467956275'}, {'id': '1812940104', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812940104'}, {'id': '1812939291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939291'}, {'id': '1812939537', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939537'}, {'id': '1812939768', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939768'}, {'id': '1811407208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811407208'}]}}})",
     "discogs": {
       "cover_image": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
       "fetch_timestamp": "2025-07-06T13:50:00Z",
@@ -453,106 +443,349 @@
         "https://musicbrainz.org/artist/d6c37074-0155-46a3-8af2-338a4f625afc"
       ]
     },
-    "lastfm": {
-      "bio_content": "Nicholas Berkeley ('Nick') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\n\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes as \"the Downshire Hills\" - as a district of Birmingham) and attended Frensham Heights boarding school, Surrey. He later studied at the Regent Street Polytechnic, where he teamed up with Roger Waters, Bob Klose and Richard Wright in 1964 to form Sigma 6. <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Nicholas Berkeley ('Nick') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\n\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 19305,
-      "mbid": "d6c37074-0155-46a3-8af2-338a4f625afc",
-      "name": "Nick Mason",
-      "playcount": 161816,
-      "similar_artists": [
-        {
-          "name": "Richard Wright",
-          "url": "https://www.last.fm/music/Richard+Wright"
-        },
-        {
-          "name": "Roger Waters",
-          "url": "https://www.last.fm/music/Roger+Waters"
-        },
-        {
-          "name": "Syd Barrett",
-          "url": "https://www.last.fm/music/Syd+Barrett"
-        },
-        {
-          "name": "Robert Wyatt",
-          "url": "https://www.last.fm/music/Robert+Wyatt"
-        },
-        {
-          "name": "Pink Floyd",
-          "url": "https://www.last.fm/music/Pink+Floyd"
-        }
-      ],
-      "tags": [
-        "Psychedelic Rock",
-        "experimental",
-        "Progressive rock",
-        "Jazz Rock",
-        "classic rock"
-      ],
-      "url": "https://www.last.fm/music/Nick+Mason"
+    "identity": {
+      "musicbrainz_id": "d6c37074-0155-46a3-8af2-338a4f625afc",
+      "resolved_at": "2026-10-22T14:09:42.379469",
+      "wikidata_id": "Q192936",
+      "wikipedia_title": "Nick Mason"
     },
-    "spotify": {
-      "followers": 17113,
-      "genres": [
-        "progressive rock",
-        "art rock"
-      ],
-      "id": "4XARewdsOxt5tw3uROBGHj",
+    "lastfm": "ArtistLastFmData(name='Nick Mason', url='https://www.last.fm/music/Nick+Mason', mbid='d6c37074-0155-46a3-8af2-338a4f625afc', listeners=19305, playcount=161816, bio_summary='Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>', bio_content='Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes as \"the Downshire Hills\" - as a district of Birmingham) and attended Frensham Heights boarding school, Surrey. He later studied at the Regent Street Polytechnic, where he teamed up with Roger Waters, Bob Klose and Richard Wright in 1964 to form Sigma 6. <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Psychedelic Rock', 'experimental', 'Progressive rock', 'Jazz Rock', 'classic rock'], similar_artists=[{'name': 'Richard Wright', 'url': 'https://www.last.fm/music/Richard+Wright'}, {'name': 'Roger Waters', 'url': 'https://www.last.fm/music/Roger+Waters'}, {'name': 'Syd Barrett', 'url': 'https://www.last.fm/music/Syd+Barrett'}, {'name': 'Robert Wyatt', 'url': 'https://www.last.fm/music/Robert+Wyatt'}, {'name': 'Pink Floyd', 'url': 'https://www.last.fm/music/Pink+Floyd'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Nick Mason', 'mbid': 'd6c37074-0155-46a3-8af2-338a4f625afc', 'url': 'https://www.last.fm/music/Nick+Mason', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '19305', 'playcount': '161816'}, 'similar': {'artist': [{'name': 'Richard Wright', 'url': 'https://www.last.fm/music/Richard+Wright', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Roger Waters', 'url': 'https://www.last.fm/music/Roger+Waters', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Syd Barrett', 'url': 'https://www.last.fm/music/Syd+Barrett', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Robert Wyatt', 'url': 'https://www.last.fm/music/Robert+Wyatt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pink Floyd', 'url': 'https://www.last.fm/music/Pink+Floyd', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Jazz Rock', 'url': 'https://www.last.fm/tag/Jazz+Rock'}, {'name': 'classic rock', 'url': 'https://www.last.fm/tag/classic+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Nick+Mason/+wiki'}}, 'published': '16 Aug 2006, 02:29', 'summary': 'Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>', 'content': 'Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes as \"the Downshire Hills\" - as a district of Birmingham) and attended Frensham Heights boarding school, Surrey. He later studied at the Regent Street Polytechnic, where he teamed up with Roger Waters, Bob Klose and Richard Wright in 1964 to form Sigma 6. <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='4XARewdsOxt5tw3uROBGHj', url='https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj', name='Nick Mason', popularity=29, followers=17113, genres=['progressive rock', 'art rock'], images=[{'url': 'https://i.scdn.co/image/60dfe17ca31aab7552298dae88233d92eeb60a85', 'height': 1043, 'width': 1000}, {'url': 'https://i.scdn.co/image/ddafcdf2d18984ee9fd5d08bfffe488e98087ab7', 'height': 668, 'width': 640}, {'url': 'https://i.scdn.co/image/60bbc34290f2eb60fe565065dcd8fcabf25c6a7e', 'height': 209, 'width': 200}, {'url': 'https://i.scdn.co/image/4acf8b84e6a61a68c9b63515ee4d2220de0e26a8', 'height': 67, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj'}, 'followers': {'href': None, 'total': 17113}, 'genres': ['progressive rock', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj', 'id': '4XARewdsOxt5tw3uROBGHj', 'images': [{'url': 'https://i.scdn.co/image/60dfe17ca31aab7552298dae88233d92eeb60a85', 'height': 1043, 'width': 1000}, {'url': 'https://i.scdn.co/image/ddafcdf2d18984ee9fd5d08bfffe488e98087ab7', 'height': 668, 'width': 640}, {'url': 'https://i.scdn.co/image/60bbc34290f2eb60fe565065dcd8fcabf25c6a7e', 'height': 209, 'width': 200}, {'url': 'https://i.scdn.co/image/4acf8b84e6a61a68c9b63515ee4d2220de0e26a8', 'height': 67, 'width': 64}], 'name': 'Nick Mason', 'popularity': 29, 'type': 'artist', 'uri': 'spotify:artist:4XARewdsOxt5tw3uROBGHj'})"
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='1182774', url='https://music.apple.com/gb/artist/nick-mason/1182774', name='Nick Mason', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/1e/99/811e9991-3d65-a4cc-d6ed-5ba289bcd04f/190295616878.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1182774', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1182774', 'attributes': {'name': 'Nick Mason', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/1e/99/811e9991-3d65-a4cc-d6ed-5ba289bcd04f/190295616878.jpg/{w}x{h}ac.jpg', 'bgColor': '181300', 'textColor1': 'aece4e', 'textColor2': 'd2acd5', 'textColor3': '90a83e', 'textColor4': 'ad8eaa'}, 'url': 'https://music.apple.com/gb/artist/nick-mason/1182774'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1182774/albums', 'data': [{'id': '1499522557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1499522557'}, {'id': '1499522557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1499522557'}, {'id': '1659441385', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1659441385'}, {'id': '1393133766', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1393133766'}, {'id': '1473184698', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1473184698'}, {'id': '1394515037', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1394515037'}, {'id': '991559886', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991559886'}, {'id': '1397421640', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1397421640'}, {'id': '1443198156', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443198156'}, {'id': '1517520550', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517520550'}, {'id': '1467956275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1467956275'}, {'id': '1812940104', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812940104'}, {'id': '1812939291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939291'}, {'id': '1812939537', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939537'}, {'id': '1812939768', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812939768'}, {'id': '1811407208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811407208'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "246097",
       "images": [
         {
-          "height": 1043,
-          "url": "https://i.scdn.co/image/60dfe17ca31aab7552298dae88233d92eeb60a85",
-          "width": 1000
+          "height": 400,
+          "resource_url": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FU1H8KxnfVgsULfLJWWvwmkq2to8fMZZpa04jwQ7tis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+          "width": 600
         },
         {
-          "height": 668,
-          "url": "https://i.scdn.co/image/ddafcdf2d18984ee9fd5d08bfffe488e98087ab7",
-          "width": 640
+          "height": 256,
+          "resource_url": "https://i.discogs.com/gSk7ynyK4F5Aq3FkNI4KMGVB3P9c5HRB0_N1Vw6PG6M/rs:fit/g:sm/q:90/h:256/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gSk7ynyK4F5Aq3FkNI4KMGVB3P9c5HRB0_N1Vw6PG6M/rs:fit/g:sm/q:90/h:256/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xBWmCeJ_wXMGa9KbiHJ_Y2fdP7pV76MzZcWFnFkLK3U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+          "width": 456
         },
         {
-          "height": 209,
-          "url": "https://i.scdn.co/image/60bbc34290f2eb60fe565065dcd8fcabf25c6a7e",
+          "height": 294,
+          "resource_url": "https://i.discogs.com/IXylGGTyTO7vvfHpKEMJ91te-9ty22E5sunmbpu5YDY/rs:fit/g:sm/q:90/h:294/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IXylGGTyTO7vvfHpKEMJ91te-9ty22E5sunmbpu5YDY/rs:fit/g:sm/q:90/h:294/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/PZ_Nqb63aViM2rIEzhsgs5F_0YuNTU-EHYz5KaqvdBw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/057ME675sM69ML_-Y88p3ewESHZQLXXlGHO5riYhscw/rs:fit/g:sm/q:90/h:500/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/057ME675sM69ML_-Y88p3ewESHZQLXXlGHO5riYhscw/rs:fit/g:sm/q:90/h:500/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/F-hH-2ikfY9J8IvGWJSQnt1ql327GN70f_P3OUOyWzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+          "width": 394
+        },
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/Iykei3LCBBP6aI8_Li5S2GIwqpzwjJRBK5dn0xCL24A/rs:fit/g:sm/q:90/h:567/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Iykei3LCBBP6aI8_Li5S2GIwqpzwjJRBK5dn0xCL24A/rs:fit/g:sm/q:90/h:567/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bd93FNXDoPFvtlCAgR17rgxO-Z9AyE_2epSl-A3vR4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+          "width": 488
+        },
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/Lz_X_tHxmlotfHcidKxGL2M6eRYwzywPb0oOu_-7wug/rs:fit/g:sm/q:90/h:266/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Lz_X_tHxmlotfHcidKxGL2M6eRYwzywPb0oOu_-7wug/rs:fit/g:sm/q:90/h:266/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/kJS1ZA727-3W79luWWf8waWfkTwGgxT3ACzaKcz9QRM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+          "width": 248
+        },
+        {
+          "height": 358,
+          "resource_url": "https://i.discogs.com/9plLd3P2y76Ijgkjs1z5ZSy7WH6KdclxGy7QcCRguqM/rs:fit/g:sm/q:90/h:358/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9plLd3P2y76Ijgkjs1z5ZSy7WH6KdclxGy7QcCRguqM/rs:fit/g:sm/q:90/h:358/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ifw4X_EgR5FMtrMjkDffsggj034dT0jMLg2JHoAzpFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+          "width": 344
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/QpYb3UqIq9z3SpKS9ZZVTQ3uh0NsF0ef0F-LmPTA4GE/rs:fit/g:sm/q:90/h:225/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QpYb3UqIq9z3SpKS9ZZVTQ3uh0NsF0ef0F-LmPTA4GE/rs:fit/g:sm/q:90/h:225/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QvxQwt-rnuyT1zIiVSjDkgBe3o39YgKN114UPKoZqZU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
           "width": 200
         },
         {
-          "height": 67,
-          "url": "https://i.scdn.co/image/4acf8b84e6a61a68c9b63515ee4d2220de0e26a8",
-          "width": 64
+          "height": 350,
+          "resource_url": "https://i.discogs.com/rEc1-LeNHoH4ctNeS92JtQuRHcMnnxHk0UImMxjgvBY/rs:fit/g:sm/q:90/h:350/w:343/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rEc1-LeNHoH4ctNeS92JtQuRHcMnnxHk0UImMxjgvBY/rs:fit/g:sm/q:90/h:350/w:343/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FUqJro1oTPn_UPFNT-g0T1Psnj-hL9P6piLlIHAJ5q8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+          "width": 343
+        },
+        {
+          "height": 700,
+          "resource_url": "https://i.discogs.com/5pFEqeQEhKnZRGpsK9GN6OAKrDMDfV7RzLY_pCrNHBo/rs:fit/g:sm/q:90/h:700/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5pFEqeQEhKnZRGpsK9GN6OAKrDMDfV7RzLY_pCrNHBo/rs:fit/g:sm/q:90/h:700/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Q8qwsdWHamZ-YBaxicxEb_OYzCbKSq0tudSlnu-BGCk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+          "width": 499
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/Jm88DtlSCjmjjowabnNTbXmjt1mTrlzEYvK1eLspBGE/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Jm88DtlSCjmjjowabnNTbXmjt1mTrlzEYvK1eLspBGE/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/t9OqDHdSMMSeBxdZ96mNK8HQ0g42IkpWYcUv75eY2kQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2v0Iw206A1NQ38vbFBp_8EatLW0EWWChuXBHSJy-W9E/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2v0Iw206A1NQ38vbFBp_8EatLW0EWWChuXBHSJy-W9E/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0E8RJFjNwcoikRPeutR6LFdu53hAMj7N_z9OzUF_Woo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+          "width": 400
         }
       ],
+      "members": [],
       "name": "Nick Mason",
-      "popularity": 29,
-      "url": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
-    }
+      "namevariations": [
+        "Manson",
+        "Mason",
+        "Mason Nick",
+        "Mason, Nicholas",
+        "Mason, Nicholas Berkeley",
+        "Mason, Nick",
+        "Masoun",
+        "N B Mason",
+        "N Mason",
+        "N. B. Mason",
+        "N. Mason",
+        "N.M.",
+        "Nason",
+        "Nicholas B. Mason",
+        "Nicholas Berkele Mason",
+        "Nicholas Berkeley Mason",
+        "Nicholas Berkeley Nason",
+        "Nicholas Mason",
+        "Nick",
+        "Nicky Mason",
+        "Nicolas Berkeley Mason",
+        "Nicolas Mason",
+        "Wason",
+        "Мэйсон",
+        "Ник Мэйсон"
+      ],
+      "profile": "British drummer (born January 27, 1944 in Birmingham, United Kingdom), most famous as founding member of [a=Pink Floyd] in 1965. He is the only group member to have performed on each and every one of their albums. In 2018, he formed [a6711335] to perform Pink Floyd's early psychedelic material, prior to Dark Side Of The Moon. He's also famous for being a car fanatic and has published 3 books about cars (with Mark Hales) and one about Pink Floyd. He has collaborated with a number of jazz musicians, e.g. [a250036] or [a5049], and has produced a number of albums for other acts.\r\n[i]Do not confuse with the much younger American session drummer and percussionist with the name Nick Mason.[/i]",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 45467,
+            "name": "Pink Floyd",
+            "resource_url": "https://api.discogs.com/artists/45467",
+            "thumbnail_url": "https://i.discogs.com/wedRbMuPZEmazNablvznRFz56mJoyN2hwFGgt8V7Nho/rs:fit/g:sm/q:40/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1NDY3/LTE0MDU1OTMzMDIt/ODYzMy5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 763024,
+            "name": "Architectural Abdabs",
+            "resource_url": "https://api.discogs.com/artists/763024",
+            "thumbnail_url": "https://i.discogs.com/N5dE3CwkMsk1PtmChE8i_p9gJ4PWEJIZ4-Zt2QpdSmA/rs:fit/g:sm/q:40/h:171/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2MzAy/NC0xMTk4ODc3Njg5/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1088310,
+            "name": "The Screaming Abdabs",
+            "resource_url": "https://api.discogs.com/artists/1088310",
+            "thumbnail_url": "https://i.discogs.com/zxgdCBBiJUIQNWZIbFEPtjEv12MIXSA9P4pIkXUMMjY/rs:fit/g:sm/q:40/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwODgz/MTAtMTY3NjM4NzU1/Ni0xODc0LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4117564,
+            "name": "Seamus (11)",
+            "resource_url": "https://api.discogs.com/artists/4117564",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 6711335,
+            "name": "Nick Mason's Saucerful Of Secrets",
+            "resource_url": "https://api.discogs.com/artists/6711335",
+            "thumbnail_url": "https://i.discogs.com/Uvda2_3pDBaDyaV2VTykwsglrXj8pG79iZFPaky7sVw/rs:fit/g:sm/q:40/h:418/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MTEz/MzUtMTU4NTE1NzI1/Mi0yOTE4LmpwZWc.jpeg"
+          }
+        ],
+        "id": 246097,
+        "images": [
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/sAP9ZBuZtyENTwFy5I47-f73a0Jshy16g8NabJuksW8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/FU1H8KxnfVgsULfLJWWvwmkq2to8fMZZpa04jwQ7tis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 256,
+            "resource_url": "https://i.discogs.com/gSk7ynyK4F5Aq3FkNI4KMGVB3P9c5HRB0_N1Vw6PG6M/rs:fit/g:sm/q:90/h:256/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/gSk7ynyK4F5Aq3FkNI4KMGVB3P9c5HRB0_N1Vw6PG6M/rs:fit/g:sm/q:90/h:256/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/xBWmCeJ_wXMGa9KbiHJ_Y2fdP7pV76MzZcWFnFkLK3U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTQ3MTguanBlZw.jpeg",
+            "width": 456
+          },
+          {
+            "height": 294,
+            "resource_url": "https://i.discogs.com/IXylGGTyTO7vvfHpKEMJ91te-9ty22E5sunmbpu5YDY/rs:fit/g:sm/q:90/h:294/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IXylGGTyTO7vvfHpKEMJ91te-9ty22E5sunmbpu5YDY/rs:fit/g:sm/q:90/h:294/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/PZ_Nqb63aViM2rIEzhsgs5F_0YuNTU-EHYz5KaqvdBw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc4/LTY4MjUuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/057ME675sM69ML_-Y88p3ewESHZQLXXlGHO5riYhscw/rs:fit/g:sm/q:90/h:500/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/057ME675sM69ML_-Y88p3ewESHZQLXXlGHO5riYhscw/rs:fit/g:sm/q:90/h:500/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/F-hH-2ikfY9J8IvGWJSQnt1ql327GN70f_P3OUOyWzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTUx/LTM5NzkuanBlZw.jpeg",
+            "width": 394
+          },
+          {
+            "height": 567,
+            "resource_url": "https://i.discogs.com/Iykei3LCBBP6aI8_Li5S2GIwqpzwjJRBK5dn0xCL24A/rs:fit/g:sm/q:90/h:567/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Iykei3LCBBP6aI8_Li5S2GIwqpzwjJRBK5dn0xCL24A/rs:fit/g:sm/q:90/h:567/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/bd93FNXDoPFvtlCAgR17rgxO-Z9AyE_2epSl-A3vR4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMDg3/LTczMjAuanBlZw.jpeg",
+            "width": 488
+          },
+          {
+            "height": 266,
+            "resource_url": "https://i.discogs.com/Lz_X_tHxmlotfHcidKxGL2M6eRYwzywPb0oOu_-7wug/rs:fit/g:sm/q:90/h:266/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Lz_X_tHxmlotfHcidKxGL2M6eRYwzywPb0oOu_-7wug/rs:fit/g:sm/q:90/h:266/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/kJS1ZA727-3W79luWWf8waWfkTwGgxT3ACzaKcz9QRM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTEyMzQ4ODYy/LmpwZw.jpeg",
+            "width": 248
+          },
+          {
+            "height": 358,
+            "resource_url": "https://i.discogs.com/9plLd3P2y76Ijgkjs1z5ZSy7WH6KdclxGy7QcCRguqM/rs:fit/g:sm/q:90/h:358/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9plLd3P2y76Ijgkjs1z5ZSy7WH6KdclxGy7QcCRguqM/rs:fit/g:sm/q:90/h:358/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ifw4X_EgR5FMtrMjkDffsggj034dT0jMLg2JHoAzpFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTE0/LTM5MDIuanBlZw.jpeg",
+            "width": 344
+          },
+          {
+            "height": 225,
+            "resource_url": "https://i.discogs.com/QpYb3UqIq9z3SpKS9ZZVTQ3uh0NsF0ef0F-LmPTA4GE/rs:fit/g:sm/q:90/h:225/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/QpYb3UqIq9z3SpKS9ZZVTQ3uh0NsF0ef0F-LmPTA4GE/rs:fit/g:sm/q:90/h:225/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/QvxQwt-rnuyT1zIiVSjDkgBe3o39YgKN114UPKoZqZU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMTcxMTkwNjM5/LmpwZWc.jpeg",
+            "width": 200
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/rEc1-LeNHoH4ctNeS92JtQuRHcMnnxHk0UImMxjgvBY/rs:fit/g:sm/q:90/h:350/w:343/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rEc1-LeNHoH4ctNeS92JtQuRHcMnnxHk0UImMxjgvBY/rs:fit/g:sm/q:90/h:350/w:343/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/FUqJro1oTPn_UPFNT-g0T1Psnj-hL9P6piLlIHAJ5q8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTYy/LTE0NDIuanBlZw.jpeg",
+            "width": 343
+          },
+          {
+            "height": 700,
+            "resource_url": "https://i.discogs.com/5pFEqeQEhKnZRGpsK9GN6OAKrDMDfV7RzLY_pCrNHBo/rs:fit/g:sm/q:90/h:700/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5pFEqeQEhKnZRGpsK9GN6OAKrDMDfV7RzLY_pCrNHBo/rs:fit/g:sm/q:90/h:700/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Q8qwsdWHamZ-YBaxicxEb_OYzCbKSq0tudSlnu-BGCk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xMzQ1MTIyMTMz/LTU0MTYuanBlZw.jpeg",
+            "width": 499
+          },
+          {
+            "height": 394,
+            "resource_url": "https://i.discogs.com/Jm88DtlSCjmjjowabnNTbXmjt1mTrlzEYvK1eLspBGE/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Jm88DtlSCjmjjowabnNTbXmjt1mTrlzEYvK1eLspBGE/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/t9OqDHdSMMSeBxdZ96mNK8HQ0g42IkpWYcUv75eY2kQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDI1/LTk0NjYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/2v0Iw206A1NQ38vbFBp_8EatLW0EWWChuXBHSJy-W9E/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/2v0Iw206A1NQ38vbFBp_8EatLW0EWWChuXBHSJy-W9E/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0E8RJFjNwcoikRPeutR6LFdu53hAMj7N_z9OzUF_Woo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ2MDQ2/LTU0NjUuanBlZw.jpeg",
+            "width": 400
+          }
+        ],
+        "name": "Nick Mason",
+        "namevariations": [
+          "Manson",
+          "Mason",
+          "Mason Nick",
+          "Mason, Nicholas",
+          "Mason, Nicholas Berkeley",
+          "Mason, Nick",
+          "Masoun",
+          "N B Mason",
+          "N Mason",
+          "N. B. Mason",
+          "N. Mason",
+          "N.M.",
+          "Nason",
+          "Nicholas B. Mason",
+          "Nicholas Berkele Mason",
+          "Nicholas Berkeley Mason",
+          "Nicholas Berkeley Nason",
+          "Nicholas Mason",
+          "Nick",
+          "Nicky Mason",
+          "Nicolas Berkeley Mason",
+          "Nicolas Mason",
+          "Wason",
+          "Мэйсон",
+          "Ник Мэйсон"
+        ],
+        "profile": "British drummer (born January 27, 1944 in Birmingham, United Kingdom), most famous as founding member of [a=Pink Floyd] in 1965. He is the only group member to have performed on each and every one of their albums. In 2018, he formed [a6711335] to perform Pink Floyd's early psychedelic material, prior to Dark Side Of The Moon. He's also famous for being a car fanatic and has published 3 books about cars (with Mark Hales) and one about Pink Floyd. He has collaborated with a number of jazz musicians, e.g. [a250036] or [a5049], and has produced a number of albums for other acts.\r\n[i]Do not confuse with the much younger American session drummer and percussionist with the name Nick Mason.[/i]",
+        "realname": "Nicholas Berkeley Mason",
+        "releases_url": "https://api.discogs.com/artists/246097/releases",
+        "resource_url": "https://api.discogs.com/artists/246097",
+        "uri": "https://www.discogs.com/artist/246097-Nick-Mason",
+        "urls": [
+          "https://www.facebook.com/NickMasonDrums/",
+          "https://www.imdb.com/name/nm0556885/",
+          "https://twitter.com/nickmasondrums",
+          "https://en.wikipedia.org/wiki/Nick_Mason",
+          "https://www.drummerworld.com/drummers/Nick_Mason.html",
+          "https://equipboard.com/pros/nick-mason",
+          "https://musicbrainz.org/artist/d6c37074-0155-46a3-8af2-338a4f625afc"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/246097",
+      "thumb": "https://i.discogs.com/FU1H8KxnfVgsULfLJWWvwmkq2to8fMZZpa04jwQ7tis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NjA5/Ny0xNjEyNDQ1OTc5/LTMyOTQuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/246097-Nick-Mason",
+      "urls": [
+        "https://www.facebook.com/NickMasonDrums/",
+        "https://www.imdb.com/name/nm0556885/",
+        "https://twitter.com/nickmasondrums",
+        "https://en.wikipedia.org/wiki/Nick_Mason",
+        "https://www.drummerworld.com/drummers/Nick_Mason.html",
+        "https://equipboard.com/pros/nick-mason",
+        "https://musicbrainz.org/artist/d6c37074-0155-46a3-8af2-338a4f625afc"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Nick Mason', url='https://www.last.fm/music/Nick+Mason', mbid='d6c37074-0155-46a3-8af2-338a4f625afc', listeners=19305, playcount=161816, bio_summary='Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>', bio_content='Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes as \"the Downshire Hills\" - as a district of Birmingham) and attended Frensham Heights boarding school, Surrey. He later studied at the Regent Street Polytechnic, where he teamed up with Roger Waters, Bob Klose and Richard Wright in 1964 to form Sigma 6. <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Psychedelic Rock', 'experimental', 'Progressive rock', 'Jazz Rock', 'classic rock'], similar_artists=[{'name': 'Richard Wright', 'url': 'https://www.last.fm/music/Richard+Wright'}, {'name': 'Roger Waters', 'url': 'https://www.last.fm/music/Roger+Waters'}, {'name': 'Syd Barrett', 'url': 'https://www.last.fm/music/Syd+Barrett'}, {'name': 'Robert Wyatt', 'url': 'https://www.last.fm/music/Robert+Wyatt'}, {'name': 'Pink Floyd', 'url': 'https://www.last.fm/music/Pink+Floyd'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Nick Mason', 'mbid': 'd6c37074-0155-46a3-8af2-338a4f625afc', 'url': 'https://www.last.fm/music/Nick+Mason', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '19305', 'playcount': '161816'}, 'similar': {'artist': [{'name': 'Richard Wright', 'url': 'https://www.last.fm/music/Richard+Wright', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Roger Waters', 'url': 'https://www.last.fm/music/Roger+Waters', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Syd Barrett', 'url': 'https://www.last.fm/music/Syd+Barrett', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Robert Wyatt', 'url': 'https://www.last.fm/music/Robert+Wyatt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pink Floyd', 'url': 'https://www.last.fm/music/Pink+Floyd', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Jazz Rock', 'url': 'https://www.last.fm/tag/Jazz+Rock'}, {'name': 'classic rock', 'url': 'https://www.last.fm/tag/classic+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Nick+Mason/+wiki'}}, 'published': '16 Aug 2006, 02:29', 'summary': 'Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>', 'content': 'Nicholas Berkeley (\\'Nick\\') Mason (born January 27, 1944 in Birmingham, England) is a musician and the drummer for Pink Floyd.. He is the only member of Pink Floyd with the distinction of having played on all their albums. He is well-known as an automobile collector and has also competed in racing, e.g. the 24 Hours of Le Mans.\\n\\nHe was brought up in Hampstead, London (many online biographies mistakenly cite the street address, Downshire Hill - sometimes as \"the Downshire Hills\" - as a district of Birmingham) and attended Frensham Heights boarding school, Surrey. He later studied at the Regent Street Polytechnic, where he teamed up with Roger Waters, Bob Klose and Richard Wright in 1964 to form Sigma 6. <a href=\"https://www.last.fm/music/Nick+Mason\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='4XARewdsOxt5tw3uROBGHj', url='https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj', name='Nick Mason', popularity=29, followers=17113, genres=['progressive rock', 'art rock'], images=[{'url': 'https://i.scdn.co/image/60dfe17ca31aab7552298dae88233d92eeb60a85', 'height': 1043, 'width': 1000}, {'url': 'https://i.scdn.co/image/ddafcdf2d18984ee9fd5d08bfffe488e98087ab7', 'height': 668, 'width': 640}, {'url': 'https://i.scdn.co/image/60bbc34290f2eb60fe565065dcd8fcabf25c6a7e', 'height': 209, 'width': 200}, {'url': 'https://i.scdn.co/image/4acf8b84e6a61a68c9b63515ee4d2220de0e26a8', 'height': 67, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj'}, 'followers': {'href': None, 'total': 17113}, 'genres': ['progressive rock', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj', 'id': '4XARewdsOxt5tw3uROBGHj', 'images': [{'url': 'https://i.scdn.co/image/60dfe17ca31aab7552298dae88233d92eeb60a85', 'height': 1043, 'width': 1000}, {'url': 'https://i.scdn.co/image/ddafcdf2d18984ee9fd5d08bfffe488e98087ab7', 'height': 668, 'width': 640}, {'url': 'https://i.scdn.co/image/60bbc34290f2eb60fe565065dcd8fcabf25c6a7e', 'height': 209, 'width': 200}, {'url': 'https://i.scdn.co/image/4acf8b84e6a61a68c9b63515ee4d2220de0e26a8', 'height': 67, 'width': 64}], 'name': 'Nick Mason', 'popularity': 29, 'type': 'artist', 'uri': 'spotify:artist:4XARewdsOxt5tw3uROBGHj'})"
   },
   "spotify_id": "4XARewdsOxt5tw3uROBGHj",
   "spotify_url": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj",
-  "updated_at": "2025-07-07T20:46:29.222812",
-  "wikipedia_url": null
+  "updated_at": "2026-10-22T14:09:42.379473",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Nick_Mason"
 }

@@ -8,7 +8,7 @@
       "discogs_id": "6089292",
       "discogs_original_name": "Henge",
       "id": null,
-      "lastfm_mbid": null,
+      "lastfm_mbid": "47b63ff9-7c33-4747-921b-7410f92adbb2",
       "name": "Henge",
       "role": "",
       "spotify_id": "5R09pajxQjiwdUH6Fw4yM5",
@@ -28,14 +28,14 @@
   "discogs_url": "https://www.discogs.com/release/26842730-Henge-3-Alpha-Test-4",
   "format_details": [
     {
-      "name": "Vinyl",
-      "qty": "1",
+      "colour": null,
       "descriptions": [
         "LP",
         "Album"
       ],
-      "text": null,
-      "colour": null
+      "name": "Vinyl",
+      "qty": "1",
+      "text": null
     }
   ],
   "formats": [
@@ -49,28 +49,28 @@
   "images": [
     {
       "height": 600,
-      "resource_url": "https://i.discogs.com/v4jZE3cxbC1FRIKRdvY_0tvph5qasU-Wpdw8wGaudgA/rs:fit/g:sm/q:90/h:600/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDMtMjM3Mi5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/v4jZE3cxbC1FRIKRdvY_0tvph5qasU-Wpdw8wGaudgA/rs:fit/g:sm/q:90/h:600/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDMtMjM3Mi5qcGVn.jpeg",
       "width": 585
     },
     {
       "height": 600,
-      "resource_url": "https://i.discogs.com/hEIStdUrguXYbhFb8Ovkotuzk68KobJiLlh3XHxmeHI/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMjM2OS5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/hEIStdUrguXYbhFb8Ovkotuzk68KobJiLlh3XHxmeHI/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMjM2OS5qcGVn.jpeg",
       "width": 597
     },
     {
       "height": 600,
-      "resource_url": "https://i.discogs.com/fZB7ZR698dATwGwoaevu0JVU1NPKpU9IrmMux-mMwJE/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMjY1OC5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/fZB7ZR698dATwGwoaevu0JVU1NPKpU9IrmMux-mMwJE/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMjY1OC5qcGVn.jpeg",
       "width": 584
     },
     {
       "height": 583,
-      "resource_url": "https://i.discogs.com/RlryH3TsG0trqHST9KNkdwL3pDoBbZCHiEYzV9L-8Zw/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMTYyMi5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/RlryH3TsG0trqHST9KNkdwL3pDoBbZCHiEYzV9L-8Zw/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2ODQy/NzMwLTE2ODIxNjQ1/MDQtMTYyMi5qcGVn.jpeg",
       "width": 600
@@ -96,7 +96,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T21:07:21.263889",
+    "processed_at": "2026-10-22T14:07:36.458050",
     "services_used": [
       "discogs",
       "apple_music",
@@ -109,599 +109,14 @@
   "release_name_spotify": "Alpha Test 4",
   "released": "2023",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/3a/e5/1f3ae5c6-daa2-0dde-05b0-16d9da9ac762/197545220366_cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2023 Cosmic Dross Records",
-      "editorial_notes": null,
-      "id": "1810716358",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "HENGE",
-        "artwork": {
-          "bgColor": "1a1d39",
-          "height": 3000,
-          "textColor1": "fcffff",
-          "textColor2": "cbcbd6",
-          "textColor3": "ced1d7",
-          "textColor4": "a8a8b6",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/3a/e5/1f3ae5c6-daa2-0dde-05b0-16d9da9ac762/197545220366_cover.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "℗ 2023 Cosmic Dross Records",
-        "genreNames": [
-          "Alternative",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Alpha Test 4",
-        "playParams": {
-          "id": "1810716358",
-          "kind": "album"
-        },
-        "recordLabel": "Singing Light Music / Wipe Out",
-        "releaseDate": "2023-07-21",
-        "trackCount": 10,
-        "upc": "197545220366",
-        "url": "https://music.apple.com/gb/album/alpha-test-4/1810716358"
-      },
-      "url": "https://music.apple.com/gb/album/alpha-test-4/1810716358"
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2023 Cosmic Dross Records",
-          "type": "C"
-        },
-        {
-          "text": "2023 Cosmic Dross Records",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "197545220366"
-      },
-      "id": "1fUjtuaKUxzS6b3bv1ZrFl",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27336d8dd60773ac4759a2f54a0",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0236d8dd60773ac4759a2f54a0",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485136d8dd60773ac4759a2f54a0",
-          "width": 64
-        }
-      ],
-      "label": "Singing Light Music / Wipe Out",
-      "popularity": 20,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-            },
-            "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-            "id": "5R09pajxQjiwdUH6Fw4yM5",
-            "name": "HENGE",
-            "type": "artist",
-            "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2023 Cosmic Dross Records",
-            "type": "C"
-          },
-          {
-            "text": "2023 Cosmic Dross Records",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "197545220366"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/1fUjtuaKUxzS6b3bv1ZrFl"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/1fUjtuaKUxzS6b3bv1ZrFl?market=US",
-        "id": "1fUjtuaKUxzS6b3bv1ZrFl",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27336d8dd60773ac4759a2f54a0",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0236d8dd60773ac4759a2f54a0",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485136d8dd60773ac4759a2f54a0",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Singing Light Music / Wipe Out",
-        "name": "Alpha Test 4",
-        "popularity": 20,
-        "release_date": "2023-07-21",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/1fUjtuaKUxzS6b3bv1ZrFl/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 167053,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1pzRps89TpWYQ9u4CxSfEb"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1pzRps89TpWYQ9u4CxSfEb",
-              "id": "1pzRps89TpWYQ9u4CxSfEb",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Get A Wriggle On",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:1pzRps89TpWYQ9u4CxSfEb"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 168320,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6T1snQHhNBp5fZbKBq9f1a"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6T1snQHhNBp5fZbKBq9f1a",
-              "id": "6T1snQHhNBp5fZbKBq9f1a",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Self Repair Protocol",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:6T1snQHhNBp5fZbKBq9f1a"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 170746,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1LPJxTXUajZbJxYzUoKc5z"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1LPJxTXUajZbJxYzUoKc5z",
-              "id": "1LPJxTXUajZbJxYzUoKc5z",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Wanderlust",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:1LPJxTXUajZbJxYzUoKc5z"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 163520,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3wP7tbEKMbMzqyjz3uygUI"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3wP7tbEKMbMzqyjz3uygUI",
-              "id": "3wP7tbEKMbMzqyjz3uygUI",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Tardigrades",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:3wP7tbEKMbMzqyjz3uygUI"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 221786,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4Nnl9nV2hKQNtL9DMjRsXH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4Nnl9nV2hKQNtL9DMjRsXH",
-              "id": "4Nnl9nV2hKQNtL9DMjRsXH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "DNA",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:4Nnl9nV2hKQNtL9DMjRsXH"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 181786,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3XdVzD7C2ADxglwIoCbWmG"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3XdVzD7C2ADxglwIoCbWmG",
-              "id": "3XdVzD7C2ADxglwIoCbWmG",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Altered State",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:3XdVzD7C2ADxglwIoCbWmG"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 189706,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/68weoduRHSs9GSin5V5TrF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/68weoduRHSs9GSin5V5TrF",
-              "id": "68weoduRHSs9GSin5V5TrF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ra",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:68weoduRHSs9GSin5V5TrF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 233533,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1cbw58XsaZ0WFrfSYJSfJL"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1cbw58XsaZ0WFrfSYJSfJL",
-              "id": "1cbw58XsaZ0WFrfSYJSfJL",
-              "is_local": false,
-              "is_playable": true,
-              "name": "First Encounter",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:1cbw58XsaZ0WFrfSYJSfJL"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 357946,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2pWrLML1kRjoUFBnVzxhdJ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2pWrLML1kRjoUFBnVzxhdJ",
-              "id": "2pWrLML1kRjoUFBnVzxhdJ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Alpha Test 4",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:2pWrLML1kRjoUFBnVzxhdJ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5",
-                  "id": "5R09pajxQjiwdUH6Fw4yM5",
-                  "name": "HENGE",
-                  "type": "artist",
-                  "uri": "spotify:artist:5R09pajxQjiwdUH6Fw4yM5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 284973,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6N8ANYNv0WvmgP2x7EgCVe"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6N8ANYNv0WvmgP2x7EgCVe",
-              "id": "6N8ANYNv0WvmgP2x7EgCVe",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Asteroid",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:6N8ANYNv0WvmgP2x7EgCVe"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 10
-        },
-        "type": "album",
-        "uri": "spotify:album:1fUjtuaKUxzS6b3bv1ZrFl"
-      },
-      "release_date": "2023-07-21",
-      "release_date_precision": "day",
-      "total_tracks": 10,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 167053,
-          "explicit": false,
-          "id": "1pzRps89TpWYQ9u4CxSfEb",
-          "name": "Get A Wriggle On",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 168320,
-          "explicit": false,
-          "id": "6T1snQHhNBp5fZbKBq9f1a",
-          "name": "Self Repair Protocol",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 170746,
-          "explicit": false,
-          "id": "1LPJxTXUajZbJxYzUoKc5z",
-          "name": "Wanderlust",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 163520,
-          "explicit": false,
-          "id": "3wP7tbEKMbMzqyjz3uygUI",
-          "name": "Tardigrades",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 221786,
-          "explicit": false,
-          "id": "4Nnl9nV2hKQNtL9DMjRsXH",
-          "name": "DNA",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 181786,
-          "explicit": false,
-          "id": "3XdVzD7C2ADxglwIoCbWmG",
-          "name": "Altered State",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 189706,
-          "explicit": false,
-          "id": "68weoduRHSs9GSin5V5TrF",
-          "name": "Ra",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 233533,
-          "explicit": false,
-          "id": "1cbw58XsaZ0WFrfSYJSfJL",
-          "name": "First Encounter",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 357946,
-          "explicit": false,
-          "id": "2pWrLML1kRjoUFBnVzxhdJ",
-          "name": "Alpha Test 4",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "5R09pajxQjiwdUH6Fw4yM5",
-              "name": "HENGE"
-            }
-          ],
-          "duration_ms": 284973,
-          "explicit": false,
-          "id": "6N8ANYNv0WvmgP2x7EgCVe",
-          "name": "Asteroid",
-          "preview_url": null,
-          "track_number": 10
-        }
-      ],
-      "url": "https://open.spotify.com/album/1fUjtuaKUxzS6b3bv1ZrFl"
-    },
+    "apple_music": "AppleMusicData(id='1810716358', url='https://music.apple.com/gb/album/alpha-test-4/1810716358', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/3a/e5/1f3ae5c6-daa2-0dde-05b0-16d9da9ac762/197545220366_cover.jpg/2000x2000bb.jpg', preview_url=None, copyright='℗ 2023 Cosmic Dross Records', editorial_notes=None, is_complete=True, content_rating=None, raw_data={'id': '1810716358', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810716358', 'attributes': {'copyright': '℗ 2023 Cosmic Dross Records', 'genreNames': ['Alternative', 'Music'], 'releaseDate': '2023-07-21', 'upc': '197545220366', 'isMasteredForItunes': False, 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/3a/e5/1f3ae5c6-daa2-0dde-05b0-16d9da9ac762/197545220366_cover.jpg/{w}x{h}bb.jpg', 'bgColor': '1a1d39', 'textColor1': 'fcffff', 'textColor2': 'cbcbd6', 'textColor3': 'ced1d7', 'textColor4': 'a8a8b6'}, 'playParams': {'id': '1810716358', 'kind': 'album'}, 'url': 'https://music.apple.com/gb/album/alpha-test-4/1810716358', 'recordLabel': 'Singing Light Music / Wipe Out', 'trackCount': 10, 'isCompilation': False, 'isSingle': False, 'name': 'Alpha Test 4', 'artistName': 'HENGE', 'isComplete': True}})",
     "perplexity": {
       "description": "Alpha Test 4 is Henge's third studio album, released in May 2023. The record blends progressive rock with electronic elements, creating an expansive sonic landscape that reflects the band's \"intergalactic prog-raver\" aesthetic. The album features eight tracks across two sides, with the first side presenting six dynamic compositions that establish the album's conceptual and musical foundation. Track titles like \"Tardigrades,\" \"DNA,\" and \"Altered State\" suggest thematic explorations of science and transformation, while songs such as \"Get A Wriggle On\" and \"Self Repair Protocol\" showcase the band's playful approach to complex arrangements.\n\nThe album represents a continuation of Henge's established sound within their discography, maintaining the psychedelic and progressive rock sensibilities that define their work. Released on vinyl through Singing Light Music, the album demonstrates the band's commitment to physical formats and their self-directed creative vision. The record's structure and instrumentation emphasize the interplay between organic rock elements and electronic textures, positioning it within the broader landscape of contemporary progressive rock.",
       "generated_at": "2025-11-27T11:14:05.701436",
       "model": "sonar",
       "source": "perplexity"
-    }
+    },
+    "spotify": "SpotifyData(id='1fUjtuaKUxzS6b3bv1ZrFl', url='https://open.spotify.com/album/1fUjtuaKUxzS6b3bv1ZrFl', preview_url=None, popularity=20, album_type='album', total_tracks=10, release_date='2023-07-21', release_date_precision='day', available_markets=[], external_ids={'upc': '197545220366'}, images=[{'url': 'https://i.scdn.co/image/ab67616d0000b27336d8dd60773ac4759a2f54a0', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0236d8dd60773ac4759a2f54a0', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485136d8dd60773ac4759a2f54a0', 'height': 64, 'width': 64}], label='Singing Light Music / Wipe Out', copyrights=[{'text': '2023 Cosmic Dross Records', 'type': 'C'}, {'text': '2023 Cosmic Dross Records', 'type': 'P'}], tracks=[{'id': '1pzRps89TpWYQ9u4CxSfEb', 'name': 'Get A Wriggle On', 'duration_ms': 167053, 'track_number': 1, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '6T1snQHhNBp5fZbKBq9f1a', 'name': 'Self Repair Protocol', 'duration_ms': 168320, 'track_number': 2, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '1LPJxTXUajZbJxYzUoKc5z', 'name': 'Wanderlust', 'duration_ms': 170746, 'track_number': 3, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '3wP7tbEKMbMzqyjz3uygUI', 'name': 'Tardigrades', 'duration_ms': 163520, 'track_number': 4, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '4Nnl9nV2hKQNtL9DMjRsXH', 'name': 'DNA', 'duration_ms': 221786, 'track_number': 5, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '3XdVzD7C2ADxglwIoCbWmG', 'name': 'Altered State', 'duration_ms': 181786, 'track_number': 6, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '68weoduRHSs9GSin5V5TrF', 'name': 'Ra', 'duration_ms': 189706, 'track_number': 7, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '1cbw58XsaZ0WFrfSYJSfJL', 'name': 'First Encounter', 'duration_ms': 233533, 'track_number': 8, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '2pWrLML1kRjoUFBnVzxhdJ', 'name': 'Alpha Test 4', 'duration_ms': 357946, 'track_number': 9, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}, {'id': '6N8ANYNv0WvmgP2x7EgCVe', 'name': 'Asteroid', 'duration_ms': 284973, 'track_number': 10, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'HENGE', 'id': '5R09pajxQjiwdUH6Fw4yM5'}]}], explicit=False, raw_data={'album_type': 'album', 'total_tracks': 10, 'is_playable': True, 'external_urls': {'spotify': 'https://open.spotify.com/album/1fUjtuaKUxzS6b3bv1ZrFl'}, 'href': 'https://api.spotify.com/v1/albums/1fUjtuaKUxzS6b3bv1ZrFl?market=US', 'id': '1fUjtuaKUxzS6b3bv1ZrFl', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27336d8dd60773ac4759a2f54a0', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0236d8dd60773ac4759a2f54a0', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485136d8dd60773ac4759a2f54a0', 'height': 64, 'width': 64}], 'name': 'Alpha Test 4', 'release_date': '2023-07-21', 'release_date_precision': 'day', 'type': 'album', 'uri': 'spotify:album:1fUjtuaKUxzS6b3bv1ZrFl', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'tracks': {'href': 'https://api.spotify.com/v1/albums/1fUjtuaKUxzS6b3bv1ZrFl/tracks?offset=0&limit=50&market=US', 'limit': 50, 'next': None, 'offset': 0, 'previous': None, 'total': 10, 'items': [{'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 167053, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/1pzRps89TpWYQ9u4CxSfEb'}, 'href': 'https://api.spotify.com/v1/tracks/1pzRps89TpWYQ9u4CxSfEb', 'id': '1pzRps89TpWYQ9u4CxSfEb', 'is_playable': True, 'name': 'Get A Wriggle On', 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:1pzRps89TpWYQ9u4CxSfEb', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 168320, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/6T1snQHhNBp5fZbKBq9f1a'}, 'href': 'https://api.spotify.com/v1/tracks/6T1snQHhNBp5fZbKBq9f1a', 'id': '6T1snQHhNBp5fZbKBq9f1a', 'is_playable': True, 'name': 'Self Repair Protocol', 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:6T1snQHhNBp5fZbKBq9f1a', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 170746, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/1LPJxTXUajZbJxYzUoKc5z'}, 'href': 'https://api.spotify.com/v1/tracks/1LPJxTXUajZbJxYzUoKc5z', 'id': '1LPJxTXUajZbJxYzUoKc5z', 'is_playable': True, 'name': 'Wanderlust', 'preview_url': None, 'track_number': 3, 'type': 'track', 'uri': 'spotify:track:1LPJxTXUajZbJxYzUoKc5z', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 163520, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/3wP7tbEKMbMzqyjz3uygUI'}, 'href': 'https://api.spotify.com/v1/tracks/3wP7tbEKMbMzqyjz3uygUI', 'id': '3wP7tbEKMbMzqyjz3uygUI', 'is_playable': True, 'name': 'Tardigrades', 'preview_url': None, 'track_number': 4, 'type': 'track', 'uri': 'spotify:track:3wP7tbEKMbMzqyjz3uygUI', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 221786, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/4Nnl9nV2hKQNtL9DMjRsXH'}, 'href': 'https://api.spotify.com/v1/tracks/4Nnl9nV2hKQNtL9DMjRsXH', 'id': '4Nnl9nV2hKQNtL9DMjRsXH', 'is_playable': True, 'name': 'DNA', 'preview_url': None, 'track_number': 5, 'type': 'track', 'uri': 'spotify:track:4Nnl9nV2hKQNtL9DMjRsXH', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 181786, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/3XdVzD7C2ADxglwIoCbWmG'}, 'href': 'https://api.spotify.com/v1/tracks/3XdVzD7C2ADxglwIoCbWmG', 'id': '3XdVzD7C2ADxglwIoCbWmG', 'is_playable': True, 'name': 'Altered State', 'preview_url': None, 'track_number': 6, 'type': 'track', 'uri': 'spotify:track:3XdVzD7C2ADxglwIoCbWmG', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 189706, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/68weoduRHSs9GSin5V5TrF'}, 'href': 'https://api.spotify.com/v1/tracks/68weoduRHSs9GSin5V5TrF', 'id': '68weoduRHSs9GSin5V5TrF', 'is_playable': True, 'name': 'Ra', 'preview_url': None, 'track_number': 7, 'type': 'track', 'uri': 'spotify:track:68weoduRHSs9GSin5V5TrF', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 233533, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/1cbw58XsaZ0WFrfSYJSfJL'}, 'href': 'https://api.spotify.com/v1/tracks/1cbw58XsaZ0WFrfSYJSfJL', 'id': '1cbw58XsaZ0WFrfSYJSfJL', 'is_playable': True, 'name': 'First Encounter', 'preview_url': None, 'track_number': 8, 'type': 'track', 'uri': 'spotify:track:1cbw58XsaZ0WFrfSYJSfJL', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 357946, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/2pWrLML1kRjoUFBnVzxhdJ'}, 'href': 'https://api.spotify.com/v1/tracks/2pWrLML1kRjoUFBnVzxhdJ', 'id': '2pWrLML1kRjoUFBnVzxhdJ', 'is_playable': True, 'name': 'Alpha Test 4', 'preview_url': None, 'track_number': 9, 'type': 'track', 'uri': 'spotify:track:2pWrLML1kRjoUFBnVzxhdJ', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'name': 'HENGE', 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'}], 'disc_number': 1, 'duration_ms': 284973, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/6N8ANYNv0WvmgP2x7EgCVe'}, 'href': 'https://api.spotify.com/v1/tracks/6N8ANYNv0WvmgP2x7EgCVe', 'id': '6N8ANYNv0WvmgP2x7EgCVe', 'is_playable': True, 'name': 'Asteroid', 'preview_url': None, 'track_number': 10, 'type': 'track', 'uri': 'spotify:track:6N8ANYNv0WvmgP2x7EgCVe', 'is_local': False}]}, 'copyrights': [{'text': '2023 Cosmic Dross Records', 'type': 'C'}, {'text': '2023 Cosmic Dross Records', 'type': 'P'}], 'external_ids': {'upc': '197545220366'}, 'genres': [], 'label': 'Singing Light Music / Wipe Out', 'popularity': 20})"
   },
   "spotify_id": "1fUjtuaKUxzS6b3bv1ZrFl",
   "spotify_url": "https://open.spotify.com/album/1fUjtuaKUxzS6b3bv1ZrFl",
@@ -774,8 +189,7 @@
       "title": "Asteroid"
     }
   ],
-  "updated_at": "2025-07-09T21:07:21.045925",
-  "year": 2023,
+  "updated_at": "2026-09-26T08:10:41.677825+00:00",
   "videos": [
     "https://www.youtube.com/watch?v=Ubm138FI_mw",
     "https://www.youtube.com/watch?v=T7sVFB0ZJ2w",
@@ -787,5 +201,6 @@
     "https://www.youtube.com/watch?v=buorRmYihlE",
     "https://www.youtube.com/watch?v=rEe2mrzz5mI",
     "https://www.youtube.com/watch?v=1kGFBkvPN0w"
-  ]
+  ],
+  "year": 2023
 }

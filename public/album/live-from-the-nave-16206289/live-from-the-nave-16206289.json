@@ -8,7 +8,7 @@
       "discogs_id": "7255372",
       "discogs_original_name": "bdrmm",
       "id": null,
-      "lastfm_mbid": null,
+      "lastfm_mbid": "0892e729-9af9-4746-8534-73cd0586347a",
       "name": "bdrmm",
       "role": "",
       "spotify_id": "4Cx5LnF4WNJIn9SSqyeq9C",
@@ -28,8 +28,7 @@
   "discogs_url": "https://www.discogs.com/release/16206289-bdrmm-Live-From-The-Nave",
   "format_details": [
     {
-      "name": "Vinyl",
-      "qty": "1",
+      "colour": "White with Black Splatter",
       "descriptions": [
         "10\"",
         "33 ⅓ RPM",
@@ -37,8 +36,9 @@
         "Limited Edition",
         "Stereo"
       ],
-      "text": "White with Black Splatter",
-      "colour": "White with Black Splatter"
+      "name": "Vinyl",
+      "qty": "1",
+      "text": "White with Black Splatter"
     }
   ],
   "formats": [
@@ -53,28 +53,28 @@
   "images": [
     {
       "height": 600,
-      "resource_url": "https://i.discogs.com/MpzIHB0x3aAqHD-yNT-VJAe0IBGo0t-2yYZw7l3mxpM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtNjk2My5qcGVn.jpeg",
+      "resource_url": null,
       "type": "primary",
       "url": "https://i.discogs.com/MpzIHB0x3aAqHD-yNT-VJAe0IBGo0t-2yYZw7l3mxpM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtNjk2My5qcGVn.jpeg",
       "width": 600
     },
     {
       "height": 600,
-      "resource_url": "https://i.discogs.com/jgYRVoQdG63j7o5PpRvbGLK5AwPYM0sPG9h92qcTs-U/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMTg2NS5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/jgYRVoQdG63j7o5PpRvbGLK5AwPYM0sPG9h92qcTs-U/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMTg2NS5qcGVn.jpeg",
       "width": 600
     },
     {
       "height": 599,
-      "resource_url": "https://i.discogs.com/6hBVoELjn9hPDYV0CbvpJblPhthw9rXLc6tKGtoqaII/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMzEwNi5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/6hBVoELjn9hPDYV0CbvpJblPhthw9rXLc6tKGtoqaII/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMzEwNi5qcGVn.jpeg",
       "width": 600
     },
     {
       "height": 599,
-      "resource_url": "https://i.discogs.com/avopimHtZms0jryka89N5Nqkvy0Zgxa4-HEIUhGigqo/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMjQyMy5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/avopimHtZms0jryka89N5Nqkvy0Zgxa4-HEIUhGigqo/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMjQyMy5qcGVn.jpeg",
       "width": 600
@@ -93,7 +93,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-10T07:53:16.227597",
+    "processed_at": "2026-10-22T14:13:55.695345",
     "services_used": [
       "discogs",
       "spotify",
@@ -105,719 +105,14 @@
   "release_name_spotify": "Port",
   "released": "2020-11-10",
   "services": {
-    "lastfm": {
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg"
-        }
-      ],
-      "listeners": 30,
-      "mbid": "",
-      "playcount": 93,
-      "raw_data": {
-        "album": {
-          "artist": "BDRMM",
-          "image": [
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/34s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": "small"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/64s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": "medium"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/174s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": "large"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": "extralarge"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": "mega"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg",
-              "size": ""
-            }
-          ],
-          "listeners": "30",
-          "mbid": "",
-          "name": "Live From The Nave",
-          "playcount": "93",
-          "tags": {
-            "tag": [
-              {
-                "name": "dream pop",
-                "url": "https://www.last.fm/tag/dream+pop"
-              },
-              {
-                "name": "shoegaze",
-                "url": "https://www.last.fm/tag/shoegaze"
-              },
-              {
-                "name": "indie pop",
-                "url": "https://www.last.fm/tag/indie+pop"
-              },
-              {
-                "name": "post-punk",
-                "url": "https://www.last.fm/tag/post-punk"
-              },
-              {
-                "name": "indie",
-                "url": "https://www.last.fm/tag/indie"
-              }
-            ]
-          },
-          "tracks": {
-            "track": [
-              {
-                "@attr": {
-                  "rank": 1
-                },
-                "artist": {
-                  "mbid": "0892e729-9af9-4746-8534-73cd0586347a",
-                  "name": "BDRMM",
-                  "url": "https://www.last.fm/music/BDRMM"
-                },
-                "duration": 215,
-                "name": "Momo",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave/Momo"
-              },
-              {
-                "@attr": {
-                  "rank": 2
-                },
-                "artist": {
-                  "mbid": "0892e729-9af9-4746-8534-73cd0586347a",
-                  "name": "BDRMM",
-                  "url": "https://www.last.fm/music/BDRMM"
-                },
-                "duration": null,
-                "name": "Push / Pull",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave/Push+%2F+Pull"
-              },
-              {
-                "@attr": {
-                  "rank": 3
-                },
-                "artist": {
-                  "mbid": "0892e729-9af9-4746-8534-73cd0586347a",
-                  "name": "BDRMM",
-                  "url": "https://www.last.fm/music/BDRMM"
-                },
-                "duration": 317,
-                "name": "Is That What You Wanted To Hear?",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave/Is+That+What+You+Wanted+To+Hear%3F"
-              },
-              {
-                "@attr": {
-                  "rank": 4
-                },
-                "artist": {
-                  "mbid": "0892e729-9af9-4746-8534-73cd0586347a",
-                  "name": "BDRMM",
-                  "url": "https://www.last.fm/music/BDRMM"
-                },
-                "duration": 344,
-                "name": "Forget the Credits",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave/Forget+the+Credits"
-              },
-              {
-                "@attr": {
-                  "rank": 5
-                },
-                "artist": {
-                  "mbid": "0892e729-9af9-4746-8534-73cd0586347a",
-                  "name": "BDRMM",
-                  "url": "https://www.last.fm/music/BDRMM"
-                },
-                "duration": 297,
-                "name": "Shame",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave/Shame"
-              }
-            ]
-          },
-          "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave"
-        }
-      },
-      "similar_artists": [],
-      "tags": [
-        "dream pop",
-        "shoegaze",
-        "indie pop",
-        "post-punk",
-        "indie"
-      ],
-      "top_albums": [],
-      "top_tracks": [],
-      "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave",
-      "wiki_content": "",
-      "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2022 bdrmm under exclusive licence to Sonic Cathedral",
-          "type": "C"
-        },
-        {
-          "text": "2022 bdrmm under exclusive licence to Sonic Cathedral",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "3616844119227"
-      },
-      "id": "2NPjK8akgHz7FmgvpUF2eW",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273a0e20ef6aaa117ce356544a7",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02a0e20ef6aaa117ce356544a7",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851a0e20ef6aaa117ce356544a7",
-          "width": 64
-        }
-      ],
-      "label": "Sonic Cathedral",
-      "popularity": 7,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-            },
-            "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-            "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-            "name": "bdrmm",
-            "type": "artist",
-            "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2022 bdrmm under exclusive licence to Sonic Cathedral",
-            "type": "C"
-          },
-          {
-            "text": "2022 bdrmm under exclusive licence to Sonic Cathedral",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "3616844119227"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2NPjK8akgHz7FmgvpUF2eW"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2NPjK8akgHz7FmgvpUF2eW?market=US",
-        "id": "2NPjK8akgHz7FmgvpUF2eW",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a0e20ef6aaa117ce356544a7",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a0e20ef6aaa117ce356544a7",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a0e20ef6aaa117ce356544a7",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Sonic Cathedral",
-        "name": "Port",
-        "popularity": 7,
-        "release_date": "2022-04-08",
-        "release_date_precision": "day",
-        "total_tracks": 7,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2NPjK8akgHz7FmgvpUF2eW/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 282377,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6MAYxWfKt1XiezQJmKlOqc"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6MAYxWfKt1XiezQJmKlOqc",
-              "id": "6MAYxWfKt1XiezQJmKlOqc",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:6MAYxWfKt1XiezQJmKlOqc"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7cCi9XoRu8Y1SyJ9c94fhc"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7cCi9XoRu8Y1SyJ9c94fhc",
-                  "id": "7cCi9XoRu8Y1SyJ9c94fhc",
-                  "name": "Working Men's Club",
-                  "type": "artist",
-                  "uri": "spotify:artist:7cCi9XoRu8Y1SyJ9c94fhc"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 420544,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4H9tb7dVVuQF0yI4YPKDD0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4H9tb7dVVuQF0yI4YPKDD0",
-              "id": "4H9tb7dVVuQF0yI4YPKDD0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - Working Men’s Club Remix",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4H9tb7dVVuQF0yI4YPKDD0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6Xx57uhlmBUkH1DOxqTWZM"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6Xx57uhlmBUkH1DOxqTWZM",
-                  "id": "6Xx57uhlmBUkH1DOxqTWZM",
-                  "name": "W. H. Lung",
-                  "type": "artist",
-                  "uri": "spotify:artist:6Xx57uhlmBUkH1DOxqTWZM"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/47rgP8VpebMMXX0gE8HUst"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/47rgP8VpebMMXX0gE8HUst",
-                  "id": "47rgP8VpebMMXX0gE8HUst",
-                  "name": "Tom Sharkett",
-                  "type": "artist",
-                  "uri": "spotify:artist:47rgP8VpebMMXX0gE8HUst"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 503000,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2dM4fRr3e1P7AExZIY03Zh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2dM4fRr3e1P7AExZIY03Zh",
-              "id": "2dM4fRr3e1P7AExZIY03Zh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - W.H. Lung - Tom Sharkett Remix",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:2dM4fRr3e1P7AExZIY03Zh"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1EULJuDFWpZ9xg4YwtUGGt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1EULJuDFWpZ9xg4YwtUGGt",
-                  "id": "1EULJuDFWpZ9xg4YwtUGGt",
-                  "name": "Daniel Avery",
-                  "type": "artist",
-                  "uri": "spotify:artist:1EULJuDFWpZ9xg4YwtUGGt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 354619,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1FhtwMwUYzLEZ727UaeY4K"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1FhtwMwUYzLEZ727UaeY4K",
-              "id": "1FhtwMwUYzLEZ727UaeY4K",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - Daniel Avery Remix",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:1FhtwMwUYzLEZ727UaeY4K"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3kx1S2P2Qq3a9bG4DGsAjR"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3kx1S2P2Qq3a9bG4DGsAjR",
-                  "id": "3kx1S2P2Qq3a9bG4DGsAjR",
-                  "name": "A Place To Bury Strangers",
-                  "type": "artist",
-                  "uri": "spotify:artist:3kx1S2P2Qq3a9bG4DGsAjR"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 199513,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6kKFeyOfDRKw6ZcBOvxzva"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6kKFeyOfDRKw6ZcBOvxzva",
-              "id": "6kKFeyOfDRKw6ZcBOvxzva",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - A Place To Bury Strangers Remix",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:6kKFeyOfDRKw6ZcBOvxzva"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5v69lcKunkvGk1SimYwL0M"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5v69lcKunkvGk1SimYwL0M",
-                  "id": "5v69lcKunkvGk1SimYwL0M",
-                  "name": "Jonathan Snipes",
-                  "type": "artist",
-                  "uri": "spotify:artist:5v69lcKunkvGk1SimYwL0M"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 257618,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/13RmTfLRXZViXSNpBa3SLU"
-              },
-              "href": "https://api.spotify.com/v1/tracks/13RmTfLRXZViXSNpBa3SLU",
-              "id": "13RmTfLRXZViXSNpBa3SLU",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - Jonathan Snipes Remix",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:13RmTfLRXZViXSNpBa3SLU"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4jgdXNXNTAgbsVV304auLs"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4jgdXNXNTAgbsVV304auLs",
-                  "id": "4jgdXNXNTAgbsVV304auLs",
-                  "name": "Mouth Company",
-                  "type": "artist",
-                  "uri": "spotify:artist:4jgdXNXNTAgbsVV304auLs"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 236035,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1uYCCfPiDxgED7cIbHX687"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1uYCCfPiDxgED7cIbHX687",
-              "id": "1uYCCfPiDxgED7cIbHX687",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Port - Mouth Company Remix",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:1uYCCfPiDxgED7cIbHX687"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 7
-        },
-        "type": "album",
-        "uri": "spotify:album:2NPjK8akgHz7FmgvpUF2eW"
-      },
-      "release_date": "2022-04-08",
-      "release_date_precision": "day",
-      "total_tracks": 7,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            }
-          ],
-          "duration_ms": 282377,
-          "explicit": false,
-          "id": "6MAYxWfKt1XiezQJmKlOqc",
-          "name": "Port",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "7cCi9XoRu8Y1SyJ9c94fhc",
-              "name": "Working Men's Club"
-            }
-          ],
-          "duration_ms": 420544,
-          "explicit": false,
-          "id": "4H9tb7dVVuQF0yI4YPKDD0",
-          "name": "Port - Working Men’s Club Remix",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "6Xx57uhlmBUkH1DOxqTWZM",
-              "name": "W. H. Lung"
-            },
-            {
-              "id": "47rgP8VpebMMXX0gE8HUst",
-              "name": "Tom Sharkett"
-            }
-          ],
-          "duration_ms": 503000,
-          "explicit": false,
-          "id": "2dM4fRr3e1P7AExZIY03Zh",
-          "name": "Port - W.H. Lung - Tom Sharkett Remix",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "1EULJuDFWpZ9xg4YwtUGGt",
-              "name": "Daniel Avery"
-            }
-          ],
-          "duration_ms": 354619,
-          "explicit": false,
-          "id": "1FhtwMwUYzLEZ727UaeY4K",
-          "name": "Port - Daniel Avery Remix",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "3kx1S2P2Qq3a9bG4DGsAjR",
-              "name": "A Place To Bury Strangers"
-            }
-          ],
-          "duration_ms": 199513,
-          "explicit": false,
-          "id": "6kKFeyOfDRKw6ZcBOvxzva",
-          "name": "Port - A Place To Bury Strangers Remix",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "5v69lcKunkvGk1SimYwL0M",
-              "name": "Jonathan Snipes"
-            }
-          ],
-          "duration_ms": 257618,
-          "explicit": false,
-          "id": "13RmTfLRXZViXSNpBa3SLU",
-          "name": "Port - Jonathan Snipes Remix",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            },
-            {
-              "id": "4jgdXNXNTAgbsVV304auLs",
-              "name": "Mouth Company"
-            }
-          ],
-          "duration_ms": 236035,
-          "explicit": false,
-          "id": "1uYCCfPiDxgED7cIbHX687",
-          "name": "Port - Mouth Company Remix",
-          "preview_url": null,
-          "track_number": 7
-        }
-      ],
-      "url": "https://open.spotify.com/album/2NPjK8akgHz7FmgvpUF2eW"
-    },
+    "lastfm": "LastFmData(mbid='', url='https://www.last.fm/music/BDRMM/Live+From+The+Nave', playcount=93, listeners=30, tags=['dream pop', 'shoegaze', 'indie pop', 'post-punk', 'indie'], bio=None, wiki_summary='', wiki_content='', similar_artists=[], top_tracks=[], top_albums=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}], raw_data={'album': {'artist': 'BDRMM', 'mbid': '', 'tags': {'tag': [{'url': 'https://www.last.fm/tag/dream+pop', 'name': 'dream pop'}, {'url': 'https://www.last.fm/tag/shoegaze', 'name': 'shoegaze'}, {'url': 'https://www.last.fm/tag/indie+pop', 'name': 'indie pop'}, {'url': 'https://www.last.fm/tag/post-punk', 'name': 'post-punk'}, {'url': 'https://www.last.fm/tag/indie', 'name': 'indie'}]}, 'name': 'Live From The Nave', 'image': [{'size': 'small', '#text': 'https://lastfm.freetls.fastly.net/i/u/34s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'medium', '#text': 'https://lastfm.freetls.fastly.net/i/u/64s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'large', '#text': 'https://lastfm.freetls.fastly.net/i/u/174s/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'extralarge', '#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': 'mega', '#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}, {'size': '', '#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/b45dd1ee6244cd39e1213ade39cfdf7c.jpg'}], 'tracks': {'track': [{'streamable': {'fulltrack': '0', '#text': '0'}, 'duration': 215, 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave/Momo', 'name': 'Momo', '@attr': {'rank': 1}, 'artist': {'url': 'https://www.last.fm/music/BDRMM', 'name': 'BDRMM', 'mbid': '0892e729-9af9-4746-8534-73cd0586347a'}}, {'streamable': {'fulltrack': '0', '#text': '0'}, 'duration': None, 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave/Push+%2F+Pull', 'name': 'Push / Pull', '@attr': {'rank': 2}, 'artist': {'url': 'https://www.last.fm/music/BDRMM', 'name': 'BDRMM', 'mbid': '0892e729-9af9-4746-8534-73cd0586347a'}}, {'streamable': {'fulltrack': '0', '#text': '0'}, 'duration': 317, 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave/Is+That+What+You+Wanted+To+Hear%3F', 'name': 'Is That What You Wanted To Hear?', '@attr': {'rank': 3}, 'artist': {'url': 'https://www.last.fm/music/BDRMM', 'name': 'BDRMM', 'mbid': '0892e729-9af9-4746-8534-73cd0586347a'}}, {'streamable': {'fulltrack': '0', '#text': '0'}, 'duration': 344, 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave/Forget+the+Credits', 'name': 'Forget the Credits', '@attr': {'rank': 4}, 'artist': {'url': 'https://www.last.fm/music/BDRMM', 'name': 'BDRMM', 'mbid': '0892e729-9af9-4746-8534-73cd0586347a'}}, {'streamable': {'fulltrack': '0', '#text': '0'}, 'duration': 297, 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave/Shame', 'name': 'Shame', '@attr': {'rank': 5}, 'artist': {'url': 'https://www.last.fm/music/BDRMM', 'name': 'BDRMM', 'mbid': '0892e729-9af9-4746-8534-73cd0586347a'}}]}, 'listeners': '30', 'playcount': '93', 'url': 'https://www.last.fm/music/BDRMM/Live+From+The+Nave'}})",
     "perplexity": {
       "description": "Live From The Nave\" by bdrmm is a live album capturing the band's performance at The Nave studio in Leeds, released under the Sonic Cathedral label. The album showcases bdrmm's blend of electronic, rock, and pop elements, rooted in their signature shoegaze sound characterized by effects-laden guitars and atmospheric textures. This live recording highlights the band's ability to translate their studio-crafted sound into an immersive live experience, emphasizing both their dynamic musicianship and the ethereal quality of their music.\n\nPositioned in bdrmm's discography after their 2020 debut Bedroom, which established them as a notable force in contemporary shoegaze, \"Live From The Nave\" serves as a document of their evolving sound and live presence. While their studio albums, including Bedroom and later I Don't Know (2023), focus on layered production and songwriting, this live album offers fans a rawer, more immediate perspective on their music. Although specific critical or commercial reception details for \"Live From The Nave\" are limited, bdrmm's growing reputation and the acclaim for their studio work suggest the live album is a valued addition for listeners interested in their energetic and textured live performances.",
       "generated_at": "2025-11-27T12:53:46.959543",
       "model": "sonar",
       "source": "perplexity"
-    }
+    },
+    "spotify": "SpotifyData(id='2NPjK8akgHz7FmgvpUF2eW', url='https://open.spotify.com/album/2NPjK8akgHz7FmgvpUF2eW', preview_url=None, popularity=7, album_type='single', total_tracks=7, release_date='2022-04-08', release_date_precision='day', available_markets=[], external_ids={'upc': '3616844119227'}, images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273a0e20ef6aaa117ce356544a7', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02a0e20ef6aaa117ce356544a7', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851a0e20ef6aaa117ce356544a7', 'height': 64, 'width': 64}], label='Sonic Cathedral', copyrights=[{'text': '2022 bdrmm under exclusive licence to Sonic Cathedral', 'type': 'C'}, {'text': '2022 bdrmm under exclusive licence to Sonic Cathedral', 'type': 'P'}], tracks=[{'id': '6MAYxWfKt1XiezQJmKlOqc', 'name': 'Port', 'duration_ms': 282377, 'track_number': 1, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}]}, {'id': '4H9tb7dVVuQF0yI4YPKDD0', 'name': 'Port - Working Men’s Club Remix', 'duration_ms': 420544, 'track_number': 2, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': \"Working Men's Club\", 'id': '7cCi9XoRu8Y1SyJ9c94fhc'}]}, {'id': '2dM4fRr3e1P7AExZIY03Zh', 'name': 'Port - W.H. Lung - Tom Sharkett Remix', 'duration_ms': 503000, 'track_number': 3, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': 'W. H. Lung', 'id': '6Xx57uhlmBUkH1DOxqTWZM'}, {'name': 'Tom Sharkett', 'id': '47rgP8VpebMMXX0gE8HUst'}]}, {'id': '1FhtwMwUYzLEZ727UaeY4K', 'name': 'Port - Daniel Avery Remix', 'duration_ms': 354619, 'track_number': 4, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': 'Daniel Avery', 'id': '1EULJuDFWpZ9xg4YwtUGGt'}]}, {'id': '6kKFeyOfDRKw6ZcBOvxzva', 'name': 'Port - A Place To Bury Strangers Remix', 'duration_ms': 199513, 'track_number': 5, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': 'A Place To Bury Strangers', 'id': '3kx1S2P2Qq3a9bG4DGsAjR'}]}, {'id': '13RmTfLRXZViXSNpBa3SLU', 'name': 'Port - Jonathan Snipes Remix', 'duration_ms': 257618, 'track_number': 6, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': 'Jonathan Snipes', 'id': '5v69lcKunkvGk1SimYwL0M'}]}, {'id': '1uYCCfPiDxgED7cIbHX687', 'name': 'Port - Mouth Company Remix', 'duration_ms': 236035, 'track_number': 7, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'bdrmm', 'id': '4Cx5LnF4WNJIn9SSqyeq9C'}, {'name': 'Mouth Company', 'id': '4jgdXNXNTAgbsVV304auLs'}]}], explicit=False, raw_data={'album_type': 'single', 'total_tracks': 7, 'is_playable': True, 'external_urls': {'spotify': 'https://open.spotify.com/album/2NPjK8akgHz7FmgvpUF2eW'}, 'href': 'https://api.spotify.com/v1/albums/2NPjK8akgHz7FmgvpUF2eW?market=US', 'id': '2NPjK8akgHz7FmgvpUF2eW', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273a0e20ef6aaa117ce356544a7', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02a0e20ef6aaa117ce356544a7', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851a0e20ef6aaa117ce356544a7', 'height': 64, 'width': 64}], 'name': 'Port', 'release_date': '2022-04-08', 'release_date_precision': 'day', 'type': 'album', 'uri': 'spotify:album:2NPjK8akgHz7FmgvpUF2eW', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}], 'tracks': {'href': 'https://api.spotify.com/v1/albums/2NPjK8akgHz7FmgvpUF2eW/tracks?offset=0&limit=50&market=US', 'limit': 50, 'next': None, 'offset': 0, 'previous': None, 'total': 7, 'items': [{'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}], 'disc_number': 1, 'duration_ms': 282377, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/6MAYxWfKt1XiezQJmKlOqc'}, 'href': 'https://api.spotify.com/v1/tracks/6MAYxWfKt1XiezQJmKlOqc', 'id': '6MAYxWfKt1XiezQJmKlOqc', 'is_playable': True, 'name': 'Port', 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:6MAYxWfKt1XiezQJmKlOqc', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/7cCi9XoRu8Y1SyJ9c94fhc'}, 'href': 'https://api.spotify.com/v1/artists/7cCi9XoRu8Y1SyJ9c94fhc', 'id': '7cCi9XoRu8Y1SyJ9c94fhc', 'name': \"Working Men's Club\", 'type': 'artist', 'uri': 'spotify:artist:7cCi9XoRu8Y1SyJ9c94fhc'}], 'disc_number': 1, 'duration_ms': 420544, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/4H9tb7dVVuQF0yI4YPKDD0'}, 'href': 'https://api.spotify.com/v1/tracks/4H9tb7dVVuQF0yI4YPKDD0', 'id': '4H9tb7dVVuQF0yI4YPKDD0', 'is_playable': True, 'name': 'Port - Working Men’s Club Remix', 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:4H9tb7dVVuQF0yI4YPKDD0', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6Xx57uhlmBUkH1DOxqTWZM'}, 'href': 'https://api.spotify.com/v1/artists/6Xx57uhlmBUkH1DOxqTWZM', 'id': '6Xx57uhlmBUkH1DOxqTWZM', 'name': 'W. H. Lung', 'type': 'artist', 'uri': 'spotify:artist:6Xx57uhlmBUkH1DOxqTWZM'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/47rgP8VpebMMXX0gE8HUst'}, 'href': 'https://api.spotify.com/v1/artists/47rgP8VpebMMXX0gE8HUst', 'id': '47rgP8VpebMMXX0gE8HUst', 'name': 'Tom Sharkett', 'type': 'artist', 'uri': 'spotify:artist:47rgP8VpebMMXX0gE8HUst'}], 'disc_number': 1, 'duration_ms': 503000, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/2dM4fRr3e1P7AExZIY03Zh'}, 'href': 'https://api.spotify.com/v1/tracks/2dM4fRr3e1P7AExZIY03Zh', 'id': '2dM4fRr3e1P7AExZIY03Zh', 'is_playable': True, 'name': 'Port - W.H. Lung - Tom Sharkett Remix', 'preview_url': None, 'track_number': 3, 'type': 'track', 'uri': 'spotify:track:2dM4fRr3e1P7AExZIY03Zh', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/1EULJuDFWpZ9xg4YwtUGGt'}, 'href': 'https://api.spotify.com/v1/artists/1EULJuDFWpZ9xg4YwtUGGt', 'id': '1EULJuDFWpZ9xg4YwtUGGt', 'name': 'Daniel Avery', 'type': 'artist', 'uri': 'spotify:artist:1EULJuDFWpZ9xg4YwtUGGt'}], 'disc_number': 1, 'duration_ms': 354619, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/1FhtwMwUYzLEZ727UaeY4K'}, 'href': 'https://api.spotify.com/v1/tracks/1FhtwMwUYzLEZ727UaeY4K', 'id': '1FhtwMwUYzLEZ727UaeY4K', 'is_playable': True, 'name': 'Port - Daniel Avery Remix', 'preview_url': None, 'track_number': 4, 'type': 'track', 'uri': 'spotify:track:1FhtwMwUYzLEZ727UaeY4K', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/3kx1S2P2Qq3a9bG4DGsAjR'}, 'href': 'https://api.spotify.com/v1/artists/3kx1S2P2Qq3a9bG4DGsAjR', 'id': '3kx1S2P2Qq3a9bG4DGsAjR', 'name': 'A Place To Bury Strangers', 'type': 'artist', 'uri': 'spotify:artist:3kx1S2P2Qq3a9bG4DGsAjR'}], 'disc_number': 1, 'duration_ms': 199513, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/6kKFeyOfDRKw6ZcBOvxzva'}, 'href': 'https://api.spotify.com/v1/tracks/6kKFeyOfDRKw6ZcBOvxzva', 'id': '6kKFeyOfDRKw6ZcBOvxzva', 'is_playable': True, 'name': 'Port - A Place To Bury Strangers Remix', 'preview_url': None, 'track_number': 5, 'type': 'track', 'uri': 'spotify:track:6kKFeyOfDRKw6ZcBOvxzva', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/5v69lcKunkvGk1SimYwL0M'}, 'href': 'https://api.spotify.com/v1/artists/5v69lcKunkvGk1SimYwL0M', 'id': '5v69lcKunkvGk1SimYwL0M', 'name': 'Jonathan Snipes', 'type': 'artist', 'uri': 'spotify:artist:5v69lcKunkvGk1SimYwL0M'}], 'disc_number': 1, 'duration_ms': 257618, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/13RmTfLRXZViXSNpBa3SLU'}, 'href': 'https://api.spotify.com/v1/tracks/13RmTfLRXZViXSNpBa3SLU', 'id': '13RmTfLRXZViXSNpBa3SLU', 'is_playable': True, 'name': 'Port - Jonathan Snipes Remix', 'preview_url': None, 'track_number': 6, 'type': 'track', 'uri': 'spotify:track:13RmTfLRXZViXSNpBa3SLU', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'name': 'bdrmm', 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/4jgdXNXNTAgbsVV304auLs'}, 'href': 'https://api.spotify.com/v1/artists/4jgdXNXNTAgbsVV304auLs', 'id': '4jgdXNXNTAgbsVV304auLs', 'name': 'Mouth Company', 'type': 'artist', 'uri': 'spotify:artist:4jgdXNXNTAgbsVV304auLs'}], 'disc_number': 1, 'duration_ms': 236035, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/1uYCCfPiDxgED7cIbHX687'}, 'href': 'https://api.spotify.com/v1/tracks/1uYCCfPiDxgED7cIbHX687', 'id': '1uYCCfPiDxgED7cIbHX687', 'is_playable': True, 'name': 'Port - Mouth Company Remix', 'preview_url': None, 'track_number': 7, 'type': 'track', 'uri': 'spotify:track:1uYCCfPiDxgED7cIbHX687', 'is_local': False}]}, 'copyrights': [{'text': '2022 bdrmm under exclusive licence to Sonic Cathedral', 'type': 'C'}, {'text': '2022 bdrmm under exclusive licence to Sonic Cathedral', 'type': 'P'}], 'external_ids': {'upc': '3616844119227'}, 'genres': [], 'label': 'Sonic Cathedral', 'popularity': 7})"
   },
   "spotify_id": "2NPjK8akgHz7FmgvpUF2eW",
   "spotify_url": "https://open.spotify.com/album/2NPjK8akgHz7FmgvpUF2eW",
@@ -859,7 +154,8 @@
       "title": "Shame"
     }
   ],
-  "updated_at": "2025-07-10T07:53:15.984756",
+  "updated_at": "2026-09-26T08:28:00.386368+00:00",
+  "videos": [],
   "vinyl_colours": [
     "White with Black Splatter"
   ],

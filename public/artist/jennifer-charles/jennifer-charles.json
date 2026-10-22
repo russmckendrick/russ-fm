@@ -46,7 +46,7 @@
       "width": 2000
     }
   ],
-  "lastfm_mbid": null,
+  "lastfm_mbid": "9d2e17d5-f7ef-46b0-bc85-52fa3980858f",
   "lastfm_url": null,
   "local_images": {
     "hi-res": "../public/artist/jennifer-charles/jennifer-charles-hi-res.jpg"
@@ -73,22 +73,18 @@
       "url": "https://www.discogs.com/artist/59463",
       "urls": []
     },
+    "identity": {
+      "musicbrainz_id": "9d2e17d5-f7ef-46b0-bc85-52fa3980858f",
+      "resolved_at": "2026-10-22T14:08:00.104253",
+      "wikidata_id": "Q3177041",
+      "wikipedia_title": "Jennifer Charles"
+    },
     "lastfm": {},
     "spotify": "ArtistSpotifyData(id='33Y0z7Kdhmj2OInuJHwsDQ', url='https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ', name='Jennifer Charles', popularity=43, followers=5684, genres=['trip hop', 'industrial rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, 'followers': {'href': None, 'total': 5684}, 'genres': ['trip hop', 'industrial rock'], 'href': 'https://api.spotify.com/v1/artists/33Y0z7Kdhmj2OInuJHwsDQ', 'id': '33Y0z7Kdhmj2OInuJHwsDQ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], 'name': 'Jennifer Charles', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:33Y0z7Kdhmj2OInuJHwsDQ'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "",
-      "editorial_notes": null,
-      "genres": [
-        "Hip-Hop/Rap"
-      ],
-      "id": "1635977228",
-      "name": "Jenifer Charles",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/jenifer-charles/1635977228"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1635977228', url='https://music.apple.com/gb/artist/jenifer-charles/1635977228', name='Jenifer Charles', artwork_url='', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1635977228', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1635977228', 'attributes': {'name': 'Jenifer Charles', 'url': 'https://music.apple.com/gb/artist/jenifer-charles/1635977228', 'genreNames': ['Hip-Hop/Rap']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1635977228/albums', 'data': []}}})",
     "discogs": {
       "cover_image": "",
       "id": "59463",
@@ -108,38 +104,11 @@
       "urls": []
     },
     "lastfm": {},
-    "spotify": {
-      "followers": 5684,
-      "genres": [
-        "trip hop",
-        "industrial rock"
-      ],
-      "id": "33Y0z7Kdhmj2OInuJHwsDQ",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784",
-          "width": 64
-        }
-      ],
-      "name": "Jennifer Charles",
-      "popularity": 43,
-      "url": "https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ"
-    },
+    "spotify": "ArtistSpotifyData(id='33Y0z7Kdhmj2OInuJHwsDQ', url='https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ', name='Jennifer Charles', popularity=43, followers=5684, genres=['trip hop', 'industrial rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, 'followers': {'href': None, 'total': 5684}, 'genres': ['trip hop', 'industrial rock'], 'href': 'https://api.spotify.com/v1/artists/33Y0z7Kdhmj2OInuJHwsDQ', 'id': '33Y0z7Kdhmj2OInuJHwsDQ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], 'name': 'Jennifer Charles', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:33Y0z7Kdhmj2OInuJHwsDQ'})",
     "theaudiodb": {}
   },
   "spotify_id": "33Y0z7Kdhmj2OInuJHwsDQ",
   "spotify_url": "https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ",
-  "updated_at": "2025-07-13T13:44:46.140180",
-  "wikipedia_url": null
+  "updated_at": "2026-10-22T14:08:00.104255",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Jennifer_Charles"
 }

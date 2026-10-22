@@ -8,7 +8,7 @@
       "discogs_id": "16234366",
       "discogs_original_name": "Bioscope",
       "id": null,
-      "lastfm_mbid": null,
+      "lastfm_mbid": "c91446e8-29cf-4f5d-889e-028c4e754403",
       "name": "Bioscope",
       "role": "",
       "spotify_id": "19bDPhXhRA80y2TODx2sgE",
@@ -28,14 +28,14 @@
   "discogs_url": "https://www.discogs.com/release/34907504-Bioscope-Gentō",
   "format_details": [
     {
-      "name": "Vinyl",
-      "qty": "2",
+      "colour": null,
       "descriptions": [
         "LP",
         "Album"
       ],
-      "text": null,
-      "colour": null
+      "name": "Vinyl",
+      "qty": "2",
+      "text": null
     }
   ],
   "formats": [
@@ -49,14 +49,14 @@
   "images": [
     {
       "height": 593,
-      "resource_url": "https://i.discogs.com/4AcxY2aSwwSer2cXljcg-dgBJln6d2sOluL3Euc0y4M/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0OTA3/NTA0LTE3NTYwMjQw/NDYtNzQ2MC5qcGVn.jpeg",
+      "resource_url": null,
       "type": "primary",
       "url": "https://i.discogs.com/4AcxY2aSwwSer2cXljcg-dgBJln6d2sOluL3Euc0y4M/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0OTA3/NTA0LTE3NTYwMjQw/NDYtNzQ2MC5qcGVn.jpeg",
       "width": 600
     },
     {
       "height": 577,
-      "resource_url": "https://i.discogs.com/cVO5PC21vqcvZLZ_tQJlt-TV1Ne5p5XzrwIj_25HzGI/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0OTA3/NTA0LTE3NTYwMjQw/NDctMzA4NC5qcGVn.jpeg",
+      "resource_url": null,
       "type": "secondary",
       "url": "https://i.discogs.com/cVO5PC21vqcvZLZ_tQJlt-TV1Ne5p5XzrwIj_25HzGI/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0OTA3/NTA0LTE3NTYwMjQw/NDctMzA4NC5qcGVn.jpeg",
       "width": 600
@@ -81,7 +81,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 1,
-    "processed_at": "2025-08-24T09:29:14.485395",
+    "processed_at": "2026-10-22T14:05:13.208983",
     "services_used": [
       "discogs",
       "apple_music",
@@ -94,333 +94,14 @@
   "release_name_spotify": "Gentō",
   "released": "2025-08-22",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/c6/5e/4ac65e1b-30c8-7a0a-9aed-4009e8ac3d7c/cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-      "editorial_notes": null,
-      "id": "1812977080",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Bioscope, Steve Rothery & Thorsten Quaeschning",
-        "artwork": {
-          "bgColor": "0f0d12",
-          "height": 4000,
-          "textColor1": "f1997f",
-          "textColor2": "f43a3a",
-          "textColor3": "c47d69",
-          "textColor4": "c63132",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/c6/5e/4ac65e1b-30c8-7a0a-9aed-4009e8ac3d7c/cover.jpg/{w}x{h}bb.jpg",
-          "width": 4000
-        },
-        "copyright": "℗ 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-        "genreNames": [
-          "Rock",
-          "Music",
-          "Electronic",
-          "Ambient"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Gentō",
-        "playParams": {
-          "id": "1812977080",
-          "kind": "album"
-        },
-        "recordLabel": "earMUSIC",
-        "releaseDate": "2025-08-22",
-        "trackCount": 10,
-        "upc": "4029759207788",
-        "url": "https://music.apple.com/gb/album/gent%C5%8D/1812977080"
-      },
-      "url": "https://music.apple.com/gb/album/gent%C5%8D/1812977080"
-    },
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "(C) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-          "type": "C"
-        },
-        {
-          "text": "(P) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "4029759208785"
-      },
-      "id": "6zeUk3hmQg9hOIJVS80ahK",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273af85ce52d5faa05754689e01",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02af85ce52d5faa05754689e01",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851af85ce52d5faa05754689e01",
-          "width": 64
-        }
-      ],
-      "label": "earMUSIC",
-      "popularity": 9,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/5dhCbIe393u2IyggqyR8mO"
-            },
-            "href": "https://api.spotify.com/v1/artists/5dhCbIe393u2IyggqyR8mO",
-            "id": "5dhCbIe393u2IyggqyR8mO",
-            "name": "Bioscope",
-            "type": "artist",
-            "uri": "spotify:artist:5dhCbIe393u2IyggqyR8mO"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb"
-            },
-            "href": "https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb",
-            "id": "6kbARQcqwoyi5CHsrRoxqb",
-            "name": "Steve Rothery",
-            "type": "artist",
-            "uri": "spotify:artist:6kbARQcqwoyi5CHsrRoxqb"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5"
-            },
-            "href": "https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5",
-            "id": "6m30SHWcbXdvehkhZkgla5",
-            "name": "Thorsten Quaeschning",
-            "type": "artist",
-            "uri": "spotify:artist:6m30SHWcbXdvehkhZkgla5"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "(C) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-            "type": "C"
-          },
-          {
-            "text": "(P) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "4029759208785"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6zeUk3hmQg9hOIJVS80ahK"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/6zeUk3hmQg9hOIJVS80ahK?market=US",
-        "id": "6zeUk3hmQg9hOIJVS80ahK",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273af85ce52d5faa05754689e01",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02af85ce52d5faa05754689e01",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851af85ce52d5faa05754689e01",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "earMUSIC",
-        "name": "Gentō",
-        "popularity": 9,
-        "release_date": "2025-07-25",
-        "release_date_precision": "day",
-        "total_tracks": 2,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/6zeUk3hmQg9hOIJVS80ahK/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2sGcOVVICHkOPTIiwFo7Lu"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2sGcOVVICHkOPTIiwFo7Lu",
-                  "id": "2sGcOVVICHkOPTIiwFo7Lu",
-                  "name": "Biosope",
-                  "type": "artist",
-                  "uri": "spotify:artist:2sGcOVVICHkOPTIiwFo7Lu"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb",
-                  "id": "6kbARQcqwoyi5CHsrRoxqb",
-                  "name": "Steve Rothery",
-                  "type": "artist",
-                  "uri": "spotify:artist:6kbARQcqwoyi5CHsrRoxqb"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5",
-                  "id": "6m30SHWcbXdvehkhZkgla5",
-                  "name": "Thorsten Quaeschning",
-                  "type": "artist",
-                  "uri": "spotify:artist:6m30SHWcbXdvehkhZkgla5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 460275,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2xtZnF65JusYtwIg7p6i14"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2xtZnF65JusYtwIg7p6i14",
-              "id": "2xtZnF65JusYtwIg7p6i14",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Gentō",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:2xtZnF65JusYtwIg7p6i14"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2sGcOVVICHkOPTIiwFo7Lu"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2sGcOVVICHkOPTIiwFo7Lu",
-                  "id": "2sGcOVVICHkOPTIiwFo7Lu",
-                  "name": "Biosope",
-                  "type": "artist",
-                  "uri": "spotify:artist:2sGcOVVICHkOPTIiwFo7Lu"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb",
-                  "id": "6kbARQcqwoyi5CHsrRoxqb",
-                  "name": "Steve Rothery",
-                  "type": "artist",
-                  "uri": "spotify:artist:6kbARQcqwoyi5CHsrRoxqb"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5",
-                  "id": "6m30SHWcbXdvehkhZkgla5",
-                  "name": "Thorsten Quaeschning",
-                  "type": "artist",
-                  "uri": "spotify:artist:6m30SHWcbXdvehkhZkgla5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 295407,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4MvnMqxDxdAiA8H4I6ladE"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4MvnMqxDxdAiA8H4I6ladE",
-              "id": "4MvnMqxDxdAiA8H4I6ladE",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Kaleidoscope",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4MvnMqxDxdAiA8H4I6ladE"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 2
-        },
-        "type": "album",
-        "uri": "spotify:album:6zeUk3hmQg9hOIJVS80ahK"
-      },
-      "release_date": "2025-07-25",
-      "release_date_precision": "day",
-      "total_tracks": 2,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "2sGcOVVICHkOPTIiwFo7Lu",
-              "name": "Biosope"
-            },
-            {
-              "id": "6kbARQcqwoyi5CHsrRoxqb",
-              "name": "Steve Rothery"
-            },
-            {
-              "id": "6m30SHWcbXdvehkhZkgla5",
-              "name": "Thorsten Quaeschning"
-            }
-          ],
-          "duration_ms": 460275,
-          "explicit": false,
-          "id": "2xtZnF65JusYtwIg7p6i14",
-          "name": "Gentō",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "2sGcOVVICHkOPTIiwFo7Lu",
-              "name": "Biosope"
-            },
-            {
-              "id": "6kbARQcqwoyi5CHsrRoxqb",
-              "name": "Steve Rothery"
-            },
-            {
-              "id": "6m30SHWcbXdvehkhZkgla5",
-              "name": "Thorsten Quaeschning"
-            }
-          ],
-          "duration_ms": 295407,
-          "explicit": false,
-          "id": "4MvnMqxDxdAiA8H4I6ladE",
-          "name": "Kaleidoscope",
-          "preview_url": null,
-          "track_number": 2
-        }
-      ],
-      "url": "https://open.spotify.com/album/6zeUk3hmQg9hOIJVS80ahK"
-    },
+    "apple_music": "AppleMusicData(id='1812977080', url='https://music.apple.com/gb/album/gent%C5%8D/1812977080', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/c6/5e/4ac65e1b-30c8-7a0a-9aed-4009e8ac3d7c/cover.jpg/2000x2000bb.jpg', preview_url=None, copyright='℗ 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', editorial_notes=None, is_complete=True, content_rating=None, raw_data={'id': '1812977080', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812977080', 'attributes': {'artistName': 'Bioscope, Steve Rothery & Thorsten Quaeschning', 'artwork': {'bgColor': '0f0d12', 'height': 4000, 'textColor1': 'f1997f', 'textColor2': 'f43a3a', 'textColor3': 'c47d69', 'textColor4': 'c63132', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/c6/5e/4ac65e1b-30c8-7a0a-9aed-4009e8ac3d7c/cover.jpg/{w}x{h}bb.jpg', 'width': 4000}, 'copyright': '℗ 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', 'genreNames': ['Rock', 'Music', 'Electronic', 'Ambient'], 'isCompilation': False, 'isComplete': True, 'isMasteredForItunes': False, 'isSingle': False, 'name': 'Gentō', 'playParams': {'id': '1812977080', 'kind': 'album'}, 'recordLabel': 'earMUSIC', 'releaseDate': '2025-08-22', 'trackCount': 10, 'upc': '4029759207788', 'url': 'https://music.apple.com/gb/album/gent%C5%8D/1812977080'}})",
     "perplexity": {
       "description": "Released in 2025 on Ear Music/Edel, Gentō is the debut album by Bioscope, a collaborative project between Marillion guitarist Steve Rothery and Tangerine Dream’s Thorsten Quaeschning. The album blends electronic soundscapes with atmospheric rock, weaving together Rothery’s emotive, melodic guitar lines and Quaeschning’s expansive, cinematic synth textures. The music is largely instrumental, characterized by ambient moods, hypnotic sequencer patterns, and subtle rhythmic elements, with Alex Reeves’ drumming adding depth and momentum. Tracks like the title piece “Gentō” drift in ambient territory, while “Kaleidoscope” offers a brighter, more structured psych-tinged power pop contrast. The centerpiece, the three-part “Bioscope,” showcases the duo’s ability to build immersive, evolving soundscapes.\n\nGentō stands as a significant release in both artists’ discographies, merging Rothery’s signature guitar-driven atmospheres with Quaeschning’s mastery of electronic composition. The album is noted for its cinematic quality and immersive listening experience, with a Dolby Atmos mix on the Blu-ray edition further enhancing its spatial depth. Critics have praised Gentō for its originality, emotional resonance, and the seamless interplay between guitar and electronics, calling it one of the most beautiful instrumental albums of 2025. The record has been well-received for its artistry and depth, marking Bioscope as a distinctive voice in the contemporary electronic and progressive rock landscape.",
       "generated_at": "2025-11-27T09:08:23.127381",
       "model": "sonar",
       "source": "perplexity"
-    }
+    },
+    "spotify": "SpotifyData(id='6zeUk3hmQg9hOIJVS80ahK', url='https://open.spotify.com/album/6zeUk3hmQg9hOIJVS80ahK', preview_url=None, popularity=9, album_type='single', total_tracks=2, release_date='2025-07-25', release_date_precision='day', available_markets=[], external_ids={'upc': '4029759208785'}, images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273af85ce52d5faa05754689e01', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02af85ce52d5faa05754689e01', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851af85ce52d5faa05754689e01', 'height': 64, 'width': 64}], label='earMUSIC', copyrights=[{'text': '(C) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', 'type': 'C'}, {'text': '(P) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', 'type': 'P'}], tracks=[{'id': '2xtZnF65JusYtwIg7p6i14', 'name': 'Gentō', 'duration_ms': 460275, 'track_number': 1, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'Biosope', 'id': '2sGcOVVICHkOPTIiwFo7Lu'}, {'name': 'Steve Rothery', 'id': '6kbARQcqwoyi5CHsrRoxqb'}, {'name': 'Thorsten Quaeschning', 'id': '6m30SHWcbXdvehkhZkgla5'}]}, {'id': '4MvnMqxDxdAiA8H4I6ladE', 'name': 'Kaleidoscope', 'duration_ms': 295407, 'track_number': 2, 'explicit': False, 'preview_url': None, 'artists': [{'name': 'Biosope', 'id': '2sGcOVVICHkOPTIiwFo7Lu'}, {'name': 'Steve Rothery', 'id': '6kbARQcqwoyi5CHsrRoxqb'}, {'name': 'Thorsten Quaeschning', 'id': '6m30SHWcbXdvehkhZkgla5'}]}], explicit=False, raw_data={'album_type': 'single', 'total_tracks': 2, 'is_playable': True, 'external_urls': {'spotify': 'https://open.spotify.com/album/6zeUk3hmQg9hOIJVS80ahK'}, 'href': 'https://api.spotify.com/v1/albums/6zeUk3hmQg9hOIJVS80ahK?market=US', 'id': '6zeUk3hmQg9hOIJVS80ahK', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273af85ce52d5faa05754689e01', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02af85ce52d5faa05754689e01', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851af85ce52d5faa05754689e01', 'height': 64, 'width': 64}], 'name': 'Gentō', 'release_date': '2025-07-25', 'release_date_precision': 'day', 'type': 'album', 'uri': 'spotify:album:6zeUk3hmQg9hOIJVS80ahK', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5dhCbIe393u2IyggqyR8mO'}, 'href': 'https://api.spotify.com/v1/artists/5dhCbIe393u2IyggqyR8mO', 'id': '5dhCbIe393u2IyggqyR8mO', 'name': 'Bioscope', 'type': 'artist', 'uri': 'spotify:artist:5dhCbIe393u2IyggqyR8mO'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb'}, 'href': 'https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb', 'id': '6kbARQcqwoyi5CHsrRoxqb', 'name': 'Steve Rothery', 'type': 'artist', 'uri': 'spotify:artist:6kbARQcqwoyi5CHsrRoxqb'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5'}, 'href': 'https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5', 'id': '6m30SHWcbXdvehkhZkgla5', 'name': 'Thorsten Quaeschning', 'type': 'artist', 'uri': 'spotify:artist:6m30SHWcbXdvehkhZkgla5'}], 'tracks': {'href': 'https://api.spotify.com/v1/albums/6zeUk3hmQg9hOIJVS80ahK/tracks?offset=0&limit=50&market=US', 'limit': 50, 'next': None, 'offset': 0, 'previous': None, 'total': 2, 'items': [{'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2sGcOVVICHkOPTIiwFo7Lu'}, 'href': 'https://api.spotify.com/v1/artists/2sGcOVVICHkOPTIiwFo7Lu', 'id': '2sGcOVVICHkOPTIiwFo7Lu', 'name': 'Biosope', 'type': 'artist', 'uri': 'spotify:artist:2sGcOVVICHkOPTIiwFo7Lu'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb'}, 'href': 'https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb', 'id': '6kbARQcqwoyi5CHsrRoxqb', 'name': 'Steve Rothery', 'type': 'artist', 'uri': 'spotify:artist:6kbARQcqwoyi5CHsrRoxqb'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5'}, 'href': 'https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5', 'id': '6m30SHWcbXdvehkhZkgla5', 'name': 'Thorsten Quaeschning', 'type': 'artist', 'uri': 'spotify:artist:6m30SHWcbXdvehkhZkgla5'}], 'disc_number': 1, 'duration_ms': 460275, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/2xtZnF65JusYtwIg7p6i14'}, 'href': 'https://api.spotify.com/v1/tracks/2xtZnF65JusYtwIg7p6i14', 'id': '2xtZnF65JusYtwIg7p6i14', 'is_playable': True, 'name': 'Gentō', 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:2xtZnF65JusYtwIg7p6i14', 'is_local': False}, {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2sGcOVVICHkOPTIiwFo7Lu'}, 'href': 'https://api.spotify.com/v1/artists/2sGcOVVICHkOPTIiwFo7Lu', 'id': '2sGcOVVICHkOPTIiwFo7Lu', 'name': 'Biosope', 'type': 'artist', 'uri': 'spotify:artist:2sGcOVVICHkOPTIiwFo7Lu'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6kbARQcqwoyi5CHsrRoxqb'}, 'href': 'https://api.spotify.com/v1/artists/6kbARQcqwoyi5CHsrRoxqb', 'id': '6kbARQcqwoyi5CHsrRoxqb', 'name': 'Steve Rothery', 'type': 'artist', 'uri': 'spotify:artist:6kbARQcqwoyi5CHsrRoxqb'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6m30SHWcbXdvehkhZkgla5'}, 'href': 'https://api.spotify.com/v1/artists/6m30SHWcbXdvehkhZkgla5', 'id': '6m30SHWcbXdvehkhZkgla5', 'name': 'Thorsten Quaeschning', 'type': 'artist', 'uri': 'spotify:artist:6m30SHWcbXdvehkhZkgla5'}], 'disc_number': 1, 'duration_ms': 295407, 'explicit': False, 'external_urls': {'spotify': 'https://open.spotify.com/track/4MvnMqxDxdAiA8H4I6ladE'}, 'href': 'https://api.spotify.com/v1/tracks/4MvnMqxDxdAiA8H4I6ladE', 'id': '4MvnMqxDxdAiA8H4I6ladE', 'is_playable': True, 'name': 'Kaleidoscope', 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:4MvnMqxDxdAiA8H4I6ladE', 'is_local': False}]}, 'copyrights': [{'text': '(C) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', 'type': 'C'}, {'text': '(P) 2025 earMUSIC, a label of Edel Music & Entertainment GmbH.', 'type': 'P'}], 'external_ids': {'upc': '4029759208785'}, 'genres': [], 'label': 'earMUSIC', 'popularity': 9})"
   },
   "spotify_id": "6zeUk3hmQg9hOIJVS80ahK",
   "spotify_url": "https://open.spotify.com/album/6zeUk3hmQg9hOIJVS80ahK",
@@ -492,10 +173,10 @@
       "title": "Bioscope Part 3"
     }
   ],
-  "updated_at": "2025-08-24T09:29:13.047547",
-  "year": 2025,
+  "updated_at": "2026-09-26T08:03:38.784918+00:00",
   "videos": [
     "https://www.youtube.com/watch?v=dNCnnDsLQLk",
     "https://www.youtube.com/watch?v=P9HMLKJ4OVM"
-  ]
+  ],
+  "year": 2025
 }

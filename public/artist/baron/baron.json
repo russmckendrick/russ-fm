@@ -32,7 +32,7 @@
       "width": 2000
     }
   ],
-  "lastfm_mbid": null,
+  "lastfm_mbid": "92b89a27-554b-40dd-9c6f-a94c5f827909",
   "lastfm_url": null,
   "local_images": {
     "hi-res": "../public/artist/baron/baron-hi-res.jpg"
@@ -59,22 +59,18 @@
       "url": "https://www.discogs.com/artist/2449754",
       "urls": []
     },
+    "identity": {
+      "musicbrainz_id": "92b89a27-554b-40dd-9c6f-a94c5f827909",
+      "resolved_at": "2026-10-22T14:04:58.157647",
+      "wikidata_id": null,
+      "wikipedia_title": null
+    },
     "lastfm": {},
     "spotify": {},
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Prog-Rock/Art Rock"
-      ],
-      "id": "1765206789",
-      "name": "Baron",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/baron/1765206789"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1765206789', url='https://music.apple.com/gb/artist/baron/1765206789', name='Baron', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/2000x2000ac.jpg', genres=['Prog-Rock/Art Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1765206789', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1765206789', 'attributes': {'name': 'Baron', 'genreNames': ['Prog-Rock/Art Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/{w}x{h}ac.jpg', 'bgColor': 'cacaca', 'textColor1': '020203', 'textColor2': '282828', 'textColor3': '2a2a2b', 'textColor4': '484848'}, 'url': 'https://music.apple.com/gb/artist/baron/1765206789'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1765206789/albums', 'data': [{'id': '1494198864', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1494198864'}]}}})",
     "discogs": {
       "cover_image": "",
       "id": "2449754",
@@ -99,6 +95,6 @@
   },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2025-07-13T13:08:04.310632",
+  "updated_at": "2026-10-22T14:04:58.157651",
   "wikipedia_url": null
 }
