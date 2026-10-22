@@ -280,6 +280,31 @@ Marble [Memphis Dust]"`). The pressing detail is kept alongside it:
 - The release refresh replaces `raw_data.discogs` wholesale, so it must keep writing `formats`
   there or the colour is lost on the next refresh.
 
+## Collection picker (TUI)
+
+The **Collection** home-menu entry lists the newest releases in your Discogs collection that
+aren't enriched in the database yet, so you choose what to process instead of setting a count.
+Each row shows the date added, artist — title (year), the first format with its descriptions,
+and the Discogs release ID.
+
+- `Space` ticks the highlighted release, `a` ticks all (or clears them when all are ticked).
+- `Enter` (or `r`) processes the ticked releases in list order on the processing page, with
+  the usual interactive pickers; with nothing ticked it processes the highlighted one. Runs are
+  force-refreshed, like the old count-based runner.
+- `l` reloads the list. It also reloads when a run finishes, so processed releases drop off.
+
+Loading pages the collection newest-first (`DiscogsService::get_user_collection_page`) and
+filters out IDs in `Db::enriched_release_ids()`, the same test `collection --resume` uses. It
+stops at the first page with nothing new on it, after 3 pages (300 releases), or at 50
+releases, so it usually costs one Discogs request. Older unprocessed stragglers are left to
+`scrapper collection --resume`. Implementation: `run_collection_candidates_task` and
+`CollectionCandidate` in `tui/runners.rs`; the run itself is `run_collection_task` with
+`CollectionRun::Picked`.
+
+`scrapper collection --interactive` still processes the first N of the collection on startup
+(`CollectionRun::Newest`, N from `--limit` / `--to`, default 1). The screen then shows the
+picker.
+
 ## Boxsets (TUI)
 
 The **Boxsets** home-menu entry lists the box-set releases in the database (any `formats[]`

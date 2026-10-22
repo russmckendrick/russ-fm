@@ -82,16 +82,12 @@ pub(crate) fn handle_key(app: &mut App, key: KeyEvent) {
             }
         }
         Screen::Collection => match code {
-            KeyCode::Char('r') => app.start_collection(),
-            _ if app.running => {}
-            KeyCode::Up | KeyCode::Char('+') | KeyCode::Char('=') => app.step_collection_limit(1),
-            KeyCode::Down | KeyCode::Char('-') => app.step_collection_limit(-1),
-            KeyCode::Char(c) if c.is_ascii_digit() && app.collection_limit.len() < 5 => {
-                app.collection_limit.push(c);
-            }
-            KeyCode::Backspace => {
-                app.collection_limit.pop();
-            }
+            KeyCode::Up => app.move_selection(-1),
+            KeyCode::Down => app.move_selection(1),
+            KeyCode::Char(' ') => app.toggle_collection_selected(),
+            KeyCode::Char('a') => app.toggle_collection_all(),
+            KeyCode::Enter | KeyCode::Char('r') => app.start_collection(),
+            KeyCode::Char('l') => app.load_collection_candidates(),
             _ => {}
         },
         Screen::ArtistRun => match code {

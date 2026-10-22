@@ -1290,6 +1290,10 @@ impl Db {
     /// Delete a release row (db-manager). Caller is responsible for backing up first.
     pub fn delete_release(&self, discogs_id: &str) -> Result<bool> {
         let conn = self.conn()?;
+        conn.execute(
+            "DELETE FROM collection_items WHERE release_id IN (SELECT id FROM releases WHERE discogs_id = ?)",
+            [discogs_id],
+        )?;
         let n = conn.execute("DELETE FROM releases WHERE discogs_id = ?", [discogs_id])?;
         Ok(n > 0)
     }

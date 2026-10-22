@@ -159,7 +159,9 @@ scrapper collection [OPTIONS]
 | `--save` | FLAG | `false` | Save to public directory |
 | `--prefer` | CHOICE | - | Preferred data/image source |
 
-Plain `collection` runs headless; `collection --interactive` opens the TUI.
+Plain `collection` runs headless; `collection --interactive` opens the TUI, processes the
+newest N releases (`--limit`, default 1), then shows the Collection picker of releases not yet
+processed (see [Collection picker](./README.md#collection-picker-tui)).
 
 ### Examples
 
@@ -779,6 +781,18 @@ scrapper db <SUBCOMMAND>
 | `backup` | Back up the database |
 
 Run `scrapper db --help` (or `scrapper db <sub> --help`) for flags.
+
+### Removing a release
+
+```bash
+scrapper db delete release <discogs_id> --force   # backs up to backups/ first
+scrapper generate-collection                      # drop it from collection.json
+rm -r public/album/<slug>-<discogs_id>/
+```
+
+`delete release` removes the `releases` row and its `collection_items` row. The
+collection sync is driven by the live Discogs collection, so also remove the release
+from your Discogs collection, or the next `scrapper collection --resume` will re-add it.
 
 ---
 

@@ -1,6 +1,7 @@
 //! Central TUI state: the [`App`] struct, the [`Screen`] enum + menu, the background-task
 //! message channel, and the helpers screens/keys call into.
 
+use std::collections::HashSet;
 use std::time::Instant;
 
 use ratatui::widgets::ListState;
@@ -13,7 +14,7 @@ use crate::{Config, Db};
 
 use super::detail::{DetailView, RowAction};
 use super::modals::{PendingDescribe, PendingEdit, PendingListEdit, PendingPick};
-use super::runners;
+use super::runners::{self, CollectionCandidate, CollectionRun};
 
 /// How the TUI starts.
 pub enum Launch {
@@ -99,7 +100,8 @@ impl Screen {
             Screen::Home => "↑/↓ select · Enter open · q quit",
             Screen::Releases | Screen::Artists => "type to search · ↑/↓ move · Enter details · Esc back",
             Screen::Services => "r re-probe · Esc back",
-            Screen::Collection | Screen::ArtistRun => "type/↑/↓ set count · r run · Esc back",
+            Screen::Collection => "↑/↓ move · Space select · a all/none · Enter/r process selected · l reload · Esc back",
+            Screen::ArtistRun => "type/↑/↓ set count · r run · Esc back",
             Screen::Boxsets => "Tab switch view · type to search · ↑/↓ move · Enter run/open · ^x single release ⇄ unprocessed · ^f force-refetch · ^r re-run · Esc back",
             Screen::Dashboard => "Esc back",
         }
@@ -147,6 +149,8 @@ pub(crate) enum Msg {
     /// Boxset discovery log line / progress (own buffer on the Boxsets screen).
     BoxsetLog(String),
     BoxsetProgress(usize, usize),
+    /// The Collection screen's picker list finished loading (or failed).
+    CollectionCandidates(Result<Vec<CollectionCandidate>, String>),
     /// A background task finished: "probes" | "collection" | "artist_run" | "boxset" | "artist_one".
     Done(String),
 }
@@ -186,7 +190,13 @@ pub(crate) struct App {
     pub(crate) log: Vec<String>,
     pub(crate) progress: Option<(usize, usize)>,
     pub(crate) running: bool,
-    pub(crate) collection_limit: String,
+    /// New releases in the Discogs collection (not enriched yet), newest first.
+    pub(crate) collection_candidates: Vec<CollectionCandidate>,
+    /// Release IDs ticked in the picker.
+    pub(crate) collection_selected: HashSet<String>,
+    pub(crate) collection_loading: bool,
+    /// Why the picker is empty (load error), shown in place of the list.
+    pub(crate) collection_error: Option<String>,
 
     // artist runner (batch + single)
     pub(crate) artist_log: Vec<String>,
@@ -216,7 +226,8 @@ pub(crate) struct App {
     pub(crate) pending: Option<PendingPick>,
     pub(crate) describe: Option<PendingDescribe>,
 
-    pub(crate) autostart: bool,
+    /// `collection --interactive`: process the newest N on startup.
+    pub(crate) autostart: Option<usize>,
 
     pub(crate) tx: UnboundedSender<Msg>,
     pub(crate) rx: UnboundedReceiver<Msg>,
@@ -253,7 +264,10 @@ impl App {
             log: Vec::new(),
             progress: None,
             running: false,
-            collection_limit: "1".into(),
+            collection_candidates: Vec::new(),
+            collection_selected: HashSet::new(),
+            collection_loading: false,
+            collection_error: None,
             artist_log: Vec::new(),
             artist_progress: None,
             artist_running: false,
@@ -269,7 +283,7 @@ impl App {
             processing: None,
             pending: None,
             describe: None,
-            autostart: false,
+            autostart: None,
             tx,
             rx,
             pick_tx,
@@ -285,6 +299,7 @@ impl App {
             Screen::Releases => self.run_release_search(),
             Screen::Artists => self.run_artist_search(),
             Screen::Services => self.start_probes(),
+            Screen::Collection => self.load_collection_candidates(),
             Screen::Boxsets => {
                 self.boxset_tab = BoxsetTab::Unprocessed;
                 self.load_boxsets();
@@ -470,14 +485,36 @@ impl App {
         });
     }
 
-    /// The parsed collection run count (defaults to 1, minimum 1).
-    pub(crate) fn collection_count(&self) -> usize {
-        self.collection_limit.parse::<usize>().unwrap_or(0).max(1)
+    /// Fetch the newest not-yet-enriched releases from the Discogs collection for the picker.
+    pub(crate) fn load_collection_candidates(&mut self) {
+        if self.collection_loading || self.running {
+            return;
+        }
+        self.collection_loading = true;
+        self.collection_error = None;
+        let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
+        tokio::spawn(async move {
+            runners::run_collection_candidates_task(cfg, db, tx).await;
+        });
     }
 
-    pub(crate) fn step_collection_limit(&mut self, delta: isize) {
-        let next = (self.collection_count() as isize + delta).max(1) as usize;
-        self.collection_limit = next.to_string();
+    /// Tick/untick the highlighted release in the picker.
+    pub(crate) fn toggle_collection_selected(&mut self) {
+        let Some(c) = self.list.selected().and_then(|i| self.collection_candidates.get(i)) else { return };
+        let id = c.release_id.clone();
+        if !self.collection_selected.remove(&id) {
+            self.collection_selected.insert(id);
+        }
+        self.move_selection(1);
+    }
+
+    /// Tick every release, or untick them all when they already are.
+    pub(crate) fn toggle_collection_all(&mut self) {
+        if self.collection_selected.len() == self.collection_candidates.len() {
+            self.collection_selected.clear();
+        } else {
+            self.collection_selected = self.collection_candidates.iter().map(|c| c.release_id.clone()).collect();
+        }
     }
 
     /// The parsed artist run count (defaults to 1, minimum 1).
@@ -490,7 +527,29 @@ impl App {
         self.artist_limit = next.to_string();
     }
 
+    /// Process the ticked releases (or the highlighted one when none are ticked), in list order.
     pub(crate) fn start_collection(&mut self) {
+        let picked: Vec<CollectionCandidate> = if self.collection_selected.is_empty() {
+            self.list.selected().and_then(|i| self.collection_candidates.get(i)).cloned().into_iter().collect()
+        } else {
+            self.collection_candidates.iter().filter(|c| self.collection_selected.contains(&c.release_id)).cloned().collect()
+        };
+        if picked.is_empty() {
+            return;
+        }
+        let title = match picked.as_slice() {
+            [one] => format!("Collection · [{}] {} — {}", one.release_id, one.artist, one.title),
+            many => format!("Collection · processing {} selected release(s)", many.len()),
+        };
+        self.spawn_collection(CollectionRun::Picked(picked), title);
+    }
+
+    /// `collection --interactive`: process the first `count` of the collection, newest first.
+    pub(crate) fn start_collection_newest(&mut self, count: usize) {
+        self.spawn_collection(CollectionRun::Newest(count), format!("Collection · processing {count} newest release(s)"));
+    }
+
+    fn spawn_collection(&mut self, run: CollectionRun, title: String) {
         if self.running {
             return;
         }
@@ -498,10 +557,9 @@ impl App {
         self.log.clear();
         self.progress = Some((0, 0));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
-        let limit = self.collection_count();
-        self.begin_processing(RunKind::Collection, format!("Collection · processing {limit} newest release(s)"));
+        self.begin_processing(RunKind::Collection, title);
         tokio::spawn(async move {
-            runners::run_collection_task(cfg, db, tx, pick_tx, limit).await;
+            runners::run_collection_task(cfg, db, tx, pick_tx, run).await;
         });
     }
 
@@ -786,6 +844,7 @@ impl App {
             Screen::Releases => self.releases.len(),
             Screen::Artists => self.artists.len(),
             Screen::Boxsets => self.boxsets.len(),
+            Screen::Collection => self.collection_candidates.len(),
             _ => 0,
         }
     }
@@ -793,7 +852,7 @@ impl App {
     pub(crate) fn move_selection(&mut self, delta: isize) {
         let len = match self.screen {
             Screen::Home => MENU.len(),
-            Screen::Releases | Screen::Artists | Screen::Boxsets => self.list_len(),
+            Screen::Releases | Screen::Artists | Screen::Boxsets | Screen::Collection => self.list_len(),
             _ => return,
         };
         if len == 0 {
@@ -868,11 +927,32 @@ impl App {
                 Msg::ArtistProgress(done, total) => self.artist_progress = Some((done, total)),
                 Msg::BoxsetLog(line) => push_capped(&mut self.boxset_log, line),
                 Msg::BoxsetProgress(done, total) => self.boxset_progress = Some((done, total)),
+                Msg::CollectionCandidates(result) => {
+                    self.collection_loading = false;
+                    match result {
+                        Ok(list) => {
+                            self.collection_candidates = list;
+                            self.collection_error = None;
+                        }
+                        Err(e) => {
+                            self.collection_candidates.clear();
+                            self.collection_error = Some(e);
+                        }
+                    }
+                    // Drop ticks for releases no longer listed (processed since).
+                    let ids: HashSet<&str> = self.collection_candidates.iter().map(|c| c.release_id.as_str()).collect();
+                    self.collection_selected.retain(|id| ids.contains(id.as_str()));
+                    if self.screen == Screen::Collection {
+                        self.list.select((!self.collection_candidates.is_empty()).then_some(0));
+                    }
+                }
                 Msg::Done(what) => match what.as_str() {
                     "probes" => self.probing = false,
                     "collection" => {
                         self.running = false;
                         self.log.push("— run complete —".into());
+                        // Processed releases drop off the picker.
+                        self.load_collection_candidates();
                     }
                     "artist_run" => {
                         self.artist_running = false;

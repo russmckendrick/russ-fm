@@ -20,7 +20,7 @@ pub(crate) fn search_box(query: &str, count: usize) -> Paragraph<'static> {
     Paragraph::new(format!(" {query}")).block(theme::panel(&format!("Search ({count} results)")))
 }
 
-/// Shared layout for the Collection / Enrich-artists runner screens: an editable count,
+/// Shared layout for the Enrich-artists runner screen: an editable count,
 /// a progress gauge and a scrolling log.
 #[allow(clippy::too_many_arguments)]
 pub(crate) fn draw_runner(

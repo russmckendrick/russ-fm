@@ -43,8 +43,7 @@ pub async fn run(cfg: Config, launch: Launch) -> Result<()> {
     let mut app = App::new(cfg, db);
     if let Launch::Collection { count } = launch {
         app.screen = Screen::Collection;
-        app.collection_limit = count.max(1).to_string();
-        app.autostart = true;
+        app.autostart = Some(count.max(1));
     }
     let mut terminal = ratatui::init();
     let result = run_loop(&mut terminal, &mut app).await;
@@ -54,9 +53,8 @@ pub async fn run(cfg: Config, launch: Launch) -> Result<()> {
 
 async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Result<()> {
     while !app.should_quit {
-        if app.autostart {
-            app.autostart = false;
-            app.start_collection();
+        if let Some(count) = app.autostart.take() {
+            app.start_collection_newest(count);
         }
         app.drain_messages();
         terminal.draw(|f| draw(f, app))?;

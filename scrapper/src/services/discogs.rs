@@ -245,32 +245,38 @@ impl DiscogsService {
         let mut out = Vec::new();
         let mut page = 1u32;
         loop {
-            let path = format!("/users/{username}/collection/folders/0/releases");
-            let v = self
-                .get(
-                    &path,
-                    &[
-                        ("page", page.to_string()),
-                        ("per_page", "100".into()),
-                        ("sort", "added".into()),
-                        ("sort_order", "desc".into()),
-                    ],
-                )
-                .await?;
-            if let Some(arr) = v.get("releases").and_then(|r| r.as_array()) {
-                out.extend(arr.iter().cloned());
-            }
-            let pages = v
-                .get("pagination")
-                .and_then(|p| p.get("pages"))
-                .and_then(|p| p.as_u64())
-                .unwrap_or(1) as u32;
+            let (releases, pages) = self.get_user_collection_page(username, page).await?;
+            out.extend(releases);
             if page >= pages {
                 break;
             }
             page += 1;
         }
         Ok(out)
+    }
+
+    /// One page (100 releases, newest added first) of the user's collection, plus the total
+    /// page count.
+    pub async fn get_user_collection_page(&self, username: &str, page: u32) -> ServiceResult<(Vec<Value>, u32)> {
+        let path = format!("/users/{username}/collection/folders/0/releases");
+        let v = self
+            .get(
+                &path,
+                &[
+                    ("page", page.to_string()),
+                    ("per_page", "100".into()),
+                    ("sort", "added".into()),
+                    ("sort_order", "desc".into()),
+                ],
+            )
+            .await?;
+        let releases = v.get("releases").and_then(|r| r.as_array()).cloned().unwrap_or_default();
+        let pages = v
+            .get("pagination")
+            .and_then(|p| p.get("pages"))
+            .and_then(|p| p.as_u64())
+            .unwrap_or(1) as u32;
+        Ok((releases, pages))
     }
 
     /// Look up when a release was added to the user's collection (`date_added`), if present.
