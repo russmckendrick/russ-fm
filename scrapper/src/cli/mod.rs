@@ -298,15 +298,19 @@ pub struct EnrichDescriptionArgs {
 pub struct BackfillVideosArgs {
     /// Fetch each release's Discogs master videos (every edition's videos, not just this
     /// pressing's) instead of the release's own.
-    #[arg(long, conflicts_with_all = ["theaudiodb", "from"])]
+    #[arg(long, conflicts_with_all = ["theaudiodb", "wikidata", "from"])]
     pub masters: bool,
     /// Fetch each artist's official music videos from TheAudioDB instead.
-    #[arg(long, conflicts_with = "from")]
+    #[arg(long, conflicts_with_all = ["wikidata", "from"])]
     pub theaudiodb: bool,
+    /// Fetch the YouTube videos Wikidata records on each artist's songs instead (artists need
+    /// a Wikidata item from `backfill-identities`). `--batch-size` artists per query.
+    #[arg(long, conflicts_with = "from")]
+    pub wikidata: bool,
     /// Check videos against YouTube's embed page instead, so tv.json leaves out private,
     /// deleted and embed-blocked ones (new ids and those checked over 30 days ago; `--force`
     /// rechecks all).
-    #[arg(long, conflicts_with_all = ["masters", "theaudiodb", "from"])]
+    #[arg(long, conflicts_with_all = ["masters", "theaudiodb", "wikidata", "from"])]
     pub check: bool,
     #[arg(short, long, default_value_t = 25)]
     pub batch_size: u32,

@@ -158,6 +158,11 @@ returned The Supremes, and the Wikipedia page titled "Santana" is a disambiguati
   artist or several (aliases, unmerged duplicates). No auth; one request a second (the client
   runs 50 a minute).
 
+The Wikidata item also feeds `scrapper backfill-videos --wikidata`: the YouTube video IDs
+(P1651) on the artist's songs, singles and music videos, stored as `raw_data.wikidata_videos`
+and used by `tv.json` alongside TheAudioDB's (see
+[cli-commands.md](../backend/cli-commands.md#backfill-videos)).
+
 The result is stored on the artist row as `raw_data.identity`
 (`{wikidata_id, musicbrainz_id, wikipedia_title, resolved_at}`; any of the first three may be
 null). It is then used for:

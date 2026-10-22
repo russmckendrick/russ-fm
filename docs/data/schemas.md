@@ -489,8 +489,10 @@ compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
   backfill and `collection` run checks the new ids it adds.
 - **Sources**, merged per release (filled by `scrapper backfill-videos`; see
   [CLI commands](../backend/cli-commands.md#backfill-videos)):
-  1. **TheAudioDB** official music videos, stored per artist at `raw_data.theaudiodb_videos`
-     as `{ id, uri, track, album }`. Each video goes to the artist's records whose title
+  1. **Official artist videos**: TheAudioDB's, stored per artist at
+     `raw_data.theaudiodb_videos`, then the YouTube IDs Wikidata records on the artist's songs
+     at `raw_data.wikidata_videos` (`id` is the song's Wikidata item). Both are
+     `{ id, uri, track, album }` and are handled identically. Each video goes to the artist's records whose title
      matches its `album`, ignoring case, punctuation, a leading "The" and bracketed asides
      like `(Deluxe)`. With no album match, it goes to the artist's earliest record (by
      master year) that has the `track` in its tracklist. Otherwise it is dropped. These

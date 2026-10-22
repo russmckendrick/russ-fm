@@ -2,8 +2,9 @@
 //! `collection.json` by [`super::collection::generate`]. Compact JSON (the file is large), fixed
 //! key order via the structs below, releases sorted by `date_added` descending then `uri`.
 //!
-//! Videos come from three sources, merged per release:
-//! - TheAudioDB's official music videos, stored per artist (`raw_data.theaudiodb_videos`) and
+//! Videos come from these sources, merged per release:
+//! - official music videos stored per artist: TheAudioDB's (`raw_data.theaudiodb_videos`) and the
+//!   YouTube IDs Wikidata records on the artist's songs (`raw_data.wikidata_videos`, same shape),
 //!   matched to records by album or track title. They go first, and stand in for any Discogs
 //!   upload of the same song.
 //! - the Discogs release's `raw_data.discogs.videos` (the `videos` column only holds bare URLs);
@@ -58,8 +59,8 @@ struct TvVideo {
     duration: Option<u64>,
 }
 
-/// One artist's TheAudioDB music videos as stored on the artist row
-/// (`raw_data.theaudiodb_videos`): `(discogs id, name, videos)`.
+/// One artist's official music videos as stored on the artist row (`raw_data.theaudiodb_videos`
+/// then `raw_data.wikidata_videos`, each `{id, uri, track, album}`): `(discogs id, name, videos)`.
 pub type ArtistVideos = (Option<String>, String, Vec<Value>);
 
 /// Build and write `tv.json` to `path` from the already-loaded releases and the artists'
@@ -178,7 +179,7 @@ fn favour_official(mut official: Vec<TvVideo>, discogs: Vec<TvVideo>) -> Vec<TvV
     official
 }
 
-/// TheAudioDB videos per listed release (by index into `listed`), in TheAudioDB order. Each
+/// Official artist videos per listed release (by index into `listed`), in stored order. Each
 /// video goes to the artist's records whose title matches its album; failing that, to the
 /// artist's earliest record (by original year) with the song in its tracklist, so a single
 /// lands on its album rather than on every compilation and live record. Unmatched videos
@@ -233,7 +234,7 @@ fn theaudiodb_assignments(
             }
             for i in targets {
                 let (title, _) = title_and_credit(track, &listed[i].2);
-                // TheAudioDB only lists music videos: anything not tagged live is a promo.
+                // Both sources only list music videos: anything not tagged live is a promo.
                 let kind = match video_kind(track) {
                     "live" => "live",
                     _ => "video",

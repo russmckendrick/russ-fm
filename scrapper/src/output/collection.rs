@@ -49,7 +49,7 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
 
     // The /tv page's video index always travels with collection.json.
     let tv_path = output_path.with_file_name("tv.json");
-    let artist_videos = db.theaudiodb_artist_videos().context("loading TheAudioDB videos")?;
+    let artist_videos = db.official_artist_videos().context("loading official artist videos")?;
     let unplayable = db.unplayable_video_ids().context("loading video playability")?;
     super::tv::write(cfg, &releases, &artist_videos, &unplayable, &tv_path).with_context(|| format!("writing {}", tv_path.display()))?;
     Ok(count)

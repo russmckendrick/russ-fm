@@ -1085,22 +1085,62 @@ impl Db {
         Ok(true)
     }
 
-    /// Every artist's stored TheAudioDB music videos (`raw_data.theaudiodb_videos`), for
-    /// tv.json: `(discogs id, name, videos)`, artists with none left out.
-    pub fn theaudiodb_artist_videos(&self) -> Result<Vec<crate::output::tv::ArtistVideos>> {
+    /// Every artist's stored official music videos, for tv.json: TheAudioDB's
+    /// (`raw_data.theaudiodb_videos`) then Wikidata's (`raw_data.wikidata_videos`), as
+    /// `(discogs id, name, videos)`; artists with none left out.
+    pub fn official_artist_videos(&self) -> Result<Vec<crate::output::tv::ArtistVideos>> {
         let conn = self.conn()?;
         let mut stmt = conn.prepare(
-            "SELECT discogs_id, name, json_extract(raw_data, '$.theaudiodb_videos') FROM artists \
-             WHERE json_valid(raw_data) AND json_array_length(raw_data, '$.theaudiodb_videos') > 0",
+            "SELECT discogs_id, name, json_extract(raw_data, '$.theaudiodb_videos'), json_extract(raw_data, '$.wikidata_videos') \
+             FROM artists WHERE json_valid(raw_data) AND (json_array_length(raw_data, '$.theaudiodb_videos') > 0 \
+             OR json_array_length(raw_data, '$.wikidata_videos') > 0)",
         )?;
         let rows = stmt.query_map([], |row| {
-            Ok((row.get::<_, Option<String>>(0)?, row.get::<_, Option<String>>(1)?.unwrap_or_default(), row.get::<_, Option<String>>(2)?))
+            Ok((
+                row.get::<_, Option<String>>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, Option<String>>(2)?,
+                row.get::<_, Option<String>>(3)?,
+            ))
         })?;
         let mut out = Vec::new();
         for row in rows {
-            let (discogs_id, name, videos) = row?;
-            let videos = parse_json(videos, "[]").as_array().cloned().unwrap_or_default();
+            let (discogs_id, name, theaudiodb, wikidata) = row?;
+            let mut videos = parse_json(theaudiodb, "[]").as_array().cloned().unwrap_or_default();
+            videos.extend(parse_json(wikidata, "[]").as_array().cloned().unwrap_or_default());
             out.push((discogs_id.filter(|d| !d.is_empty()), name, videos));
+        }
+        Ok(out)
+    }
+
+    /// Artists with a Wikidata item (`raw_data.identity.wikidata_id`) whose Wikidata music videos
+    /// haven't been fetched yet (no `raw_data.wikidata_videos` key; `force` returns them all), by
+    /// name: `(artist id, name, Wikidata item ID)`.
+    pub fn artists_for_wikidata_videos(&self, force: bool, limit: Option<u32>) -> Result<Vec<(String, String, String)>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT id, name, json_extract(raw_data, '$.identity.wikidata_id'), json_type(raw_data, '$.wikidata_videos') FROM artists \
+             WHERE json_valid(raw_data) AND json_extract(raw_data, '$.identity.wikidata_id') IS NOT NULL \
+             ORDER BY name COLLATE NOCASE",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, String>(2)?,
+                row.get::<_, Option<String>>(3)?,
+            ))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (id, name, qid, fetched) = row?;
+            if !force && fetched.is_some() {
+                continue;
+            }
+            out.push((id, name, qid));
+            if limit.is_some_and(|l| out.len() >= l as usize) {
+                break;
+            }
         }
         Ok(out)
     }

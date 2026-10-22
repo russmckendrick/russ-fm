@@ -6,6 +6,9 @@
 //!   collects the videos of every edition, so it usually lists far more than one pressing.
 //! - `--theaudiodb`: each artist's official music videos from TheAudioDB, at the artist's
 //!   `raw_data.theaudiodb_videos`; tv.json matches them to records by album or track title.
+//! - `--wikidata`: the YouTube IDs Wikidata records on each artist's songs and singles, at
+//!   `raw_data.wikidata_videos` (same shape and matching). Needs the artist's Wikidata item from
+//!   `backfill-identities`.
 //!
 //! - `--check`: check every video tv.json could list against YouTube's embed page and cache
 //!   the verdict (`video_playability`), so private, deleted and embed-blocked videos are left
@@ -45,6 +48,9 @@ pub async fn run(cfg: &Config, args: BackfillVideosArgs) -> Result<()> {
     }
     if args.theaudiodb {
         return run_theaudiodb(cfg, &args).await;
+    }
+    if args.wikidata {
+        return run_wikidata(cfg, &args).await;
     }
     let db = Db::open(cfg.db_path())?;
 
@@ -182,6 +188,64 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
 }
 
 /// `--theaudiodb`: store each artist's TheAudioDB music videos.
+/// `--wikidata`: store the music videos Wikidata records on each artist's songs, fetched for 50
+/// artists per query. Every candidate gets the key (an empty list when Wikidata has none), so a
+/// re-run only fetches artists a failed query missed.
+async fn run_wikidata(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
+    let db = Db::open(cfg.db_path())?;
+    let candidates = db.artists_for_wikidata_videos(args.force, args.limit)?;
+    let total = candidates.len();
+
+    if args.dry_run {
+        println!("[dry-run] {total} artist(s) with a Wikidata item to fetch music videos for:");
+        for (_, name, qid) in candidates.iter().take(25) {
+            println!("  [{qid}] {name}");
+        }
+        return Ok(());
+    }
+
+    let services = Services::new(cfg);
+    println!("Fetching Wikidata music videos for {total} artist(s)...");
+    let (mut stored, mut found, mut videos_total, mut failed) = (0usize, 0usize, 0usize, 0usize);
+    for batch in candidates.chunks(args.batch_size.max(1) as usize) {
+        let qids: Vec<String> = batch.iter().map(|(_, _, q)| q.clone()).collect();
+        let by_artist = match services.wikidata.music_videos(&qids).await {
+            Ok(v) => v,
+            Err(e) => {
+                failed += batch.len();
+                println!("✗ Wikidata query for {} artist(s) failed: {e}", batch.len());
+                continue;
+            }
+        };
+        for (artist_id, name, qid) in batch {
+            let videos: Vec<Value> = by_artist
+                .get(qid)
+                .into_iter()
+                .flatten()
+                .map(|v| {
+                    json!({
+                        "id": v.work,
+                        "uri": format!("https://www.youtube.com/watch?v={}", v.youtube_id),
+                        "track": v.title,
+                        "album": v.album,
+                    })
+                })
+                .collect();
+            let n = videos.len();
+            db.set_artist_raw_key(artist_id, "wikidata_videos", Value::Array(videos))?;
+            stored += 1;
+            videos_total += n;
+            if n > 0 {
+                found += 1;
+                println!("[{stored}/{total}] {name} → {n} video(s)");
+            }
+        }
+    }
+
+    println!("\nDone: {stored} artist(s) stored, {found} with videos ({videos_total} in all), {failed} failed (re-run to retry).");
+    check_then_regenerate(cfg, &db, &services, stored).await
+}
+
 async fn run_theaudiodb(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
     let db = Db::open(cfg.db_path())?;
     let candidates = db.artists_for_theaudiodb_videos(args.force, args.limit)?;
@@ -360,7 +424,7 @@ pub struct CheckSummary {
 
 fn ids_to_check(cfg: &Config, db: &Db, scope: CheckScope, limit: Option<u32>) -> Result<Vec<String>> {
     let releases = db.get_all_releases()?;
-    let artist_videos = db.theaudiodb_artist_videos()?;
+    let artist_videos = db.official_artist_videos()?;
     let known = db.video_playability()?;
     let cutoff = match scope {
         CheckScope::Stale(days) => Some((chrono::Utc::now() - chrono::Duration::days(days)).to_rfc3339()),

@@ -372,6 +372,7 @@ scrapper backfill-videos [OPTIONS]
 | default | The Discogs release's own `videos[]` | `videos` column + album JSON (URLs), `raw_data.discogs.videos` (full objects) |
 | `--masters` | The Discogs master's `videos[]`, which covers every edition and usually lists far more than one pressing | `raw_data.discogs.master_videos` |
 | `--theaudiodb` | Each artist's official music videos from TheAudioDB (`mvid.php`), with album names resolved from `album.php` | the artist's `raw_data.theaudiodb_videos` |
+| `--wikidata` | The YouTube video IDs (P1651) Wikidata records on each artist's songs, singles and music videos, 50 artists per SPARQL query. Needs the artist's Wikidata item from `backfill-identities` | the artist's `raw_data.wikidata_videos` |
 | `--check` | Whether each video `tv.json` could list plays in an embed, read from YouTube's public embed page (`previewPlayabilityStatus`, no API key) | `video_playability` table; unplayable ids are left out of `tv.json` |
 
 ### Options
@@ -380,6 +381,7 @@ scrapper backfill-videos [OPTIONS]
 |--------|-------|------|---------|-------------|
 | `--masters` | | FLAG | `false` | Fetch Discogs master videos instead |
 | `--theaudiodb` | | FLAG | `false` | Fetch TheAudioDB artist music videos instead |
+| `--wikidata` | | FLAG | `false` | Fetch Wikidata artist music videos instead (`--batch-size` artists per query) |
 | `--check` | | FLAG | `false` | Check playability instead: new ids plus those last checked over 30 days ago (`--force`: all) |
 | `--batch-size` | `-b` | INT | `25` | Rows per batch (used with `--pause`) |
 | `--limit` | `-l` | INT | all | Maximum releases (or artists) to process |
@@ -403,6 +405,9 @@ scrapper backfill-videos --masters
 # TheAudioDB music videos for every artist with a TheAudioDB id
 scrapper backfill-videos --theaudiodb
 
+# Music videos Wikidata records on each artist's songs (after backfill-identities; under a minute)
+scrapper backfill-videos --wikidata --batch-size 50
+
 # Check which videos still play in an embed (about 8 a second)
 scrapper backfill-videos --check
 
@@ -415,7 +420,13 @@ scrapper backfill-videos --force
 - Resumable. The default mode skips releases that already have `raw_data.discogs.videos`.
   `--masters` skips those with `master_videos`, and releases already found to have no master.
   `--theaudiodb` skips artists with `theaudiodb_videos` and artists without a TheAudioDB id.
+  `--wikidata` skips artists with `wikidata_videos` and artists without a Wikidata item.
   `--force` redoes them all.
+- `--wikidata` only keeps statements on items that are a single, song, musical work, music
+  track with vocals or music video (not albums, so no full-album uploads), skips statements
+  qualified with another role (trailers), and drops a song with more than three IDs as
+  ambiguous. The song's album comes from its `part of` (P361) when that is an album or EP.
+  Every artist queried gets the key, `[]` when Wikidata has nothing.
 - `--masters` fetches each master once per run, even when several releases share it. A
   release with no stored `master_id` is fetched first to find its master. A master that
   404s is stored as empty; `backfill-original-years --force` re-points the release.
