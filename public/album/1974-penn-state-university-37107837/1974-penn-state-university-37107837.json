@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "6775978267",
+  "apple_music_url": "https://music.apple.com/gb/album/1974-penn-state-university-live/6775978267",
   "artists": [
     {
       "apple_music_id": "627204",
@@ -137,18 +137,63 @@
   "processing_info": {
     "has_local_images": false,
     "local_images_count": 0,
-    "processed_at": "2026-10-22T14:08:28.802132",
+    "processed_at": "2026-10-23T10:30:19.677459",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia",
       "perplexity"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "1974 Penn State University (Live)",
   "release_name_discogs": "1974 Penn State University",
   "release_name_spotify": null,
   "released": "2026-04-18",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/68/56/7c685630-424a-f336-7f24-e6eaff583d57/32812.jpg/{w}x{h}bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2026 Robert Fripp",
+      "editorial_notes": null,
+      "id": "6775978267",
+      "is_complete": true,
+      "name": "1974 Penn State University (Live)",
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "King Crimson",
+        "artwork": {
+          "bgColor": "16163e",
+          "height": 3000,
+          "textColor1": "f6828a",
+          "textColor2": "e87b82",
+          "textColor3": "ca6c7b",
+          "textColor4": "be6774",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/68/56/7c685630-424a-f336-7f24-e6eaff583d57/32812.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "℗ 2026 Robert Fripp",
+        "genreNames": [
+          "Prog-Rock/Art Rock",
+          "Music",
+          "Rock"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "1974 Penn State University (Live)",
+        "playParams": {
+          "id": "6775978267",
+          "kind": "album"
+        },
+        "recordLabel": "Discipline Global Mobile",
+        "releaseDate": "2026-06-19",
+        "trackCount": 11,
+        "upc": "633367887924",
+        "url": "https://music.apple.com/gb/album/1974-penn-state-university-live/6775978267"
+      },
+      "url": "https://music.apple.com/gb/album/1974-penn-state-university-live/6775978267"
+    },
     "perplexity": {
       "description": "1974 Penn State University\" captures King Crimson's electrifying live performance at Penn State University in University Park, Pennsylvania, on June 29, 1974, during their intense 1974 tour lineup featuring Robert Fripp on guitar, John Wetton on bass and vocals, Bill Bruford on drums, Richard Palmer-James on lyrics, and David Cross on violin. Released by Discipline Global Mobile and Panegyric as a standalone CD drawn from multi-track recordings, this rock release showcases the band's raw, eclectic progressive style amid their transition from the Larks' Tongues in Aspic era, blending ferocious improvisation with structured aggression. Tracks like the sprawling \"Improv - Is There Life Out There?\" and \"It Is For You, But Not For Us\" highlight their experimental edge, with Fripp's jagged guitar riffs, Wetton's muscular basslines, and Bruford's propulsive drumming creating a volatile soundscape that defined their mid-1970s live prowess.\n\nThis recording stands out for its fidelity to the band's 1974 setlists, offering fans a pristine multi-track glimpse into performances that fueled later compilations like The Great Deceiver. King Crimson's 1974 concerts were renowned for their unpredictability, merging heavy rock assaults with avant-garde detours, and this Penn State show exemplifies that—capturing the group's peak intensity before lineup shifts. Critically, it has been celebrated in prog circles for preserving the unpolished energy of an era when the band pushed boundaries, influencing generations of progressive and experimental rock acts with its blend of precision and chaos.\n\nIts significance lies in documenting a pivotal moment in King Crimson's evolution, providing essential listening for collectors via Discipline Global Mobile's archival efforts, and revealing the live alchemy that made their studio works resonate even more powerfully on stage.",
       "generated_at": "2026-05-03T12:59:51.028395",
@@ -224,7 +269,7 @@
       "title": "21st Century Schizoid Man"
     }
   ],
-  "updated_at": "2026-09-26T07:59:10.458483+00:00",
+  "updated_at": "2026-10-23T10:30:15.612217",
   "videos": [],
   "year": 2026
 }

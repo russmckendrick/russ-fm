@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "6787101668",
+  "apple_music_url": "https://music.apple.com/gb/album/best-i-2011-remaster/6787101668",
   "artists": [
     {
       "apple_music_id": "829538",
@@ -77,19 +77,64 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2026-10-22T14:12:52.508986",
+    "processed_at": "2026-10-23T10:29:58.866682",
     "services_used": [
       "discogs",
+      "apple_music",
       "lastfm",
       "wikipedia",
       "perplexity"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Best... I (2011 Remaster)",
   "release_name_discogs": "Best... I",
   "release_name_spotify": null,
   "released": "2026-07-24",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/82/5f/7c825fb1-b443-647a-f3b4-107979f88e1f/827568013972.jpg/{w}x{h}bb.jpg",
+      "content_rating": null,
+      "copyright": "This Compilation, ℗ 1992, 2011 Warner Music UK Ltd",
+      "editorial_notes": null,
+      "id": "6787101668",
+      "is_complete": true,
+      "name": "Best... I (2011 Remaster)",
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "The Smiths",
+        "artwork": {
+          "bgColor": "dcdcdc",
+          "height": 3000,
+          "textColor1": "1a1a1a",
+          "textColor2": "2c2c2c",
+          "textColor3": "404040",
+          "textColor4": "4f4f4f",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/82/5f/7c825fb1-b443-647a-f3b4-107979f88e1f/827568013972.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "This Compilation, ℗ 1992, 2011 Warner Music UK Ltd",
+        "genreNames": [
+          "Rock",
+          "Music",
+          "Alternative"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Best... I (2011 Remaster)",
+        "playParams": {
+          "id": "6787101668",
+          "kind": "album"
+        },
+        "recordLabel": "Rhino",
+        "releaseDate": "2007-11-12",
+        "trackCount": 14,
+        "upc": "0827568013972",
+        "url": "https://music.apple.com/gb/album/best-i-2011-remaster/6787101668"
+      },
+      "url": "https://music.apple.com/gb/album/best-i-2011-remaster/6787101668"
+    },
     "lastfm": {
       "images": [
         {
@@ -230,7 +275,7 @@
       "title": "Please, Please, Please, Let Me Get What I Want"
     }
   ],
-  "updated_at": "2026-09-30T08:50:36.970300+00:00",
+  "updated_at": "2026-10-23T10:29:58.710805",
   "videos": [
     "https://www.youtube.com/watch?v=jhNUhS1RW2Y"
   ],
