@@ -70,7 +70,7 @@ scrapper/
     ├── sanitize.rs                  # Folder-name sanitizer (data-contract critical)
     ├── logging.rs                   # tracing setup (stderr)
     ├── cli/                         # clap command surface (all commands + flags)
-    ├── ops/                         # Command implementations: release, artist, collection,
+    ├── ops/                         # Command implementations (output via say!, see out.rs): release, artist, collection,
     │                                #   report, descriptions, videos, maintenance, services
     ├── services/                    # API clients: discogs, apple_music, spotify, lastfm,
     │                                #   wikipedia, theaudiodb, perplexity (+ rate limiting)

@@ -2,6 +2,7 @@ import { ArrowLeft, Check, ExternalLink, Minus } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { Link, useParams } from 'react-router'
 import { Cover } from '@/components/Cover'
+import { ReleaseActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
 import { Tabs } from '@/components/Tabs'
 import { Badge, EmptyState, ErrorState, LinkChip, Spinner } from '@/components/ui'
@@ -28,6 +29,8 @@ export function ReleasePage() {
   const tracks = pub.tracklist ?? []
   const videos = uniqueVideos(pub.videos ?? [])
   const description = pub.services?.perplexity?.description ?? pub.services?.lastfm?.wiki_summary
+  const discogsId = pub.discogs_id ?? item?.discogs_id ?? null
+  const isBox = (pub.formats ?? []).some((f) => /box set/i.test(f)) || item?.format === 'Box Set'
 
   return (
     <div className="pb-16">
@@ -79,6 +82,11 @@ export function ReleasePage() {
             </div>
           </div>
         </div>
+        {discogsId && (
+          <div className="mt-6">
+            <ReleaseActions discogsId={discogsId} slug={slug} isBox={isBox} inDb={data.record !== null} />
+          </div>
+        )}
       </Hero>
 
       <div className="mx-auto max-w-5xl px-6">

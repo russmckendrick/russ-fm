@@ -4,11 +4,13 @@
 //!
 //! Module map:
 //! - [`api`] — JSON handlers (reads + job-starting actions).
+//! - [`commands`] — the CLI's command tree for generated forms; argv → job.
 //! - [`jobs`] — background job registry: logs, progress, interactive prompts, SSE events.
 //! - [`library`] — slim index of `collection.json` for the library and artist grids.
 //! - [`media`] — `/media/*` files, deriving `-medium`/`-avatar` from `-hi-res` when missing.
 
 mod api;
+pub mod commands;
 pub mod jobs;
 pub mod library;
 pub mod media;
@@ -109,6 +111,16 @@ pub fn router(state: Arc<AppState>) -> Router {
         .route("/events", get(api::events))
         .route("/actions/probe-services", post(api::probe_services))
         .route("/actions/generate-collection", post(api::generate_collection))
+        .route("/actions/process-releases", post(api::process_releases))
+        .route("/actions/enrich-artists", post(api::enrich_artists))
+        .route("/actions/site-script", post(api::site_script))
+        .route("/commands", get(api::commands))
+        .route("/run", post(api::run_command))
+        .route("/collection/new", get(api::new_in_collection))
+        .route("/boxsets", get(api::boxsets))
+        .route("/boxsets/{id}/single", post(api::set_boxset_single))
+        .route("/db/rows", get(api::db_rows))
+        .route("/backups", get(api::backups))
         .fallback(|| async { (StatusCode::NOT_FOUND, axum::Json(serde_json::json!({ "error": "no such endpoint" }))) });
 
     Router::new()

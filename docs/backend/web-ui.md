@@ -17,18 +17,37 @@ Stop it with `Ctrl-C`.
 
 ## Status
 
-Phase 1 is in place: launching, the jobs system and read-only browsing.
-
 | Area | State |
 |------|-------|
 | Dashboard: counts, recently added, genre / decade / format breakdowns | ✅ |
 | Library: cover grid and list, search, genre / format / decade / coloured-vinyl filters, sorting (all in the URL) | ✅ |
 | Release and artist pages: artwork, metadata, links, tracklist, videos, description, raw DB record + published JSON | ✅ |
+| Release and artist actions: re-enrich, refresh one field, new description, redo colours / photo notes, boxset discovery | ✅ |
+| Add & enrich: the TUI's new-in-Discogs picker, add a release by ID or URL, enrich artists, resume the collection | ✅ |
+| Boxsets: unprocessed / processed / single-release views, discovery, single-release flag | ✅ |
+| Tools: every CLI command as a generated form, plus a command line | ✅ |
+| Site assets: `pnpm generate-colors` and `pnpm generate-artist-images`, for everything or one album / artist | ✅ |
+| Database: search and list releases/artists (including ones not in collection.json), delete, backups | ✅ |
 | ⌘K palette: releases, artists, pages, actions | ✅ |
 | Jobs: live log + progress over SSE, stop, interactive prompts (match picker, Perplexity description) | ✅ |
-| Services probe (`scrapper test`), `generate-collection` | ✅ |
-| Collection / release / artist / boxset runs, backfills, `db` and `maintenance` tools | Phase 2 |
 | Editing records, diff before save, data-health views | Phase 3 |
+
+## Pages
+
+- **Add & enrich** (`/add`): the newest Discogs releases that aren't enriched yet (not processed,
+  or processed without any Apple Music / Spotify / Last.fm match; the same list as the TUI's
+  Collection screen). Pick some and process them, or process the newest N. Releases are
+  force-refreshed and saved, and service matches are chosen in the browser. Also: add one
+  release by ID or discogs.com URL, enrich the next N un-enriched artists or one artist by
+  name, and `collection --resume` (with a dry run).
+- **Boxsets** (`/boxsets`): box releases with album section headers, split into Unprocessed,
+  Processed and Single release, as in the TUI. Discover albums runs
+  `release --boxset <id> --save` (Refetch adds `--force-refresh`).
+- **Tools** (`/tools/<command>`): one form per CLI command, generated from clap (see below).
+  The command line at the top takes any command as you'd type it
+  (`artist "Talk Talk" --save`). **Site (pnpm)** runs the site's asset scripts.
+- **Database** (`/database`): `db search` / `db list` as a table linked to library pages, delete
+  (`db delete … --force`, which backs up first), and the backups folder with Back up now.
 
 ## Architecture
 
@@ -74,6 +93,42 @@ those is missing, the server derives it from the hi-res file and caches it under
 rebuilt when the hi-res file is newer. The frontend builds these URLs with
 `web/src/lib/media.ts`, which follows the same naming as the site's `src/lib/image-utils.ts`.
 
+### Running CLI commands as jobs
+
+The web UI runs the real CLI code rather than a copy of it:
+
+- **Forms come from clap.** `GET /api/commands` walks `Cli::command()` and returns each
+  command's about text, positionals, flags, options, defaults and allowed values
+  (`web/commands.rs`). The Tools page renders those as fields, so a new flag shows up in the
+  browser as soon as it's added to `cli/mod.rs`. `init` is left out because it writes a config
+  into the server's working directory, and so are the TUI's own flags.
+- **Arguments are parsed by clap too.** `POST /api/run {args}` parses
+  `["scrapper", ...args]` with `Cli::try_parse_from`, so the browser gets the same validation
+  and error text as the terminal (conflicting flags, bad values). It refuses `--config`, `init`
+  and `collection --interactive` (that one opens the TUI; use the Add page's picker instead),
+  then runs `cli::run` as a job.
+- **Output is captured per job.** Command code writes with `say!` (`ops/out.rs`) instead of
+  `println!`. On the CLI that's stdout; inside a job a tokio task-local `Console` sends each
+  line to the job log, so concurrent jobs never mix their output. Batch loops call
+  `out::progress(i, total)` for the progress bar. A tracing layer (`logging.rs`) also copies
+  the crate's warnings and errors into the running job's log.
+- **`--interactive` works in the browser.** `MatchPicker::interactive()` returns the job's
+  prompt channel when one is active, and dialoguer on the terminal otherwise, so
+  `release … --interactive`, `artist … --interactive` and boxset discovery ask their questions
+  in the browser.
+
+The TUI and the web share the collection picker (`ops::collection::new_candidates` /
+`process_candidates`) and the artist runner (`ops::artist::enrich_unenriched`). Both take a
+`ProgressSink` and a `MatchPicker`.
+
+### Site asset scripts
+
+`POST /api/actions/site-script {script, only?, all?}` runs `pnpm run generate-colors` or
+`pnpm run generate-artist-images` in the repo root (the data directory's parent), streaming
+stdout and stderr into the job log. `only` passes `--only <slug>` to redo one album or artist;
+`all` passes `--force` (colours) or `--full` (artist images). Album and artist pages have
+one-click buttons for their own slug. `generate-artist-images` needs macOS (Apple Vision).
+
 ### Jobs and live updates
 
 Anything that calls a service or writes runs as a **job** (`web::jobs::Jobs`). Each job is a
@@ -113,9 +168,21 @@ to the job.
 | GET | `/api/events` | SSE feed of job events |
 | POST | `/api/actions/probe-services` | Job: `scrapper test` |
 | POST | `/api/actions/generate-collection` | Job: `scrapper generate-collection` |
+| POST | `/api/actions/process-releases` | Job: process picked candidates (`{items}`) or the newest N (`{newest}`), interactively |
+| POST | `/api/actions/enrich-artists` | Job: enrich the next `{limit}` un-enriched artists, interactively |
+| POST | `/api/actions/site-script` | Job: `pnpm run generate-colors` / `generate-artist-images` (`{script, only?, all?}`) |
+| GET | `/api/commands` | The CLI command tree, for generated forms |
+| POST | `/api/run` | Job: `scrapper <args>` (`{args: [...]}`) |
+| GET | `/api/collection/new` | New / un-enriched releases in the Discogs collection (calls Discogs) |
+| GET | `/api/boxsets` | Box releases with discovery state and album folder |
+| POST | `/api/boxsets/{id}/single` | Flag or unflag a box as a single release (`{single}`) |
+| GET | `/api/db/rows` | `?kind=release|artist&q=&sort=&limit=`: search or list database rows |
+| GET | `/api/backups` | Files in `scrapper/backups/` |
 | GET | `/media/{path}` | Artwork / JSON from `public/` |
 
-Errors are `{"error": "…"}` with a matching status code.
+Errors are `{"error": "…"}` with a matching status code. Jobs of the same kind (for `run`, the
+first word of the command) don't overlap: starting a second one answers `409`. When a job
+that writes finishes, the browser refetches whatever is on screen.
 
 ## Development
 

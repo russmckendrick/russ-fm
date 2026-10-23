@@ -22,9 +22,9 @@ pub async fn run(cfg: &Config, args: EnrichDescriptionArgs) -> Result<()> {
 
     if args.list_missing {
         let missing = db.get_releases_without_description(Some(args.limit))?;
-        println!("Releases without any description ({} shown):", missing.len());
+        crate::say!("Releases without any description ({} shown):", missing.len());
         for r in &missing {
-            println!("  [{}] {} — {} ({})", r.discogs_id.as_deref().unwrap_or("?"), r.artists.join(", "), r.title, r.year.unwrap_or(0));
+            crate::say!("  [{}] {} — {} ({})", r.discogs_id.as_deref().unwrap_or("?"), r.artists.join(", "), r.title, r.year.unwrap_or(0));
         }
         return Ok(());
     }
@@ -69,7 +69,7 @@ pub async fn run(cfg: &Config, args: EnrichDescriptionArgs) -> Result<()> {
             }
         }
         if targets.is_empty() {
-            println!("No releases are missing a description.");
+            crate::say!("No releases are missing a description.");
             return Ok(());
         }
     }
@@ -84,13 +84,14 @@ pub async fn run(cfg: &Config, args: EnrichDescriptionArgs) -> Result<()> {
     let total = targets.len();
     let mut ok = 0usize;
     for (i, t) in targets.iter().enumerate() {
+        super::out::progress(i + 1, total);
         // Skip if a description already exists and we're not forcing.
         if !args.force && db.has_enriched_release(&t.discogs_id).unwrap_or(false) {
             if let Some(rec) = db.get_release_by_discogs_id(&t.discogs_id)? {
                 let has = rec.raw_data.get("services").and_then(|s| s.get("perplexity")).and_then(|p| p.get("description")).map(|d| !d.is_null()).unwrap_or(false)
                     || rec.raw_data.get("perplexity").and_then(|p| p.get("description")).map(|d| !d.is_null()).unwrap_or(false);
                 if has {
-                    println!("[{}/{total}] – {} — already has a description (use --force)", i + 1, t.title);
+                    crate::say!("[{}/{total}] – {} — already has a description (use --force)", i + 1, t.title);
                     continue;
                 }
             }
@@ -100,21 +101,21 @@ pub async fn run(cfg: &Config, args: EnrichDescriptionArgs) -> Result<()> {
             Ok(data) => {
                 let preview: String = data.get("description").and_then(|d| d.as_str()).unwrap_or("").chars().take(100).collect();
                 if args.dry_run {
-                    println!("[{}/{total}] (dry-run) {} — {}…", i + 1, t.title, preview);
+                    crate::say!("[{}/{total}] (dry-run) {} — {}…", i + 1, t.title, preview);
                 } else {
                     db.update_release_perplexity_description(&t.discogs_id, &data)?;
                     let folder = release_folder_name(&t.title, &t.discogs_id);
                     let _ = crate::output::patch_album_service(&album_dir, &folder, "perplexity", data);
                     ok += 1;
-                    println!("[{}/{total}] ✓ {} — {}…", i + 1, t.title, preview);
+                    crate::say!("[{}/{total}] ✓ {} — {}…", i + 1, t.title, preview);
                 }
             }
-            Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, t.title),
+            Err(e) => crate::say!("[{}/{total}] ✗ {} — {e}", i + 1, t.title),
         }
     }
 
     if !args.dry_run {
-        println!("\nDone: {ok}/{total} descriptions generated.");
+        crate::say!("\nDone: {ok}/{total} descriptions generated.");
     }
     Ok(())
 }

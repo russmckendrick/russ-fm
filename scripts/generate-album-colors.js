@@ -21,8 +21,10 @@
  * swatches go to a separate file (album-swatches.json): only the album page
  * shows them, and they would double the size of the map every page loads.
  *
- * Usage: node scripts/generate-album-colors.js [--force]
+ * Usage: node scripts/generate-album-colors.js [--force] [--only <slug>]
  *   Albums already at the current VERSION are kept; --force redoes them all.
+ *   --only <slug> always redoes that one album (e.g. after replacing its
+ *   sleeve) and keeps every other entry as it is.
  *   Output order follows collection.json and albums no longer in the
  *   collection are dropped, so re-runs are deterministic.
  */
@@ -361,7 +363,13 @@ async function writeOnePerLine(file, map) {
 
 async function generateAlbumColors() {
   const force = process.argv.includes('--force');
-  console.log(`🎨 Generating album colour palettes (v${VERSION}${force ? ', forced' : ''})...`);
+  const onlyIndex = process.argv.indexOf('--only');
+  const only = onlyIndex === -1 ? null : process.argv[onlyIndex + 1];
+  if (onlyIndex !== -1 && !only) {
+    console.error('❌ --only needs an album slug, e.g. --only fudge-38794683');
+    process.exit(1);
+  }
+  console.log(`🎨 Generating album colour palettes (v${VERSION}${force ? ', forced' : ''}${only ? `, redoing ${only}` : ''})...`);
 
   const publicDir = path.join(__dirname, '..', 'public');
   const jsonPath = path.join(publicDir, 'album-colors.json');
@@ -380,6 +388,11 @@ async function generateAlbumColors() {
       console.warn('⚠️  No existing palettes, starting fresh');
     }
 
+    if (only && !collection.some(album => album.uri_release === `/album/${only}/`)) {
+      console.error(`❌ No album ${only} in collection.json`);
+      process.exit(1);
+    }
+
     const colours = {};
     const swatches = {};
     let processed = 0;
@@ -389,7 +402,8 @@ async function generateAlbumColors() {
     for (const album of collection) {
       const uri = album.uri_release;
       const kept = existing[uri];
-      if (!force && kept?.v === VERSION && existingSwatches[uri]) {
+      const redo = force || uri === `/album/${only}/`;
+      if (!redo && kept?.v === VERSION && existingSwatches[uri]) {
         colours[uri] = kept;
         swatches[uri] = existingSwatches[uri];
         continue;

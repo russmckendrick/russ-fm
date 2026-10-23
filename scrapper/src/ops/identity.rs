@@ -310,14 +310,14 @@ pub async fn run(cfg: &Config, args: BackfillIdentitiesArgs) -> Result<()> {
     if let Some(l) = args.limit {
         to_resolve.truncate(l as usize);
     }
-    println!(
+    crate::say!(
         "{} artist(s) with a Discogs ID; resolving {} via Wikidata/MusicBrainz{}...",
         artists.len(),
         to_resolve.len(),
         if args.dry_run { " (dry run: nothing is written)" } else { "" }
     );
     let resolved = resolve_many(&services, &to_resolve).await?;
-    println!("Resolved {} of {}.", resolved.len(), to_resolve.len());
+    crate::say!("Resolved {} of {}.", resolved.len(), to_resolve.len());
 
     let (mut changed, mut stored_only, mut unresolved, mut failed) = (0usize, 0usize, 0usize, 0usize);
     // Wikipedia links on artists Wikidata doesn't know: nothing can confirm or correct them.
@@ -357,7 +357,7 @@ pub async fn run(cfg: &Config, args: BackfillIdentitiesArgs) -> Result<()> {
             if let Some(m) = &p.mbid {
                 what.push(format!("MBID → {m}"));
             }
-            println!("  {}: {}", rec.name, what.join("; "));
+            crate::say!("  {}: {}", rec.name, what.join("; "));
             changed += 1;
             continue;
         }
@@ -366,29 +366,29 @@ pub async fn run(cfg: &Config, args: BackfillIdentitiesArgs) -> Result<()> {
         updated.updated_at = Some(now_iso());
         match crate::ops::artist::persist_artist(cfg, &db, &updated) {
             Ok(_) => {
-                println!("✓ {}: {}", rec.name, changes.join("; "));
+                crate::say!("✓ {}: {}", rec.name, changes.join("; "));
                 changed += 1;
             }
             Err(e) => {
-                println!("✗ {}: {e}", rec.name);
+                crate::say!("✗ {}: {e}", rec.name);
                 failed += 1;
             }
         }
     }
 
     if !unverified.is_empty() {
-        println!("\nWikipedia links Wikidata can't confirm (check by hand in the TUI):");
+        crate::say!("\nWikipedia links Wikidata can't confirm (check by hand in the TUI):");
         for (name, url) in &unverified {
-            println!("  {name}: {url}");
+            crate::say!("  {name}: {url}");
         }
     }
     let verb = if args.dry_run { "would change" } else { "changed" };
-    println!(
+    crate::say!(
         "\nDone: {changed} artist(s) {verb}, {stored_only} identity stored with nothing to fix, {unresolved} not resolved (re-run to retry), {failed} failed."
     );
     if changed > 0 && !args.dry_run {
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Regenerated collection.json ({n} entries). Rebuild tv.json if any TheAudioDB match changed.");
+        crate::say!("Regenerated collection.json ({n} entries). Rebuild tv.json if any TheAudioDB match changed.");
     }
     Ok(())
 }

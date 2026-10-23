@@ -66,6 +66,15 @@ pub enum MatchPicker {
 }
 
 impl MatchPicker {
+    /// The picker for `--interactive`: the web UI's prompts when this run is a web UI job
+    /// (see [`super::out`]), else dialoguer on the terminal.
+    pub fn interactive() -> Self {
+        match super::out::current().and_then(|c| c.prompts) {
+            Some(tx) => MatchPicker::Tui(tx),
+            None => MatchPicker::Cli,
+        }
+    }
+
     /// True when matches are chosen interactively (so enrichment must run sequentially).
     pub fn is_interactive(&self) -> bool {
         !matches!(self, MatchPicker::First)
@@ -162,7 +171,7 @@ fn cli_describe(artist: &str, album: &str, preview: &str, context: &str) -> Desc
                 .unwrap_or_default();
             DescribeAction::Generate(ctx)
         } else {
-            println!("\n{preview}\n");
+            crate::say!("\n{preview}\n");
             let choice = Select::with_theme(&ColorfulTheme::default())
                 .with_prompt("Description")
                 .items(["Accept", "Regenerate (new context)", "Skip"])
@@ -608,18 +617,18 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
         let Some(rec) = db.get_release_by_discogs_id(&discogs_id)? else {
             bail!("release {discogs_id} is not in the database — process it first: scrapper release {discogs_id} --save");
         };
-        println!("Refreshing {} for release {discogs_id}...", field.label());
-        let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
+        crate::say!("Refreshing {} for release {discogs_id}...", field.label());
+        let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
         let (rec, _) = refresh_release_field(cfg, &services, &db, &client, &rec, field, &picker).await?;
 
         print_summary(&rec, EnrichFlags::default());
         if matches!(args.output, OutputFormat::Json) {
-            println!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
+            crate::say!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
         }
         let folder = release_folder_name(&rec.title, &discogs_id);
-        println!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
+        crate::say!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
         return Ok(());
     }
 
@@ -627,11 +636,11 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     // fetches the sources fresh anyway, making a non-persisting force-refresh meaningless.
     let save = args.save || args.force_refresh;
     if args.force_refresh && !args.save {
-        println!("--force-refresh implies --save: refreshed data will be persisted.");
+        crate::say!("--force-refresh implies --save: refreshed data will be persisted.");
     }
 
-    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
-    println!("Fetching & enriching Discogs release {discogs_id}...");
+    let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
+    crate::say!("Fetching & enriching Discogs release {discogs_id}...");
     // Look up the collection date so a freshly-added release sorts correctly.
     let date_added = if cfg.discogs.username.is_empty() {
         None
@@ -647,20 +656,20 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     .await?;
 
     if let Some(parent_id) = args.boxset.as_deref() {
-        println!("Linked as boxset member of release {parent_id}.");
+        crate::say!("Linked as boxset member of release {parent_id}.");
     }
 
     print_summary(&rec, flags);
     if matches!(args.output, OutputFormat::Json) {
-        println!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
+        crate::say!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
     }
     if save {
         let folder = release_folder_name(&rec.title, &discogs_id);
-        println!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
+        crate::say!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
     } else {
-        println!("\n(dry view — pass --save to write to the database, JSON and artwork)");
+        crate::say!("\n(dry view — pass --save to write to the database, JSON and artwork)");
     }
     Ok(())
 }
@@ -676,18 +685,18 @@ async fn run_boxset_discovery(
     box_id: &str,
 ) -> Result<()> {
     use std::io::IsTerminal;
-    if !std::io::stdin().is_terminal() {
+    if !super::out::captured() && !std::io::stdin().is_terminal() {
         bail!("boxset discovery is interactive — run it from a terminal");
     }
-    let log = |s: String| println!("{s}");
-    let progress = |_: usize, _: usize| {};
+    let log = |s: String| crate::say!("{s}");
+    let progress = |d: usize, t: usize| super::out::progress(d, t);
     let sink = ProgressSink { log: &log, progress: &progress };
     let opts = BoxsetDiscoveryOptions {
         save: args.save || args.force_refresh,
         prefer: prefer_key(args.prefer),
         force_refresh: args.force_refresh,
     };
-    discover_boxset(cfg, services, db, client, box_id, opts, &MatchPicker::Cli, &sink).await.map(|_| ())
+    discover_boxset(cfg, services, db, client, box_id, opts, &MatchPicker::interactive(), &sink).await.map(|_| ())
 }
 
 /// Boxset discovery, independent of the front end: process the box itself (when it is unknown,
@@ -915,7 +924,7 @@ fn summary_lines(rec: &ReleaseRecord, flags: EnrichFlags) -> Vec<String> {
 
 fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
     for line in summary_lines(rec, flags) {
-        println!("{line}");
+        crate::say!("{line}");
     }
 }
 

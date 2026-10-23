@@ -16,8 +16,8 @@ pub async fn run(cfg: &Config, args: GenerateCollectionArgs) -> Result<()> {
         .or_else(|| args.data_path.clone().map(|d| d.join("collection.json")))
         .unwrap_or_else(|| cfg.data_dir().join("collection.json"));
 
-    println!("Generating collection.json...");
+    crate::say!("Generating collection.json...");
     let count = collection::generate(cfg, &db, &output)?;
-    println!("Wrote {count} entries to {}", output.display());
+    crate::say!("Wrote {count} entries to {}", output.display());
     Ok(())
 }

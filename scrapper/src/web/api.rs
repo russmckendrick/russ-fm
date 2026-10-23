@@ -16,6 +16,7 @@ use tokio::sync::broadcast::error::RecvError;
 
 use super::jobs::PromptAnswer;
 use super::AppState;
+use crate::ops::release::ProgressSink;
 use crate::output::collection;
 use crate::services::{Probe, Services};
 
@@ -323,4 +324,281 @@ pub async fn generate_collection(State(s): Shared) -> ApiResult {
         ctx.log(format!("Wrote {count} entries to {}", output.display()));
         Ok(Some(json!({ "entries": count })))
     }))
+}
+
+// ── Any CLI command ─────────────────────────────────────────────────────────────────────────
+
+/// The CLI's command tree, for the Tools page's generated forms.
+pub async fn commands() -> Json<Value> {
+    Json(json!({ "commands": super::commands::catalog() }))
+}
+
+#[derive(Deserialize)]
+pub struct RunBody {
+    args: Vec<String>,
+}
+
+/// Run `scrapper <args>` as a job: output becomes the job log, `--interactive` questions become
+/// browser prompts. Jobs of the same command don't overlap.
+pub async fn run_command(State(s): Shared, Json(body): Json<RunBody>) -> ApiResult {
+    let cli = super::commands::parse(&body.args).map_err(ApiError::bad_request)?;
+    let kind = body.args.first().cloned().unwrap_or_default();
+    let cfg = s.cfg.clone();
+    started(s.jobs.spawn(&kind, super::commands::display(&body.args), |ctx| async move {
+        crate::ops::out::capture(ctx.console(), crate::cli::run(cli, cfg)).await?;
+        Ok(None)
+    }))
+}
+
+// ── Collection: pick new releases, enrich artists ───────────────────────────────────────────
+
+/// Releases in the Discogs collection that aren't enriched yet (newest first, up to 50).
+pub async fn new_in_collection(State(s): Shared) -> ApiResult {
+    let items = crate::ops::collection::new_candidates(&s.cfg, &s.db).await?;
+    Ok(Json(json!({ "items": items })))
+}
+
+#[derive(Deserialize)]
+pub struct ProcessBody {
+    /// Picked from `/api/collection/new`.
+    #[serde(default)]
+    items: Vec<crate::ops::collection::CollectionCandidate>,
+    /// Or: the newest N in the collection, processed or not.
+    newest: Option<usize>,
+}
+
+/// Force-refresh and save releases with interactive match-picking (the TUI Collection screen).
+pub async fn process_releases(State(s): Shared, Json(body): Json<ProcessBody>) -> ApiResult {
+    if body.items.is_empty() && body.newest.is_none() {
+        return Err(ApiError::bad_request("pick some releases, or give `newest`"));
+    }
+    let title = match body.newest {
+        Some(n) => format!("Process the {n} newest release(s)"),
+        None if body.items.len() == 1 => format!("Process {} — {}", body.items[0].artist, body.items[0].title),
+        None => format!("Process {} release(s)", body.items.len()),
+    };
+    let (cfg, db) = (s.cfg.clone(), s.db.clone());
+    started(s.jobs.spawn("collection", title, |ctx| async move {
+        let items = match body.newest {
+            Some(n) => {
+                ctx.log(format!("Fetching collection for {}…", cfg.discogs.username));
+                crate::ops::collection::newest_candidates(&cfg, n.max(1)).await?
+            }
+            None => body.items,
+        };
+        let (log, progress) = ctx.sink_fns();
+        let sink = ProgressSink { log: &log, progress: &progress };
+        crate::ops::collection::process_candidates(&cfg, &db, &items, &ctx.picker(), &sink).await?;
+        Ok(None)
+    }))
+}
+
+#[derive(Deserialize)]
+pub struct EnrichArtistsBody {
+    limit: usize,
+}
+
+/// Enrich the first N un-enriched artists with interactive match-picking.
+pub async fn enrich_artists(State(s): Shared, Json(body): Json<EnrichArtistsBody>) -> ApiResult {
+    let (cfg, db) = (s.cfg.clone(), s.db.clone());
+    let limit = body.limit.clamp(1, 500);
+    started(s.jobs.spawn("enrich-artists", format!("Enrich {limit} artist(s)"), |ctx| async move {
+        let (log, progress) = ctx.sink_fns();
+        let sink = ProgressSink { log: &log, progress: &progress };
+        crate::ops::artist::enrich_unenriched(&cfg, &db, limit, &ctx.picker(), &sink).await?;
+        Ok(None)
+    }))
+}
+
+// ── Boxsets ─────────────────────────────────────────────────────────────────────────────────
+
+/// Box-format releases with their discovery state, plus each one's album folder for artwork.
+pub async fn boxsets(State(s): Shared) -> ApiResult {
+    let st = s.clone();
+    blocking(move || {
+        let lib = st.library.get()?;
+        let slugs: std::collections::HashMap<&str, &str> =
+            lib.items.iter().filter_map(|i| Some((i.discogs_id.as_deref()?, i.slug.as_str()))).collect();
+        let rows: Vec<Value> = st
+            .db
+            .list_boxsets()?
+            .into_iter()
+            .map(|b| {
+                let slug = slugs.get(b.discogs_id.as_str()).map(|s| s.to_string());
+                let mut v = serde_json::to_value(&b).unwrap_or_default();
+                v["processed"] = json!(b.is_processed());
+                v["slug"] = json!(slug);
+                v
+            })
+            .collect();
+        Ok(Json(json!({ "boxsets": rows })))
+    })
+    .await
+}
+
+#[derive(Deserialize)]
+pub struct SingleBody {
+    single: bool,
+}
+
+/// Flag a box as a single album in a box edition (no discovery), or undo that.
+pub async fn set_boxset_single(State(s): Shared, Path(id): Path<String>, Json(body): Json<SingleBody>) -> ApiResult {
+    let st = s.clone();
+    blocking(move || {
+        if !st.db.set_boxset_single_release(&id, body.single)? {
+            anyhow::bail!(NotFound(format!("no release {id}")));
+        }
+        Ok(Json(json!({ "ok": true })))
+    })
+    .await
+}
+
+// ── Database ────────────────────────────────────────────────────────────────────────────────
+
+#[derive(Deserialize)]
+pub struct DbQuery {
+    kind: String,
+    q: Option<String>,
+    sort: Option<String>,
+    limit: Option<u32>,
+}
+
+/// Search or list database rows (`db search` / `db list`), linked to their library folders.
+pub async fn db_rows(State(s): Shared, axum::extract::Query(p): axum::extract::Query<DbQuery>) -> ApiResult {
+    let st = s.clone();
+    blocking(move || {
+        let limit = p.limit.unwrap_or(50).clamp(1, 500);
+        let q = p.q.unwrap_or_default();
+        let sort = p.sort.unwrap_or_else(|| "date_added".into());
+        let lib = st.library.get()?;
+        match p.kind.as_str() {
+            "release" | "releases" => {
+                let rows = if q.trim().is_empty() { st.db.list_releases(limit, &sort)? } else { st.db.search_releases(&q, limit)? };
+                let slugs: std::collections::HashMap<&str, &str> =
+                    lib.items.iter().filter_map(|i| Some((i.discogs_id.as_deref()?, i.slug.as_str()))).collect();
+                let rows: Vec<Value> = rows
+                    .into_iter()
+                    .map(|r| {
+                        let slug = r.discogs_id.as_deref().and_then(|id| slugs.get(id)).map(|s| s.to_string());
+                        let mut v = serde_json::to_value(&r).unwrap_or_default();
+                        v["slug"] = json!(slug);
+                        v
+                    })
+                    .collect();
+                Ok(Json(json!({ "rows": rows })))
+            }
+            "artist" | "artists" => {
+                let sort = if sort == "date_added" { "name".to_string() } else { sort };
+                let rows = if q.trim().is_empty() { st.db.list_artists(limit, &sort)? } else { st.db.search_artists(&q, limit)? };
+                let slugs: std::collections::HashMap<String, &str> =
+                    lib.artists.iter().map(|a| (a.name.to_lowercase(), a.slug.as_str())).collect();
+                let rows: Vec<Value> = rows
+                    .into_iter()
+                    .map(|a| {
+                        let slug = slugs.get(&a.name.to_lowercase()).map(|s| s.to_string());
+                        let mut v = serde_json::to_value(&a).unwrap_or_default();
+                        v["slug"] = json!(slug);
+                        v
+                    })
+                    .collect();
+                Ok(Json(json!({ "rows": rows })))
+            }
+            other => Err(anyhow::anyhow!("unknown kind {other:?} (release or artist)")),
+        }
+    })
+    .await
+}
+
+/// Database backups in `<scrapper>/backups`, newest first.
+pub async fn backups(State(s): Shared) -> ApiResult {
+    let dir = s.cfg.base_dir.join("backups");
+    blocking(move || {
+        let mut rows = Vec::new();
+        if let Ok(entries) = std::fs::read_dir(&dir) {
+            for e in entries.flatten() {
+                let Ok(meta) = e.metadata() else { continue };
+                if !meta.is_file() {
+                    continue;
+                }
+                let modified = meta.modified().ok().map(|t| chrono::DateTime::<chrono::Local>::from(t).to_rfc3339());
+                rows.push(json!({ "name": e.file_name().to_string_lossy(), "bytes": meta.len(), "modified": modified }));
+            }
+        }
+        rows.sort_by(|a, b| b["modified"].as_str().cmp(&a["modified"].as_str()));
+        Ok(Json(json!({ "dir": absolute(dir), "backups": rows })))
+    })
+    .await
+}
+
+// ── Site asset scripts (run from the repo root) ─────────────────────────────────────────────
+
+#[derive(Deserialize)]
+pub struct SiteScriptBody {
+    /// `generate-colors` or `generate-artist-images`.
+    script: String,
+    /// One album (colours) or artist (images) folder to redo.
+    only: Option<String>,
+    /// Redo everything (`--force` / `--full`).
+    #[serde(default)]
+    all: bool,
+}
+
+/// `pnpm run generate-colors` / `generate-artist-images` in the repo root, as a job. The site's
+/// own asset scripts: they read what the scrapper wrote into public/ and write beside it.
+pub async fn site_script(State(s): Shared, Json(body): Json<SiteScriptBody>) -> ApiResult {
+    let redo_all = match body.script.as_str() {
+        "generate-colors" => "--force",
+        "generate-artist-images" => "--full",
+        other => return Err(ApiError::bad_request(format!("unknown script {other:?}"))),
+    };
+    let mut args = vec!["run".to_string(), body.script.clone()];
+    let mut title = format!("pnpm {}", body.script);
+    if let Some(slug) = body.only.as_deref().map(str::trim).filter(|s| !s.is_empty()) {
+        check_slug(slug)?;
+        if slug.starts_with('-') {
+            return Err(ApiError::bad_request("invalid slug"));
+        }
+        args.extend(["--only".to_string(), slug.to_string()]);
+        title = format!("{title} --only {slug}");
+    } else if body.all {
+        args.push(redo_all.to_string());
+        title = format!("{title} {redo_all}");
+    }
+    // The repo root is the data directory's parent (public/ → repo).
+    let data_dir = absolute(s.cfg.data_dir());
+    let root = data_dir.parent().map(std::path::Path::to_path_buf).unwrap_or(data_dir);
+    started(s.jobs.spawn(&body.script, title, |ctx| async move { run_process(&ctx, "pnpm", &args, &root).await }))
+}
+
+/// Run a program, streaming its stdout and stderr into the job log; fails on a non-zero exit.
+async fn run_process(ctx: &super::jobs::JobCtx, program: &str, args: &[String], dir: &std::path::Path) -> anyhow::Result<Option<Value>> {
+    use tokio::io::{AsyncBufReadExt, BufReader};
+    ctx.log(format!("$ {program} {}", args.join(" ")));
+    let mut child = tokio::process::Command::new(program)
+        .args(args)
+        .current_dir(dir)
+        .env("FORCE_COLOR", "0")
+        .stdout(std::process::Stdio::piped())
+        .stderr(std::process::Stdio::piped())
+        .kill_on_drop(true)
+        .spawn()
+        .map_err(|e| anyhow::anyhow!("couldn't start {program}: {e}"))?;
+    let pump = |stream: Option<Box<dyn tokio::io::AsyncRead + Unpin + Send>>, ctx: super::jobs::JobCtx| async move {
+        if let Some(s) = stream {
+            let mut lines = BufReader::new(s).lines();
+            while let Ok(Some(line)) = lines.next_line().await {
+                if !line.trim().is_empty() {
+                    ctx.log(line);
+                }
+            }
+        }
+    };
+    let out = pump(child.stdout.take().map(|s| Box::new(s) as _), ctx.clone());
+    let err = pump(child.stderr.take().map(|s| Box::new(s) as _), ctx.clone());
+    let (status, _, _) = tokio::join!(child.wait(), out, err);
+    let status = status?;
+    if !status.success() {
+        anyhow::bail!("{program} exited with {status}");
+    }
+    Ok(None)
 }

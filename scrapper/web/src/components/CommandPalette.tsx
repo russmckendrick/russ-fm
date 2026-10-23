@@ -1,5 +1,5 @@
 import { Command } from 'cmdk'
-import { Activity, FileJson, LayoutDashboard, Library, PlugZap, Search, Users } from 'lucide-react'
+import { Activity, Boxes, Database, FileJson, LayoutDashboard, Library, PlugZap, Plus, Search, Terminal, Users } from 'lucide-react'
 import { useMemo, useState, type ReactNode } from 'react'
 import { useNavigate } from 'react-router'
 import { useJobs } from '@/lib/jobs'
@@ -11,7 +11,11 @@ const PAGES = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/library', label: 'Library', icon: Library },
   { to: '/artists', label: 'Artists', icon: Users },
+  { to: '/boxsets', label: 'Boxsets', icon: Boxes },
+  { to: '/add', label: 'Add & enrich', icon: Plus },
   { to: '/jobs', label: 'Jobs', icon: Activity },
+  { to: '/tools', label: 'Tools', icon: Terminal },
+  { to: '/database', label: 'Database', icon: Database },
   { to: '/services', label: 'Services', icon: PlugZap },
 ]
 

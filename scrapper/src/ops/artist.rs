@@ -6,7 +6,7 @@ use serde_json::{json, Map, Value};
 
 use crate::cli::{ArtistArgs, ArtistBatchArgs, OutputFormat};
 use crate::db::{ArtistRecord, Db};
-use crate::ops::release::{image_client, prefer_key, MatchPicker};
+use crate::ops::release::{image_client, prefer_key, MatchPicker, ProgressSink};
 use crate::output::{artist_to_value, images, to_pretty_sorted};
 use crate::sanitize::sanitize_folder_name;
 use crate::services::Services;
@@ -21,29 +21,29 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     }
     let client = image_client();
 
-    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
-    println!("Searching for artist '{}'...", args.name);
+    let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
+    crate::say!("Searching for artist '{}'...", args.name);
     let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer_key(args.prefer), &picker).await?;
 
     let mark = |b: bool| if b { "✓" } else { "–" };
-    println!("\n  {}", rec.name);
-    println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
-    println!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia), mark(found.perplexity));
+    crate::say!("\n  {}", rec.name);
+    crate::say!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
+    crate::say!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia), mark(found.perplexity));
     if let Some(bio) = &rec.biography {
         let preview: String = bio.chars().take(160).collect();
-        println!("  bio: {preview}{}", if bio.chars().count() > 160 { "…" } else { "" });
+        crate::say!("  bio: {preview}{}", if bio.chars().count() > 160 { "…" } else { "" });
     }
 
     if matches!(args.output, OutputFormat::Json) {
-        println!("{}", to_pretty_sorted(&artist_to_value(&rec)));
+        crate::say!("{}", to_pretty_sorted(&artist_to_value(&rec)));
     }
     if args.save {
         let folder = sanitize_folder_name(&rec.name);
-        println!("\nSaved to DB and wrote {}/{folder}/", cfg.artists_dir().display());
+        crate::say!("\nSaved to DB and wrote {}/{folder}/", cfg.artists_dir().display());
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
     } else {
-        println!("\n(dry view — pass --save to write to the database, JSON and image)");
+        crate::say!("\n(dry view — pass --save to write to the database, JSON and image)");
     }
     Ok(())
 }
@@ -52,7 +52,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let db = Db::open(cfg.db_path())?;
     let seeded = db.seed_missing_artists_from_releases()?;
     if seeded > 0 {
-        println!("Seeded {seeded} missing artist(s) from saved releases.");
+        crate::say!("Seeded {seeded} missing artist(s) from saved releases.");
     }
     let mut artists = db.list_artists(u32::MAX, "name")?;
     if !args.include_various {
@@ -60,7 +60,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
 
     if args.stats {
-        println!("{} artists in the database{}.", artists.len(), if args.include_various { "" } else { " (excluding Various Artists)" });
+        crate::say!("{} artists in the database{}.", artists.len(), if args.include_various { "" } else { " (excluding Various Artists)" });
         return Ok(());
     }
 
@@ -68,7 +68,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let to = (args.to as usize).min(artists.len());
     let slice = &artists[from..to.max(from)];
     if slice.is_empty() {
-        println!("No artists in range [{from}, {to}).");
+        crate::say!("No artists in range [{from}, {to}).");
         return Ok(());
     }
 
@@ -78,25 +78,65 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
     let client = image_client();
     let prefer = prefer_key(args.prefer);
-    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
+    let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
     let total = slice.len();
     let mut ok = 0usize;
 
     for (i, a) in slice.iter().enumerate() {
+        super::out::progress(i + 1, total);
         match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer, &picker).await {
             Ok((_, found)) => {
                 ok += 1;
                 let m = |b: bool| if b { "✓" } else { "–" };
-                println!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {} perplexity {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia), m(found.perplexity));
+                crate::say!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {} perplexity {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia), m(found.perplexity));
             }
-            Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
+            Err(e) => crate::say!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
         }
     }
 
-    println!("\nDone: {ok}/{total} artists processed.");
+    crate::say!("\nDone: {ok}/{total} artists processed.");
     if args.save && ok > 0 {
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
+    }
+    Ok(())
+}
+
+/// Enrich (and save) the first `limit` un-enriched artists, name order, choosing matches with
+/// `picker` — the TUI's Enrich artists runner and the web UI's equivalent. Artists credited on
+/// saved releases but missing from the table are seeded first.
+pub async fn enrich_unenriched(cfg: &Config, db: &Db, limit: usize, picker: &MatchPicker, sink: &ProgressSink<'_>) -> Result<()> {
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    match db.seed_missing_artists_from_releases() {
+        Ok(seeded) if seeded > 0 => sink.log(format!("Seeded {seeded} missing artist(s) from saved releases.")),
+        Ok(_) => {}
+        Err(e) => sink.log(format!("failed to seed missing artists: {e}")),
+    }
+    let artists = db.list_unenriched_artists(limit as u32).context("listing un-enriched artists")?;
+    if artists.is_empty() {
+        sink.log("No un-enriched artists found 🎉");
+        return Ok(());
+    }
+
+    let total = artists.len();
+    sink.log(format!("Enriching {total} artist(s) (interactive)"));
+    let client = image_client();
+    for (i, a) in artists.iter().enumerate() {
+        sink.log(format!("▶ [{}/{total}] {} — enriching…", i + 1, a.name));
+        match process_artist(cfg, &services, db, &client, &a.name, true, false, false, None, None, picker).await {
+            Ok((_, found)) => {
+                let m = |b: bool| if b { "✓" } else { "–" };
+                sink.log(format!(
+                    "    apple {} · spotify {} · lastfm {} · wiki {} · saved ✓",
+                    m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia)
+                ));
+            }
+            Err(e) => sink.log(format!("  ✗ {} — {e}", a.name)),
+        }
+        sink.progress(i + 1, total);
     }
     Ok(())
 }

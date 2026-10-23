@@ -27,13 +27,13 @@ pub async fn run(cfg: &Config, args: BackfillFormatsArgs) -> Result<()> {
     let coloured = candidates.iter().filter(|c| !crate::formats::vinyl_colours(&c.raw_data).is_empty()).count();
 
     if args.dry_run {
-        println!(
+        crate::say!(
             "[dry-run] {} release(s): {missing} need their formats fetched from Discogs ({to_fetch} this run), {} already stored ({coloured} coloured).",
             candidates.len(),
             candidates.len() - missing,
         );
         for c in candidates.iter().filter(|c| needs_fetch(c)).take(to_fetch.min(25)) {
-            println!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
+            crate::say!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
         }
         return Ok(());
     }
@@ -42,7 +42,7 @@ pub async fn run(cfg: &Config, args: BackfillFormatsArgs) -> Result<()> {
     if to_fetch > 0 && !services.discogs.is_configured() {
         bail!("Discogs is not configured — set discogs.access_token in config.json");
     }
-    println!("Fetching formats for {to_fetch} release(s) from Discogs, then syncing {} album JSON file(s)...", candidates.len());
+    crate::say!("Fetching formats for {to_fetch} release(s) from Discogs, then syncing {} album JSON file(s)...", candidates.len());
 
     let album_dir = cfg.releases_dir();
     let (mut fetched, mut failed) = (0usize, 0usize);
@@ -60,13 +60,13 @@ pub async fn run(cfg: &Config, args: BackfillFormatsArgs) -> Result<()> {
                     fetched += 1;
                     let colours = crate::formats::vinyl_colours(&raw);
                     if colours.is_empty() {
-                        println!("{label}");
+                        crate::say!("{label}");
                     } else {
-                        println!("{label} → {}", colours.join(", "));
+                        crate::say!("{label} → {}", colours.join(", "));
                     }
                 }
                 Err(e) => {
-                    println!("{label} ✗ {e}");
+                    crate::say!("{label} ✗ {e}");
                     failed += 1;
                     continue;
                 }
@@ -79,16 +79,16 @@ pub async fn run(cfg: &Config, args: BackfillFormatsArgs) -> Result<()> {
             Ok(Patch::Unchanged) => unchanged += 1,
             Ok(Patch::Missing) => no_file += 1,
             Err(e) => {
-                println!("✗ {folder}: could not update album JSON: {e}");
+                crate::say!("✗ {folder}: could not update album JSON: {e}");
                 failed += 1;
             }
         }
     }
 
-    println!(
+    crate::say!(
         "\nDone: {fetched} fetched from Discogs, {failed} failed (re-run to retry). Album JSON: {written} updated, {unchanged} already current, {no_file} without a file."
     );
     let n = crate::output::collection::regenerate(cfg, &db)?;
-    println!("Regenerated collection.json ({n} entries).");
+    crate::say!("Regenerated collection.json ({n} entries).");
     Ok(())
 }

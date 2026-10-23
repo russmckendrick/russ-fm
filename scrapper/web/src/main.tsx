@@ -6,13 +6,17 @@ import { Layout } from './components/Layout'
 import { EmptyState } from './components/ui'
 import './index.css'
 import { JobsProvider } from './lib/jobs'
+import { AddPage } from './pages/Add'
 import { ArtistPage } from './pages/Artist'
 import { ArtistsPage } from './pages/Artists'
+import { BoxsetsPage } from './pages/Boxsets'
 import { Dashboard } from './pages/Dashboard'
+import { DatabasePage } from './pages/Database'
 import { JobsPage } from './pages/Jobs'
 import { LibraryPage } from './pages/Library'
 import { ReleasePage } from './pages/Release'
 import { ServicesPage } from './pages/Services'
+import { ToolsPage } from './pages/Tools'
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false, retry: 1 } },
@@ -34,6 +38,10 @@ const router = createBrowserRouter([
       { path: '/jobs', element: <JobsPage /> },
       { path: '/jobs/:id', element: <JobsPage /> },
       { path: '/services', element: <ServicesPage /> },
+      { path: '/add', element: <AddPage /> },
+      { path: '/boxsets', element: <BoxsetsPage /> },
+      { path: '/tools/*', element: <ToolsPage /> },
+      { path: '/database', element: <DatabasePage /> },
       { path: '*', element: <EmptyState title="Page not found" /> },
     ],
   },

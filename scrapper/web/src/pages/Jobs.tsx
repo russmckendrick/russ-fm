@@ -1,7 +1,8 @@
 import { Activity, Square } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import { JobStatusIcon, jobStatusLabel } from '@/components/JobStatus'
+import { LogView } from '@/components/LogView'
 import { PromptCard } from '@/components/PromptCard'
 import { Button, Card, EmptyState, PageHeader, Progress } from '@/components/ui'
 import { ago, cn, duration } from '@/lib/format'
@@ -110,43 +111,5 @@ function JobDetail({ job }: { job: JobSnapshot }) {
 
       <LogView lines={log ?? []} running={job.status === 'running'} />
     </div>
-  )
-}
-
-function LogView({ lines, running }: { lines: string[]; running: boolean }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const pinned = useRef(true)
-
-  // Follow the tail unless you've scrolled up to read.
-  useEffect(() => {
-    const el = ref.current
-    if (el && pinned.current) el.scrollTop = el.scrollHeight
-  }, [lines.length])
-
-  return (
-    <Card className="flex min-h-64 flex-1 flex-col overflow-hidden">
-      <div className="flex items-center justify-between border-b border-line px-3 py-2 text-xs text-muted">
-        <span>Log</span>
-        <span className="tabular-nums">{lines.length} lines</span>
-      </div>
-      <div
-        ref={ref}
-        onScroll={(e) => {
-          const el = e.currentTarget
-          pinned.current = el.scrollHeight - el.scrollTop - el.clientHeight < 24
-        }}
-        className="max-h-[60vh] min-h-0 flex-1 overflow-y-auto bg-panel-2/50 p-3 font-mono text-xs leading-5"
-      >
-        {lines.length === 0 ? (
-          <span className="text-faint">{running ? 'Waiting for output…' : 'No output.'}</span>
-        ) : (
-          lines.map((l, i) => (
-            <div key={i} className={cn('break-words whitespace-pre-wrap', /✗|error|failed/i.test(l) && 'text-bad', /^✓/.test(l) && 'text-ok')}>
-              {l}
-            </div>
-          ))
-        )}
-      </div>
-    </Card>
   )
 }

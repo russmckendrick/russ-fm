@@ -1,4 +1,4 @@
-import { Activity, Disc3, LayoutDashboard, Library, Monitor, Moon, PlugZap, Search, Sun, Users } from 'lucide-react'
+import { Activity, Boxes, Database, Disc3, LayoutDashboard, Library, Monitor, Moon, PlugZap, Plus, Search, Sun, Terminal, Users } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router'
 import { cn } from '@/lib/format'
@@ -13,11 +13,15 @@ const SCROLL_ID = 'main-scroll'
 /** The element pages scroll in (virtual lists measure against it). */
 export const scrollElement = () => document.getElementById(SCROLL_ID)
 
-const NAV = [
+const NAV: { to: string; label: string; icon: typeof Library; end?: boolean; section?: string }[] = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
   { to: '/library', label: 'Library', icon: Library },
   { to: '/artists', label: 'Artists', icon: Users },
+  { to: '/boxsets', label: 'Boxsets', icon: Boxes },
+  { to: '/add', label: 'Add & enrich', icon: Plus, section: 'Work' },
   { to: '/jobs', label: 'Jobs', icon: Activity },
+  { to: '/tools', label: 'Tools', icon: Terminal },
+  { to: '/database', label: 'Database', icon: Database },
   { to: '/services', label: 'Services', icon: PlugZap },
 ]
 
@@ -124,7 +128,10 @@ function Sidebar({ onSearch }: { onSearch: () => void }) {
       </div>
       <nav className="flex flex-col gap-0.5 px-3 py-1">
         {NAV.map((n) => (
-          <NavItem key={n.to} {...n} badge={n.to === '/jobs' ? <RunningBadge /> : undefined} />
+          <div key={n.to}>
+            {n.section && <p className="mt-4 mb-1 px-2.5 text-[11px] font-medium tracking-wide text-faint uppercase">{n.section}</p>}
+            <NavItem {...n} badge={n.to === '/jobs' ? <RunningBadge /> : undefined} />
+          </div>
         ))}
       </nav>
       <div className="mt-auto flex items-center justify-between border-t border-line px-3 py-2.5">

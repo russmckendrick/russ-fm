@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router'
 import { Cover } from '@/components/Cover'
+import { ArtistActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
 import { ReleaseTile } from '@/components/ReleaseTile'
 import { Tabs } from '@/components/Tabs'
@@ -74,6 +75,9 @@ export function ArtistPage() {
               {pub.wikipedia_url && <LinkChip href={pub.wikipedia_url}>Wikipedia</LinkChip>}
             </div>
           </div>
+        </div>
+        <div className="mt-6">
+          <ArtistActions name={name} slug={slug} />
         </div>
       </Hero>
 

@@ -36,7 +36,7 @@ pub async fn run(cfg: &Config, args: BackfillVideosArgs) -> Result<()> {
         let scope = if args.force { CheckScope::All } else { CheckScope::Stale(RECHECK_DAYS) };
         if args.dry_run {
             let ids = ids_to_check(cfg, &db, scope, args.limit)?;
-            println!("[dry-run] {} video id(s) to check.", ids.len());
+            crate::say!("[dry-run] {} video id(s) to check.", ids.len());
             return Ok(());
         }
         let services = Services::new(cfg);
@@ -56,9 +56,9 @@ pub async fn run(cfg: &Config, args: BackfillVideosArgs) -> Result<()> {
 
     if args.dry_run {
         let candidates = db.releases_for_backfill(args.force, args.limit, args.from.as_deref())?;
-        println!("[dry-run] {} release(s) to check for videos:", candidates.len());
+        crate::say!("[dry-run] {} release(s) to check for videos:", candidates.len());
         for r in candidates.iter().take(25) {
-            println!("  [{}] {} — {}", r.discogs_id.as_deref().unwrap_or("?"), r.artists.join(", "), r.title);
+            crate::say!("  [{}] {} — {}", r.discogs_id.as_deref().unwrap_or("?"), r.artists.join(", "), r.title);
         }
         return Ok(());
     }
@@ -70,12 +70,13 @@ pub async fn run(cfg: &Config, args: BackfillVideosArgs) -> Result<()> {
 
     let candidates = db.releases_for_backfill(args.force, args.limit, args.from.as_deref())?;
     let total = candidates.len();
-    println!("Backfilling videos for {total} release(s)...");
+    crate::say!("Backfilling videos for {total} release(s)...");
     let album_dir = cfg.releases_dir();
 
     let mut updated = 0usize;
     let mut with_videos = 0usize;
     for (i, r) in candidates.iter().enumerate() {
+        super::out::progress(i + 1, total);
         let Some(discogs_id) = r.discogs_id.as_deref() else { continue };
         match services.discogs.get_release(discogs_id).await {
             Ok(release) => {
@@ -91,14 +92,14 @@ pub async fn run(cfg: &Config, args: BackfillVideosArgs) -> Result<()> {
                 if n > 0 {
                     with_videos += 1;
                 }
-                println!("[{}/{total}] {} — {} ({n} videos)", i + 1, r.artists.join(", "), r.title);
+                crate::say!("[{}/{total}] {} — {} ({n} videos)", i + 1, r.artists.join(", "), r.title);
             }
-            Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, discogs_id),
+            Err(e) => crate::say!("[{}/{total}] ✗ {} — {e}", i + 1, discogs_id),
         }
         pause_between_batches(&args, i, total).await;
     }
 
-    println!("\nDone: checked {updated}, {with_videos} had videos.");
+    crate::say!("\nDone: checked {updated}, {with_videos} had videos.");
     check_then_regenerate(cfg, &db, &services, updated).await
 }
 
@@ -111,9 +112,9 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
     let need_release = candidates.iter().filter(|c| c.master_id.is_none()).count();
 
     if args.dry_run {
-        println!("[dry-run] {total} release(s) to fetch master videos for ({need_release} without a stored master_id):");
+        crate::say!("[dry-run] {total} release(s) to fetch master videos for ({need_release} without a stored master_id):");
         for c in candidates.iter().take(25) {
-            println!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
+            crate::say!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
         }
         return Ok(());
     }
@@ -122,11 +123,12 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
     if !services.discogs.is_configured() {
         bail!("Discogs is not configured — set discogs.access_token in config.json");
     }
-    println!("Fetching master videos for {total} release(s) ({need_release} need a release lookup first)...");
+    crate::say!("Fetching master videos for {total} release(s) ({need_release} need a release lookup first)...");
 
     let mut masters: HashMap<String, Value> = HashMap::new();
     let (mut stored, mut no_master, mut failed, mut found) = (0usize, 0usize, 0usize, 0usize);
     for (i, c) in candidates.iter().enumerate() {
+        super::out::progress(i + 1, total);
         let label = format!("[{}/{total}] {} — {}", i + 1, c.artists.join(", "), c.title);
 
         let master_id = match &c.master_id {
@@ -138,7 +140,7 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
                     DiscogsService::master_id_of(&release)
                 }
                 Err(e) => {
-                    println!("{label} ✗ release lookup failed: {e}");
+                    crate::say!("{label} ✗ release lookup failed: {e}");
                     failed += 1;
                     continue;
                 }
@@ -147,7 +149,7 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
         let Some(master_id) = master_id else {
             db.merge_release_discogs(&c.discogs_id, [("master_id", Value::Null), ("master_videos", json!([]))], false)?;
             no_master += 1;
-            println!("{label} · no master");
+            crate::say!("{label} · no master");
             continue;
         };
 
@@ -162,11 +164,11 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
                 // A stale master (merged or deleted upstream): record it as empty so the run
                 // moves on; `backfill-original-years --force` re-points the release.
                 Err(ServiceError::NotFound) => {
-                    println!("{label} · master {master_id} is gone");
+                    crate::say!("{label} · master {master_id} is gone");
                     json!([])
                 }
                 Err(e) => {
-                    println!("{label} ✗ master {master_id} lookup failed: {e}");
+                    crate::say!("{label} ✗ master {master_id} lookup failed: {e}");
                     failed += 1;
                     continue;
                 }
@@ -179,11 +181,11 @@ async fn run_masters(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
         if n > 0 {
             found += 1;
         }
-        println!("{label} → {n} master video(s)");
+        crate::say!("{label} → {n} master video(s)");
         pause_between_batches(args, i, total).await;
     }
 
-    println!("\nDone: {stored} stored ({found} with videos), {no_master} without a master, {failed} failed (re-run to retry).");
+    crate::say!("\nDone: {stored} stored ({found} with videos), {no_master} without a master, {failed} failed (re-run to retry).");
     check_then_regenerate(cfg, &db, &services, stored + no_master).await
 }
 
@@ -197,15 +199,15 @@ async fn run_wikidata(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
     let total = candidates.len();
 
     if args.dry_run {
-        println!("[dry-run] {total} artist(s) with a Wikidata item to fetch music videos for:");
+        crate::say!("[dry-run] {total} artist(s) with a Wikidata item to fetch music videos for:");
         for (_, name, qid) in candidates.iter().take(25) {
-            println!("  [{qid}] {name}");
+            crate::say!("  [{qid}] {name}");
         }
         return Ok(());
     }
 
     let services = Services::new(cfg);
-    println!("Fetching Wikidata music videos for {total} artist(s)...");
+    crate::say!("Fetching Wikidata music videos for {total} artist(s)...");
     let (mut stored, mut found, mut videos_total, mut failed) = (0usize, 0usize, 0usize, 0usize);
     for batch in candidates.chunks(args.batch_size.max(1) as usize) {
         let qids: Vec<String> = batch.iter().map(|(_, _, q)| q.clone()).collect();
@@ -213,7 +215,7 @@ async fn run_wikidata(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
             Ok(v) => v,
             Err(e) => {
                 failed += batch.len();
-                println!("✗ Wikidata query for {} artist(s) failed: {e}", batch.len());
+                crate::say!("✗ Wikidata query for {} artist(s) failed: {e}", batch.len());
                 continue;
             }
         };
@@ -237,12 +239,12 @@ async fn run_wikidata(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
             videos_total += n;
             if n > 0 {
                 found += 1;
-                println!("[{stored}/{total}] {name} → {n} video(s)");
+                crate::say!("[{stored}/{total}] {name} → {n} video(s)");
             }
         }
     }
 
-    println!("\nDone: {stored} artist(s) stored, {found} with videos ({videos_total} in all), {failed} failed (re-run to retry).");
+    crate::say!("\nDone: {stored} artist(s) stored, {found} with videos ({videos_total} in all), {failed} failed (re-run to retry).");
     check_then_regenerate(cfg, &db, &services, stored).await
 }
 
@@ -252,17 +254,18 @@ async fn run_theaudiodb(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
     let total = candidates.len();
 
     if args.dry_run {
-        println!("[dry-run] {total} artist(s) with a TheAudioDB id to fetch music videos for:");
+        crate::say!("[dry-run] {total} artist(s) with a TheAudioDB id to fetch music videos for:");
         for (_, name, tadb_id) in candidates.iter().take(25) {
-            println!("  [{tadb_id}] {name}");
+            crate::say!("  [{tadb_id}] {name}");
         }
         return Ok(());
     }
 
     let services = Services::new(cfg);
-    println!("Fetching TheAudioDB music videos for {total} artist(s)...");
+    crate::say!("Fetching TheAudioDB music videos for {total} artist(s)...");
     let (mut stored, mut found, mut videos_total, mut failed) = (0usize, 0usize, 0usize, 0usize);
     for (i, (artist_id, name, tadb_id)) in candidates.iter().enumerate() {
+        super::out::progress(i + 1, total);
         match theaudiodb_videos(&services, tadb_id).await {
             Ok(videos) => {
                 let n = videos.as_array().map_or(0, Vec::len);
@@ -272,17 +275,17 @@ async fn run_theaudiodb(cfg: &Config, args: &BackfillVideosArgs) -> Result<()> {
                 if n > 0 {
                     found += 1;
                 }
-                println!("[{}/{total}] {name} → {n} video(s)", i + 1);
+                crate::say!("[{}/{total}] {name} → {n} video(s)", i + 1);
             }
             Err(e) => {
                 failed += 1;
-                println!("[{}/{total}] ✗ {name} — {e}", i + 1);
+                crate::say!("[{}/{total}] ✗ {name} — {e}", i + 1);
             }
         }
         pause_between_batches(args, i, total).await;
     }
 
-    println!("\nDone: {stored} artist(s) stored, {found} with videos ({videos_total} in all), {failed} failed (re-run to retry).");
+    crate::say!("\nDone: {stored} artist(s) stored, {found} with videos ({videos_total} in all), {failed} failed (re-run to retry).");
     check_then_regenerate(cfg, &db, &services, stored).await
 }
 
@@ -392,7 +395,7 @@ fn str_of(v: &Value, key: &str) -> Option<String> {
 async fn pause_between_batches(args: &BackfillVideosArgs, i: usize, total: usize) {
     if let Some(pause) = args.pause {
         if (i + 1).is_multiple_of(args.batch_size as usize) && i + 1 < total {
-            println!("  …pausing {pause}s between batches");
+            crate::say!("  …pausing {pause}s between batches");
             tokio::time::sleep(std::time::Duration::from_secs(pause)).await;
         }
     }
@@ -463,7 +466,7 @@ pub async fn check_playability(
     if total == 0 {
         return Ok(summary);
     }
-    println!("Checking {total} video(s) on YouTube...");
+    crate::say!("Checking {total} video(s) on YouTube...");
     let mut results = stream::iter(ids)
         .map(|id| async move {
             let r = services.youtube.playability(&id).await;
@@ -492,10 +495,10 @@ pub async fn check_playability(
         }
         let done = summary.checked + summary.failed;
         if done % 500 == 0 {
-            println!("  …{done}/{total} checked, {} unplayable", summary.unplayable);
+            crate::say!("  …{done}/{total} checked, {} unplayable", summary.unplayable);
         }
     }
-    println!(
+    crate::say!(
         "Checked {} video(s): {} unplayable, {} failed{}.",
         summary.checked,
         summary.unplayable,
@@ -510,7 +513,7 @@ async fn check_then_regenerate(cfg: &Config, db: &Db, services: &Services, chang
     let checked = match check_playability(cfg, db, services, CheckScope::New, None).await {
         Ok(s) => s.checked,
         Err(e) => {
-            println!("Warning: video playability check failed: {e}");
+            crate::say!("Warning: video playability check failed: {e}");
             0
         }
     };
@@ -521,7 +524,7 @@ async fn check_then_regenerate(cfg: &Config, db: &Db, services: &Services, chang
 fn regenerate(cfg: &Config, db: &Db, changed: usize) -> Result<()> {
     if changed > 0 {
         let n = crate::output::collection::regenerate(cfg, db)?;
-        println!("Regenerated collection.json and tv.json ({n} entries).");
+        crate::say!("Regenerated collection.json and tv.json ({n} entries).");
     }
     Ok(())
 }

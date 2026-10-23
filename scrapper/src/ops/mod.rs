@@ -11,6 +11,7 @@ pub mod generate;
 pub mod identity;
 pub mod maintenance;
 pub mod original_years;
+pub mod out;
 pub mod release;
 pub mod rename;
 pub mod report;

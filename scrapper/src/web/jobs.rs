@@ -14,7 +14,8 @@ use serde_json::Value;
 use tokio::sync::{broadcast, mpsc::unbounded_channel, oneshot};
 use tokio::task::AbortHandle;
 
-use crate::ops::release::{DescribeAction, MatchPicker, ProgressSink, UiRequest};
+use crate::ops::out::Console;
+use crate::ops::release::{DescribeAction, MatchPicker, UiRequest};
 use crate::util::now_iso;
 
 /// Finished jobs kept for the Jobs page (oldest are dropped first).
@@ -415,24 +416,16 @@ impl JobCtx {
         self.jobs.progress(self.id, done, total);
     }
 
-    /// Closures for an op's [`ProgressSink`]: `let (l, p) = ctx.sink_fns(); ProgressSink { log: &l, progress: &p }`.
+    /// Closures for an op's [`ProgressSink`](crate::ops::release::ProgressSink):
+    /// `let (l, p) = ctx.sink_fns(); let sink = ProgressSink { log: &l, progress: &p };`
     #[allow(clippy::type_complexity)]
     pub fn sink_fns(&self) -> (impl Fn(String) + Send + Sync, impl Fn(usize, usize) + Send + Sync) {
         let (a, b) = (self.clone(), self.clone());
         (move |line: String| a.log(line), move |d, t| b.progress(d, t))
     }
 
-    /// Run `body` with a [`ProgressSink`] wired to this job.
-    pub async fn with_sink<T, Fut>(&self, body: impl FnOnce(ProgressSink<'_>) -> Fut) -> T
-    where
-        Fut: Future<Output = T>,
-    {
-        let (log, progress) = self.sink_fns();
-        body(ProgressSink { log: &log, progress: &progress }).await
-    }
-
-    /// An interactive [`MatchPicker`] whose questions surface as prompts in the browser.
-    pub fn picker(&self) -> MatchPicker {
+    /// A channel whose [`UiRequest`]s surface as prompts in the browser.
+    fn prompt_channel(&self) -> tokio::sync::mpsc::UnboundedSender<UiRequest> {
         let (tx, mut rx) = unbounded_channel::<UiRequest>();
         let ctx = self.clone();
         tokio::spawn(async move {
@@ -440,7 +433,23 @@ impl JobCtx {
                 ctx.jobs.open_prompt(ctx.id, req);
             }
         });
-        MatchPicker::Tui(tx)
+        tx
+    }
+
+    /// An interactive [`MatchPicker`] whose questions surface as prompts in the browser.
+    pub fn picker(&self) -> MatchPicker {
+        MatchPicker::Tui(self.prompt_channel())
+    }
+
+    /// A [`Console`] for running CLI code inside this job: its output becomes the job log and
+    /// `--interactive` questions become browser prompts.
+    pub fn console(&self) -> Console {
+        let (a, b) = (self.clone(), self.clone());
+        Console {
+            log: Arc::new(move |line| a.log(line)),
+            progress: Arc::new(move |d, t| b.progress(d, t)),
+            prompts: Some(self.prompt_channel()),
+        }
     }
 }
 

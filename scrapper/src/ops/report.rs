@@ -180,9 +180,9 @@ pub async fn run(cfg: &Config, args: ReportArgs) -> Result<()> {
         match &args.output_file {
             Some(p) => {
                 std::fs::write(p, &out)?;
-                println!("Wrote report to {}", p.display());
+                crate::say!("Wrote report to {}", p.display());
             }
-            None => println!("{out}"),
+            None => crate::say!("{out}"),
         }
         return Ok(());
     }
@@ -202,9 +202,9 @@ pub async fn run(cfg: &Config, args: ReportArgs) -> Result<()> {
     match &args.output_file {
         Some(p) => {
             std::fs::write(p, &text)?;
-            println!("Wrote report to {}", p.display());
+            crate::say!("Wrote report to {}", p.display());
         }
-        None => print!("{text}"),
+        None => crate::say!("{}", text.trim_end()),
     }
     Ok(())
 }
