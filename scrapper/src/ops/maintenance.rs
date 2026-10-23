@@ -46,18 +46,18 @@ fn find_missing(cfg: &Config, limit: Option<u32>, show_orphaned: bool) -> Result
         }
     }
 
-    println!("Artists in DB: {}, folders on disk: {}", artists.len(), folders.len());
-    println!("\nMissing folders ({}):", missing.len());
+    crate::say!("Artists in DB: {}, folders on disk: {}", artists.len(), folders.len());
+    crate::say!("\nMissing folders ({}):", missing.len());
     let shown = limit.map(|l| l as usize).unwrap_or(missing.len());
     for (name, slug) in missing.iter().take(shown) {
-        println!("  {name}  ->  {slug}");
+        crate::say!("  {name}  ->  {slug}");
     }
 
     if show_orphaned {
         let orphaned: Vec<&String> = folders.iter().filter(|f| !db_slugs.contains(*f)).collect();
-        println!("\nOrphaned folders ({}):", orphaned.len());
+        crate::say!("\nOrphaned folders ({}):", orphaned.len());
         for f in orphaned.iter().take(shown) {
-            println!("  {f}");
+            crate::say!("  {f}");
         }
     }
     Ok(())
@@ -103,7 +103,7 @@ fn reconcile(cfg: &Config, threshold: f64) -> Result<()> {
         .filter(|(_, slug)| !folders.contains(slug))
         .collect();
 
-    println!("Reconciling {} orphaned folders against {} missing artists (threshold {threshold})", orphaned.len(), missing.len());
+    crate::say!("Reconciling {} orphaned folders against {} missing artists (threshold {threshold})", orphaned.len(), missing.len());
     for folder in &orphaned {
         let mut best: Option<(&str, f64)> = None;
         for (name, slug) in &missing {
@@ -114,7 +114,7 @@ fn reconcile(cfg: &Config, threshold: f64) -> Result<()> {
         }
         if let Some((name, score)) = best {
             if score >= threshold {
-                println!("  {folder}  ~  {name}  ({score:.2})");
+                crate::say!("  {folder}  ~  {name}  ({score:.2})");
             }
         }
     }
@@ -133,7 +133,7 @@ fn band_members(cfg: &Config, dry_run: bool) -> Result<()> {
             continue;
         }
         let names: Vec<String> = credits.iter().filter_map(crate::ops::release::credit_label).collect();
-        println!("  {} — {}", rec.title, names.join(", "));
+        crate::say!("  {} — {}", rec.title, names.join(", "));
         changed += 1;
         if dry_run {
             continue;
@@ -144,12 +144,12 @@ fn band_members(cfg: &Config, dry_run: bool) -> Result<()> {
         crate::ops::release::write_release_json(cfg, &db, &rec)?;
     }
     if dry_run {
-        println!("{changed} release(s) would be updated (dry run)");
+        crate::say!("{changed} release(s) would be updated (dry run)");
     } else {
-        println!("{changed} release(s) updated");
+        crate::say!("{changed} release(s) updated");
         if changed > 0 {
             let n = crate::output::collection::regenerate(cfg, &db)?;
-            println!("collection.json regenerated ({n} entries)");
+            crate::say!("collection.json regenerated ({n} entries)");
         }
     }
     Ok(())

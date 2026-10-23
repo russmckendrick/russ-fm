@@ -333,6 +333,12 @@ fn artist_image_uris(cfg: &Config, folder: &str) -> Value {
     })
 }
 
+/// One release's collection.json entry as it would be written now (`None` when the release
+/// has no usable identity). Used to preview edits.
+pub fn entry_for(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
+    build_entry(cfg, db, rec)
+}
+
 fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     let ReleaseIdentity { release_name, headliners: artist_entries, names, release_folder, uri_release } =
         release_identity(cfg, rec)?;

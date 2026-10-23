@@ -11,6 +11,7 @@ pub mod generate;
 pub mod identity;
 pub mod maintenance;
 pub mod original_years;
+pub mod out;
 pub mod release;
 pub mod rename;
 pub mod report;
@@ -39,6 +40,21 @@ pub enum FieldKind {
     Structured,
     /// Derived from sources; `r` re-fetches it, there is no hand-edit.
     RefreshOnly,
+}
+
+impl FieldKind {
+    /// Lower-case name for APIs: `text`, `int`, `date`, `csv`, `service`, `structured`, `refresh`.
+    pub fn as_str(self) -> &'static str {
+        match self {
+            FieldKind::Text => "text",
+            FieldKind::Int => "int",
+            FieldKind::DateYmd => "date",
+            FieldKind::CsvList => "csv",
+            FieldKind::Service => "service",
+            FieldKind::Structured => "structured",
+            FieldKind::RefreshOnly => "refresh",
+        }
+    }
 }
 
 /// Set (or clear, when `value` is None) one key nested under `raw_data.<service>`, creating the

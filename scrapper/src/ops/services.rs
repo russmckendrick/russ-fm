@@ -6,7 +6,7 @@ use crate::services::{Probe, Services};
 use crate::Config;
 
 pub async fn test_all(cfg: &Config) -> Result<()> {
-    println!("Probing services...\n");
+    crate::say!("Probing services...\n");
     let services = Services::new(cfg);
     let results = services.test_all().await;
 
@@ -17,17 +17,17 @@ pub async fn test_all(cfg: &Config) -> Result<()> {
             Probe::Ok(detail) => {
                 healthy += 1;
                 configured += 1;
-                println!("  ✓ {name:<12} {detail}");
+                crate::say!("  ✓ {name:<12} {detail}");
             }
             Probe::Failed(err) => {
                 configured += 1;
-                println!("  ✗ {name:<12} {err}");
+                crate::say!("  ✗ {name:<12} {err}");
             }
             Probe::Skipped(reason) => {
-                println!("  – {name:<12} {reason}");
+                crate::say!("  – {name:<12} {reason}");
             }
         }
     }
-    println!("\n{healthy}/{configured} configured services healthy");
+    crate::say!("\n{healthy}/{configured} configured services healthy");
     Ok(())
 }

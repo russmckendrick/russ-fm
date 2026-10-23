@@ -64,9 +64,9 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
     let to_fetch = args.limit.map_or(candidates.len(), |l| candidates.len().min(l as usize));
 
     if args.dry_run {
-        println!("[dry-run] {} release(s) have untyped position-less rows ({to_fetch} this run).", candidates.len());
+        crate::say!("[dry-run] {} release(s) have untyped position-less rows ({to_fetch} this run).", candidates.len());
         for c in candidates.iter().take(to_fetch.min(25)) {
-            println!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
+            crate::say!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
         }
         return Ok(());
     }
@@ -75,15 +75,16 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
     if to_fetch > 0 && !services.discogs.is_configured() {
         bail!("Discogs is not configured — set discogs.access_token in config.json");
     }
-    println!("Re-fetching the tracklist of {to_fetch} release(s) from Discogs...");
+    crate::say!("Re-fetching the tracklist of {to_fetch} release(s) from Discogs...");
 
     let (mut fetched, mut failed, mut suites) = (0usize, 0usize, 0usize);
     for (i, c) in candidates.iter().take(to_fetch).enumerate() {
+        super::out::progress(i + 1, to_fetch);
         let label = format!("[{}/{to_fetch}] {} — {}", i + 1, c.artists.join(", "), c.title);
         let release = match services.discogs.get_release(&c.discogs_id).await {
             Ok(r) => r,
             Err(e) => {
-                println!("{label} ✗ {e}");
+                crate::say!("{label} ✗ {e}");
                 failed += 1;
                 continue;
             }
@@ -91,7 +92,7 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
         let tracklist = crate::ops::release::tracklist_from_discogs(&release);
         if tracklist.is_empty() {
             // Never trade a stored tracklist for nothing.
-            println!("{label} ✗ Discogs returned no tracklist");
+            crate::say!("{label} ✗ Discogs returned no tracklist");
             failed += 1;
             continue;
         }
@@ -100,9 +101,9 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
         fetched += 1;
         if n > 0 {
             suites += 1;
-            println!("{label} → {n} movement(s)");
+            crate::say!("{label} → {n} movement(s)");
         } else {
-            println!("{label}");
+            crate::say!("{label}");
         }
     }
 
@@ -115,13 +116,13 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
             Ok(Patch::Unchanged) => unchanged += 1,
             Ok(Patch::Missing) => no_file += 1,
             Err(e) => {
-                println!("✗ {folder}: could not update album JSON: {e}");
+                crate::say!("✗ {folder}: could not update album JSON: {e}");
                 failed += 1;
             }
         }
     }
 
-    println!(
+    crate::say!(
         "\nDone: {fetched} fetched from Discogs ({suites} with suites), {failed} failed (re-run to retry). Album JSON: {written} updated, {unchanged} already current, {no_file} without a file."
     );
     Ok(())

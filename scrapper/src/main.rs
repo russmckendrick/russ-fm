@@ -1,4 +1,5 @@
-//! Entry point. No subcommand → launch the TUI. A subcommand → run the CLI.
+//! Entry point. No subcommand → launch the web UI (or the TUI with `--tui`). A subcommand →
+//! run the CLI.
 
 use clap::Parser;
 
@@ -15,9 +16,12 @@ async fn main() -> anyhow::Result<()> {
     }
 
     if cli.command.is_none() {
-        // Bare invocation: launch the interactive TUI.
         let cfg = cli.load_config()?;
-        return scrapper::tui::run(cfg, scrapper::tui::Launch::Home).await;
+        if cli.tui {
+            return scrapper::tui::run(cfg, scrapper::tui::Launch::Home).await;
+        }
+        // Bare invocation: serve the web UI and open it in the browser.
+        return scrapper::web::serve(cfg, cli.port, !cli.no_open).await;
     }
 
     let cfg = cli.load_config()?;

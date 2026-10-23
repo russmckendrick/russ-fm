@@ -126,7 +126,13 @@ pnpm run generate-colors
 
 # Redo every album (about a minute for ~3,700 albums)
 node scripts/generate-album-colors.js --force
+
+# Redo one album, e.g. after replacing its sleeve
+pnpm run generate-colors --only fudge-38794683
 ```
+
+Both scripts can also be run from the scrapper's web UI (album and artist pages, and the
+Tools page); see [web-ui.md](../backend/web-ui.md).
 
 **What it does:**
 1. Loads the existing `album-colors.json` and `album-swatches.json` (cache)

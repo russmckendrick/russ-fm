@@ -26,9 +26,9 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
     let need_release = candidates.iter().filter(|c| c.master_id.is_none()).count();
 
     if args.dry_run {
-        println!("[dry-run] {total} release(s) to look up ({need_release} without a stored master_id):");
+        crate::say!("[dry-run] {total} release(s) to look up ({need_release} without a stored master_id):");
         for c in candidates.iter().take(25) {
-            println!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
+            crate::say!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
         }
         return Ok(());
     }
@@ -37,11 +37,12 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
     if !services.discogs.is_configured() {
         bail!("Discogs is not configured — set discogs.access_token in config.json");
     }
-    println!("Looking up original years for {total} release(s) ({need_release} need a release lookup first)...");
+    crate::say!("Looking up original years for {total} release(s) ({need_release} need a release lookup first)...");
 
     let mut years: HashMap<String, Option<i64>> = HashMap::new();
     let (mut found, mut no_master, mut failed) = (0usize, 0usize, 0usize);
     for (i, c) in candidates.iter().enumerate() {
+        super::out::progress(i + 1, total);
         let label = format!("[{}/{total}] {} — {}", i + 1, c.artists.join(", "), c.title);
 
         let master_id = match &c.master_id {
@@ -49,7 +50,7 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
             None => match services.discogs.get_release(&c.discogs_id).await {
                 Ok(release) => DiscogsService::master_id_of(&release),
                 Err(e) => {
-                    println!("{label} ✗ release lookup failed: {e}");
+                    crate::say!("{label} ✗ release lookup failed: {e}");
                     failed += 1;
                     continue;
                 }
@@ -59,7 +60,7 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
         let Some(mut master_id) = master_id else {
             db.set_release_master(&c.discogs_id, Value::Null, Value::Null)?;
             no_master += 1;
-            println!("{label} · no master");
+            crate::say!("{label} · no master");
             continue;
         };
 
@@ -72,7 +73,7 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
             match services.discogs.get_release(&c.discogs_id).await {
                 Ok(release) => match DiscogsService::master_id_of(&release) {
                     Some(current) if current != master_id => {
-                        println!("{label} · master {master_id} is gone, release now points at {current}");
+                        crate::say!("{label} · master {master_id} is gone, release now points at {current}");
                         master_id = current;
                         lookup = match years.get(&master_id) {
                             Some(y) => Ok(*y),
@@ -83,7 +84,7 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
                     None => {
                         db.set_release_master(&c.discogs_id, Value::Null, Value::Null)?;
                         no_master += 1;
-                        println!("{label} · master {master_id} is gone and the release no longer has one");
+                        crate::say!("{label} · master {master_id} is gone and the release no longer has one");
                         continue;
                     }
                 },
@@ -96,7 +97,7 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
                 y
             }
             Err(e) => {
-                println!("{label} ✗ master {master_id} lookup failed: {e}");
+                crate::say!("{label} ✗ master {master_id} lookup failed: {e}");
                 failed += 1;
                 continue;
             }
@@ -106,15 +107,15 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
         db.set_release_master(&c.discogs_id, id_value, year.map(Value::from).unwrap_or(Value::Null))?;
         found += 1;
         match year {
-            Some(y) => println!("{label} → {y}"),
-            None => println!("{label} · master {master_id} has no year"),
+            Some(y) => crate::say!("{label} → {y}"),
+            None => crate::say!("{label} · master {master_id} has no year"),
         }
     }
 
-    println!("\nDone: {found} with a master, {no_master} without, {failed} failed (re-run to retry).");
+    crate::say!("\nDone: {found} with a master, {no_master} without, {failed} failed (re-run to retry).");
     if found + no_master > 0 {
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Regenerated collection.json ({n} entries).");
+        crate::say!("Regenerated collection.json ({n} entries).");
     }
     Ok(())
 }

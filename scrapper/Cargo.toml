@@ -31,6 +31,12 @@ dialoguer = "0.12"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
 
+# Web UI (bare invocation): HTTP API + the embedded web/dist build
+axum = "0.8"
+tower-http = { version = "0.6", features = ["compression-gzip", "compression-br"] }
+rust-embed = "8"
+mime_guess = "2"
+
 # Database
 rusqlite = { version = "0.39", features = ["bundled"] }
 r2d2 = "0.8"
@@ -65,6 +71,18 @@ urlencoding = "2"
 [dev-dependencies]
 tempfile = "3"
 unicode-normalization = "0.1"
+
+# The web UI derives medium/avatar artwork on demand; unoptimised JPEG decode is ~10× slower.
+[profile.dev.package.image]
+opt-level = 3
+
+[profile.dev.package.zune-jpeg]
+opt-level = 3
+
+# …and the web UI's whole-table reads (health checks, collection.json) parse every record's
+# raw_data JSON, which is several times slower unoptimised.
+[profile.dev.package.serde_json]
+opt-level = 3
 
 [profile.release]
 opt-level = 3

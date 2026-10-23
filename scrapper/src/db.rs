@@ -697,6 +697,16 @@ impl Db {
         Ok(rows)
     }
 
+    /// Every artist record (the web UI's data-health checks).
+    pub fn get_all_artists(&self) -> Result<Vec<ArtistRecord>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare("SELECT * FROM artists")?;
+        let rows = stmt
+            .query_map([], row_to_artist)?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(rows)
+    }
+
     /// Releases whose `artists[]` embeds the given artist. Matches the way
     /// `enriched_release_artist` joins at JSON-write time — entry `discogs_id` (string form)
     /// first, case-insensitive name as the fallback — so a changed artist record fans out to

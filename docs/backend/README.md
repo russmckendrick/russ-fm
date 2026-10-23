@@ -1,12 +1,13 @@
 # Backend Documentation
 
-The russ.fm backend is a Rust-based data collection and enrichment system (a TUI/CLI binary named `scrapper`) that processes Discogs collections and enriches them with data from multiple music services.
+The russ.fm backend is a Rust-based data collection and enrichment system (a binary named `scrapper` with a web UI, a TUI and a CLI) that processes Discogs collections and enriches them with data from multiple music services.
 
 ## Quick Links
 
 | Document | Description |
 |----------|-------------|
 | [CLI Commands](./cli-commands.md) | All available commands and options |
+| [Web UI](./web-ui.md) | The browser interface `scrapper` opens by default: architecture, API, jobs |
 | [Services](./services.md) | API service implementations |
 | [Orchestration](./orchestration.md) | Data flow and coordination |
 | [discogs-sub](./discogs-sub.md) | Separate binary: draft Discogs submissions for records not yet on Discogs |
@@ -60,21 +61,23 @@ scrapper/
 ├── config.example.json              # Configuration template
 ├── collection_cache.db              # SQLite database (not in git)
 ├── discogs_cache/                   # Cached Discogs responses (not in git)
+├── web/                             # Web UI: Vite + React app, embedded into the binary
 └── src/                             # Rust source
-    ├── main.rs                      # Entry point: TUI when bare, CLI dispatch otherwise
+    ├── main.rs                      # Entry point: web UI when bare (--tui for the TUI), CLI dispatch otherwise
     ├── lib.rs                       # Library crate root
     ├── config.rs                    # config.json + env overrides + path resolution
     ├── db.rs                        # rusqlite/r2d2 layer over collection_cache.db
     ├── sanitize.rs                  # Folder-name sanitizer (data-contract critical)
     ├── logging.rs                   # tracing setup (stderr)
     ├── cli/                         # clap command surface (all commands + flags)
-    ├── ops/                         # Command implementations: release, artist, collection,
+    ├── ops/                         # Command implementations (output via say!, see out.rs): release, artist, collection,
     │                                #   report, descriptions, videos, maintenance, services
     ├── services/                    # API clients: discogs, apple_music, spotify, lastfm,
     │                                #   wikipedia, theaudiodb, perplexity (+ rate limiting)
     ├── output/                      # JSON writer, image manager, collection.json + tv.json generators
-    └── tui/                         # ratatui app, screens (incl. screens/boxsets.rs), detail
+    ├── tui/                         # ratatui app, screens (incl. screens/boxsets.rs), detail
     │                                #   views, modals, runners
+    └── web/                         # axum server for the web UI: API, jobs + SSE, artwork
 ```
 
 > The installed `scrapper` binary registers `~/.config/scrapper/config.json` pointing
@@ -100,6 +103,15 @@ cp config.example.json config.json
 ```
 
 > To run against source without installing, use `cargo run -- <cmd>` from inside `scrapper/`.
+
+### Open the web UI
+
+```bash
+scrapper            # opens http://127.0.0.1:7878 in your browser
+scrapper --tui      # the terminal UI instead
+```
+
+See [web-ui.md](./web-ui.md) for what it covers, its API and how to develop it.
 
 ### Test Services
 
@@ -141,7 +153,7 @@ scrapper release 123456 --save
 
 ## Detail Editor (TUI)
 
-Launching `scrapper` with no subcommand opens the interactive TUI. From the **Releases** or
+Launching `scrapper --tui` opens the interactive TUI (bare `scrapper` opens the [web UI](./web-ui.md)). From the **Releases** or
 **Artists** browser, press `Enter` on a row to open its **detail editor** — a per-field view over
 the record in `collection_cache.db` and the matching files under `public/`.
 

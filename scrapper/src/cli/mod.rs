@@ -31,7 +31,7 @@ pub enum OutputFormat {
 #[derive(Debug, Parser)]
 #[command(
     name = "scrapper",
-    about = "Music collection enrichment — TUI by default, CLI subcommands for automation",
+    about = "Music collection enrichment — web UI by default (--tui for the terminal UI), CLI subcommands for automation",
     version
 )]
 pub struct Cli {
@@ -42,6 +42,18 @@ pub struct Cli {
     /// Log level: DEBUG, INFO, WARNING, ERROR.
     #[arg(long, global = true, default_value = "INFO")]
     pub log_level: String,
+
+    /// Open the terminal UI instead of the web interface (bare invocation only).
+    #[arg(long)]
+    pub tui: bool,
+
+    /// Port for the web interface; the next free port is used if it is taken.
+    #[arg(long, default_value_t = crate::web::DEFAULT_PORT)]
+    pub port: u16,
+
+    /// Start the web interface without opening a browser.
+    #[arg(long)]
+    pub no_open: bool,
 
     #[command(subcommand)]
     pub command: Option<Command>,
@@ -450,7 +462,7 @@ impl Cli {
     /// suppressed to avoid corrupting the alternate screen).
     pub fn launches_tui(&self) -> bool {
         match &self.command {
-            None => true,
+            None => self.tui,
             Some(Command::Collection(a)) => a.interactive,
             _ => false,
         }
@@ -502,12 +514,12 @@ fn cmd_status(cfg: &Config) -> anyhow::Result<()> {
     } else {
         0.0
     };
-    println!("Database: {}", db.path().display());
-    println!("  releases:          {}", s.total_releases);
-    println!("  artists:           {}", s.total_artists);
-    println!("  collection items:  {}", s.total_collection_items);
-    println!("  processed:         {} ({pct:.1}%)", s.processed_items);
-    println!("  enriched:          {}", s.enriched_items);
+    crate::say!("Database: {}", db.path().display());
+    crate::say!("  releases:          {}", s.total_releases);
+    crate::say!("  artists:           {}", s.total_artists);
+    crate::say!("  collection items:  {}", s.total_collection_items);
+    crate::say!("  processed:         {} ({pct:.1}%)", s.processed_items);
+    crate::say!("  enriched:          {}", s.enriched_items);
     Ok(())
 }
 
@@ -519,14 +531,14 @@ fn cmd_backup(cfg: &Config, args: BackupArgs) -> anyhow::Result<()> {
         backups.join(format!("collection_cache_{}.db", crate::util::timestamp()))
     });
     db.backup_database(&dest)?;
-    println!("Database backed up to {}", dest.display());
+    crate::say!("Database backed up to {}", dest.display());
     Ok(())
 }
 
 fn cmd_init(args: InitArgs) -> anyhow::Result<()> {
     let example = include_str!("../../config.example.json");
     std::fs::write(&args.output, example)?;
-    println!("Wrote example config to {}", args.output.display());
+    crate::say!("Wrote example config to {}", args.output.display());
     Ok(())
 }
 
@@ -537,7 +549,7 @@ fn cmd_db(cfg: &Config, c: DbCommand) -> anyhow::Result<()> {
         DbCommand::Search { kind, query, limit } => {
             if kind == "release" {
                 for r in db.search_releases(&query, limit)? {
-                    println!(
+                    crate::say!(
                         "  [{}] {} — {} ({})",
                         r.discogs_id.as_deref().unwrap_or("?"),
                         r.artist_names.join(", "),
@@ -547,7 +559,7 @@ fn cmd_db(cfg: &Config, c: DbCommand) -> anyhow::Result<()> {
                 }
             } else {
                 for a in db.search_artists(&query, limit)? {
-                    println!("  [{}] {}", a.discogs_id.as_deref().unwrap_or("?"), a.name);
+                    crate::say!("  [{}] {}", a.discogs_id.as_deref().unwrap_or("?"), a.name);
                 }
             }
             Ok(())
@@ -555,7 +567,7 @@ fn cmd_db(cfg: &Config, c: DbCommand) -> anyhow::Result<()> {
         DbCommand::List { kind, limit, sort } => {
             if kind == "releases" {
                 for r in db.list_releases(limit, &sort)? {
-                    println!(
+                    crate::say!(
                         "  [{}] {} — {} ({})",
                         r.discogs_id.as_deref().unwrap_or("?"),
                         r.artist_names.join(", "),
@@ -565,27 +577,27 @@ fn cmd_db(cfg: &Config, c: DbCommand) -> anyhow::Result<()> {
                 }
             } else {
                 for a in db.list_artists(limit, &sort)? {
-                    println!("  [{}] {}", a.discogs_id.as_deref().unwrap_or("?"), a.name);
+                    crate::say!("  [{}] {}", a.discogs_id.as_deref().unwrap_or("?"), a.name);
                 }
             }
             Ok(())
         }
         DbCommand::Delete { kind, identifier, force } => {
             if !force {
-                println!("Refusing to delete {kind} '{identifier}' without --force (would auto-backup first).");
+                crate::say!("Refusing to delete {kind} '{identifier}' without --force (would auto-backup first).");
                 return Ok(());
             }
             let backups = cfg.base_dir.join("backups");
             std::fs::create_dir_all(&backups)?;
             let backup = backups.join(format!("backup_before_delete_{}.db", crate::util::timestamp()));
             db.backup_database(&backup)?;
-            println!("Backed up to {} before delete.", backup.display());
+            crate::say!("Backed up to {} before delete.", backup.display());
             let removed = if kind == "release" {
                 db.delete_release(&identifier)?
             } else {
                 db.delete_artist(&identifier)?
             };
-            println!("{}", if removed { "Deleted." } else { "No matching row found." });
+            crate::say!("{}", if removed { "Deleted." } else { "No matching row found." });
             Ok(())
         }
         DbCommand::Backup { name } => {
@@ -595,7 +607,7 @@ fn cmd_db(cfg: &Config, c: DbCommand) -> anyhow::Result<()> {
                 name.unwrap_or_else(|| format!("collection_cache_{}.db", crate::util::timestamp())),
             );
             db.backup_database(&dest)?;
-            println!("Backup written to {}", dest.display());
+            crate::say!("Backup written to {}", dest.display());
             Ok(())
         }
     }

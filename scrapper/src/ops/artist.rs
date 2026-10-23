@@ -6,7 +6,7 @@ use serde_json::{json, Map, Value};
 
 use crate::cli::{ArtistArgs, ArtistBatchArgs, OutputFormat};
 use crate::db::{ArtistRecord, Db};
-use crate::ops::release::{image_client, prefer_key, MatchPicker};
+use crate::ops::release::{image_client, prefer_key, MatchPicker, ProgressSink};
 use crate::output::{artist_to_value, images, to_pretty_sorted};
 use crate::sanitize::sanitize_folder_name;
 use crate::services::Services;
@@ -21,29 +21,29 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     }
     let client = image_client();
 
-    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
-    println!("Searching for artist '{}'...", args.name);
+    let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
+    crate::say!("Searching for artist '{}'...", args.name);
     let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer_key(args.prefer), &picker).await?;
 
     let mark = |b: bool| if b { "✓" } else { "–" };
-    println!("\n  {}", rec.name);
-    println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
-    println!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia), mark(found.perplexity));
+    crate::say!("\n  {}", rec.name);
+    crate::say!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
+    crate::say!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia), mark(found.perplexity));
     if let Some(bio) = &rec.biography {
         let preview: String = bio.chars().take(160).collect();
-        println!("  bio: {preview}{}", if bio.chars().count() > 160 { "…" } else { "" });
+        crate::say!("  bio: {preview}{}", if bio.chars().count() > 160 { "…" } else { "" });
     }
 
     if matches!(args.output, OutputFormat::Json) {
-        println!("{}", to_pretty_sorted(&artist_to_value(&rec)));
+        crate::say!("{}", to_pretty_sorted(&artist_to_value(&rec)));
     }
     if args.save {
         let folder = sanitize_folder_name(&rec.name);
-        println!("\nSaved to DB and wrote {}/{folder}/", cfg.artists_dir().display());
+        crate::say!("\nSaved to DB and wrote {}/{folder}/", cfg.artists_dir().display());
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
     } else {
-        println!("\n(dry view — pass --save to write to the database, JSON and image)");
+        crate::say!("\n(dry view — pass --save to write to the database, JSON and image)");
     }
     Ok(())
 }
@@ -52,7 +52,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let db = Db::open(cfg.db_path())?;
     let seeded = db.seed_missing_artists_from_releases()?;
     if seeded > 0 {
-        println!("Seeded {seeded} missing artist(s) from saved releases.");
+        crate::say!("Seeded {seeded} missing artist(s) from saved releases.");
     }
     let mut artists = db.list_artists(u32::MAX, "name")?;
     if !args.include_various {
@@ -60,7 +60,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
 
     if args.stats {
-        println!("{} artists in the database{}.", artists.len(), if args.include_various { "" } else { " (excluding Various Artists)" });
+        crate::say!("{} artists in the database{}.", artists.len(), if args.include_various { "" } else { " (excluding Various Artists)" });
         return Ok(());
     }
 
@@ -68,7 +68,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let to = (args.to as usize).min(artists.len());
     let slice = &artists[from..to.max(from)];
     if slice.is_empty() {
-        println!("No artists in range [{from}, {to}).");
+        crate::say!("No artists in range [{from}, {to}).");
         return Ok(());
     }
 
@@ -78,25 +78,65 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
     let client = image_client();
     let prefer = prefer_key(args.prefer);
-    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
+    let picker = if args.interactive { MatchPicker::interactive() } else { MatchPicker::First };
     let total = slice.len();
     let mut ok = 0usize;
 
     for (i, a) in slice.iter().enumerate() {
+        super::out::progress(i + 1, total);
         match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer, &picker).await {
             Ok((_, found)) => {
                 ok += 1;
                 let m = |b: bool| if b { "✓" } else { "–" };
-                println!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {} perplexity {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia), m(found.perplexity));
+                crate::say!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {} perplexity {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia), m(found.perplexity));
             }
-            Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
+            Err(e) => crate::say!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
         }
     }
 
-    println!("\nDone: {ok}/{total} artists processed.");
+    crate::say!("\nDone: {ok}/{total} artists processed.");
     if args.save && ok > 0 {
         let n = crate::output::collection::regenerate(cfg, &db)?;
-        println!("Refreshed collection.json ({n} entries)");
+        crate::say!("Refreshed collection.json ({n} entries)");
+    }
+    Ok(())
+}
+
+/// Enrich (and save) the first `limit` un-enriched artists, name order, choosing matches with
+/// `picker` — the TUI's Enrich artists runner and the web UI's equivalent. Artists credited on
+/// saved releases but missing from the table are seeded first.
+pub async fn enrich_unenriched(cfg: &Config, db: &Db, limit: usize, picker: &MatchPicker, sink: &ProgressSink<'_>) -> Result<()> {
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    match db.seed_missing_artists_from_releases() {
+        Ok(seeded) if seeded > 0 => sink.log(format!("Seeded {seeded} missing artist(s) from saved releases.")),
+        Ok(_) => {}
+        Err(e) => sink.log(format!("failed to seed missing artists: {e}")),
+    }
+    let artists = db.list_unenriched_artists(limit as u32).context("listing un-enriched artists")?;
+    if artists.is_empty() {
+        sink.log("No un-enriched artists found 🎉");
+        return Ok(());
+    }
+
+    let total = artists.len();
+    sink.log(format!("Enriching {total} artist(s) (interactive)"));
+    let client = image_client();
+    for (i, a) in artists.iter().enumerate() {
+        sink.log(format!("▶ [{}/{total}] {} — enriching…", i + 1, a.name));
+        match process_artist(cfg, &services, db, &client, &a.name, true, false, false, None, None, picker).await {
+            Ok((_, found)) => {
+                let m = |b: bool| if b { "✓" } else { "–" };
+                sink.log(format!(
+                    "    apple {} · spotify {} · lastfm {} · wiki {} · saved ✓",
+                    m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia)
+                ));
+            }
+            Err(e) => sink.log(format!("  ✗ {} — {e}", a.name)),
+        }
+        sink.progress(i + 1, total);
     }
     Ok(())
 }
@@ -498,6 +538,37 @@ impl ArtistField {
         ]
     }
 
+    /// Stable identifier for APIs (the web UI's editor), e.g. `lastfm_summary`.
+    pub fn key(self) -> &'static str {
+        match self {
+            ArtistField::Name => "name",
+            ArtistField::Country => "country",
+            ArtistField::FormedDate => "formed_date",
+            ArtistField::Discogs => "discogs",
+            ArtistField::Apple => "apple",
+            ArtistField::Spotify => "spotify",
+            ArtistField::Lastfm => "lastfm",
+            ArtistField::Wikipedia => "wikipedia",
+            ArtistField::Genres => "genres",
+            ArtistField::Popularity => "popularity",
+            ArtistField::Followers => "followers",
+            ArtistField::Biography => "biography",
+            ArtistField::LfmSummary => "lastfm_summary",
+            ArtistField::LfmContent => "lastfm_content",
+            ArtistField::LfmTags => "lastfm_tags",
+            ArtistField::Images => "images",
+        }
+    }
+
+    pub fn from_key(key: &str) -> Option<Self> {
+        Self::all().iter().copied().find(|f| f.key() == key)
+    }
+
+    /// Long free text, edited in a multi-line box.
+    pub fn multiline(self) -> bool {
+        matches!(self, ArtistField::Biography | ArtistField::LfmSummary | ArtistField::LfmContent)
+    }
+
     /// Human label used in row headers and log lines.
     pub fn label(self) -> &'static str {
         match self {
@@ -612,11 +683,9 @@ fn lastfm_str(rec: &ArtistRecord, key: &str) -> String {
 /// Save a hand-edited source-image list from the structured editor. Returns the saved record
 /// and the embedding-release fan-out count.
 pub fn set_artist_images(cfg: &Config, db: &Db, rec: &ArtistRecord, rows: &[Vec<String>]) -> Result<(ArtistRecord, usize)> {
-    let mut rec = rec.clone();
-    rec.images = crate::ops::release::rows_to_images(&rec.images, rows)?;
-    rec.updated_at = Some(now_iso());
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    let mut edited = rec.clone();
+    apply_artist_rows(&mut edited, ArtistField::Images, rows)?;
+    commit_artist_edit(cfg, db, rec, edited)
 }
 
 /// The stored local-image paths for an artist folder.
@@ -884,42 +953,52 @@ pub async fn refresh_artist_field(
 /// a returned `Err` carries a user-readable message and leaves the record untouched.
 /// Returns the saved record and how many embedding release JSONs were rewritten.
 pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<(ArtistRecord, usize)> {
-    let mut rec = rec.clone();
+    let mut edited = rec.clone();
+    apply_artist_value(&mut edited, field, text)?;
+    commit_artist_edit(cfg, db, rec, edited)
+}
+
+/// Persist an edited artist. A rename first moves the public folder (images carried, stale
+/// JSON dropped) and renames the artist inside every embedding release row: collection.json
+/// derives uri_artist from the release-side name, and [`persist_artist`]'s fan-out matches on
+/// the new name. Returns the saved record and how many release JSONs were rewritten.
+pub fn commit_artist_edit(cfg: &Config, db: &Db, before: &ArtistRecord, mut after: ArtistRecord) -> Result<(ArtistRecord, usize)> {
+    let (old_name, name) = (before.name.clone(), after.name.clone());
+    if name != old_name {
+        let new_folder = sanitize_folder_name(&name);
+        if let Some(plan) = crate::ops::rename::plan(&cfg.artists_dir(), &sanitize_folder_name(&old_name), &new_folder) {
+            crate::ops::rename::apply(&plan, crate::ops::rename::ARTIST_SUFFIXES)?;
+            after.local_images = artist_local_images(cfg, &new_folder);
+        }
+        for mut r in db.releases_embedding_artist(before.discogs_id.as_deref(), &old_name)? {
+            if let Some(entries) = r.artists.as_array_mut() {
+                for e in entries {
+                    let by_id = before.discogs_id.is_some() && e.get("discogs_id").and_then(|d| d.as_str()) == before.discogs_id.as_deref();
+                    let by_name = e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(&old_name));
+                    if by_id || by_name {
+                        if let Some(obj) = e.as_object_mut() {
+                            obj.insert("name".into(), json!(name.clone()));
+                        }
+                    }
+                }
+            }
+            r.updated_at = Some(now_iso());
+            db.save_release(&r)?;
+        }
+    }
+    after.updated_at = Some(now_iso());
+    let fanout = persist_artist(cfg, db, &after)?;
+    Ok((after, fanout))
+}
+
+/// Set (or clear, when `text` is blank) one hand-editable field on `rec` in memory, validating
+/// first; nothing is written. Images go through [`apply_artist_rows`].
+pub fn apply_artist_value(rec: &mut ArtistRecord, field: ArtistField, text: &str) -> Result<()> {
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
     match field {
         ArtistField::Name => {
             let Some(name) = opt else { bail!("the artist name cannot be blank") };
-            let old_name = rec.name.clone();
-            if name != old_name {
-                // A slug-changing rename moves the public folder (images carried, stale JSON
-                // dropped; persist_artist then writes the fresh JSON under the new slug).
-                let new_folder = sanitize_folder_name(&name);
-                if let Some(plan) = crate::ops::rename::plan(&cfg.artists_dir(), &sanitize_folder_name(&old_name), &new_folder) {
-                    crate::ops::rename::apply(&plan, crate::ops::rename::ARTIST_SUFFIXES)?;
-                    rec.local_images = artist_local_images(cfg, &new_folder);
-                }
-                // Rename the artist inside every embedding release row: collection.json derives
-                // uri_artist from the release-side name, and persist_artist's fan-out matches on
-                // the new name. JSON rewrites happen in that fan-out, after the row is saved.
-                for mut r in db.releases_embedding_artist(rec.discogs_id.as_deref(), &old_name)? {
-                    if let Some(entries) = r.artists.as_array_mut() {
-                        for e in entries {
-                            let by_id = rec.discogs_id.is_some()
-                                && e.get("discogs_id").and_then(|d| d.as_str()) == rec.discogs_id.as_deref();
-                            let by_name =
-                                e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(&old_name));
-                            if by_id || by_name {
-                                if let Some(obj) = e.as_object_mut() {
-                                    obj.insert("name".into(), json!(name.clone()));
-                                }
-                            }
-                        }
-                    }
-                    r.updated_at = Some(now_iso());
-                    db.save_release(&r)?;
-                }
-            }
             rec.name = name;
         }
         ArtistField::Country => rec.country = opt,
@@ -958,11 +1037,18 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
             crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "tags", Some(tags));
         }
         // Images are edited in the structured list overlay.
-        ArtistField::Images => return Ok((rec, 0)),
+        ArtistField::Images => {}
     }
-    rec.updated_at = Some(now_iso());
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    Ok(())
+}
+
+/// Replace the artist's source images from editor rows (`Type, URL, Width, Height`) in memory.
+pub fn apply_artist_rows(rec: &mut ArtistRecord, field: ArtistField, rows: &[Vec<String>]) -> Result<()> {
+    match field {
+        ArtistField::Images => rec.images = crate::ops::release::rows_to_images(&rec.images, rows)?,
+        other => bail!("{} isn't edited as rows", other.label()),
+    }
+    Ok(())
 }
 
 /// Set an artist's service identity from user input (a pasted URL or bare ID), re-fetching the
@@ -978,9 +1064,20 @@ pub async fn set_artist_service(
     field: ArtistField,
     input: &str,
 ) -> Result<(ArtistRecord, usize)> {
+    let mut edited = rec.clone();
+    if fetch_artist_service(services, &mut edited, field, input).await? {
+        let folder = sanitize_folder_name(&edited.name);
+        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &edited.raw_data, 2000, None).await;
+    }
+    commit_artist_edit(cfg, db, rec, edited)
+}
+
+/// Point a service identity at user input (a pasted URL or bare ID; blank clears it), fetching
+/// the full payload so `services{}`/`raw_data` stay consistent with the flat columns. Changes
+/// `rec` in memory only. Returns whether new photo sources arrived.
+pub async fn fetch_artist_service(services: &Services, rec: &mut ArtistRecord, field: ArtistField, input: &str) -> Result<bool> {
     use crate::ops::service_input;
 
-    let mut rec = rec.clone();
     let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
     let t = input.trim();
     let mut download_image = false;
@@ -1082,12 +1179,5 @@ pub async fn set_artist_service(
     }
 
     rec.raw_data = Value::Object(raw);
-    rec.updated_at = Some(now_iso());
-
-    if download_image {
-        let folder = sanitize_folder_name(&rec.name);
-        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
-    }
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    Ok(download_image)
 }

@@ -1,7 +1,7 @@
-//! scrapper — music collection enrichment as a cohesive Rust TUI/CLI.
+//! scrapper — music collection enrichment as a cohesive Rust web UI/TUI/CLI.
 //!
 //! Library crate holding the reusable core (config, db, ops, sanitize). The binary
-//! (`src/main.rs`) dispatches to either the clap CLI or the ratatui TUI.
+//! (`src/main.rs`) dispatches to the clap CLI, the ratatui TUI or the axum web UI.
 
 pub mod cli;
 pub mod config;
@@ -15,6 +15,7 @@ pub mod sanitize;
 pub mod services;
 pub mod tui;
 pub mod util;
+pub mod web;
 
 pub use config::Config;
 pub use db::Db;

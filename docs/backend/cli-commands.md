@@ -15,6 +15,16 @@ authoritative flag list of any subcommand.
 `backfill-videos`, `backfill-original-years`, `backfill-formats`, `backfill-tracklists`,
 `maintenance`.
 
+## Bare invocation
+
+With no subcommand, `scrapper` starts the [web UI](./web-ui.md) and opens it in the browser.
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `--tui` | FLAG | `false` | Open the terminal UI instead of the web UI |
+| `--port` | NUMBER | `7878` | Web UI port; the next free port is used if it's taken |
+| `--no-open` | FLAG | `false` | Start the web UI without opening a browser |
+
 ## Global Options
 
 Options available for all commands:

@@ -2,10 +2,11 @@
 //! single-release pipeline. Sequential to respect upstream rate limits.
 
 use anyhow::{bail, Result};
+use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
 use crate::cli::CollectionArgs;
-use crate::ops::release::{image_client, prefer_key, process_release, MatchPicker};
+use crate::ops::release::{image_client, prefer_key, process_release, MatchPicker, ProgressSink};
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -45,10 +46,10 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
         bail!("no Discogs username — pass --username or set discogs.username in config.json");
     }
 
-    println!("Fetching collection for {username}...");
+    crate::say!("Fetching collection for {username}...");
     let raw = services.discogs.get_user_collection(&username).await?;
     let mut entries: Vec<Entry> = raw.iter().filter_map(parse_entry).collect();
-    println!("Collection has {} releases.", entries.len());
+    crate::say!("Collection has {} releases.", entries.len());
 
     // Range slicing: [from, to) then limit.
     let from = args.from.unwrap_or(0) as usize;
@@ -73,21 +74,21 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
         }
         let skipped = before - kept.len();
         entries = kept;
-        println!("Resume: skipping {skipped} already-enriched; {} to process.", entries.len());
+        crate::say!("Resume: skipping {skipped} already-enriched; {} to process.", entries.len());
     }
 
     if entries.is_empty() {
-        println!("Nothing to process.");
+        crate::say!("Nothing to process.");
         return Ok(());
     }
 
     if args.dry_run {
-        println!("[dry-run] would process {} releases:", entries.len());
+        crate::say!("[dry-run] would process {} releases:", entries.len());
         for e in entries.iter().take(25) {
-            println!("  {}", e.release_id);
+            crate::say!("  {}", e.release_id);
         }
         if entries.len() > 25 {
-            println!("  ... and {} more", entries.len() - 25);
+            crate::say!("  ... and {} more", entries.len() - 25);
         }
         return Ok(());
     }
@@ -100,11 +101,12 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
     let mut failed = 0usize;
 
     for (i, e) in entries.iter().enumerate() {
+        super::out::progress(i + 1, total);
         match process_release(cfg, &services, &db, &client, &e.release_id, true, prefer, &picker, e.date_added.as_deref(), None, false).await {
             Ok((rec, flags)) => {
                 db.record_processed(&rec.id, &e.release_id, e.instance_id.as_deref(), e.date_added.as_deref())?;
                 ok += 1;
-                println!(
+                crate::say!(
                     "[{}/{total}] ✓ {} — {} (apple {} spotify {} lastfm {})",
                     i + 1,
                     truncate(&primary_artist(&rec.artists), 24),
@@ -116,25 +118,354 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
             }
             Err(err) => {
                 failed += 1;
-                println!("[{}/{total}] ✗ release {} — {err}", i + 1, e.release_id);
+                crate::say!("[{}/{total}] ✗ release {} — {err}", i + 1, e.release_id);
             }
         }
     }
 
-    println!("\nDone: {ok} processed, {failed} failed, of {total}.");
+    crate::say!("\nDone: {ok} processed, {failed} failed, of {total}.");
 
     // Check any new videos, so tv.json leaves out ones that won't play.
     if let Err(e) = crate::ops::videos::check_playability(cfg, &db, &services, crate::ops::videos::CheckScope::New, None).await {
-        println!("Warning: video playability check failed: {e}");
+        crate::say!("Warning: video playability check failed: {e}");
     }
 
     // Refresh the frontend index.
     let out = cfg.data_dir().join("collection.json");
     match crate::output::collection::generate(cfg, &db, &out) {
-        Ok(n) => println!("Updated {} ({n} entries).", out.display()),
-        Err(e) => println!("Warning: collection.json update failed: {e}"),
+        Ok(n) => crate::say!("Updated {} ({n} entries).", out.display()),
+        Err(e) => crate::say!("Warning: collection.json update failed: {e}"),
     }
     Ok(())
+}
+
+// ── Picking new releases (TUI Collection screen, web UI Add page) ──────────────────────────
+
+/// A release in the Discogs collection, distilled from the collection payload's
+/// `basic_information` for the Collection screen's picker.
+#[derive(Clone, Debug, Serialize, Deserialize)]
+pub struct CollectionCandidate {
+    pub release_id: String,
+    pub instance_id: Option<String>,
+    pub date_added: Option<String>,
+    pub artist: String,
+    pub title: String,
+    pub year: Option<i64>,
+    pub format: String,
+}
+
+impl CollectionCandidate {
+    pub fn from_entry(v: &serde_json::Value) -> Option<Self> {
+        let release_id = v.get("id").map(|i| match i {
+            serde_json::Value::Number(n) => n.to_string(),
+            serde_json::Value::String(s) => s.clone(),
+            other => other.to_string(),
+        })?;
+        let info = v.get("basic_information");
+        let str_of = |key: &str| info.and_then(|b| b.get(key)).and_then(|t| t.as_str()).unwrap_or("").to_string();
+        let artist = info
+            .and_then(|b| b.get("artists"))
+            .and_then(|a| a.as_array())
+            .map(|a| {
+                a.iter()
+                    .filter_map(|x| x.get("name").and_then(|n| n.as_str()))
+                    .map(strip_discogs_suffix)
+                    .collect::<Vec<_>>()
+                    .join(", ")
+            })
+            .unwrap_or_default();
+        // "Vinyl, LP, Album" — the first format's name plus its descriptions.
+        let format = info
+            .and_then(|b| b.get("formats"))
+            .and_then(|f| f.as_array())
+            .and_then(|f| f.first())
+            .map(|f| {
+                let mut parts: Vec<&str> = f.get("name").and_then(|n| n.as_str()).into_iter().collect();
+                if let Some(d) = f.get("descriptions").and_then(|d| d.as_array()) {
+                    parts.extend(d.iter().filter_map(|x| x.as_str()));
+                }
+                parts.join(", ")
+            })
+            .unwrap_or_default();
+        Some(Self {
+            release_id,
+            instance_id: v.get("instance_id").map(|i| i.to_string()),
+            date_added: v.get("date_added").and_then(|d| d.as_str()).map(String::from),
+            artist,
+            title: str_of("title"),
+            year: info.and_then(|b| b.get("year")).and_then(|y| y.as_i64()).filter(|y| *y > 0),
+            format,
+        })
+    }
+}
+
+/// Drop Discogs's artist disambiguation suffix: "Placebo (2)" → "Placebo".
+fn strip_discogs_suffix(name: &str) -> &str {
+    match name.rsplit_once(" (") {
+        Some((base, n)) if n.strip_suffix(')').is_some_and(|d| !d.is_empty() && d.bytes().all(|b| b.is_ascii_digit())) => base,
+        _ => name,
+    }
+}
+
+/// How many of the newest collection pages (100 releases each) the picker scans.
+const CANDIDATE_PAGES: u32 = 3;
+/// The most new releases the picker lists.
+const CANDIDATE_LIMIT: usize = 50;
+
+/// Load the newest releases in the Discogs collection that aren't enriched in the DB yet, for
+/// the Collection screen's picker. Pages newest-first and stops at the first page with nothing
+/// new on it (everything older is already processed), after [`CANDIDATE_PAGES`] pages, or once
+/// [`CANDIDATE_LIMIT`] are found.
+pub async fn new_candidates(cfg: &Config, db: &Db) -> Result<Vec<CollectionCandidate>> {
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        anyhow::bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    let username = cfg.discogs.username.clone();
+    if username.is_empty() {
+        anyhow::bail!("no Discogs username — set discogs.username in config.json");
+    }
+    let have = db.enriched_release_ids()?;
+    let mut out = Vec::new();
+    for page in 1..=CANDIDATE_PAGES {
+        let (entries, pages) = services.discogs.get_user_collection_page(&username, page).await?;
+        let before = out.len();
+        out.extend(
+            entries
+                .iter()
+                .filter_map(CollectionCandidate::from_entry)
+                .filter(|c| !have.contains(&c.release_id) && !out.iter().any(|o: &CollectionCandidate| o.release_id == c.release_id))
+                .collect::<Vec<_>>(),
+        );
+        if out.len() == before || out.len() >= CANDIDATE_LIMIT || page >= pages {
+            break;
+        }
+    }
+    out.truncate(CANDIDATE_LIMIT);
+    Ok(out)
+}
+
+
+/// The first `limit` releases of the collection, newest first, processed or not.
+pub async fn newest_candidates(cfg: &Config, limit: usize) -> Result<Vec<CollectionCandidate>> {
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    let entries = services.discogs.get_user_collection(&cfg.discogs.username).await?;
+    Ok(entries.iter().filter_map(CollectionCandidate::from_entry).take(limit).collect())
+}
+
+/// Force-refresh and save each picked release, choosing service matches with `picker`, then
+/// regenerate collection.json. Lines and per-release progress go to `sink`.
+pub async fn process_candidates(
+    cfg: &Config,
+    db: &Db,
+    items: &[CollectionCandidate],
+    picker: &MatchPicker,
+    sink: &ProgressSink<'_>,
+) -> Result<()> {
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    let total = items.len();
+    sink.log(format!("Processing {total} release(s) (interactive)"));
+    let client = image_client();
+
+    for (i, item) in items.iter().enumerate() {
+        let (id, date_added, instance) = (&item.release_id, &item.date_added, &item.instance_id);
+        sink.log(format!("▶ [{}/{total}] release {id} — fetching from Discogs…", i + 1));
+        match process_release(cfg, &services, db, &client, id, true, None, picker, date_added.as_deref(), None, false).await {
+            Ok((rec, f)) => {
+                let _ = db.record_processed(&rec.id, id, instance.as_deref(), date_added.as_deref());
+                sink.log(format!("  {} — {}", primary_artist(&rec.artists), rec.title));
+                sink.log(format!(
+                    "    apple {} · spotify {} · lastfm {} · wiki {} · perplexity {} · artwork {} · saved ✓",
+                    svc_mark(f.apple, rec.release_name_apple_music.as_deref()),
+                    svc_mark(f.spotify, rec.release_name_spotify.as_deref()),
+                    yn(f.lastfm),
+                    yn(f.wikipedia),
+                    yn(f.perplexity),
+                    yn(f.image)
+                ));
+            }
+            Err(e) => sink.log(format!("  ✗ {id} — {e}")),
+        }
+        sink.progress(i + 1, total);
+    }
+
+    // Refresh the frontend index so the new releases show up.
+    let out = cfg.data_dir().join("collection.json");
+    sink.log(format!("Updating {}…", out.display()));
+    match crate::output::collection::generate(cfg, db, &out) {
+        Ok(n) => sink.log(format!("✓ wrote {n} entries to collection.json")),
+        Err(e) => sink.log(format!("✗ collection.json update failed: {e}")),
+    }
+    Ok(())
+}
+
+/// How a picker candidate relates to what's already in the database.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum CandidateState {
+    /// Not in the database, and nothing like it is.
+    New,
+    /// In the database under this Discogs ID, but no service matched it.
+    Unmatched,
+    /// Not in the database under this ID, but a release with the same title and artist is —
+    /// typically a Discogs submission that was merged into the release now in the collection.
+    Duplicate,
+}
+
+/// A library release a candidate may duplicate.
+#[derive(Clone, Debug, Serialize)]
+pub struct ExistingRelease {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    pub year: Option<i64>,
+    pub date_added: Option<String>,
+    pub slug: String,
+}
+
+#[derive(Clone, Debug, Serialize)]
+pub struct ClassifiedCandidate {
+    #[serde(flatten)]
+    pub candidate: CollectionCandidate,
+    pub state: CandidateState,
+    /// For [`CandidateState::Unmatched`]: its album folder.
+    pub slug: Option<String>,
+    /// For [`CandidateState::Duplicate`]: the likely matches, newest first.
+    pub existing: Vec<ExistingRelease>,
+}
+
+/// Lower-case letters and digits only, so "Far And Wide" matches "Far and Wide".
+fn norm(s: &str) -> String {
+    s.chars().filter(|c| c.is_alphanumeric()).flat_map(char::to_lowercase).collect()
+}
+
+/// Sort picker candidates into new, unmatched and probable duplicates (see [`CandidateState`]).
+pub fn classify_candidates(db: &Db, items: Vec<CollectionCandidate>) -> Result<Vec<ClassifiedCandidate>> {
+    let mut out = Vec::with_capacity(items.len());
+    for c in items {
+        if let Some(rec) = db.get_release_by_discogs_id(&c.release_id)? {
+            let slug = Some(crate::ops::release::release_folder(&rec));
+            out.push(ClassifiedCandidate { candidate: c, state: CandidateState::Unmatched, slug, existing: Vec::new() });
+            continue;
+        }
+        let (title, artists) = (norm(&c.title), c.artist.split(", ").map(norm).collect::<Vec<_>>());
+        let mut existing: Vec<ExistingRelease> = db
+            .search_releases(&c.title, 50)?
+            .into_iter()
+            .filter(|r| r.discogs_id.as_deref().is_some_and(|id| id != c.release_id))
+            .filter(|r| norm(&r.title) == title && r.artist_names.iter().any(|a| artists.contains(&norm(a))))
+            .map(|r| {
+                let id = r.discogs_id.unwrap_or_default();
+                ExistingRelease {
+                    slug: crate::sanitize::release_folder_name(&r.title, &id),
+                    discogs_id: id,
+                    title: r.title,
+                    artists: r.artist_names,
+                    year: r.year,
+                    date_added: r.date_added,
+                }
+            })
+            .collect();
+        existing.sort_by(|a, b| b.date_added.cmp(&a.date_added));
+        existing.truncate(4);
+        let state = if existing.is_empty() { CandidateState::New } else { CandidateState::Duplicate };
+        out.push(ClassifiedCandidate { candidate: c, state, slug: None, existing });
+    }
+    Ok(out)
+}
+
+/// Move a library release onto the Discogs ID now in the collection (after Discogs merged
+/// one into the other): process `item` (saved, matches chosen with `picker`), carry over what
+/// only the old record had (its description and boxset link), point any boxset members at the
+/// new ID, then back up the database and delete the old record and its public folder.
+pub async fn replace_release(
+    cfg: &Config,
+    db: &Db,
+    old_id: &str,
+    item: &CollectionCandidate,
+    picker: &MatchPicker,
+    sink: &ProgressSink<'_>,
+) -> Result<()> {
+    use crate::ops::release::{commit_release_edit, release_folder, ReleaseField};
+
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    if old_id == item.release_id {
+        bail!("that's the same release");
+    }
+    let Some(old) = db.get_release_by_discogs_id(old_id)? else { bail!("release {old_id} is no longer in the database") };
+    let old_folder = release_folder(&old);
+    let new_id = item.release_id.as_str();
+    sink.log(format!("▶ Replacing [{old_id}] {} with [{new_id}] from your collection", old.title));
+
+    let parent = old.raw_data.get("boxset").and_then(|b| b.get("parent_discogs_id")).and_then(Value::as_str).map(String::from);
+    let client = image_client();
+    let (rec, _) = process_release(cfg, &services, db, &client, new_id, true, None, picker, item.date_added.as_deref(), parent.as_deref(), false).await?;
+    db.record_processed(&rec.id, new_id, item.instance_id.as_deref(), item.date_added.as_deref())?;
+    sink.log(format!("  ✓ processed [{new_id}] {}", rec.title));
+
+    // Keep the description if the new record didn't get one (it may have cost a Perplexity call).
+    let mut edited = rec.clone();
+    if !ReleaseField::Description.present(&edited) {
+        if let Some(p) = old.raw_data.get("perplexity").filter(|p| p.get("description").is_some()) {
+            if let Some(raw) = edited.raw_data.as_object_mut() {
+                raw.insert("perplexity".into(), p.clone());
+                sink.log("  ✓ kept the old record's description");
+            }
+        }
+    }
+    if edited.raw_data != rec.raw_data {
+        commit_release_edit(cfg, db, &rec, edited)?;
+    }
+
+    // Boxset members of the old ID now belong to the new one.
+    let mut relinked = 0;
+    for mut r in db.get_all_releases()? {
+        let points_here = r.raw_data.get("boxset").and_then(|b| b.get("parent_discogs_id")).and_then(Value::as_str) == Some(old_id);
+        if points_here {
+            let before = r.clone();
+            r.raw_data["boxset"]["parent_discogs_id"] = Value::String(new_id.to_string());
+            commit_release_edit(cfg, db, &before, r)?;
+            relinked += 1;
+        }
+    }
+    if relinked > 0 {
+        sink.log(format!("  ✓ moved {relinked} boxset member(s) to the new ID"));
+    }
+
+    let backups = cfg.base_dir.join("backups");
+    std::fs::create_dir_all(&backups)?;
+    let backup = backups.join(format!("backup_before_replace_{}.db", crate::util::timestamp()));
+    db.backup_database(&backup)?;
+    sink.log(format!("  ✓ backed up the database to {}", backup.display()));
+    db.delete_release(old_id)?;
+    let new_folder = release_folder(&rec);
+    let dir = cfg.releases_dir().join(&old_folder);
+    if old_folder != new_folder && dir.is_dir() {
+        std::fs::remove_dir_all(&dir)?;
+    }
+    sink.log(format!("  ✓ removed [{old_id}] and public/album/{old_folder}/"));
+
+    let n = crate::output::collection::regenerate(cfg, db)?;
+    sink.log(format!("✓ collection.json refreshed ({n} entries)"));
+    Ok(())
+}
+
+/// Service tick that names the matched item, so auto- and picked matches are visible in the log.
+fn svc_mark(found: bool, name: Option<&str>) -> String {
+    match (found, name) {
+        (true, Some(n)) if !n.is_empty() => format!("✓ \"{n}\""),
+        (true, _) => "✓".into(),
+        (false, _) => "–".into(),
+    }
 }
 
 fn primary_artist(artists: &Value) -> String {
@@ -160,5 +491,46 @@ fn yn(b: bool) -> &'static str {
         "✓"
     } else {
         "–"
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn norm_ignores_case_and_punctuation() {
+        assert_eq!(norm("Far And Wide"), norm("Far and Wide"));
+        assert_eq!(norm("(The Best Of) NewOrder"), "thebestofneworder");
+        assert_ne!(norm("(The Best Of) NewOrder"), norm("(The Rest Of) NewOrder"));
+    }
+
+    #[test]
+    fn candidate_from_collection_entry() {
+        let v = serde_json::json!({
+            "id": 15464999,
+            "instance_id": 123,
+            "date_added": "2026-10-20T09:15:00-07:00",
+            "basic_information": {
+                "title": "So Tonight That I Might See",
+                "year": 1993,
+                "artists": [{ "name": "Mazzy Star" }, { "name": "Placebo (2)" }],
+                "formats": [{ "name": "Vinyl", "descriptions": ["LP", "Album"] }]
+            }
+        });
+        let c = CollectionCandidate::from_entry(&v).unwrap();
+        assert_eq!(c.release_id, "15464999");
+        assert_eq!(c.instance_id.as_deref(), Some("123"));
+        assert_eq!(c.artist, "Mazzy Star, Placebo");
+        assert_eq!(c.title, "So Tonight That I Might See");
+        assert_eq!(c.year, Some(1993));
+        assert_eq!(c.format, "Vinyl, LP, Album");
+    }
+
+    #[test]
+    fn strips_only_numeric_disambiguation() {
+        assert_eq!(strip_discogs_suffix("Placebo (2)"), "Placebo");
+        assert_eq!(strip_discogs_suffix("Sunn O)))"), "Sunn O)))");
+        assert_eq!(strip_discogs_suffix("Jesus Jones (UK)"), "Jesus Jones (UK)");
     }
 }

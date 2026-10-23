@@ -31,9 +31,9 @@ cd russ-fm
 # Frontend setup (also installs the repo git hooks into .git/hooks, see below)
 pnpm install
 
-# Backend setup (Rust TUI/CLI binary)
+# Backend setup (Rust binary: web UI, TUI and CLI)
 cd scrapper
-./install.sh           # builds and installs `scrapper` to ~/.cargo/bin,
+./install.sh           # builds the web UI (pnpm), then installs `scrapper` to ~/.cargo/bin,
                        # and registers ~/.config/scrapper/config.json so the
                        # command works from any directory
 cp config.example.json config.json
@@ -143,7 +143,7 @@ russ-fm/
 │   ├── services/          # API services
 │   ├── types/             # TypeScript types
 │   └── config/            # Configuration
-├── scrapper/              # Rust backend (TUI/CLI binary)
+├── scrapper/              # Rust backend (web UI/TUI/CLI binary)
 │   ├── src/               # Rust source
 │   ├── install.sh         # Build & install to ~/.cargo/bin
 │   └── Cargo.toml         # Crate manifest
