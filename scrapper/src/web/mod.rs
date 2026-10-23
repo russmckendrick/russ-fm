@@ -5,12 +5,16 @@
 //! Module map:
 //! - [`api`] — JSON handlers (reads + job-starting actions).
 //! - [`commands`] — the CLI's command tree for generated forms; argv → job.
+//! - [`edit`] — record editing with a before/after preview of the published files.
+//! - [`health`] — data-health checks and the commands that fix them.
 //! - [`jobs`] — background job registry: logs, progress, interactive prompts, SSE events.
 //! - [`library`] — slim index of `collection.json` for the library and artist grids.
 //! - [`media`] — `/media/*` files, deriving `-medium`/`-avatar` from `-hi-res` when missing.
 
 mod api;
 pub mod commands;
+pub mod edit;
+pub mod health;
 pub mod jobs;
 pub mod library;
 pub mod media;
@@ -113,6 +117,7 @@ pub fn router(state: Arc<AppState>) -> Router {
         .route("/actions/generate-collection", post(api::generate_collection))
         .route("/actions/process-releases", post(api::process_releases))
         .route("/actions/enrich-artists", post(api::enrich_artists))
+        .route("/actions/replace-release", post(api::replace_release))
         .route("/actions/site-script", post(api::site_script))
         .route("/commands", get(api::commands))
         .route("/run", post(api::run_command))
@@ -121,6 +126,13 @@ pub fn router(state: Arc<AppState>) -> Router {
         .route("/boxsets/{id}/single", post(api::set_boxset_single))
         .route("/db/rows", get(api::db_rows))
         .route("/backups", get(api::backups))
+        .route("/releases/{slug}/fields", get(api::release_fields))
+        .route("/releases/{slug}/edit", post(api::edit_release))
+        .route("/artists/{slug}/fields", get(api::artist_fields))
+        .route("/artists/{slug}/edit", post(api::edit_artist))
+        .route("/actions/refresh-field", post(api::refresh_field))
+        .route("/health/checks", get(api::health_checks))
+        .route("/orphans/{slug}/remove", post(api::remove_orphan_folder))
         .fallback(|| async { (StatusCode::NOT_FOUND, axum::Json(serde_json::json!({ "error": "no such endpoint" }))) });
 
     Router::new()

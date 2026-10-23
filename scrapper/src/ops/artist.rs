@@ -538,6 +538,37 @@ impl ArtistField {
         ]
     }
 
+    /// Stable identifier for APIs (the web UI's editor), e.g. `lastfm_summary`.
+    pub fn key(self) -> &'static str {
+        match self {
+            ArtistField::Name => "name",
+            ArtistField::Country => "country",
+            ArtistField::FormedDate => "formed_date",
+            ArtistField::Discogs => "discogs",
+            ArtistField::Apple => "apple",
+            ArtistField::Spotify => "spotify",
+            ArtistField::Lastfm => "lastfm",
+            ArtistField::Wikipedia => "wikipedia",
+            ArtistField::Genres => "genres",
+            ArtistField::Popularity => "popularity",
+            ArtistField::Followers => "followers",
+            ArtistField::Biography => "biography",
+            ArtistField::LfmSummary => "lastfm_summary",
+            ArtistField::LfmContent => "lastfm_content",
+            ArtistField::LfmTags => "lastfm_tags",
+            ArtistField::Images => "images",
+        }
+    }
+
+    pub fn from_key(key: &str) -> Option<Self> {
+        Self::all().iter().copied().find(|f| f.key() == key)
+    }
+
+    /// Long free text, edited in a multi-line box.
+    pub fn multiline(self) -> bool {
+        matches!(self, ArtistField::Biography | ArtistField::LfmSummary | ArtistField::LfmContent)
+    }
+
     /// Human label used in row headers and log lines.
     pub fn label(self) -> &'static str {
         match self {
@@ -652,11 +683,9 @@ fn lastfm_str(rec: &ArtistRecord, key: &str) -> String {
 /// Save a hand-edited source-image list from the structured editor. Returns the saved record
 /// and the embedding-release fan-out count.
 pub fn set_artist_images(cfg: &Config, db: &Db, rec: &ArtistRecord, rows: &[Vec<String>]) -> Result<(ArtistRecord, usize)> {
-    let mut rec = rec.clone();
-    rec.images = crate::ops::release::rows_to_images(&rec.images, rows)?;
-    rec.updated_at = Some(now_iso());
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    let mut edited = rec.clone();
+    apply_artist_rows(&mut edited, ArtistField::Images, rows)?;
+    commit_artist_edit(cfg, db, rec, edited)
 }
 
 /// The stored local-image paths for an artist folder.
@@ -924,42 +953,52 @@ pub async fn refresh_artist_field(
 /// a returned `Err` carries a user-readable message and leaves the record untouched.
 /// Returns the saved record and how many embedding release JSONs were rewritten.
 pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<(ArtistRecord, usize)> {
-    let mut rec = rec.clone();
+    let mut edited = rec.clone();
+    apply_artist_value(&mut edited, field, text)?;
+    commit_artist_edit(cfg, db, rec, edited)
+}
+
+/// Persist an edited artist. A rename first moves the public folder (images carried, stale
+/// JSON dropped) and renames the artist inside every embedding release row: collection.json
+/// derives uri_artist from the release-side name, and [`persist_artist`]'s fan-out matches on
+/// the new name. Returns the saved record and how many release JSONs were rewritten.
+pub fn commit_artist_edit(cfg: &Config, db: &Db, before: &ArtistRecord, mut after: ArtistRecord) -> Result<(ArtistRecord, usize)> {
+    let (old_name, name) = (before.name.clone(), after.name.clone());
+    if name != old_name {
+        let new_folder = sanitize_folder_name(&name);
+        if let Some(plan) = crate::ops::rename::plan(&cfg.artists_dir(), &sanitize_folder_name(&old_name), &new_folder) {
+            crate::ops::rename::apply(&plan, crate::ops::rename::ARTIST_SUFFIXES)?;
+            after.local_images = artist_local_images(cfg, &new_folder);
+        }
+        for mut r in db.releases_embedding_artist(before.discogs_id.as_deref(), &old_name)? {
+            if let Some(entries) = r.artists.as_array_mut() {
+                for e in entries {
+                    let by_id = before.discogs_id.is_some() && e.get("discogs_id").and_then(|d| d.as_str()) == before.discogs_id.as_deref();
+                    let by_name = e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(&old_name));
+                    if by_id || by_name {
+                        if let Some(obj) = e.as_object_mut() {
+                            obj.insert("name".into(), json!(name.clone()));
+                        }
+                    }
+                }
+            }
+            r.updated_at = Some(now_iso());
+            db.save_release(&r)?;
+        }
+    }
+    after.updated_at = Some(now_iso());
+    let fanout = persist_artist(cfg, db, &after)?;
+    Ok((after, fanout))
+}
+
+/// Set (or clear, when `text` is blank) one hand-editable field on `rec` in memory, validating
+/// first; nothing is written. Images go through [`apply_artist_rows`].
+pub fn apply_artist_value(rec: &mut ArtistRecord, field: ArtistField, text: &str) -> Result<()> {
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
     match field {
         ArtistField::Name => {
             let Some(name) = opt else { bail!("the artist name cannot be blank") };
-            let old_name = rec.name.clone();
-            if name != old_name {
-                // A slug-changing rename moves the public folder (images carried, stale JSON
-                // dropped; persist_artist then writes the fresh JSON under the new slug).
-                let new_folder = sanitize_folder_name(&name);
-                if let Some(plan) = crate::ops::rename::plan(&cfg.artists_dir(), &sanitize_folder_name(&old_name), &new_folder) {
-                    crate::ops::rename::apply(&plan, crate::ops::rename::ARTIST_SUFFIXES)?;
-                    rec.local_images = artist_local_images(cfg, &new_folder);
-                }
-                // Rename the artist inside every embedding release row: collection.json derives
-                // uri_artist from the release-side name, and persist_artist's fan-out matches on
-                // the new name. JSON rewrites happen in that fan-out, after the row is saved.
-                for mut r in db.releases_embedding_artist(rec.discogs_id.as_deref(), &old_name)? {
-                    if let Some(entries) = r.artists.as_array_mut() {
-                        for e in entries {
-                            let by_id = rec.discogs_id.is_some()
-                                && e.get("discogs_id").and_then(|d| d.as_str()) == rec.discogs_id.as_deref();
-                            let by_name =
-                                e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(&old_name));
-                            if by_id || by_name {
-                                if let Some(obj) = e.as_object_mut() {
-                                    obj.insert("name".into(), json!(name.clone()));
-                                }
-                            }
-                        }
-                    }
-                    r.updated_at = Some(now_iso());
-                    db.save_release(&r)?;
-                }
-            }
             rec.name = name;
         }
         ArtistField::Country => rec.country = opt,
@@ -998,11 +1037,18 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
             crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "tags", Some(tags));
         }
         // Images are edited in the structured list overlay.
-        ArtistField::Images => return Ok((rec, 0)),
+        ArtistField::Images => {}
     }
-    rec.updated_at = Some(now_iso());
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    Ok(())
+}
+
+/// Replace the artist's source images from editor rows (`Type, URL, Width, Height`) in memory.
+pub fn apply_artist_rows(rec: &mut ArtistRecord, field: ArtistField, rows: &[Vec<String>]) -> Result<()> {
+    match field {
+        ArtistField::Images => rec.images = crate::ops::release::rows_to_images(&rec.images, rows)?,
+        other => bail!("{} isn't edited as rows", other.label()),
+    }
+    Ok(())
 }
 
 /// Set an artist's service identity from user input (a pasted URL or bare ID), re-fetching the
@@ -1018,9 +1064,20 @@ pub async fn set_artist_service(
     field: ArtistField,
     input: &str,
 ) -> Result<(ArtistRecord, usize)> {
+    let mut edited = rec.clone();
+    if fetch_artist_service(services, &mut edited, field, input).await? {
+        let folder = sanitize_folder_name(&edited.name);
+        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &edited.raw_data, 2000, None).await;
+    }
+    commit_artist_edit(cfg, db, rec, edited)
+}
+
+/// Point a service identity at user input (a pasted URL or bare ID; blank clears it), fetching
+/// the full payload so `services{}`/`raw_data` stay consistent with the flat columns. Changes
+/// `rec` in memory only. Returns whether new photo sources arrived.
+pub async fn fetch_artist_service(services: &Services, rec: &mut ArtistRecord, field: ArtistField, input: &str) -> Result<bool> {
     use crate::ops::service_input;
 
-    let mut rec = rec.clone();
     let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
     let t = input.trim();
     let mut download_image = false;
@@ -1122,12 +1179,5 @@ pub async fn set_artist_service(
     }
 
     rec.raw_data = Value::Object(raw);
-    rec.updated_at = Some(now_iso());
-
-    if download_image {
-        let folder = sanitize_folder_name(&rec.name);
-        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
-    }
-    let fanout = persist_artist(cfg, db, &rec)?;
-    Ok((rec, fanout))
+    Ok(download_image)
 }

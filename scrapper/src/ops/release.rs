@@ -1241,6 +1241,44 @@ impl ReleaseField {
         ]
     }
 
+    /// Stable identifier for APIs (the web UI's editor), e.g. `wiki_summary`.
+    pub fn key(self) -> &'static str {
+        match self {
+            ReleaseField::Title => "title",
+            ReleaseField::Year => "year",
+            ReleaseField::Released => "released",
+            ReleaseField::Country => "country",
+            ReleaseField::Artists => "artists",
+            ReleaseField::Discogs => "discogs",
+            ReleaseField::Apple => "apple",
+            ReleaseField::Spotify => "spotify",
+            ReleaseField::Lastfm => "lastfm",
+            ReleaseField::Labels => "labels",
+            ReleaseField::Formats => "formats",
+            ReleaseField::Genres => "genres",
+            ReleaseField::Styles => "styles",
+            ReleaseField::Tracks => "tracks",
+            ReleaseField::Videos => "videos",
+            ReleaseField::Description => "description",
+            ReleaseField::AppleNotes => "apple_notes",
+            ReleaseField::WikiSummary => "wiki_summary",
+            ReleaseField::WikiContent => "wiki_content",
+            ReleaseField::LastfmTags => "lastfm_tags",
+            ReleaseField::SpotifyPop => "spotify_popularity",
+            ReleaseField::DateAdded => "date_added",
+            ReleaseField::Images => "images",
+        }
+    }
+
+    pub fn from_key(key: &str) -> Option<Self> {
+        Self::all().iter().copied().find(|f| f.key() == key)
+    }
+
+    /// Long free text, edited in a multi-line box.
+    pub fn multiline(self) -> bool {
+        matches!(self, ReleaseField::Description | ReleaseField::AppleNotes | ReleaseField::WikiSummary | ReleaseField::WikiContent)
+    }
+
     /// Human label used in row headers and log lines.
     pub fn label(self) -> &'static str {
         match self {
@@ -1561,21 +1599,40 @@ pub async fn refresh_release_field(
 /// a returned `Err` carries a user-readable message and leaves the record untouched.
 /// No network access.
 pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: ReleaseField, text: &str) -> Result<ReleaseRecord> {
-    let mut rec = rec.clone();
+    let mut edited = rec.clone();
+    apply_release_value(&mut edited, field, text)?;
+    commit_release_edit(cfg, db, rec, edited)
+}
+
+/// The record's public folder name (its slug), e.g. `fudge-38794683`.
+pub fn release_folder(rec: &ReleaseRecord) -> String {
+    release_folder_name(&rec.title, rec.discogs_id.as_deref().unwrap_or(&rec.id))
+}
+
+/// Persist an edited release: when the edit changed the slug (a new title), move the public
+/// folder first (images carried, stale JSON dropped), then save to the DB and write the fresh
+/// `{folder}.json`. `before` is the record as it was loaded.
+pub fn commit_release_edit(cfg: &Config, db: &Db, before: &ReleaseRecord, mut after: ReleaseRecord) -> Result<ReleaseRecord> {
+    let (old_folder, new_folder) = (release_folder(before), release_folder(&after));
+    if old_folder != new_folder {
+        if let Some(plan) = crate::ops::rename::plan(&cfg.releases_dir(), &old_folder, &new_folder) {
+            crate::ops::rename::apply(&plan, crate::ops::rename::RELEASE_SUFFIXES)?;
+            after.local_images = release_local_images(cfg, &new_folder);
+        }
+    }
+    after.updated_at = Some(now_iso());
+    write_release(cfg, db, after)
+}
+
+/// Set (or clear, when `text` is blank) one hand-editable field on `rec` in memory, validating
+/// first; nothing is written. Structured fields go through [`apply_release_rows`], service
+/// identities through [`fetch_release_service`], and Discogs is refresh-only.
+pub fn apply_release_value(rec: &mut ReleaseRecord, field: ReleaseField, text: &str) -> Result<()> {
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
     match field {
         ReleaseField::Title => {
             let Some(title) = opt else { bail!("the title cannot be blank") };
-            let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
-            let old_folder = release_folder_name(&rec.title, &id);
-            let new_folder = release_folder_name(&title, &id);
-            // A slug-changing title moves the public folder (images carried, stale JSON dropped;
-            // write_release then writes the fresh JSON under the new slug).
-            if let Some(plan) = crate::ops::rename::plan(&cfg.releases_dir(), &old_folder, &new_folder) {
-                crate::ops::rename::apply(&plan, crate::ops::rename::RELEASE_SUFFIXES)?;
-                rec.local_images = release_local_images(cfg, &new_folder);
-            }
             // collection.json prefers the Discogs-sourced name, so a manual title covers both.
             rec.title = title.clone();
             rec.release_name_discogs = Some(title);
@@ -1627,12 +1684,43 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
             crate::ops::set_raw_service_key(&mut rec.raw_data, "spotify", "popularity", pop);
         }
         // Structured fields are edited in the list overlay; Discogs identity is refresh-only.
-        ReleaseField::Artists | ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::Images => {
-            return Ok(rec)
-        }
+        ReleaseField::Artists | ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::Images => {}
     }
-    rec.updated_at = Some(now_iso());
-    write_release(cfg, db, rec)
+    Ok(())
+}
+
+/// Column headers of a structured field's row editor (empty for other fields).
+pub fn release_columns(field: ReleaseField) -> &'static [&'static str] {
+    match field {
+        ReleaseField::Artists => &["Name", "Discogs ID", "Role"],
+        ReleaseField::Tracks => &["Position", "Title", "Duration"],
+        ReleaseField::Videos => &["URL"],
+        ReleaseField::Images => &["Type", "URL", "Width", "Height"],
+        _ => &[],
+    }
+}
+
+/// A structured field's current rows (see [`release_columns`]).
+pub fn release_rows(rec: &ReleaseRecord, field: ReleaseField) -> Vec<Vec<String>> {
+    match field {
+        ReleaseField::Artists => artists_to_rows(&rec.artists),
+        ReleaseField::Tracks => tracklist_to_rows(&rec.tracklist),
+        ReleaseField::Videos => videos_to_rows(&rec.videos),
+        ReleaseField::Images => images_to_rows(&rec.images),
+        _ => Vec::new(),
+    }
+}
+
+/// Replace a structured field from editor rows in memory, validating first; nothing is written.
+pub fn apply_release_rows(rec: &mut ReleaseRecord, field: ReleaseField, rows: &[Vec<String>]) -> Result<()> {
+    match field {
+        ReleaseField::Artists => rec.artists = rows_to_release_artists(&rec.artists, rows)?,
+        ReleaseField::Tracks => rec.tracklist = rows_to_tracklist(&rec.tracklist, rows),
+        ReleaseField::Videos => rec.videos = rows_to_videos(rows)?,
+        ReleaseField::Images => rec.images = rows_to_images(&rec.images, rows)?,
+        other => bail!("{} isn't edited as rows", other.label()),
+    }
+    Ok(())
 }
 
 /// Rows for the structured tracklist editor: `[position, title, duration]` per track.
@@ -1745,10 +1833,9 @@ pub fn rows_to_release_artists(original: &Value, rows: &[Vec<String>]) -> Result
 
 /// Save hand-edited artist credits from the structured editor.
 pub fn set_release_artists(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
-    let mut rec = rec.clone();
-    rec.artists = rows_to_release_artists(&rec.artists, rows)?;
-    rec.updated_at = Some(now_iso());
-    write_release(cfg, db, rec)
+    let mut edited = rec.clone();
+    apply_release_rows(&mut edited, ReleaseField::Artists, rows)?;
+    commit_release_edit(cfg, db, rec, edited)
 }
 
 /// Rows for the structured videos editor: one URL column (the stored/published shape is a flat
@@ -1823,26 +1910,23 @@ pub fn rows_to_images(original: &Value, rows: &[Vec<String>]) -> Result<Value> {
 
 /// Save a hand-edited source-image list from the structured editor.
 pub fn set_release_images(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
-    let mut rec = rec.clone();
-    rec.images = rows_to_images(&rec.images, rows)?;
-    rec.updated_at = Some(now_iso());
-    write_release(cfg, db, rec)
+    let mut edited = rec.clone();
+    apply_release_rows(&mut edited, ReleaseField::Images, rows)?;
+    commit_release_edit(cfg, db, rec, edited)
 }
 
 /// Save a hand-edited tracklist from the structured editor.
 pub fn set_release_tracklist(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
-    let mut rec = rec.clone();
-    rec.tracklist = rows_to_tracklist(&rec.tracklist, rows);
-    rec.updated_at = Some(now_iso());
-    write_release(cfg, db, rec)
+    let mut edited = rec.clone();
+    apply_release_rows(&mut edited, ReleaseField::Tracks, rows)?;
+    commit_release_edit(cfg, db, rec, edited)
 }
 
 /// Save a hand-edited video URL list from the structured editor.
 pub fn set_release_videos(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
-    let mut rec = rec.clone();
-    rec.videos = rows_to_videos(rows)?;
-    rec.updated_at = Some(now_iso());
-    write_release(cfg, db, rec)
+    let mut edited = rec.clone();
+    apply_release_rows(&mut edited, ReleaseField::Videos, rows)?;
+    commit_release_edit(cfg, db, rec, edited)
 }
 
 /// Set a release's service identity from user input (a pasted URL or bare ID), re-fetching the
@@ -1857,9 +1941,23 @@ pub async fn set_release_service(
     field: ReleaseField,
     input: &str,
 ) -> Result<ReleaseRecord> {
+    let mut edited = rec.clone();
+    let download_image = fetch_release_service(services, &mut edited, field, input).await?;
+    if download_image {
+        let folder = release_folder(&edited);
+        let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
+        let _ = images::download_release_hires(client, &cfg.releases_dir(), &folder, &edited.raw_data, target, None).await;
+    }
+    commit_release_edit(cfg, db, rec, edited)
+}
+
+/// Point a service identity at user input (a pasted URL or bare ID; blank clears it), fetching
+/// the full payload so the public `services{}` block stays consistent with the flat columns.
+/// Changes `rec` in memory only. Returns whether new artwork sources arrived (so the caller
+/// should download the cover).
+pub async fn fetch_release_service(services: &Services, rec: &mut ReleaseRecord, field: ReleaseField, input: &str) -> Result<bool> {
     use crate::ops::service_input;
 
-    let mut rec = rec.clone();
     let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
     let t = input.trim();
     let mut download_image = false;
@@ -1929,15 +2027,7 @@ pub async fn set_release_service(
     }
 
     rec.raw_data = Value::Object(raw);
-    rec.updated_at = Some(now_iso());
-
-    if download_image {
-        let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
-        let folder = release_folder_name(&rec.title, &id);
-        let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
-        let _ = images::download_release_hires(client, &cfg.releases_dir(), &folder, &rec.raw_data, target, None).await;
-    }
-    write_release(cfg, db, rec)
+    Ok(download_image)
 }
 
 

@@ -1,4 +1,4 @@
-import { Activity, Boxes, Database, Disc3, LayoutDashboard, Library, Monitor, Moon, PlugZap, Plus, Search, Sun, Terminal, Users } from 'lucide-react'
+import { Activity, Boxes, Database, Disc3, HeartPulse, LayoutDashboard, Library, Monitor, Moon, PlugZap, Plus, Search, Sun, Terminal, Users } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router'
 import { cn } from '@/lib/format'
@@ -19,6 +19,7 @@ const NAV: { to: string; label: string; icon: typeof Library; end?: boolean; sec
   { to: '/artists', label: 'Artists', icon: Users },
   { to: '/boxsets', label: 'Boxsets', icon: Boxes },
   { to: '/add', label: 'Add & enrich', icon: Plus, section: 'Work' },
+  { to: '/health', label: 'Data health', icon: HeartPulse },
   { to: '/jobs', label: 'Jobs', icon: Activity },
   { to: '/tools', label: 'Tools', icon: Terminal },
   { to: '/database', label: 'Database', icon: Database },

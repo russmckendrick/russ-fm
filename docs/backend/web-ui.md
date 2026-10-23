@@ -30,14 +30,27 @@ Stop it with `Ctrl-C`.
 | Database: search and list releases/artists (including ones not in collection.json), delete, backups | ✅ |
 | ⌘K palette: releases, artists, pages, actions | ✅ |
 | Jobs: live log + progress over SSE, stop, interactive prompts (match picker, Perplexity description) | ✅ |
-| Editing records, diff before save, data-health views | Phase 3 |
+| Editing every release and artist field, with a before/after preview of the published files | ✅ |
+| Data health: what's missing across the database and public/, with per-item and batch fixes | ✅ |
+| New-in-Discogs list sorted into new, already-in-library-under-another-ID (with Replace), and unmatched | ✅ |
 
 ## Pages
 
-- **Add & enrich** (`/add`): the newest Discogs releases that aren't enriched yet (not processed,
-  or processed without any Apple Music / Spotify / Last.fm match; the same list as the TUI's
-  Collection screen). Pick some and process them, or process the newest N. Releases are
-  force-refreshed and saved, and service matches are chosen in the browser. Also: add one
+- **Add & enrich** (`/add`): the newest Discogs releases that aren't enriched yet (the same
+  list as the TUI's Collection screen), in three groups:
+  - **New**: not in the database.
+  - **Already in your library under another Discogs ID**: no record with this ID, but one
+    with the same title and artist (normalised: case and punctuation ignored). Usually a
+    submission Discogs merged into the release now in the collection. The likely match
+    (added the same day) is marked; other same-titled pressings are listed too. **Replace**
+    (`ops::collection::replace_release`) processes the collection's ID, keeps the old
+    record's description if the new one has none, moves boxset members and links to the new
+    ID, backs up the database, then deletes the old record and its album folder.
+  - **In the library, but nothing matched**: processed before without any Apple Music /
+    Spotify / Last.fm match. Collapsed; select one to try matching again.
+
+  Pick some and process them, or process the newest N. Releases are force-refreshed and
+  saved, and service matches are chosen in the browser. Also: add one
   release by ID or discogs.com URL, enrich the next N un-enriched artists or one artist by
   name, and `collection --resume` (with a dry run).
 - **Boxsets** (`/boxsets`): box releases with album section headers, split into Unprocessed,
@@ -46,6 +59,19 @@ Stop it with `Ctrl-C`.
 - **Tools** (`/tools/<command>`): one form per CLI command, generated from clap (see below).
   The command line at the top takes any command as you'd type it
   (`artist "Talk Talk" --save`). **Site (pnpm)** runs the site's asset scripts.
+- **Edit tab** on release and artist pages (`?tab=edit`): every field the TUI's detail editor
+  has, as text boxes, date and list fields, service URLs, and small tables for artists,
+  tracks, videos and images (add, remove, reorder rows). **Preview changes** shows the
+  difference in each published file (the album or artist JSON and the release's
+  collection.json entry), plus notes such as a folder rename or how many release pages an
+  artist change rewrites. **Save** writes it. ↻ re-fetches one field from its source as a job.
+- **Data health** (`/health`): checks across releases (no Apple Music / Spotify / Last.fm
+  match, no description, tracklist, videos or artwork file, original year not looked up,
+  album folders without a database record) and artists (not enriched, no photo, biography,
+  Wikidata identity or Wikipedia link). Each lists up to 300 records with a Fix (the CLI
+  command for that one record) and, where a batch command exists, a fix-all. Leftover album
+  folders get a guarded **Remove folder**: refused while any record has that Discogs ID.
+  The dashboard shows the biggest gaps.
 - **Database** (`/database`): `db search` / `db list` as a table linked to library pages, delete
   (`db delete … --force`, which backs up first), and the backups folder with Back up now.
 
@@ -121,6 +147,29 @@ The TUI and the web share the collection picker (`ops::collection::new_candidate
 `process_candidates`) and the artist runner (`ops::artist::enrich_unenriched`). Both take a
 `ProgressSink` and a `MatchPicker`.
 
+### Editing with a preview
+
+The TUI detail editor's setters used to validate, change and write in one step. They're now
+split in `ops::release` / `ops::artist`, and the TUI calls them in sequence, so it behaves as
+before:
+
+- `apply_release_value` / `apply_release_rows` / `apply_artist_value` / `apply_artist_rows`
+  change a record in memory and validate.
+- `fetch_release_service` / `fetch_artist_service` look up a pasted Apple Music, Spotify,
+  Last.fm, Discogs or Wikipedia URL or ID, and report whether new artwork arrived.
+- `commit_release_edit` / `commit_artist_edit` do the writing: move the folder when the slug
+  changes (and, for artists, rename them in every release that credits them), save to the
+  database and write the JSON (artists also rewrite the release JSON that embeds them).
+
+`POST /api/{releases|artists}/{slug}/edit {edits, save}` applies the edits to a copy. With
+`save: false` it renders the published JSON before and after (`release_to_value`,
+`collection::entry_for`, `artist_to_value`) without writing anything. With `save: true` it
+downloads artwork if a service change brought new sources, commits, and regenerates
+collection.json. Each edit is `{field, text}` or `{field, rows}`. Field keys come from
+`ReleaseField::key()` / `ArtistField::key()`, and `GET …/fields` lists every field with its
+kind, value, rows and whether it can be edited or refreshed. Validation errors (a bad date,
+an unrecognised URL) answer 400 with the field name.
+
 ### Site asset scripts
 
 `POST /api/actions/site-script {script, only?, all?}` runs `pnpm run generate-colors` or
@@ -178,6 +227,12 @@ to the job.
 | POST | `/api/boxsets/{id}/single` | Flag or unflag a box as a single release (`{single}`) |
 | GET | `/api/db/rows` | `?kind=release|artist&q=&sort=&limit=`: search or list database rows |
 | GET | `/api/backups` | Files in `scrapper/backups/` |
+| GET | `/api/{releases,artists}/{slug}/fields` | Editable fields with kinds, values and rows |
+| POST | `/api/{releases,artists}/{slug}/edit` | Preview (`save: false`) or save `{edits}` |
+| POST | `/api/actions/refresh-field` | Job: re-fetch one field (`{kind, slug, field}`), interactively |
+| POST | `/api/actions/replace-release` | Job: move a library release onto the collection's ID (`{old_id, item}`) |
+| GET | `/api/health/checks` | Data-health checks with flagged records and fixes |
+| POST | `/api/orphans/{slug}/remove` | Delete an album folder that has no database record |
 | GET | `/media/{path}` | Artwork / JSON from `public/` |
 
 Errors are `{"error": "…"}` with a matching status code. Jobs of the same kind (for `run`, the
@@ -197,8 +252,10 @@ Set `SCRAPPER_URL=http://127.0.0.1:7899` to point the Vite proxy at another port
 `pnpm --dir web typecheck` to typecheck and `pnpm --dir web build` to refresh what the binary
 serves. The `scrapper-web` entry in `.claude/launch.json` runs the server for previews.
 
-The `image` and `zune-jpeg` crates are built at `opt-level = 3` in dev (see `Cargo.toml`),
-because deriving thumbnails in an unoptimised build is about 10× slower.
+The `image`, `zune-jpeg` and `serde_json` crates are built at `opt-level = 3` in dev (see
+`Cargo.toml`). Deriving thumbnails, and the whole-table reads behind health checks and
+collection.json, are several times slower unoptimised. The health checks take about 1.3s in
+a release build and about 5s in dev.
 
 The UI uses neutral light and dark themes (system by default, toggled in the sidebar) so the
 artwork carries the colour. Design tokens live in `web/src/index.css`.

@@ -42,6 +42,21 @@ pub enum FieldKind {
     RefreshOnly,
 }
 
+impl FieldKind {
+    /// Lower-case name for APIs: `text`, `int`, `date`, `csv`, `service`, `structured`, `refresh`.
+    pub fn as_str(self) -> &'static str {
+        match self {
+            FieldKind::Text => "text",
+            FieldKind::Int => "int",
+            FieldKind::DateYmd => "date",
+            FieldKind::CsvList => "csv",
+            FieldKind::Service => "service",
+            FieldKind::Structured => "structured",
+            FieldKind::RefreshOnly => "refresh",
+        }
+    }
+}
+
 /// Set (or clear, when `value` is None) one key nested under `raw_data.<service>`, creating the
 /// service object when needed — this is what the public `services{}` block is derived from.
 pub(crate) fn set_raw_service_key(raw_data: &mut Value, service: &str, key: &str, value: Option<Value>) {

@@ -7,6 +7,7 @@ import { num, plural } from '@/lib/format'
 import { useJobs, useLatestJob } from '@/lib/jobs'
 import { useOverview } from '@/lib/queries'
 import type { Count } from '@/lib/types'
+import { HealthSummary } from './Health'
 
 export function Dashboard() {
   const { data, error, isLoading } = useOverview()
@@ -63,6 +64,21 @@ export function Dashboard() {
         <Card>
           <CardHeader title="Formats" sub={`${num(library.coloured_vinyl)} on coloured vinyl`} />
           <Bars rows={library.formats.slice(0, 8)} total={library.releases} param="format" />
+        </Card>
+      </div>
+
+      <div className="mt-4 px-6">
+        <Card>
+          <CardHeader
+            title="Data health"
+            sub="What's missing, most first"
+            actions={
+              <Link to="/health" className="flex items-center gap-1 text-xs text-muted hover:text-fg">
+                All checks <ArrowRight className="size-3" />
+              </Link>
+            }
+          />
+          <HealthSummary />
         </Card>
       </div>
 

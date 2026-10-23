@@ -1,9 +1,10 @@
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
-import { Link, useParams } from 'react-router'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { Cover } from '@/components/Cover'
 import { ArtistActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
+import { RecordEditor } from '@/components/RecordEditor'
 import { ReleaseTile } from '@/components/ReleaseTile'
 import { Tabs } from '@/components/Tabs'
 import { Badge, EmptyState, ErrorState, LinkChip, Spinner } from '@/components/ui'
@@ -12,12 +13,14 @@ import { artistImageUrl, siteUrl } from '@/lib/media'
 import { useArtist } from '@/lib/queries'
 import { Hero } from './Release'
 
-type Tab = 'releases' | 'about' | 'data'
+type Tab = 'releases' | 'about' | 'edit' | 'data'
 
 export function ArtistPage() {
   const { slug = '' } = useParams()
   const { data, error, isLoading } = useArtist(slug)
-  const [tab, setTab] = useState<Tab>('releases')
+  const [params, setParams] = useSearchParams()
+  const tab = (params.get('tab') as Tab) || 'releases'
+  const setTab = (t: Tab) => setParams(t === 'releases' ? {} : { tab: t }, { replace: true })
   const [bioOpen, setBioOpen] = useState(false)
 
   if (isLoading)
@@ -88,6 +91,7 @@ export function ArtistPage() {
           tabs={[
             { value: 'releases', label: 'Releases', count: data.releases.length },
             { value: 'about', label: 'About' },
+            { value: 'edit', label: 'Edit' },
             { value: 'data', label: 'Data' },
           ]}
         />
@@ -123,6 +127,7 @@ export function ArtistPage() {
             ) : (
               <EmptyState title="No biography yet" />
             ))}
+          {tab === 'edit' && <RecordEditor kind="artist" slug={slug} />}
           {tab === 'data' && (
             <div className="grid gap-4">
               {data.record ? <JsonView title="Database record (artists table)" value={data.record} /> : <EmptyState title="Not in the database" />}

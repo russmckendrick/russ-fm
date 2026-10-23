@@ -305,6 +305,160 @@ pub async fn process_candidates(
     Ok(())
 }
 
+/// How a picker candidate relates to what's already in the database.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum CandidateState {
+    /// Not in the database, and nothing like it is.
+    New,
+    /// In the database under this Discogs ID, but no service matched it.
+    Unmatched,
+    /// Not in the database under this ID, but a release with the same title and artist is —
+    /// typically a Discogs submission that was merged into the release now in the collection.
+    Duplicate,
+}
+
+/// A library release a candidate may duplicate.
+#[derive(Clone, Debug, Serialize)]
+pub struct ExistingRelease {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    pub year: Option<i64>,
+    pub date_added: Option<String>,
+    pub slug: String,
+}
+
+#[derive(Clone, Debug, Serialize)]
+pub struct ClassifiedCandidate {
+    #[serde(flatten)]
+    pub candidate: CollectionCandidate,
+    pub state: CandidateState,
+    /// For [`CandidateState::Unmatched`]: its album folder.
+    pub slug: Option<String>,
+    /// For [`CandidateState::Duplicate`]: the likely matches, newest first.
+    pub existing: Vec<ExistingRelease>,
+}
+
+/// Lower-case letters and digits only, so "Far And Wide" matches "Far and Wide".
+fn norm(s: &str) -> String {
+    s.chars().filter(|c| c.is_alphanumeric()).flat_map(char::to_lowercase).collect()
+}
+
+/// Sort picker candidates into new, unmatched and probable duplicates (see [`CandidateState`]).
+pub fn classify_candidates(db: &Db, items: Vec<CollectionCandidate>) -> Result<Vec<ClassifiedCandidate>> {
+    let mut out = Vec::with_capacity(items.len());
+    for c in items {
+        if let Some(rec) = db.get_release_by_discogs_id(&c.release_id)? {
+            let slug = Some(crate::ops::release::release_folder(&rec));
+            out.push(ClassifiedCandidate { candidate: c, state: CandidateState::Unmatched, slug, existing: Vec::new() });
+            continue;
+        }
+        let (title, artists) = (norm(&c.title), c.artist.split(", ").map(norm).collect::<Vec<_>>());
+        let mut existing: Vec<ExistingRelease> = db
+            .search_releases(&c.title, 50)?
+            .into_iter()
+            .filter(|r| r.discogs_id.as_deref().is_some_and(|id| id != c.release_id))
+            .filter(|r| norm(&r.title) == title && r.artist_names.iter().any(|a| artists.contains(&norm(a))))
+            .map(|r| {
+                let id = r.discogs_id.unwrap_or_default();
+                ExistingRelease {
+                    slug: crate::sanitize::release_folder_name(&r.title, &id),
+                    discogs_id: id,
+                    title: r.title,
+                    artists: r.artist_names,
+                    year: r.year,
+                    date_added: r.date_added,
+                }
+            })
+            .collect();
+        existing.sort_by(|a, b| b.date_added.cmp(&a.date_added));
+        existing.truncate(4);
+        let state = if existing.is_empty() { CandidateState::New } else { CandidateState::Duplicate };
+        out.push(ClassifiedCandidate { candidate: c, state, slug: None, existing });
+    }
+    Ok(out)
+}
+
+/// Move a library release onto the Discogs ID now in the collection (after Discogs merged
+/// one into the other): process `item` (saved, matches chosen with `picker`), carry over what
+/// only the old record had (its description and boxset link), point any boxset members at the
+/// new ID, then back up the database and delete the old record and its public folder.
+pub async fn replace_release(
+    cfg: &Config,
+    db: &Db,
+    old_id: &str,
+    item: &CollectionCandidate,
+    picker: &MatchPicker,
+    sink: &ProgressSink<'_>,
+) -> Result<()> {
+    use crate::ops::release::{commit_release_edit, release_folder, ReleaseField};
+
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs not configured — set discogs.access_token in config.json");
+    }
+    if old_id == item.release_id {
+        bail!("that's the same release");
+    }
+    let Some(old) = db.get_release_by_discogs_id(old_id)? else { bail!("release {old_id} is no longer in the database") };
+    let old_folder = release_folder(&old);
+    let new_id = item.release_id.as_str();
+    sink.log(format!("▶ Replacing [{old_id}] {} with [{new_id}] from your collection", old.title));
+
+    let parent = old.raw_data.get("boxset").and_then(|b| b.get("parent_discogs_id")).and_then(Value::as_str).map(String::from);
+    let client = image_client();
+    let (rec, _) = process_release(cfg, &services, db, &client, new_id, true, None, picker, item.date_added.as_deref(), parent.as_deref(), false).await?;
+    db.record_processed(&rec.id, new_id, item.instance_id.as_deref(), item.date_added.as_deref())?;
+    sink.log(format!("  ✓ processed [{new_id}] {}", rec.title));
+
+    // Keep the description if the new record didn't get one (it may have cost a Perplexity call).
+    let mut edited = rec.clone();
+    if !ReleaseField::Description.present(&edited) {
+        if let Some(p) = old.raw_data.get("perplexity").filter(|p| p.get("description").is_some()) {
+            if let Some(raw) = edited.raw_data.as_object_mut() {
+                raw.insert("perplexity".into(), p.clone());
+                sink.log("  ✓ kept the old record's description");
+            }
+        }
+    }
+    if edited.raw_data != rec.raw_data {
+        commit_release_edit(cfg, db, &rec, edited)?;
+    }
+
+    // Boxset members of the old ID now belong to the new one.
+    let mut relinked = 0;
+    for mut r in db.get_all_releases()? {
+        let points_here = r.raw_data.get("boxset").and_then(|b| b.get("parent_discogs_id")).and_then(Value::as_str) == Some(old_id);
+        if points_here {
+            let before = r.clone();
+            r.raw_data["boxset"]["parent_discogs_id"] = Value::String(new_id.to_string());
+            commit_release_edit(cfg, db, &before, r)?;
+            relinked += 1;
+        }
+    }
+    if relinked > 0 {
+        sink.log(format!("  ✓ moved {relinked} boxset member(s) to the new ID"));
+    }
+
+    let backups = cfg.base_dir.join("backups");
+    std::fs::create_dir_all(&backups)?;
+    let backup = backups.join(format!("backup_before_replace_{}.db", crate::util::timestamp()));
+    db.backup_database(&backup)?;
+    sink.log(format!("  ✓ backed up the database to {}", backup.display()));
+    db.delete_release(old_id)?;
+    let new_folder = release_folder(&rec);
+    let dir = cfg.releases_dir().join(&old_folder);
+    if old_folder != new_folder && dir.is_dir() {
+        std::fs::remove_dir_all(&dir)?;
+    }
+    sink.log(format!("  ✓ removed [{old_id}] and public/album/{old_folder}/"));
+
+    let n = crate::output::collection::regenerate(cfg, db)?;
+    sink.log(format!("✓ collection.json refreshed ({n} entries)"));
+    Ok(())
+}
+
 /// Service tick that names the matched item, so auto- and picked matches are visible in the log.
 fn svc_mark(found: bool, name: Option<&str>) -> String {
     match (found, name) {
@@ -343,6 +497,13 @@ fn yn(b: bool) -> &'static str {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn norm_ignores_case_and_punctuation() {
+        assert_eq!(norm("Far And Wide"), norm("Far and Wide"));
+        assert_eq!(norm("(The Best Of) NewOrder"), "thebestofneworder");
+        assert_ne!(norm("(The Best Of) NewOrder"), norm("(The Rest Of) NewOrder"));
+    }
 
     #[test]
     fn candidate_from_collection_entry() {

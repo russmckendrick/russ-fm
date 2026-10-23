@@ -12,6 +12,7 @@ import { ArtistsPage } from './pages/Artists'
 import { BoxsetsPage } from './pages/Boxsets'
 import { Dashboard } from './pages/Dashboard'
 import { DatabasePage } from './pages/Database'
+import { HealthPage } from './pages/Health'
 import { JobsPage } from './pages/Jobs'
 import { LibraryPage } from './pages/Library'
 import { ReleasePage } from './pages/Release'
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       { path: '/boxsets', element: <BoxsetsPage /> },
       { path: '/tools/*', element: <ToolsPage /> },
       { path: '/database', element: <DatabasePage /> },
+      { path: '/health', element: <HealthPage /> },
       { path: '*', element: <EmptyState title="Page not found" /> },
     ],
   },

@@ -1,9 +1,10 @@
 import { ArrowLeft, Check, ExternalLink, Minus } from 'lucide-react'
-import { useState, type ReactNode } from 'react'
-import { Link, useParams } from 'react-router'
+import type { ReactNode } from 'react'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { Cover } from '@/components/Cover'
 import { ReleaseActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
+import { RecordEditor } from '@/components/RecordEditor'
 import { Tabs } from '@/components/Tabs'
 import { Badge, EmptyState, ErrorState, LinkChip, Spinner } from '@/components/ui'
 import { cn, date, num } from '@/lib/format'
@@ -11,12 +12,14 @@ import { albumImageUrl, siteUrl } from '@/lib/media'
 import { useRelease } from '@/lib/queries'
 import type { AlbumJson, LibraryItem, Track } from '@/lib/types'
 
-type Tab = 'overview' | 'tracks' | 'videos' | 'data'
+type Tab = 'overview' | 'tracks' | 'videos' | 'edit' | 'data'
 
 export function ReleasePage() {
   const { slug = '' } = useParams()
   const { data, error, isLoading } = useRelease(slug)
-  const [tab, setTab] = useState<Tab>('overview')
+  const [params, setParams] = useSearchParams()
+  const tab = (params.get('tab') as Tab) || 'overview'
+  const setTab = (t: Tab) => setParams(t === 'overview' ? {} : { tab: t }, { replace: true })
 
   if (isLoading) return <Centered><Spinner /></Centered>
   if (error) return <ErrorState error={error} />
@@ -97,6 +100,7 @@ export function ReleasePage() {
             { value: 'overview', label: 'Overview' },
             { value: 'tracks', label: 'Tracklist', count: countTracks(tracks) },
             { value: 'videos', label: 'Videos', count: videos.length },
+            { value: 'edit', label: 'Edit' },
             { value: 'data', label: 'Data' },
           ]}
         />
@@ -104,6 +108,7 @@ export function ReleasePage() {
           {tab === 'overview' && <Overview pub={pub} item={item} description={description} hasRecord={data.record !== null} tracks={tracks.length} videos={videos.length} />}
           {tab === 'tracks' && <Tracklist tracks={tracks} />}
           {tab === 'videos' && <Videos urls={videos} />}
+          {tab === 'edit' && <RecordEditor kind="release" slug={slug} />}
           {tab === 'data' && (
             <div className="grid gap-4">
               {data.record ? <JsonView title="Database record (releases table)" value={data.record} /> : <EmptyState title="Not in the database" />}

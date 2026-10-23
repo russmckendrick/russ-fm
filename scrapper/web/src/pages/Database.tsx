@@ -143,7 +143,7 @@ function Row({ kind, row, onDelete }: { kind: Kind; row: DbRow; onDelete: (id: s
             </Button>
           </span>
         ) : (
-          <Button size="sm" variant="ghost" onClick={() => setConfirm(true)} title={`Delete this ${kind} (backs up the database first)`}>
+          <Button size="sm" variant="ghost" onClick={() => setConfirm(true)} title={`Delete this ${kind} from the database (backs it up first). Its public folder stays — Data health lists leftovers.`}>
             <Trash2 className="size-3.5" />
           </Button>
         ))}

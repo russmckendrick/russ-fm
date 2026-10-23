@@ -48,7 +48,7 @@ impl From<anyhow::Error> for ApiError {
 
 /// Raised inside a [`blocking`] body to answer 404.
 #[derive(Debug)]
-struct NotFound(String);
+pub(crate) struct NotFound(pub(crate) String);
 
 impl std::fmt::Display for NotFound {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -352,10 +352,31 @@ pub async fn run_command(State(s): Shared, Json(body): Json<RunBody>) -> ApiResu
 
 // ── Collection: pick new releases, enrich artists ───────────────────────────────────────────
 
-/// Releases in the Discogs collection that aren't enriched yet (newest first, up to 50).
+/// Releases in the Discogs collection that aren't enriched yet (newest first, up to 50), each
+/// marked new, unmatched (in the database without matches) or a probable duplicate of a
+/// release stored under another Discogs ID.
 pub async fn new_in_collection(State(s): Shared) -> ApiResult {
     let items = crate::ops::collection::new_candidates(&s.cfg, &s.db).await?;
-    Ok(Json(json!({ "items": items })))
+    let st = s.clone();
+    blocking(move || Ok(Json(json!({ "items": crate::ops::collection::classify_candidates(&st.db, items)? })))).await
+}
+
+#[derive(Deserialize)]
+pub struct ReplaceBody {
+    old_id: String,
+    item: crate::ops::collection::CollectionCandidate,
+}
+
+/// Move a library release onto the Discogs ID now in the collection.
+pub async fn replace_release(State(s): Shared, Json(body): Json<ReplaceBody>) -> ApiResult {
+    let (cfg, db) = (s.cfg.clone(), s.db.clone());
+    let title = format!("Replace [{}] with [{}] {}", body.old_id, body.item.release_id, body.item.title);
+    started(s.jobs.spawn("collection", title, |ctx| async move {
+        let (log, progress) = ctx.sink_fns();
+        let sink = ProgressSink { log: &log, progress: &progress };
+        crate::ops::collection::replace_release(&cfg, &db, &body.old_id, &body.item, &ctx.picker(), &sink).await?;
+        Ok(None)
+    }))
 }
 
 #[derive(Deserialize)]
@@ -601,4 +622,111 @@ async fn run_process(ctx: &super::jobs::JobCtx, program: &str, args: &[String], 
         anyhow::bail!("{program} exited with {status}");
     }
     Ok(None)
+}
+
+// ── Editing (with preview) and refreshing single fields ─────────────────────────────────────
+
+/// A release's editable fields, values and rows (the TUI detail editor's list).
+pub async fn release_fields(State(s): Shared, Path(slug): Path<String>) -> ApiResult {
+    check_slug(&slug)?;
+    let st = s.clone();
+    blocking(move || Ok(Json(super::edit::release_fields(&super::edit::release_record(&st, &slug)?)))).await
+}
+
+pub async fn artist_fields(State(s): Shared, Path(slug): Path<String>) -> ApiResult {
+    check_slug(&slug)?;
+    let st = s.clone();
+    blocking(move || Ok(Json(super::edit::artist_fields(&super::edit::artist_record(&st, &slug)?)))).await
+}
+
+/// Preview (`save: false`) or save edits. A preview returns each published file before and
+/// after; validation errors answer 400.
+pub async fn edit_release(State(s): Shared, Path(slug): Path<String>, Json(body): Json<super::edit::EditBody>) -> ApiResult {
+    check_slug(&slug)?;
+    super::edit::edit_release(s.clone(), slug, body).await.map(Json).map_err(edit_error)
+}
+
+pub async fn edit_artist(State(s): Shared, Path(slug): Path<String>, Json(body): Json<super::edit::EditBody>) -> ApiResult {
+    check_slug(&slug)?;
+    super::edit::edit_artist(s.clone(), slug, body).await.map(Json).map_err(edit_error)
+}
+
+/// Edit failures are the user's input (bad date, unknown URL) unless the record is missing.
+fn edit_error(e: anyhow::Error) -> ApiError {
+    if e.downcast_ref::<NotFound>().is_some() {
+        ApiError::not_found(e.to_string())
+    } else {
+        ApiError::bad_request(format!("{e:#}"))
+    }
+}
+
+#[derive(Deserialize)]
+pub struct RefreshBody {
+    /// `release` or `artist`.
+    kind: String,
+    slug: String,
+    field: String,
+}
+
+/// Re-fetch one field from its source (the TUI detail editor's `r`), with match-picking in the
+/// browser, then regenerate collection.json.
+pub async fn refresh_field(State(s): Shared, Json(body): Json<RefreshBody>) -> ApiResult {
+    check_slug(&body.slug)?;
+    let st = s.clone();
+    match body.kind.as_str() {
+        "release" => {
+            let field = crate::ops::release::ReleaseField::from_key(&body.field)
+                .filter(|f| f.refreshable())
+                .ok_or_else(|| ApiError::bad_request(format!("{:?} can't be refreshed", body.field)))?;
+            let slug = body.slug.clone();
+            let rec = blocking(move || super::edit::release_record(&st, &slug)).await?;
+            let (cfg, db) = (s.cfg.clone(), s.db.clone());
+            started(s.jobs.spawn("refresh", format!("Refresh {} · {}", field.label(), rec.title), |ctx| async move {
+                let services = Services::new(&cfg);
+                let client = crate::ops::release::image_client();
+                ctx.log(format!("▶ {} — refreshing {}…", rec.title, field.label()));
+                let (rec, found) =
+                    crate::ops::release::refresh_release_field(&cfg, &services, &db, &client, &rec, field, &ctx.picker()).await?;
+                ctx.log(if found { format!("✓ {} → {}", field.label(), field.get(&rec)) } else { format!("– no data for {}", field.label()) });
+                let n = tokio::task::spawn_blocking(move || collection::regenerate(&cfg, &db)).await??;
+                ctx.log(format!("✓ collection.json refreshed ({n} entries)"));
+                Ok(None)
+            }))
+        }
+        "artist" => {
+            let field = crate::ops::artist::ArtistField::from_key(&body.field)
+                .filter(|f| f.refreshable())
+                .ok_or_else(|| ApiError::bad_request(format!("{:?} can't be refreshed", body.field)))?;
+            let slug = body.slug.clone();
+            let rec = blocking(move || super::edit::artist_record(&st, &slug)).await?;
+            let (cfg, db) = (s.cfg.clone(), s.db.clone());
+            started(s.jobs.spawn("refresh", format!("Refresh {} · {}", field.label(), rec.name), |ctx| async move {
+                let services = Services::new(&cfg);
+                let client = crate::ops::release::image_client();
+                ctx.log(format!("▶ {} — refreshing {}…", rec.name, field.label()));
+                let (rec, found) =
+                    crate::ops::artist::refresh_artist_field(&cfg, &services, &db, &client, &rec, field, &ctx.picker()).await?;
+                ctx.log(if found { format!("✓ {} → {}", field.label(), field.get(&rec)) } else { format!("– no data for {}", field.label()) });
+                let n = tokio::task::spawn_blocking(move || collection::regenerate(&cfg, &db)).await??;
+                ctx.log(format!("✓ collection.json refreshed ({n} entries)"));
+                Ok(None)
+            }))
+        }
+        other => Err(ApiError::bad_request(format!("unknown kind {other:?}"))),
+    }
+}
+
+// ── Data health ─────────────────────────────────────────────────────────────────────────────
+
+pub async fn health_checks(State(s): Shared) -> ApiResult {
+    let st = s.clone();
+    blocking(move || Ok(Json(json!({ "checks": super::health::run(&st)? })))).await
+}
+
+/// Delete a leftover album folder (one whose release isn't in the database).
+pub async fn remove_orphan_folder(State(s): Shared, Path(slug): Path<String>) -> ApiResult {
+    check_slug(&slug)?;
+    let st = s.clone();
+    let result = tokio::task::spawn_blocking(move || super::health::remove_orphan_folder(&st, &slug)).await.map_err(|e| anyhow::anyhow!(e))?;
+    result.map(|_| Json(json!({ "ok": true }))).map_err(edit_error)
 }

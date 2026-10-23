@@ -79,6 +79,11 @@ opt-level = 3
 [profile.dev.package.zune-jpeg]
 opt-level = 3
 
+# …and the web UI's whole-table reads (health checks, collection.json) parse every record's
+# raw_data JSON, which is several times slower unoptimised.
+[profile.dev.package.serde_json]
+opt-level = 3
+
 [profile.release]
 opt-level = 3
 lto = "thin"

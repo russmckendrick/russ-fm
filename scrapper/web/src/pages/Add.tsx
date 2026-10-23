@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { Disc3, RefreshCw, Sparkles, Users } from 'lucide-react'
+import { ChevronRight, Disc3, RefreshCw, Sparkles, Users } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { commandLine } from '@/components/CommandForm'
@@ -7,7 +7,7 @@ import { JobInline, useRunner } from '@/components/JobInline'
 import { Badge, Button, Card, CardHeader, EmptyState, Input, PageHeader, Select, Spinner } from '@/components/ui'
 import { api, keys } from '@/lib/api'
 import { ago, cn, date } from '@/lib/format'
-import type { CollectionCandidate } from '@/lib/types'
+import type { ClassifiedCandidate } from '@/lib/types'
 
 const PREFER = ['', 'apple-music', 'spotify', 'theaudiodb', 'discogs', 'v1']
 
@@ -25,7 +25,8 @@ export function AddPage() {
   )
 }
 
-/** The TUI Collection screen: new releases in Discogs, pick and process. */
+/** The TUI Collection screen: new releases in Discogs, pick and process — sorted into new
+ * ones, ones already in the library under another Discogs ID, and ones stored without matches. */
 function NewInDiscogs() {
   const { data, error, isFetching, refetch, dataUpdatedAt } = useQuery({
     queryKey: keys.newInCollection,
@@ -37,6 +38,9 @@ function NewInDiscogs() {
   const [newest, setNewest] = useState('5')
   const { jobId, start } = useRunner()
   const items = data ?? []
+  const fresh = items.filter((i) => i.state === 'new')
+  const dupes = items.filter((i) => i.state === 'duplicate')
+  const unmatched = items.filter((i) => i.state === 'unmatched')
   const toggle = (id: string) =>
     setPicked((p) => {
       const n = new Set(p)
@@ -45,12 +49,13 @@ function NewInDiscogs() {
       return n
     })
   const chosen = items.filter((i) => picked.has(i.release_id))
+  const allFresh = fresh.length > 0 && fresh.every((i) => picked.has(i.release_id))
 
   return (
     <Card>
       <CardHeader
         title="New in your Discogs collection"
-        sub={`The newest releases that aren’t enriched yet: not processed, or processed without any service match${data ? ` · checked ${ago(new Date(dataUpdatedAt).toISOString())}` : ''}`}
+        sub={`The newest releases that aren’t enriched yet${data ? ` · checked ${ago(new Date(dataUpdatedAt).toISOString())}` : ''}`}
         actions={
           <Button size="sm" variant="ghost" onClick={() => void refetch()} busy={isFetching} title="Check Discogs again">
             {!isFetching && <RefreshCw className="size-3" />} Refresh
@@ -64,28 +69,56 @@ function NewInDiscogs() {
           <Spinner /> Checking Discogs…
         </div>
       ) : items.length === 0 ? (
-        <EmptyState icon={<Disc3 className="size-6" />} title="All caught up" body="Your newest Discogs releases are all enriched." />
+        <EmptyState icon={<Disc3 className="size-6" />} title="All caught up" body="Your newest Discogs releases are all in the library and enriched." />
       ) : (
-        <>
-          <div className="flex items-center gap-3 border-b border-line px-4 py-2 text-xs text-muted">
-            <input
-              type="checkbox"
-              aria-label="Select all"
-              checked={picked.size === items.length}
-              ref={(el) => {
-                if (el) el.indeterminate = picked.size > 0 && picked.size < items.length
-              }}
-              onChange={() => setPicked(picked.size === items.length ? new Set() : new Set(items.map((i) => i.release_id)))}
-              className="size-3.5 accent-[var(--accent)]"
-            />
-            <span>{items.length} to process</span>
-          </div>
-          <ul className="max-h-96 divide-y divide-line overflow-y-auto">
-            {items.map((c) => (
+        <div className="max-h-[32rem] overflow-y-auto">
+          <Section
+            title="New"
+            count={fresh.length}
+            hint="Not in the library yet."
+            lead={
+              fresh.length > 0 && (
+                <input
+                  type="checkbox"
+                  aria-label="Select all new"
+                  checked={allFresh}
+                  onChange={() =>
+                    setPicked((p) => {
+                      const n = new Set(p)
+                      for (const i of fresh) if (allFresh) n.delete(i.release_id)
+                      else n.add(i.release_id)
+                      return n
+                    })
+                  }
+                  className="size-3.5 accent-[var(--accent)]"
+                />
+              )
+            }
+          >
+            {fresh.map((c) => (
               <CandidateRow key={c.release_id} c={c} checked={picked.has(c.release_id)} onToggle={() => toggle(c.release_id)} />
             ))}
-          </ul>
-        </>
+          </Section>
+          <Section
+            title="Already in your library under another Discogs ID"
+            count={dupes.length}
+            hint="Usually a submission Discogs merged into the release now in your collection. Replace moves the library copy onto the collection’s ID."
+          >
+            {dupes.map((c) => (
+              <DuplicateRow key={c.release_id} c={c} checked={picked.has(c.release_id)} onToggle={() => toggle(c.release_id)} />
+            ))}
+          </Section>
+          <Section
+            title="In the library, but nothing matched"
+            count={unmatched.length}
+            hint="Processed before without an Apple Music, Spotify or Last.fm match. Select to try matching again."
+            collapsed
+          >
+            {unmatched.map((c) => (
+              <CandidateRow key={c.release_id} c={c} checked={picked.has(c.release_id)} onToggle={() => toggle(c.release_id)} inLibrary />
+            ))}
+          </Section>
+        </div>
       )}
       <div className="flex flex-wrap items-center gap-2 border-t border-line px-4 py-3">
         <Button variant="primary" disabled={chosen.length === 0} onClick={() => void start('process-releases', { items: chosen })}>
@@ -105,7 +138,50 @@ function NewInDiscogs() {
   )
 }
 
-function CandidateRow({ c, checked, onToggle }: { c: CollectionCandidate; checked: boolean; onToggle: () => void }) {
+function Section({
+  title,
+  count,
+  hint,
+  lead,
+  collapsed,
+  children,
+}: {
+  title: string
+  count: number
+  hint: string
+  lead?: ReactNode
+  collapsed?: boolean
+  children: ReactNode
+}) {
+  const [open, setOpen] = useState(!collapsed)
+  if (count === 0) return null
+  return (
+    <section className="border-b border-line last:border-b-0">
+      <div className="sticky top-0 z-[1] flex items-center gap-3 bg-panel-2/90 px-4 py-2 backdrop-blur">
+        {lead}
+        <button onClick={() => setOpen((o) => !o)} className="flex min-w-0 flex-1 items-center gap-2 text-left" aria-expanded={open}>
+          <ChevronRight className={cn('size-3.5 shrink-0 text-faint transition-transform', open && 'rotate-90')} />
+          <span className="text-xs font-medium">{title}</span>
+          <Badge>{count}</Badge>
+          <span className="hidden truncate text-xs text-faint md:inline">{hint}</span>
+        </button>
+      </div>
+      {open && <ul className="divide-y divide-line">{children}</ul>}
+    </section>
+  )
+}
+
+function CandidateRow({
+  c,
+  checked,
+  onToggle,
+  inLibrary,
+}: {
+  c: ClassifiedCandidate
+  checked: boolean
+  onToggle: () => void
+  inLibrary?: boolean
+}) {
   return (
     <li>
       <label className={cn('flex cursor-pointer items-center gap-3 px-4 py-2 text-[13px]', checked ? 'bg-accent-soft/40' : 'hover:bg-hover')}>
@@ -117,6 +193,15 @@ function CandidateRow({ c, checked, onToggle }: { c: CollectionCandidate; checke
         <span className="hidden truncate text-xs text-faint sm:block sm:max-w-48">{c.format}</span>
         <span className="w-10 text-right text-xs text-faint tabular-nums">{c.year ?? ''}</span>
         <span className="hidden w-24 text-right text-xs text-faint tabular-nums md:block">{date(c.date_added)}</span>
+        {inLibrary && c.slug ? (
+          <Link
+            to={`/release/${c.slug}`}
+            onClick={(e) => e.stopPropagation()}
+            className="text-xs text-muted hover:text-accent"
+          >
+            Open
+          </Link>
+        ) : null}
         <a
           href={`https://www.discogs.com/release/${c.release_id}`}
           target="_blank"
@@ -127,6 +212,74 @@ function CandidateRow({ c, checked, onToggle }: { c: CollectionCandidate; checke
           {c.release_id}
         </a>
       </label>
+    </li>
+  )
+}
+
+const sameDay = (a: string | null, b: string | null) => Boolean(a && b && a.slice(0, 10) === b.slice(0, 10))
+
+function DuplicateRow({ c, checked, onToggle }: { c: ClassifiedCandidate; checked: boolean; onToggle: () => void }) {
+  const [confirm, setConfirm] = useState<string | null>(null)
+  const { jobId, start } = useRunner()
+  const [likely, ...others] = c.existing
+  const item = { ...c, state: undefined, slug: undefined, existing: undefined }
+  const target = c.existing.find((e) => e.discogs_id === confirm)
+
+  return (
+    <li className="space-y-2 px-4 py-2.5">
+      <div className="flex items-center gap-3 text-[13px]">
+        <input type="checkbox" checked={checked} onChange={onToggle} className="size-3.5 accent-[var(--accent)]" title="Process as a separate release instead" />
+        <span className="min-w-0 flex-1">
+          <span className="block truncate font-medium">{c.title}</span>
+          <span className="block truncate text-xs text-muted">
+            {c.artist} · {c.format}
+          </span>
+        </span>
+        <span className="hidden w-24 text-right text-xs text-faint tabular-nums md:block">{date(c.date_added)}</span>
+        <a href={`https://www.discogs.com/release/${c.release_id}`} target="_blank" rel="noreferrer" className="font-mono text-[11px] text-faint hover:text-accent">
+          {c.release_id}
+        </a>
+      </div>
+      <ul className="ml-6 space-y-1">
+        {[likely, ...others].map((e, i) => (
+          <li key={e.discogs_id} className="flex flex-wrap items-center gap-2 rounded-md bg-panel-2/60 px-2.5 py-1.5 text-xs">
+            {i === 0 && (sameDay(e.date_added, c.date_added) || others.length === 0) ? <Badge tone="warn">Likely</Badge> : <Badge>Other pressing?</Badge>}
+            <Link to={`/release/${e.slug}`} className="min-w-0 flex-1 truncate hover:underline">
+              <span className="font-medium">{e.title}</span> <span className="text-muted">· {e.artists.join(', ')}</span>{' '}
+              <span className="text-faint">
+                · [{e.discogs_id}] · added {date(e.date_added)}
+              </span>
+            </Link>
+            {confirm === e.discogs_id ? null : (
+              <Button size="sm" variant={i === 0 ? 'secondary' : 'ghost'} onClick={() => setConfirm(e.discogs_id)}>
+                Replace with {c.release_id}
+              </Button>
+            )}
+          </li>
+        ))}
+      </ul>
+      {target && (
+        <div className="ml-6 flex flex-wrap items-center gap-2 rounded-md border border-warn/40 bg-warn/5 px-3 py-2 text-xs">
+          <span className="min-w-0 flex-1">
+            Process <strong>[{c.release_id}]</strong> and save it, keep the old record’s description and boxset links, then delete{' '}
+            <strong>[{target.discogs_id}]</strong> and <code className="font-mono">public/album/{target.slug}/</code>. The database is backed up first.
+          </span>
+          <Button size="sm" variant="ghost" onClick={() => setConfirm(null)}>
+            Cancel
+          </Button>
+          <Button
+            size="sm"
+            variant="primary"
+            onClick={() => {
+              setConfirm(null)
+              void start('replace-release', { old_id: target.discogs_id, item })
+            }}
+          >
+            Replace
+          </Button>
+        </div>
+      )}
+      <JobInline jobId={jobId} className="ml-6" />
     </li>
   )
 }
