@@ -1,7 +1,7 @@
 # scrapper
 
-A cohesive Rust music-collection enrichment tool that runs as an interactive **TUI** by default
-and a **headless CLI** for automation. It replaced the original Python implementation, reuses the
+A cohesive Rust music-collection enrichment tool that runs as a local **web UI** by default,
+an interactive **TUI** (`--tui`) and a **headless CLI** for automation. It replaced the original Python implementation, reuses the
 same data assets verbatim, and preserves the static data contract the React frontend in `public/`
 depends on.
 
@@ -13,8 +13,9 @@ of that into one executable with a single, consistent interface.
 
 ## Design
 
-- **One binary, two faces.** No arguments → launches the TUI. A subcommand → runs that command
-  headlessly (`scrapper collection --resume`) for cron/CI.
+- **One binary, three faces.** No arguments → serves the web UI and opens the browser
+  ([docs](../docs/backend/web-ui.md)); `--tui` → the terminal UI. A subcommand → runs that
+  command headlessly (`scrapper collection --resume`) for cron/CI.
 - **Reuse, don't re-fetch.** The 358MB `collection_cache.db`, `discogs_cache/`, `config.json`,
   `album_matching_filters.json`, and `secrets/` are copied in as-is. The SQLite schema is
   unchanged from the Python tool.
@@ -33,7 +34,7 @@ of that into one executable with a single, consistent interface.
 
 ```
 src/
-  main.rs        Entry point: TUI when bare, CLI dispatch otherwise
+  main.rs        Entry point: web UI when bare (--tui for the TUI), CLI dispatch otherwise
   config.rs      config.json + env-var overrides + secrets resolution
   db.rs          rusqlite/r2d2 layer over collection_cache.db (schema unchanged)
   sanitize.rs    Folder-name sanitizer (verified port) + filename helpers
@@ -45,6 +46,7 @@ src/
                  TheAudioDB, Perplexity) with rate limiting
   output/        JSON writer, image manager, collection generator
   tui/           ratatui app, screens, detail views, modals, runners
+  web/           axum web UI server: API, jobs + SSE, artwork (frontend in ../web/)
 tests/
   sanitizer_corpus.rs   Gate: every existing public/ folder must be reproducible
   json_fidelity.rs      Gate: regenerated JSON matches public/ semantically
@@ -53,7 +55,8 @@ tests/
 ## Commands
 
 ```
-scrapper                       # launch the TUI
+scrapper                       # launch the web UI (opens the browser)
+scrapper --tui                 # launch the TUI
 scrapper status                # database + processing status
 scrapper db search <release|artist> <query>
 scrapper db list <releases|artists> [--limit N] [--sort date_added|title|year|name]
@@ -149,7 +152,7 @@ All commands and the interactive TUI are implemented.
 
 ### TUI
 
-Running `scrapper` with no arguments launches the interactive TUI: a home menu into a
+Running `scrapper --tui` launches the interactive TUI: a home menu into a
 **Dashboard** (DB + artist-enrichment stats with gauges), searchable **Releases** and **Artists**
 browsers (with `✓`/`·` enrichment badges and Enter-to-open **detail** drill-downs), a **Boxsets**
 browser, live **service probes**, a **Collection** runner, and an **Enrich artists** runner. Both runners process a

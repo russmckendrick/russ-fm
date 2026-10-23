@@ -71,7 +71,7 @@ flowchart TB
 
 ### Backend
 - **Language**: Rust
-- **Interface**: TUI/CLI binary (`scrapper`)
+- **Interface**: `scrapper` binary: web UI (default), TUI (`--tui`) and CLI
 - **Database**: SQLite
 - **Install**: `cd scrapper && ./install.sh` (installs to `~/.cargo/bin`, runs from any directory)
 
@@ -155,7 +155,7 @@ russ-fm/
 │   ├── services/                 # API services
 │   ├── types/                    # TypeScript definitions
 │   └── config/                   # App configuration
-├── scrapper/                     # Rust data collection (TUI/CLI binary)
+├── scrapper/                     # Rust data collection (web UI/TUI/CLI binary)
 │   ├── src/                      # Rust source
 │   ├── install.sh                # Build & install to ~/.cargo/bin
 │   └── Cargo.toml                # Crate manifest

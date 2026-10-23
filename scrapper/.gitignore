@@ -14,3 +14,7 @@
 /backups/
 *.db-journal
 backup_*.db
+# Web UI: resized artwork cache, and the built app (embedded at compile time)
+/.cache/
+/web/dist/
+/web/node_modules/

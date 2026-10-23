@@ -31,7 +31,7 @@ pub enum OutputFormat {
 #[derive(Debug, Parser)]
 #[command(
     name = "scrapper",
-    about = "Music collection enrichment — TUI by default, CLI subcommands for automation",
+    about = "Music collection enrichment — web UI by default (--tui for the terminal UI), CLI subcommands for automation",
     version
 )]
 pub struct Cli {
@@ -42,6 +42,18 @@ pub struct Cli {
     /// Log level: DEBUG, INFO, WARNING, ERROR.
     #[arg(long, global = true, default_value = "INFO")]
     pub log_level: String,
+
+    /// Open the terminal UI instead of the web interface (bare invocation only).
+    #[arg(long)]
+    pub tui: bool,
+
+    /// Port for the web interface; the next free port is used if it is taken.
+    #[arg(long, default_value_t = crate::web::DEFAULT_PORT)]
+    pub port: u16,
+
+    /// Start the web interface without opening a browser.
+    #[arg(long)]
+    pub no_open: bool,
 
     #[command(subcommand)]
     pub command: Option<Command>,
@@ -450,7 +462,7 @@ impl Cli {
     /// suppressed to avoid corrupting the alternate screen).
     pub fn launches_tui(&self) -> bool {
         match &self.command {
-            None => true,
+            None => self.tui,
             Some(Command::Collection(a)) => a.interactive,
             _ => false,
         }

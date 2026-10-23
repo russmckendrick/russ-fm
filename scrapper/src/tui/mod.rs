@@ -1,4 +1,4 @@
-//! Interactive ratatui TUI — the bare-invocation experience. Wraps the same ops the CLI uses:
+//! Interactive ratatui TUI — `scrapper --tui` (bare `scrapper` opens the web UI instead). Wraps the same ops the CLI uses:
 //! browse releases/artists (with drill-down detail), probe services, run a live resume-aware
 //! collection pass, and enrich artists (batch or one at a time) with interactive match-picking.
 //!

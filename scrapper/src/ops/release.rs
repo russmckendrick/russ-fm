@@ -17,7 +17,7 @@ use crate::util::now_iso;
 use crate::Config;
 use tokio::sync::{mpsc::UnboundedSender, oneshot};
 
-/// Requests sent from the enrichment pipeline to an interactive UI (the TUI).
+/// Requests sent from the enrichment pipeline to an interactive UI (the TUI, or a web UI job).
 pub enum UiRequest {
     Pick(PickRequest),
     Describe(DescribeRequest),
@@ -60,7 +60,8 @@ pub enum MatchPicker {
     First,
     /// Prompt on the terminal via dialoguer (CLI `--interactive`).
     Cli,
-    /// Ask the TUI to show a modal picker and await the reply.
+    /// Ask an interactive UI to show a picker and await the reply: the TUI's modal, or a
+    /// prompt in the web UI (see `web::jobs::JobCtx::picker`).
     Tui(UnboundedSender<UiRequest>),
 }
 
