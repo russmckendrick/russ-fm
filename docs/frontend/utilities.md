@@ -513,7 +513,7 @@ pinch off and rejoin, and the pour sloshes a few degrees back and forth on top o
 held still under `prefers-reduced-motion`), **sparkle** (fine silver flecks over the colour, black when none is
 named: sparse specks made with an SVG noise filter, kept thin so the disc's colour stays the main
 thing. Faint flecks at under half strength give a shimmer, about 0.2% of the disc, and a rarer
-scatter of bright glints catches the eye, so it reads as glitter and not a starfield), **split** (two halves), **smoke** (dark wisps: marble's clouds and streaks in faint black, bent harder and blurred more, so they drift rather than vein; an SVG),
+scatter of bright glints catches the eye, so it reads as glitter and not a starfield), **split** (two halves), **smoke** (dark wisps: marble's clouds and streaks in faint black, bent harder and blurred more, so they drift rather than vein; an SVG), **cloud** (`Pink Cloud`: the colour lifted 35% toward white, with faint white puffs drifting through it, clusters of circles bent by slow noise and blurred into fluff; a bare `Cloud` is pale grey, and `Cloudy` is still clear glass),
 **rainbow**, **flame** (made up: splatter in flame colours, fiery red-orange with orange and yellow
 streaks, or those streaks over whatever colour is named, so `Yellow Flame` is yellow with flame
 streaks; words `flame`, `flaming`, `flames`, `flamed`) and a metallic sheen for gold / silver / copper /

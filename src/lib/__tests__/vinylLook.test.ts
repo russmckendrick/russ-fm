@@ -129,6 +129,19 @@ describe("vinylLook", () => {
     expect(isMarble(vinylLook("Red / Blue")?.pattern)).toBe(true);
   });
 
+  it("draws Cloud as a lighter disc with faint white puffs", () => {
+    const look = vinylLook("Pink Cloud");
+    // Pink (#ec6fa5) lifted toward white.
+    expect(look?.body).toContain("#f3a1c5");
+    expect(look?.light).toBe(true);
+    const svg = svgOf(look?.pattern);
+    expect(svg).toContain('fill="#fff"');
+    expect(svg).toContain("feDisplacementMap");
+    expect(vinylLook("Cloud")?.pattern).toContain("data:image/svg+xml");
+    // "Cloudy" is still clear glass.
+    expect(vinylLook("Cloudy")?.body).toContain("rgba(255, 255, 255");
+  });
+
   it("gives a single-colour pattern its own light and dark shades", () => {
     // Red's own shades, lighter and darker, wound through the red.
     const fills = new Set([...svgOf(vinylLook("Red Marbled")?.pattern).matchAll(/fill="(#[0-9a-f]{6})"/g)].map(m => m[1]));
@@ -340,7 +353,7 @@ describe("vinyl-colours.json", () => {
 
   it("compiles every pattern, generic and known-note expression", () => {
     for (const pattern of [...config.generic, config.knownNotes]) expect(() => new RegExp(pattern, "i")).not.toThrow();
-    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "liquid", "flake", "split", "smoke", "rainbow"]);
+    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "liquid", "flake", "split", "smoke", "cloud", "rainbow"]);
   });
 
   it("names each family once and has a tag for every pattern it filters by", () => {

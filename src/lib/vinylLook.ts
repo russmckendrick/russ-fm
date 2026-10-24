@@ -11,7 +11,7 @@ import { luminance } from '@/lib/sleeveColour';
  * - `body` is the disc itself: solid, translucent (the sleeve or page shows
  *   through) or clear glass.
  * - `pattern` is extra image layers for marble, splatter, liquid, split, smoke,
- *   rainbow and metallic sheen. It sits on the grooves layer, so it turns
+ *   cloud, rainbow and metallic sheen. It sits on the grooves layer, so it turns
  *   with the record.
  *
  * Patterns are seeded from the text, so the same record always looks the same.
@@ -46,7 +46,7 @@ const MIX_BASE = config.mixed.base;
 const BLACK = COLOURS[config.standard];
 const CLEAR = 'clear';
 
-type Pattern = 'marble' | 'swirl' | 'splatter' | 'liquid' | 'flake' | 'split' | 'smoke' | 'rainbow';
+type Pattern = 'marble' | 'swirl' | 'splatter' | 'liquid' | 'flake' | 'split' | 'smoke' | 'cloud' | 'rainbow';
 
 /** Pattern words are matched by prefix ("marbl" covers marble, marbled and marbling). */
 const PATTERNS = (Object.entries(config.patterns) as Array<[Pattern, string[]]>).map(
@@ -432,6 +432,33 @@ function smoke(rnd: () => number): string {
   );
 }
 
+/**
+ * Cloud: soft white puffs through a lightened disc ("Pink Cloud"). The body is
+ * lifted toward white in `buildLook`; this draws the puffs, small clusters of
+ * overlapping circles round the grooves, bent by slow noise and blurred until
+ * they read as fluff rather than shapes. Kept faint, so it is a tint over the
+ * colour and not a pattern on it.
+ */
+function cloud(rnd: () => number): string {
+  const puffs: string[] = [];
+  for (let i = 0, n = 11 + Math.floor(rnd() * 4); i < n; i++) {
+    const r = 22 + rnd() * 23;
+    const a = rnd() * TAU;
+    for (let j = 0; j < 5; j++) {
+      const rr = r + (rnd() - 0.5) * 6;
+      const aa = a + (rnd() - 0.5) * 0.5;
+      const size = 3 + rnd() * 5;
+      puffs.push(
+        `<circle cx="${num(50 + Math.cos(aa) * rr)}" cy="${num(50 + Math.sin(aa) * rr)}" r="${num(size)}" fill="#fff" fill-opacity="${(0.08 + rnd() * 0.12).toFixed(2)}"/>`,
+      );
+    }
+  }
+  return svgLayer(warp('c', Math.floor(rnd() * 900) + 1, 0.03, 12, 3), `<g filter="url(#c)">${puffs.join('')}</g>`);
+}
+
+/** How far a cloud pressing's colour is lifted toward white. */
+const CLOUD_LIFT = 0.35;
+
 const SHEEN =
   'conic-gradient(from 20deg, rgba(255, 255, 255, 0.35), transparent 18%, rgba(0, 0, 0, 0.18) 40%, rgba(255, 255, 255, 0.3) 62%, transparent 80%, rgba(255, 255, 255, 0.35))';
 const RAINBOW = 'conic-gradient(from 0deg, #e5322d, #f28b1e, #f2d21f, #3aa655, #2f6fd0, #7a3fb0, #e5322d)';
@@ -490,8 +517,10 @@ function buildLook(text: string): VinylLook | null {
     // "Sparkle" alone is black with silver flakes.
     const flaky = p.pattern === 'flake';
     glass = p.pattern === 'splatter';
-    base = glass ? CLEAR : smoky ? COLOURS.grey : flaky ? BLACK : p.flame ? config.flame.base : MIX_BASE;
-    accents = p.flame ? config.flame.accents : smoky || flaky ? [] : MIXED;
+    // A bare "Cloud" is a pale grey.
+    const cloudy = p.pattern === 'cloud';
+    base = glass ? CLEAR : smoky || cloudy ? COLOURS.grey : flaky ? BLACK : p.flame ? config.flame.base : MIX_BASE;
+    accents = p.flame ? config.flame.accents : smoky || flaky || cloudy ? [] : MIXED;
     if (base === MIX_BASE) {
       // A mix over cream reads as a white disc, so one of the mix colours (picked from the text, so it
       // never changes) is the body, and the rest, cream included, are wound through it.
@@ -511,10 +540,12 @@ function buildLook(text: string): VinylLook | null {
   // "Yellow Flame" is yellow with flame-coloured streaks over it.
   if (p.flame) accents = config.flame.accents;
   const pattern: Pattern | null = p.pattern ?? (p.flame ? 'splatter' : accents.length ? 'marble' : null);
-  if (pattern && pattern !== 'smoke' && pattern !== 'flake' && !accents.length) {
+  if (pattern && pattern !== 'smoke' && pattern !== 'flake' && pattern !== 'cloud' && !accents.length) {
     const ref = glass ? '#8b8f94' : base;
     accents = [mix(ref, '#ffffff', 0.4), mix(ref, '#000000', 0.4)];
   }
+  // "Pink Cloud" is a paler pink.
+  if (pattern === 'cloud' && !glass) base = shade(base, CLOUD_LIFT);
 
   const rnd = seeded(text);
   const layers: string[] = [];
@@ -524,6 +555,7 @@ function buildLook(text: string): VinylLook | null {
   if (pattern === 'liquid') layers.push(liquid(accents, rnd));
   if (pattern === 'flake') layers.push(flakes(rnd));
   if (pattern === 'smoke') layers.push(smoke(rnd));
+  if (pattern === 'cloud') layers.push(cloud(rnd));
   if (pattern === 'split') {
     const half = base === CLEAR ? accents[0] : base;
     const other = base === CLEAR ? undefined : accents[0];
