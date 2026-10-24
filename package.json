@@ -14,6 +14,7 @@
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-colors": "node scripts/generate-album-colors.js",
     "generate-artist-images": "node scripts/generate-artist-images.js",
+    "report-artist-images": "node scripts/report-artist-images.js",
     "generate-og": "node scripts/generate-og-images.mjs",
     "generate-og-sections": "tsx scripts/generate-og-sections.ts",
     "generate-static-meta": "node scripts/generate-static-meta.mjs",

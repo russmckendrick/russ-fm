@@ -37,6 +37,23 @@ export interface ArtistImageInfo {
    * WebP data URI, the photo's shape. Missing when Vision found no subject.
    */
   matte?: string;
+  /** The matte blurred wide (v4, tiny): a spotlight's spill of the backdrop round the people. */
+  spill?: string;
+}
+
+/** CIE lightness (0–100) of a relative luminance. */
+const lightness = (y: number) => (y > 0.008856 ? 116 * Math.cbrt(y) - 16 : 903.3 * y);
+
+/**
+ * How strongly the portrait's spill shows (0 to 0.55): the photo's own backdrop
+ * glowing round the people suits a flood about as light as that backdrop, and
+ * fades out as they part; a white or black backdrop against a mid flood would
+ * be a halo. Lightness 30 apart is none.
+ */
+export function spillStrength(info: ArtistImageInfo | null | undefined, floodLuminance: number): number {
+  if (!info?.spill) return 0;
+  const apart = Math.abs(lightness(info.backdrop.luminance) - lightness(floodLuminance));
+  return 0.55 * Math.max(0, 1 - apart / 30);
 }
 
 /** Below this chroma a photo is black and white (or a toned print). */

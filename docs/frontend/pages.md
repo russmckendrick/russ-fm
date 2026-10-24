@@ -397,8 +397,11 @@ swatch tints the rest of the page. No gradients.
   single word never breaks mid-word on a phone. **Colour**: the photo is printed into the
   flood in greyscale, and a second, full-colour copy sits over that print, cut to the
   subject's `matte` from the `-image.json`, so the people come back in their own colour
-  while the backdrop stays printed in the flood (a little backdrop round them, like a
-  spotlight's spill, is fine). A black-and-white photo (`chroma` under 0.06,
+  while the backdrop stays printed in the flood. Under it, the `spill` (the matte
+  blurred wide) lets the photo's own backdrop glow round the people like a
+  spotlight, at up to 55% when that backdrop is about as light as the flood and not
+  at all once they are 30 lightness apart (`spillStrength`): a white or black
+  backdrop against a mid flood would be a halo. A black-and-white photo (`chroma` under 0.06,
   `isMonochrome`) and a photo without a matte are the greyscale print alone. From `lg` there is no bottom fade:
   the photo is the flood's full height and fades out over its right side on a
   smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood

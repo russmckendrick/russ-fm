@@ -360,10 +360,27 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    greyscale PNG at the photo's size: person segmentation (`.accurate`), which finds
    every person (the foreground mask missed the outer members of a line-up), or the
    foreground mask when it finds nobody. The script shrinks it to 192px, steepens it
-   (under about 22% goes clear, so the soft edge doesn't catch a rim of backdrop
-   round hair; over about 72% goes solid, filling soft patches inside a figure) and
-   embeds it as an alpha-only WebP data URI. Six orchestra and group photos with no
-   one Vision can pick out have no matte and stay greyscale.
+   (over about 72% goes solid, filling soft patches inside a figure) and feathers it
+   *inside* the silhouette, so the colour fades into the greyscale print of the
+   person and never shows a rim of backdrop. Person segmentation drops people in
+   tight groups (Dire Straits' and Marillion's back rows), so every detected face
+   the matte doesn't cover gets a soft head-and-shoulders spot added. It also writes
+   `spill`: the matte blurred wide at 48px, which the page shows round the people
+   only when the photo's backdrop is about as light as the flood. Both are embedded
+   as alpha-only WebP data URIs. Six orchestra and group photos with no one Vision
+   can pick out have no matte and stay greyscale.
+
+### Finding photos to replace
+
+`pnpm run report-artist-images` reads every `-image.json` and lists the photos that
+don't suit the artist hero, most-collected artists first: no photo, tiny (under
+500px), low resolution (under 800px; the desktop hero is about 700px tall, so these
+look soft on a retina screen), no person found or black and white (both stay
+greyscale), no face found (the phone crop can't centre), and faces under 7% of the
+photo's height. `--all` adds dark backdrops, which print as a dark block when the
+page's flood is light (hundreds, so opt-in). `--issue <name>` narrows it,
+`--limit 0` lists everyone, and `--csv` writes the lot as CSV. After replacing a
+photo, run `pnpm run generate-artist-images -- --only <slug>`.
 
 ### Output and deployment
 

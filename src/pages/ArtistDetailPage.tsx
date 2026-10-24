@@ -343,6 +343,7 @@ export function ArtistDetailPage() {
               harsh={portraitHarsh}
               lift={portraitLift}
               textEl={heroText}
+              flood={flood.top}
             />
           </div>
           {/* Below lg the text is pulled up over the faded bottom of the

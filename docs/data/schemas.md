@@ -382,7 +382,8 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
   },
   "luminance": 0.031,
   "chroma": 0.412,
-  "matte": "data:image/webp;base64,UklGR…"
+  "matte": "data:image/webp;base64,UklGR…",
+  "spill": "data:image/webp;base64,UklGR…"
 }
 ```
 
@@ -398,7 +399,8 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 | `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo |
 | `luminance` | Whole-photo relative luminance |
 | `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 the page treats the photo as black and white (`isMonochrome`) and keeps it in greyscale; about a quarter of the photos are |
-| `matte` | (v4) The subject's shape: Vision's person segmentation (every person; a photo with nobody in it falls back to the foreground mask), 192px on its longest side, as an alpha-only WebP data URI (about 1–3 KB). The artist hero lays the photo's own colour through it, over the greyscale print. Missing when Vision finds no subject. Embedded rather than a file, as images are served from R2 and a CSS mask from another origin needs CORS |
+| `matte` | (v4) The subject's shape, 192px on its longest side, as an alpha-only WebP data URI (about 1–3 KB): Vision's person segmentation (a photo with nobody in it falls back to the foreground mask), feathered inside the silhouette, plus a soft spot for any detected face it missed. The artist hero lays the photo's own colour through it, over the greyscale print. Missing when Vision finds no subject. Embedded rather than a file, as images are served from R2 and a CSS mask from another origin needs CORS |
+| `spill` | (v4) The matte blurred wide, 48px, the same kind of data URI: the photo's own backdrop glowing round the people, shown only when that backdrop is about as light as the flood (`spillStrength`) |
 
 ---
 

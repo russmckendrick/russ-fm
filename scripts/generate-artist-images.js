@@ -18,9 +18,11 @@
  *     close to it (a toned print a little more); the page keeps those in
  *     plain greyscale rather than trying to bring their colour back.
  *   - The subject's matte (Vision's person segmentation, or for a photo with
- *     nobody in it the foreground mask), shrunk to MATTE px and embedded as an alpha-only WebP data
- *     URI. The page lays the photo's own colour through it, so the people
- *     come back in colour while the backdrop stays printed in the flood.
+ *     nobody in it the foreground mask, plus a spot for any face it missed),
+ *     shrunk to MATTE px, and a wide blurred spill of it, each embedded as an
+ *     alpha-only WebP data URI. The page lays the photo's own colour through
+ *     the matte, so the people come back in colour while the backdrop stays
+ *     printed in the flood, and through the spill when the backdrop suits it.
  *     Embedded rather than a file next to the photo: images are served from
  *     R2, and a CSS mask from another origin needs CORS.
  *   - Before any of that, letterbox or pillarbox bars (flat black or white
@@ -58,6 +60,8 @@ const VERSION = 4;
 const SAMPLE = 48;
 /** The embedded matte's longest side; the browser's upscale gives it a soft edge. */
 const MATTE = 192;
+/** The spill's longest side: it is all blur, so a tiny one is enough. */
+const SPILL_SIZE = 48;
 /** Colour stops down each side edge. */
 const PROFILE_STOPS = 12;
 
@@ -195,26 +199,83 @@ function placement(detected) {
   return { faces: boxes(faces), people: boxes(people), subject, focus };
 }
 
-/**
- * A greyscale matte PNG as a small alpha-only WebP data URI (black, with the
- * matte as alpha). After the shrink the matte is steepened: anything under
- * about 22% goes clear, so the soft edge doesn't catch a rim of backdrop round
- * the hair, and anything over about 72% goes solid, filling the soft patches
- * person segmentation leaves inside a figure.
- */
-async function matteDataUri(file) {
-  const { data, info } = await sharp(file)
-    .greyscale()
-    .resize(MATTE, MATTE, { fit: 'inside' })
-    .linear(2, -0.45 * 255)
-    .raw()
-    .toBuffer({ resolveWithObject: true });
-  const rgba = Buffer.alloc(info.width * info.height * 4);
-  for (let i = 0; i < info.width * info.height; i++) rgba[i * 4 + 3] = data[i * info.channels];
-  const webp = await sharp(rgba, { raw: { width: info.width, height: info.height, channels: 4 } })
+/** Raw pixels as a small alpha-only WebP data URI (black, with them as alpha). */
+async function alphaDataUri(data, width, height) {
+  const rgba = Buffer.alloc(width * height * 4);
+  for (let i = 0; i < width * height; i++) rgba[i * 4 + 3] = data[i];
+  const webp = await sharp(rgba, { raw: { width, height, channels: 4 } })
     .webp({ quality: 60, alphaQuality: 80 })
     .toBuffer();
   return `data:image/webp;base64,${webp.toString('base64')}`;
+}
+
+/**
+ * The matte and its spill, from Vision's greyscale matte PNG, as alpha-only
+ * WebP data URIs.
+ *   - matte: the people, steepened (over about 72% solid, filling soft patches
+ *     inside a figure), then feathered inside the silhouette: the colour is
+ *     full a few pixels in and gone by the outline, so it fades into the
+ *     greyscale print of the person and never shows a rim of backdrop. Plus a
+ *     head-and-shoulders spot (faceSpots) for each face the segmentation
+ *     missed: it drops people in tight groups (the back row, someone out of
+ *     focus), face detection rarely does.
+ *   - spill: the same shape blurred wide at SPILL_SIZE px, a spotlight's glow
+ *     of the photo's own backdrop round the people. The page shows it only
+ *     when that backdrop is about as light as the flood; a white or black
+ *     backdrop against a mid flood would be a halo.
+ */
+async function matteDataUris(file, faces = []) {
+  const shrunk = sharp(file).greyscale().resize(MATTE, MATTE, { fit: 'inside' });
+  const raw = img => img.raw().toBuffer({ resolveWithObject: true });
+  const core = await raw(shrunk.clone().linear(2, -0.45 * 255).blur(1.4).linear(2, -1.0 * 255));
+  const { width, height, channels } = core.info;
+  const at = i => core.data[i * channels];
+  const covered = ([fx, fy, fw, fh]) => {
+    let sum = 0, n = 0;
+    for (let y = Math.floor(fy * height); y < Math.ceil((fy + fh) * height); y++) {
+      for (let x = Math.floor(fx * width); x < Math.ceil((fx + fw) * width); x++) {
+        if (x >= 0 && y >= 0 && x < width && y < height) {
+          sum += at(y * width + x);
+          n++;
+        }
+      }
+    }
+    return n > 0 && sum / n > 128;
+  };
+  const spots = faceSpots(faces.filter(f => !covered(f)), width, height);
+  const matte = new Uint8Array(width * height);
+  for (let i = 0; i < width * height; i++) matte[i] = Math.max(at(i), spots[i]);
+
+  const spill = await raw(shrunk.clone().blur(MATTE * 0.07).resize(SPILL_SIZE, SPILL_SIZE, { fit: 'inside' }));
+  const spillPixels = Uint8Array.from({ length: spill.info.width * spill.info.height }, (_, i) => spill.data[i * spill.info.channels]);
+  return {
+    matte: await alphaDataUri(matte, width, height),
+    spill: await alphaDataUri(spillPixels, spill.info.width, spill.info.height),
+  };
+}
+
+/**
+ * A head-and-shoulders ellipse per face, 0–255 at matte size: centred just
+ * below the face, wide enough for the shoulders and tall enough for the hair,
+ * solid to 60% of the way out and easing to nothing at the rim.
+ */
+function faceSpots(faces, width, height) {
+  const out = new Uint8Array(width * height);
+  for (const [fx, fy, fw, fh] of faces) {
+    const cx = (fx + fw / 2) * width;
+    const cy = (fy + fh * 1.1) * height;
+    const rx = fw * 1.1 * width;
+    const ry = fh * 1.9 * height;
+    for (let y = Math.max(0, Math.floor(cy - ry)); y < Math.min(height, Math.ceil(cy + ry)); y++) {
+      for (let x = Math.max(0, Math.floor(cx - rx)); x < Math.min(width, Math.ceil(cx + rx)); x++) {
+        const d = Math.hypot((x - cx) / rx, (y - cy) / ry);
+        const t = clamp01((1 - d) / 0.4);
+        const v = Math.round(255 * t * t * (3 - 2 * t));
+        if (v > out[y * width + x]) out[y * width + x] = v;
+      }
+    }
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------- vision helper
@@ -337,7 +398,7 @@ async function main() {
         const colour = await measureColour(job.file);
         const found = detected.get(job.file);
         if (found?.error) console.warn(`⚠️  ${job.slug}: ${found.error}`);
-        const matte = found?.matte ? await matteDataUri(job.matte) : undefined;
+        const mattes = found?.matte ? await matteDataUris(job.matte, found.faces) : undefined;
         const data = {
           v: VERSION,
           hash: job.hash,
@@ -345,7 +406,7 @@ async function main() {
           height: meta.height,
           ...placement(found),
           ...colour,
-          ...(matte ? { matte } : {}),
+          ...mattes,
         };
         await fs.writeFile(job.out, JSON.stringify(data) + '\n');
         written++;
