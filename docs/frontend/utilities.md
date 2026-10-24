@@ -513,7 +513,7 @@ pinch off and rejoin, and the pour sloshes a few degrees back and forth on top o
 held still under `prefers-reduced-motion`), **sparkle** (fine silver flecks over the colour, black when none is
 named: sparse specks made with an SVG noise filter, kept thin so the disc's colour stays the main
 thing. Faint flecks at under half strength give a shimmer, about 0.2% of the disc, and a rarer
-scatter of bright glints catches the eye, so it reads as glitter and not a starfield), **split** (two halves), **smoke** (dark wisps: marble's clouds and streaks in faint black, bent harder and blurred more, so they drift rather than vein; an SVG), **cloud** (`Pink Cloud`: the colour lifted 35% toward white, with faint white puffs drifting through it, clusters of circles bent by slow noise and blurred into fluff; a bare `Cloud` is pale grey, and `Cloudy` is still clear glass),
+scatter of bright glints catches the eye, so it reads as glitter and not a starfield), **split** (two halves), **tri-colour** (`Red White and Green Tri Colour`, `Tri-Color`, `Tricolour`: three bands across the disc in the order the colours are named, the middle one filling the disc behind the outer two. The seams are tilted S-curves, wobbled by noise, with each outer colour feathering and streaking into the middle and deepening away from the seam; an SVG. It wins over any other pattern word, so `Tricolour Marble` is bands. With no colours named it takes three mix colours, and with fewer than three the cream of the mix fills in. Tagged Split), **smoke** (dark wisps: marble's clouds and streaks in faint black, bent harder and blurred more, so they drift rather than vein; an SVG), **cloud** (`Pink Cloud`: the colour lifted 35% toward white, with faint white puffs drifting through it, clusters of circles bent by slow noise and blurred into fluff; a bare `Cloud` is pale grey, and `Cloudy` is still clear glass),
 **rainbow**, **flame** (made up: splatter in flame colours, fiery red-orange with orange and yellow
 streaks, or those streaks over whatever colour is named, so `Yellow Flame` is yellow with flame
 streaks; words `flame`, `flaming`, `flames`, `flamed`) and a metallic sheen for gold / silver / copper /
@@ -523,7 +523,7 @@ Other bracketed nicknames are ignored unless they hold the only colour. Patterns
 the text, so a record always looks the same.
 
 A colour the scrapper approved is never drawn black. When Discogs says it is coloured without
-saying which colour (`Coloured`, `Tri-Color`, `Multi-Coloured`, `Eco-Mix`, a bare `Marbled` or
+saying which colour (`Coloured`, `Multi-Coloured`, `Eco-Mix`, a bare `Marbled` or
 `Splatter`) it is drawn as a mix: a fixed four-colour palette, one colour (picked from the text, so it never
 changes) as the body and the other three plus cream wound through it as marble, so it never reads as white; clear glass
 for a bare splatter, smoky grey for `Smokey`. Only plain black and text with no colour at all

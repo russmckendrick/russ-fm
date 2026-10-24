@@ -46,7 +46,7 @@ const MIX_BASE = config.mixed.base;
 const BLACK = COLOURS[config.standard];
 const CLEAR = 'clear';
 
-type Pattern = 'marble' | 'swirl' | 'splatter' | 'liquid' | 'flake' | 'split' | 'smoke' | 'cloud' | 'rainbow';
+type Pattern = 'marble' | 'swirl' | 'splatter' | 'liquid' | 'flake' | 'split' | 'tricolour' | 'smoke' | 'cloud' | 'rainbow';
 
 /** Pattern words are matched by prefix ("marbl" covers marble, marbled and marbling). */
 const PATTERNS = (Object.entries(config.patterns) as Array<[Pattern, string[]]>).map(
@@ -69,7 +69,12 @@ interface Parsed {
 }
 
 function parseText(text: string): Parsed {
-  const words = text.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  // "Tri-Color" and "Tri Colour" are one word, "tricolor".
+  const words = text
+    .toLowerCase()
+    .replace(/\btri[^a-z]*(?=colou?r)/g, 'tri')
+    .split(/[^a-z]+/)
+    .filter(Boolean);
   const out: Parsed = { colours: [], translucent: false, metallic: false, generic: false, flame: false, pattern: null };
   // "Light" / "Dark" shade the next colour named.
   let shade = 0;
@@ -98,7 +103,8 @@ function parseText(text: string): Parsed {
       const pattern = patternOf(w);
       if (pattern === 'rainbow') out.pattern = 'rainbow';
       else if (pattern) out.pattern ??= pattern;
-      else if (GENERIC.some(re => re.test(w))) out.generic = true;
+      // A bare "Tri-Color" still says it is coloured.
+      if (pattern === 'tricolour' || (!pattern && GENERIC.some(re => re.test(w)))) out.generic = true;
     }
   }
   return out;
@@ -184,11 +190,13 @@ function svgLayer(filters: string, body: string): string {
 /**
  * Noise that drags clean arcs about (`scale`, at noise `frequency`) so they
  * bend and wander like poured colour, then a blur to soften them: a heavy one
- * melts broad strokes into clouds, a light one leaves fine streaks.
+ * melts broad strokes into clouds, a light one leaves fine streaks. `pad`
+ * widens the filter past the disc, for shapes that run off the edge (a blur
+ * would otherwise fade them out at the rim).
  */
-function warp(id: string, seed: number, frequency: number, scale: number, blur: number): string {
+function warp(id: string, seed: number, frequency: number, scale: number, blur: number, pad = 0): string {
   return (
-    `<filter id="${id}" filterUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" color-interpolation-filters="sRGB">` +
+    `<filter id="${id}" filterUnits="userSpaceOnUse" x="${-pad}" y="${-pad}" width="${100 + pad * 2}" height="${100 + pad * 2}" color-interpolation-filters="sRGB">` +
     `<feTurbulence type="fractalNoise" baseFrequency="${frequency}" numOctaves="3" seed="${seed}" result="t"/>` +
     `<feDisplacementMap in="SourceGraphic" in2="t" scale="${scale}" xChannelSelector="R" yChannelSelector="G" result="d"/>` +
     `<feGaussianBlur in="d" stdDeviation="${blur}"/></filter>`
@@ -456,6 +464,56 @@ function cloud(rnd: () => number): string {
   return svgLayer(warp('c', Math.floor(rnd() * 900) + 1, 0.03, 12, 3), `<g filter="url(#c)">${puffs.join('')}</g>`);
 }
 
+/**
+ * Tri-colour, after real pressings ("Red White and Green Tri Colour"): three
+ * bands across the disc, the first and last colours named either side of the
+ * middle one. The two seams are tilted S-curves, bent by noise so they wobble,
+ * and each outer colour bleeds into the middle as a pale feather with a few
+ * streaks dragged out along the seam; away from the seam each band deepens a
+ * little. `alpha` thins it on clear and translucent discs. Drawn as an SVG so
+ * it stays one background layer that turns with the disc.
+ */
+function tricolour([top, middle, bottom]: string[], rnd: () => number, alpha: number): string {
+  // A seam centred on `y`: higher at the left, lower at the right, with an S through the middle.
+  const seam = (y: number) => {
+    const lift = 12 + rnd() * 6;
+    const bow = (rnd() - 0.5) * 8;
+    return { left: y - lift * 1.2, c1: y - lift * 1.4 + bow, c2: y + lift * 0.9 + bow, right: y + lift * 1.1 };
+  };
+  const upper = seam(31 + (rnd() - 0.5) * 4);
+  const lower = seam(69 + (rnd() - 0.5) * 4);
+  // Drawn well past the edges, so the tilt never shows a corner.
+  const topBand = `M-30 -30H130V${num(upper.right)}C65 ${num(upper.c2)} 30 ${num(upper.c1)} -30 ${num(upper.left)}Z`;
+  const bottomBand = `M-30 ${num(lower.left)}C30 ${num(lower.c1)} 65 ${num(lower.c2)} 130 ${num(lower.right)}V130H-30Z`;
+  const band = (d: string, colour: string, dy: number, opacity = 1) =>
+    `<path d="${d}" fill="${colour}" fill-opacity="${opacity.toFixed(2)}" transform="translate(0 ${dy})"/>`;
+  // Streaks of an outer colour dragged into the middle along its seam (`side` 1 below the upper seam, -1 above the lower).
+  const streaks = (s: ReturnType<typeof seam>, colour: string, side: number) =>
+    Array.from({ length: 4 + Math.floor(rnd() * 4) }, () => {
+      // A point on the seam's curve, then nudged off it into the middle.
+      const t = 0.25 + rnd() * 0.5;
+      const bez = (a: number, b: number, c: number, d: number) => (1 - t) ** 3 * a + 3 * (1 - t) ** 2 * t * b + 3 * (1 - t) * t ** 2 * c + t ** 3 * d;
+      const x = bez(-30, 30, 65, 130);
+      const y = bez(s.left, s.c1, s.c2, s.right) + side * (1 + rnd() * 4);
+      return `<ellipse cx="${num(x)}" cy="${num(y)}" rx="${num(6 + rnd() * 14)}" ry="${num(0.3 + rnd() * 0.9)}" fill="${colour}" fill-opacity="${(0.25 + rnd() * 0.35).toFixed(2)}"/>`;
+    }).join('');
+  const tilt = (rnd() - 0.5) * 24;
+  const seed = () => Math.floor(rnd() * 900) + 1;
+  const turn = (inner: string) => `<g transform="rotate(${num(tilt)} 50 50)">${inner}</g>`;
+  return svgLayer(
+    warp('f', seed(), 0.02, 10, 2.8, 15) + warp('e', seed(), 0.04, 6, 0.45, 15) + warp('s', seed(), 0.05, 5, 0.35, 15),
+    `<g opacity="${alpha}">` +
+      `<rect width="100" height="100" fill="${middle}"/>` +
+      // The feather: the outer colours, softened and reaching into the middle.
+      `<g filter="url(#f)" opacity="0.55">${turn(band(topBand, top, 3) + band(bottomBand, bottom, -3))}</g>` +
+      `<g filter="url(#s)">${turn(streaks(upper, top, 1) + streaks(lower, bottom, -1))}</g>` +
+      `<g filter="url(#e)">${turn(band(topBand, top, 0) + band(bottomBand, bottom, 0))}</g>` +
+      // Deeper colour away from the seams.
+      `<g filter="url(#f)">${turn(band(topBand, shade(top, -0.2), -10, 0.5) + band(bottomBand, shade(bottom, -0.2), 10, 0.5))}</g>` +
+      '</g>',
+  );
+}
+
 /** How far a cloud pressing's colour is lifted toward white. */
 const CLOUD_LIFT = 0.35;
 
@@ -556,6 +614,12 @@ function buildLook(text: string): VinylLook | null {
   if (pattern === 'flake') layers.push(flakes(rnd));
   if (pattern === 'smoke') layers.push(smoke(rnd));
   if (pattern === 'cloud') layers.push(cloud(rnd));
+  if (pattern === 'tricolour') {
+    // The colours in the order named; short of three, the cream of a mix fills in.
+    const bands = (glass ? named : [base, ...accents]).slice(0, 3);
+    while (bands.length < 3) bands.push(MIX_BASE);
+    layers.push(tricolour(bands, rnd, translucent ? 0.8 : 1));
+  }
   if (pattern === 'split') {
     const half = base === CLEAR ? accents[0] : base;
     const other = base === CLEAR ? undefined : accents[0];

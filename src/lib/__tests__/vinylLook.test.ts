@@ -24,7 +24,7 @@ describe("vinylLook", () => {
   });
 
   it("draws a colour Discogs does not name as a mix, never as black", () => {
-    for (const text of ["Coloured", "Tri-Color", "Multi-Coloured [Recycled]", "Eco-Mix", "Marbled", "Venetian Marble", "Opaque"]) {
+    for (const text of ["Coloured", "Multi-Coloured [Recycled]", "Eco-Mix", "Marbled", "Venetian Marble", "Opaque"]) {
       const look = vinylLook(text);
       expect(look, text).not.toBeNull();
       expect(isMarble(look?.pattern), text).toBe(true);
@@ -32,6 +32,19 @@ describe("vinylLook", () => {
     expect(vinylLook("Splatter")?.body).toContain("rgba(255, 255, 255");
     expect(vinylLook("Splatter")?.pattern).toContain("data:image/svg+xml");
     expect(isSmoke(vinylLook("Smokey")?.pattern)).toBe(true);
+  });
+
+  it("draws a tri-colour as three bands, in the order named", () => {
+    const svg = svgOf(vinylLook("Red White and Green Tri Colour")?.pattern);
+    // The middle colour fills the disc; the first and last are the bands either side of it.
+    expect(svg).toContain('<rect width="100" height="100" fill="#f1eee6"/>');
+    expect(svg).toContain('fill="#c81d25"');
+    expect(svg).toContain('fill="#1f8a4c"');
+    for (const text of ["Tri-Color", "Tri-coloured", "Tricolour Marble", "Blue/Black/White Tri-color"]) {
+      expect(svgOf(vinylLook(text)?.pattern), text).toContain('<rect width="100" height="100"');
+    }
+    // Words that only start with "tri" are not tri-colours.
+    expect(vinylLook("Red Tribute")?.pattern ?? "").not.toContain("<rect");
   });
 
   it("draws Sparkle as black with silver flakes", () => {
@@ -302,7 +315,8 @@ describe("colourTags", () => {
 
   it("tags sparkle and unspecified colours", () => {
     expect(colourTags("Sparkle")).toEqual(["Sparkle"]);
-    expect(colourTags("Tri-Color")).toEqual(["Multicolour"]);
+    expect(colourTags("Tri-Color").sort()).toEqual(["Multicolour", "Split"]);
+    expect(colourTags("Red White and Green Tri Colour").sort()).toEqual(["Green", "Red", "Split", "White"]);
     // Two colours and no pattern word are drawn (and so tagged) as a marble.
     expect(colourTags("Pearl Sunrise Coloured").sort()).toEqual(["Marbled", "Orange", "White"]);
   });
@@ -353,7 +367,7 @@ describe("vinyl-colours.json", () => {
 
   it("compiles every pattern, generic and known-note expression", () => {
     for (const pattern of [...config.generic, config.knownNotes]) expect(() => new RegExp(pattern, "i")).not.toThrow();
-    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "liquid", "flake", "split", "smoke", "cloud", "rainbow"]);
+    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "liquid", "flake", "split", "tricolour", "smoke", "cloud", "rainbow"]);
   });
 
   it("names each family once and has a tag for every pattern it filters by", () => {
