@@ -455,6 +455,10 @@ pub async fn process_release(
     if let Some(link) = boxset_link {
         raw.insert("boxset".into(), link);
     }
+    // Hand-set overrides (the vinyl colour Discogs is missing) outlive a re-scrape the same way.
+    if let Some(overrides) = existing.as_ref().and_then(|r| r.raw_data.get("overrides").cloned()) {
+        raw.insert("overrides".into(), overrides);
+    }
 
     let raw_data = Value::Object(raw);
 
@@ -607,6 +611,26 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
                 "boxset parent {parent_id} is not in the database — process the boxset first: scrapper release {parent_id} --save"
             );
         }
+    }
+
+    // --vinyl sets (or clears) the hand-set pressing text, the same edit as the detail editor.
+    if let Some(text) = args.vinyl.as_deref() {
+        let Some(rec) = db.get_release_by_discogs_id(&discogs_id)? else {
+            bail!("release {discogs_id} is not in the database — process it first: scrapper release {discogs_id} --save");
+        };
+        let rec = set_release_value(cfg, &db, &rec, ReleaseField::Vinyl, text)?;
+        let colours = crate::formats::vinyl_colours(&rec.raw_data);
+        match (text.trim().is_empty(), colours.is_empty()) {
+            (true, _) => crate::say!("Cleared the vinyl override for {} [{discogs_id}].", rec.title),
+            (false, true) => crate::say!("Saved; {} [{discogs_id}] now reads as black vinyl.", rec.title),
+            (false, false) => crate::say!("Saved; {} [{discogs_id}] → {}", rec.title, colours.join(", ")),
+        }
+        if crate::formats::details_from_raw(&rec.raw_data).is_none() {
+            crate::say!("Note: no Discogs formats are stored yet, so the override shows once `scrapper backfill-formats` has run.");
+        }
+        let n = crate::output::collection::regenerate(cfg, &db)?;
+        crate::say!("Refreshed collection.json ({n} entries)");
+        return Ok(());
     }
 
     // --field refreshes one field in place. It reuses the TUI's per-field refresh rather than
@@ -1210,6 +1234,9 @@ pub enum ReleaseField {
     Lastfm,
     Labels,
     Formats,
+    /// Hand-set pressing text for coloured vinyl Discogs doesn't describe
+    /// (`raw_data.overrides.vinyl`, see `crate::formats::vinyl_override`).
+    Vinyl,
     Genres,
     Styles,
     Tracks,
@@ -1235,7 +1262,7 @@ impl ReleaseField {
     pub fn all() -> &'static [ReleaseField] {
         use ReleaseField::*;
         &[
-            Title, Year, Released, Country, Artists, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles,
+            Title, Year, Released, Country, Artists, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Vinyl, Genres, Styles,
             Tracks, Videos, Description, AppleNotes, WikiSummary, WikiContent, LastfmTags, SpotifyPop,
             DateAdded, Images,
         ]
@@ -1255,6 +1282,7 @@ impl ReleaseField {
             ReleaseField::Lastfm => "lastfm",
             ReleaseField::Labels => "labels",
             ReleaseField::Formats => "formats",
+            ReleaseField::Vinyl => "vinyl",
             ReleaseField::Genres => "genres",
             ReleaseField::Styles => "styles",
             ReleaseField::Tracks => "tracks",
@@ -1293,6 +1321,7 @@ impl ReleaseField {
             ReleaseField::Lastfm => "Last.fm",
             ReleaseField::Labels => "Labels",
             ReleaseField::Formats => "Formats",
+            ReleaseField::Vinyl => "Vinyl colour",
             ReleaseField::Genres => "Genres",
             ReleaseField::Styles => "Styles",
             ReleaseField::Tracks => "Tracks",
@@ -1312,7 +1341,7 @@ impl ReleaseField {
     pub fn kind(self) -> crate::ops::FieldKind {
         use crate::ops::FieldKind::*;
         match self {
-            ReleaseField::Title | ReleaseField::Country | ReleaseField::Description => Text,
+            ReleaseField::Title | ReleaseField::Country | ReleaseField::Description | ReleaseField::Vinyl => Text,
             ReleaseField::AppleNotes | ReleaseField::WikiSummary | ReleaseField::WikiContent => Text,
             ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Service,
             ReleaseField::Year | ReleaseField::SpotifyPop => Int,
@@ -1365,6 +1394,7 @@ impl ReleaseField {
             ReleaseField::Lastfm => opt(&rec.lastfm_url),
             ReleaseField::Labels => csv(&rec.labels),
             ReleaseField::Formats => csv(&rec.formats),
+            ReleaseField::Vinyl => raw_service_str(rec, "overrides", "vinyl"),
             ReleaseField::Genres => csv(&rec.genres),
             ReleaseField::Styles => csv(&rec.styles),
             ReleaseField::Tracks => rec.tracklist.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
@@ -1573,6 +1603,7 @@ pub async fn refresh_release_field(
         | ReleaseField::Artists
         | ReleaseField::Labels
         | ReleaseField::Formats
+        | ReleaseField::Vinyl
         | ReleaseField::Genres
         | ReleaseField::Styles
         | ReleaseField::AppleNotes
@@ -1646,6 +1677,14 @@ pub fn apply_release_value(rec: &mut ReleaseRecord, field: ReleaseField, text: &
         ReleaseField::Lastfm => rec.lastfm_url = opt,
         ReleaseField::Labels => rec.labels = crate::ops::csv_list(t),
         ReleaseField::Formats => rec.formats = crate::ops::csv_list(t),
+        ReleaseField::Vinyl => {
+            crate::ops::set_raw_service_key(&mut rec.raw_data, "overrides", "vinyl", opt.map(Value::String));
+            if let Some(raw) = rec.raw_data.as_object_mut() {
+                if raw.get("overrides").and_then(Value::as_object).is_some_and(|o| o.is_empty()) {
+                    raw.remove("overrides");
+                }
+            }
+        }
         ReleaseField::Genres => rec.genres = crate::ops::csv_list(t),
         ReleaseField::Styles => rec.styles = crate::ops::csv_list(t),
         ReleaseField::Description => {

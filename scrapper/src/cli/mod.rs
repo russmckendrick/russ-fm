@@ -149,6 +149,11 @@ pub struct ReleaseArgs {
     /// matches survive. Implies --save.
     #[arg(long, value_enum, value_name = "FIELD")]
     pub field: Option<RefreshField>,
+    /// Set the vinyl colour by hand when Discogs doesn't say, written the way Discogs would
+    /// ("Red Translucent, 180 Gram"; "Disc 1 White, Disc 2 Black"; `|` between several Vinyl
+    /// entries). It survives re-scrapes. Pass "" to clear it. No network access.
+    #[arg(long, value_name = "TEXT")]
+    pub vinyl: Option<String>,
 }
 
 /// The subset of release fields that can be re-fetched from their source on their own.

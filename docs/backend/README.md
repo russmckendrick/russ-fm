@@ -298,6 +298,14 @@ Marble [Memphis Dust]"`). The pressing detail is kept alongside it:
   those two keys, so a re-run leaves already-current files byte-identical.
 - The release refresh replaces `raw_data.discogs` wholesale, so it must keep writing `formats`
   there or the colour is lost on the next refresh.
+- **Vinyl override.** When Discogs doesn't record the colour, set it by hand: the **Override
+  colour** button in the web UI's Pressing section, the **Vinyl colour** field in the Edit tab or
+  TUI detail editor, or `scrapper release <ID> --vinyl "<text>"`. It is stored at
+  `raw_data.overrides.vinyl` (no schema change, never emitted publicly) and `process_release`
+  carries `raw_data.overrides` over a re-scrape, as it does `raw_data.boxset`. The text is written
+  the way Discogs writes a format's `text` and replaces the `text` of every Vinyl entry before the
+  colour is derived (`formats::vinyl_override()`); `|` separates the texts of several Vinyl entries.
+  A colour the vocabulary doesn't know is kept as written, and plain `Black` forces black vinyl.
 
 ## Collection picker (TUI)
 

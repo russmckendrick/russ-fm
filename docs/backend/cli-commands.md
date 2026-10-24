@@ -67,6 +67,7 @@ scrapper release <DISCOGS_ID> [OPTIONS]
 | `--prefer` | CHOICE | - | Preferred data/image source: `apple-music`, `spotify`, `theaudiodb`, `discogs`, `v1` |
 | `--boxset` | STRING | - | Link this release as a member of a boxset (the parent's Discogs ID) |
 | `--field` | CHOICE | - | Refresh one field in place: `tracks`, `videos`, `discogs`, `apple`, `spotify`, `lastfm`, `images`. Implies `--save` |
+| `--vinyl` | STRING | - | Set the vinyl colour by hand when Discogs doesn't say, written as Discogs would (`"Red Translucent, 180 Gram"`, `"Disc 1 White, Disc 2 Black"`, `\|` between Vinyl entries). Survives re-scrapes; `""` clears it. No network access |
 
 > Run `scrapper release --help` for the full, authoritative flag list.
 
@@ -130,6 +131,9 @@ scrapper release 123456 --force-refresh --save
 # Refresh only the tracklist, leaving description/service matches intact
 # (restores per-track artists on compilations so they can be scrobbled)
 scrapper release 38185662 --field tracks
+
+# Coloured pressing Discogs doesn't describe (stored as an override; "" clears it)
+scrapper release 38807484 --vinyl "Purple Translucent"
 
 # Interactive mode for manual matching
 scrapper release 123456 --interactive --save

@@ -65,6 +65,9 @@ Stop it with `Ctrl-C`.
   difference in each published file (the album or artist JSON and the release's
   collection.json entry), plus notes such as a folder rename or how many release pages an
   artist change rewrites. **Save** writes it. ↻ re-fetches one field from its source as a job.
+- **Override colour** in the release Overview's Pressing section: sets the vinyl colour by hand
+  when Discogs doesn't say (the Edit tab's **Vinyl colour** field, saved straight away). Blank or
+  **Clear** removes it; see [Pressing detail and vinyl colour](./README.md#pressing-detail-and-vinyl-colour).
 - **Data health** (`/health`): checks across releases (no Apple Music / Spotify / Last.fm
   match, no description, tracklist, videos or artwork file, original year not looked up,
   album folders without a database record) and artists (not enriched, no photo, biography,

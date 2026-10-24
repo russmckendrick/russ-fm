@@ -1,16 +1,19 @@
-import { ArrowLeft, Check, ExternalLink, Minus } from 'lucide-react'
-import type { ReactNode } from 'react'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { ArrowLeft, Check, Disc3, ExternalLink, Minus } from 'lucide-react'
+import { useState, type ReactNode } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router'
 import { Cover } from '@/components/Cover'
 import { ReleaseActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
 import { RecordEditor } from '@/components/RecordEditor'
 import { Tabs } from '@/components/Tabs'
-import { Badge, EmptyState, ErrorState, LinkChip, Spinner } from '@/components/ui'
+import { Badge, Button, EmptyState, ErrorState, Input, LinkChip, Spinner } from '@/components/ui'
+import { api } from '@/lib/api'
 import { cn, date, num } from '@/lib/format'
+import { useJobs } from '@/lib/jobs'
 import { albumImageUrl, siteUrl } from '@/lib/media'
 import { useRelease } from '@/lib/queries'
-import type { AlbumJson, LibraryItem, Track } from '@/lib/types'
+import type { AlbumJson, DbRecord, LibraryItem, Track } from '@/lib/types'
 
 type Tab = 'overview' | 'tracks' | 'videos' | 'edit' | 'data'
 
@@ -105,7 +108,7 @@ export function ReleasePage() {
           ]}
         />
         <div className="pt-6">
-          {tab === 'overview' && <Overview pub={pub} item={item} description={description} hasRecord={data.record !== null} tracks={tracks.length} videos={videos.length} />}
+          {tab === 'overview' && <Overview pub={pub} item={item} slug={slug} record={data.record} description={description} tracks={tracks.length} videos={videos.length} />}
           {tab === 'tracks' && <Tracklist tracks={tracks} />}
           {tab === 'videos' && <Videos urls={videos} />}
           {tab === 'edit' && <RecordEditor kind="release" slug={slug} />}
@@ -143,18 +146,22 @@ export function Hero({ color, children }: { color?: string | null; children: Rea
 function Overview({
   pub,
   item,
+  slug,
+  record,
   description,
-  hasRecord,
   tracks,
   videos,
 }: {
   pub: AlbumJson
   item: LibraryItem | null
+  slug: string
+  record: DbRecord | null
   description?: string
-  hasRecord: boolean
   tracks: number
   videos: number
 }) {
+  const hasRecord = record !== null
+  const hasVinyl = (pub.format_details ?? []).some((f) => f.name === 'Vinyl')
   const genres = pub.genres ?? item?.genres ?? []
   const styles = pub.styles ?? item?.styles ?? []
   return (
@@ -172,7 +179,10 @@ function Overview({
 
         {(pub.format_details?.length ?? 0) > 0 && (
           <section className="mt-8">
-            <h3 className="mb-2 text-xs font-medium text-muted">Pressing</h3>
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <h3 className="text-xs font-medium text-muted">Pressing</h3>
+              {hasRecord && hasVinyl && <VinylOverride slug={slug} current={vinylOverride(record)} />}
+            </div>
             <ul className="divide-y divide-line rounded-lg border border-line">
               {pub.format_details!.map((f, i) => (
                 <li key={i} className="flex flex-wrap items-center gap-2 px-3 py-2 text-[13px]">
@@ -230,6 +240,70 @@ function Overview({
         </div>
       </aside>
     </div>
+  )
+}
+
+/** The hand-set pressing text (`raw_data.overrides.vinyl`), if any. */
+function vinylOverride(record: DbRecord | null): string {
+  const raw = record?.raw_data as { overrides?: { vinyl?: unknown } } | undefined
+  return typeof raw?.overrides?.vinyl === 'string' ? raw.overrides.vinyl : ''
+}
+
+/**
+ * Sets the vinyl colour by hand for pressings Discogs doesn't describe. The text replaces the
+ * Vinyl entries' Discogs text and survives re-scrapes; blank clears it.
+ */
+function VinylOverride({ slug, current }: { slug: string; current: string }) {
+  const [text, setText] = useState<string | null>(null)
+  const qc = useQueryClient()
+  const { store } = useJobs()
+  const save = useMutation({
+    mutationFn: (value: string) => api.saveEdit('release', slug, [{ field: 'vinyl', text: value }]),
+    onSuccess: (r, value) => {
+      setText(null)
+      store.toast({ tone: 'ok', title: value.trim() ? 'Colour override saved' : 'Colour override cleared', body: `collection.json: ${r.collection_entries} entries` })
+      void qc.invalidateQueries()
+    },
+  })
+
+  if (text === null) {
+    return (
+      <Button size="sm" variant={current ? 'secondary' : 'ghost'} onClick={() => setText(current)}>
+        <Disc3 className="size-3.5" />
+        {current ? 'Edit colour override' : 'Override colour'}
+      </Button>
+    )
+  }
+  return (
+    <form
+      className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-2"
+      onSubmit={(e) => {
+        e.preventDefault()
+        save.mutate(text)
+      }}
+    >
+      <Input
+        autoFocus
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => e.key === 'Escape' && setText(null)}
+        placeholder="Red Translucent, 180 Gram"
+        title="Written as Discogs would: “Disc 1 White, Disc 2 Black” for per-disc colours, | between Vinyl entries. Blank clears."
+        className="w-64 max-w-full"
+      />
+      {save.error && <span className="text-xs text-bad">{save.error.message}</span>}
+      <Button size="sm" variant="ghost" type="button" onClick={() => setText(null)}>
+        Cancel
+      </Button>
+      {current && (
+        <Button size="sm" variant="ghost" type="button" busy={save.isPending && save.variables === ''} onClick={() => save.mutate('')}>
+          Clear
+        </Button>
+      )}
+      <Button size="sm" variant="primary" type="submit" busy={save.isPending && save.variables !== ''} disabled={text.trim() === current}>
+        Save
+      </Button>
+    </form>
   )
 }
 

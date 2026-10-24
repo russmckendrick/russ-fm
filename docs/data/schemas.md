@@ -258,6 +258,12 @@ The source is `raw_data.discogs.formats` in the SQLite row — the Discogs array
 `process_release` and the Discogs refresh, or filled for older rows by `scrapper backfill-formats`
 (see [cli-commands.md](../backend/cli-commands.md#backfill-formats)). No SQLite schema change.
 
+A hand-set override, `raw_data.overrides.vinyl` (a string), takes the place of every Vinyl
+entry's `text` when Discogs is missing the colour, so `format_details[].text` and `colour` show the
+override and the public shape doesn't change. Several Vinyl entries are separated with `|`; the last
+text carries on to any entries left over. An override colour outside the vocabulary is kept as
+written, and `Black` means plain black. See [Pressing detail and vinyl colour](../backend/README.md#pressing-detail-and-vinyl-colour).
+
 #### Tracklist rows: headings, suites and movements
 
 Each `tracklist` row is `{position, title, duration, artists}`. Discogs has two row types that

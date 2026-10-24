@@ -7,7 +7,9 @@
 //! edition notes are left out. The untouched text stays in `format_details` for anything the
 //! heuristic misses. Plain black vinyl yields no colour.
 //!
-//! The source is `raw_data.discogs.formats`, the Discogs array stored as-is.
+//! The source is `raw_data.discogs.formats`, the Discogs array stored as-is, with the
+//! hand-set `raw_data.overrides.vinyl` text (see [`vinyl_override`]) taking the place of the
+//! Vinyl entries' own text when Discogs is missing the colour.
 
 use std::collections::HashSet;
 
@@ -155,7 +157,32 @@ pub fn details_from_raw(raw_data: &Value) -> Option<Vec<Value>> {
             f["colour"] = json!(colour);
         }
     }
+    if let Some(texts) = vinyl_override(raw_data) {
+        for (i, f) in details.iter_mut().filter(|f| named(f, "Vinyl")).enumerate() {
+            let text = texts[i.min(texts.len() - 1)];
+            f["text"] = json!(text);
+            f["colour"] = json!(override_colour(text));
+        }
+    }
     Some(details)
+}
+
+/// The hand-set pressing text, `raw_data.overrides.vinyl`, for releases whose Discogs entry
+/// doesn't say the vinyl is coloured. It is written the way Discogs writes a format's `text`
+/// ("Red Translucent, 180 Gram", "Disc 1 White, Disc 2 Black") and replaces the `text` of
+/// every Vinyl entry; `|` separates the texts of several Vinyl entries, in order, and the last
+/// carries on to any entries left over.
+pub fn vinyl_override(raw_data: &Value) -> Option<Vec<&str>> {
+    let text = raw_data.get("overrides")?.get("vinyl")?.as_str()?;
+    let texts: Vec<&str> = text.split('|').map(str::trim).filter(|t| !t.is_empty()).collect();
+    (!texts.is_empty()).then_some(texts)
+}
+
+/// The colour of an override text. Unlike Discogs' free text, the override is a deliberate
+/// statement about the vinyl, so a colour the vocabulary doesn't know ("Oxblood") is kept as
+/// written; plain "Black" still means the standard pressing.
+fn override_colour(text: &str) -> Option<String> {
+    colour_of_text(text).or_else(|| (!text.eq_ignore_ascii_case("black")).then(|| text.to_string()))
 }
 
 /// The colours of a release's vinyl, one per disc set in order, without repeats
@@ -352,6 +379,40 @@ mod tests {
         ] } });
         assert!(vinyl_colours(&raw).is_empty());
         assert_eq!(details_from_raw(&raw).unwrap()[0]["colour"], Value::Null);
+    }
+
+    #[test]
+    fn the_vinyl_override_replaces_what_discogs_says() {
+        // Cure For Sanity (38807484): Discogs gives the 2xLP no colour text at all.
+        let raw = json!({
+            "discogs": { "formats": [{ "name": "Vinyl", "qty": "2", "descriptions": ["LP"] }] },
+            "overrides": { "vinyl": "Purple Translucent, 180 Gram" },
+        });
+        let details = details_from_raw(&raw).unwrap();
+        assert_eq!(details[0]["text"], "Purple Translucent, 180 Gram");
+        assert_eq!(details[0]["colour"], "Purple Translucent");
+        assert_eq!(vinyl_colours(&raw), ["Purple Translucent"]);
+    }
+
+    #[test]
+    fn the_vinyl_override_splits_per_entry_and_trusts_unknown_colours() {
+        let raw = json!({
+            "discogs": { "formats": [
+                { "name": "Vinyl", "qty": "1", "text": "Red" },
+                { "name": "Vinyl", "qty": "1" },
+                { "name": "Vinyl", "qty": "1" },
+                { "name": "CD", "qty": "1" },
+            ] },
+            "overrides": { "vinyl": "Oxblood | Black" },
+        });
+        let details = details_from_raw(&raw).unwrap();
+        assert_eq!(details[0]["colour"], "Oxblood");
+        assert_eq!(details[1]["colour"], Value::Null);
+        assert_eq!(details[2]["text"], "Black");
+        assert_eq!(details[3]["text"], Value::Null);
+        assert_eq!(vinyl_colours(&raw), ["Oxblood"]);
+        // A blank override is no override.
+        assert!(vinyl_override(&json!({ "overrides": { "vinyl": " | " } })).is_none());
     }
 
     #[test]
