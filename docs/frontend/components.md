@@ -22,7 +22,7 @@ All exported from `@/components/player`.
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
 | `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker; `label` and `footer` make the "Scrobbled 26 SEP · 11 tracks" one. |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. Its disc takes the pressing's colour on hover. |
-| `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
+| `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break; the artist hero uses `min={28}` so a long single-word name ("HOUSEMARTINS", "65DAYSOFSTATIC") fits a phone column whole. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
 | `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
 
@@ -45,7 +45,9 @@ import { AFTER_HERO, CoverHero, HeroRecord } from '@/components/player';
 |------|------|-------------|
 | flood | `Flood` | From `floodFor()`; paints the section background and text |
 | art | `ReactNode` | Cover object, usually `HeroRecord`. Sits flush on the bottom edge and hangs over the next section |
-| children | `ReactNode` | Text column (right of the cover on desktop, above it on phones) |
+| artClassName | `string` | Extra classes for the art column (the album page widens it to the full content width below `md`) |
+| splitAt | `'md' \| 'lg'` | Where cover and text go side by side; default `lg`. The album page passes `md` so tablets get a 40vw cover beside the text and the whole hero fits the first screen |
+| children | `ReactNode` | Text column (right of the cover once split, above it before that) |
 | className | `string` | Optional |
 
 The section after a `CoverHero` must add the `AFTER_HERO` top padding

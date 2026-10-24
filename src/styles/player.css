@@ -400,9 +400,10 @@ body {
 /* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
    page edge stay crisp.
 
-   Phones: the photo fills the 4:5 cell and fades out at the bottom (a long
-   fade whose stops follow an ease-out curve, so there's no line where it
-   starts). From lg the photo's grid column starts at the page edge and is
+   Below lg: the photo fills its edge-to-edge cell (4:5, 5:4 from sm), eases
+   in over the top 8% so there's no hard line under the header, and fades out
+   at the bottom (a long fade whose stops follow an ease-out curve, so there's
+   no line where it starts) under the name, which overlaps it. From lg the photo's grid column starts at the page edge and is
    sized to the photo (portraitColumn); the stage runs from the flood's top
    (the section's pt-10) to its bottom (the 2.5rem spacer) and 32rem past the
    column. Once placed (data-placed, sizes from portraitLayout() in
@@ -421,6 +422,11 @@ body {
 .artist-portrait {
   --portrait-fade-bottom: linear-gradient(
     to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 2%,
+    rgba(0, 0, 0, 0.7) 4%,
+    rgba(0, 0, 0, 0.92) 6%,
+    #000 8%,
     #000 40%,
     rgba(0, 0, 0, 0.94) 52%,
     rgba(0, 0, 0, 0.82) 62%,
@@ -763,8 +769,9 @@ body {
   font-size: 13px;
 }
 
-/* A row of pills that tightens on phones, e.g. the album hero's actions. */
-@media (max-width: 639px) {
+/* A row of pills that tightens on phones, e.g. the album hero's actions, and
+   on tablets, where the album hero's text column sits beside the cover. */
+@media (max-width: 639px), (min-width: 768px) and (max-width: 1023px) {
   .pill-row-compact .pill {
     min-height: 32px;
     padding: 0 11px;

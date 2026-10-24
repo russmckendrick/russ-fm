@@ -993,6 +993,7 @@ export function AlbumDetailPage() {
     <div style={{ background: flood.ground }} className="flood-surface -mb-24 pb-24">
       <CoverHero
         flood={flood}
+        splitAt="md"
         artClassName={isBox ? undefined : 'max-md:w-full'}
         art={
           isBox ? (

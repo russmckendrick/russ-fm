@@ -230,6 +230,9 @@ on the ground.
 - Service pills (Spotify, Apple Music, Discogs) and genre links to
   `/albums/1?genre=…`.
 - Sticker with the date added.
+- Layout: text then sleeve on phones; from `md` the sleeve and text sit side
+  by side (`CoverHero splitAt="md"`, cover 40vw), so on a portrait tablet the
+  whole hero is on the first screen; from `lg` the desktop sizes take over.
 
 **Main column:**
 
@@ -383,8 +386,13 @@ swatch tints the rest of the page. No gradients.
   fill a wide column and shrinks until the whole text column fits. Stats step up to 68px
   from 1800px wide. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`)
   is printed into the flood in greyscale and placed from the photo's `-image.json`
-  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). Phones: a 4:5
-  crop centred on the faces, fading out at the bottom. From `lg` there is no bottom fade:
+  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). Below `lg`: the
+  photo runs edge to edge, a 4:5 crop on phones and 5:4 from `sm`, centred on the faces,
+  easing in over its top 8% (no hard line under the header) and fading out at the bottom;
+  the text column is pulled up over the faded bottom (22% of the photo's height on
+  phones, 16% from `sm`) so the name sits in the photo like a poster title and the stats
+  and links reach the first screen. The name's `FitTitle` has `min={28}` so a long
+  single word never breaks mid-word on a phone. From `lg` there is no bottom fade:
   the photo is the flood's full height and fades out over its right side on a
   smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood
   shows no bands), longer on a harsh step in lightness and starting no earlier than just

@@ -328,10 +328,11 @@ export function ArtistDetailPage() {
           style={{ '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(imageInfo, HERO_ROW) } as CSSProperties}
         >
           {/* The portrait is printed into the flood in greyscale, blended so
-              its backdrop takes the sleeve colours (see portraitBlend). On
-              phones the 4:5 cell sets its size; from lg the portrait's stage
-              fills the flood's height (see ArtistPortrait). */}
-          <div className="relative aspect-[4/5] w-full max-w-[520px] max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none lg:aspect-auto lg:h-full lg:max-w-none">
+              its backdrop takes the sleeve colours (see portraitBlend). Below
+              lg it runs edge to edge, 4:5 on phones and 5:4 from sm, and fades
+              out at the bottom; from lg the portrait's stage fills the flood's
+              height (see ArtistPortrait). */}
+          <div className="relative -mx-5 aspect-[4/5] w-[calc(100%+2.5rem)] sm:aspect-[5/4] md:-mx-10 md:w-[calc(100%+5rem)] lg:mx-0 lg:aspect-auto lg:h-full lg:w-full">
             <ArtistPortrait
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
@@ -342,8 +343,12 @@ export function ArtistDetailPage() {
               textEl={heroText}
             />
           </div>
-          <div ref={setHeroText} className="relative flex min-w-0 flex-col gap-7 lg:justify-center">
-            <FitTitle max={240} min={40} fitHeight className="t-disp">{artistName}</FitTitle>
+          {/* Below lg the text is pulled up over the faded bottom of the
+              photo (22% of its height on phones, 16% from sm, worked from the
+              full-bleed width, plus the grid gap), so the name sits in the
+              photo like a poster title. */}
+          <div ref={setHeroText} className="relative -mt-[calc(27.5vw+2rem)] flex min-w-0 flex-col gap-7 sm:-mt-[calc(13vw+2rem)] lg:mt-0 lg:justify-center">
+            <FitTitle max={240} min={28} fitHeight className="t-disp">{artistName}</FitTitle>
             <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map(([k, v]) => (
                 <div key={k} className="flex flex-col-reverse gap-1">
