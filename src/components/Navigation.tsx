@@ -135,8 +135,14 @@ export function Navigation() {
   // at the top it is see-through with cream text instead of the flood.
   const onTv = location.pathname === "/tv" || location.pathname.startsWith("/tv/");
   const overRoom = onTv && location.pathname !== "/tv/guide" && !scrolled && !menuOpen;
+  // An artist page runs its portrait up under the header too, but keeps the flood's ink.
+  const overPortrait = /^\/artist\/[^/]+\/*$/.test(location.pathname) && !scrolled && !menuOpen;
   const solid = scrolled || menuOpen;
-  const bg = overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  // Over the portrait the header is a scrim of the flood, strongest behind the
+  // links and gone by its bottom edge, so the photo runs up into it and fades
+  // into the flood there as it does at its right and bottom.
+  const portraitScrim = `linear-gradient(to bottom, color-mix(in oklab, ${flood} 90%, transparent), color-mix(in oklab, ${flood} 72%, transparent) 55%, transparent)`;
+  const bg = overPortrait ? portraitScrim : overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
   // The browser's own toolbar follows the header: the flood, or the page's dark once scrolled.
   const tint = overRoom ? ground ?? GROUND : menuOpen || !scrolled ? flood : ground ?? GROUND;
   // Desktop Safari 26+ ignores theme-color and tints its toolbar from the <body> background,

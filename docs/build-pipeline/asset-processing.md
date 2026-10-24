@@ -266,8 +266,9 @@ Two things keep the files current:
 `scripts/lib/vision-detect.swift`
 
 Every artist photo gets a small JSON file next to it,
-`public/artist/<slug>/<slug>-image.json` (about 600 bytes), saying where the faces
-and subject are and what colours its backdrop and edges are. The artist page uses it
+`public/artist/<slug>/<slug>-image.json` (2–5 KB), saying where the faces
+and subject are, what colours its backdrop and edges are, how colourful the photo
+is, and the subject's matte. The artist page uses it
 to place the portrait in the desktop hero, keep faces clear of the text, carry the
 photo on past its edges and pick the blend mode (see
 [pages.md](../frontend/pages.md), artist header). The shape is in
@@ -281,6 +282,7 @@ The face and subject detection uses Apple's Vision framework, so the script runs
 | Need | Why | Check / install |
 |------|-----|-----------------|
 | macOS 12 or later | Vision's person detection (`VNDetectHumanRectanglesRequest`) | `sw_vers` |
+| macOS 14 or later, for some mattes | The matte is Vision's person segmentation (macOS 12+); only a photo with nobody in it falls back to the foreground mask (`VNGenerateForegroundInstanceMaskRequest`, 14+), so on 12–13 those few get no `matte` and stay greyscale | `sw_vers` |
 | Xcode Command Line Tools (for `swiftc`) | Compiles the Vision helper on first run | `swiftc --version`, else `xcode-select --install` |
 | Node.js + `pnpm install` | Runs the script; `sharp` measures the colours | as for the rest of the repo |
 
@@ -311,7 +313,7 @@ Options:
 | Command | Does |
 |---------|------|
 | `pnpm run generate-artist-images` | Default: only artists with no `-image.json` yet (a no-op run takes well under a second) |
-| `pnpm run generate-artist-images -- --full` | Redo every artist (~20s for ~1,260). `--force` is an alias |
+| `pnpm run generate-artist-images -- --full` | Redo every artist (a few minutes for ~1,260 with the mattes). `--force` is an alias |
 | `pnpm run generate-artist-images -- --only genesis` | Redo one artist (folder slug), whether or not it has a file |
 
 Because the default run only looks for missing files, **a replaced photo is not
@@ -350,7 +352,18 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    the backdrop also gets a `tone` (`light` at relative luminance ≥ 0.214, about
    0.5 in sRGB). The left, right and top edges also get a 12-stop `profile`: the
    outer two pixels averaged and smoothed along the edge. The page draws these as
-   soft gradients to carry the photo on past its edge.
+   soft gradients to carry the photo on past its edge. The whole sample also gives
+   `chroma`, the 95th percentile of each pixel's channel spread: 0 for a
+   black-and-white photo, a little above for a toned print.
+4. **Matte** (Vision, same helper call): the script passes a temporary path beside
+   each photo path (tab-separated) and the helper writes the matte there as a
+   greyscale PNG at the photo's size: person segmentation (`.accurate`), which finds
+   every person (the foreground mask missed the outer members of a line-up), or the
+   foreground mask when it finds nobody. The script shrinks it to 192px, steepens it
+   (under about 22% goes clear, so the soft edge doesn't catch a rim of backdrop
+   round hair; over about 72% goes solid, filling soft patches inside a figure) and
+   embeds it as an alpha-only WebP data URI. Six orchestra and group photos with no
+   one Vision can pick out have no matte and stay greyscale.
 
 ### Output and deployment
 

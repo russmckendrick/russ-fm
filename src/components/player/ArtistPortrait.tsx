@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { handleImageError } from '@/lib/image-utils';
-import { edgeGradient, focusPosition, liftedPortraitFilter, portraitLayout, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
+import { edgeGradient, focusPosition, isMonochrome, liftedPortraitFilter, portraitLayout, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
 
 interface ArtistPortraitProps {
   src: string;
@@ -30,6 +30,11 @@ const DESKTOP = '(min-width: 1024px)';
  * (portraitColumn), and the photo fades out over its right side and a short
  * lead-out past it, a soft gradient of its own edge colours as the <img>'s
  * background, which the filter, blend and fade treat like the photo.
+ *
+ * Over the print sits a second copy of the photo in its own colour, cut to the
+ * subject's matte from the -image.json: the people come back in colour and the
+ * backdrop stays printed in the flood. A black-and-white photo, or one with no
+ * matte, is the print alone.
  *
  * Masks sit on the <img>, never the stage: a mask on a wrapper
  * isolates it and stops the blend reaching the flood.
@@ -66,7 +71,13 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl }: A
     };
   }, [info, harsh, textEl]);
 
+  // A black-and-white photo has no colour to bring back (shown as it is it
+  // would just be grey over the flood), and photos measured before v4 have no matte.
+  const matte = info && !isMonochrome(info) ? info.matte : undefined;
   const placed = layout && info ? placedStyle(layout, info) : { objectPosition: focusPosition(info) };
+  // The same box and fade, without the lead-out background, for the colour layer over the photo.
+  const frame = layout && info ? placedStyle(layout, info, false) : placed;
+  const filter = lift ? liftedPortraitFilter(info?.backdrop.luminance) : 'grayscale(1) contrast(1.2)';
 
   return (
     <div ref={stageRef} className="artist-stage">
@@ -74,10 +85,20 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl }: A
         src={src}
         alt={alt}
         onError={handleImageError}
-        className="artist-portrait object-cover object-top grayscale contrast-[1.2]"
+        className="artist-portrait object-cover object-top"
         data-placed={layout ? '' : undefined}
-        style={{ mixBlendMode: blend, ...(lift ? { filter: liftedPortraitFilter(info?.backdrop.luminance) } : {}), ...placed }}
+        style={{ mixBlendMode: blend, filter, ...placed }}
       />
+      {matte && (
+        <img
+          src={src}
+          alt=""
+          aria-hidden
+          className="artist-portrait artist-portrait-colour object-cover object-top"
+          data-placed={layout ? '' : undefined}
+          style={{ ...frame, '--matte': `url("${matte}")`, '--matte-at': layout ? '0 0' : (focusPosition(info) ?? '50% 0') } as CSSProperties}
+        />
+      )}
     </div>
   );
 }
@@ -88,7 +109,7 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl }: A
  * background gradient of the photo's own right-edge colours (edgeGradient: a
  * smoothed profile, so nothing touching the edge streaks).
  */
-function placedStyle(layout: PortraitLayout, info: ArtistImageInfo): CSSProperties {
+function placedStyle(layout: PortraitLayout, info: ArtistImageInfo, leadOut = true): CSSProperties {
   return {
     '--stage-w': `${layout.stageWidth}px`,
     '--el-left': `${layout.left}px`,
@@ -98,7 +119,7 @@ function placedStyle(layout: PortraitLayout, info: ArtistImageInfo): CSSProperti
     '--fade-to': `${layout.fadeTo}px`,
     objectFit: 'contain',
     objectPosition: '0 0',
-    ...(layout.extendRight > 0
+    ...(leadOut && layout.extendRight > 0
       ? {
           backgroundImage: edgeGradient(info.edges.right, 'to bottom'),
           backgroundSize: `${layout.extendRight + 1}px 100%`,

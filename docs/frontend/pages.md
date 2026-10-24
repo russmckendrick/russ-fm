@@ -386,13 +386,20 @@ swatch tints the rest of the page. No gradients.
   fill a wide column and shrinks until the whole text column fits. Stats step up to 68px
   from 1800px wide. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`)
   is printed into the flood in greyscale and placed from the photo's `-image.json`
-  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). Below `lg`: the
-  photo runs edge to edge, a 4:5 crop on phones and 5:4 from `sm`, centred on the faces,
-  easing in over its top 8% (no hard line under the header) and fading out at the bottom;
+  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). The hero is
+  pulled up under the header, which is a scrim of the flood there until you scroll (see
+  `Navigation` in [components.md](./components.md)), so the photo runs up into the menu.
+  Below `lg`: the photo runs edge to edge, a 4:5 crop on phones and 5:4 from `sm`
+  (plus the header's height), centred on the faces and fading out at the bottom;
   the text column is pulled up over the faded bottom (22% of the photo's height on
   phones, 16% from `sm`) so the name sits in the photo like a poster title and the stats
   and links reach the first screen. The name's `FitTitle` has `min={28}` so a long
-  single word never breaks mid-word on a phone. From `lg` there is no bottom fade:
+  single word never breaks mid-word on a phone. **Colour**: the photo is printed into the
+  flood in greyscale, and a second, full-colour copy sits over that print, cut to the
+  subject's `matte` from the `-image.json`, so the people come back in their own colour
+  while the backdrop stays printed in the flood (a little backdrop round them, like a
+  spotlight's spill, is fine). A black-and-white photo (`chroma` under 0.06,
+  `isMonochrome`) and a photo without a matte are the greyscale print alone. From `lg` there is no bottom fade:
   the photo is the flood's full height and fades out over its right side on a
   smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood
   shows no bands), longer on a harsh step in lightness and starting no earlier than just

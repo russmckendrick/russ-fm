@@ -27,6 +27,24 @@ export interface ArtistImageInfo {
   backdrop: EdgeInfo & { tone: 'light' | 'dark' };
   edges: Record<'bottom', EdgeInfo> & Record<'top' | 'left' | 'right', EdgeInfo & { profile?: string[] }>;
   luminance: number;
+  /**
+   * How colourful the photo is, 0–1 (v4): the 95th percentile of each pixel's
+   * channel spread. Missing from older notes.
+   */
+  chroma?: number;
+  /**
+   * The subject's matte (v4): Vision's foreground mask as a small alpha-only
+   * WebP data URI, the photo's shape. Missing when Vision found no subject.
+   */
+  matte?: string;
+}
+
+/** Below this chroma a photo is black and white (or a toned print). */
+const MONO_CHROMA = 0.06;
+
+/** A black-and-white photo: nothing of its own colour to bring back. Unknown (older notes) counts as colour. */
+export function isMonochrome(info: ArtistImageInfo | null | undefined): boolean {
+  return info?.chroma != null && info.chroma < MONO_CHROMA;
 }
 
 const infoCache = new Map<string, Promise<ArtistImageInfo | null>>();
@@ -170,13 +188,14 @@ export function liftedPortraitFilter(backdropLuminance = 0.05): string {
 
 /**
  * The desktop hero's photo column: the photo's width at the stage's height
- * (the fixed row plus the 2.5rem of flood above and below), between 320px and
+ * (the fixed row, the 2.5rem of flood above and below, and the 84px header the
+ * photo runs up under), between 320px and
  * half the window, so the text starts where the photo ends and takes the rest.
  * Before the notes load, a 4:5 photo is assumed.
  */
 export function portraitColumn(info: ArtistImageInfo | null | undefined, rowHeight: string): string {
   const aspect = info ? info.width / info.height : 0.8;
-  return `clamp(320px, calc((${rowHeight} + 5rem) * ${aspect.toFixed(4)}), 50vw)`;
+  return `clamp(320px, calc((${rowHeight} + 5rem + 84px) * ${aspect.toFixed(4)}), 50vw)`;
 }
 
 /**

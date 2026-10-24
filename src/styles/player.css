@@ -400,12 +400,11 @@ body {
 /* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
    page edge stay crisp.
 
-   Below lg: the photo fills its edge-to-edge cell (4:5, 5:4 from sm), eases
-   in over the top 8% so there's no hard line under the header, and fades out
-   at the bottom (a long fade whose stops follow an ease-out curve, so there's
+   Below lg: the photo fills its edge-to-edge cell, which runs up under the
+   see-through header (4:5 below it, 5:4 from sm), and fades out at the bottom (a long fade whose stops follow an ease-out curve, so there's
    no line where it starts) under the name, which overlaps it. From lg the photo's grid column starts at the page edge and is
-   sized to the photo (portraitColumn); the stage runs from the flood's top
-   (the section's pt-10) to its bottom (the 2.5rem spacer) and 32rem past the
+   sized to the photo (portraitColumn); the stage runs from the page's top
+   (under the see-through header) to the flood's bottom (the 2.5rem spacer) and 32rem past the
    column. Once placed (data-placed, sizes from portraitLayout() in
    src/lib/artistImage.ts) the photo is the flood's full height at the left
    of the <img> box (object-fit: contain), the box runs a short lead-out past
@@ -422,11 +421,6 @@ body {
 .artist-portrait {
   --portrait-fade-bottom: linear-gradient(
     to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.35) 2%,
-    rgba(0, 0, 0, 0.7) 4%,
-    rgba(0, 0, 0, 0.92) 6%,
-    #000 8%,
     #000 40%,
     rgba(0, 0, 0, 0.94) 52%,
     rgba(0, 0, 0, 0.82) 62%,
@@ -442,14 +436,33 @@ body {
 }
 
 .artist-portrait {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
 }
 
+/* The portrait's colour layer (ArtistPortrait): the photo in its own
+   colour over the print, cut to the subject's matte (--matte, from the
+   -image.json, placed like the photo: --matte-at is its object-position) inside
+   the usual fade. */
+.artist-portrait-colour {
+  -webkit-mask-image: var(--portrait-fade-bottom), var(--matte);
+  mask-image: var(--portrait-fade-bottom), var(--matte);
+  -webkit-mask-size: 100% 100%, cover;
+  mask-size: 100% 100%, cover;
+  -webkit-mask-position: 0 0, var(--matte-at);
+  mask-position: 0 0, var(--matte-at);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
 @media (min-width: 1024px) {
   .artist-stage {
-    top: -2.5rem;
+    top: calc(-2.5rem - 84px);
     bottom: -2.5rem;
     left: 0;
     right: auto;
@@ -499,6 +512,17 @@ body {
     mask-position: calc(-1 * var(--el-left, 0px)) 0;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+  }
+
+  /* Placed, the photo sits at 0 0 at the box's height (object-fit: contain), so
+     the matte does too; the fade keeps its stage-wide size. */
+  .artist-portrait-colour {
+    -webkit-mask-image: var(--portrait-fade-right), var(--matte);
+    mask-image: var(--portrait-fade-right), var(--matte);
+    -webkit-mask-size: var(--stage-w, 100%) 100%, auto 100%;
+    mask-size: var(--stage-w, 100%) 100%, auto 100%;
+    -webkit-mask-position: calc(-1 * var(--el-left, 0px)) 0, 0 0;
+    mask-position: calc(-1 * var(--el-left, 0px)) 0, 0 0;
   }
 }
 

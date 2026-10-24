@@ -13,6 +13,16 @@
  *     left, right and top edges also get a smoothed colour profile along the
  *     edge, which the page draws as a soft gradient to carry the photo on past
  *     that edge without streaking whatever touches it.
+ *   - How colourful the photo is (chroma, 0–1): the 95th percentile of each
+ *     pixel's channel spread (max − min). A black-and-white photo is 0 or
+ *     close to it (a toned print a little more); the page keeps those in
+ *     plain greyscale rather than trying to bring their colour back.
+ *   - The subject's matte (Vision's person segmentation, or for a photo with
+ *     nobody in it the foreground mask), shrunk to MATTE px and embedded as an alpha-only WebP data
+ *     URI. The page lays the photo's own colour through it, so the people
+ *     come back in colour while the backdrop stays printed in the flood.
+ *     Embedded rather than a file next to the photo: images are served from
+ *     R2, and a CSS mask from another origin needs CORS.
  *   - Before any of that, letterbox or pillarbox bars (flat black or white
  *     bands a photo was pasted onto) are cut off the -hi-res.jpg itself
  *     (scripts/lib/letterbox.js), so the hero, the round avatars and the
@@ -44,8 +54,10 @@ const HELPER_SRC = path.join(__dirname, 'lib', 'vision-detect.swift');
 const HELPER_BIN = path.join(ROOT, 'node_modules', '.cache', 'russfm', 'vision-detect');
 
 /** Bump when the measurements or output shape change; older files are redone. */
-const VERSION = 3;
+const VERSION = 4;
 const SAMPLE = 48;
+/** The embedded matte's longest side; the browser's upscale gives it a soft edge. */
+const MATTE = 192;
 /** Colour stops down each side edge. */
 const PROFILE_STOPS = 12;
 
@@ -98,6 +110,9 @@ async function measureColour(file) {
     }
   }
   const back = summarise(backdrop);
+  const spreadsOf = pixels => pixels.map(p => (Math.max(...p) - Math.min(...p)) / 255).sort((a, b) => a - b);
+  const spreads = spreadsOf(all);
+  const chroma = spreads[Math.floor(spreads.length * 0.95)];
   // Outer columns, averaged per row, smoothed over a few rows either side and
   // cut to a handful of stops so no hard shape survives.
   // `along` walks the edge; `depth` is how many pixels in from it to average.
@@ -130,6 +145,7 @@ async function measureColour(file) {
       bottom: summarise(bottom),
     },
     luminance: summarise(all).luminance,
+    chroma: round(chroma),
   };
 }
 
@@ -179,6 +195,28 @@ function placement(detected) {
   return { faces: boxes(faces), people: boxes(people), subject, focus };
 }
 
+/**
+ * A greyscale matte PNG as a small alpha-only WebP data URI (black, with the
+ * matte as alpha). After the shrink the matte is steepened: anything under
+ * about 22% goes clear, so the soft edge doesn't catch a rim of backdrop round
+ * the hair, and anything over about 72% goes solid, filling the soft patches
+ * person segmentation leaves inside a figure.
+ */
+async function matteDataUri(file) {
+  const { data, info } = await sharp(file)
+    .greyscale()
+    .resize(MATTE, MATTE, { fit: 'inside' })
+    .linear(2, -0.45 * 255)
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const rgba = Buffer.alloc(info.width * info.height * 4);
+  for (let i = 0; i < info.width * info.height; i++) rgba[i * 4 + 3] = data[i * info.channels];
+  const webp = await sharp(rgba, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .webp({ quality: 60, alphaQuality: 80 })
+    .toBuffer();
+  return `data:image/webp;base64,${webp.toString('base64')}`;
+}
+
 // ---------------------------------------------------------------- vision helper
 
 async function visionHelper() {
@@ -203,8 +241,8 @@ async function visionHelper() {
   }
 }
 
-/** Run every path through the helper in one process; resolves path → result. */
-function detectAll(bin, files) {
+/** Run every job through the helper in one process (asking for its matte); resolves path → result. */
+function detectAll(bin, jobs) {
   return new Promise((resolve, reject) => {
     const results = new Map();
     const child = spawn(bin, [], { stdio: ['pipe', 'pipe', 'inherit'] });
@@ -222,7 +260,7 @@ function detectAll(bin, files) {
     });
     child.on('error', reject);
     child.on('close', () => resolve(results));
-    child.stdin.end(files.join('\n') + '\n');
+    child.stdin.end(jobs.map(j => `${j.file}\t${j.matte}`).join('\n') + '\n');
   });
 }
 
@@ -286,7 +324,9 @@ async function main() {
     console.warn('⚠️  Face and subject detection needs macOS (Vision). Nothing written.');
     return;
   }
-  const detected = await detectAll(bin, jobs.map(j => j.file));
+  const matteDir = await fs.mkdtemp(path.join(os.tmpdir(), 'russfm-matte-'));
+  jobs.forEach(j => (j.matte = path.join(matteDir, `${j.slug}.png`)));
+  const detected = await detectAll(bin, jobs);
 
   let written = 0;
   const limit = Math.max(2, os.cpus().length - 1);
@@ -297,6 +337,7 @@ async function main() {
         const colour = await measureColour(job.file);
         const found = detected.get(job.file);
         if (found?.error) console.warn(`⚠️  ${job.slug}: ${found.error}`);
+        const matte = found?.matte ? await matteDataUri(job.matte) : undefined;
         const data = {
           v: VERSION,
           hash: job.hash,
@@ -304,12 +345,14 @@ async function main() {
           height: meta.height,
           ...placement(found),
           ...colour,
+          ...(matte ? { matte } : {}),
         };
         await fs.writeFile(job.out, JSON.stringify(data) + '\n');
         written++;
       }),
     );
   }
+  await fs.rm(matteDir, { recursive: true, force: true });
   console.log(`✅ Wrote ${written} artist image files`);
 }
 

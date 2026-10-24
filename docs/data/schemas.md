@@ -365,7 +365,7 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 
 ```json
 {
-  "v": 3,
+  "v": 4,
   "hash": "7ccdd9834c16036f",
   "width": 1024,
   "height": 1024,
@@ -380,7 +380,9 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
     "right":  { "colour": "#0b0908", "luminance": 0.004, "even": 0.963, "profile": ["…"] },
     "bottom": { "colour": "#34322d", "luminance": 0.086, "even": 0.559 }
   },
-  "luminance": 0.031
+  "luminance": 0.031,
+  "chroma": 0.412,
+  "matte": "data:image/webp;base64,UklGR…"
 }
 ```
 
@@ -395,6 +397,8 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 | `backdrop` | Top quarter plus outer columns: average `colour`, relative `luminance`, `even` (1 = flat), and `tone` (`light`/`dark`), which picks the blend mode |
 | `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo |
 | `luminance` | Whole-photo relative luminance |
+| `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 the page treats the photo as black and white (`isMonochrome`) and keeps it in greyscale; about a quarter of the photos are |
+| `matte` | (v4) The subject's shape: Vision's person segmentation (every person; a photo with nobody in it falls back to the foreground mask), 192px on its longest side, as an alpha-only WebP data URI (about 1–3 KB). The artist hero lays the photo's own colour through it, over the greyscale print. Missing when Vision finds no subject. Embedded rather than a file, as images are served from R2 and a CSS mask from another origin needs CORS |
 
 ---
 

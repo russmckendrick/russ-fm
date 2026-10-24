@@ -316,7 +316,9 @@ export function ArtistDetailPage() {
 
   return (
     <div>
-      <div className="flood-surface" style={{ background: flood.background, color: flood.ink }}>
+      {/* Pulled up under the sticky header (64px, 84px from md), which is
+          see-through at the top of an artist page, so the photo runs into it. */}
+      <div className="flood-surface -mt-16 md:-mt-[84px]" style={{ background: flood.background, color: flood.ink }}>
         {/* From lg every artist hero is the same height (the one grid row is
             fixed: 56vh, between 420 and 540px). The photo column starts at the
             page edge and is as wide as the photo at that height
@@ -324,15 +326,15 @@ export function ArtistDetailPage() {
             with the page, and the name grows or shrinks to fit it (FitTitle
             fitHeight). */}
         <section
-          className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-10"
+          className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-[calc(4rem+1.5rem)] md:px-10 md:pt-[calc(84px+1.5rem)] lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-[calc(84px+2.5rem)]"
           style={{ '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(imageInfo, HERO_ROW) } as CSSProperties}
         >
           {/* The portrait is printed into the flood in greyscale, blended so
               its backdrop takes the sleeve colours (see portraitBlend). Below
-              lg it runs edge to edge, 4:5 on phones and 5:4 from sm, and fades
-              out at the bottom; from lg the portrait's stage fills the flood's
+              lg it runs edge to edge and up under the header, 4:5 below it on
+              phones and 5:4 from sm, and fades out at the bottom; from lg the portrait's stage fills the flood's
               height (see ArtistPortrait). */}
-          <div className="relative -mx-5 aspect-[4/5] w-[calc(100%+2.5rem)] sm:aspect-[5/4] md:-mx-10 md:w-[calc(100%+5rem)] lg:mx-0 lg:aspect-auto lg:h-full lg:w-full">
+          <div className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(125vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(80vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(80vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full">
             <ArtistPortrait
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}

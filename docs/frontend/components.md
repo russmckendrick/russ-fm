@@ -266,7 +266,9 @@ Sticky header that shares the page's flood colour.
   WebKit's documented source on iOS, did not tint desktop Safari.)
 - The logo is `SpinningMark` (a record at 33⅓) beside the `russ.fm`
   wordmark (on `/tv` pages it is `TvMark` instead, and on `/tv` and channel pages the
-  header is see-through with cream text over the room until scrolled). On pages that pass a `cover` to `usePageFlood` (home hero,
+  header is see-through with cream text over the room until scrolled; on an
+  artist page it is a scrim of the flood, about 90% at the top and clear by its
+  bottom edge, so the portrait runs up into it while the links stay readable). On pages that pass a `cover` to `usePageFlood` (home hero,
   album, artist) the label carries that sleeve; elsewhere the label is the
   page flood (cream on plain pages) with a printed mark so the spin reads.
   The disc uses `.vinyl-lit` (lit rim and highlights) so it reads on the
