@@ -16,7 +16,7 @@ This document covers the route-level page components in russ.fm.
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
-| `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
+| `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
@@ -375,60 +375,57 @@ addition, skipping monochrome (`vivid` 0) sleeves, via `newestFlood(uris, map)`.
 (Picking the most vivid sleeve instead let saturated red covers win almost
 half of all artist pages.)
 The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
-swatch tints the rest of the page. No gradients.
+swatch tints the rest of the page. No gradients. Once the photo's notes load,
+the flood is the hero photo's own colour instead (below), on phones and desktop.
 
-- **Header** — from `lg` every artist hero is the same height (the grid row is fixed at
-  56vh, clamped to 420–540px, with 2.5rem of flood above and below). The photo's column
-  starts at the page edge and is as wide as the photo at that height (`portraitColumn`,
-  320px to half the window), so the photo is never stretched across a wide screen; the
-  text takes the rest of the width (its right edge in line with the page), is centred
-  vertically, and the name is a `FitTitle` (up to 240px) with `fitHeight`, so it grows to
-  fill a wide column and shrinks until the whole text column fits. Stats step up to 68px
-  from 1800px wide. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`)
-  is printed into the flood in greyscale and placed from the photo's `-image.json`
-  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). The hero is
-  pulled up under the header, which is a scrim of the flood there until you scroll (see
-  `Navigation` in [components.md](./components.md)), so the photo runs up into the menu.
-  Below `lg`: the photo runs edge to edge, a 4:5 crop on phones and 5:4 from `sm`
-  (plus the header's height), centred on the faces and fading out at the bottom;
-  the text column is pulled up over the faded bottom (22% of the photo's height on
-  phones, 16% from `sm`) so the name sits in the photo like a poster title and the stats
-  and links reach the first screen. The name's `FitTitle` has `min={28}` so a long
-  single word never breaks mid-word on a phone. **Colour**: the photo is printed into the
-  flood in greyscale, and a second, full-colour copy sits over that print, cut to the
-  subject's `matte` from the `-image.json`, so the people come back in their own colour
-  while the backdrop stays printed in the flood. Under it, the `spill` (the matte
-  blurred wide) lets the photo's own backdrop glow round the people like a
-  spotlight, at up to 55% when that backdrop is about as light as the flood and not
-  at all once they are 30 lightness apart (`spillStrength`): a white or black
-  backdrop against a mid flood would be a halo. A black-and-white photo (`chroma` under 0.06,
-  `isMonochrome`) and a photo without a matte are the greyscale print alone. From `lg` there is no bottom fade:
-  the photo is the flood's full height and fades out over its right side on a
-  smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood
-  shows no bands), longer on a harsh step in lightness and starting no earlier than just
-  before the last face when that leaves it at least 300px (less than that read as an
-  edge on photos with someone at the right edge, so they go soft instead). To soften the
-  end of the fade the `<img>` box runs a short lead-out (at most 96px) past the photo, filled with a gradient of the
-  photo's own right-edge colours from the `-image.json` profile (`object-fit: contain`
-  holds the photo at its size; the filter, blend and fade treat the lead-out like the
-  photo). The fade finishes just into the gap before the text, or under it when a wide
-  photo hits the column's cap. Without an `-image.json` the photo just fills the stage.
-  The backdrop tone comes from `-image.json` (`useBackdropTone` measures it in the browser
-  only when there is none). It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
-  except on a dark flood with a dark backdrop, where it screens so the black takes the
-  flood instead. Screening on a pale flood washed subjects out to ghosts, hence the rule.
-  A dark backdrop multiplied into a pale flood printed as a near-black block with a hard
-  step into the flood, so there the photo is lifted first (`liftedPortraitFilter`): its
-  blacks and backdrop are raised to fixed tones, solved from the backdrop's luminance, so
-  it prints as a duotone of the flood colour.
-  The backdrop is judged by `useBackdropTone` from the avatar; unmeasured, it goes by the
-  flood alone. The artist name is a `FitTitle` (up to 176px, shrunk until its longest word fits,
-  never broken mid-word). Then stats
+- **Header, from `lg`** — every artist hero is the same height (the grid row is fixed at
+  56vh, clamped to 420–540px, with 2.5rem of flood above and below, and the 84px header
+  it runs up under). The photo is the artist's TheAudioDB fanart when there is any (732
+  artists; `fanart` in the `-image.json`, a colour photo unless they only have black and
+  white, and black-and-white fanart only when their own photo is black and white too), else their own photo, shown in its own colour (`ArtistHeroPhoto`,
+  `.artist-hero-photo` in `player.css`): no greyscale print, no blend. `heroPhotoLayout`
+  in `src/lib/artistImage.ts` places it:
+  - on the side its people are on, always at the flood's full height;
+  - the text column is the same for every artist, 44% of the page (440–760px), narrowing
+    to 320px only when a wide band of faces needs the room; a right-hand photo puts the
+    text on the left (`heroGrid` reorders the grid);
+  - the faces are centred in the space beside the text: the photo slides outwards,
+    cropping its outer edge, but never so far that the outermost face is cut, nor so far
+    in that the page edge shows;
+  - it fades out (smootherstep, `fadeMask`) from just past the faces to just into the text.
+  The flood is the photo's own colour where it fades out: the average of the
+  `-image.json`'s colour strips (`columns`) across the fade, decided at build time
+  because a canvas can't read pixels from R2 without CORS. Ink suits it (`inkOn`) and the
+  page under it is the site's dark tinted by it (`photoFlood`). Before the notes load, and
+  for notes from before v5 (no colour strips), the hero falls back to the portrait below.
+  If the photo fails to load, likewise.
+- **Header, phones** — the artist photo (the fanart chosen as it in the scrapper, `source` in
+  the `-image.json`, else the downloaded one; `getArtistPhotoFromData`) runs edge to edge in its own colour (`ArtistPortrait`,
+  `.artist-portrait` in `player.css`), a 4:5 crop on phones and 5:4 from `sm` (plus the
+  header's height, which it runs up under), centred on the faces (`focusPosition`) and
+  fading out at the bottom. The flood is the photo's own bottom-edge colour
+  (`edges.bottom.colour` in the `-image.json`), so the fade meets it without a step. The
+  text column is pulled up over the faded bottom (22% of the photo's height on phones,
+  16% from `sm`) so the name sits in the photo like a poster title and the stats and
+  links reach the first screen. The name's `FitTitle` has `min={28}` so a long single
+  word never breaks mid-word.
+- **Header, everywhere** — until the `-image.json` loads (and for an artist without
+  one) the flood is the newest sleeve's. From `lg` without an `ArtistHeroPhoto` (the
+  notes still loading, or the photo failing to load) the portrait sits in a column as
+  wide as the photo at the hero's height (`portraitColumn`), placed by `portraitLayout`,
+  and fades out over its right side and a short lead-out of its own edge colours. The
+  hero is pulled up under the header, which is a scrim of the flood there until you
+  scroll (see `Navigation` in [components.md](./components.md)). The name is a `FitTitle`
+  (up to 240px) with `fitHeight`, so it grows to fill a wide column and shrinks until the
+  whole text column fits; stats step up to 68px from 1800px wide. Then stats
   (records, box sets, "Releases span" from the earliest to the latest
   original year, or "Released" when they match, Last.fm listeners), service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
   available, otherwise a constructed URL.
+  (Until 2026-10-25 the photo was printed into the sleeve's flood in greyscale, with
+  the people brought back in colour through a Vision matte; that treatment and the
+  `matte` / `spill` notes are gone.)
 - **Biography** — its own full-width section under the hero and above the
   discography, set in columns (one on phones, two from `md`, three from
   `xl`). It uses the longer of `biography` and Last.fm's full

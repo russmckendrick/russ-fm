@@ -13,6 +13,7 @@ authoritative flag list of any subcommand.
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
 `backfill-videos`, `backfill-original-years`, `backfill-formats`, `backfill-tracklists`,
+`backfill-identities`, `backfill-fanart`, `upscale`,
 `maintenance`.
 
 ## Bare invocation
@@ -237,6 +238,15 @@ scrapper artist <ARTIST_NAME> [OPTIONS]
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
 | `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
 | `--perplexity-context` | STRING | - | Extra artist identity context for Perplexity |
+| `--fanart` | STRING | - | Which TheAudioDB fanart the site may use, without re-scraping: `off`, the numbers to use (`1,2`), or `auto` for all. Saved as `raw_data.overrides.fanart` (the **Fanart** field in the TUI and web UI editors) |
+| `--hero` | STRING | - | The image the site's desktop hero shows: `auto`, `photo` (the artist photo), or a fanart (`fanart02`). Saved as `raw_data.overrides.hero` (**Hero image** field) |
+| `--photo` | STRING | - | A fanart the site uses as the artist photo (avatar, cards, phone hero) instead of the downloaded one: `fanart01`, or `auto`. Saved as `raw_data.overrides.photo` (**Artist photo** field) |
+
+> `--fanart`, `--hero` and `--photo` change no file on disk and skip the scrape: they only
+> record a choice, kept across re-scrapes, on the record the artist's public JSON was written
+> from (an artist can have duplicate records). Re-measure afterwards with
+> `pnpm run generate-artist-images -- --only <slug>`, which follows them; the site's build then
+> makes the avatar and medium sizes from the chosen photo.
 
 > `--save` also rewrites every release JSON that embeds the artist (their biography and service
 > IDs are joined into release files at write time) and regenerates `public/collection.json`.
@@ -571,6 +581,107 @@ scrapper backfill-identities
   match changed.
 - New artists resolve their identity in `process_artist`, and `process_release` finds the primary
   artist's Wikipedia article the same way, so this is only needed for artists stored before.
+
+---
+
+## backfill-fanart
+
+Download each artist's TheAudioDB fanart next to its hi-res photo, as
+`public/artist/{slug}/{slug}-fanart01.jpg`, `-fanart02.jpg`, … (up to four, in TheAudioDB's
+order). Fanart are wide background photos with no text on them, 1280×720 in practice (the stored
+metadata says 1920×1080; the files aren't).
+
+```bash
+scrapper backfill-fanart [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only download for this many artists (by name) |
+| `--artist` | `-a` | TEXT | all | Only this artist (exact name, any case) |
+| `--dry-run` | | FLAG | `false` | Print what would be downloaded, without downloading |
+| `--force` | `-f` | FLAG | `false` | Download every artist's fanart again, including files on disk |
+| `--concurrency` | | INT | `6` | Downloads in flight at once |
+
+### Examples
+
+```bash
+# How many are missing?
+scrapper backfill-fanart --dry-run
+
+# Everything (resumable; ~2,000 images take a few minutes)
+scrapper backfill-fanart
+```
+
+### Behavior
+
+- Reads the fanart URLs already stored in `raw_data.theaudiodb`, so no API is called. Both stored
+  shapes count: the API's `strArtistFanart`…`strArtistFanart4`, and the `images` list
+  (`type: fanart`) the Python scrapper saved.
+- Skips artists with every fanart file on disk (unless `--force`) and artists with no public
+  folder. Only JPEGs are written, and nothing is ever deleted: every fanart is downloaded and
+  kept, whatever `raw_data.overrides.fanart` says (it only decides what the site uses).
+  Duplicate artist records sharing one folder are handled once, from the record with the most
+  fanart.
+- Old stored URLs on `www.theaudiodb.com/images/media/artist/` (now 404) are rewritten to
+  `r2.theaudiodb.com`, where TheAudioDB moved them. Each download is tried three times.
+- The first full run fetched 1,991 images for 764 artists (about 380 MB) in a few minutes; 506
+  artists have no fanart on TheAudioDB.
+- New artists, and any artist whose photo is downloaded again (`artist`, a service edit, a
+  rename in the web UI), get their fanart at the same time, so this is only needed for artists
+  stored before. A rename carries the fanart files with the folder.
+- The files sit beside the photo but nothing uses them yet: the site build only reads
+  `-hi-res.jpg`, so they don't reach R2 or the worker bundle.
+
+---
+
+## upscale
+
+AI-upscale the site's small images with Upscayl's bundled `upscayl-bin` (Real-ESRGAN, local,
+on the GPU): artist photos and album covers under 1000px on the short side (to 2000px on the
+long side, at most 4×), and the fanart artist heroes use (1280×720 to 2560×1440).
+
+```bash
+scrapper upscale [OPTIONS]
+```
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `--artists` | FLAG | | Artist photos. With none of `--artists`, `--fanart`, `--albums`, all three |
+| `--fanart` | FLAG | | The fanart each artist hero uses (from its `-image.json`) |
+| `--all-fanart` | FLAG | | Every fanart file (implies `--fanart`) |
+| `--albums` | FLAG | | Album covers |
+| `--only` | TEXT | all | Only these artist or album folders (comma-separated slugs) |
+| `--limit` | INT | all | Only this many images |
+| `--dry-run` | FLAG | `false` | List what would be upscaled |
+| `--restore` | TEXT | - | Put these images (paths under `public/`, comma-separated) back to their kept originals |
+
+```bash
+# What would change, and how long it would take
+scrapper upscale --dry-run
+
+# Everything (about 1,700 images, roughly 1¾ hours; resumable)
+scrapper upscale
+
+# Undo one
+scrapper upscale --restore artist/johnny-cash/johnny-cash-hi-res.jpg
+```
+
+- Needs Upscayl (`brew install --cask upscayl`). The binary is found from `upscale.bin` in
+  `config.json`, `UPSCAYL_BIN`, `upscayl-bin` on the PATH, then `/Applications/Upscayl.app`;
+  models from `upscale.models` or the app's `models/` folder. `upscale.model` defaults to
+  `upscayl-standard-4x`, which cleans up JPEG damage without inventing texture
+  (`high-fidelity-4x` added grain and scratchy skin to small press photos in testing).
+- Each image is upscaled 4× to a PNG, resized to its target (Lanczos3) and written back as a
+  quality-90 JPEG. The original is copied first to `backups/upscale-originals/<path>` (once:
+  a second upscale keeps the first original) with a line in `log.jsonl`.
+- Only images under their target are listed, so a run that stops can simply be started again.
+  Upscaled artist photos and fanart keep their proportions, so `-image.json` placement stays
+  right; the command prints the `generate-artist-images --only` line to refresh their sizes.
+- The same upscale is the **Upscale** button on the web UI's Images tab
+  ([web-ui.md](./web-ui.md#images-and-the-upscaler)).
 
 ---
 

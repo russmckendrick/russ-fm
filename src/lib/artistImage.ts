@@ -18,6 +18,12 @@ interface EdgeInfo {
  */
 export interface ArtistImageInfo {
   v: number;
+  /**
+   * A fanart chosen in the scrapper as the artist photo (`{slug}-fanart0N.jpg`):
+   * these notes, the sizes the build makes and the full-size photo are all of
+   * it instead of the downloaded `-hi-res.jpg`, which stays on disk.
+   */
+  source?: string;
   width: number;
   height: number;
   faces: Box[];
@@ -32,36 +38,54 @@ export interface ArtistImageInfo {
    * channel spread. Missing from older notes.
    */
   chroma?: number;
-  /**
-   * The subject's matte (v4): Vision's foreground mask as a small alpha-only
-   * WebP data URI, the photo's shape. Missing when Vision found no subject.
-   */
-  matte?: string;
-  /** The matte blurred wide (v4, tiny): a spotlight's spill of the backdrop round the people. */
-  spill?: string;
+  /** Average colour of each vertical strip across the photo, left to right (hex; v5). */
+  columns?: string[];
+  /** The TheAudioDB fanart the desktop hero uses instead of the photo (v5), when the artist has any. */
+  fanart?: ArtistFanart;
 }
 
-/** CIE lightness (0–100) of a relative luminance. */
-const lightness = (y: number) => (y > 0.008856 ? 116 * Math.cbrt(y) - 16 : 903.3 * y);
+/** A photo as the desktop hero places it: its size, face / person / subject boxes ([x, y, w, h] fractions) and colour strips. */
+export interface HeroPhoto {
+  width: number;
+  height: number;
+  faces: Box[];
+  people: Box[];
+  salient: Box | null;
+  /** Average colour of each vertical strip across the photo, left to right (hex). */
+  columns: string[];
+}
 
 /**
- * How strongly the portrait's spill shows (0 to 0.55): the photo's own backdrop
- * glowing round the people suits a flood about as light as that backdrop, and
- * fades out as they part; a white or black backdrop against a mid flood would
- * be a halo. Lightness 30 apart is none.
+ * One of the artist's TheAudioDB fanart images, picked by
+ * scripts/generate-artist-images.js (a colour photo unless they are all black
+ * and white): a wide background photo with no text, 1280×720 in practice.
  */
-export function spillStrength(info: ArtistImageInfo | null | undefined, floodLuminance: number): number {
-  if (!info?.spill) return 0;
-  const apart = Math.abs(lightness(info.backdrop.luminance) - lightness(floodLuminance));
-  return 0.55 * Math.max(0, 1 - apart / 30);
+export interface ArtistFanart extends HeroPhoto {
+  /** `{slug}-fanart01.jpg` …, next to the hi-res photo. */
+  file: string;
+  chroma: number;
 }
 
-/** Below this chroma a photo is black and white (or a toned print). */
-const MONO_CHROMA = 0.06;
-
-/** A black-and-white photo: nothing of its own colour to bring back. Unknown (older notes) counts as colour. */
-export function isMonochrome(info: ArtistImageInfo | null | undefined): boolean {
-  return info?.chroma != null && info.chroma < MONO_CHROMA;
+/**
+ * What the desktop hero shows: the fanart when there is any, else the artist's
+ * own photo; null for notes from before v5 (no colour strips), which keep the
+ * older greyscale print (ArtistPortrait).
+ */
+export function heroPhotoOf(info: ArtistImageInfo): { fanart: string | null; photo: HeroPhoto } | null {
+  if (info.fanart) return { fanart: info.fanart.file, photo: info.fanart };
+  if (!info.columns?.length) return null;
+  const s = info.subject;
+  return {
+    fanart: null,
+    photo: {
+      width: info.width,
+      height: info.height,
+      faces: info.faces,
+      people: info.people,
+      salient: s ? [s[0], s[1], s[2] - s[0], s[3] - s[1]] : null,
+      columns: info.columns,
+    },
+  };
 }
 
 const infoCache = new Map<string, Promise<ArtistImageInfo | null>>();
@@ -124,7 +148,7 @@ export interface PortraitLayout {
 
 /** How far past its edge the photo is carried on to soften the end of the fade. */
 const LEAD_OUT = 96;
-/** The shortest the right fade gets when a face sits near the photo's right edge. */
+/** The right fade's length, and the shortest it gets when a face sits near the photo's right edge. */
 const FADE_ROOM = 300;
 
 /**
@@ -133,26 +157,20 @@ const FADE_ROOM = 300;
  * at the page edge and ends about where the column does; the text takes the
  * rest of the width. The photo fades out over its right side and a short
  * lead-out past it, finishing just into the gap before the text (or under the
- * text when a wide photo is capped). The fade is longer on a harsh step in
- * lightness, and starts no earlier than just before the last face, as long as
- * that leaves it room (FADE_ROOM: a photo with someone at its right edge lets
- * them go soft rather than keep a short fade that reads as an edge).
+ * text when a wide photo is capped). The fade starts no earlier than just
+ * before the last face, as long as that leaves it room (FADE_ROOM: a photo
+ * with someone at its right edge lets them go soft rather than keep a short
+ * fade that reads as an edge). Used only when the desktop hero has no
+ * ArtistHeroPhoto (its notes still loading, or the photo failing).
  *
- * `stageW`/`stageH`: the stage; `textX`: where the text column starts, in
- * stage px; `harsh`: the backdrop and flood are far apart in lightness.
+ * `stageW`/`stageH`: the stage; `textX`: where the text column starts, in stage px.
  */
-export function portraitLayout(
-  info: ArtistImageInfo,
-  stageW: number,
-  stageH: number,
-  textX: number,
-  harsh: boolean,
-): PortraitLayout {
+export function portraitLayout(info: ArtistImageInfo, stageW: number, stageH: number, textX: number): PortraitLayout {
   const photoHeight = Math.round(stageH);
   const photoWidth = (info.width / info.height) * photoHeight;
   const photoRight = photoWidth;
 
-  const length = harsh ? 340 : 300;
+  const length = FADE_ROOM;
   let fadeTo = photoRight < textX ? Math.min(photoRight + LEAD_OUT, textX + 24) : Math.min(photoRight, textX + 120);
   fadeTo = Math.min(fadeTo, stageW);
   let fadeFrom = fadeTo - length;
@@ -174,33 +192,6 @@ export function portraitLayout(
     fadeFrom: Math.max(0, fadeFrom),
     fadeTo,
   };
-}
-
-/**
- * Where the lifted portrait's black and backdrop land (0–1, sRGB). The floor
- * eases off for a backdrop that's only mid-dark, which keeps more contrast.
- */
-const LIFT_FLOOR = 0.28;
-const LIFT_FLOOR_MID = 0.12;
-const LIFT_BACKDROP = 0.53;
-
-/**
- * The portrait's filter when a dark-backdrop photo multiplies into a pale
- * flood. Multiplied as it is, the backdrop prints near-black: a dark block
- * with a hard step into the flood that no fade hides. Lifted, its blacks land
- * at the floor and its backdrop at LIFT_BACKDROP, so it prints as a duotone
- * of the flood colour and fades out over a much smaller step. Contrast and
- * brightness are solved from the backdrop's luminance (from the photo's
- * notes; unmeasured, a typical dark backdrop), capped so a near-black one
- * doesn't blow the faces out.
- */
-export function liftedPortraitFilter(backdropLuminance = 0.05): string {
-  const l = Math.max(0, backdropLuminance);
-  const backdrop = l <= 0.0031308 ? 12.92 * l : 1.055 * l ** (1 / 2.4) - 0.055;
-  const floor = LIFT_FLOOR - (LIFT_FLOOR - LIFT_FLOOR_MID) * Math.min(1, Math.max(0, (backdrop - 0.25) / 0.25));
-  const brightness = Math.min(1.8, 2 * floor + (LIFT_BACKDROP - floor) / Math.max(backdrop, 0.05));
-  const contrast = Math.min(1.2, Math.max(0.5, 1 - (2 * floor) / brightness));
-  return `grayscale(1) contrast(${contrast.toFixed(2)}) brightness(${brightness.toFixed(2)})`;
 }
 
 /**
@@ -343,4 +334,117 @@ export function circleCrop(info: ArtistImageInfo): CircleCrop | null {
     originY: pct(((oy ?? y + s / 2) - ry) / rh),
     faces: ox != null,
   };
+}
+
+/** The text's distance from the far page edge (px), as the hero's own padding. */
+const heroPad = (viewW: number) => Math.max(56, (viewW - 1640) / 2 + 56);
+/** Clear space between the photo's side and the text column (px). */
+const FACE_GAP = 40;
+/** The text column: 44% of the page, between these (px)… */
+const TEXT_MIN = 440;
+const TEXT_MAX = 760;
+/** …narrowing to this when the faces need more room beside it. */
+const TEXT_FLOOR = 320;
+
+export interface HeroPhotoLayout {
+  /** The side of the page the photo sits on; the text takes the other. */
+  side: 'left' | 'right';
+  /** The <img> box in the flood (px), the flood's full height, `offset` from the photo's own page edge (0 or less, cropping it). */
+  width: number;
+  height: number;
+  offset: number;
+  /** The fade towards the text, in px from the photo's page-edge side of the <img>. */
+  fadeFrom: number;
+  fadeTo: number;
+  /** Where the text column starts, in px from the photo's page edge. */
+  textStart: number;
+  /** The hero's flood: the photo's own colour where it fades out (hex). */
+  flood: string;
+}
+
+/**
+ * Where the photo (fanart or the artist's own) sits in the desktop hero, in
+ * its own colour, worked out as if the photo were on the left (a right-hand
+ * photo is mirrored in and out):
+ *  - it sits on the side its people are on, always at the flood's full height;
+ *  - the text column is the same for every artist (44% of the page, 440–760px),
+ *    narrowing (to 320px) only when the faces need more room beside it;
+ *  - the faces are centred in the space beside the text: the photo slides
+ *    outwards, cropping its outer edge, but never so far that the outermost
+ *    face is cut, nor so far in that the page edge shows;
+ *  - it fades out from just past the faces to just into the text, and the
+ *    flood is the photo's own colour across that fade, so they meet without a step.
+ * `viewW`: the page width; `heroH`: the flood's height (the hero row, 5rem and
+ * the header the hero runs up under).
+ */
+export function heroPhotoLayout(photo: HeroPhoto, viewW: number, heroH: number): HeroPhotoLayout {
+  const aspect = photo.width / photo.height || 16 / 9;
+  const all = photo.faces.length ? photo.faces : photo.people.length ? photo.people : photo.salient ? [photo.salient] : [];
+  const centre = all.length ? (Math.min(...all.map(b => b[0])) + Math.max(...all.map(b => b[0] + b[2]))) / 2 : 0.5;
+  const side = centre <= 0.5 ? 'left' : 'right';
+  const flip = (b: Box): Box => (side === 'left' ? b : [1 - b[0] - b[2], b[1], b[2], b[3]]);
+  const faces = photo.faces.map(flip);
+  const subject = all.map(flip);
+
+  const height = heroH;
+  const width = height * aspect;
+  // Across the photo (fractions): the faces with room for hair either side, else the subject.
+  const reach: [number, number] = faces.length
+    ? [Math.max(0, Math.min(...faces.map(b => b[0] - b[2] * 0.35))), Math.min(1, Math.max(...faces.map(b => b[0] + b[2] * 1.35)))]
+    : subject.length
+      ? [Math.min(...subject.map(b => b[0])), Math.max(...subject.map(b => b[0] + b[2]))]
+      : [0.3, 0.7];
+  const reachW = (reach[1] - reach[0]) * width;
+
+  const pad = heroPad(viewW);
+  const textW = Math.min(TEXT_MAX, Math.max(TEXT_MIN, viewW * 0.44));
+  // The text column, narrowed (to TEXT_FLOOR) when the faces need the room.
+  const textStart = Math.max(viewW - pad - textW, Math.min(viewW - pad - TEXT_FLOOR, reachW + 2 * FACE_GAP));
+  const region = textStart - FACE_GAP;
+  // Faces centred in the region, within: the photo covering the page edge
+  // (offset ≤ 0), the faces ending before the text, the outermost face on the page.
+  const centred = region / 2 - ((reach[0] + reach[1]) / 2) * width;
+  const offset = Math.max(8 - reach[0] * width, Math.min(0, region - reach[1] * width, centred));
+  const facesEnd = offset + reach[1] * width;
+  const fadeTo = Math.min(offset + width, textStart + 40);
+  const fadeFrom = Math.max(offset, fadeTo - 260, Math.min(facesEnd + 8, fadeTo - 120));
+
+  const at = (px: number) => (px - offset) / width;
+  const [a, z] = side === 'left' ? [at(fadeFrom), at(fadeTo)] : [1 - at(fadeTo), 1 - at(fadeFrom)];
+  return {
+    side,
+    width,
+    height,
+    offset,
+    fadeFrom: fadeFrom - offset,
+    fadeTo: fadeTo - offset,
+    textStart,
+    flood: averageColumns(photo.columns, a, z),
+  };
+}
+
+/** The average of the strips covering [from, to] (fractions across the photo), as hex. */
+function averageColumns(columns: string[], from: number, to: number): string {
+  if (!columns.length) return '#000000';
+  const n = columns.length;
+  const first = Math.max(0, Math.min(n - 1, Math.floor(from * n)));
+  const last = Math.max(first, Math.min(n - 1, Math.ceil(to * n) - 1));
+  const sum = [0, 0, 0];
+  for (let i = first; i <= last; i++) {
+    const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(columns[i]);
+    if (m) [1, 2, 3].forEach((k, j) => (sum[j] += parseInt(m[k], 16)));
+  }
+  const count = last - first + 1;
+  return `#${sum.map(v => Math.round(v / count).toString(16).padStart(2, '0')).join('')}`;
+}
+
+/** A smootherstep fade to transparent from `from` to `to` px, as a CSS mask, in `direction`. */
+export function fadeMask(from: number, to: number, direction: 'to right' | 'to left'): string {
+  const stops: string[] = [];
+  for (let i = 0; i <= 12; i++) {
+    const t = i / 12;
+    const e = t * t * t * (t * (t * 6 - 15) + 10);
+    stops.push(`rgb(0 0 0 / ${(1 - e).toFixed(3)}) ${(from + (to - from) * t).toFixed(1)}px`);
+  }
+  return `linear-gradient(${direction}, ${stops.join(', ')})`;
 }

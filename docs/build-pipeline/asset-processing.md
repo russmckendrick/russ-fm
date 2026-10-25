@@ -32,10 +32,20 @@ pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
 3. Generates medium (800px) and avatar (128px) for artists
 4. Copies processed images to dist directory
 
+An artist's `medium` and `avatar` are made from its photo source: the fanart
+chosen as the artist photo in the scrapper (`source` in its `-image.json`,
+`src/lib/artistPhotoSource.ts`), else the `-hi-res.jpg`. The `avatar` is cut
+round the faces from the notes (`avatarCrop`: room for hair and shoulders,
+never tighter than the short side over 1.8), not from the middle; the crop is
+part of the cache key, and is scaled when an upscaled photo kept its
+proportions. The dev server's on-demand sizes (`vite.config.ts`) do the same.
+
 After processing (or copying from the cache), the script hard-links every
 `*-hi-res.jpg` from `public/` into the output directory next to the
-generated `medium` and `avatar` files, so the output tree is the complete
-set the R2 sync uploads. Hard links cost no disk space; it falls back to a
+generated `medium` and `avatar` files, plus, for an artist, the fanart its
+`-image.json` uses: the desktop hero's (`fanart.file`) and a chosen artist
+photo (`source`), served as they are; the other fanart files stay local. So
+the output tree is the complete set the R2 sync uploads. Hard links cost no disk space; it falls back to a
 copy across filesystems.
 
 ### Image Sizes
@@ -266,11 +276,11 @@ Two things keep the files current:
 `scripts/lib/vision-detect.swift`
 
 Every artist photo gets a small JSON file next to it,
-`public/artist/<slug>/<slug>-image.json` (2–5 KB), saying where the faces
+`public/artist/<slug>/<slug>-image.json` (about 4 KB), saying where the faces
 and subject are, what colours its backdrop and edges are, how colourful the photo
-is, and the subject's matte. The artist page uses it
-to place the portrait in the desktop hero, keep faces clear of the text, carry the
-photo on past its edges and pick the blend mode (see
+is, the colours across it, and which TheAudioDB fanart (if any) the desktop hero
+uses and where its faces are. The artist page uses it to place the hero photo,
+centre the faces beside the text and take the flood from the photo's own colour (see
 [pages.md](../frontend/pages.md), artist header). The shape is in
 [schemas.md](../data/schemas.md#artist-image-json-artistslugslug-imagejson).
 
@@ -282,7 +292,6 @@ The face and subject detection uses Apple's Vision framework, so the script runs
 | Need | Why | Check / install |
 |------|-----|-----------------|
 | macOS 12 or later | Vision's person detection (`VNDetectHumanRectanglesRequest`) | `sw_vers` |
-| macOS 14 or later, for some mattes | The matte is Vision's person segmentation (macOS 12+); only a photo with nobody in it falls back to the foreground mask (`VNGenerateForegroundInstanceMaskRequest`, 14+), so on 12–13 those few get no `matte` and stay greyscale | `sw_vers` |
 | Xcode Command Line Tools (for `swiftc`) | Compiles the Vision helper on first run | `swiftc --version`, else `xcode-select --install` |
 | Node.js + `pnpm install` | Runs the script; `sharp` measures the colours | as for the rest of the repo |
 
@@ -313,8 +322,8 @@ Options:
 | Command | Does |
 |---------|------|
 | `pnpm run generate-artist-images` | Default: only artists with no `-image.json` yet (a no-op run takes well under a second) |
-| `pnpm run generate-artist-images -- --full` | Redo every artist (a few minutes for ~1,260 with the mattes). `--force` is an alias |
-| `pnpm run generate-artist-images -- --only genesis` | Redo one artist (folder slug), whether or not it has a file |
+| `pnpm run generate-artist-images -- --full` | Redo every artist (two or three minutes for ~1,270 photos and ~2,000 fanart). `--force` is an alias |
+| `pnpm run generate-artist-images -- --only genesis` | Redo one artist (folder slug), whether or not it has a file. Takes a comma-separated list too (`--only 'genesis,yes'`) and can be repeated |
 
 Because the default run only looks for missing files, **a replaced photo is not
 picked up by it**: rerun that artist with `--only <slug>`, or everything with
@@ -355,32 +364,47 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    soft gradients to carry the photo on past its edge. The whole sample also gives
    `chroma`, the 95th percentile of each pixel's channel spread: 0 for a
    black-and-white photo, a little above for a toned print.
-4. **Matte** (Vision, same helper call): the script passes a temporary path beside
-   each photo path (tab-separated) and the helper writes the matte there as a
-   greyscale PNG at the photo's size: person segmentation (`.accurate`), which finds
-   every person (the foreground mask missed the outer members of a line-up), or the
-   foreground mask when it finds nobody. The script shrinks it to 192px, steepens it
-   (over about 72% goes solid, filling soft patches inside a figure) and feathers it
-   *inside* the silhouette, so the colour fades into the greyscale print of the
-   person and never shows a rim of backdrop. Person segmentation drops people in
-   tight groups (Dire Straits' and Marillion's back rows), so every detected face
-   the matte doesn't cover gets a soft head-and-shoulders spot added. It also writes
-   `spill`: the matte blurred wide at 48px, which the page shows round the people
-   only when the photo's backdrop is about as light as the flood. Both are embedded
-   as alpha-only WebP data URIs. Six orchestra and group photos with no one Vision
-   can pick out have no matte and stay greyscale.
+4. **Colour strips** (sharp): the average colour of 32 vertical strips across the
+   photo (`columns`). The desktop hero averages the strips where the photo fades
+   out for its flood, so photo and flood meet without a step; phones use the
+   bottom edge's colour.
+5. **Fanart** (v5): when the scrapper has stored TheAudioDB fanart beside the photo
+   (`{slug}-fanart01.jpg` …, `scrapper backfill-fanart`), and the artist's
+   `raw_data.overrides.fanart` (set with `scrapper artist "<name>" --fanart 1,2` or the
+   **Fanart** field, for when TheAudioDB files someone else's photo under them) allows it,
+   every one goes through
+   Vision and gets its chroma and colour strips. One is
+   picked for the desktop hero: colour photos only unless all are black and
+   white; among those TheAudioDB's own order, the first with faces and a third
+   of the photo clear beside them, else the best scored (faces, room beside them,
+   bigger faces). Its notes are written as `fanart`, except when the pick is
+   black and white and the artist's own photo is in colour: colour wins across
+   both. 764 artists have fanart and 732 use it; 51 only have black-and-white
+   fanart, and 19 of those keep it (their own photo is black and white too).
+6. **Hand-set choices** (from the scrapper, `raw_data.overrides` in `<slug>.json`;
+   no file is ever changed for them): `hero` (`photo` or `fanart02`) forces the
+   desktop hero's image over the automatic pick; `photo` (`fanart01`) makes a
+   fanart the artist photo: the notes then measure that file instead of the
+   `-hi-res.jpg` and say so in `source`, and the site's build makes the
+   `medium` and `avatar` sizes from it (below).
+
+The Vision helper runs in batches of 300 photos, one process each: a single
+process for the ~3,250 photos and fanart ran out of memory part way and stopped
+answering, silently. The run warns if any photo gets no answer.
 
 ### Finding photos to replace
 
 `pnpm run report-artist-images` reads every `-image.json` and lists the photos that
 don't suit the artist hero, most-collected artists first: no photo, tiny (under
 500px), low resolution (under 800px; the desktop hero is about 700px tall, so these
-look soft on a retina screen), no person found or black and white (both stay
-greyscale), no face found (the phone crop can't centre), and faces under 7% of the
-photo's height. `--all` adds dark backdrops, which print as a dark block when the
-page's flood is light (hundreds, so opt-in). `--issue <name>` narrows it,
-`--limit 0` lists everyone, and `--csv` writes the lot as CSV. After replacing a
-photo, run `pnpm run generate-artist-images -- --only <slug>`.
+look soft on a retina screen), no person found, black and white, no face found
+(the hero can't centre on anyone), and faces under 7% of the photo's height. Only
+the artist's own photo is judged: the 732 artists whose hero uses fanart show that on desktop.
+`--all` adds dark backdrops, which make a dark flood (hundreds, so opt-in). `--issue <name>` narrows it,
+`--limit 0` lists everyone, and `--csv` writes the lot as CSV. After each group,
+and once at the end for everything listed, it prints the command to re-measure
+those artists, ready to paste once their photos are replaced, e.g.
+`pnpm run generate-artist-images -- --only 'pixies,suede'`.
 
 ### Output and deployment
 

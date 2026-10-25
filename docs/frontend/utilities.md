@@ -135,6 +135,35 @@ const url = getArtistImageFromData(artist.uri_artist, 'medium');
 
 ---
 
+### getArtistPhotoFromData
+
+The artist photo at full size: the fanart chosen as it in the scrapper (`source` in the
+`-image.json`), else the downloaded hi-res. Use it wherever the full-size artist photo is
+shown (the artist hero, `ArtistCard`'s crop fallback); `medium` and `avatar` follow the
+choice on their own, as the build makes them from it.
+
+```typescript
+import { getArtistPhotoFromData } from '@/lib/image-utils';
+
+const url = getArtistPhotoFromData(artist.uri_artist, imageInfo?.source);
+```
+
+---
+
+### getArtistFanartFromData
+
+One of the artist's TheAudioDB fanart images, by the file name its `-image.json`
+gives (`fanart.file`): `getImageUrl('artist/<slug>/<file>')`, so local in dev and R2
+in production. Only the picked fanart is uploaded to R2.
+
+```typescript
+import { getArtistFanartFromData } from '@/lib/image-utils';
+
+const url = getArtistFanartFromData(artist.uri_artist, info.fanart.file);
+```
+
+---
+
 ### getArtistImageInfoUrl
 
 The artist photo's placement and colour notes, `/artist/<slug>/<slug>-image.json`

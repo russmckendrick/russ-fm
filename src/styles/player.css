@@ -397,7 +397,8 @@ body {
 }
 
 /* --- Artist portrait ------------------------------------------------------ */
-/* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
+/* ArtistPortrait (src/components/player/ArtistPortrait.tsx), in the photo's
+   own colour (from lg only when there's no ArtistHeroPhoto). The top and
    page edge stay crisp.
 
    Below lg: the photo fills its edge-to-edge cell, which runs up under the
@@ -416,6 +417,17 @@ body {
   position: absolute;
   inset: 0;
   overflow: hidden;
+}
+
+/* The desktop hero's photo (ArtistHeroPhoto: the TheAudioDB fanart, else the
+   artist's own photo): in its own colour, absolutely placed in the flood by
+   heroPhotoLayout(), masked to fade out before the text. */
+.artist-hero-photo {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 .artist-portrait {
@@ -441,23 +453,6 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-/* The portrait's colour layer (ArtistPortrait): the photo in its own
-   colour over the print, cut to the subject's matte (--matte, from the
-   -image.json, placed like the photo: --matte-at is its object-position) inside
-   the usual fade. */
-.artist-portrait-colour {
-  -webkit-mask-image: var(--portrait-fade-bottom), var(--matte);
-  mask-image: var(--portrait-fade-bottom), var(--matte);
-  -webkit-mask-size: 100% 100%, cover;
-  mask-size: 100% 100%, cover;
-  -webkit-mask-position: 0 0, var(--matte-at);
-  mask-position: 0 0, var(--matte-at);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
 }
 
 @media (min-width: 1024px) {
@@ -514,16 +509,6 @@ body {
     mask-repeat: no-repeat;
   }
 
-  /* Placed, the photo sits at 0 0 at the box's height (object-fit: contain), so
-     the matte does too; the fade keeps its stage-wide size. */
-  .artist-portrait-colour {
-    -webkit-mask-image: var(--portrait-fade-right), var(--matte);
-    mask-image: var(--portrait-fade-right), var(--matte);
-    -webkit-mask-size: var(--stage-w, 100%) 100%, auto 100%;
-    mask-size: var(--stage-w, 100%) 100%, auto 100%;
-    -webkit-mask-position: calc(-1 * var(--el-left, 0px)) 0, 0 0;
-    mask-position: calc(-1 * var(--el-left, 0px)) 0, 0 0;
-  }
 }
 
 /* --- Hero record scrobble scene ------------------------------------------ */
@@ -843,6 +828,22 @@ body {
 
 .icon-btn:hover {
   transform: scale(1.06);
+}
+
+/* The header over an artist hero photo is see-through (Navigation): the logo
+   and links get a halo of the flood (only those: the search results open
+   inside the header), and its outlined controls their own pill of the flood,
+   the photo blurred behind, so they read over a busy photo without a band. */
+.nav-over-photo .nav-halo {
+  text-shadow: var(--nav-halo);
+}
+
+.nav-over-photo .icon-btn:not(:disabled),
+.nav-over-photo .pill:not(.pill-solid),
+.nav-over-photo .nav-search {
+  background-color: color-mix(in oklab, var(--nav-flood) 80%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 /* Genre / facet chips coloured by a representative sleeve. */

@@ -79,7 +79,7 @@ async function main() {
     // worker build step).
     console.log(`🔗 Linking hi-res sources into output: ${outputDir}`);
     const linked = await linkSourceImages(publicDir, distDir);
-    console.log(`   ${linked} hi-res images linked`);
+    console.log(`   ${linked} hi-res and hero fanart images linked`);
 
     console.log('🎉 Image processing completed successfully!');
   } catch (error) {

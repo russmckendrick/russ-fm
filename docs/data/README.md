@@ -63,6 +63,7 @@ public/
         ├── {slug}-hi-res.jpg # High resolution
         ├── {slug}-medium.jpg # Medium resolution
         ├── {slug}-avatar.jpg # Avatar (128px square)
+        ├── {slug}-fanart01.jpg … -fanart04.jpg # TheAudioDB fanart, 1280×720, when it has any (scrapper backfill-fanart); not used by the site yet
         └── {slug}-image.json # Photo placement and colour notes (scripts/generate-artist-images.js)
 ```
 

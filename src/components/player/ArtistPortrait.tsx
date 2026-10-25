@@ -1,50 +1,33 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { handleImageError } from '@/lib/image-utils';
-import { edgeGradient, focusPosition, isMonochrome, liftedPortraitFilter, portraitLayout, spillStrength, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
-import { luminance } from '@/lib/sleeveColour';
+import { edgeGradient, focusPosition, portraitLayout, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
 
 interface ArtistPortraitProps {
   src: string;
   alt: string;
   /** From useArtistImageInfo; without it the photo just fills the stage. */
   info: ArtistImageInfo | null | undefined;
-  blend: 'multiply' | 'screen';
-  /** Backdrop and flood far apart in lightness: give the right fade more room. */
-  harsh: boolean;
-  /** A dark backdrop multiplied into a pale flood: lift its tones (liftedPortraitFilter). */
-  lift: boolean;
   /**
    * The hero's text column; the photo is placed to end before it. An element
    * (from a callback ref), not a ref object: the column renders after the
    * portrait, so a ref object is still empty when the portrait first measures.
    */
   textEl: HTMLElement | null;
-  /** The flood colour behind the portrait, which decides how much spill shows. */
-  flood: string;
 }
 
 const DESKTOP = '(min-width: 1024px)';
 
 /**
- * The artist hero portrait, printed into the flood in greyscale. On phones it
- * fills a 4:5 box, cropped round the faces. From lg it fills the flood's
- * height on a stage running from the page edge to past the text, placed by
- * portraitLayout(): the hero's photo column is sized to the photo
- * (portraitColumn), and the photo fades out over its right side and a short
- * lead-out past it, a soft gradient of its own edge colours as the <img>'s
- * background, which the filter, blend and fade treat like the photo.
- *
- * Over the print sits a second copy of the photo in its own colour, cut to the
- * subject's matte from the -image.json: the people come back in colour and the
- * backdrop stays printed in the flood. Under that, when the backdrop is about as
- * light as the flood, the spill: the same colour copy through the matte blurred
- * wide, a spotlight's glow of the photo's own backdrop round the people. A
- * black-and-white photo, or one with no matte, is the print alone.
- *
- * Masks sit on the <img>, never the stage: a mask on a wrapper
- * isolates it and stops the blend reaching the flood.
+ * The artist hero portrait, in its own colour. On phones it fills a 4:5 box,
+ * cropped round the faces, and fades out at the bottom into the flood (the
+ * photo's own bottom-edge colour). From lg it only shows when there's no
+ * ArtistHeroPhoto (the photo's notes still loading, or the photo failing): it
+ * fills the flood's height on a stage running from the page edge to past the
+ * text, placed by portraitLayout(), and fades out over its right side and a
+ * short lead-out past it, a soft gradient of its own edge colours as the
+ * <img>'s background.
  */
-export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl, flood }: ArtistPortraitProps) {
+export function ArtistPortrait({ src, alt, info, textEl }: ArtistPortraitProps) {
   const stageRef = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<PortraitLayout | null>(null);
 
@@ -63,7 +46,7 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl, flo
       }
       const s = stage.getBoundingClientRect();
       const t = text.getBoundingClientRect();
-      setLayout(portraitLayout(info, s.width, s.height, t.left - s.left, harsh));
+      setLayout(portraitLayout(info, s.width, s.height, t.left - s.left));
     };
     update();
     const observer = new ResizeObserver(update);
@@ -74,25 +57,9 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl, flo
       observer.disconnect();
       media.removeEventListener('change', update);
     };
-  }, [info, harsh, textEl]);
+  }, [info, textEl]);
 
-  // A black-and-white photo has no colour to bring back (shown as it is it
-  // would just be grey over the flood), and photos measured before v4 have no matte.
-  const matte = info && !isMonochrome(info) ? info.matte : undefined;
-  const spill = matte ? spillStrength(info, luminance(flood)) : 0;
-  const matteAt = layout ? '0 0' : (focusPosition(info) ?? '50% 0');
   const placed = layout && info ? placedStyle(layout, info) : { objectPosition: focusPosition(info) };
-  // The same box, without the lead-out background, for the colour layer over
-  // the photo. Its fade ends by the photo's own right edge: the lead-out has no
-  // colour copy, so a layer still showing there would stop at a hard line.
-  const frame = layout && info
-    ? ({
-        ...placedStyle(layout, info, false),
-        '--fade-from': `${Math.max(0, Math.min(layout.fadeFrom, layout.photoWidth - 200))}px`,
-        '--fade-to': `${Math.min(layout.fadeTo, layout.photoWidth)}px`,
-      } as CSSProperties)
-    : placed;
-  const filter = lift ? liftedPortraitFilter(info?.backdrop.luminance) : 'grayscale(1) contrast(1.2)';
 
   return (
     <div ref={stageRef} className="artist-stage">
@@ -102,28 +69,8 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl, flo
         onError={handleImageError}
         className="artist-portrait object-cover object-top"
         data-placed={layout ? '' : undefined}
-        style={{ mixBlendMode: blend, filter, ...placed }}
+        style={placed}
       />
-      {spill > 0 && (
-        <img
-          src={src}
-          alt=""
-          aria-hidden
-          className="artist-portrait artist-portrait-colour object-cover object-top"
-          data-placed={layout ? '' : undefined}
-          style={{ ...frame, opacity: spill, '--matte': `url("${info!.spill}")`, '--matte-at': matteAt } as CSSProperties}
-        />
-      )}
-      {matte && (
-        <img
-          src={src}
-          alt=""
-          aria-hidden
-          className="artist-portrait artist-portrait-colour object-cover object-top"
-          data-placed={layout ? '' : undefined}
-          style={{ ...frame, '--matte': `url("${matte}")`, '--matte-at': matteAt } as CSSProperties}
-        />
-      )}
     </div>
   );
 }
@@ -134,7 +81,7 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl, flo
  * background gradient of the photo's own right-edge colours (edgeGradient: a
  * smoothed profile, so nothing touching the edge streaks).
  */
-function placedStyle(layout: PortraitLayout, info: ArtistImageInfo, leadOut = true): CSSProperties {
+function placedStyle(layout: PortraitLayout, info: ArtistImageInfo): CSSProperties {
   return {
     '--stage-w': `${layout.stageWidth}px`,
     '--el-left': `${layout.left}px`,
@@ -144,7 +91,7 @@ function placedStyle(layout: PortraitLayout, info: ArtistImageInfo, leadOut = tr
     '--fade-to': `${layout.fadeTo}px`,
     objectFit: 'contain',
     objectPosition: '0 0',
-    ...(leadOut && layout.extendRight > 0
+    ...(layout.extendRight > 0
       ? {
           backgroundImage: edgeGradient(info.edges.right, 'to bottom'),
           backgroundSize: `${layout.extendRight + 1}px 100%`,

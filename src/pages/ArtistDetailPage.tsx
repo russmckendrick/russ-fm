@@ -6,9 +6,11 @@ import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFl
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
-import { useBackdropTone } from '@/hooks/useBackdropTone';
-import { portraitColumn, useArtistImageInfo } from '@/lib/artistImage';
+import { heroPhotoLayout, heroPhotoOf, portraitColumn, useArtistImageInfo, type ArtistImageInfo, type HeroPhotoLayout } from '@/lib/artistImage';
 import { ArtistPortrait } from '@/components/player/ArtistPortrait';
+import { ArtistHeroPhoto } from '@/components/player/ArtistHeroPhoto';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useViewportSize } from '@/hooks/useViewportSize';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
@@ -16,10 +18,10 @@ import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { artistMatcher } from '@/lib/artistMatch';
 import { artistChannel, loadTv } from '@/lib/tv';
 import { slugify } from '@/lib/browseFacets';
-import { floodFor, INK } from '@/lib/sleeveColour';
+import { floodFor, GROUND, inkOn, subInk } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { cn } from '@/lib/utils';
-import { getAlbumImageFromData, getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistFanartFromData, getArtistImageFromData, getArtistOGImageUrl, getArtistPhotoFromData } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
@@ -172,31 +174,42 @@ export function ArtistDetailPage() {
   // The top of the page is one solid colour: the newest addition's sleeve,
   // skipping monochrome ones. Its dark swatch grounds the rest of the page.
   const colourMap = useAlbumColorMap();
-  const flood = useMemo(
+  const sleeveFlood = useMemo(
     () => newestFlood(byAdded.map(a => a.uri_release), colourMap) ?? bandFromFlood(floodFor(null)),
     [byAdded, colourMap],
+  );
+  // The hero photo is always in its own colour, and the flood is the photo's
+  // own colour where it fades out, so they meet without a step. From lg it is
+  // the artist's TheAudioDB fanart when there is any, else their own photo,
+  // placed by its faces (heroPhotoLayout) and fading out before the text;
+  // phones show the square photo cropped round the faces, fading out at its
+  // bottom into its own bottom-edge colour. The sleeve's flood holds until the
+  // photo's notes load (and for an artist without any).
+  const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
+  const desktop = useMediaQuery('(min-width: 1024px)');
+  const [viewW, viewH] = useViewportSize();
+  const [failedHero, setFailedHero] = useState<string | null>(null);
+  const heroSource = desktop && imageInfo ? heroPhotoOf(imageInfo) : null;
+  const heroSrc = heroSource && artistPath
+    ? heroSource.fanart
+      ? getArtistFanartFromData(`/artist/${artistPath}/`, heroSource.fanart)
+      : getArtistPhotoFromData(`/artist/${artistPath}/`, imageInfo?.source)
+    : null;
+  const heroPhoto = heroSource && heroSrc !== failedHero ? heroSource.photo : null;
+  const hero = useMemo(
+    () => (heroPhoto ? heroPhotoLayout(heroPhoto, viewW, heroHeight(viewH)) : null),
+    [heroPhoto, viewW, viewH],
+  );
+  const bottomColour = imageInfo?.edges.bottom.colour;
+  const flood = useMemo(
+    () => (hero ? photoFlood(hero.flood) : bottomColour ? photoFlood(bottomColour) : sleeveFlood),
+    [hero, bottomColour, sleeveFlood],
   );
   usePageFlood(
     byAdded.length ? flood.top : null,
     byAdded.length ? flood.ink : null,
     byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground, vinyl: byAdded[0].vinyl_colours?.[0] } : undefined,
   );
-  // Blend the portrait into the flood. Multiply turns a light backdrop into
-  // the flood colour; screen does the same for a dark backdrop, but only on a
-  // dark flood; on a pale one it washes the subject out to a ghost, so there
-  // the photo multiplies too and keeps its tonal range. The backdrop tone
-  // comes from the photo's -image.json; only photos without one are measured
-  // in the browser. Unmeasured → go by the flood alone.
-  const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
-  const measuredTone = useBackdropTone(artistPath && imageInfo === null ? getArtistAvatarFromData(`/artist/${artistPath}/`) : undefined);
-  const backdrop = imageInfo ? imageInfo.backdrop.tone : measuredTone;
-  const darkFlood = flood.ink !== INK;
-  const portraitBlend = darkFlood && backdrop !== 'light' ? 'screen' : 'multiply';
-  // A dark backdrop multiplied into a pale flood (or the reverse) is a hard
-  // step in lightness; the fade gets more room there.
-  const portraitHarsh = !!backdrop && (backdrop === 'dark') !== darkFlood;
-  // That dark backdrop would print as a near-black block; lift it instead.
-  const portraitLift = portraitBlend === 'multiply' && backdrop === 'dark';
   const [heroText, setHeroText] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -318,7 +331,8 @@ export function ArtistDetailPage() {
     <div>
       {/* Pulled up under the sticky header (64px, 84px from md), which is
           see-through at the top of an artist page, so the photo runs into it. */}
-      <div className="flood-surface -mt-16 md:-mt-[84px]" style={{ background: flood.background, color: flood.ink }}>
+      <div className={cn('flood-surface -mt-16 md:-mt-[84px]', hero && 'relative overflow-hidden')} style={{ background: flood.background, color: flood.ink }}>
+        {hero && heroSrc && <ArtistHeroPhoto src={heroSrc} layout={hero} onError={() => setFailedHero(heroSrc)} />}
         {/* From lg every artist hero is the same height (the one grid row is
             fixed: 56vh, between 420 and 540px). The photo column starts at the
             page edge and is as wide as the photo at that height
@@ -326,25 +340,27 @@ export function ArtistDetailPage() {
             with the page, and the name grows or shrinks to fit it (FitTitle
             fitHeight). */}
         <section
-          className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-[calc(4rem+1.5rem)] md:px-10 md:pt-[calc(84px+1.5rem)] lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-[calc(84px+2.5rem)]"
-          style={{ '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(imageInfo, HERO_ROW) } as CSSProperties}
+          className="relative mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-[calc(4rem+1.5rem)] md:px-10 md:pt-[calc(84px+1.5rem)] lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-[calc(84px+2.5rem)]"
+          style={heroGrid(imageInfo, hero)}
         >
-          {/* The portrait is printed into the flood in greyscale, blended so
-              its backdrop takes the sleeve colours (see portraitBlend). Below
-              lg it runs edge to edge and up under the header, 4:5 below it on
-              phones and 5:4 from sm, and fades out at the bottom; from lg the portrait's stage fills the flood's
-              height (see ArtistPortrait). */}
-          <div className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(125vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(80vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(80vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full">
-            <ArtistPortrait
-              src={getArtistImageFromData(artistUri, 'hi-res')}
-              alt={artistName}
-              info={imageInfo}
-              blend={portraitBlend}
-              harsh={portraitHarsh}
-              lift={portraitLift}
-              textEl={heroText}
-              flood={flood.top}
-            />
+          {/* Below lg the photo, in its own colour, runs edge to edge and up
+              under the header, 4:5 below it on phones and 5:4 from sm, and
+              fades out at the bottom into the flood (its own bottom-edge
+              colour); from lg the portrait's stage fills the flood's height
+              (see ArtistPortrait), when there's no ArtistHeroPhoto. */}
+          <div
+            className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(125vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(80vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(80vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full"
+            style={hero?.side === 'right' ? { order: 2 } : undefined}
+          >
+            {/* From lg the photo is usually ArtistHeroPhoto, in the flood above; this cell then just holds its side. */}
+            {!hero && (
+              <ArtistPortrait
+                src={getArtistPhotoFromData(artistUri, imageInfo?.source)}
+                alt={artistName}
+                info={imageInfo}
+                textEl={heroText}
+              />
+            )}
           </div>
           {/* Below lg the text is pulled up over the faded bottom of the
               photo (22% of its height on phones, 16% from sm, worked from the
@@ -612,6 +628,36 @@ function formatAdded(value: string): string {
 
 /** The artist hero's one row from lg: every hero is this tall. */
 const HERO_ROW = 'clamp(420px, 56vh, 540px)';
+
+/** The flood's height from lg (px): HERO_ROW, 2.5rem above and below, and the 84px header it runs up under. */
+function heroHeight(viewH: number): number {
+  return Math.min(540, Math.max(420, viewH * 0.56)) + 84 + 80;
+}
+
+/**
+ * The hero grid's columns. With ArtistHeroPhoto the photo's column is an
+ * empty cell on its side, ending the 4rem gap before where heroPhotoLayout
+ * starts the text; a right-hand photo puts the text first, padded in from the
+ * left as it usually is from the right. Otherwise (phones, older notes) the
+ * column is sized to the portrait (portraitColumn).
+ */
+function heroGrid(info: ArtistImageInfo | null | undefined, hero: HeroPhotoLayout | null): CSSProperties {
+  if (!hero) return { '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(info, HERO_ROW) } as CSSProperties;
+  const photoCol = `${Math.max(0, Math.round(hero.textStart - 64))}px`;
+  if (hero.side === 'left') return { '--hero-row': HERO_ROW, '--portrait-col': photoCol } as CSSProperties;
+  return {
+    '--hero-row': HERO_ROW,
+    gridTemplateColumns: `minmax(0, 1fr) ${photoCol}`,
+    paddingLeft: 'max(3.5rem, calc((100vw - 1640px) / 2 + 3.5rem))',
+    paddingRight: 0,
+  } as CSSProperties;
+}
+
+/** A hero band in the photo's own colour: ink to suit, and the site's dark tinted by it for the page under it. */
+function photoFlood(colour: string): ReturnType<typeof bandFromFlood> {
+  const ink = inkOn(colour);
+  return bandFromFlood({ flood: colour, ink, sub: subInk(ink), ground: GROUND, glow: colour, secondary: null });
+}
 
 type DiscographyOrder = 'added' | 'year';
 

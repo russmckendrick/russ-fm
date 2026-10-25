@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, Menu, X, ChevronDown, Shuffle } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -138,11 +138,17 @@ export function Navigation() {
   // An artist page runs its portrait up under the header too, but keeps the flood's ink.
   const overPortrait = /^\/artist\/[^/]+\/*$/.test(location.pathname) && !scrolled && !menuOpen;
   const solid = scrolled || menuOpen;
-  // Over the portrait the header is a scrim of the flood, strongest behind the
-  // links and gone by its bottom edge, so the photo runs up into it and fades
-  // into the flood there as it does at its right and bottom.
-  const portraitScrim = `linear-gradient(to bottom, color-mix(in oklab, ${flood} 90%, transparent), color-mix(in oklab, ${flood} 72%, transparent) 55%, transparent)`;
-  const bg = overPortrait ? portraitScrim : overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  // Over the portrait the header is see-through, so the photo runs up under it
+  // untouched (a scrim of the flood tinted a box across the top of the photo).
+  // The logo and links keep the flood's ink, haloed in the flood colour so
+  // they read over the photo without a band behind them (.nav-halo: only
+  // those, so the search results that open under the header stay crisp); the
+  // outlined controls (search, Shuffle, Last.fm, menu) get their own pill of
+  // the flood (.nav-over-photo).
+  const bg = overPortrait || overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  const halo = overPortrait
+    ? `0 0 2px ${flood}, 0 0 10px ${flood}, 0 0 22px color-mix(in oklab, ${flood} 70%, transparent)`
+    : undefined;
   // The browser's own toolbar follows the header: the flood, or the page's dark once scrolled.
   const tint = overRoom ? ground ?? GROUND : menuOpen || !scrolled ? flood : ground ?? GROUND;
   // Desktop Safari 26+ ignores theme-color and tints its toolbar from the <body> background,
@@ -161,11 +167,12 @@ export function Navigation() {
   const markLabel = hasFlood ? flood : CREAM;
   // The current page's pill: ink on the flood, then the flood itself once the
   // header has scrolled onto the dark ground, so the colour follows you down.
+  // It is solid, so it drops the halo the links get over a photo.
   const activePill = overRoom
     ? { background: CREAM, color: INK }
     : scrolled && !menuOpen
       ? { background: hasFlood ? flood : CREAM, color: hasFlood ? ink : INK }
-      : { background: fg, color: hasFlood ? flood : "var(--ground)" };
+      : { background: fg, color: hasFlood ? flood : "var(--ground)", textShadow: "none" };
 
   return (
     <>
@@ -173,11 +180,12 @@ export function Navigation() {
         className={cn(
           "sticky top-0 z-50 w-full transition-[background-color,color,box-shadow] duration-700",
           solid && !menuOpen && "shadow-[0_1px_0_rgba(251,247,239,.08)]",
+          overPortrait && "nav-over-photo",
         )}
-        style={{ background: bg, color: fg }}
+        style={{ background: bg, color: fg, "--nav-flood": flood, "--nav-halo": halo } as CSSProperties}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-5 px-5 md:h-[84px] md:px-10 lg:px-14 xl:gap-7">
-          <Link to="/" className="flex shrink-0 items-center gap-2.5 md:gap-3" aria-label="russ.fm — home">
+          <Link to="/" className="nav-halo flex shrink-0 items-center gap-2.5 md:gap-3" aria-label="russ.fm — home">
             {onTv ? (
               <TvMark size={isCompact ? 36 : 44} cover={cover} screen={hasFlood ? flood : INK} />
             ) : (
@@ -186,7 +194,7 @@ export function Navigation() {
             <span className="t-disp text-[22px] tracking-[-0.04em] md:text-[26px]">russ.fm</span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden flex-1 items-center gap-1 xl:flex">
+          <nav aria-label="Primary" className="nav-halo hidden flex-1 items-center gap-1 xl:flex">
             {PRIMARY.map((item) => (
               <NavLink key={item.path} item={item} active={isActive(item)} activeStyle={activePill} />
             ))}
@@ -221,7 +229,7 @@ export function Navigation() {
 
           <div className="ml-auto flex items-center gap-2 md:gap-3">
             <div className="relative hidden min-[1536px]:block">
-              <label className="flex h-11 w-[260px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100">
+              <label className="nav-search flex h-11 w-[260px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100">
                 <Search className="h-[18px] w-[18px] shrink-0" aria-hidden />
                 <input
                   ref={searchInputRef}

@@ -365,7 +365,7 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 
 ```json
 {
-  "v": 4,
+  "v": 5,
   "hash": "7ccdd9834c16036f",
   "width": 1024,
   "height": 1024,
@@ -382,25 +382,35 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
   },
   "luminance": 0.031,
   "chroma": 0.412,
-  "matte": "data:image/webp;base64,UklGR…",
-  "spill": "data:image/webp;base64,UklGR…"
+  "columns": ["#2f3858", "#25273e", "…32 strips"],
+  "fanart": {
+    "file": "pixies-fanart03.jpg",
+    "width": 1280,
+    "height": 720,
+    "faces": [[0.267, 0.16, 0.121, 0.216]],
+    "people": [[0.05, 0.064, 0.349, 0.938]],
+    "salient": [0.04, 0.077, 0.953, 0.922],
+    "chroma": 0.329,
+    "columns": ["#2b7b7c", "…32 strips"]
+  }
 }
 ```
 
 | Field | Meaning |
 |-------|---------|
 | `v` | Script `VERSION`; files from an older version are redone by a `--full` run |
+| `source` | (v5) Only when a fanart was chosen in the scrapper as the artist photo (`raw_data.overrides.photo`): its file name (`{slug}-fanart01.jpg`). Every other field then describes that file, and the build makes `medium` / `avatar` from it. Absent: the notes are of `{slug}-hi-res.jpg` |
 | `hash` | First 16 hex chars of the photo's sha1, for reference (a replaced photo needs `--only <slug>` or `--full`) |
 | `width`, `height` | Photo size in px |
 | `faces`, `people` | Vision boxes, `[x, y, w, h]` as fractions of the photo, origin top-left |
 | `subject` | `[x0, y0, x1, y1]` fractions: people and faces combined, else the salient area; `null` when nothing is found |
 | `focus` | `[x, y]` fractions: centre of the faces, else the upper part of the subject; `null` when nothing is found. Sets the phone crop |
-| `backdrop` | Top quarter plus outer columns: average `colour`, relative `luminance`, `even` (1 = flat), and `tone` (`light`/`dark`), which picks the blend mode |
-| `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo |
+| `backdrop` | Top quarter plus outer columns: average `colour`, relative `luminance`, `even` (1 = flat), and `tone` (`light`/`dark`; `report-artist-images --all` lists dark ones) |
+| `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo. `bottom.colour` is the phone hero's flood |
 | `luminance` | Whole-photo relative luminance |
-| `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 the page treats the photo as black and white (`isMonochrome`) and keeps it in greyscale; about a quarter of the photos are |
-| `matte` | (v4) The subject's shape, 192px on its longest side, as an alpha-only WebP data URI (about 1–3 KB): Vision's person segmentation (a photo with nobody in it falls back to the foreground mask), feathered inside the silhouette, plus a soft spot for any detected face it missed. The artist hero lays the photo's own colour through it, over the greyscale print. Missing when Vision finds no subject. Embedded rather than a file, as images are served from R2 and a CSS mask from another origin needs CORS |
-| `spill` | (v4) The matte blurred wide, 48px, the same kind of data URI: the photo's own backdrop glowing round the people, shown only when that backdrop is about as light as the flood (`spillStrength`) |
+| `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 is black and white (about a quarter of the photos); `report-artist-images` flags those. The `matte` and `spill` of v4 were dropped in v5 |
+| `columns` | (v5) Average colour of 32 vertical strips across the photo, left to right. The desktop hero's flood is the average of the strips where the photo fades out |
+| `fanart` | (v5) The TheAudioDB fanart the desktop hero uses instead of the photo, when the artist has any: `file` (`{slug}-fanart0N.jpg`, next to the photo), its size, Vision's `faces`/`people`/`salient` boxes (`[x, y, w, h]` fractions), `chroma` and `columns` as above. Missing for the ~500 artists without fanart |
 
 ---
 

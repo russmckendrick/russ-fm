@@ -4,6 +4,7 @@ import path from 'path'
 import fs from 'fs'
 import sharp from 'sharp'
 import type { Plugin } from 'vite'
+import { avatarCropFor, photoSourceFile, type PhotoNotes } from './src/lib/artistPhotoSource'
 
 // Image processing plugin
 function imageProcessingPlugin(): Plugin {
@@ -20,7 +21,19 @@ function imageProcessingPlugin(): Plugin {
         if (imageMatch) {
           const [, folder, baseName, size] = imageMatch
           const type = req.url.startsWith('/album') ? 'album' : 'artist'
-          const hiResPath = path.join(process.cwd(), 'public', type, folder, `${baseName}-hi-res.jpg`)
+          let hiResPath = path.join(process.cwd(), 'public', type, folder, `${baseName}-hi-res.jpg`)
+          // An artist's sizes come from its photo source (a fanart chosen in the scrapper),
+          // with the avatar cut round the faces, as the build does (src/lib/imageProcessor.ts).
+          let notes: PhotoNotes | null = null
+          if (type === 'artist') {
+            try {
+              notes = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public', 'artist', folder, `${folder}-image.json`), 'utf8'))
+              const source = path.join(process.cwd(), 'public', 'artist', folder, photoSourceFile(folder, notes))
+              if (fs.existsSync(source)) hiResPath = source
+            } catch {
+              // No notes yet: the hi-res, cut from the middle.
+            }
+          }
           
           try {
             // Check if hi-res source exists
@@ -42,7 +55,13 @@ function imageProcessingPlugin(): Plugin {
               }
               
               // Process image directly to buffer (no file writing)
-              const processedBuffer = await sharp(hiResPath)
+              const image = sharp(hiResPath)
+              if (size === 'avatar' && notes) {
+                const { width = 0, height = 0 } = await image.metadata()
+                const crop = avatarCropFor(notes, width, height)
+                if (crop) image.extract({ left: crop.left, top: crop.top, width: crop.size, height: crop.size })
+              }
+              const processedBuffer = await image
                 .resize(targetSize, targetSize, {
                   fit: 'cover',
                   position: 'center'

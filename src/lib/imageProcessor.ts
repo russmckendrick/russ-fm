@@ -7,6 +7,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import chalk from 'chalk';
+import { avatarCropFor, photoSourceFile, type PhotoNotes } from './artistPhotoSource';
 
 export interface ImageSizes {
   medium: number;
@@ -69,12 +70,17 @@ export async function areProcessedImagesUpToDate(
   }
 }
 
+/** The square an artist's avatar is cut from (artistPhotoSource's avatarCrop), in source px. */
+type Crop = { left: number; top: number; size: number };
+
 /**
- * Process a single image into multiple sizes
+ * Process a single image into multiple sizes. `avatar`: where to cut the
+ * avatar from (round the faces) instead of the middle.
  */
 export async function processImage(
   sourceImagePath: string,
-  outputPaths: ProcessedImagePaths
+  outputPaths: ProcessedImagePaths,
+  avatar?: Crop | null,
 ): Promise<void> {
   // Ensure output directories exist
   for (const [size, outputPath] of Object.entries(outputPaths)) {
@@ -88,7 +94,11 @@ export async function processImage(
   const tasks = Object.entries(IMAGE_SIZES).map(async ([sizeName, pixels]) => {
     const outputPath = outputPaths[sizeName as keyof ImageSizes];
 
-    await sharp(sourceImagePath)
+    const image = sharp(sourceImagePath);
+    if (sizeName === 'avatar' && avatar) {
+      image.extract({ left: avatar.left, top: avatar.top, width: avatar.size, height: avatar.size });
+    }
+    await image
       .resize(pixels, pixels, {
         fit: 'cover',
         position: 'center'
@@ -134,11 +144,32 @@ export function getProcessedImagePathsForOutput(
   };
 }
 
+/** An artist's -image.json (scripts/generate-artist-images.js), or null. */
+async function readNotes(folder: string, slug: string): Promise<(PhotoNotes & { fanart?: { file?: string } }) | null> {
+  try {
+    return JSON.parse(await fs.readFile(path.join(folder, `${slug}-image.json`), 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * The fanart files an artist's site pages use, besides the hi-res photo: the
+ * desktop hero's (`fanart.file`) and a fanart chosen as the artist photo
+ * (`source`), both from its -image.json.
+ */
+async function artistExtraFiles(folder: string, slug: string, files: string[]): Promise<string[]> {
+  const notes = await readNotes(folder, slug);
+  const wanted = [notes?.fanart?.file, notes?.source].filter((f): f is string => typeof f === 'string' && files.includes(f));
+  return [...new Set(wanted)];
+}
+
 /**
  * Place every hi-res source image into the output tree next to its processed
  * sizes, so `dist/` carries the complete set an R2 sync expects
- * (hi-res, medium, avatar). Hard-links when possible (instant, no extra
- * disk), falling back to a copy across filesystems.
+ * (hi-res, medium, avatar), plus the one fanart image an artist's desktop
+ * hero uses (served as it is, 1280×720). Hard-links when possible (instant,
+ * no extra disk), falling back to a copy across filesystems.
  */
 export async function linkSourceImages(publicDir: string, outputDir: string): Promise<number> {
   let linked = 0;
@@ -152,20 +183,24 @@ export async function linkSourceImages(publicDir: string, outputDir: string): Pr
     }
     for (const entry of entries) {
       if (!entry.isDirectory()) continue;
-      const files = await fs.readdir(path.join(sourceDir, entry.name));
+      const folder = path.join(sourceDir, entry.name);
+      const files = await fs.readdir(folder);
       const hiResFile = files.find(file => file.endsWith('-hi-res.jpg'));
       if (!hiResFile) continue;
+      const extra = kind === 'artist' ? await artistExtraFiles(folder, entry.name, files) : [];
 
-      const source = path.join(sourceDir, entry.name, hiResFile);
-      const target = path.join(outputDir, kind, entry.name, hiResFile);
-      await fs.mkdir(path.dirname(target), { recursive: true });
-      await fs.rm(target, { force: true });
-      try {
-        await fs.link(source, target);
-      } catch {
-        await fs.copyFile(source, target);
+      for (const file of [hiResFile, ...extra]) {
+        const source = path.join(folder, file);
+        const target = path.join(outputDir, kind, entry.name, file);
+        await fs.mkdir(path.dirname(target), { recursive: true });
+        await fs.rm(target, { force: true });
+        try {
+          await fs.link(source, target);
+        } catch {
+          await fs.copyFile(source, target);
+        }
+        linked++;
       }
-      linked++;
     }
   }
   return linked;
@@ -203,15 +238,30 @@ async function processImagesInDirectory(sourceDirectory: string, outputDirectory
         const hiResFile = files.find(file => file.endsWith('-hi-res.jpg'));
         if (!hiResFile) continue;
 
-        const sourceImagePath = path.join(sourceSubDir, hiResFile);
+        const hiResPath = path.join(sourceSubDir, hiResFile);
 
         // Determine output paths - use custom output directory if provided
         const outputPaths = outputDirectory
-          ? getProcessedImagePathsForOutput(sourceImagePath, outputDirectory, entry.name)
-          : getProcessedImagePaths(sourceImagePath);
+          ? getProcessedImagePathsForOutput(hiResPath, outputDirectory, entry.name)
+          : getProcessedImagePaths(hiResPath);
 
-        // Check if processing is needed
-        const sourceHash = await hashFile(sourceImagePath);
+        // An artist's sizes come from its photo source (a fanart chosen in the
+        // scrapper, else the hi-res), with the avatar cut round the faces, both
+        // from its -image.json. The notes only steer the crop while they still
+        // describe the file: same proportions (an upscaled photo keeps them, so
+        // the crop is scaled to its new size).
+        let sourceImagePath = hiResPath;
+        let crop: Crop | null = null;
+        const notes = sourceDirectory.endsWith('artist') ? await readNotes(sourceSubDir, entry.name) : null;
+        if (notes) {
+          const sourceFile = photoSourceFile(entry.name, notes);
+          if (files.includes(sourceFile)) sourceImagePath = path.join(sourceSubDir, sourceFile);
+          const { width = 0, height = 0 } = await sharp(sourceImagePath).metadata();
+          crop = avatarCropFor(notes, width, height);
+        }
+
+        // Check if processing is needed: the source's content and where the avatar is cut.
+        const sourceHash = `${await hashFile(sourceImagePath)}${crop ? `:${crop.left},${crop.top},${crop.size}` : ''}`;
         if (await areProcessedImagesUpToDate(sourceHash, outputPaths)) {
           console.log(chalk.gray(`  Skipping (cached): ${entry.name}/${hiResFile}`));
           continue; // Skip if up to date
@@ -219,7 +269,7 @@ async function processImagesInDirectory(sourceDirectory: string, outputDirectory
 
         console.log(`  Processing: ${entry.name}/${hiResFile}`);
         try {
-          await processImage(sourceImagePath, outputPaths);
+          await processImage(sourceImagePath, outputPaths, crop);
           await fs.writeFile(getSourceHashPath(outputPaths), `${sourceHash}\n`);
         } catch (error) {
           console.warn(`  ⚠️  Failed to process ${entry.name}/${hiResFile}:`, error instanceof Error ? error.message : error);

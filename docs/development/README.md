@@ -77,8 +77,8 @@ pnpm run dev
 | `pnpm exec tsc -b --noEmit` | Type check (`-b` follows the project references; plain `tsc --noEmit` checks nothing) |
 | `pnpm test` | Run the Vitest unit tests (`src/**/__tests__`) |
 | `pnpm run preview` | Preview production build |
-| `pnpm run generate-artist-images` | Artist photo placement/colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only, run after the scrapper adds artist photos, then commit; by default only new photos, `-- --full` redoes all, `-- --only <slug>` one. See [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) |
-| `pnpm run report-artist-images` | Lists artist photos to replace (no photo, low resolution, black and white, no person or face found), most-collected artists first; `--csv`, `--issue <name>`, `--limit 0`. See [asset-processing.md](../build-pipeline/asset-processing.md#finding-photos-to-replace) |
+| `pnpm run generate-artist-images` | Artist photo placement/colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only, run after the scrapper adds artist photos, then commit; by default only new photos, `-- --full` redoes all, `-- --only <slug>` one (or a comma-separated list). See [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) |
+| `pnpm run report-artist-images` | Lists artist photos to replace (no photo, low resolution, black and white, no person or face found), most-collected artists first; `--csv`, `--issue <name>`, `--limit 0`; prints a paste-ready `generate-artist-images` command per group. See [asset-processing.md](../build-pipeline/asset-processing.md#finding-photos-to-replace) |
 
 ### Hot Reload Behavior
 

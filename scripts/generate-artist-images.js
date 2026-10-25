@@ -15,16 +15,21 @@
  *     that edge without streaking whatever touches it.
  *   - How colourful the photo is (chroma, 0–1): the 95th percentile of each
  *     pixel's channel spread (max − min). A black-and-white photo is 0 or
- *     close to it (a toned print a little more); the page keeps those in
- *     plain greyscale rather than trying to bring their colour back.
- *   - The subject's matte (Vision's person segmentation, or for a photo with
- *     nobody in it the foreground mask, plus a spot for any face it missed),
- *     shrunk to MATTE px, and a wide blurred spill of it, each embedded as an
- *     alpha-only WebP data URI. The page lays the photo's own colour through
- *     the matte, so the people come back in colour while the backdrop stays
- *     printed in the flood, and through the spill when the backdrop suits it.
- *     Embedded rather than a file next to the photo: images are served from
- *     R2, and a CSS mask from another origin needs CORS.
+ *     close to it (a toned print a little more); report-artist-images.js
+ *     flags those, and the fanart pick avoids them.
+ *   - The average colour of COLUMNS vertical strips across the photo: the
+ *     desktop hero takes its flood from the strips where the photo fades out.
+ *   - The artist's TheAudioDB fanart ({slug}-fanart01.jpg …, from the scrapper's
+ *     backfill-fanart), when there is any: one of them is picked for the
+ *     desktop hero (a colour photo unless they are all black and white;
+ *     among those the first with faces and room beside them for the name) and
+ *     written as
+ *     `fanart`: its file, size, Vision's face / person / subject boxes, chroma
+ *     and the average colour of COLUMNS vertical strips across it, which the
+ *     page averages where the photo fades out for the hero's flood. Black-and-
+ *     white fanart is left out when the artist's own photo is in colour. A hero
+ *     or artist photo chosen in the scrapper (raw_data.overrides) wins; a chosen
+ *     photo is measured instead of the -hi-res.jpg and named in `source`.
  *   - Before any of that, letterbox or pillarbox bars (flat black or white
  *     bands a photo was pasted onto) are cut off the -hi-res.jpg itself
  *     (scripts/lib/letterbox.js), so the hero, the round avatars and the
@@ -33,11 +38,12 @@
  * Only the artist page reads these, so nothing is added to the pages that
  * load collection-wide data.
  *
- * Usage: node scripts/generate-artist-images.js [--full] [--only <slug>]
+ * Usage: node scripts/generate-artist-images.js [--full] [--only <slug>[,<slug>…]]
  *   By default only photos without an -image.json are measured; the others
  *   aren't read at all. --full (alias --force) redoes every artist: use it
- *   after replacing photos or bumping VERSION. --only <slug> always redoes
- *   that one artist.
+ *   after replacing photos or bumping VERSION. --only always redoes the
+ *   artists named: one slug or a comma-separated list, and it can be repeated
+ *   (report-artist-images.js prints these commands ready to paste).
  */
 
 import sharp from 'sharp';
@@ -56,19 +62,20 @@ const HELPER_SRC = path.join(__dirname, 'lib', 'vision-detect.swift');
 const HELPER_BIN = path.join(ROOT, 'node_modules', '.cache', 'russfm', 'vision-detect');
 
 /** Bump when the measurements or output shape change; older files are redone. */
-const VERSION = 4;
+const VERSION = 5;
 const SAMPLE = 48;
-/** The embedded matte's longest side; the browser's upscale gives it a soft edge. */
-const MATTE = 192;
-/** The spill's longest side: it is all blur, so a tiny one is enough. */
-const SPILL_SIZE = 48;
 /** Colour stops down each side edge. */
 const PROFILE_STOPS = 12;
+/** Vertical strips across a fanart image, each averaged to one colour (the hero's photo flood). */
+const COLUMNS = 32;
+/** Below this chroma a photo is black and white (as MONO_CHROMA in src/lib/artistImage.ts). */
+const MONO_CHROMA = 0.06;
+const FANART = /-fanart\d\d\.jpg$/;
 
 const args = process.argv.slice(2);
 const full = args.includes('--full') || args.includes('--force');
-const onlyIndex = args.indexOf('--only');
-const only = onlyIndex >= 0 ? args[onlyIndex + 1] : null;
+// --only takes a slug or a comma-separated list, and can be repeated.
+const only = new Set(args.flatMap((a, i) => (a === '--only' && args[i + 1] ? args[i + 1].split(',').filter(Boolean) : [])));
 
 const round = n => Math.round(n * 1000) / 1000;
 const clamp01 = n => Math.min(1, Math.max(0, n));
@@ -199,83 +206,53 @@ function placement(detected) {
   return { faces: boxes(faces), people: boxes(people), subject, focus };
 }
 
-/** Raw pixels as a small alpha-only WebP data URI (black, with them as alpha). */
-async function alphaDataUri(data, width, height) {
-  const rgba = Buffer.alloc(width * height * 4);
-  for (let i = 0; i < width * height; i++) rgba[i * 4 + 3] = data[i];
-  const webp = await sharp(rgba, { raw: { width, height, channels: 4 } })
-    .webp({ quality: 60, alphaQuality: 80 })
-    .toBuffer();
-  return `data:image/webp;base64,${webp.toString('base64')}`;
-}
+// ---------------------------------------------------------------- fanart
 
-/**
- * The matte and its spill, from Vision's greyscale matte PNG, as alpha-only
- * WebP data URIs.
- *   - matte: the people, steepened (over about 72% solid, filling soft patches
- *     inside a figure), then feathered inside the silhouette: the colour is
- *     full a few pixels in and gone by the outline, so it fades into the
- *     greyscale print of the person and never shows a rim of backdrop. Plus a
- *     head-and-shoulders spot (faceSpots) for each face the segmentation
- *     missed: it drops people in tight groups (the back row, someone out of
- *     focus), face detection rarely does.
- *   - spill: the same shape blurred wide at SPILL_SIZE px, a spotlight's glow
- *     of the photo's own backdrop round the people. The page shows it only
- *     when that backdrop is about as light as the flood; a white or black
- *     backdrop against a mid flood would be a halo.
- */
-async function matteDataUris(file, faces = []) {
-  const shrunk = sharp(file).greyscale().resize(MATTE, MATTE, { fit: 'inside' });
-  const raw = img => img.raw().toBuffer({ resolveWithObject: true });
-  const core = await raw(shrunk.clone().linear(2, -0.45 * 255).blur(1.4).linear(2, -1.0 * 255));
-  const { width, height, channels } = core.info;
-  const at = i => core.data[i * channels];
-  const covered = ([fx, fy, fw, fh]) => {
-    let sum = 0, n = 0;
-    for (let y = Math.floor(fy * height); y < Math.ceil((fy + fh) * height); y++) {
-      for (let x = Math.floor(fx * width); x < Math.ceil((fx + fw) * width); x++) {
-        if (x >= 0 && y >= 0 && x < width && y < height) {
-          sum += at(y * width + x);
-          n++;
-        }
-      }
-    }
-    return n > 0 && sum / n > 128;
-  };
-  const spots = faceSpots(faces.filter(f => !covered(f)), width, height);
-  const matte = new Uint8Array(width * height);
-  for (let i = 0; i < width * height; i++) matte[i] = Math.max(at(i), spots[i]);
-
-  const spill = await raw(shrunk.clone().blur(MATTE * 0.07).resize(SPILL_SIZE, SPILL_SIZE, { fit: 'inside' }));
-  const spillPixels = Uint8Array.from({ length: spill.info.width * spill.info.height }, (_, i) => spill.data[i * spill.info.channels]);
-  return {
-    matte: await alphaDataUri(matte, width, height),
-    spill: await alphaDataUri(spillPixels, spill.info.width, spill.info.height),
-  };
-}
-
-/**
- * A head-and-shoulders ellipse per face, 0–255 at matte size: centred just
- * below the face, wide enough for the shoulders and tall enough for the hair,
- * solid to 60% of the way out and easing to nothing at the rim.
- */
-function faceSpots(faces, width, height) {
-  const out = new Uint8Array(width * height);
-  for (const [fx, fy, fw, fh] of faces) {
-    const cx = (fx + fw / 2) * width;
-    const cy = (fy + fh * 1.1) * height;
-    const rx = fw * 1.1 * width;
-    const ry = fh * 1.9 * height;
-    for (let y = Math.max(0, Math.floor(cy - ry)); y < Math.min(height, Math.ceil(cy + ry)); y++) {
-      for (let x = Math.max(0, Math.floor(cx - rx)); x < Math.min(width, Math.ceil(cx + rx)); x++) {
-        const d = Math.hypot((x - cx) / rx, (y - cy) / ry);
-        const t = clamp01((1 - d) / 0.4);
-        const v = Math.round(255 * t * t * (3 - 2 * t));
-        if (v > out[y * width + x]) out[y * width + x] = v;
-      }
+/** A photo's chroma (as measureColour) and the average colour of COLUMNS vertical strips across it. */
+async function measureColumns(file) {
+  const { data, info } = await sharp(file).removeAlpha().resize(COLUMNS * 2, SAMPLE / 2, { fit: 'fill' }).raw().toBuffer({ resolveWithObject: true });
+  const spreads = [];
+  const sums = Array.from({ length: COLUMNS }, () => [0, 0, 0, 0]);
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width; x++) {
+      const i = (y * info.width + x) * 3;
+      const p = [data[i], data[i + 1], data[i + 2]];
+      spreads.push((Math.max(...p) - Math.min(...p)) / 255);
+      const c = sums[Math.floor((x / info.width) * COLUMNS)];
+      c[0] += p[0]; c[1] += p[1]; c[2] += p[2]; c[3]++;
     }
   }
-  return out;
+  spreads.sort((a, b) => a - b);
+  return {
+    chroma: round(spreads[Math.floor(spreads.length * 0.95)]),
+    columns: sums.map(([r, g, b, n]) => hex(r / n, g / n, b / n)),
+  };
+}
+
+/** Faces, else people, else the subject: their [x0, x1] across the photo, or null. */
+function across(f) {
+  const boxes = f.faces.length ? f.faces : f.people.length ? f.people : f.salient ? [f.salient] : [];
+  if (!boxes.length) return null;
+  return [Math.min(...boxes.map(b => b[0])), Math.max(...boxes.map(b => b[0] + b[2]))];
+}
+
+/**
+ * The fanart for the hero: colour photos only, unless every one is black and
+ * white; among those TheAudioDB's own order, taking the first with faces and
+ * a third of the photo clear beside them for the name, else the best scored
+ * (faces, room beside them, bigger faces).
+ */
+function pickFanart(list) {
+  const colour = list.filter(f => f.chroma >= MONO_CHROMA);
+  const pool = colour.length ? colour : list;
+  const room = f => {
+    const a = across(f);
+    return a ? Math.max(a[0], 1 - a[1]) : -1;
+  };
+  const roomy = pool.find(f => f.faces.length && room(f) >= 0.35);
+  if (roomy) return roomy;
+  const score = f => (room(f) < 0 ? -1 : (f.faces.length ? 1 : 0) + room(f) + 0.8 * Math.max(0, ...f.faces.map(b => b[3])));
+  return pool.reduce((best, f) => (score(f) > score(best) ? f : best), pool[0]);
 }
 
 // ---------------------------------------------------------------- vision helper
@@ -302,8 +279,25 @@ async function visionHelper() {
   }
 }
 
-/** Run every job through the helper in one process (asking for its matte); resolves path → result. */
-function detectAll(bin, jobs) {
+/** Photos per helper process: one process for thousands of photos runs out of memory and stops. */
+const DETECT_BATCH = 300;
+
+/**
+ * Run every job through the helper, a batch per process; resolves path → result. Warns about any photo the helper
+ * didn't answer for, which then gets no boxes.
+ */
+async function detectAll(bin, jobs) {
+  const results = new Map();
+  for (let i = 0; i < jobs.length; i += DETECT_BATCH) {
+    for (const [file, result] of await detectBatch(bin, jobs.slice(i, i + DETECT_BATCH))) results.set(file, result);
+  }
+  const missing = jobs.filter(j => !results.has(j.file)).length;
+  if (missing) console.warn(`⚠️  Vision returned nothing for ${missing} photo(s); they have no face or subject boxes`);
+  return results;
+}
+
+/** One helper process for a batch of jobs; resolves path → result. */
+function detectBatch(bin, jobs) {
   return new Promise((resolve, reject) => {
     const results = new Map();
     const child = spawn(bin, [], { stdio: ['pipe', 'pipe', 'inherit'] });
@@ -321,11 +315,74 @@ function detectAll(bin, jobs) {
     });
     child.on('error', reject);
     child.on('close', () => resolve(results));
-    child.stdin.end(jobs.map(j => `${j.file}\t${j.matte}`).join('\n') + '\n');
+    child.stdin.end(jobs.map(j => j.file).join('\n') + '\n');
   });
 }
 
 // ---------------------------------------------------------------- main
+
+/**
+ * The artist's hand-set choices from `raw_data.overrides` in its <slug>.json
+ * (set in the scrapper; files on disk are never changed for them):
+ *   - fanart: which fanart files may be used — blank for all, `off`, or the
+ *     numbers to use (`1,2`); every file stays on disk, this decides which count;
+ *   - hero: the desktop hero's image — auto, `photo`, or a fanart (`fanart02`);
+ *   - photo: a fanart to use as the artist photo (avatar, cards, phone hero)
+ *     instead of the downloaded -hi-res.jpg.
+ */
+async function artistChoices(slug) {
+  let overrides = {};
+  try {
+    const artist = JSON.parse(await fs.readFile(path.join(ARTIST_DIR, slug, `${slug}.json`), 'utf8'));
+    overrides = artist.raw_data?.overrides ?? {};
+  } catch {
+    // No artist JSON: everything automatic.
+  }
+  const text = key => String(overrides[key] ?? '').trim().toLowerCase();
+  const fanartFile = value => {
+    const n = Number(/^(?:fanart)?(\d{1,2})$/.exec(value)?.[1]);
+    return n >= 1 && n <= 4 ? `${slug}-fanart${String(n).padStart(2, '0')}.jpg` : null;
+  };
+  const keepText = text('fanart');
+  const keep = new Set(keepText.split(/[\s,]+/).map(Number).filter(Boolean));
+  const allowed = !keepText
+    ? () => true
+    : ['off', 'none', 'no', 'false'].includes(keepText)
+      ? () => false
+      : file => keep.has(Number(/-fanart(\d\d)\.jpg$/.exec(file)?.[1]));
+  const hero = text('hero');
+  return {
+    allowed,
+    hero: hero === 'photo' ? 'photo' : fanartFile(hero),
+    photo: fanartFile(text('photo')),
+  };
+}
+
+/** Measure every fanart image of an artist. */
+async function measureAllFanart(job, detected) {
+  const measured = [];
+  for (const name of job.fanart) {
+    const file = path.join(ARTIST_DIR, job.slug, name);
+    try {
+      const meta = await sharp(file).metadata();
+      const found = detected.get(file);
+      const boxes = list => (list ?? []).map(b => b.map(round));
+      const salient = union(found?.salient ?? []);
+      measured.push({
+        file: name,
+        width: meta.width,
+        height: meta.height,
+        faces: boxes(found?.faces),
+        people: boxes(found?.people),
+        salient: salient ? [salient[0], salient[1], round(salient[2] - salient[0]), round(salient[3] - salient[1])] : null,
+        ...(await measureColumns(file)),
+      });
+    } catch (err) {
+      console.warn(`⚠️  ${job.slug}: ${name}: ${err.message}`);
+    }
+  }
+  return measured;
+}
 
 /** Existing notes written by an older VERSION (cheap: reads only the JSON). */
 async function countStale(slugs) {
@@ -343,15 +400,19 @@ async function countStale(slugs) {
 
 async function main() {
   const slugs = (await fs.readdir(ARTIST_DIR, { withFileTypes: true }))
-    .filter(d => d.isDirectory() && (!only || d.name === only))
+    .filter(d => d.isDirectory() && (!only.size || only.has(d.name)))
     .map(d => d.name)
     .sort();
 
-  const redoAll = full || !!only;
+  const redoAll = full || only.size > 0;
   const jobs = [];
   let skipped = 0;
   for (const slug of slugs) {
-    const file = path.join(ARTIST_DIR, slug, `${slug}-hi-res.jpg`);
+    const choices = await artistChoices(slug);
+    const fanart = (await fs.readdir(path.join(ARTIST_DIR, slug))).filter(f => FANART.test(f) && choices.allowed(f)).sort();
+    // The artist photo: a chosen fanart (measured as it is), else the downloaded photo.
+    const source = choices.photo && fanart.includes(choices.photo) ? choices.photo : null;
+    const file = path.join(ARTIST_DIR, slug, source ?? `${slug}-hi-res.jpg`);
     const out = path.join(ARTIST_DIR, slug, `${slug}-image.json`);
     // Default: only photos that have no notes yet.
     if (!redoAll) {
@@ -365,14 +426,16 @@ async function main() {
     }
     let bytes;
     try {
-      const trimmed = await trimBars(file);
-      if (trimmed) console.log(`✂️  ${slug}: cut bars, ${trimmed}`);
+      if (!source) {
+        const trimmed = await trimBars(file);
+        if (trimmed) console.log(`✂️  ${slug}: cut bars, ${trimmed}`);
+      }
       bytes = await fs.readFile(file);
     } catch {
       continue;
     }
     const hash = crypto.createHash('sha1').update(bytes).digest('hex').slice(0, 16);
-    jobs.push({ slug, file, out, hash });
+    jobs.push({ slug, file, out, hash, fanart, source, hero: choices.hero });
   }
 
   const stale = redoAll ? 0 : await countStale(slugs);
@@ -385,9 +448,9 @@ async function main() {
     console.warn('⚠️  Face and subject detection needs macOS (Vision). Nothing written.');
     return;
   }
-  const matteDir = await fs.mkdtemp(path.join(os.tmpdir(), 'russfm-matte-'));
-  jobs.forEach(j => (j.matte = path.join(matteDir, `${j.slug}.png`)));
-  const detected = await detectAll(bin, jobs);
+  const fanartFile = (job, name) => path.join(ARTIST_DIR, job.slug, name);
+  const fanartJobs = jobs.flatMap(j => j.fanart.map(name => ({ file: fanartFile(j, name) })));
+  const detected = await detectAll(bin, [...jobs, ...fanartJobs]);
 
   let written = 0;
   const limit = Math.max(2, os.cpus().length - 1);
@@ -396,24 +459,37 @@ async function main() {
       jobs.slice(i, i + limit).map(async job => {
         const meta = await sharp(job.file).metadata();
         const colour = await measureColour(job.file);
+        const { columns } = await measureColumns(job.file);
         const found = detected.get(job.file);
         if (found?.error) console.warn(`⚠️  ${job.slug}: ${found.error}`);
-        const mattes = found?.matte ? await matteDataUris(job.matte, found.faces) : undefined;
+        const measured = job.fanart.length ? await measureAllFanart(job, detected) : [];
+        const picked = measured.length ? pickFanart(measured) : undefined;
+        // A hand-picked hero wins; otherwise colour first across both: black-and-white
+        // fanart only beats a black-and-white photo.
+        const fanart =
+          job.hero === 'photo'
+            ? undefined
+            : job.hero
+              ? (measured.find(f => f.file === job.hero) ?? picked)
+              : picked && picked.chroma < MONO_CHROMA && colour.chroma >= MONO_CHROMA
+                ? undefined
+                : picked;
         const data = {
           v: VERSION,
+          ...(job.source ? { source: job.source } : {}),
           hash: job.hash,
           width: meta.width,
           height: meta.height,
           ...placement(found),
           ...colour,
-          ...mattes,
+          columns,
+          ...(fanart ? { fanart } : {}),
         };
         await fs.writeFile(job.out, JSON.stringify(data) + '\n');
         written++;
       }),
     );
   }
-  await fs.rm(matteDir, { recursive: true, force: true });
   console.log(`✅ Wrote ${written} artist image files`);
 }
 

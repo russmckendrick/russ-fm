@@ -121,6 +121,33 @@ those is missing, the server derives it from the hi-res file and caches it under
 `scrapper/.cache/web-media/` (gitignored). It never writes into `public/`. The cache entry is
 rebuilt when the hi-res file is newer. The frontend builds these URLs with
 `web/src/lib/media.ts`, which follows the same naming as the site's `src/lib/image-utils.ts`.
+An artist's `-medium` and `-avatar` follow the site's build: they are made from the chosen
+artist photo (`source` in its `-image.json`, a fanart picked on the Images tab) when there is
+one, with the avatar cut round the faces in the notes, and rebuilt when the photo or its notes
+change. The artist page's header shows that photo, centred on its faces (`photo` in
+`/api/artists/{slug}`).
+
+### Images and the upscaler
+
+Artist and release pages have an **Images** tab (`web/src/components/ImagesPanel.tsx`): the
+artist's photo and every TheAudioDB fanart file (the one the site's desktop hero uses is
+marked *site hero*), or the album's cover, each with its size and an **Upscale** button. It
+runs `src/upscale.rs` there and then (a few seconds an image): Upscayl's `upscayl-bin`
+(Real-ESRGAN) upscales 4×, the result is resized to the target (photos and covers under
+1000px to 2000px on the long side, fanart to 2560×1440) and written over the original as a
+JPEG. The original is kept under `scrapper/backups/upscale-originals/` (logged in its
+`log.jsonl`) and **Restore original** puts it back. An image already at its target offers
+**Upscale 2× anyway**. Without Upscayl the tab says so and the buttons are off.
+
+For an artist, each card also has **Use as hero** (the image the site's desktop hero shows)
+and, on fanart, **Use as artist photo** (the site's avatar, artist cards and phone hero use it
+instead of the downloaded photo). They save the **Hero image** / **Artist photo** fields
+(`raw_data.overrides.hero` / `.photo`) and start `generate-artist-images --only <slug>` so the
+site follows; badges show the *site hero* and *artist photo*, marked *chosen* when picked by
+hand, with **Hero back to automatic** / **Use the downloaded photo** above the cards. No file
+on disk is replaced or deleted for any of this: the downloaded photo and every fanart stay.
+Which fanart the site may use at all is the **Fanart** field on the Edit tab (blank for all,
+`off`, or the numbers to use, e.g. `1,2`).
 
 ### Running CLI commands as jobs
 
@@ -236,6 +263,9 @@ to the job.
 | POST | `/api/actions/replace-release` | Job: move a library release onto the collection's ID (`{old_id, item}`) |
 | GET | `/api/health/checks` | Data-health checks with flagged records and fixes |
 | POST | `/api/orphans/{slug}/remove` | Delete an album folder that has no database record |
+| GET | `/api/images/{artist,album}/{slug}` | The folder's photo / fanart / cover with sizes, upscale targets and whether each was upscaled |
+| POST | `/api/images/upscale` | Upscale one image now (`{path, force?}`; path under `public/`) |
+| POST | `/api/images/restore` | Put an upscaled image back to its kept original (`{path}`) |
 | GET | `/media/{path}` | Artwork / JSON from `public/` |
 
 Errors are `{"error": "…"}` with a matching status code. Jobs of the same kind (for `run`, the

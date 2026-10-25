@@ -169,6 +169,25 @@ export function getArtistImageFromData(uriArtist: string, size: ImageSize = 'med
 }
 
 /**
+ * One of an artist's TheAudioDB fanart images (`{slug}-fanart01.jpg` …), by the
+ * file name its -image.json gives. Served from R2 like the photo; only the one
+ * the desktop hero uses is uploaded.
+ */
+export function getArtistFanartFromData(uriArtist: string, file: string): string {
+  const slug = getArtistSlug(uriArtist);
+  return getImageUrl(`artist/${slug}/${file}`);
+}
+
+/**
+ * The artist photo at full size: the fanart chosen as it in the scrapper
+ * (`source` in the photo's -image.json), else the downloaded hi-res. The
+ * `medium` and `avatar` sizes follow it on their own (the build makes them from it).
+ */
+export function getArtistPhotoFromData(uriArtist: string, source?: string | null): string {
+  return source ? getArtistFanartFromData(uriArtist, source) : getArtistImageFromData(uriArtist, 'hi-res');
+}
+
+/**
  * Placement and colour notes for an artist photo (scripts/generate-artist-images.js).
  * A JSON file next to the photo, served with the site like the detail JSON, not from R2.
  */

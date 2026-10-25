@@ -2,7 +2,7 @@ import { useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import type { AlbumColorPalette } from "@/hooks/useAlbumColors";
 import { circleCrop, useArtistImageInfo } from "@/lib/artistImage";
-import { getAlbumImageFromData, getArtistImageFromData, handleImageError } from "@/lib/image-utils";
+import { getAlbumImageFromData, getArtistPhotoFromData, handleImageError } from "@/lib/image-utils";
 import { floodFor } from "@/lib/sleeveColour";
 import { cn } from "@/lib/utils";
 import type { Album } from "@/types/album";
@@ -162,7 +162,7 @@ export function ArtistPhoto({ uri, image, size = 360, className }: ArtistPhotoPr
   const info = useArtistImageInfo(uri);
   const crop = info ? circleCrop(info) : null;
   const ready = info !== undefined;
-  const src = crop?.full ? getArtistImageFromData(uri, "hi-res") : image;
+  const src = crop?.full ? getArtistPhotoFromData(uri, info?.source) : image;
 
   return (
     <div className={cn("relative overflow-hidden rounded-full bg-[var(--ground-3)]", className)}>
