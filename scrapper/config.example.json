@@ -22,7 +22,7 @@
     "language": "en",
     "user_agent": "MusicCollectionManager/1.0"
   },
-    "TheAudioDB": {
+  "TheAudioDB": {
     "api_token": "YOUR_AUDIO_DB_API_TOKEN",
     "base_url": "https://theaudiodb.com/api/v1/json/"
   },
@@ -57,5 +57,10 @@
     "retry_delay": 5,
     "concurrent_requests": 1,
     "search_limit": 50
+  },
+  "upscale": {
+    "bin": "",
+    "models": "",
+    "model": "upscayl-standard-4x"
   }
 }

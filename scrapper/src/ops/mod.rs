@@ -6,6 +6,7 @@
 pub mod artist;
 pub mod collection;
 pub mod descriptions;
+pub mod fanart;
 pub mod formats;
 pub mod generate;
 pub mod identity;
@@ -18,6 +19,7 @@ pub mod report;
 pub mod service_input;
 pub mod services;
 pub mod tracklists;
+pub mod upscale;
 pub mod videos;
 
 use anyhow::{bail, Result};

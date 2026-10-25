@@ -16,6 +16,39 @@ use crate::Config;
 pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     let services = Services::new(cfg);
     let db = Db::open(cfg.db_path())?;
+
+    // --fanart / --hero / --photo set (or clear) the hand-set image choices, the same edits as
+    // the detail editor, without re-scraping the artist.
+    let choices: Vec<(ArtistField, &str)> = [(ArtistField::Fanart, &args.fanart), (ArtistField::Hero, &args.hero), (ArtistField::Photo, &args.photo)]
+        .into_iter()
+        .filter_map(|(f, v)| v.as_deref().map(|t| (f, t)))
+        .collect();
+    if !choices.is_empty() {
+        // The record the public JSON was written from, as the web UI edits: an artist can have
+        // duplicate records under one name, and editing another would rewrite the JSON from it.
+        let folder = sanitize_folder_name(&args.name);
+        let public_id = std::fs::read_to_string(cfg.artists_dir().join(&folder).join(format!("{folder}.json")))
+            .ok()
+            .and_then(|t| serde_json::from_str::<Value>(&t).ok())
+            .and_then(|j| j.get("id").and_then(Value::as_str).map(String::from));
+        let found = match public_id {
+            Some(id) => db.get_artist_by_id(&id)?,
+            None => None,
+        };
+        let Some(mut rec) = found.or(db.get_artist_by_name(&args.name)?) else {
+            bail!("artist '{}' is not in the database — process it first: scrapper artist \"{}\" --save", args.name, args.name);
+        };
+        for (field, text) in choices {
+            let text = if field == ArtistField::Fanart && text.trim().eq_ignore_ascii_case("auto") { "" } else { text };
+            rec = set_artist_value(cfg, &db, &rec, field, text)?.0;
+            let now = field.get(&rec);
+            crate::say!("{}: {}", field.label(), if now.is_empty() { "auto" } else { &now });
+        }
+        let folder = sanitize_folder_name(&rec.name);
+        crate::say!("Nothing on disk changes. Re-measure it for the site: pnpm run generate-artist-images -- --only '{folder}'");
+        return Ok(());
+    }
+
     if !services.discogs.is_configured() {
         bail!("Discogs is not configured — set discogs.access_token in config.json");
     }
@@ -252,6 +285,10 @@ let biography = perplexity
     if let Some(v) = tadb_videos {
         raw.insert("theaudiodb_videos".into(), v);
     }
+    // Hand-set overrides (which fanart to use) outlive a re-scrape.
+    if let Some(overrides) = existing.as_ref().and_then(|e| e.raw_data.get("overrides").cloned()) {
+        raw.insert("overrides".into(), overrides);
+    }
     let now = now_iso();
     let id = existing
         .as_ref()
@@ -291,6 +328,7 @@ let biography = perplexity
     if write_files {
         let artist_dir = cfg.artists_dir();
         let _ = images::download_artist_hires(client, &artist_dir, &folder, &rec.raw_data, 2000, prefer).await;
+        images::download_artist_fanart(client, &artist_dir, &folder, &rec.raw_data, true).await;
         persist_artist(cfg, db, &rec)?;
     }
 
@@ -526,6 +564,15 @@ pub enum ArtistField {
     LfmTags,
     /// The source image list (`images[]` in the public JSON).
     Images,
+    /// Which TheAudioDB fanart to use (`raw_data.overrides.fanart`): blank for all, `off`, or
+    /// the numbers to keep (`1,2`). See [`crate::output::images::FanartChoice`].
+    Fanart,
+    /// The site's desktop hero image (`raw_data.overrides.hero`): auto, `photo`, or a fanart
+    /// (`fanart02`). See [`crate::output::images::HeroChoice`].
+    Hero,
+    /// A fanart the site uses as the artist photo (avatar, cards, phone hero) instead of the
+    /// downloaded one (`raw_data.overrides.photo`): auto or `fanart01`. Nothing on disk changes.
+    Photo,
 }
 
 impl ArtistField {
@@ -534,7 +581,7 @@ impl ArtistField {
         use ArtistField::*;
         &[
             Name, Country, FormedDate, Discogs, Apple, Spotify, Lastfm, Wikipedia, Genres, Popularity, Followers,
-            Biography, LfmSummary, LfmContent, LfmTags, Images,
+            Biography, LfmSummary, LfmContent, LfmTags, Images, Fanart, Hero, Photo,
         ]
     }
 
@@ -557,6 +604,9 @@ impl ArtistField {
             ArtistField::LfmContent => "lastfm_content",
             ArtistField::LfmTags => "lastfm_tags",
             ArtistField::Images => "images",
+            ArtistField::Fanart => "fanart",
+            ArtistField::Hero => "hero",
+            ArtistField::Photo => "photo",
         }
     }
 
@@ -588,6 +638,9 @@ impl ArtistField {
             ArtistField::LfmContent => "Lfm content",
             ArtistField::LfmTags => "Lfm tags",
             ArtistField::Images => "Images",
+            ArtistField::Fanart => "Fanart",
+            ArtistField::Hero => "Hero image",
+            ArtistField::Photo => "Artist photo",
         }
     }
 
@@ -596,6 +649,7 @@ impl ArtistField {
         use crate::ops::FieldKind::*;
         match self {
             ArtistField::Name | ArtistField::Country | ArtistField::Biography => Text,
+            ArtistField::Fanart | ArtistField::Hero | ArtistField::Photo => Text,
             ArtistField::LfmSummary | ArtistField::LfmContent => Text,
             ArtistField::Discogs | ArtistField::Apple | ArtistField::Spotify | ArtistField::Lastfm | ArtistField::Wikipedia => Service,
             ArtistField::FormedDate => DateYmd,
@@ -654,6 +708,9 @@ impl ArtistField {
                 .map(|a| a.iter().filter_map(|v| v.as_str()).collect::<Vec<_>>().join(", "))
                 .unwrap_or_default(),
             ArtistField::Images => rec.images.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
+            ArtistField::Fanart => images::FanartChoice::of(&rec.raw_data).stored().unwrap_or_default(),
+            ArtistField::Hero => images::HeroChoice::of(&rec.raw_data).stored().unwrap_or_default(),
+            ArtistField::Photo => images::photo_fanart(&rec.raw_data).map(|n| format!("fanart{n:02}")).unwrap_or_default(),
         }
     }
 
@@ -935,7 +992,10 @@ pub async fn refresh_artist_field(
         | ArtistField::Followers
         | ArtistField::LfmSummary
         | ArtistField::LfmContent
-        | ArtistField::LfmTags => {}
+        | ArtistField::LfmTags
+        | ArtistField::Fanart
+        | ArtistField::Hero
+        | ArtistField::Photo => {}
     }
 
     rec.raw_data = Value::Object(raw);
@@ -944,6 +1004,7 @@ pub async fn refresh_artist_field(
     if download_image {
         let folder = sanitize_folder_name(&rec.name);
         let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
+        images::download_artist_fanart(client, &cfg.artists_dir(), &folder, &rec.raw_data, true).await;
     }
     persist_artist(cfg, db, &rec)?;
     Ok((rec, found))
@@ -1038,8 +1099,30 @@ pub fn apply_artist_value(rec: &mut ArtistRecord, field: ArtistField, text: &str
         }
         // Images are edited in the structured list overlay.
         ArtistField::Images => {}
+        ArtistField::Fanart => {
+            let choice = images::FanartChoice::parse(t).map_err(|e| anyhow::anyhow!(e))?;
+            set_override(rec, "fanart", choice.stored());
+        }
+        ArtistField::Hero => {
+            let choice = images::HeroChoice::parse(t).map_err(|e| anyhow::anyhow!(e))?;
+            set_override(rec, "hero", choice.stored());
+        }
+        ArtistField::Photo => {
+            let choice = images::parse_photo_choice(t).map_err(|e| anyhow::anyhow!(e))?;
+            set_override(rec, "photo", choice);
+        }
     }
     Ok(())
+}
+
+/// Set (or clear) one hand-set override under `raw_data.overrides`, dropping the block when empty.
+fn set_override(rec: &mut ArtistRecord, key: &str, value: Option<String>) {
+    crate::ops::set_raw_service_key(&mut rec.raw_data, "overrides", key, value.map(Value::String));
+    if let Some(raw) = rec.raw_data.as_object_mut() {
+        if raw.get("overrides").and_then(Value::as_object).is_some_and(|o| o.is_empty()) {
+            raw.remove("overrides");
+        }
+    }
 }
 
 /// Replace the artist's source images from editor rows (`Type, URL, Width, Height`) in memory.
@@ -1068,6 +1151,7 @@ pub async fn set_artist_service(
     if fetch_artist_service(services, &mut edited, field, input).await? {
         let folder = sanitize_folder_name(&edited.name);
         let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &edited.raw_data, 2000, None).await;
+        images::download_artist_fanart(client, &cfg.artists_dir(), &folder, &edited.raw_data, true).await;
     }
     commit_artist_edit(cfg, db, rec, edited)
 }

@@ -37,6 +37,8 @@ pub struct Config {
     pub logging: LoggingConfig,
     #[serde(default)]
     pub processing: ProcessingConfig,
+    #[serde(default)]
+    pub upscale: UpscaleConfig,
 
     /// Absolute path to the directory the config was loaded from (used to resolve relative paths).
     #[serde(skip)]
@@ -133,7 +135,7 @@ impl Default for TheAudioDbConfig {
 }
 
 fn default_audiodb_token() -> String {
-    "2".to_string()
+    "123".to_string()
 }
 fn default_audiodb_url() -> String {
     "https://theaudiodb.com/api/v1/json/".to_string()
@@ -242,6 +244,33 @@ fn default_log_level() -> String {
 }
 fn default_log_file() -> String {
     "logs/scrapper.log".to_string()
+}
+
+/// The local AI upscaler (`scrapper upscale`, the web UI's Upscale buttons): Upscayl's bundled
+/// `upscayl-bin` (Real-ESRGAN). Blank paths are found: `UPSCAYL_BIN`, then `upscayl-bin` on
+/// the PATH, then `/Applications/Upscayl.app`.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct UpscaleConfig {
+    /// Path to `upscayl-bin` (blank: found).
+    #[serde(default)]
+    pub bin: String,
+    /// Folder holding the model `.param`/`.bin` files (blank: `models` beside the binary's `bin/`).
+    #[serde(default)]
+    pub models: String,
+    /// Model name. `upscayl-standard-4x` cleans up JPEG damage without inventing texture
+    /// (`high-fidelity-4x` adds grain and scratchy skin on small press photos).
+    #[serde(default = "default_upscale_model")]
+    pub model: String,
+}
+
+impl Default for UpscaleConfig {
+    fn default() -> Self {
+        Self { bin: String::new(), models: String::new(), model: default_upscale_model() }
+    }
+}
+
+fn default_upscale_model() -> String {
+    "upscayl-standard-4x".to_string()
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

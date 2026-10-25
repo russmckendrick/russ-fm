@@ -101,6 +101,14 @@ pub enum Command {
     /// ID, then fix TheAudioDB matches, Wikipedia links and biographies a name lookup got wrong.
     /// Resumable; artists with a stored identity aren't looked up again (unless `--force`).
     BackfillIdentities(BackfillIdentitiesArgs),
+    /// Download each artist's TheAudioDB fanart (wide background photos) next to its hi-res
+    /// photo as `{slug}-fanart01.jpg`, `-fanart02.jpg`, … from the URLs already stored; no API
+    /// calls. Resumable; artists with every fanart file on disk are skipped (unless `--force`).
+    BackfillFanart(BackfillFanartArgs),
+    /// AI-upscale small artist photos, album covers and the fanart artist heroes use, through
+    /// Upscayl's `upscayl-bin` (Real-ESRGAN, local). Originals are kept under
+    /// `backups/upscale-originals/`; only images under their target are touched.
+    Upscale(UpscaleArgs),
     /// Built-in database manager (search/list/delete/stats/backup).
     #[command(subcommand)]
     Db(DbCommand),
@@ -226,6 +234,19 @@ pub struct ArtistArgs {
     pub perplexity: bool,
     #[arg(long)]
     pub perplexity_context: Option<String>,
+    /// Which TheAudioDB fanart the desktop hero may use, without re-scraping the artist:
+    /// `off`, the numbers to keep (`1,2`, when TheAudioDB files someone else's photo under
+    /// them), or `auto` / blank for all of it. Files ruled out are deleted.
+    #[arg(long)]
+    pub fanart: Option<String>,
+    /// The image the site's desktop hero shows: `auto`, `photo` (the artist photo), or a fanart
+    /// (`fanart02`). Nothing on disk changes; re-measure with generate-artist-images.
+    #[arg(long)]
+    pub hero: Option<String>,
+    /// A fanart the site uses as the artist photo (avatar, cards, phone hero) instead of the
+    /// downloaded one: `fanart01`, or `auto` for the downloaded photo. Nothing on disk changes.
+    #[arg(long)]
+    pub photo: Option<String>,
 }
 
 #[derive(Debug, Args)]
@@ -373,6 +394,54 @@ pub struct BackfillIdentitiesArgs {
 }
 
 #[derive(Debug, Args)]
+pub struct BackfillFanartArgs {
+    /// Only download for this many artists (by name).
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Only this artist (exact name, any case).
+    #[arg(short, long)]
+    pub artist: Option<String>,
+    /// Report what would be downloaded without downloading anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Download every artist's fanart again, including files already on disk.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+    /// Downloads in flight at once.
+    #[arg(long, default_value_t = 6)]
+    pub concurrency: usize,
+}
+
+#[derive(Debug, Args)]
+pub struct UpscaleArgs {
+    /// Artist photos under 1000px on the short side (to 2000px). With none of --artists,
+    /// --fanart, --albums, all three.
+    #[arg(long)]
+    pub artists: bool,
+    /// The fanart each artist hero uses (to 2560×1440).
+    #[arg(long)]
+    pub fanart: bool,
+    /// Every fanart file, not just the ones heroes use (implies --fanart).
+    #[arg(long)]
+    pub all_fanart: bool,
+    /// Album covers under 1000px on the short side (to 2000px).
+    #[arg(long)]
+    pub albums: bool,
+    /// Only these artist or album folders (comma-separated slugs).
+    #[arg(long)]
+    pub only: Option<String>,
+    /// Only upscale this many images.
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// List what would be upscaled, without upscaling.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Put these images (paths under public/, comma-separated) back to their kept originals.
+    #[arg(long)]
+    pub restore: Option<String>,
+}
+
+#[derive(Debug, Args)]
 pub struct BackfillFormatsArgs {
     /// Only fetch this many releases from Discogs (newest additions first); the album JSON of
     /// every release that already has stored formats is still synced.
@@ -508,6 +577,8 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::BackfillFormats(a) => ops::formats::run(&cfg, a).await,
         Command::BackfillTracklists(a) => ops::tracklists::run(&cfg, a).await,
         Command::BackfillIdentities(a) => ops::identity::run(&cfg, a).await,
+        Command::BackfillFanart(a) => ops::fanart::run(&cfg, a).await,
+        Command::Upscale(a) => ops::upscale::run(&cfg, a).await,
     }
 }
 

@@ -73,6 +73,10 @@ scrapper enrich-description [<id>] [--list-missing] [--force] [--from <id>] ...
 scrapper backfill-videos [--masters | --theaudiodb | --check] [--dry-run] [--limit N] ...  # tv.json sources + playability
 scrapper backfill-original-years [--dry-run] [--limit N] [--force]   # Discogs master years
 scrapper backfill-formats [--dry-run] [--limit N] [--force]          # pressing detail / vinyl colours
+scrapper backfill-fanart [--dry-run] [--limit N] [--force]           # TheAudioDB fanart beside artist photos
+scrapper artist "Radiohead" --fanart 1,2                              # which fanart the site may use (off / numbers / auto)
+scrapper artist "4 Non Blondes" --hero fanart01 --photo fanart01      # the site's hero and artist photo (no file changes)
+scrapper upscale [--artists|--fanart|--albums] [--only slugs] [--dry-run]  # Real-ESRGAN via Upscayl; originals kept
 scrapper report | generate-collection
 scrapper maintenance find-missing [--show-orphaned] | reconcile [--threshold F]
 ```
@@ -146,6 +150,8 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | `artist-batch`, `enrich-description` (Perplexity), `backfill-videos`, `report` | ✅ done |
 | `backfill-original-years` (Discogs master year → `year_original`) | ✅ done |
 | `backfill-formats` (Discogs `formats[].text` → `format_details` / `vinyl_colours`) | ✅ done |
+| `backfill-fanart` (TheAudioDB fanart → `{slug}-fanart01.jpg` …) | ✅ done |
+| `upscale` (Upscayl / Real-ESRGAN, plus the web UI's Images tab) | ✅ done |
 | ratatui TUI (dashboard, browsers, live probes, live collection) | ✅ done |
 
 All commands and the interactive TUI are implemented.

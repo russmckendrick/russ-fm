@@ -5,6 +5,7 @@ import { Cover } from '@/components/Cover'
 import { ArtistActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
 import { RecordEditor } from '@/components/RecordEditor'
+import { ImagesPanel } from '@/components/ImagesPanel'
 import { ReleaseTile } from '@/components/ReleaseTile'
 import { Tabs } from '@/components/Tabs'
 import { Badge, EmptyState, ErrorState, LinkChip, Spinner } from '@/components/ui'
@@ -13,7 +14,7 @@ import { artistImageUrl, siteUrl } from '@/lib/media'
 import { useArtist } from '@/lib/queries'
 import { Hero } from './Release'
 
-type Tab = 'releases' | 'about' | 'edit' | 'data'
+type Tab = 'releases' | 'about' | 'images' | 'edit' | 'data'
 
 export function ArtistPage() {
   const { slug = '' } = useParams()
@@ -46,7 +47,15 @@ export function ArtistPage() {
           <ArrowLeft className="size-3" /> Artists
         </Link>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end">
-          <Cover src={artistImageUrl(slug, 'hi-res')} alt={name} kind="artist" eager rounded="rounded-full" className="w-40 shrink-0 shadow-xl sm:w-48" />
+          <Cover
+            src={data.photo ? `/media/artist/${slug}/${data.photo.file}` : artistImageUrl(slug, 'hi-res')}
+            position={data.photo?.focus ? `${Math.round(data.photo.focus[0] * 100)}% ${Math.round(data.photo.focus[1] * 100)}%` : undefined}
+            alt={name}
+            kind="artist"
+            eager
+            rounded="rounded-full"
+            className="w-40 shrink-0 shadow-xl sm:w-48"
+          />
           <div className="min-w-0 pb-1">
             <p className="text-xs font-medium tracking-wide text-muted uppercase">Artist</p>
             <h1 className="mt-1 text-3xl font-semibold tracking-tight">{name}</h1>
@@ -91,6 +100,7 @@ export function ArtistPage() {
           tabs={[
             { value: 'releases', label: 'Releases', count: data.releases.length },
             { value: 'about', label: 'About' },
+            { value: 'images', label: 'Images' },
             { value: 'edit', label: 'Edit' },
             { value: 'data', label: 'Data' },
           ]}
@@ -127,6 +137,7 @@ export function ArtistPage() {
             ) : (
               <EmptyState title="No biography yet" />
             ))}
+          {tab === 'images' && <ImagesPanel kind="artist" slug={slug} />}
           {tab === 'edit' && <RecordEditor kind="artist" slug={slug} />}
           {tab === 'data' && (
             <div className="grid gap-4">

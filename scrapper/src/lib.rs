@@ -14,6 +14,7 @@ pub mod output;
 pub mod sanitize;
 pub mod services;
 pub mod tui;
+pub mod upscale;
 pub mod util;
 pub mod web;
 

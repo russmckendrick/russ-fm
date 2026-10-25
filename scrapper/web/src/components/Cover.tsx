@@ -14,8 +14,11 @@ export function Cover({
   className,
   rounded = 'rounded-md',
   eager,
+  position,
 }: {
   src: string
+  /** object-position for the image (e.g. the faces' centre); centred by default. */
+  position?: string
   color?: string | null
   alt: string
   kind?: 'album' | 'artist'
@@ -37,6 +40,7 @@ export function Cover({
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
           draggable={false}
+          style={position ? { objectPosition: position } : undefined}
           onLoad={() => setState('loaded')}
           onError={() => setState('missing')}
           className={cn('size-full object-cover transition-opacity duration-300', state === 'loaded' ? 'opacity-100' : 'opacity-0')}

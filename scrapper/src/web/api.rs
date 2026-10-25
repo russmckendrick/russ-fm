@@ -226,7 +226,14 @@ pub async fn artist(State(s): Shared, Path(slug): Path<String>) -> ApiResult {
         if public.is_none() && record.is_none() && releases.is_empty() {
             anyhow::bail!(NotFound(format!("no artist {slug}")));
         }
-        Ok(Json(json!({ "slug": slug, "public": public, "record": record, "summary": summary, "releases": releases })))
+        // The artist photo the site shows (a fanart chosen as it, else the hi-res) and where its
+        // faces are, from the photo notes.
+        let notes = read_public_json(&st.cfg.artists_dir().join(&slug).join(format!("{slug}-image.json")))?;
+        let photo = json!({
+            "file": notes.as_ref().and_then(|n| n.get("source")).and_then(Value::as_str).map_or_else(|| format!("{slug}-hi-res.jpg"), String::from),
+            "focus": notes.as_ref().and_then(|n| n.get("focus")).cloned().unwrap_or(Value::Null),
+        });
+        Ok(Json(json!({ "slug": slug, "public": public, "record": record, "summary": summary, "releases": releases, "photo": photo })))
     })
     .await
 }
@@ -729,4 +736,110 @@ pub async fn remove_orphan_folder(State(s): Shared, Path(slug): Path<String>) ->
     let st = s.clone();
     let result = tokio::task::spawn_blocking(move || super::health::remove_orphan_folder(&st, &slug)).await.map_err(|e| anyhow::anyhow!(e))?;
     result.map(|_| Json(json!({ "ok": true }))).map_err(edit_error)
+}
+
+/// An artist's photo and fanart, or an album's cover, with their sizes and what the upscaler
+/// would make of them (the Release and Artist pages' Images panel).
+pub async fn images(State(s): Shared, Path((kind, slug)): Path<(String, String)>) -> ApiResult {
+    check_slug(&slug)?;
+    if kind != "artist" && kind != "album" {
+        return Err(ApiError::bad_request("images are listed for an artist or an album"));
+    }
+    let st = s.clone();
+    blocking(move || {
+        let upscaler = crate::upscale::Upscaler::find(&st.cfg);
+        let dir = st.cfg.data_dir().join(&kind).join(&slug);
+        let mut files: Vec<String> = vec![format!("{slug}-hi-res.jpg")];
+        // What the site uses now (from -image.json): the hero's image and the artist photo's file.
+        let mut hero_file: Option<String> = None;
+        let mut photo_file = format!("{slug}-hi-res.jpg");
+        let mut choices = json!({});
+        if kind == "artist" {
+            let mut fanart: Vec<String> = std::fs::read_dir(&dir)
+                .into_iter()
+                .flatten()
+                .flatten()
+                .filter_map(|e| e.file_name().into_string().ok())
+                .filter(|f| crate::upscale::Kind::of(&format!("artist/{slug}/{f}")) == Some(crate::upscale::Kind::Fanart))
+                .collect();
+            fanart.sort();
+            files.extend(fanart);
+            if let Some(notes) = read_public_json(&dir.join(format!("{slug}-image.json")))? {
+                if let Some(source) = notes.get("source").and_then(Value::as_str) {
+                    photo_file = source.to_string();
+                }
+                hero_file = notes.get("fanart").and_then(|f| f.get("file")).and_then(Value::as_str).map(String::from).or_else(|| {
+                    // No fanart: the hero is the artist photo, once the notes have its colour strips.
+                    notes.get("columns").is_some().then(|| photo_file.clone())
+                });
+            }
+            if let Some(raw) = read_public_json(&dir.join(format!("{slug}.json")))?.and_then(|a| a.get("raw_data").cloned()) {
+                choices = json!({
+                    "hero": crate::output::images::HeroChoice::of(&raw).stored(),
+                    "photo": crate::output::images::photo_fanart(&raw).map(|n| format!("fanart{n:02}")),
+                    "fanart": crate::output::images::FanartChoice::of(&raw).stored(),
+                });
+            }
+        }
+        let images: Vec<Value> = files
+            .iter()
+            .filter_map(|file| {
+                let rel = format!("{kind}/{slug}/{file}");
+                let k = crate::upscale::Kind::of(&rel)?;
+                let p = crate::upscale::plan(&dir.join(file), k).ok()?;
+                Some(json!({
+                    "path": rel,
+                    "file": file,
+                    "kind": k.label(),
+                    "width": p.from.0,
+                    "height": p.from.1,
+                    "target": p.to.map(|t| [t.0, t.1]),
+                    "upscaled": upscaler.as_ref().is_ok_and(|u| u.has_original(&rel)),
+                    "hero": hero_file.as_deref() == Some(file.as_str()),
+                    "photo": kind == "artist" && photo_file == *file,
+                }))
+            })
+            .collect();
+        Ok(Json(json!({
+            "images": images,
+            "choices": choices,
+            "upscaler": upscaler.as_ref().err().map_or(Value::Null, |e| json!(format!("{e:#}"))),
+            "model": st.cfg.upscale.model,
+        })))
+    })
+    .await
+}
+
+#[derive(Deserialize)]
+pub struct UpscaleBody {
+    /// A path under the data directory: `artist/<slug>/<file>` or `album/<slug>/<file>`.
+    path: String,
+    /// Upscale 2× even when the image is already at its target.
+    #[serde(default)]
+    force: bool,
+}
+
+/// Upscale one image now (a few seconds on the GPU); the original is kept.
+pub async fn upscale_image(State(s): Shared, Json(body): Json<UpscaleBody>) -> ApiResult {
+    let rel = super::media::safe_rel(&body.path).ok_or_else(|| ApiError::bad_request("invalid path"))?;
+    let st = s.clone();
+    blocking(move || {
+        let done = crate::upscale::Upscaler::find(&st.cfg)?.upscale(&rel, body.force)?;
+        Ok(Json(json!({ "path": rel, "from": [done.from.0, done.from.1], "to": [done.to.0, done.to.1] })))
+    })
+    .await
+}
+
+/// Put an upscaled image back to its kept original.
+pub async fn restore_image(State(s): Shared, Json(body): Json<UpscaleBody>) -> ApiResult {
+    let rel = super::media::safe_rel(&body.path).ok_or_else(|| ApiError::bad_request("invalid path"))?;
+    let st = s.clone();
+    blocking(move || {
+        let restored = crate::upscale::Upscaler::find(&st.cfg)?.restore(&rel)?;
+        if !restored {
+            anyhow::bail!(NotFound(format!("no kept original for {rel}")));
+        }
+        Ok(Json(json!({ "path": rel, "restored": true })))
+    })
+    .await
 }

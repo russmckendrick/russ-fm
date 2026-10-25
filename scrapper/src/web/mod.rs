@@ -133,6 +133,9 @@ pub fn router(state: Arc<AppState>) -> Router {
         .route("/actions/refresh-field", post(api::refresh_field))
         .route("/health/checks", get(api::health_checks))
         .route("/orphans/{slug}/remove", post(api::remove_orphan_folder))
+        .route("/images/{kind}/{slug}", get(api::images))
+        .route("/images/upscale", post(api::upscale_image))
+        .route("/images/restore", post(api::restore_image))
         .fallback(|| async { (StatusCode::NOT_FOUND, axum::Json(serde_json::json!({ "error": "no such endpoint" }))) });
 
     Router::new()

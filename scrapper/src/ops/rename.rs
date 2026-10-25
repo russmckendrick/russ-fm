@@ -9,7 +9,17 @@ use anyhow::{bail, Result};
 /// Image-file suffixes inside a release folder.
 pub const RELEASE_SUFFIXES: &[&str] = &["-hi-res.jpg", "-medium.jpg", "-small.jpg"];
 /// Image-file suffixes inside an artist folder.
-pub const ARTIST_SUFFIXES: &[&str] = &["-hi-res.jpg", "-medium.jpg", "-small.jpg", "-avatar.jpg"];
+/// Fanart numbering matches `images::fanart_file_name` up to `images::MAX_FANART`.
+pub const ARTIST_SUFFIXES: &[&str] = &[
+    "-hi-res.jpg",
+    "-medium.jpg",
+    "-small.jpg",
+    "-avatar.jpg",
+    "-fanart01.jpg",
+    "-fanart02.jpg",
+    "-fanart03.jpg",
+    "-fanart04.jpg",
+];
 
 /// A planned folder rename under `base` (e.g. `public/album`).
 pub struct RenamePlan {

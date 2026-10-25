@@ -6,6 +6,7 @@ import { Cover } from '@/components/Cover'
 import { ReleaseActions } from '@/components/DetailActions'
 import { JsonView } from '@/components/JsonView'
 import { RecordEditor } from '@/components/RecordEditor'
+import { ImagesPanel } from '@/components/ImagesPanel'
 import { Tabs } from '@/components/Tabs'
 import { Badge, Button, EmptyState, ErrorState, Input, LinkChip, Spinner } from '@/components/ui'
 import { api } from '@/lib/api'
@@ -15,7 +16,7 @@ import { albumImageUrl, siteUrl } from '@/lib/media'
 import { useRelease } from '@/lib/queries'
 import type { AlbumJson, DbRecord, LibraryItem, Track } from '@/lib/types'
 
-type Tab = 'overview' | 'tracks' | 'videos' | 'edit' | 'data'
+type Tab = 'overview' | 'tracks' | 'videos' | 'images' | 'edit' | 'data'
 
 export function ReleasePage() {
   const { slug = '' } = useParams()
@@ -103,6 +104,7 @@ export function ReleasePage() {
             { value: 'overview', label: 'Overview' },
             { value: 'tracks', label: 'Tracklist', count: countTracks(tracks) },
             { value: 'videos', label: 'Videos', count: videos.length },
+            { value: 'images', label: 'Images' },
             { value: 'edit', label: 'Edit' },
             { value: 'data', label: 'Data' },
           ]}
@@ -111,6 +113,7 @@ export function ReleasePage() {
           {tab === 'overview' && <Overview pub={pub} item={item} slug={slug} record={data.record} description={description} tracks={tracks.length} videos={videos.length} />}
           {tab === 'tracks' && <Tracklist tracks={tracks} />}
           {tab === 'videos' && <Videos urls={videos} />}
+          {tab === 'images' && <ImagesPanel kind="album" slug={slug} />}
           {tab === 'edit' && <RecordEditor kind="release" slug={slug} />}
           {tab === 'data' && (
             <div className="grid gap-4">

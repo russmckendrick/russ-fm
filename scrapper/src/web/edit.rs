@@ -252,6 +252,7 @@ pub async fn edit_artist(st: Arc<AppState>, slug: String, body: EditBody) -> Res
     if download {
         let client = release::image_client();
         let _ = images::download_artist_hires(&client, &st.cfg.artists_dir(), &new_slug, &after.raw_data, 2000, None).await;
+        images::download_artist_fanart(&client, &st.cfg.artists_dir(), &new_slug, &after.raw_data, true).await;
     }
     let s = st.clone();
     tokio::task::spawn_blocking(move || -> Result<Value> {
