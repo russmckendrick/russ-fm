@@ -17,8 +17,10 @@
  *     pixel's channel spread (max − min). A black-and-white photo is 0 or
  *     close to it (a toned print a little more); report-artist-images.js
  *     flags those, and the fanart pick avoids them.
- *   - The average colour of COLUMNS vertical strips across the photo: the
- *     desktop hero takes its flood from the strips where the photo fades out.
+ *   - The average colour of COLUMNS vertical strips across the photo, and of
+ *     the bottom eighth of each (`bottoms`): the desktop hero takes its flood
+ *     from the strips where the photo fades out, the phone hero from the
+ *     bottoms of the strips its crop shows.
  *   - The artist's TheAudioDB fanart ({slug}-fanart01.jpg …, from the scrapper's
  *     backfill-fanart), when there is any: one of them is picked for the
  *     desktop hero (a colour photo unless they are all black and white;
@@ -208,24 +210,34 @@ function placement(detected) {
 
 // ---------------------------------------------------------------- fanart
 
-/** A photo's chroma (as measureColour) and the average colour of COLUMNS vertical strips across it. */
+/**
+ * A photo's chroma (as measureColour), the average colour of COLUMNS vertical
+ * strips across it, and of the bottom eighth of each strip (`bottoms`): the
+ * phone hero fades out at the bottom into the colour of the strips it shows.
+ */
 async function measureColumns(file) {
   const { data, info } = await sharp(file).removeAlpha().resize(COLUMNS * 2, SAMPLE / 2, { fit: 'fill' }).raw().toBuffer({ resolveWithObject: true });
   const spreads = [];
   const sums = Array.from({ length: COLUMNS }, () => [0, 0, 0, 0]);
+  const bottomSums = Array.from({ length: COLUMNS }, () => [0, 0, 0, 0]);
+  const bottomFrom = Math.floor(info.height * (7 / 8));
   for (let y = 0; y < info.height; y++) {
     for (let x = 0; x < info.width; x++) {
       const i = (y * info.width + x) * 3;
       const p = [data[i], data[i + 1], data[i + 2]];
       spreads.push((Math.max(...p) - Math.min(...p)) / 255);
-      const c = sums[Math.floor((x / info.width) * COLUMNS)];
-      c[0] += p[0]; c[1] += p[1]; c[2] += p[2]; c[3]++;
+      const column = Math.floor((x / info.width) * COLUMNS);
+      for (const c of y >= bottomFrom ? [sums[column], bottomSums[column]] : [sums[column]]) {
+        c[0] += p[0]; c[1] += p[1]; c[2] += p[2]; c[3]++;
+      }
     }
   }
   spreads.sort((a, b) => a - b);
+  const toHex = list => list.map(([r, g, b, n]) => hex(r / n, g / n, b / n));
   return {
     chroma: round(spreads[Math.floor(spreads.length * 0.95)]),
-    columns: sums.map(([r, g, b, n]) => hex(r / n, g / n, b / n)),
+    columns: toHex(sums),
+    bottoms: toHex(bottomSums),
   };
 }
 
@@ -459,7 +471,7 @@ async function main() {
       jobs.slice(i, i + limit).map(async job => {
         const meta = await sharp(job.file).metadata();
         const colour = await measureColour(job.file);
-        const { columns } = await measureColumns(job.file);
+        const { columns, bottoms } = await measureColumns(job.file);
         const found = detected.get(job.file);
         if (found?.error) console.warn(`⚠️  ${job.slug}: ${found.error}`);
         const measured = job.fanart.length ? await measureAllFanart(job, detected) : [];
@@ -483,6 +495,7 @@ async function main() {
           ...placement(found),
           ...colour,
           columns,
+          bottoms,
           ...(fanart ? { fanart } : {}),
         };
         await fs.writeFile(job.out, JSON.stringify(data) + '\n');

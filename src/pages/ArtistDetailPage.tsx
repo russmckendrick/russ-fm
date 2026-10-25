@@ -6,7 +6,7 @@ import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFl
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
-import { heroPhotoLayout, heroPhotoOf, portraitColumn, useArtistImageInfo, type ArtistImageInfo, type HeroPhotoLayout } from '@/lib/artistImage';
+import { heroPhotoLayout, heroPhotoOf, phoneCrop, portraitColumn, useArtistImageInfo, type ArtistImageInfo, type HeroPhotoLayout } from '@/lib/artistImage';
 import { ArtistPortrait } from '@/components/player/ArtistPortrait';
 import { ArtistHeroPhoto } from '@/components/player/ArtistHeroPhoto';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -178,18 +178,20 @@ export function ArtistDetailPage() {
     () => newestFlood(byAdded.map(a => a.uri_release), colourMap) ?? bandFromFlood(floodFor(null)),
     [byAdded, colourMap],
   );
-  // The hero photo is always in its own colour, and the flood is the photo's
-  // own colour where it fades out, so they meet without a step. From lg it is
-  // the artist's TheAudioDB fanart when there is any, else their own photo,
-  // placed by its faces (heroPhotoLayout) and fading out before the text;
-  // phones show the square photo cropped round the faces, fading out at its
-  // bottom into its own bottom-edge colour. The sleeve's flood holds until the
-  // photo's notes load (and for an artist without any).
+  // The hero photo is the artist's TheAudioDB fanart when there is any (or
+  // the image chosen in the scrapper), else their own photo, always in its own
+  // colour, and the flood is the photo's own colour where it fades out, so they
+  // meet without a step. From lg it is placed by its faces (heroPhotoLayout)
+  // and fades out before the text; below lg the same image is cropped round
+  // the faces into the square (3:2 from sm) box (phoneCrop) and fades out at its
+  // bottom into the colour along the bottom of the crop. The sleeve's flood
+  // holds until the photo's notes load (and for an artist without any).
   const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
   const desktop = useMediaQuery('(min-width: 1024px)');
+  const tablet = useMediaQuery('(min-width: 640px)');
   const [viewW, viewH] = useViewportSize();
   const [failedHero, setFailedHero] = useState<string | null>(null);
-  const heroSource = desktop && imageInfo ? heroPhotoOf(imageInfo) : null;
+  const heroSource = imageInfo ? heroPhotoOf(imageInfo) : null;
   const heroSrc = heroSource && artistPath
     ? heroSource.fanart
       ? getArtistFanartFromData(`/artist/${artistPath}/`, heroSource.fanart)
@@ -197,10 +199,12 @@ export function ArtistDetailPage() {
     : null;
   const heroPhoto = heroSource && heroSrc !== failedHero ? heroSource.photo : null;
   const hero = useMemo(
-    () => (heroPhoto ? heroPhotoLayout(heroPhoto, viewW, heroHeight(viewH)) : null),
-    [heroPhoto, viewW, viewH],
+    () => (desktop && heroPhoto ? heroPhotoLayout(heroPhoto, viewW, heroHeight(viewH)) : null),
+    [desktop, heroPhoto, viewW, viewH],
   );
-  const bottomColour = imageInfo?.edges.bottom.colour;
+  const phone = useMemo(() => (!desktop && heroPhoto ? phoneCrop(heroPhoto, tablet ? 3 / 2 : 1) : null), [desktop, tablet, heroPhoto]);
+  // Notes from before the bottom colours: the photo's bottom edge (right for its own photo).
+  const bottomColour = phone?.flood ?? (heroSource?.fanart ? null : imageInfo?.edges.bottom.colour);
   const flood = useMemo(
     () => (hero ? photoFlood(hero.flood) : bottomColour ? photoFlood(bottomColour) : sleeveFlood),
     [hero, bottomColour, sleeveFlood],
@@ -344,21 +348,23 @@ export function ArtistDetailPage() {
           style={heroGrid(imageInfo, hero)}
         >
           {/* Below lg the photo, in its own colour, runs edge to edge and up
-              under the header, 4:5 below it on phones and 5:4 from sm, and
+              under the header, square below it on phones and 3:2 from sm, and
               fades out at the bottom into the flood (its own bottom-edge
               colour); from lg the portrait's stage fills the flood's height
               (see ArtistPortrait), when there's no ArtistHeroPhoto. */}
           <div
-            className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(125vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(80vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(80vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full"
+            className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(100vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(66.667vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(66.667vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full"
             style={hero?.side === 'right' ? { order: 2 } : undefined}
           >
             {/* From lg the photo is usually ArtistHeroPhoto, in the flood above; this cell then just holds its side. */}
             {!hero && (
               <ArtistPortrait
-                src={getArtistPhotoFromData(artistUri, imageInfo?.source)}
+                src={phone && heroSrc ? heroSrc : getArtistPhotoFromData(artistUri, imageInfo?.source)}
                 alt={artistName}
                 info={imageInfo}
                 textEl={heroText}
+                position={phone?.position}
+                onError={phone && heroSrc ? () => setFailedHero(heroSrc) : undefined}
               />
             )}
           </div>
@@ -366,7 +372,7 @@ export function ArtistDetailPage() {
               photo (22% of its height on phones, 16% from sm, worked from the
               full-bleed width, plus the grid gap), so the name sits in the
               photo like a poster title. */}
-          <div ref={setHeroText} className="relative -mt-[calc(27.5vw+2rem)] flex min-w-0 flex-col gap-7 sm:-mt-[calc(13vw+2rem)] lg:mt-0 lg:justify-center">
+          <div ref={setHeroText} className="relative -mt-[calc(22vw+2rem)] flex min-w-0 flex-col gap-7 sm:-mt-[calc(10.7vw+2rem)] lg:mt-0 lg:justify-center">
             <FitTitle max={240} min={28} fitHeight className="t-disp">{artistName}</FitTitle>
             <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map(([k, v]) => (

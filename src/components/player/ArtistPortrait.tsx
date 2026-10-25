@@ -13,21 +13,26 @@ interface ArtistPortraitProps {
    * portrait, so a ref object is still empty when the portrait first measures.
    */
   textEl: HTMLElement | null;
+  /** Below lg: where the photo sits in its box (phoneCrop), instead of the notes' focus. */
+  position?: string;
+  /** Called when the photo fails to load (the page falls back to the artist photo). */
+  onError?: () => void;
 }
 
 const DESKTOP = '(min-width: 1024px)';
 
 /**
- * The artist hero portrait, in its own colour. On phones it fills a 4:5 box,
- * cropped round the faces, and fades out at the bottom into the flood (the
- * photo's own bottom-edge colour). From lg it only shows when there's no
+ * The artist hero portrait, in its own colour. On phones it fills a square box
+ * (3:2 from sm) with the hero image, the same one the desktop hero shows,
+ * cropped round the faces (`position`, from phoneCrop), and fades out at the
+ * bottom into the flood (the colour along the bottom of the crop). From lg it only shows when there's no
  * ArtistHeroPhoto (the photo's notes still loading, or the photo failing): it
  * fills the flood's height on a stage running from the page edge to past the
  * text, placed by portraitLayout(), and fades out over its right side and a
  * short lead-out past it, a soft gradient of its own edge colours as the
  * <img>'s background.
  */
-export function ArtistPortrait({ src, alt, info, textEl }: ArtistPortraitProps) {
+export function ArtistPortrait({ src, alt, info, textEl, position, onError }: ArtistPortraitProps) {
   const stageRef = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<PortraitLayout | null>(null);
 
@@ -59,14 +64,14 @@ export function ArtistPortrait({ src, alt, info, textEl }: ArtistPortraitProps) 
     };
   }, [info, textEl]);
 
-  const placed = layout && info ? placedStyle(layout, info) : { objectPosition: focusPosition(info) };
+  const placed = layout && info ? placedStyle(layout, info) : { objectPosition: position ?? focusPosition(info) };
 
   return (
     <div ref={stageRef} className="artist-stage">
       <img
         src={src}
         alt={alt}
-        onError={handleImageError}
+        onError={onError ?? handleImageError}
         className="artist-portrait object-cover object-top"
         data-placed={layout ? '' : undefined}
         style={placed}

@@ -365,9 +365,10 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    `chroma`, the 95th percentile of each pixel's channel spread: 0 for a
    black-and-white photo, a little above for a toned print.
 4. **Colour strips** (sharp): the average colour of 32 vertical strips across the
-   photo (`columns`). The desktop hero averages the strips where the photo fades
-   out for its flood, so photo and flood meet without a step; phones use the
-   bottom edge's colour.
+   photo (`columns`), and of the bottom eighth of each strip (`bottoms`). The
+   desktop hero averages the strips where the photo fades out for its flood, the
+   phone hero the bottoms of the strips its crop shows, so photo and flood meet
+   without a step. Fanart gets both too.
 5. **Fanart** (v5): when the scrapper has stored TheAudioDB fanart beside the photo
    (`{slug}-fanart01.jpg` …, `scrapper backfill-fanart`), and the artist's
    `raw_data.overrides.fanart` (set with `scrapper artist "<name>" --fanart 1,2` or the

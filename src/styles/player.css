@@ -402,7 +402,7 @@ body {
    page edge stay crisp.
 
    Below lg: the photo fills its edge-to-edge cell, which runs up under the
-   see-through header (4:5 below it, 5:4 from sm), and fades out at the bottom (a long fade whose stops follow an ease-out curve, so there's
+   see-through header (square below it, 3:2 from sm), and fades out at the bottom (a long fade whose stops follow an ease-out curve, so there's
    no line where it starts) under the name, which overlaps it. From lg the photo's grid column starts at the page edge and is
    sized to the photo (portraitColumn); the stage runs from the page's top
    (under the see-through header) to the flood's bottom (the 2.5rem spacer) and 32rem past the

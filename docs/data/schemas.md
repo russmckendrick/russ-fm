@@ -410,6 +410,7 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 | `luminance` | Whole-photo relative luminance |
 | `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 is black and white (about a quarter of the photos); `report-artist-images` flags those. The `matte` and `spill` of v4 were dropped in v5 |
 | `columns` | (v5) Average colour of 32 vertical strips across the photo, left to right. The desktop hero's flood is the average of the strips where the photo fades out |
+| `bottoms` | (v5) Average colour of the bottom eighth of each of those strips. The phone hero's flood is the average of the ones its crop shows. `fanart` carries its own `columns` and `bottoms` too |
 | `fanart` | (v5) The TheAudioDB fanart the desktop hero uses instead of the photo, when the artist has any: `file` (`{slug}-fanart0N.jpg`, next to the photo), its size, Vision's `faces`/`people`/`salient` boxes (`[x, y, w, h]` fractions), `chroma` and `columns` as above. Missing for the ~500 artists without fanart |
 
 ---

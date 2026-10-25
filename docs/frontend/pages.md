@@ -399,16 +399,19 @@ the flood is the hero photo's own colour instead (below), on phones and desktop.
   page under it is the site's dark tinted by it (`photoFlood`). Before the notes load, and
   for notes from before v5 (no colour strips), the hero falls back to the portrait below.
   If the photo fails to load, likewise.
-- **Header, phones** — the artist photo (the fanart chosen as it in the scrapper, `source` in
-  the `-image.json`, else the downloaded one; `getArtistPhotoFromData`) runs edge to edge in its own colour (`ArtistPortrait`,
-  `.artist-portrait` in `player.css`), a 4:5 crop on phones and 5:4 from `sm` (plus the
-  header's height, which it runs up under), centred on the faces (`focusPosition`) and
-  fading out at the bottom. The flood is the photo's own bottom-edge colour
-  (`edges.bottom.colour` in the `-image.json`), so the fade meets it without a step. The
-  text column is pulled up over the faded bottom (22% of the photo's height on phones,
-  16% from `sm`) so the name sits in the photo like a poster title and the stats and
-  links reach the first screen. The name's `FitTitle` has `min={28}` so a long single
-  word never breaks mid-word.
+- **Header, phones** — the same hero image as desktop (the fanart, or the image chosen in the
+  scrapper, else the artist photo) runs edge to edge in its own colour (`ArtistPortrait`,
+  `.artist-portrait` in `player.css`), a square crop on phones and 3:2 from `sm` (plus the
+  header's height, which it runs up under). `phoneCrop` in `src/lib/artistImage.ts` places it
+  round the faces (else the people, else the subject): a photo wider than the box shows its
+  full height and slides across to centre them; a narrower one shows its full width with them
+  in its upper part. It fades out at the bottom into the flood, the average of the
+  `-image.json`'s `bottoms` (the bottom eighth of each colour strip) across the crop, so the
+  fade meets it without a step (notes without `bottoms`: the photo's bottom edge). If the image
+  fails to load, the artist photo takes its place. The text column is pulled up over the faded
+  bottom (22% of the photo's height on phones, 16% from `sm`) so the name sits in the photo
+  like a poster title and the stats and links reach the first screen. The name's `FitTitle`
+  has `min={28}` so a long single word never breaks mid-word.
 - **Header, everywhere** — until the `-image.json` loads (and for an artist without
   one) the flood is the newest sleeve's. From `lg` without an `ArtistHeroPhoto` (the
   notes still loading, or the photo failing to load) the portrait sits in a column as

@@ -40,6 +40,8 @@ export interface ArtistImageInfo {
   chroma?: number;
   /** Average colour of each vertical strip across the photo, left to right (hex; v5). */
   columns?: string[];
+  /** Average colour of the bottom eighth of each of those strips (hex; v5). */
+  bottoms?: string[];
   /** The TheAudioDB fanart the desktop hero uses instead of the photo (v5), when the artist has any. */
   fanart?: ArtistFanart;
 }
@@ -53,6 +55,8 @@ export interface HeroPhoto {
   salient: Box | null;
   /** Average colour of each vertical strip across the photo, left to right (hex). */
   columns: string[];
+  /** Average colour of the bottom eighth of each strip (hex); missing from older notes. */
+  bottoms?: string[];
 }
 
 /**
@@ -84,6 +88,7 @@ export function heroPhotoOf(info: ArtistImageInfo): { fanart: string | null; pho
       people: info.people,
       salient: s ? [s[0], s[1], s[2] - s[0], s[3] - s[1]] : null,
       columns: info.columns,
+      bottoms: info.bottoms,
     },
   };
 }
@@ -421,6 +426,45 @@ export function heroPhotoLayout(photo: HeroPhoto, viewW: number, heroH: number):
     textStart,
     flood: averageColumns(photo.columns, a, z),
   };
+}
+
+export interface PhoneCrop {
+  /** object-position for the photo in the phone hero's box (object-fit: cover). */
+  position: string;
+  /** The hero's flood: the photo's own colour along the bottom of the crop, where it fades out (hex), or null without `bottoms`. */
+  flood: string | null;
+}
+
+/**
+ * How the phone hero crops the hero photo (the same image as the desktop hero:
+ * fanart or the artist's own photo) into its box, `boxAspect` wide over tall
+ * (1:1 on phones, 3:2 from sm): round the faces, else the people, else the
+ * subject. A photo wider than the box shows its full height and slides across
+ * to centre them; a narrower one shows its full width with them in its upper
+ * part. The flood is the average bottom colour of the strips the crop shows.
+ */
+export function phoneCrop(photo: HeroPhoto, boxAspect: number): PhoneCrop {
+  const aspect = photo.width / photo.height || 1;
+  const boxes = photo.faces.length ? photo.faces : photo.people.length ? photo.people : photo.salient ? [photo.salient] : [];
+  const cx = boxes.length ? (Math.min(...boxes.map(b => b[0])) + Math.max(...boxes.map(b => b[0] + b[2]))) / 2 : 0.5;
+  const cy = boxes.length ? (Math.min(...boxes.map(b => b[1])) + Math.max(...boxes.map(b => b[1] + b[3]))) / 2 : 0.4;
+  const pct = (v: number) => `${Math.round(v * 100)}%`;
+  let from = 0;
+  let to = 1;
+  let position: string;
+  if (aspect > boxAspect) {
+    // Wider than the box: full height, slid across to centre the faces.
+    const shown = boxAspect / aspect;
+    from = Math.min(1 - shown, Math.max(0, cx - shown / 2));
+    to = from + shown;
+    position = `${pct(from / (1 - shown))} 0%`;
+  } else {
+    // Narrower: full width, the faces in the upper part.
+    const shown = aspect / boxAspect;
+    const top = Math.min(1 - shown, Math.max(0, cy - shown * 0.4));
+    position = `50% ${pct(shown < 1 ? top / (1 - shown) : 0)}`;
+  }
+  return { position, flood: photo.bottoms?.length ? averageColumns(photo.bottoms, from, to) : null };
 }
 
 /** The average of the strips covering [from, to] (fractions across the photo), as hex. */
