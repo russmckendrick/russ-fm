@@ -23,6 +23,140 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:23:17.839391",
+  "credits": [
+    {
+      "discogs_id": "45127",
+      "name": "Mick Karn",
+      "role": "Bass",
+      "tracks": "A1, A3, A4, C3"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Claves",
+      "tracks": "B3, C3, C5"
+    },
+    {
+      "discogs_id": "282210",
+      "name": "Ced Sharpley",
+      "role": "Drums",
+      "tracks": "A3, B2"
+    },
+    {
+      "discogs_id": "226514",
+      "name": "Jess Lidyard",
+      "role": "Drums",
+      "tracks": "C5"
+    },
+    {
+      "discogs_id": "226519",
+      "name": "John Webb",
+      "role": "Drums",
+      "tracks": "D1"
+    },
+    {
+      "discogs_id": "208268",
+      "name": "Roger Taylor",
+      "role": "Drums",
+      "tracks": "B3, C4"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Electronic Drums [Roland C78]",
+      "tracks": "A1, A3, B2, C2, C5"
+    },
+    {
+      "discogs_id": "484928",
+      "name": "Nick Smith",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "377578",
+      "name": "Jules Bowen",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "226518",
+      "name": "Sean Lynch",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "81423",
+      "name": "Paul Gardiner",
+      "role": "Guitar",
+      "tracks": "A2"
+    },
+    {
+      "discogs_id": "226515",
+      "name": "Rob Dean",
+      "role": "Guitar",
+      "tracks": "C1"
+    },
+    {
+      "discogs_id": "81423",
+      "name": "Paul Gardiner",
+      "role": "Guitar, Keyboards, Backing Vocals",
+      "tracks": "C1"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Music By, Lyrics By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2236261",
+      "name": "Geoff Howes",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Piano",
+      "tracks": "A3, A4, C1, C3"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Producer, Vocals, Keyboards",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "45127",
+      "name": "Mick Karn",
+      "role": "Saxophone",
+      "tracks": "A3, A4, C3"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Synthesizer [Claptrap]",
+      "tracks": "A1, B3, C4"
+    },
+    {
+      "discogs_id": "208268",
+      "name": "Roger Taylor",
+      "role": "Tom Tom",
+      "tracks": "C5"
+    },
+    {
+      "discogs_id": "226516",
+      "name": "Chris Payne",
+      "role": "Viola",
+      "tracks": "A1, A3, B2"
+    },
+    {
+      "discogs_id": "45595",
+      "name": "Nash The Slash",
+      "role": "Violin",
+      "tracks": "B1, C4, C5"
+    }
+  ],
   "date_added": "2018-01-19T20:41:02-08:00",
   "discogs_id": "11403737",
   "discogs_url": "https://www.discogs.com/release/11403737-Gary-Numan-Dance",
@@ -188,72 +322,236 @@
     {
       "artists": [],
       "duration": "9:05",
+      "extraartists": [
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Percussion"
+        },
+        {
+          "discogs_id": "226520",
+          "name": "Tim Steggles",
+          "role": "Percussion"
+        }
+      ],
       "position": "A1",
       "title": "Slowcar To China"
     },
     {
       "artists": [],
       "duration": "4:26",
+      "extraartists": [
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Bass"
+        },
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Electronic Drums [Linn Lm-1]"
+        },
+        {
+          "discogs_id": "226518",
+          "name": "Sean Lynch",
+          "role": "Electronic Drums [Linn Lm-1]"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Guitar"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Music By"
+        }
+      ],
       "position": "A2",
       "title": "Night Talk"
     },
     {
       "artists": [],
       "duration": "4:36",
+      "extraartists": [
+        {
+          "discogs_id": "282210",
+          "name": "Ced Sharpley",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Percussion"
+        }
+      ],
       "position": "A3",
       "title": "A Subway Called 'You'"
     },
     {
       "artists": [],
       "duration": "9:54",
+      "extraartists": [
+        {
+          "discogs_id": "226519",
+          "name": "John Webb",
+          "role": "Keyboards"
+        }
+      ],
       "position": "B1",
       "title": "Cry The Clock Said"
     },
     {
       "artists": [],
       "duration": "4:59",
+      "extraartists": [
+        {
+          "discogs_id": "282210",
+          "name": "Ced Sharpley",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "226519",
+          "name": "John Webb",
+          "role": "Handclaps"
+        }
+      ],
       "position": "B2",
       "title": "She's Got Claws"
     },
     {
       "artists": [],
       "duration": "3:35",
+      "extraartists": [
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Handclaps"
+        }
+      ],
       "position": "B3",
       "title": "Crash"
     },
     {
       "artists": [],
       "duration": "4:14",
+      "extraartists": [
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Electronic Drums [Linn Lm-1]"
+        },
+        {
+          "discogs_id": "226515",
+          "name": "Rob Dean",
+          "role": "Guitar"
+        },
+        {
+          "discogs_id": "135113",
+          "name": "Connie Filapello",
+          "role": "Voice"
+        }
+      ],
       "position": "C1",
       "title": "Boys Like Me"
     },
     {
       "artists": [],
       "duration": "3:09",
+      "extraartists": [
+        {
+          "discogs_id": "226522",
+          "name": "Mick Prague",
+          "role": "Bass"
+        },
+        {
+          "discogs_id": "226517",
+          "name": "Roger Mason",
+          "role": "Keyboards"
+        }
+      ],
       "position": "C2",
       "title": "Stories"
     },
     {
       "artists": [],
       "duration": "4:35",
+      "extraartists": [
+        {
+          "discogs_id": "226519",
+          "name": "John Webb",
+          "role": "Electronic Drums [Linn Lm-1]"
+        }
+      ],
       "position": "C3",
       "title": "My Brother's Time"
     },
     {
       "artists": [],
       "duration": "4:00",
+      "extraartists": [
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Drums"
+        }
+      ],
       "position": "C4",
       "title": "You Are, You Are"
     },
     {
       "artists": [],
       "duration": "5:41",
+      "extraartists": [
+        {
+          "discogs_id": "226514",
+          "name": "Jess Lidyard",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Tom Tom [Toms]"
+        }
+      ],
       "position": "C5",
       "title": "Moral (Extended Version)"
     },
     {
       "artists": [],
       "duration": "4:57",
+      "extraartists": [
+        {
+          "discogs_id": "226519",
+          "name": "John Webb",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Guitar, Bass"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Guitar, Keyboards, Backing Vocals"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Music By"
+        }
+      ],
       "position": "D1",
       "title": "Stormtrooper In Drag"
     },

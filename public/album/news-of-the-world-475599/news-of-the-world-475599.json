@@ -23,6 +23,140 @@
   },
   "country": "UK",
   "created_at": "2026-09-12T20:04:48.017269",
+  "credits": [
+    {
+      "discogs_id": "2238909",
+      "name": "Kelly Freas",
+      "role": "Artwork [Original Artwork By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "268365",
+      "name": "John Deacon",
+      "role": "Bass Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1881394",
+      "name": "Paul Prenter",
+      "role": "Coordinator",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2438495",
+      "name": "Pete Brown",
+      "role": "Coordinator",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "255980",
+      "name": "John Harris",
+      "role": "Crew [Equipment Supervision]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2208578",
+      "name": "Brian Spencer",
+      "role": "Crew [Road Crew]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1650166",
+      "name": "Chris Taylor",
+      "role": "Crew [Road Crew]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1862739",
+      "name": "Peter Hince",
+      "role": "Crew [Road Crew]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2207447",
+      "name": "Ritchie Anderson",
+      "role": "Crew [Road Crew]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "208268",
+      "name": "Roger Taylor",
+      "role": "Drums, Backing Vocals",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "94526",
+      "name": "Mike Stone",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "253217",
+      "name": "Brian May",
+      "role": "Guitar, Backing Vocals",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1105229",
+      "name": "Cream",
+      "role": "Layout, Sleeve [Sleeve Coordination]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1649961",
+      "name": "John Reid",
+      "role": "Management",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "81013",
+      "name": "Queen",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "94526",
+      "name": "Mike Stone",
+      "role": "Producer [Assisted By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2017137",
+      "name": "Gerry Stickells",
+      "role": "Tour Manager",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "79949",
+      "name": "Freddie Mercury",
+      "role": "Vocals, Piano",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "253217",
+      "name": "Brian May",
+      "role": "Written-By",
+      "tracks": "A1, A4, B2, B4"
+    },
+    {
+      "discogs_id": "79949",
+      "name": "Freddie Mercury",
+      "role": "Written-By",
+      "tracks": "A2, B1, B5"
+    },
+    {
+      "discogs_id": "268365",
+      "name": "John Deacon",
+      "role": "Written-By",
+      "tracks": "A5, B3"
+    },
+    {
+      "discogs_id": "208268",
+      "name": "Roger Taylor",
+      "role": "Written-By",
+      "tracks": "A3, A6"
+    }
+  ],
   "date_added": "2016-02-17T18:15:16-08:00",
   "discogs_id": "475599",
   "discogs_url": "https://www.discogs.com/release/475599-Queen-News-Of-The-World",
@@ -288,12 +422,31 @@
     {
       "artists": [],
       "duration": "3:24",
+      "extraartists": [
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Bass, Rhythm Guitar"
+        }
+      ],
       "position": "A3",
       "title": "Sheer Heart Attack"
     },
     {
       "artists": [],
       "duration": "3:09",
+      "extraartists": [
+        {
+          "discogs_id": "253217",
+          "name": "Brian May",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "79949",
+          "name": "Freddie Mercury",
+          "role": "Vocals"
+        }
+      ],
       "position": "A4",
       "title": "All Dead, All Dead"
     },
@@ -306,6 +459,23 @@
     {
       "artists": [],
       "duration": "3:03",
+      "extraartists": [
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Bass Guitar, Vocals"
+        },
+        {
+          "discogs_id": "253217",
+          "name": "Brian May",
+          "role": "Guitar"
+        },
+        {
+          "discogs_id": "208268",
+          "name": "Roger Taylor",
+          "role": "Guitar"
+        }
+      ],
       "position": "A6",
       "title": "Fight From The Inside"
     },
@@ -318,12 +488,41 @@
     {
       "artists": [],
       "duration": "3:07",
+      "extraartists": [
+        {
+          "discogs_id": "253217",
+          "name": "Brian May",
+          "role": "Vocals"
+        }
+      ],
       "position": "B2",
       "title": "Sleeping On The Sidewalk"
     },
     {
       "artists": [],
       "duration": "3:07",
+      "extraartists": [
+        {
+          "discogs_id": "253217",
+          "name": "Brian May",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "discogs_id": "268365",
+          "name": "John Deacon",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "discogs_id": "79949",
+          "name": "Freddie Mercury",
+          "role": "Cowbell"
+        },
+        {
+          "discogs_id": "253217",
+          "name": "Brian May",
+          "role": "Maracas"
+        }
+      ],
       "position": "B3",
       "title": "Who Needs You"
     },

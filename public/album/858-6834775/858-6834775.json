@@ -23,6 +23,74 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T09:13:16.389251",
+  "credits": [
+    {
+      "discogs_id": "1014517",
+      "name": "Farrow Design",
+      "role": "Art Direction",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1932383",
+      "name": "John Catlin",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "444343",
+      "name": "Iestyn Polson",
+      "role": "Engineer [Additional]",
+      "tracks": "A2"
+    },
+    {
+      "discogs_id": "261923",
+      "name": "Kevin Metcalfe",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2234783",
+      "name": "Steve Double",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "20661",
+      "name": "Flood",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "63854",
+      "name": "Paul Hartnoll",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "4031900",
+      "name": "Adam 'Cecil' Bartlett",
+      "role": "Recorded By [Assisted]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "220986",
+      "name": "Drew Smith",
+      "role": "Recorded By [Assisted]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "3690472",
+      "name": "Will Purton",
+      "role": "Recorded By [Assisted]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "63854",
+      "name": "Paul Hartnoll",
+      "role": "Written-By",
+      "tracks": "A1 to B3, C2 to D2"
+    }
+  ],
   "date_added": "2015-08-09T08:30:37-07:00",
   "discogs_id": "6834775",
   "discogs_url": "https://www.discogs.com/release/6834775-858-858",
@@ -167,36 +235,143 @@
     {
       "artists": [],
       "duration": "6:05",
+      "extraartists": [
+        {
+          "discogs_id": "1300327",
+          "name": "Cillian Murphy",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "270825",
+          "name": "Michael Holden",
+          "role": "Words By [Additional]"
+        }
+      ],
       "position": "A1",
       "title": "8:58"
     },
     {
       "artists": [],
       "duration": "6:35",
+      "extraartists": [
+        {
+          "discogs_id": "63854",
+          "name": "Paul Hartnoll",
+          "role": "Remix [Uncredited]"
+        },
+        {
+          "discogs_id": "532407",
+          "name": "Lianne Hall",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "73783",
+          "name": "Robert Smith",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "73783",
+          "name": "Robert Smith",
+          "role": "Written-By"
+        }
+      ],
       "position": "A2",
       "title": "Please"
     },
     {
       "artists": [],
       "duration": "6:36",
+      "extraartists": [
+        {
+          "discogs_id": "154696",
+          "name": "Dimitri Tikovoï",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "474935",
+          "name": "Lisa Knapp",
+          "role": "Written-By"
+        }
+      ],
       "position": "B1",
       "title": "The Past Now"
     },
     {
       "artists": [],
       "duration": "3:51",
+      "extraartists": [
+        {
+          "discogs_id": "164001",
+          "name": "Ed Harcourt",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "164001",
+          "name": "Ed Harcourt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B2",
       "title": "Villain"
     },
     {
       "artists": [],
       "duration": "3:09",
+      "extraartists": [
+        {
+          "discogs_id": "1300327",
+          "name": "Cillian Murphy",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "270825",
+          "name": "Michael Holden",
+          "role": "Words By [Additional]"
+        }
+      ],
       "position": "B3",
       "title": "The Clock"
     },
     {
       "artists": [],
       "duration": "5:43",
+      "extraartists": [
+        {
+          "discogs_id": "154696",
+          "name": "Dimitri Tikovoï",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "965590",
+          "name": "Adrian McNally",
+          "role": "Recorded By [Vocal Recording]"
+        },
+        {
+          "discogs_id": "1572667",
+          "name": "The Unthanks",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "309134",
+          "name": "Laurence Tolhurst",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "555414",
+          "name": "Matthieu Hartley",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "73783",
+          "name": "Robert Smith",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "412942",
+          "name": "Simon Gallup",
+          "role": "Written-By"
+        }
+      ],
       "position": "C1",
       "title": "A Forest"
     },
@@ -209,12 +384,31 @@
     {
       "artists": [],
       "duration": "5:02",
+      "extraartists": [
+        {
+          "discogs_id": "154696",
+          "name": "Dimitri Tikovoï",
+          "role": "Drums"
+        }
+      ],
       "position": "D1",
       "title": "Nearly There"
     },
     {
       "artists": [],
       "duration": "7:37",
+      "extraartists": [
+        {
+          "discogs_id": "2106763",
+          "name": "Fable",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "2106763",
+          "name": "Fable",
+          "role": "Written-By"
+        }
+      ],
       "position": "D2",
       "title": "Cemetery"
     }

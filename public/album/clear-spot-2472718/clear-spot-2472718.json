@@ -38,6 +38,80 @@
   },
   "country": "US",
   "created_at": "2026-09-12T20:01:31.124037",
+  "credits": [
+    {
+      "discogs_id": "452823",
+      "name": "Ed Thrasher",
+      "role": "Art Direction",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "412047",
+      "name": "Blackberries",
+      "role": "Backing Vocals",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "412048",
+      "name": "Oréjon",
+      "role": "Bass Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2071227",
+      "name": "John And Barbara Casado",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "412049",
+      "name": "Ed Marimba",
+      "role": "Drums, Percussion, Other [Tattoos]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "252044",
+      "name": "Donn Landee",
+      "role": "Engineer [Aka: Mit]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "256282",
+      "name": "Zoot Horn Rollo",
+      "role": "Lead Guitar [Solo Guitar], Slide Guitar [Steel Appendage & Glass Finger], Mandolin",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "277686",
+      "name": "Milt Holland",
+      "role": "Percussion",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2170896",
+      "name": "Jim McCrary",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "239304",
+      "name": "Ted Templeman",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "256281",
+      "name": "Rockette Morton",
+      "role": "Rhythm Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "256283",
+      "name": "Don Van Vliet",
+      "role": "Vocals, Harmonica, Effects [Wings On Singabus Aka Golden Birdies], Written-By",
+      "tracks": ""
+    }
+  ],
   "date_added": "2018-01-26T20:04:23-08:00",
   "discogs_id": "2472718",
   "discogs_url": "https://www.discogs.com/release/2472718-Captain-Beefheart-And-The-Magic-Band-Clear-Spot",
@@ -269,12 +343,36 @@
     {
       "artists": [],
       "duration": "3:45",
+      "extraartists": [
+        {
+          "discogs_id": "256283",
+          "name": "Don Van Vliet",
+          "role": "Arranged By [Horns]"
+        },
+        {
+          "discogs_id": "239304",
+          "name": "Ted Templeman",
+          "role": "Arranged By [Horns]"
+        }
+      ],
       "position": "A2",
       "title": "Nowadays A Woman's Gotta Hit A Man"
     },
     {
       "artists": [],
       "duration": "2:46",
+      "extraartists": [
+        {
+          "discogs_id": "315487",
+          "name": "Jerry Jumonville",
+          "role": "Arranged By [Horns]"
+        },
+        {
+          "discogs_id": "107042",
+          "name": "Russ Titelman",
+          "role": "Guitar"
+        }
+      ],
       "position": "A3",
       "title": "Too Much Time"
     },
@@ -311,6 +409,18 @@
     {
       "artists": [],
       "duration": "3:17",
+      "extraartists": [
+        {
+          "discogs_id": "256283",
+          "name": "Don Van Vliet",
+          "role": "Arranged By [Horns]"
+        },
+        {
+          "discogs_id": "239304",
+          "name": "Ted Templeman",
+          "role": "Arranged By [Horns]"
+        }
+      ],
       "position": "B3",
       "title": "Long Neck Bottles"
     },
@@ -329,6 +439,13 @@
     {
       "artists": [],
       "duration": "1:37",
+      "extraartists": [
+        {
+          "discogs_id": "256281",
+          "name": "Rockette Morton",
+          "role": "Bass Guitar"
+        }
+      ],
       "position": "B6",
       "title": "Golden Birdies"
     }

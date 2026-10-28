@@ -23,6 +23,74 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:00:20.822362",
+  "credits": [
+    {
+      "discogs_id": "2037281",
+      "name": "Lee McMillan",
+      "role": "Artwork [Monkee]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "213133",
+      "name": "Leigh Kenny",
+      "role": "Artwork [Red]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1929825",
+      "name": "Steve Brown",
+      "role": "Artwork, Design [Mac Design]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "84154",
+      "name": "Bruce Wood",
+      "role": "Engineer",
+      "tracks": "A3, B2, B4, B5, D2 to D5"
+    },
+    {
+      "discogs_id": "429881",
+      "name": "Phil Jones",
+      "role": "Engineer",
+      "tracks": "A1, A2"
+    },
+    {
+      "discogs_id": "11454",
+      "name": "Richard Brown",
+      "role": "Engineer",
+      "tracks": "B1, B3, C1 to C4"
+    },
+    {
+      "discogs_id": "147827",
+      "name": "John Dent",
+      "role": "Lacquer Cut By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "247773",
+      "name": "DJ E.A.S.E.",
+      "role": "Liner Notes",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "247773",
+      "name": "DJ E.A.S.E.",
+      "role": "Producer, Mixed By, Programmed By, Other [Herbalized By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "31653",
+      "name": "Robin Taylor-Firth",
+      "role": "Programmed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "640294",
+      "name": "George Evelyn",
+      "role": "Written-By",
+      "tracks": "A1, A3 to D5"
+    }
+  ],
   "date_added": "2020-04-09T16:45:27-07:00",
   "discogs_id": "15030498",
   "discogs_url": "https://www.discogs.com/release/15030498-Nightmares-On-Wax-Smokers-Delight",
@@ -193,12 +261,36 @@
     {
       "artists": [],
       "duration": "5:48",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "681470",
+          "name": "Boy Wonder",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "247773",
+          "name": "DJ E.A.S.E.",
+          "role": "Written-By"
+        }
+      ],
       "position": "A2",
       "title": "Dreddoverboard"
     },
     {
       "artists": [],
       "duration": "9:05",
+      "extraartists": [
+        {
+          "discogs_id": "133783",
+          "name": "Chris Dawkins",
+          "role": "Guitar"
+        }
+      ],
       "position": "A3",
       "title": "Pipes Honour"
     },
@@ -211,6 +303,13 @@
     {
       "artists": [],
       "duration": "6:59",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        }
+      ],
       "position": "B2",
       "title": "Stars"
     },
@@ -235,6 +334,13 @@
     {
       "artists": [],
       "duration": "0:25",
+      "extraartists": [
+        {
+          "discogs_id": "355666",
+          "name": "Hamlet Luton",
+          "role": "Bass"
+        }
+      ],
       "position": "C1",
       "title": "Time (To Listen)"
     },
@@ -253,6 +359,18 @@
     {
       "artists": [],
       "duration": "7:05",
+      "extraartists": [
+        {
+          "discogs_id": "355666",
+          "name": "Hamlet Luton",
+          "role": "Bass"
+        },
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        }
+      ],
       "position": "C4",
       "title": "Cruise (Don't Stop)"
     },
@@ -265,24 +383,57 @@
     {
       "artists": [],
       "duration": "2:26",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        }
+      ],
       "position": "D2",
       "title": "What I'm Feelin (Good)"
     },
     {
       "artists": [],
       "duration": "5:14",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        }
+      ],
       "position": "D3",
       "title": "Rise"
     },
     {
       "artists": [],
       "duration": "1:46",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        }
+      ],
       "position": "D4",
       "title": "Rise (Reprise)"
     },
     {
       "artists": [],
       "duration": "4:41",
+      "extraartists": [
+        {
+          "discogs_id": "31653",
+          "name": "Robin Taylor-Firth",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "170461",
+          "name": "Shovell",
+          "role": "Percussion"
+        }
+      ],
       "position": "D5",
       "title": "Gambia Via Vagatorbeach"
     }

@@ -23,6 +23,38 @@
   },
   "country": "UK",
   "created_at": "2026-08-09T14:20:31.056981",
+  "credits": [
+    {
+      "discogs_id": "818902",
+      "name": "Bill Smith Studio",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1846153",
+      "name": "Kindlight",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "281917",
+      "name": "John Carder Bush",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "85929",
+      "name": "Kate Bush",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "85929",
+      "name": "Kate Bush",
+      "role": "Written-By",
+      "tracks": ""
+    }
+  ],
   "date_added": "2018-11-17T10:45:18-08:00",
   "discogs_id": "1336280",
   "discogs_url": "https://www.discogs.com/release/1336280-Kate-Bush-The-Sensual-World",
@@ -242,12 +274,31 @@
     {
       "artists": [],
       "duration": "3:56",
+      "extraartists": [
+        {
+          "discogs_id": "125660",
+          "name": "Kevin Killen",
+          "role": "Mixed By"
+        },
+        {
+          "discogs_id": "205697",
+          "name": "Del Palmer",
+          "role": "Recorded By"
+        }
+      ],
       "position": "A",
       "title": "The Sensual World"
     },
     {
       "artists": [],
       "duration": "3:48",
+      "extraartists": [
+        {
+          "discogs_id": "205697",
+          "name": "Del Palmer",
+          "role": "Engineer, Mixed By"
+        }
+      ],
       "position": "B",
       "title": "Walk Straight Down The Middle"
     }

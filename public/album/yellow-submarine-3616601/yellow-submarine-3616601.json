@@ -23,6 +23,26 @@
   },
   "country": "Spain",
   "created_at": "2026-09-12T20:13:06.702446",
+  "credits": [
+    {
+      "discogs_id": "243955",
+      "name": "George Harrison",
+      "role": "Lead Vocals",
+      "tracks": "A2"
+    },
+    {
+      "discogs_id": "46481",
+      "name": "John Lennon",
+      "role": "Lead Vocals",
+      "tracks": "B1, B2"
+    },
+    {
+      "discogs_id": "259352",
+      "name": "Ringo Starr",
+      "role": "Lead Vocals",
+      "tracks": "A1"
+    }
+  ],
   "date_added": "2016-11-27T11:51:28-08:00",
   "discogs_id": "3616601",
   "discogs_url": "https://www.discogs.com/release/3616601-The-Beatles-Yellow-Submarine-",
@@ -245,24 +265,52 @@
     {
       "artists": [],
       "duration": "2:42",
+      "extraartists": [
+        {
+          "discogs_id": "779927",
+          "name": "Lennon-McCartney",
+          "role": "Written-By"
+        }
+      ],
       "position": "A1",
       "title": "Yellow Submarine = Submarino Amarillo"
     },
     {
       "artists": [],
       "duration": "2:36",
+      "extraartists": [
+        {
+          "discogs_id": "243955",
+          "name": "George Harrison",
+          "role": "Written-By"
+        }
+      ],
       "position": "A2",
       "title": "Taxman = El Recaudador"
     },
     {
       "artists": [],
       "duration": "2:37",
+      "extraartists": [
+        {
+          "discogs_id": "779927",
+          "name": "Lennon-McCartney",
+          "role": "Written-By"
+        }
+      ],
       "position": "B1",
       "title": "She Said She Said = Ella Dijo"
     },
     {
       "artists": [],
       "duration": "3:02",
+      "extraartists": [
+        {
+          "discogs_id": "779927",
+          "name": "Lennon-McCartney",
+          "role": "Written-By"
+        }
+      ],
       "position": "B2",
       "title": "I'm Only Sleeping = Estoy Durmiendo"
     }

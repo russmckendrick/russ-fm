@@ -23,6 +23,20 @@
   },
   "country": "UK",
   "created_at": "2026-08-12T19:12:05.588401",
+  "credits": [
+    {
+      "discogs_id": "10263",
+      "name": "David Bowie",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "55761",
+      "name": "Tony Visconti",
+      "role": "Producer",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-09-29T17:28:10-07:00",
   "discogs_id": "4565266",
   "discogs_url": "https://www.discogs.com/release/4565266-David-Bowie-Heroes",
@@ -241,12 +255,31 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "634",
+          "name": "Brian Eno",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "10263",
+          "name": "David Bowie",
+          "role": "Written-By"
+        }
+      ],
       "position": "A",
       "title": "Heroes"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "10263",
+          "name": "David Bowie",
+          "role": "Written-By"
+        }
+      ],
       "position": "B",
       "title": "V-2 Schneider"
     }

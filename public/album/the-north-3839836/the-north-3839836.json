@@ -23,6 +23,122 @@
   },
   "country": "US",
   "created_at": "2025-07-10T08:31:00.981309",
+  "credits": [
+    {
+      "discogs_id": "2913694",
+      "name": "Derek Broad",
+      "role": "Artwork",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1922898",
+      "name": "The Cardboardbox Project",
+      "role": "Artwork",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "434969",
+      "name": "Evan Cranley",
+      "role": "Bass, Guitar, Synthesizer, Percussion, Trombone",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "294749",
+      "name": "Pat McGee",
+      "role": "Drums, Percussion",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "447182",
+      "name": "Graham Lessard",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "403218",
+      "name": "Marcus Paquin",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "906752",
+      "name": "Chris McCarron",
+      "role": "Guitar, Technician [Maintenance]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2135761",
+      "name": "Wes Garland",
+      "role": "Lacquer Cut By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "219192",
+      "name": "Dave Cooley",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "66626",
+      "name": "Tony Hoffer",
+      "role": "Mixed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1893097",
+      "name": "Chris Claypool",
+      "role": "Mixed By [Assisted]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "535499",
+      "name": "Chris Seligman",
+      "role": "Piano, Keyboards, Synthesizer, French Horn",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "447182",
+      "name": "Graham Lessard",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "403218",
+      "name": "Marcus Paquin",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "127607",
+      "name": "Stars",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "363444",
+      "name": "David Carswell",
+      "role": "Recorded By [Additional Recording]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "363442",
+      "name": "John Collins",
+      "role": "Recorded By [Additional Recording]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "300330",
+      "name": "Amy Millan",
+      "role": "Vocals, Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "541717",
+      "name": "Torquil Campbell",
+      "role": "Vocals, Keyboards",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-06-27T18:05:30-07:00",
   "discogs_id": "3839836",
   "discogs_url": "https://www.discogs.com/release/3839836-Stars-The-North",
@@ -150,18 +266,49 @@
     {
       "artists": [],
       "duration": "4:26",
+      "extraartists": [
+        {
+          "discogs_id": "2913692",
+          "name": "Robin Best",
+          "role": "Harp"
+        }
+      ],
       "position": "A1",
       "title": "The Theory Of Relativity"
     },
     {
       "artists": [],
       "duration": "2:11",
+      "extraartists": [
+        {
+          "discogs_id": "1821778",
+          "name": "David Handler",
+          "role": "Composed By [String Composition], Arranged By [Strings]"
+        },
+        {
+          "discogs_id": "2783550",
+          "name": "Mommies On The Run",
+          "role": "Strings"
+        }
+      ],
       "position": "A2",
       "title": "Backlines"
     },
     {
       "artists": [],
       "duration": "4:52",
+      "extraartists": [
+        {
+          "discogs_id": "959495",
+          "name": "Jesse Zubot",
+          "role": "Arranged By [Violin, Viola, Cello], Recorded By [Violin, Viola, Cello]"
+        },
+        {
+          "discogs_id": "959495",
+          "name": "Jesse Zubot",
+          "role": "Violin, Viola, Cello"
+        }
+      ],
       "position": "A3",
       "title": "The North"
     },
@@ -174,6 +321,18 @@
     {
       "artists": [],
       "duration": "4:10",
+      "extraartists": [
+        {
+          "discogs_id": "959495",
+          "name": "Jesse Zubot",
+          "role": "Arranged By [Violin, Viola, Cello], Recorded By [Violin, Viola, Cello]"
+        },
+        {
+          "discogs_id": "959495",
+          "name": "Jesse Zubot",
+          "role": "Violin, Viola, Cello"
+        }
+      ],
       "position": "A5",
       "title": "Through The Mines"
     },
@@ -186,6 +345,13 @@
     {
       "artists": [],
       "duration": "3:06",
+      "extraartists": [
+        {
+          "discogs_id": "312708",
+          "name": "Ariel Engle",
+          "role": "Backing Vocals"
+        }
+      ],
       "position": "B1",
       "title": "Lights Changing Colour"
     },
@@ -198,6 +364,13 @@
     {
       "artists": [],
       "duration": "3:12",
+      "extraartists": [
+        {
+          "discogs_id": "865298",
+          "name": "Joshua Zubot",
+          "role": "Violin"
+        }
+      ],
       "position": "B3",
       "title": "A Song Is A Weapon"
     },
@@ -210,12 +383,26 @@
     {
       "artists": [],
       "duration": "3:28",
+      "extraartists": [
+        {
+          "discogs_id": "2913692",
+          "name": "Robin Best",
+          "role": "Harp"
+        }
+      ],
       "position": "B5",
       "title": "The 400"
     },
     {
       "artists": [],
       "duration": "4:16",
+      "extraartists": [
+        {
+          "discogs_id": "2913692",
+          "name": "Robin Best",
+          "role": "Harp"
+        }
+      ],
       "position": "B6",
       "title": "Walls"
     }
