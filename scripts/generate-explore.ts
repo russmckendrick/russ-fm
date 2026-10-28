@@ -19,7 +19,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import sharp from 'sharp';
-import { avatarCrop } from '../src/lib/artistPhotoSource';
+import { avatarCrop, avatarCropFor, photoSourceFile } from '../src/lib/artistPhotoSource';
 import { GENRE_FAMILIES } from '../src/lib/genreFamilyDefs';
 import { creditKind, type CreditKind } from '../src/lib/explore/credits';
 import type { ExploreAlbum, ExploreArtist, ExploreData, ExploreLink, ExplorePerson, LinkReason } from '../src/lib/explore/types';
@@ -42,9 +42,9 @@ const AVATAR_COLS = 40;
 const MAX_CREDIT_PAIRS_ARTISTS = 12;
 
 const withAtlas = !process.argv.includes('--no-atlas');
-/** Where processed medium / avatar sizes live: public/ in dev, the asset cache or dist/ in CI. */
+/** Where processed medium sleeves live: public/ in dev, the asset cache or dist/ in CI. */
 const SIZED = [PUB, path.join(ROOT, 'node_modules', '.cache', 'assets', 'images'), path.join(ROOT, 'dist')];
-const sized = (kind: 'album' | 'artist', slug: string, size: string) => SIZED.map(dir => path.join(dir, kind, slug, `${slug}-${size}.jpg`));
+const sized = (kind: 'album', slug: string, size: string) => SIZED.map(dir => path.join(dir, kind, slug, `${slug}-${size}.jpg`));
 
 const TERM_TO_FAMILY = new Map<string, string>();
 for (const f of GENRE_FAMILIES) for (const t of f.terms) if (!TERM_TO_FAMILY.has(t)) TERM_TO_FAMILY.set(t, f.key);
@@ -377,19 +377,39 @@ async function tile(files: string[], size: number): Promise<Buffer | null> {
   return null;
 }
 
+/**
+ * An artist's avatar cut the way the build cuts `-avatar.jpg` (imageProcessor): from the photo
+ * source (the fanart chosen as the photo, else the hi-res) round the faces. Not the avatar file on
+ * disk, which can be left over from an older photo and then wouldn't match the `medium` close-ups.
+ */
+async function avatarTile(slug: string, size: number): Promise<Buffer | null> {
+  const notes = readJson(path.join(PUB, 'artist', slug, `${slug}-image.json`));
+  const file = path.join(PUB, 'artist', slug, photoSourceFile(slug, notes));
+  if (!fs.existsSync(file)) return tile([path.join(PUB, 'artist', slug, `${slug}-hi-res.jpg`)], size);
+  try {
+    const image = sharp(file);
+    const { width = 0, height = 0 } = await image.metadata();
+    const crop = avatarCropFor(notes, width, height);
+    const cut = crop ? image.extract({ left: crop.left, top: crop.top, width: crop.size, height: crop.size }) : image;
+    return await cut.resize(size, size, { fit: 'cover' }).removeAlpha().raw().toBuffer();
+  } catch {
+    return null;
+  }
+}
+
 async function atlas(
   out: string,
   count: number,
   cols: number,
   rows: number,
   size: number,
-  source: (i: number) => string[],
+  source: (i: number) => Promise<Buffer | null>,
   fallback: (i: number) => string,
 ) {
   const composites: sharp.OverlayOptions[] = [];
   const batch = 32;
   for (let start = 0; start < count; start += batch) {
-    const tiles = await Promise.all(Array.from({ length: Math.min(batch, count - start) }, (_, k) => tile(source(start + k), size)));
+    const tiles = await Promise.all(Array.from({ length: Math.min(batch, count - start) }, (_, k) => source(start + k)));
     tiles.forEach((buf, k) => {
       const n = start + k;
       const left = (n % cols) * size;
@@ -411,13 +431,13 @@ if (withAtlas) {
     const chunk = albums.slice(sheet * per, (sheet + 1) * per);
     await atlas(
       path.join(OUT, `sleeves-${sheet}.webp`), chunk.length, SLEEVE_COLS, Math.ceil(chunk.length / SLEEVE_COLS), SLEEVE,
-      i => [...sized('album', chunk[i].slug, 'medium'), path.join(PUB, 'album', chunk[i].slug, `${chunk[i].slug}-hi-res.jpg`)],
+      i => tile([...sized('album', chunk[i].slug, 'medium'), path.join(PUB, 'album', chunk[i].slug, `${chunk[i].slug}-hi-res.jpg`)], SLEEVE),
       i => chunk[i].fl,
     );
   }
   await atlas(
     path.join(OUT, 'avatars.webp'), artists.length, AVATAR_COLS, data.atlas.avatarRows, AVATAR,
-    i => [...sized('artist', artists[i].slug, 'avatar'), path.join(PUB, 'artist', artists[i].slug, `${artists[i].slug}-hi-res.jpg`)],
+    i => avatarTile(artists[i].slug, AVATAR),
     () => '#1e1e1e',
   );
   console.log(`✓ atlases: ${data.atlas.sheets} sleeve sheet(s), avatars`);
