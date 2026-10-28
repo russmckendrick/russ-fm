@@ -13,7 +13,7 @@ authoritative flag list of any subcommand.
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
 `backfill-videos`, `backfill-original-years`, `backfill-formats`, `backfill-tracklists`,
-`backfill-identities`, `backfill-fanart`, `upscale`,
+`backfill-credits`, `backfill-identities`, `backfill-fanart`, `upscale`,
 `maintenance`.
 
 ## Bare invocation
@@ -765,6 +765,63 @@ scrapper backfill-tracklists [OPTIONS]
   rewritten. `collection.json` doesn't use tracklists, so it isn't regenerated.
 - Resumable: a failed lookup keeps the old tracklist, and a re-run retries only those.
 - Prints `→ N movement(s)` for releases with suites.
+
+---
+
+## backfill-credits
+
+Store each release's Discogs credits (`extraartists`: producers, engineers, mixers, session
+players, sleeve designers) and write them into the album JSON as `credits`, with per-track
+credits as `extraartists` on the tracklist rows (see
+[Release credits](../data/schemas.md#release-credits-credits-tracklistextraartists)).
+
+```bash
+scrapper backfill-credits [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only fetch this many releases from Discogs (newest additions first); releases mapped from a stored payload and ones already stored are still written |
+| `--dry-run` | | FLAG | `false` | Report how many releases need a Discogs lookup, how many can be mapped from a stored payload and how many are already stored, without calling Discogs or writing anything |
+| `--force` | `-f` | FLAG | `false` | Fetch every release again, including ones that already have stored credits |
+| `--release` | `-r` | ID | all | Only this release (Discogs release id); repeat for more |
+
+### Examples
+
+```bash
+# How many releases still need their credits fetched?
+scrapper backfill-credits --dry-run
+
+# Try a couple of releases first ("Heroes" and Close To The Edge)
+scrapper backfill-credits -r 1326123 -r 431005
+
+# Full run (resumable; stop and re-run at any point)
+scrapper backfill-credits
+```
+
+### Behavior
+
+- Writes the mapped release credits to `raw_data.discogs.credits` on each release row, keeping
+  every other `raw_data` key (`[]` when Discogs lists none, so the row isn't fetched again).
+  Rows the Python scrapper wrote keep the whole Discogs payload in `raw_data.discogs`, so their
+  credits are mapped from its `extraartists` and `tracklist` without a request (2,796 of 3,719
+  releases when this was added).
+- Per-track credits are merged into the stored tracklist as `extraartists`. Rows line up by index
+  when the positions match the Discogs tracklist, otherwise by position and title, so hand-edited
+  titles, durations and kinds are kept. Unmatched rows are left alone.
+- One `GET /releases/{id}` per release without stored credits or a stored payload, in the authed
+  60/min bucket with the client's retries, so the 923 such releases take about 16 minutes.
+- Then every release with stored credits has its album JSON patched from the DB: `credits`
+  always, and `tracklist` only when a row carries `extraartists`. Values are key-sorted like a
+  full write, only those keys are touched, and a file that is already current is not rewritten.
+  `collection.json` doesn't use credits, so it isn't regenerated.
+- Resumable: a failed lookup leaves the row without credits, so a re-run retries only those.
+- Prints one line per fetched or mapped release (`→ N credit(s), M track(s) with credits`), then
+  a summary of fetched, mapped, failed, updated and already-current files.
+- New and refreshed releases store credits through `process_release` / the Discogs refresh, so
+  this is only needed for rows written before that.
 
 ---
 

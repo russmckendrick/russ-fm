@@ -97,6 +97,11 @@ pub enum Command {
     /// index tracks, e.g. "2112") were told apart, so each suite's movements are kept.
     /// Resumable; only releases with an untyped position-less row call Discogs.
     BackfillTracklists(BackfillTracklistsArgs),
+    /// Store each release's Discogs credits (`extraartists`: producers, engineers, session
+    /// players, sleeve designers) and write `credits` plus per-track `extraartists` into the
+    /// album JSON. Resumable; only releases without stored credits (and no stored Discogs
+    /// payload to map them from) call Discogs.
+    BackfillCredits(BackfillCreditsArgs),
     /// Find each artist's Wikidata item, MusicBrainz ID and Wikipedia article from its Discogs
     /// ID, then fix TheAudioDB matches, Wikipedia links and biographies a name lookup got wrong.
     /// Resumable; artists with a stored identity aren't looked up again (unless `--force`).
@@ -468,6 +473,23 @@ pub struct BackfillTracklistsArgs {
     pub force: bool,
 }
 
+#[derive(Debug, Args)]
+pub struct BackfillCreditsArgs {
+    /// Only fetch this many releases from Discogs (newest additions first); releases mapped
+    /// from a stored Discogs payload and ones already stored are still written.
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Report what would be fetched and patched without calling Discogs or writing anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Fetch every release again, including ones that already have stored credits.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+    /// Only these releases (Discogs release id; repeat the flag for more).
+    #[arg(short, long = "release", value_name = "DISCOGS_ID")]
+    pub release: Vec<String>,
+}
+
 #[derive(Debug, Subcommand)]
 pub enum DbCommand {
     /// Search releases or artists.
@@ -576,6 +598,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::BackfillOriginalYears(a) => ops::original_years::run(&cfg, a).await,
         Command::BackfillFormats(a) => ops::formats::run(&cfg, a).await,
         Command::BackfillTracklists(a) => ops::tracklists::run(&cfg, a).await,
+        Command::BackfillCredits(a) => ops::credits::run(&cfg, a).await,
         Command::BackfillIdentities(a) => ops::identity::run(&cfg, a).await,
         Command::BackfillFanart(a) => ops::fanart::run(&cfg, a).await,
         Command::Upscale(a) => ops::upscale::run(&cfg, a).await,

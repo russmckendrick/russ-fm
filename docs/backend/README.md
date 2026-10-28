@@ -307,6 +307,30 @@ Marble [Memphis Dust]"`). The pressing detail is kept alongside it:
   colour is derived (`formats::vinyl_override()`); `|` separates the texts of several Vinyl entries.
   A colour the vocabulary doesn't know is kept as written, and plain `Black` forces black vinyl.
 
+## Release credits
+
+Discogs lists the people behind a release besides its artists (producers, engineers, mixers,
+session players, sleeve designers) as `extraartists`, on the release and on individual tracks.
+They connect far more of the collection than member and alias links, which is what the Explore
+prototypes need.
+
+- `credits.rs` maps them: `release_credits()` gives `{name, discogs_id, role, tracks}` per
+  release-level entry and `track_credits()` gives `{name, discogs_id, role}` per track entry.
+  Names lose the Discogs `(2)` suffix like release artists do; the role and `tracks` scope are
+  kept as Discogs writes them.
+- `process_release` and the detail editor's Discogs refresh store the release credits at
+  `raw_data.discogs.credits`, and `tracklist_from_discogs()` puts per-track credits on each row as
+  `extraartists`, so new releases from `scrapper collection` get both. The tracklist editor carries
+  `extraartists` over like it does per-track `artists`. No SQLite schema change.
+- Older rows are filled by `scrapper backfill-credits`
+  (see [cli-commands.md](./cli-commands.md#backfill-credits)), which maps Python-era rows from the
+  stored Discogs payload and fetches the rest.
+- The album JSON gains `credits` (`output::credit_fields()`, called by `release_to_value()`) once
+  credits are stored, and tracklist rows gain `extraartists` (`output::json::track()`) when they
+  have any. Credit people aren't added to the artists table or `collection.json`.
+- The release refresh replaces `raw_data.discogs` wholesale, so it must keep writing `credits`
+  there or they are lost on the next refresh.
+
 ## Collection picker (TUI)
 
 The **Collection** home-menu entry lists the newest releases in your Discogs collection that
