@@ -1,13 +1,20 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { Graph } from "@phosphor-icons/react";
+import { VinylRecord } from "@phosphor-icons/react";
 import { BrowseHeader } from "@/components/browse/BrowseHeader";
 import type { ColourMap } from "@/components/browse/facetSleeves";
-import { genreFlood } from "@/components/genres/genreColours";
-import { GenreExplorerPanel } from "@/components/genres/GenreExplorerPanel";
-import { getGraphNodeCapacity } from "@/components/genres/useGenreGraphLayout";
+import { GenreDisc } from "@/components/genres/GenreDisc";
+import { genreFlood, genreLead } from "@/components/genres/genreColours";
+import { AllDetail, FamilyDetail, FamilyList, LitDetail } from "@/components/genres/GenreRecord";
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from "@/components/layout";
-import { FloodBand, PillLink, SectionHeading, bandFromFlood, usePageBand } from "@/components/player";
+import {
+  FloodBand,
+  RecordTile,
+  SectionHeading,
+  bandFromFlood,
+  recordsFlood,
+  usePageBand,
+} from "@/components/player";
 import { appConfig } from "@/config/app.config";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { useAlbumColorMap } from "@/hooks/useAlbumColors";
@@ -15,57 +22,43 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { slugify } from "@/lib/browseFacets";
 import { excludeBoxsetMembers } from "@/lib/boxsets";
 import { loadCollection } from "@/lib/collection";
-import { handleImageError } from "@/lib/image-utils";
-import type { Flood } from "@/lib/sleeveColour";
+import { getGenreExplorer } from "@/lib/genreExplorer";
+import type { GenreSummary } from "@/lib/genreExplorer";
+import { buildGenreFamilies, isGenreFamilyKey, type GenreFamilyKey } from "@/lib/genreFamilies";
+import { getAlbumImageFromData, handleImageError } from "@/lib/image-utils";
+import { originalYear } from "@/lib/releaseYear";
+import { floodFor, type Flood } from "@/lib/sleeveColour";
 import { cn } from "@/lib/utils";
-import {
-  ALL_GENRES_VALUE,
-  getGenreExplorer,
-  filterAlbums,
-  filterArtists,
-  filterGenres,
-  normalizeSort,
-  resolveArtist,
-  resolveGenre,
-  sortAlbums,
-  sortArtists,
-} from "@/lib/genreExplorer";
-import type {
-  GenreExplorerAlbum,
-  GenreExplorerArtist,
-  GenreSummary,
-} from "@/lib/genreExplorer";
 import type { Album } from "@/types/album";
-
-const NODE_PRESETS = {
-  standard: 14,
-  more: 22,
-  max: 32,
-} as const;
-
-const NODE_BUDGET_MIN = 1;
 
 interface GenreIndexGroup {
   initial: string;
   genres: GenreSummary[];
 }
 
+/** Explorer album uris drop the trailing slash that collection uris keep. */
+const bareUri = (uri: string) => uri.replace(/\/$/, "");
+
+/** The boldest of a list's first three records, as the page band does it. */
+function leadRecord(albums: Album[], map: ColourMap): Album | null {
+  const lead = albums.slice(0, 3);
+  let pick = lead[0] ?? null;
+  for (const album of lead) {
+    if ((map?.[album.uri_release]?.vivid ?? 0) > (map?.[pick?.uri_release ?? ""]?.vivid ?? 0)) pick = album;
+  }
+  return pick;
+}
+
 export function GenrePage() {
   const [collection, setCollection] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [viewportNodeDefault, setViewportNodeDefault] = useState(() => getResponsiveNodeDefault(getViewportWidth()));
   const colorMap = useAlbumColorMap();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const query = searchParams.get("q") || "";
+  const familyParam = searchParams.get("family");
   const genreParam = searchParams.get("genre");
-  const artistParam = searchParams.get("artist");
-  const albumParam = searchParams.get("album");
-  const nodesParam = searchParams.get("nodes");
-  const sort = normalizeSort(searchParams.get("sort"));
-  const requestedNodeBudget = normalizeNodeBudget(nodesParam, viewportNodeDefault);
 
   useEffect(() => {
     const loadData = async () => {
@@ -83,67 +76,72 @@ export function GenrePage() {
     loadData();
   }, []);
 
-  useEffect(() => {
-    const updateViewportDefault = () => {
-      setViewportNodeDefault(getResponsiveNodeDefault(getViewportWidth()));
-    };
-
-    updateViewportDefault();
-    window.addEventListener("resize", updateViewportDefault);
-
-    return () => window.removeEventListener("resize", updateViewportDefault);
-  }, []);
-
   const explorer = useMemo(() => getGenreExplorer(collection), [collection]);
-  const selectedGenre = useMemo(
-    () => resolveGenre(explorer.genres, genreParam, explorer.allGenre),
-    [explorer.allGenre, explorer.genres, genreParam],
+  const families = useMemo(() => buildGenreFamilies(collection, colorMap), [collection, colorMap]);
+  const newest = useMemo(
+    () => [...collection].sort((a, b) => (b.date_added || "").localeCompare(a.date_added || "")),
+    [collection],
   );
-  const selectedArtist = useMemo(
-    () => {
-      if (!artistParam) return null;
-      return resolveArtist(explorer.allGenre, artistParam) || resolveArtist(selectedGenre, artistParam);
-    },
-    [artistParam, explorer.allGenre, selectedGenre],
-  );
-  const artists = useMemo(() => {
-    if (!selectedGenre) return [];
-    return sortArtists(filterArtists(selectedGenre.artists, query), sort);
-  }, [query, selectedGenre, sort]);
-  const albums = useMemo(() => {
-    const source = selectedArtist?.albums || selectedGenre?.albums || [];
-    return sortAlbums(filterAlbums(source, query), sort);
-  }, [query, selectedArtist, selectedGenre, sort]);
-  const selectedAlbum = useMemo(
-    () => albums.find((album) => album.slug === albumParam) || null,
-    [albumParam, albums],
-  );
-  const graphGenre = useMemo(() => {
-    if (!selectedGenre) return null;
-    if (!selectedGenre.isAll || !query) return selectedGenre;
 
-    const relatedGenres = filterGenres(explorer.genres, query)
-      .map((genre) => ({ name: genre.name, albumCount: genre.albumCount }));
+  const selectedFamily = useMemo(
+    () => (isGenreFamilyKey(familyParam) ? families.find((f) => f.key === familyParam) ?? null : null),
+    [families, familyParam],
+  );
+  const litGenre = useMemo(() => {
+    if (!genreParam || selectedFamily) return null;
+    const wanted = decodeURIComponent(genreParam).toLowerCase();
+    return explorer.genres.find((genre) => genre.name.toLowerCase() === wanted) ?? null;
+  }, [explorer.genres, genreParam, selectedFamily]);
 
-    return relatedGenres.length ? { ...selectedGenre, relatedGenres } : selectedGenre;
-  }, [explorer.genres, query, selectedGenre]);
-  const nodeCapacity = useMemo(
-    () => getGraphNodeCapacity(graphGenre, artists, selectedArtist, albums, explorer.genres),
-    [albums, artists, explorer.genres, graphGenre, selectedArtist],
+  const litUris = useMemo(
+    () => (litGenre ? new Set(litGenre.albums.map((album) => bareUri(album.uri))) : null),
+    [litGenre],
   );
-  const nodeBudget = useMemo(
-    () => clampNodeBudget(requestedNodeBudget, nodeCapacity),
-    [nodeCapacity, requestedNodeBudget],
+  const lit = useMemo(
+    () => (litUris ? (album: Album) => litUris.has(bareUri(album.uri_release)) : null),
+    [litUris],
   );
+  const litSpread = useMemo(() => {
+    if (!lit) return [];
+    return families
+      .map((family) => ({ family, count: family.albums.filter(lit).length }))
+      .filter((s) => s.count > 0)
+      .sort((a, b) => b.count - a.count);
+  }, [families, lit]);
+
+  // What the record shows decides the page colour and the sleeve on its label:
+  // the picked family's boldest new record, a lit genre's lead, or the newest additions.
+  const { band, labelAlbum } = useMemo(() => {
+    if (selectedFamily) {
+      const lead = leadRecord(selectedFamily.newest, colorMap);
+      return { band: recordsFlood(selectedFamily.newest.map((a) => a.uri_release), colorMap), labelAlbum: lead?.uri_release ?? null };
+    }
+    if (litGenre) {
+      const { flood, lead } = genreLead(litGenre, colorMap);
+      return { band: bandFromFlood(flood), labelAlbum: lead ? `${bareUri(lead.uri)}/` : null };
+    }
+    const lead = leadRecord(newest, colorMap);
+    return { band: recordsFlood(newest.map((a) => a.uri_release), colorMap), labelAlbum: lead?.uri_release ?? null };
+  }, [colorMap, litGenre, newest, selectedFamily]);
+  usePageBand(band);
+
+  const labelFlood = floodFor(labelAlbum ? colorMap?.[labelAlbum] : null);
+  const shelf = useMemo(() => {
+    if (selectedFamily) return selectedFamily.newest;
+    if (lit) return newest.filter(lit);
+    return newest;
+  }, [lit, newest, selectedFamily]);
 
   usePageTitle(
-    selectedGenre && !selectedGenre.isAll
-      ? `${selectedGenre.name} genre map | Genres | Russ.fm`
-      : "Genres | Russ.fm",
+    selectedFamily
+      ? `${selectedFamily.name} | Genres | Russ.fm`
+      : litGenre
+        ? `${litGenre.name} | Genres | Russ.fm`
+        : "Genres | Russ.fm",
   );
   useMetaTags({
     title: "Genres | Russ.fm",
-    description: "Browse the russ.fm collection by genre and style, with ranked counts, genre dossiers, and an interactive map.",
+    description: "The russ.fm collection drawn as a record: every album in its sleeve colour, in twelve genre families, with ranked genres and an A–Z.",
     image: `${appConfig.siteUrl}/og-image.png`,
     url: `${appConfig.siteUrl}/genres`,
     type: "website",
@@ -158,83 +156,35 @@ export function GenrePage() {
     },
   });
 
-  const updateParams = useCallback(
-    (updates: Record<string, string | null>) => {
+  const setView = useCallback(
+    (view: { family?: GenreFamilyKey | null; genre?: string | null }) => {
       const params = new URLSearchParams(searchParams);
-      Object.entries(updates).forEach(([key, value]) => {
-        if (value) params.set(key, value);
-        else params.delete(key);
-      });
-      setSearchParams(params);
+      params.delete("family");
+      params.delete("genre");
+      if (view.family) params.set("family", view.family);
+      if (view.genre) params.set("genre", view.genre);
+      setSearchParams(params, { replace: true });
     },
     [searchParams, setSearchParams],
   );
 
-  const selectGenre = useCallback(
+  const selectFamily = useCallback((key: GenreFamilyKey | null) => setView({ family: key }), [setView]);
+  const lightGenre = useCallback((name: string) => setView({ genre: name }), [setView]);
+  const clearView = useCallback(() => setView({}), [setView]);
+  const showOnRecord = useCallback(
     (genre: GenreSummary) => {
-      updateParams({
-        genre: genre.isAll ? ALL_GENRES_VALUE : genre.name,
-        artist: null,
-        album: null,
-      });
+      lightGenre(genre.name);
+      document.getElementById("genre-record")?.scrollIntoView({ behavior: "smooth", block: "start" });
     },
-    [updateParams],
+    [lightGenre],
   );
-
-  const focusGenreFromAtlas = useCallback(
-    (genre: GenreSummary) => {
-      const params = new URLSearchParams(searchParams);
-      params.set("genre", genre.name);
-      params.delete("artist");
-      params.delete("album");
-
-      navigate({
-        pathname: "/genres",
-        search: `?${params.toString()}`,
-        hash: "#genre-map",
-      });
-
-      if (typeof window !== "undefined") {
-        window.setTimeout(() => {
-          document.getElementById("genre-map")?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 0);
-      }
-    },
-    [navigate, searchParams],
-  );
-
-  const selectArtist = useCallback(
-    (artist: GenreExplorerArtist) => {
-      updateParams({
-        genre: selectedGenre?.isAll ? ALL_GENRES_VALUE : selectedGenre?.name || null,
-        artist: artist.slug,
-        album: null,
-      });
-    },
-    [selectedGenre, updateParams],
-  );
-
-  const openAlbum = useCallback(
-    (album: GenreExplorerAlbum) => {
-      navigate(album.uri);
+  const shuffleFrom = useCallback(
+    (albums: Album[]) => {
+      if (!albums.length) return;
+      navigate(albums[Math.floor(Math.random() * albums.length)].uri_release);
     },
     [navigate],
   );
-  const clearArtistFocus = useCallback(
-    () => updateParams({ artist: null, album: null }),
-    [updateParams],
-  );
-  const goBack = useCallback(() => navigate(-1), [navigate]);
-  const goForward = useCallback(() => navigate(1), [navigate]);
-  // The header band and page ground take the selected genre's lead sleeve.
-  const band = useMemo(
-    () => (selectedGenre ? bandFromFlood(genreFlood(selectedGenre, colorMap)) : null),
-    [selectedGenre, colorMap],
-  );
-  usePageBand(band);
 
   if (loading) {
     return (
@@ -252,7 +202,7 @@ export function GenrePage() {
     );
   }
 
-  if (!selectedGenre || !graphGenre) {
+  if (!collection.length) {
     return (
       <PageContainer>
         <EditorialEmpty title="No genre data" detail="The collection did not include usable genre metadata." />
@@ -260,89 +210,141 @@ export function GenrePage() {
     );
   }
 
-  const focusedDossierPath = selectedGenre.isAll ? null : `/genre/${slugify(selectedGenre.name)}`;
-  const selectedFlood = genreFlood(selectedGenre, colorMap);
+  const shelfTitle = selectedFamily
+    ? `Newest in ${selectedFamily.name}`
+    : litGenre
+      ? `Newest in ${litGenre.name}`
+      : "Latest additions";
 
   return (
     <>
-      <FloodBand flood={band}>
-        <BrowseHeader
-          className="mb-0 md:mb-0"
-          title="Genres"
-          note={`${formatNumber(explorer.genres.length)} · ${formatNumber(explorer.totalAlbums)} records · ${formatNumber(explorer.totalArtists)} artists · ${formatYearSpan(explorer.yearStart, explorer.yearEnd)}`}
-          current="genres"
-        />
+      <FloodBand flood={band} innerClassName="pb-0 md:pb-0">
+        <div id="genre-record" className="grid scroll-mt-28 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12">
+          <div className="min-w-0 pb-8 md:pb-14">
+            {/* The title shares its row with the record from lg, so it steps
+                down until there is room for the full 112px. */}
+            <BrowseHeader
+              className="mb-8 md:mb-10 lg:[&_h1]:text-[80px] 2xl:[&_h1]:text-[112px]"
+              title="Genres"
+              note={`${formatNumber(collection.length)} records · ${families.length} families · ${formatNumber(explorer.genres.length)} genres`}
+              current="genres"
+            />
+            {selectedFamily ? (
+              <FamilyDetail
+                family={selectedFamily}
+                onLight={lightGenre}
+                onShuffle={() => shuffleFrom(selectedFamily.albums)}
+                onClear={clearView}
+              />
+            ) : litGenre && lit ? (
+              <LitDetail
+                name={litGenre.name}
+                path={`/genre/${slugify(litGenre.name)}`}
+                count={litGenre.albumCount}
+                artistCount={litGenre.artistCount}
+                yearStart={litGenre.yearStart}
+                yearEnd={litGenre.yearEnd}
+                spread={litSpread}
+                ink={band?.ink ?? "#0e0d0c"}
+                flood={band?.background ?? "#e8e2d6"}
+                onShuffle={() => shuffleFrom(newest.filter(lit))}
+                onClear={clearView}
+              />
+            ) : (
+              <AllDetail
+                total={collection.length}
+                artistCount={explorer.totalArtists}
+                yearStart={explorer.yearStart}
+                yearEnd={explorer.yearEnd}
+                topTerms={explorer.genres.slice(0, 8).map((g) => ({ name: g.name, count: g.albumCount }))}
+                onLight={lightGenre}
+                onShuffle={() => shuffleFrom(collection)}
+              />
+            )}
+          </div>
+
+          {/* Stacked, the record hangs over the next section like a hero
+              cover; beside the text it sits inside the band, whose height
+              the text decides. */}
+          <div className="mx-auto -mb-24 w-full max-w-[760px] md:-mb-40 lg:mb-0 lg:pb-12">
+            <GenreDisc
+              families={families}
+              colorMap={colorMap}
+              selected={selectedFamily?.key ?? null}
+              lit={lit}
+              labelCover={labelAlbum ? getAlbumImageFromData(labelAlbum, "medium") : null}
+              labelColour={labelFlood.ground}
+              onSelect={selectFamily}
+              onOpen={(album) => navigate(album.uri_release)}
+            />
+          </div>
+        </div>
       </FloodBand>
 
       <PageContainer className="pb-16">
-        {focusedDossierPath && (
-          <div className="mb-10 flex flex-wrap items-center gap-3">
-            <span
-              className="chip min-h-[44px] px-4 text-[15px]"
-              style={{ background: selectedFlood.flood, color: selectedFlood.ink }}
-            >
-              <span className="t-mono text-[11px] font-normal uppercase" style={{ color: selectedFlood.sub }}>
-                On the map
-              </span>
-              {selectedGenre.name}
-            </span>
-            <PillLink to={focusedDossierPath} size="sm" className="text-[color:var(--cream)]">
-              {selectedGenre.name} records
-            </PillLink>
+        <div className="mb-16 grid items-start gap-12 pt-28 md:mb-24 md:pt-44 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:pt-14">
+          <FamilyList families={families} selected={selectedFamily?.key ?? null} colorMap={colorMap} onSelect={selectFamily} />
+          <div className="min-w-0">
+            <p className="t-mono m-0 mb-8 text-[12px] uppercase leading-relaxed text-[color:var(--cream-dim)]">
+              One tile per record, in its sleeve colour · oldest at the rim, newest by the label
+            </p>
+            <SectionHeading
+              title={shelfTitle}
+              size="sm"
+              className="mb-6"
+              note={selectedFamily ? `${formatNumber(selectedFamily.albums.length)} records` : undefined}
+              link={
+                selectedFamily
+                  ? undefined
+                  : litGenre
+                    ? { to: `/genre/${slugify(litGenre.name)}`, label: `All ${formatNumber(litGenre.albumCount)}` }
+                    : { to: "/albums/1", label: "All albums" }
+              }
+            />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3">
+              {shelf.slice(0, 6).map((album) => (
+                <RecordTile
+                  key={album.uri_release}
+                  album={album}
+                  palette={colorMap?.[album.uri_release]}
+                  meta={[originalYear(album), formatAdded(album.date_added)].filter(Boolean).join(" · ")}
+                />
+              ))}
+            </div>
           </div>
-        )}
+        </div>
 
         <GenreAtlas
           genres={explorer.genres}
-          selectedGenre={selectedGenre}
+          litGenre={litGenre}
           colorMap={colorMap}
-          onFocusGenre={focusGenreFromAtlas}
-        />
-
-        <GenreExplorerPanel
-          explorer={explorer}
-          selectedGenre={selectedGenre}
-          graphGenre={graphGenre}
-          artists={artists}
-          albums={albums}
-          selectedArtist={selectedArtist}
-          selectedAlbum={selectedAlbum}
-          query={query}
-          sort={sort}
-          nodeBudget={nodeBudget}
-          nodeCapacity={nodeCapacity}
-          isAutoNodeBudget={!nodesParam}
-          colorMap={colorMap}
-          onQueryChange={(value) => updateParams({ q: value || null })}
-          onSortChange={(value) => updateParams({ sort: value })}
-          onNodeBudgetChange={(value) => updateParams({ nodes: value == null ? null : String(value) })}
-          onGenreChange={selectGenre}
-          onSelectArtist={selectArtist}
-          onOpenAlbum={openAlbum}
-          onBack={goBack}
-          onForward={goForward}
-          onClearArtistFocus={clearArtistFocus}
+          onShowOnRecord={showOnRecord}
         />
       </PageContainer>
     </>
   );
 }
 
+function formatAdded(date: string): string {
+  const d = new Date(date);
+  return Number.isNaN(d.getTime()) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+}
+
 function GenreAtlas({
   genres,
-  selectedGenre,
+  litGenre,
   colorMap,
-  onFocusGenre,
+  onShowOnRecord,
 }: {
   genres: GenreSummary[];
-  selectedGenre: GenreSummary;
+  litGenre: GenreSummary | null;
   colorMap: ColourMap;
-  onFocusGenre: (genre: GenreSummary) => void;
+  onShowOnRecord: (genre: GenreSummary) => void;
 }) {
   const topGenres = genres.slice(0, 12);
   const maxAlbums = topGenres[0]?.albumCount || 1;
   const indexGroups = useMemo(() => groupGenreIndex(genres), [genres]);
-  const selectedInitial = selectedGenre.isAll ? indexGroups[0]?.initial : getGenreInitial(selectedGenre.name);
+  const selectedInitial = litGenre ? getGenreInitial(litGenre.name) : indexGroups[0]?.initial;
   const [activeInitial, setActiveInitial] = useState(() => {
     return indexGroups.some((group) => group.initial === selectedInitial)
       ? selectedInitial
@@ -351,12 +353,12 @@ function GenreAtlas({
   const activeGroup = indexGroups.find((group) => group.initial === activeInitial) || indexGroups[0];
 
   useEffect(() => {
-    if (selectedGenre.isAll) return;
-    const nextInitial = getGenreInitial(selectedGenre.name);
+    if (!litGenre) return;
+    const nextInitial = getGenreInitial(litGenre.name);
     if (indexGroups.some((group) => group.initial === nextInitial)) {
       setActiveInitial(nextInitial);
     }
-  }, [indexGroups, selectedGenre.isAll, selectedGenre.name]);
+  }, [indexGroups, litGenre]);
 
   if (!genres.length) {
     return (
@@ -384,8 +386,8 @@ function GenreAtlas({
                   index={index}
                   maxAlbums={maxAlbums}
                   flood={genreFlood(genre, colorMap)}
-                  isSelected={selectedGenre.name === genre.name}
-                  onFocusGenre={onFocusGenre}
+                  isSelected={litGenre?.name === genre.name}
+                  onShowOnRecord={onShowOnRecord}
                 />
               </li>
             ))}
@@ -425,7 +427,7 @@ function GenreAtlas({
               <ol className="flex flex-col">
                 {activeGroup.genres.map((genre) => {
                   const flood = genreFlood(genre, colorMap);
-                  const isSelected = selectedGenre.name === genre.name;
+                  const isSelected = litGenre?.name === genre.name;
                   return (
                     <li
                       key={genre.name}
@@ -446,12 +448,12 @@ function GenreAtlas({
                       </Link>
                       <button
                         type="button"
-                        onClick={() => onFocusGenre(genre)}
-                        aria-label={`Show ${genre.name} on the map`}
-                        title="Show on the map"
+                        onClick={() => onShowOnRecord(genre)}
+                        aria-label={`Show ${genre.name} on the record`}
+                        title="Show on the record"
                         className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[color:var(--cream-dim)] transition-colors hover:bg-[color:var(--ground)] hover:text-[color:var(--cream)]"
                       >
-                        <Graph className="h-4 w-4" weight="bold" aria-hidden />
+                        <VinylRecord className="h-4 w-4" weight="bold" aria-hidden />
                       </button>
                     </li>
                   );
@@ -471,14 +473,14 @@ function GenreRankRow({
   maxAlbums,
   flood,
   isSelected,
-  onFocusGenre,
+  onShowOnRecord,
 }: {
   genre: GenreSummary;
   index: number;
   maxAlbums: number;
   flood: Flood;
   isSelected: boolean;
-  onFocusGenre: (genre: GenreSummary) => void;
+  onShowOnRecord: (genre: GenreSummary) => void;
 }) {
   const dossierPath = `/genre/${slugify(genre.name)}`;
   const barWidth = `${Math.max(6, Math.round((genre.albumCount / maxAlbums) * 100))}%`;
@@ -500,7 +502,7 @@ function GenreRankRow({
             {genre.name}
           </Link>
           {isSelected && (
-            <span className="t-mono text-[11px] uppercase text-[color:var(--cream-dim)]">On the map</span>
+            <span className="t-mono text-[11px] uppercase text-[color:var(--cream-dim)]">On the record</span>
           )}
         </div>
         <p className="t-mono mt-2 text-[12px] uppercase text-[color:var(--cream-dim)]">
@@ -515,13 +517,13 @@ function GenreRankRow({
         <CoverStrip genre={genre} />
         <button
           type="button"
-          onClick={() => onFocusGenre(genre)}
-          aria-label={`Show ${genre.name} on the map`}
+          onClick={() => onShowOnRecord(genre)}
+          aria-label={`Show ${genre.name} on the record`}
           className="pill pill-sm text-[color:var(--cream)]"
           style={{ borderColor: "var(--cream-rule)" }}
         >
-          <Graph className="h-4 w-4" weight="bold" aria-hidden />
-          Map
+          <VinylRecord className="h-4 w-4" weight="bold" aria-hidden />
+          Show
         </button>
       </div>
     </div>
@@ -575,33 +577,6 @@ function groupGenreIndex(genres: GenreSummary[]): GenreIndexGroup[] {
 function getGenreInitial(name: string): string {
   const first = name.trim().charAt(0).toUpperCase();
   return /^[0-9]$/.test(first) ? "0-9" : first || "#";
-}
-
-function getResponsiveNodeDefault(width: number): number {
-  if (width < 768) return NODE_PRESETS.standard;
-  if (width < 1180) return NODE_PRESETS.more;
-  return NODE_PRESETS.max;
-}
-
-function getViewportWidth(): number {
-  if (typeof window === "undefined") return 1280;
-  return window.innerWidth || 1280;
-}
-
-function normalizeNodeBudget(value: string | null, viewportDefault: number): number {
-  if (value === "standard") return NODE_PRESETS.standard;
-  if (value === "more") return NODE_PRESETS.more;
-  if (value === "max") return NODE_PRESETS.max;
-
-  const parsed = Number(value);
-  if (Number.isFinite(parsed) && parsed > 0) return Math.round(parsed);
-
-  return viewportDefault;
-}
-
-function clampNodeBudget(value: number, max: number): number {
-  const upper = Math.max(NODE_BUDGET_MIN, max);
-  return Math.min(Math.max(NODE_BUDGET_MIN, Math.round(value)), upper);
 }
 
 function formatYearSpan(start: number | null, end: number | null): string {

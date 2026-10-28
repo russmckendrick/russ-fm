@@ -1,10 +1,10 @@
 import { floodForUri, mostVivid, type ColourMap } from '@/components/browse/facetSleeves';
 import type { Flood } from '@/lib/sleeveColour';
-import type { GenreExplorerAlbum, GenreExplorerArtist, GenreSummary } from '@/lib/genreExplorer';
+import type { GenreExplorerAlbum, GenreSummary } from '@/lib/genreExplorer';
 
 /**
- * Sleeve colours for the genre atlas and network graph. A genre or artist
- * takes the flood of its most vivid recent record; an album its own sleeve.
+ * Sleeve colours for the genre lists and the genre record: a genre takes
+ * the flood of its most vivid recent record.
  */
 
 const genreCache = new WeakMap<object, WeakMap<GenreSummary, { flood: Flood; lead: GenreExplorerAlbum | null }>>();
@@ -38,14 +38,4 @@ export function genreLead(genre: GenreSummary, map: ColourMap): { flood: Flood; 
 
 export function genreFlood(genre: GenreSummary, map: ColourMap): Flood {
   return genreLead(genre, map).flood;
-}
-
-export function albumFlood(album: GenreExplorerAlbum, map: ColourMap): Flood {
-  return floodForUri(colourKey(album), map);
-}
-
-export function artistFlood(artist: GenreExplorerArtist, map: ColourMap): Flood {
-  const pool = artist.representativeAlbums?.length ? artist.representativeAlbums : artist.albums ?? [];
-  const lead = mostVivid(pool, colourKey, map, 24);
-  return floodForUri(lead ? colourKey(lead) : null, map);
 }

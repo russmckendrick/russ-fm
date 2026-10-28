@@ -604,16 +604,39 @@ sleeve. `ColourMap` is the `useAlbumColorMap()` result.
 
 ## Genre Colours (`src/components/genres/genreColours.ts`)
 
-Sleeve colours for the genre atlas and map, built on the browse helpers.
+Sleeve colours for the genre lists and the genre record, built on the browse helpers.
 
 | Export | Description |
 |--------|-------------|
 | `genreLead(genre, map)` | `{ flood, lead }` from the genre's most vivid recent record; cached per genre and map |
 | `genreFlood(genre, map)` | The flood only |
-| `albumFlood(album, map)` | The album's own sleeve flood |
-| `artistFlood(artist, map)` | Flood of the artist's most vivid representative record |
 
 Explorer URIs have no trailing slash; the helpers add one to match `album-colors.json` keys.
+
+## Genre Families (`src/lib/genreFamilies.ts`)
+
+The 12 slices of the genre record. Each album is filed in exactly one family:
+the first of its Discogs `styles` (most relevant first) that a family claims,
+then its `genre_names`, else Hard Rock & Metal for anything tagged Rock and
+Pop for the rest. `GENRE_FAMILIES` is in disc order (clockwise from 12
+o'clock) with codes A1–A6 / B1–B6. To move a style, edit its family's `terms`.
+
+| Export | Description |
+|--------|-------------|
+| `GENRE_FAMILIES` | `{ key, code, name, terms }` per family |
+| `familyOf(album)` | The family key an album is filed in |
+| `isGenreFamilyKey(value)` | Type guard for the `?family=` parameter |
+| `buildGenreFamilies(collection, map)` | Families in disc order, each with `albums` (oldest original year first, then by sleeve colour), `newest`, `artistCount`, `yearStart` / `yearEnd`, `styles` and `artists` (ranked `{ name, count }`, Various left out) |
+
+## Genre Disc Geometry (`src/lib/genreDisc.ts`)
+
+Pure layout for `GenreDisc`, in disc units (1 = the rim).
+
+| Export | Description |
+|--------|-------------|
+| `DISC` | Radii and gaps: music from 0.943 down towards a run-out at 0.39, label at 0.327 |
+| `layoutDisc(sizes)` | Slices for families of the given sizes. Picks a groove pitch so the collection fills the disc to the run-out, then sizes each slice so every one ends at the same depth. Each slice has rows (`r`, `start`, `step`, `first`, `count`) |
+| `hitDisc(layout, x, y, pulled, pull)` | `{ slice, index }` of the tile under a point, testing the pulled-out slice first, or `null` |
 
 ## Wrapped Sleeve Helpers (`src/pages/wrapped/utils/sleeves.ts`)
 

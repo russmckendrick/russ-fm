@@ -175,7 +175,7 @@ without a neutral flash.
 ### useAlbumColorMap
 
 The whole URI → palette map. Use it when a page paints many sleeves at once (grids, shelves,
-the artist discography, browse cards, the genre map, Wrapped) instead of calling `useAlbumColors` per
+the artist discography, browse cards, the genre record, Wrapped) instead of calling `useAlbumColors` per
 tile.
 
 ```typescript

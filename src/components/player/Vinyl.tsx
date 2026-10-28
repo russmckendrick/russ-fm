@@ -57,7 +57,7 @@ function lookVars(look: VinylLook): CSSProperties {
  * old one, which is dropped once the fade ends, so the label never flashes
  * back to its flat colour between records.
  */
-function LabelCover({ src }: { src: string }) {
+export function LabelCover({ src }: { src: string }) {
   const [layers, setLayers] = useState<string[]>([src]);
 
   useEffect(() => {
