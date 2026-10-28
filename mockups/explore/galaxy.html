@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Galaxy · russ.fm</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<link rel="stylesheet" href="/mockups/explore/galaxy.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<canvas id="sky" aria-label="A 3D map of every artist in the collection. Use the search box to go to an artist."></canvas>
+
+<div class="g-labels" id="labels" aria-hidden="false"></div>
+
+<header class="g-top">
+  <div class="g-title">
+    <span class="x-plate">The Galaxy</span>
+    <span class="g-count x-mono" id="count"></span>
+  </div>
+  <div class="g-search">
+    <input id="q" type="search" placeholder="Find an artist" autocomplete="off" spellcheck="false" aria-label="Find an artist" aria-controls="results" aria-autocomplete="list">
+    <button id="rand" class="g-btn" type="button" title="Go to a random connected artist">Random</button>
+    <button id="home" class="g-btn" type="button" title="See the whole map">Whole map</button>
+    <ul id="results" class="g-results" role="listbox" hidden></ul>
+  </div>
+  <ul class="g-legend x-label" aria-label="Line colours">
+    <li><i style="--c: var(--l-member)"></i>Member / group</li>
+    <li><i style="--c: var(--l-bandmate)"></i>Shared bandmate</li>
+    <li><i style="--c: var(--l-guest)"></i>Guest spot</li>
+  </ul>
+</header>
+
+<p class="g-hint x-mono" id="hint">Drag to turn · scroll or pinch to zoom · click a star</p>
+
+<div class="g-tip" id="tip" hidden></div>
+
+<aside class="g-panel" id="panel" aria-live="polite" hidden></aside>
+
+<div class="g-loader" id="loader">
+  <span class="x-plate">Drawing the map</span>
+  <span class="g-bar"><i id="bar"></i></span>
+  <span class="x-mono" id="loadnote">Loading the collection</span>
+</div>
+
+<script type="module" src="/mockups/explore/galaxy.js"></script>
+</body>
+</html>
