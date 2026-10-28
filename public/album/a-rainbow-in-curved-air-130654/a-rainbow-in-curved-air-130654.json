@@ -23,6 +23,44 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T07:42:57.552699",
+  "credits": [
+    {
+      "discogs_id": "760210",
+      "name": "John Berg",
+      "role": "Artwork [Front Cover Montage]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "269429",
+      "name": "Glen Kolotkin",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "364695",
+      "name": "Roy Segal",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1862895",
+      "name": "Virginia Team",
+      "role": "Illustration [Back Cover]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "32208",
+      "name": "David Behrman",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "269429",
+      "name": "Glen Kolotkin",
+      "role": "Technician [Studio Recording Adaption]",
+      "tracks": ""
+    }
+  ],
   "date_added": "2022-03-06T05:03:53-08:00",
   "discogs_id": "130654",
   "discogs_url": "https://www.discogs.com/release/130654-Terry-Riley-A-Rainbow-In-Curved-Air",
@@ -146,12 +184,26 @@
     {
       "artists": [],
       "duration": "18:40",
+      "extraartists": [
+        {
+          "discogs_id": "32198",
+          "name": "Terry Riley",
+          "role": "Electric Organ, Electric Harpsichord, Keyboards [Rocksichord], Goblet Drum [Dumbec], Tambourine"
+        }
+      ],
       "position": "A",
       "title": "A Rainbow In Curved Air"
     },
     {
       "artists": [],
       "duration": "21:40",
+      "extraartists": [
+        {
+          "discogs_id": "32198",
+          "name": "Terry Riley",
+          "role": "Soprano Saxophone, Electric Organ"
+        }
+      ],
       "position": "B",
       "title": "Poppy Nogood And The Phantom Band"
     }

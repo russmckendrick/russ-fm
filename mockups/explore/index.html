@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Explore prototypes</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<style>
+  body { background: var(--ground); color: var(--ink); }
+  main { max-width: 1180px; margin: 0 auto; padding: 48px 16px 96px; }
+  header { display: grid; gap: 12px; margin-bottom: 36px; }
+  h1 { margin: 0; font: 640 clamp(40px, 7vw, 72px)/0.98 var(--font-display); font-variation-settings: 'wdth' 85; }
+  header p { margin: 0; max-width: 62ch; color: var(--ink-muted); font-size: 17px; line-height: 1.45; }
+  .stats { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; color: var(--ink-dim); }
+  .stats b { color: var(--ink); font-family: var(--font-mono); font-weight: 400; margin-right: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  a.card { display: grid; grid-template-rows: 200px auto; border: 1px solid var(--hairline); background: var(--panel); color: inherit; text-decoration: none; overflow: hidden; }
+  a.card:hover { border-color: var(--ink-dim); }
+  a.card:hover canvas { transform: scale(1.03); }
+  .art { position: relative; overflow: hidden; background: #1B1A18; }
+  .art canvas { width: 100%; height: 100%; display: block; transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
+  .art .x-plate { position: absolute; left: 14px; top: 12px; color: #F1EEE7; mix-blend-mode: difference; }
+  .body { padding: 16px 16px 18px; display: grid; gap: 8px; }
+  .body h2 { margin: 0; font: 600 22px/1.12 var(--font-display); }
+  .body p { margin: 0; color: var(--ink-muted); line-height: 1.45; font-size: 15px; }
+  .body .x-label { color: var(--amber); }
+  @media (prefers-reduced-motion: reduce) { .art canvas { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="x-plate">russ.fm / explore</span>
+    <h1>Five ways into the collection</h1>
+    <p>Throwaway prototypes built from the real data: every record, artist, photo and video, and the musicians who link the bands together. Each one starts somewhere and keeps giving you a reason to go one more step.</p>
+    <div class="stats x-label" id="stats"></div>
+  </header>
+  <div class="grid" id="grid"></div>
+</main>
+<script type="module">
+import { loadExplore, sleeveCell, sleeveSheetUrl, mountNav } from '/mockups/explore/shared.js';
+
+const concepts = [
+  { key: 'thread', name: 'The Thread', tag: 'Feed', text: 'A vertical feed of hops. Each screen is a photo, a sleeve or a video, with one line on how it connects to the last. Swipe up for the next hop, sideways to branch.' },
+  { key: 'galaxy', name: 'The Galaxy', tag: '3D map', text: 'Every artist as a star, grouped into twelve genre nebulae, with bandmates and guests drawn as trails. Fly to an artist and their records orbit them.' },
+  { key: 'wall', name: 'The Wall', tag: 'Canvas', text: 'All 3,719 sleeves on an endless wall sorted by colour. Tap one and the whole wall re-sorts around it: same artist, label, year and vinyl colour in rings.' },
+  { key: 'trees', name: 'Family Trees', tag: 'Timeline', text: 'Pete Frame style family trees, animated. Bands on a timeline, musicians as threads running between them. Click any band to re-root the tree.' },
+  { key: 'aisle', name: 'The Aisle', tag: '3D crates', text: 'Flick through crates of records. The dividers are lenses: genre, label, decade, vinyl colour, mood. Pull a record and the disc slides out.' },
+];
+
+mountNav('');
+const d = await loadExplore();
+document.getElementById('stats').innerHTML = [
+  [d.albums.length, 'records'], [d.artists.length, 'artists'], [d.people.length, 'musicians in 2+ bands'],
+  [d.links.length, 'artist links'], [d.albums.filter(a => a.v.length).length, 'records with video'],
+].map(([n, l]) => `<span><b>${n.toLocaleString('en-GB')}</b>${l}</span>`).join('');
+
+// Each card gets a strip of real sleeves drawn from the atlases.
+const sheets = await Promise.all([0, 1, 2, 3].map(s => new Promise(res => { const im = new Image(); im.onload = () => res(im); im.src = sleeveSheetUrl(s); })));
+const grid = document.getElementById('grid');
+const order = d.albums.map((a, i) => i).sort((x, y) => d.albums[x].h - d.albums[y].h);
+
+concepts.forEach((c, n) => {
+  const a = document.createElement('a');
+  a.className = 'card';
+  a.href = `/mockups/explore/${c.key}.html`;
+  a.innerHTML = `<div class="art"><canvas width="720" height="400"></canvas><span class="x-plate">0${n + 1}</span></div>
+    <div class="body"><span class="x-label">${c.tag}</span><h2>${c.name}</h2><p>${c.text}</p></div>`;
+  grid.appendChild(a);
+  const ctx = a.querySelector('canvas').getContext('2d');
+  const size = 80, cols = 9, rows = 5;
+  const start = Math.floor((order.length / concepts.length) * n);
+  for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) {
+    const i = order[(start + r * cols + k) % order.length];
+    const cell = sleeveCell(d, i);
+    ctx.drawImage(sheets[cell.sheet], cell.x, cell.y, cell.size, cell.size, k * size, r * size, size, size);
+  }
+});
+</script>
+</body>
+</html>

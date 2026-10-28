@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { lazy, Suspense, useLayoutEffect } from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigationType, useParams } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
@@ -21,6 +21,10 @@ import { BrowseIndexPage } from './pages/browse/BrowseIndexPage';
 import { FacetListPage } from './pages/browse/FacetListPage';
 import { FacetDetailPage } from './pages/browse/FacetDetailPage';
 import { ColouredVinylPage } from './pages/browse/ColouredVinylPage';
+
+// /explore pages load on first visit, so the Galaxy's Three.js stays out of every other page.
+const ExploreGalaxyPage = lazy(() => import('./pages/explore/GalaxyPage').then(m => ({ default: m.ExploreGalaxyPage })));
+const ExploreThreadPage = lazy(() => import('./pages/explore/ThreadPage').then(m => ({ default: m.ExploreThreadPage })));
 
 /**
  * New pages start at the top. Back/forward (POP) is left to the browser so it
@@ -58,6 +62,11 @@ function ArtistRouteHandler() {
   return <ArtistDetailPage key={artistPath} />;
 }
 
+/** /explore pages fill the screen under the nav, so they have no footer. */
+function PageFooter() {
+  const { pathname } = useLocation();
+  return pathname === '/explore' || pathname.startsWith('/explore/') ? null : <Footer />;
+}
 
 function App() {
   return (
@@ -102,6 +111,9 @@ function App() {
           <Route path="/tv/artist/:artist/:video" element={<TvArtistPage />} />
           <Route path="/tv/:channel" element={<TvPage />} />
           <Route path="/tv/:channel/:video" element={<TvPage />} />
+          <Route path="/explore" element={<Suspense fallback={null}><ExploreGalaxyPage /></Suspense>} />
+          <Route path="/explore/thread" element={<Suspense fallback={null}><ExploreThreadPage /></Suspense>} />
+          <Route path="/explore/:artist" element={<Suspense fallback={null}><ExploreGalaxyPage /></Suspense>} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />
           <Route path="/wrapped/ytd" element={<WrappedYTD />} />
@@ -109,7 +121,7 @@ function App() {
         </Routes>
       </main>
 
-      <Footer />
+      <PageFooter />
 
       {/* Dev-only: Cmd/Ctrl+Shift+D to open */}
       <TweaksPanel />

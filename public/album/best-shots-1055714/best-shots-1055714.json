@@ -23,6 +23,50 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:03:17.304199",
+  "credits": [
+    {
+      "discogs_id": "147534",
+      "name": "Joe Chiccarelli",
+      "role": "Engineer [& Associate Producer]",
+      "tracks": "A5"
+    },
+    {
+      "discogs_id": "294328",
+      "name": "Denis Blackham",
+      "role": "Lacquer Cut By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2227623",
+      "name": "Moshe Brakha",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "125452",
+      "name": "Keith Olsen",
+      "role": "Producer",
+      "tracks": "A1, B3, B4, B6"
+    },
+    {
+      "discogs_id": "74105",
+      "name": "Mike Chapman",
+      "role": "Producer",
+      "tracks": "A6, B5"
+    },
+    {
+      "discogs_id": "276731",
+      "name": "Neil Giraldo",
+      "role": "Producer",
+      "tracks": "A2, A3, A5, B1, B3"
+    },
+    {
+      "discogs_id": "160131",
+      "name": "Peter Coleman",
+      "role": "Producer",
+      "tracks": "A2, A3, A4, B1, B2"
+    }
+  ],
   "date_added": "2019-11-08T19:52:05-08:00",
   "discogs_id": "1055714",
   "discogs_url": "https://www.discogs.com/release/1055714-Pat-Benatar-Best-Shots",
@@ -132,72 +176,191 @@
     {
       "artists": [],
       "duration": "2:50",
+      "extraartists": [
+        {
+          "discogs_id": "357988",
+          "name": "Eddie Schwartz",
+          "role": "Written-By"
+        }
+      ],
       "position": "A1",
       "title": "Hit Me With Your Best Shot"
     },
     {
       "artists": [],
       "duration": "4:03",
+      "extraartists": [
+        {
+          "discogs_id": "267225",
+          "name": "Holly Knight",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "74105",
+          "name": "Mike Chapman",
+          "role": "Written-By"
+        }
+      ],
       "position": "A2",
       "title": "Love Is A Battlefield"
     },
     {
       "artists": [],
       "duration": "3:40",
+      "extraartists": [
+        {
+          "discogs_id": "1660567",
+          "name": "Lowen & Navarro",
+          "role": "Written-By"
+        }
+      ],
       "position": "A3",
       "title": "We Belong"
     },
     {
       "artists": [],
       "duration": "3:55",
+      "extraartists": [
+        {
+          "discogs_id": "276731",
+          "name": "Neil Giraldo",
+          "role": "Written-By"
+        }
+      ],
       "position": "A4",
       "title": "We Live For Love"
     },
     {
       "artists": [],
       "duration": "4:15",
+      "extraartists": [
+        {
+          "discogs_id": "1773798",
+          "name": "Steinberg & Kelly",
+          "role": "Written-By"
+        }
+      ],
       "position": "A5",
       "title": "Sex As A Weapon"
     },
     {
       "artists": [],
       "duration": "4:02",
+      "extraartists": [
+        {
+          "discogs_id": "267225",
+          "name": "Holly Knight",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "92471",
+          "name": "Simon Climie",
+          "role": "Written-By"
+        }
+      ],
       "position": "A6",
       "title": "Invincible (Theme From The Legend Of Billie Jean)"
     },
     {
       "artists": [],
       "duration": "3:40",
+      "extraartists": [
+        {
+          "discogs_id": "493211",
+          "name": "D.L. Byron",
+          "role": "Written-By"
+        }
+      ],
       "position": "B1",
       "title": "Shadows Of The Night"
     },
     {
       "artists": [],
       "duration": "3:18",
+      "extraartists": [
+        {
+          "discogs_id": "306035",
+          "name": "Cliff Wade",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "572205",
+          "name": "Geoff Gill",
+          "role": "Written-By"
+        }
+      ],
       "position": "B2",
       "title": "Heartbreaker"
     },
     {
       "artists": [],
       "duration": "3:20",
+      "extraartists": [
+        {
+          "discogs_id": "160130",
+          "name": "Pat Benatar",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "482350",
+          "name": "Scott St. Clair Sheets",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "294812",
+          "name": "Tom Kelly",
+          "role": "Written-By"
+        }
+      ],
       "position": "B3",
       "title": "Fire & Ice"
     },
     {
       "artists": [],
       "duration": "3:24",
+      "extraartists": [
+        {
+          "discogs_id": "252840",
+          "name": "Doug Lubahn",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "160130",
+          "name": "Pat Benatar",
+          "role": "Written-By"
+        }
+      ],
       "position": "B4",
       "title": "Treat Me Right"
     },
     {
       "artists": [],
       "duration": "3:45",
+      "extraartists": [
+        {
+          "discogs_id": "376350",
+          "name": "Chinn And Chapman",
+          "role": "Written-By"
+        }
+      ],
       "position": "B5",
       "title": "If You Think You Know How To Love Me"
     },
     {
       "artists": [],
       "duration": "3:04",
+      "extraartists": [
+        {
+          "discogs_id": "501972",
+          "name": "Eddie Brigati",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "304241",
+          "name": "Felix Cavaliere",
+          "role": "Written-By"
+        }
+      ],
       "position": "B6",
       "title": "You Better Run"
     }

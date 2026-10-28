@@ -23,6 +23,74 @@
   },
   "country": "Europe",
   "created_at": "2025-07-10T08:01:51.736920",
+  "credits": [
+    {
+      "discogs_id": "1832000",
+      "name": "Johnson Panas",
+      "role": "Artwork [Original Sleeve]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "86125",
+      "name": "Owen Morris",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "37120",
+      "name": "Johnny Marr",
+      "role": "Guitar, Keyboards, Programmed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "339601",
+      "name": "Frank Arkwright",
+      "role": "Mastered By, Remastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2242958",
+      "name": "Todd Fath",
+      "role": "Photography By [Picture]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "33928",
+      "name": "Bernard Sumner",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "37120",
+      "name": "Johnny Marr",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "26307",
+      "name": "Andy Robinson",
+      "role": "Programmed By [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "33928",
+      "name": "Bernard Sumner",
+      "role": "Vocals, Keyboards, Programmed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "33928",
+      "name": "Bernard Sumner",
+      "role": "Written-By",
+      "tracks": "A1 to A3, B1 to B6"
+    },
+    {
+      "discogs_id": "37120",
+      "name": "Johnny Marr",
+      "role": "Written-By",
+      "tracks": "A1 to A3, B1 to B6"
+    }
+  ],
   "date_added": "2020-01-24T20:04:58-08:00",
   "discogs_id": "14694007",
   "discogs_url": "https://www.discogs.com/release/14694007-Electronic-Electronic",
@@ -132,18 +200,69 @@
     {
       "artists": [],
       "duration": "4:38",
+      "extraartists": [
+        {
+          "discogs_id": "36946",
+          "name": "Donald Johnson",
+          "role": "Drums [Additional], Percussion [Additional]"
+        }
+      ],
       "position": "A3",
       "title": "Tighten Up"
     },
     {
       "artists": [],
       "duration": "4:10",
+      "extraartists": [
+        {
+          "discogs_id": "64532",
+          "name": "Chris Lowe",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "62963",
+          "name": "Neil Tennant",
+          "role": "Vocals"
+        },
+        {
+          "discogs_id": "33928",
+          "name": "Bernard Sumner",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "37120",
+          "name": "Johnny Marr",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "730719",
+          "name": "Tennant / Lowe",
+          "role": "Written-By"
+        }
+      ],
       "position": "A4",
       "title": "The Patience Of A Saint"
     },
     {
       "artists": [],
       "duration": "5:14",
+      "extraartists": [
+        {
+          "discogs_id": "33928",
+          "name": "Bernard Sumner",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "37120",
+          "name": "Johnny Marr",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "62963",
+          "name": "Neil Tennant",
+          "role": "Written-By"
+        }
+      ],
       "position": "A5",
       "title": "Getting Away With It"
     },
@@ -162,6 +281,13 @@
     {
       "artists": [],
       "duration": "5:20",
+      "extraartists": [
+        {
+          "discogs_id": "2944",
+          "name": "Denise Johnson",
+          "role": "Vocals"
+        }
+      ],
       "position": "B3",
       "title": "Get The Message"
     },
@@ -174,12 +300,31 @@
     {
       "artists": [],
       "duration": "4:09",
+      "extraartists": [
+        {
+          "discogs_id": "298211",
+          "name": "Helen Powell",
+          "role": "Oboe"
+        }
+      ],
       "position": "B5",
       "title": "Some Distant Memory"
     },
     {
       "artists": [],
       "duration": "5:09",
+      "extraartists": [
+        {
+          "discogs_id": "278770",
+          "name": "David Palmer",
+          "role": "Drums [Additional]"
+        },
+        {
+          "discogs_id": "36946",
+          "name": "Donald Johnson",
+          "role": "Drums [Additional], Percussion [Additional]"
+        }
+      ],
       "position": "B6",
       "title": "Feel Every Beat"
     }

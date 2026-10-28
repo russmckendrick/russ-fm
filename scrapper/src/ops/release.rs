@@ -255,7 +255,7 @@ pub struct EnrichFlags {
 }
 
 /// Strip a Discogs disambiguation suffix like " (2)" from an artist name.
-fn clean_artist_name(name: &str) -> String {
+pub(crate) fn clean_artist_name(name: &str) -> String {
     static SUFFIX: Lazy<Regex> = Lazy::new(|| Regex::new(r"\s*\(\d+\)$").unwrap());
     SUFFIX.replace(name.trim(), "").to_string()
 }
@@ -410,6 +410,8 @@ pub async fn process_release(
             "formats": discogs.get("formats").cloned().unwrap_or(json!([])),
             // Full video objects (title, duration, embed) for tv.json; `release.videos` keeps URLs.
             "videos": crate::services::discogs::DiscogsService::videos_of(&discogs),
+            // Release-level `extraartists` (producers, engineers, players) → album JSON `credits`.
+            "credits": crate::credits::release_credits(&discogs),
         }),
     );
     if let Some(a) = &apple {
@@ -1155,12 +1157,18 @@ fn map_lastfm_album(resp: &Value) -> Option<Value> {
 /// Plain tracks carry no `type`, so existing releases keep their exact shape.
 pub(crate) fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
     let row = |t: &Value, artists: Vec<Value>| {
-        json!({
+        let mut r = json!({
             "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
             "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
             "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
             "artists": artists,
-        })
+        });
+        // Per-track players and producers; only on rows Discogs credits.
+        let extra = crate::credits::track_credits(t);
+        if !extra.is_empty() {
+            r["extraartists"] = json!(extra);
+        }
+        r
     };
     let mut out = Vec::new();
     for t in discogs.get("tracklist").and_then(|a| a.as_array()).into_iter().flatten() {
@@ -1549,6 +1557,7 @@ pub async fn refresh_release_field(
             d.insert("images".into(), discogs.get("images").cloned().unwrap_or(json!([])));
             d.insert("formats".into(), discogs.get("formats").cloned().unwrap_or(json!([])));
             d.insert("videos".into(), crate::services::discogs::DiscogsService::videos_of(&discogs));
+            d.insert("credits".into(), json!(crate::credits::release_credits(&discogs)));
             d.extend(discogs_master_fields(services, &discogs, Some(&rec)).await);
             raw.insert("discogs".into(), Value::Object(d));
             download_image = true;
@@ -1774,7 +1783,7 @@ pub fn tracklist_to_rows(tracklist: &Value) -> Vec<Vec<String>> {
 /// Editor rows back to the stored `[{position,title,duration}]` shape; all-blank rows dropped.
 ///
 /// The editor only exposes position/title/duration, so per-track `artists` (compilation
-/// credits, see [`track_artists`]) are carried over from `original` by re-matching each row
+/// credits, see [`track_artists`]) and `extraartists` (players, producers) are carried over from `original` by re-matching each row
 /// on position, then case-insensitive title. Without this, hand-editing a compilation's
 /// tracklist would silently strip its credits and leave every track scrobbling as "Various".
 pub fn rows_to_tracklist(original: &Value, rows: &[Vec<String>]) -> Value {
@@ -1805,6 +1814,12 @@ pub fn rows_to_tracklist(original: &Value, rows: &[Vec<String>]) -> Value {
                     .filter(|a| a.as_array().is_some_and(|a| !a.is_empty()));
                 if let Some(artists) = artists {
                     track["artists"] = artists.clone();
+                }
+                if let Some(extra) = original
+                    .and_then(|t| t.get("extraartists"))
+                    .filter(|a| a.as_array().is_some_and(|a| !a.is_empty()))
+                {
+                    track["extraartists"] = extra.clone();
                 }
                 // Heading/suite kinds and suite membership aren't editable columns either.
                 for key in ["type", "parent"] {

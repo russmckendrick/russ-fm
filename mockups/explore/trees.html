@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Family Trees · russ.fm explore</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<link rel="stylesheet" href="/mockups/explore/trees.css">
+</head>
+<body>
+<header class="t-head">
+  <div class="t-row1">
+    <div class="t-title">
+      <span class="x-label">Family tree</span>
+      <h1 class="t-seed x-plate" id="seedName">&nbsp;</h1>
+      <span class="t-sum x-mono" id="summary"></span>
+    </div>
+    <div class="t-time">
+      <button id="play" class="t-btn" type="button" aria-label="Play"></button>
+      <input id="scrub" type="range" min="1960" max="2026" step="0.01" value="1960" aria-label="Year">
+      <output id="yearOut" class="t-year" for="scrub"></output>
+    </div>
+    <div class="t-find">
+      <input id="find" list="artistList" placeholder="Start from an artist" autocomplete="off" aria-label="Start a tree from an artist">
+      <datalist id="artistList"></datalist>
+    </div>
+  </div>
+  <div class="t-row2">
+    <span class="x-label">Biggest families</span>
+    <div id="picker" class="t-picker" role="toolbar" aria-label="Families"></div>
+  </div>
+  <div class="t-ticker" id="ticker" aria-live="polite"></div>
+</header>
+
+<main id="stage">
+  <svg id="svg" role="img" aria-label="Family tree of bands and the musicians who moved between them">
+    <defs><clipPath id="reveal" clipPathUnits="userSpaceOnUse"><rect id="revealRect" x="-4000" y="-4000" width="0" height="40000"/></clipPath></defs>
+    <g id="zoomG"><g id="orientG"><g id="worldG">
+      <g class="grid" id="gridG"></g>
+      <g id="extrasG" clip-path="url(#reveal)"></g>
+      <g id="lanesG" clip-path="url(#reveal)"></g>
+      <g id="threadsG" clip-path="url(#reveal)"></g>
+      <g id="labelsG" clip-path="url(#reveal)"></g>
+      <g id="platesG" clip-path="url(#reveal)"></g>
+      <g id="sleevesG"></g>
+      <g class="playhead" id="playheadG"><line id="phLine"/><text id="phText"/></g>
+    </g></g></g>
+  </svg>
+</main>
+<div class="t-loading" id="loading">Loading the collection</div>
+
+<div class="t-zoom">
+  <button class="t-btn" id="zoomOut" type="button" aria-label="Zoom out">−</button>
+  <button class="t-btn" id="zoomIn" type="button" aria-label="Zoom in">+</button>
+  <button class="t-btn" id="fit" type="button">Fit</button>
+</div>
+
+<p class="t-note">Discogs lists who played in each band, not when, so threads follow the order the bands began. Boxes run from formed to split, or across the records in the collection.</p>
+
+<aside id="panel" class="t-panel" hidden aria-label="Band details"></aside>
+<div id="tip" class="t-tip" hidden></div>
+
+<script type="module" src="/mockups/explore/trees.js"></script>
+</body>
+</html>

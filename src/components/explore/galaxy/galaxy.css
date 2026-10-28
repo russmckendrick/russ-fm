@@ -1,0 +1,149 @@
+/* The Galaxy: labels and tooltip drawn over the canvas by src/lib/explore/galaxyScene.ts.
+   The HUD and panel use Tailwind and the player classes in the components. */
+
+.gx-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.gx-fam,
+.gx-near,
+.gx-me {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  will-change: transform;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+.gx-fam {
+  pointer-events: auto;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fc, var(--cream));
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  transition: opacity 0.4s var(--ease-out);
+}
+.gx-fam-code {
+  margin-right: 8px;
+  opacity: 0.55;
+}
+.gx-fam small {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 0.65;
+}
+.gx-fam:hover {
+  color: var(--cream);
+}
+.gx-fam:focus-visible,
+.gx-near:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.gx-near {
+  pointer-events: auto;
+  cursor: pointer;
+  padding: 4px 6px;
+  font-family: var(--font-grot);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cream);
+  text-shadow: 0 0 8px #000, 0 0 3px #000;
+}
+.gx-near:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gx-arr {
+  display: none;
+}
+.gx-near.is-edge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px 6px 9px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--ground) 88%, transparent);
+  border: 2px solid color-mix(in oklab, var(--lc) 55%, transparent);
+  text-shadow: none;
+  font-size: 12px;
+}
+.gx-near.is-edge .gx-arr {
+  display: inline-block;
+  color: var(--lc);
+  font-size: 13px;
+  line-height: 1;
+}
+.gx-near.is-edge:hover {
+  border-color: var(--lc);
+  text-decoration: none;
+}
+
+.gx-me {
+  pointer-events: none;
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  text-shadow: 0 0 10px #000, 0 0 3px #000;
+}
+
+.gx-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: var(--cream);
+  color: var(--ground);
+  font-size: 13px;
+  line-height: 1.35;
+  pointer-events: none;
+}
+.gx-tip b {
+  font-weight: 800;
+}
+.gx-tip span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+@media (max-width: 767px) {
+  .gx-fam {
+    font-size: 9.5px;
+  }
+  .gx-fam small,
+  .gx-fam-code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gx-fam {
+    transition: none;
+  }
+}

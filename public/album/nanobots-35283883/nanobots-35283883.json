@@ -23,6 +23,110 @@
   },
   "country": "US",
   "created_at": "2025-10-08T18:20:45.507431",
+  "credits": [
+    {
+      "discogs_id": "1080394",
+      "name": "Sam Weber",
+      "role": "Artwork [Collages]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1914190",
+      "name": "Paul Sahre",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "858505",
+      "name": "Jon Altschuler",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "3093149",
+      "name": "Jon Silverman",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1909368",
+      "name": "Jamie Lincoln Kitman",
+      "role": "Management",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "4465151",
+      "name": "The Hornblow Group USA, Inc.",
+      "role": "Management",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "393852",
+      "name": "UE Nastasi",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "269417",
+      "name": "Patrick Dillett",
+      "role": "Mixed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "397711",
+      "name": "Danny Weinkauf",
+      "role": "Performer [And Have Been Joined By], Bass",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "513946",
+      "name": "Marty Beller",
+      "role": "Performer [And Have Been Joined By], Drums, Percussion",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "397707",
+      "name": "Dan Miller",
+      "role": "Performer [And Have Been Joined By], Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "398393",
+      "name": "John Flansburgh",
+      "role": "Performer [They Might Be Giants Are], Vocals, Guitar, Programmed By, Keyboards [Fake]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "543875",
+      "name": "John Linnell",
+      "role": "Performer [They Might Be Giants Are], Vocals, Keyboards, Accordion, Saxophone, Bass Clarinet",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "269417",
+      "name": "Patrick Dillett",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "159350",
+      "name": "They Might Be Giants",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "397710",
+      "name": "Robin Goldwasser",
+      "role": "Vocals",
+      "tracks": "A1, A9, B7, B15"
+    },
+    {
+      "discogs_id": "159350",
+      "name": "They Might Be Giants",
+      "role": "Written-By",
+      "tracks": "A1 to B10, B12 to B16"
+    }
+  ],
   "date_added": "2025-10-08T08:18:19-07:00",
   "discogs_id": "35283883",
   "discogs_url": "https://www.discogs.com/release/35283883-They-Might-Be-Giants-Nanobots",
@@ -124,6 +228,13 @@
     {
       "artists": [],
       "duration": "3:07",
+      "extraartists": [
+        {
+          "discogs_id": "337387",
+          "name": "Stan Harrison",
+          "role": "Saxophone"
+        }
+      ],
       "position": "A6",
       "title": "Call You Mom"
     },
@@ -148,6 +259,13 @@
     {
       "artists": [],
       "duration": "2:41",
+      "extraartists": [
+        {
+          "discogs_id": "3187179",
+          "name": "Solder",
+          "role": "Piano"
+        }
+      ],
       "position": "B1",
       "title": "Sometimes A Lonely Way"
     },
@@ -160,18 +278,39 @@
     {
       "artists": [],
       "duration": "1:56",
+      "extraartists": [
+        {
+          "discogs_id": "858505",
+          "name": "Jon Altschuler",
+          "role": "Recorded By"
+        }
+      ],
       "position": "B3",
       "title": "9 Secret Steps"
     },
     {
       "artists": [],
       "duration": "0:06",
+      "extraartists": [
+        {
+          "discogs_id": "662622",
+          "name": "Jon Graboff",
+          "role": "Mandolin"
+        }
+      ],
       "position": "B4",
       "title": "Hive Mind"
     },
     {
       "artists": [],
       "duration": "0:16",
+      "extraartists": [
+        {
+          "discogs_id": "464707",
+          "name": "Jedediah Parish",
+          "role": "Vocals"
+        }
+      ],
       "position": "B5",
       "title": "Decision Makers"
     },
@@ -202,12 +341,36 @@
     {
       "artists": [],
       "duration": "2:56",
+      "extraartists": [
+        {
+          "discogs_id": "1821782",
+          "name": "Chris Thompson",
+          "role": "Vibraphone"
+        }
+      ],
       "position": "B10",
       "title": "Replicant"
     },
     {
       "artists": [],
       "duration": "3:22",
+      "extraartists": [
+        {
+          "discogs_id": "337387",
+          "name": "Stan Harrison",
+          "role": "Saxophone, Clarinet, Flute"
+        },
+        {
+          "discogs_id": "337387",
+          "name": "Stan Harrison",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "159350",
+          "name": "They Might Be Giants",
+          "role": "Written-By"
+        }
+      ],
       "position": "B11",
       "title": "The Darlings Of Lumberland"
     },
@@ -232,6 +395,13 @@
     {
       "artists": [],
       "duration": "2:35",
+      "extraartists": [
+        {
+          "discogs_id": "1821782",
+          "name": "Chris Thompson",
+          "role": "Vibraphone"
+        }
+      ],
       "position": "B15",
       "title": "Too Tall Girl"
     },

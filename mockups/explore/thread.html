@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Thread</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<link rel="stylesheet" href="/mockups/explore/thread.css">
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="trail" id="trail" aria-label="Trail so far">
+    <div class="trail-head">
+      <span class="x-label">Trail</span>
+      <span class="trail-count x-mono" id="trailCount"></span>
+      <button class="flat-btn" id="copyBtn" type="button" title="Copy a link to this trail (C)">Copy link</button>
+    </div>
+    <ol class="trail-list" id="trailList"></ol>
+    <p class="trail-keys x-mono">↑ ↓ hop · ← → branch<br>Enter details · C copy link</p>
+  </aside>
+
+  <main class="stage" id="stage" aria-live="polite" tabindex="0"></main>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Details">
+    <button class="drawer-close flat-btn" id="drawerClose" type="button" aria-label="Close details">Close</button>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+</div>
+<script type="module" src="/mockups/explore/thread.js"></script>
+</body>
+</html>

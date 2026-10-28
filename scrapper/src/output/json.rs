@@ -73,6 +73,13 @@ pub fn format_fields(raw_data: &Value) -> [(&'static str, Option<Value>); 2] {
     ]
 }
 
+/// The public album-JSON `credits` key: the release's Discogs `extraartists` as stored at
+/// `raw_data.discogs.credits` (present once fetched, `[]` when Discogs lists none). Key-sorted
+/// like every full album JSON write, so a patch and a full write produce the same lines.
+pub fn credit_fields(raw_data: &Value) -> [(&'static str, Option<Value>); 1] {
+    [("credits", crate::credits::stored_credits(raw_data).map(sort_value))]
+}
+
 /// What `patch_album_fields` did to an album's public JSON file.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Patch {
@@ -153,6 +160,10 @@ pub(crate) fn track(t: &Value) -> Value {
         if let Some(v) = t.get(key).filter(|v| !v.is_null()) {
             out[key] = v.clone();
         }
+    }
+    // Per-track Discogs credits, only on rows that have any.
+    if let Some(v) = t.get("extraartists").filter(|v| v.as_array().is_some_and(|a| !a.is_empty())) {
+        out["extraartists"] = v.clone();
     }
     out
 }
@@ -321,7 +332,7 @@ pub fn release_to_value(rec: &ReleaseRecord, db: &Db) -> Value {
         }),
     });
     if let Some(obj) = out.as_object_mut() {
-        for (key, value) in format_fields(&rec.raw_data) {
+        for (key, value) in format_fields(&rec.raw_data).into_iter().chain(credit_fields(&rec.raw_data)) {
             if let Some(v) = value {
                 obj.insert(key.into(), v);
             }

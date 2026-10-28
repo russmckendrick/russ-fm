@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Aisle</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<link rel="stylesheet" href="/mockups/explore/aisle.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<canvas id="scene" aria-label="Record crates. Scroll or use the arrow keys to flick through, Enter to pull a record."></canvas>
+
+<header class="top">
+  <div class="brand">
+    <span class="x-plate">The Aisle</span>
+    <span class="x-mono" id="loading">Loading the collection</span>
+    <button class="flat small" id="soundBtn" aria-pressed="true" title="Riffle sound">Riffle sound on</button>
+  </div>
+  <div class="lenses" role="tablist" aria-label="Sort the crates by" id="lenses"></div>
+  <div class="strip" id="strip" aria-label="Crates in this aisle"></div>
+</header>
+
+<section class="hud" id="hud">
+  <div class="hud-crate">
+    <span class="x-label" id="lensLabel">Genre</span>
+    <h1 id="crateName">&nbsp;</h1>
+    <span class="x-mono" id="crateMeta"></span>
+  </div>
+  <div class="hud-now" id="now" aria-live="polite"></div>
+  <div class="hud-ctl">
+    <button class="flat icon" id="prevCrate" aria-label="Previous crate" title="Previous crate (←)"><svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5"/></svg></button>
+    <button class="flat icon" id="back" aria-label="Flick back" title="Flick back (↑)"><svg viewBox="0 0 16 16"><path d="M3 10l5-5 5 5"/></svg></button>
+    <button class="flat icon" id="fwd" aria-label="Flick forward" title="Flick forward (↓)"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></button>
+    <button class="flat icon" id="nextCrate" aria-label="Next crate" title="Next crate (→)"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+    <button class="flat primary" id="pullBtn" title="Pull this record (Enter)">Pull it out</button>
+  </div>
+  <p class="hint" id="hint">Scroll, drag or ↑ ↓ to flick · ← → next crate · Enter to pull</p>
+</section>
+
+<aside class="panel" id="panel" aria-label="Pulled record" aria-hidden="true">
+  <div class="panel-grip" aria-hidden="true"></div>
+  <div class="panel-head">
+    <span class="x-label" id="pWhere"></span>
+    <button class="flat small" id="putBack">Put it back</button>
+  </div>
+  <div id="tvWrap"></div>
+  <h2 id="pTitle"></h2>
+  <p class="p-artist" id="pArtist"></p>
+  <dl class="facts" id="pFacts"></dl>
+  <div class="p-block">
+    <span class="x-label">Also sits in</span>
+    <div class="chips" id="pLenses"></div>
+  </div>
+  <div class="p-block">
+    <span class="x-label">Also in the collection</span>
+    <div id="pRelated"></div>
+  </div>
+  <p class="p-out"><a id="pLink" href="#" target="_blank" rel="noopener">Album page on russ.fm</a></p>
+</aside>
+
+<div class="fade" id="fade"></div>
+
+<script type="module" src="/mockups/explore/aisle.js"></script>
+</body>
+</html>

@@ -34,12 +34,13 @@ const PRIMARY: NavItem[] = [
   { path: "/", label: "Home" },
   { path: "/albums/1", label: "Albums", activePrefix: ["/albums", "/album/"], count: "records" },
   { path: "/artists/1", label: "Artists", activePrefix: ["/artists", "/artist/"], count: "artists" },
-  { path: "/genres", label: "Genres", activePrefix: "/genres", count: "genres" },
   { path: "/tv", label: "TV", activePrefix: "/tv" },
+  { path: "/explore", label: "Explore", activePrefix: "/explore" },
 ];
 
 const BROWSE: NavItem[] = [
   { path: "/browse", label: "Overview", activePrefix: "/browse" },
+  { path: "/genres", label: "Genres", activePrefix: ["/genres", "/genre/"], count: "genres" },
   { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"], count: "labels" },
   { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"], count: "decades" },
   { path: "/countries", label: "Countries", activePrefix: ["/countries", "/country/"], count: "countries" },
@@ -217,7 +218,7 @@ export function Navigation() {
                 align="start"
                 sideOffset={12}
                 collisionPadding={24}
-                className="w-[min(1040px,calc(100vw-48px))] rounded-[26px] border-0 bg-[color:var(--ground-2)] p-3 text-[color:var(--cream)] shadow-[0_40px_80px_-24px_rgba(0,0,0,.7)]"
+                className="w-[min(1200px,calc(100vw-48px))] rounded-[26px] border-0 bg-[color:var(--ground-2)] p-3 text-[color:var(--cream)] shadow-[0_40px_80px_-24px_rgba(0,0,0,.7)]"
               >
                 <BrowseMenuCards isActive={(path) => location.pathname.startsWith(path)} />
               </DropdownMenuContent>

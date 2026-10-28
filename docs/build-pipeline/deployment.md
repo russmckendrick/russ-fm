@@ -121,6 +121,7 @@ deploy:
         pnpm run generate-sitemap
         pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
         pnpm run generate-og-sections   # TV and genre cards into public/og/
+        pnpm run generate-explore       # /explore graph and atlases into public/explore/
 
         # Copy generic og-image.png to public/ for worker build
         cp dist/og-image.png public/og-image.png

@@ -23,6 +23,140 @@
   },
   "country": "US",
   "created_at": "2025-07-10T08:55:59.669252",
+  "credits": [
+    {
+      "discogs_id": "1069010",
+      "name": "Peter Saville",
+      "role": "Art Direction, Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1827656",
+      "name": "Howard Wakefield",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "512290",
+      "name": "Peter Saville Associates",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "252665",
+      "name": "Cenzo Townshend",
+      "role": "Engineer",
+      "tracks": "2, 6, 10, 11"
+    },
+    {
+      "discogs_id": "93300",
+      "name": "Bruno Ellingham",
+      "role": "Engineer [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "359414",
+      "name": "Claire Lewis",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "277468",
+      "name": "Marco Migliari",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "392510",
+      "name": "Owen Skinner",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "564474",
+      "name": "Paul Grady",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "564475",
+      "name": "Phil Rose",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "413027",
+      "name": "Rob Haggett",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "375966",
+      "name": "Tom Stanley",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "27467",
+      "name": "Mac Quayle",
+      "role": "Keyboards, Programmed By [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "252665",
+      "name": "Cenzo Townshend",
+      "role": "Mixed By",
+      "tracks": "2, 6, 10, 11"
+    },
+    {
+      "discogs_id": "85779",
+      "name": "Stephen Street",
+      "role": "Mixed By",
+      "tracks": "2, 6, 10, 11"
+    },
+    {
+      "discogs_id": "2245163",
+      "name": "Anna Blessman",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "62973",
+      "name": "James Spencer",
+      "role": "Producer",
+      "tracks": "1, 3, 5"
+    },
+    {
+      "discogs_id": "83378",
+      "name": "John Leckie",
+      "role": "Producer",
+      "tracks": "4, 7"
+    },
+    {
+      "discogs_id": "3909",
+      "name": "New Order",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "85779",
+      "name": "Stephen Street",
+      "role": "Producer",
+      "tracks": "2, 6, 10, 11"
+    },
+    {
+      "discogs_id": "125270",
+      "name": "Stuart Price",
+      "role": "Producer",
+      "tracks": "8, 9"
+    },
+    {
+      "discogs_id": "3909",
+      "name": "New Order",
+      "role": "Written-By",
+      "tracks": ""
+    }
+  ],
   "date_added": "2016-01-31T14:13:12-08:00",
   "discogs_id": "7628502",
   "discogs_url": "https://www.discogs.com/release/7628502-New-Order-Waiting-For-The-Sirens-Call",
@@ -200,12 +334,26 @@
     {
       "artists": [],
       "duration": "4:33",
+      "extraartists": [
+        {
+          "discogs_id": "262727",
+          "name": "Rich Costey",
+          "role": "Mixed By"
+        }
+      ],
       "position": "B1",
       "title": "Krafty"
     },
     {
       "artists": [],
       "duration": "5:58",
+      "extraartists": [
+        {
+          "discogs_id": "52960",
+          "name": "Dawn Zee",
+          "role": "Vocals [Additional Vocals]"
+        }
+      ],
       "position": "B2",
       "title": "I Told You So"
     },
@@ -218,18 +366,54 @@
     {
       "artists": [],
       "duration": "5:37",
+      "extraartists": [
+        {
+          "discogs_id": "83378",
+          "name": "John Leckie",
+          "role": "Mixed By"
+        }
+      ],
       "position": "C1",
       "title": "Dracula's Castle"
     },
     {
       "artists": [],
       "duration": "5:21",
+      "extraartists": [
+        {
+          "discogs_id": "295207",
+          "name": "Ana Matronic",
+          "role": "Vocals [Featuring]"
+        },
+        {
+          "discogs_id": "638210",
+          "name": "Ana Lynch",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "125270",
+          "name": "Stuart Price",
+          "role": "Written-By"
+        }
+      ],
       "position": "C2",
       "title": "Jetstream"
     },
     {
       "artists": [],
       "duration": "5:37",
+      "extraartists": [
+        {
+          "discogs_id": "295208",
+          "name": "Beatrice Hatherley",
+          "role": "Vocals [Additional Vocals]"
+        },
+        {
+          "discogs_id": "52960",
+          "name": "Dawn Zee",
+          "role": "Vocals [Additional Vocals]"
+        }
+      ],
       "position": "D1",
       "title": "Guilt Is A Useless Emotion"
     },

@@ -287,6 +287,44 @@ a heading. `scrapper backfill-tracklists` re-maps those releases (see
 through `src/lib/tracklistRows.ts` (see
 [utilities.md](../frontend/utilities.md#tracklist-rows-srclibtracklistrowsts)).
 
+Rows Discogs credits people on also carry `extraartists` (see below).
+
+#### Release credits (`credits`, `tracklist[].extraartists`)
+
+Discogs `extraartists`: the producers, engineers, mixers, session players and sleeve designers
+behind a release, as opposed to its `artists`.
+
+```json
+"credits": [
+  { "discogs_id": "55761", "name": "Tony Visconti", "role": "Producer", "tracks": "" },
+  { "discogs_id": "10355", "name": "Robert Fripp", "role": "Lead Guitar", "tracks": "" },
+  { "discogs_id": "634", "name": "Brian Eno", "role": "Written-By", "tracks": "B3, B4" }
+],
+"tracklist": [
+  {
+    "position": "A1", "title": "...", "duration": "", "artists": [],
+    "extraartists": [{ "discogs_id": "634", "name": "Brian Eno", "role": "Music By" }]
+  }
+]
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `credits` | object[]? | Release-level credits in Discogs order. Present once the release's credits are stored; absent means "not backfilled", `[]` means Discogs lists none |
+| `credits[].name` | string | Discogs artist name without its `(2)` disambiguation suffix |
+| `credits[].discogs_id` | string \| null | Discogs artist id (null when Discogs links none) |
+| `credits[].role` | string | As Discogs writes it: several roles are comma-separated and detail is in brackets (`"Synthesizer, Keyboards, Effects [Guitar Treatments]"`) |
+| `credits[].tracks` | string | Discogs's track scope, e.g. `"A1, A2, A4 to B4"`; `""` means the whole release |
+| `tracklist[].extraartists` | object[]? | Credits Discogs puts on that track: `{name, discogs_id, role}`. Present only on rows that have any |
+
+One person can appear several times, once per role group. Everyone credited on a release is
+`artists` ∪ `credits` ∪ every row's `extraartists`. Credit people are not artists in the
+collection: they get no artist pages and don't reach `collection.json`.
+
+The source is `raw_data.discogs.credits` and the stored tracklist in the SQLite row, written by
+`process_release` and the Discogs refresh, or filled for older rows by `scrapper backfill-credits`
+(see [cli-commands.md](../backend/cli-commands.md#backfill-credits)). No SQLite schema change.
+
 ---
 
 ### Artist JSON (`artist/{slug}/{slug}.json`)
@@ -570,6 +608,35 @@ compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
   (brackets, quotes, `#`, `:`, "trailer", "OST", "vol", over 40 characters). Omitted
   whenever it would equal the headliner.
 - **`duration`** (seconds) is omitted when Discogs has none or `0`.
+
+---
+
+### explore.json
+
+`public/explore/explore.json`, written by `scripts/generate-explore.ts` (`pnpm run generate-explore`) for
+/explore (The Galaxy) and /explore/thread (The Thread). Gitignored and made in CI, like `public/og/`. Keys are short
+because it carries every record and artist; records, artists and people point at each other by array
+index. The TypeScript shape is `ExploreData` in `src/lib/explore/types.ts`.
+
+| Field | Description |
+|-------|-------------|
+| `v`, `generated` | Format version (1) and build time; the Galaxy keys its cached layout on them |
+| `families[]` | The 12 genre families `{ key, code, name }` (`src/lib/genreFamilyDefs.ts`) |
+| `albums[]` | `slug`, `t` title, `by` artist credit, `a` artist indexes, `y` original year, `added`, `g` genres, `s` styles, `l` labels, `c` country, `fam` family key, `fmt` format, `vc` vinyl colour, `lis` Last.fm listeners, `fl` / `ink` / `gr` / `h` / `viv` from album-colors.json, `v` up to five `[youtubeId, title, kind]` from tv.json (music videos first) |
+| `artists[]` | `slug`, `name`, `bio` (about 320 characters), `genre`, `mood`, `cc`, `from`, `born`, `formed`, `died`, `fanart` (the hero fanart file, the only one on R2, or null), `photo` (the fanart chosen as the photo, or null), `focus` [x, y], `members` (Discogs names), `videos` `[youtubeId, track, album]`, `records` (album indexes) |
+| `people[]` | Musicians in two or more collection bands, or people credited on two or more artists' records: `id` (Discogs), `name`, `thumb` (Discogs photo URL), `bands`, `artist` (their own artist index, or null), `credits` `[album, role, kind]` |
+| `links[]` | `{ a, b, why[] }` between two artists. `why` types: `bandmate {who, person}`, `member` / `group` / `alias {who, from}`, `guest {album, track, host, guest}`, `credit {who, person, album, role, kind}` (a collection artist credited on another's record), `shared-credit {who, person, albums, roles, kinds}` (the same person on both artists' records) |
+| `atlas` | `sleeve` cell px (64), `cols` per sheet (64), `sheets`, `avatar` px (64), `avatarCols` (40), `avatarRows` |
+
+Credit `kind` is `produced`, `played`, `wrote`, `engineered` or `designed` (`creditKind()` in
+`src/lib/explore/credits.ts`). Mastering, lacquer cutting, pressing and other plant or business roles
+are left out, as are credits for a record's own artists or their band members, and two artists on the
+same record. A person credited on more than 12 artists' records is kept in `people` but makes no
+`shared-credit` links.
+
+The atlases sit next to it: `sleeves-N.webp` (64 × 64 cells of 64px, album order) and `avatars.webp`
+(40 columns of 64px, artist order). They are same-origin site assets because WebGL can't read images
+from assets.russ.fm, which sends no CORS header.
 
 ---
 

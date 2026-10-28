@@ -27,6 +27,9 @@ async function main() {
 
   const collection = JSON.parse(await readFile(COLLECTION_PATH, 'utf8'));
   const ogManifest = await readJsonOrNull(path.join(OG_DIR, 'manifest.json'));
+  // Counts for the /explore pages (scripts/generate-explore.ts; optional).
+  const explore = await readJsonOrNull(path.join(PUBLIC_DIR, 'explore', 'explore.json'));
+  const exploreStats = explore ? { artists: explore.artists.length, links: explore.links.length, people: explore.people.length } : null;
   const genreCards = new Set(
     (await readdir(path.join(OG_DIR, 'genre')).catch(() => [])).map((f) => f.replace(/\.jpg$/, '')),
   );
@@ -97,7 +100,7 @@ async function main() {
     }
 
     let sectionCount = 0;
-    for (const page of buildSectionPages(ogManifest, genreCards.size)) {
+    for (const page of buildSectionPages(ogManifest, genreCards.size, exploreStats)) {
       const html = injectHead(template, renderHead(page.head));
       const dir = path.join(target, ...page.path.split('/').filter(Boolean));
       await mkdir(dir, { recursive: true });
@@ -596,13 +599,15 @@ function buildFacetHead({ facetKey, singular, slug, group, image: card = null })
 /**
  * /tv, /tv/guide, /tv/:channel and /genres, each with its section card. Only
  * written when generate-og-sections has run (it writes the channel list).
+ * /explore (The Galaxy) and /explore/thread (site card) when generate-explore has run.
  */
-function buildSectionPages(manifest, genreCount) {
+function buildSectionPages(manifest, genreCount, explore) {
   const pages = [];
   const page = (routePath, { title, description, image, name }) => {
     const canonical = `${SITE_URL}${routePath}`;
     const crumbs = [{ name: 'Home', url: `${SITE_URL}/` }];
     if (routePath.startsWith('/tv/')) crumbs.push({ name: 'TV', url: `${SITE_URL}/tv` });
+    if (routePath.startsWith('/explore/')) crumbs.push({ name: 'Explore', url: `${SITE_URL}/explore` });
     crumbs.push({ name });
     pages.push({
       path: routePath,
@@ -644,6 +649,22 @@ function buildSectionPages(manifest, genreCount) {
         image: `${SITE_URL}/og/tv/${ch.slug}.jpg`,
       });
     }
+  }
+
+  if (explore) {
+    const links = explore.links.toLocaleString('en-GB');
+    page('/explore', {
+      name: 'Explore',
+      title: 'Explore | Russ.fm',
+      description: `Every artist in the russ.fm collection as a star, grouped by genre, with ${links} links between ${explore.artists.toLocaleString('en-GB')} of them: band members, producers, session players and guests.`,
+      image: `${SITE_URL}/og-image.png`,
+    });
+    page('/explore/thread', {
+      name: 'The Thread',
+      title: 'The Thread | Explore | Russ.fm',
+      description: `Follow the russ.fm record collection one connection at a time: shared band members, producers, session players and guest spots, ${links} links in all.`,
+      image: `${SITE_URL}/og-image.png`,
+    });
   }
 
   if (manifest?.genres) {

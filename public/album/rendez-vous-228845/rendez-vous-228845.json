@@ -23,6 +23,44 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:31:34.903552",
+  "credits": [
+    {
+      "discogs_id": "1838115",
+      "name": "Michel Granger",
+      "role": "Cover",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "366035",
+      "name": "Jack Skinner",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": null,
+      "name": "Michel Geiss",
+      "role": "Other [Artistic Contribution]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1761831",
+      "name": "Paul Cox",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "209415",
+      "name": "Jean-Michel Jarre",
+      "role": "Producer, Composed By, Sleeve Notes",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "230352",
+      "name": "Denis Vanzetto",
+      "role": "Recorded By, Mixed By",
+      "tracks": "A1 to A3, B2, B3"
+    }
+  ],
   "date_added": "2017-06-14T07:25:40-07:00",
   "discogs_id": "228845",
   "discogs_url": "https://www.discogs.com/release/228845-Jean-Michel-Jarre-Rendez-Vous",
@@ -126,36 +164,133 @@
     {
       "artists": [],
       "duration": "2:54",
+      "extraartists": [
+        {
+          "discogs_id": "230353",
+          "name": "Michel Geiss",
+          "role": "Synthesizer [ARP 2600]"
+        },
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Seiko DS 250, Synthex, Moog, Roland JX BP]"
+        }
+      ],
       "position": "A1",
       "title": "First Rendez-vous"
     },
     {
       "artists": [],
       "duration": "10:55",
+      "extraartists": [
+        {
+          "discogs_id": "850894",
+          "name": "Chœur de Radio France",
+          "role": "Choir"
+        },
+        {
+          "discogs_id": "503265",
+          "name": "Sylvain Durand",
+          "role": "Directed By [Choir]"
+        },
+        {
+          "discogs_id": "349246",
+          "name": "Joe Hammer",
+          "role": "Percussion [Drumulator, Percussions]"
+        },
+        {
+          "discogs_id": "230353",
+          "name": "Michel Geiss",
+          "role": "Synthesizer [ARP 2600]"
+        },
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Fairlight, Moog, Synthex, Emulator II, Eminent, AKS], Drum Machine [Linn 9000]"
+        },
+        {
+          "discogs_id": "224307",
+          "name": "Dominique Perrier",
+          "role": "Synthesizer [Memory Moog]"
+        }
+      ],
       "position": "A2",
       "title": "Second Rendez-vous"
     },
     {
       "artists": [],
       "duration": "3:30",
+      "extraartists": [
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Laser Harp, RMI, Fairlight, Seiko DS 320]"
+        }
+      ],
       "position": "A3",
       "title": "Third Rendez-vous"
     },
     {
       "artists": [],
       "duration": "3:57",
+      "extraartists": [
+        {
+          "discogs_id": "92608",
+          "name": "Claude Ermelin",
+          "role": "Recorded By, Mixed By"
+        },
+        {
+          "discogs_id": "230353",
+          "name": "Michel Geiss",
+          "role": "Synthesizer [ARP 2600, Eminent], Programmed By [Matrisequencer, TR 808], Recorded By, Mixed By"
+        },
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Synthex, AKS, OBX, DX 100, Matrisequencer], Drum Machine [TR 808, Linn 9000]"
+        }
+      ],
       "position": "B1",
       "title": "Fourth Rendez-vous"
     },
     {
       "artists": [],
       "duration": "7:41",
+      "extraartists": [
+        {
+          "discogs_id": "230353",
+          "name": "Michel Geiss",
+          "role": "Synthesizer [ARP 2600, Matrisequencer]"
+        },
+        {
+          "discogs_id": "503267",
+          "name": "David Jarre",
+          "role": "Synthesizer [Baby Kong]"
+        },
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Emulator II, Prophet, Matrisequencer, Casio CZ 5000, ARP 2600, Fairlight, Roland JX 8P]"
+        }
+      ],
       "position": "B2",
       "title": "Fifth Rendez-vous"
     },
     {
       "artists": [],
       "duration": "6:04",
+      "extraartists": [
+        {
+          "discogs_id": "308692",
+          "name": "Pierre Gossez",
+          "role": "Performer"
+        },
+        {
+          "discogs_id": "209415",
+          "name": "Jean-Michel Jarre",
+          "role": "Synthesizer [Synthex, Seiko DS 250, Eminent, Fairlight, Matrisequencer]"
+        }
+      ],
       "position": "B3",
       "title": "Last Rendez-vous: \"Ron's Piece\""
     }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Wall · russ.fm explore</title>
+<link rel="stylesheet" href="/mockups/explore/shared.css">
+<link rel="stylesheet" href="/mockups/explore/wall.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<canvas id="wall" aria-label="Every sleeve in the collection as a wall. Drag to move, scroll to zoom, select a sleeve to sort the wall around it." tabindex="0"></canvas>
+
+<header class="w-top">
+  <div class="w-plate">
+    <span class="x-plate">The Wall</span>
+    <span class="x-mono" id="status">Loading</span>
+  </div>
+  <div class="w-lenses" role="group" aria-label="Sort the wall by">
+    <button type="button" data-lens="colour" aria-pressed="true">Colour</button>
+    <button type="button" data-lens="added" aria-pressed="false">Year added</button>
+    <button type="button" data-lens="year" aria-pressed="false">Original year</button>
+    <button type="button" data-lens="genre" aria-pressed="false">Genre</button>
+  </div>
+</header>
+
+<div id="path" class="w-path" hidden></div>
+<div id="markers" class="w-markers" aria-hidden="true"></div>
+<div id="rings" class="w-rings" aria-hidden="true"></div>
+<div id="tip" class="w-tip" hidden></div>
+<aside id="card" class="w-card" hidden aria-label="Centred record"></aside>
+<div id="live" class="sr" aria-live="polite"></div>
+<p id="hint" class="w-hint">Drag · scroll or pinch to zoom · tap a sleeve to sort around it</p>
+<div id="loading" class="w-loading x-label">Loading the collection</div>
+
+<script type="module" src="/mockups/explore/wall.js"></script>
+</body>
+</html>

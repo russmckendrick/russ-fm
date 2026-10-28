@@ -37,7 +37,7 @@ fn is_typed(tracklist: &Value) -> bool {
 
 /// The public JSON form of a stored tracklist, key-sorted like every full album JSON write so
 /// only real changes show in the diff.
-fn public_tracklist(tracklist: &Value) -> Value {
+pub(crate) fn public_tracklist(tracklist: &Value) -> Value {
     Value::Array(
         tracklist
             .as_array()

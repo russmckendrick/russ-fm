@@ -23,6 +23,14 @@
   },
   "country": "Mexico",
   "created_at": "2026-09-12T20:10:52.738910",
+  "credits": [
+    {
+      "discogs_id": "259769",
+      "name": "George Martin",
+      "role": "Producer [Uncredited]",
+      "tracks": ""
+    }
+  ],
   "date_added": "2016-11-27T11:51:28-08:00",
   "discogs_id": "8203382",
   "discogs_url": "https://www.discogs.com/release/8203382-The-Beatles-Help",
@@ -229,12 +237,26 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "779927",
+          "name": "Lennon-McCartney",
+          "role": "Written-By"
+        }
+      ],
       "position": "A",
       "title": "Help!"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "243955",
+          "name": "George Harrison",
+          "role": "Written-By"
+        }
+      ],
       "position": "B",
       "title": "I Need You"
     }

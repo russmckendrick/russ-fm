@@ -613,13 +613,29 @@ Sleeve colours for the genre lists and the genre record, built on the browse hel
 
 Explorer URIs have no trailing slash; the helpers add one to match `album-colors.json` keys.
 
+## Explore Data (`src/lib/explore/`)
+
+The /explore graph (`public/explore/explore.json`, see
+[schemas.md](../data/schemas.md#explore-json)), shared by The Thread and The Galaxy.
+
+| Export | Description |
+|--------|-------------|
+| `useExplore()` / `loadExplore()` (`data.ts`) | The graph, fetched once per tab, with `artistBySlug`, `albumBySlug`, `neighbours[artist]` (`{ other, why[] }`), `byLabel`, `byStyle`, `byYear`, `byColour` and `creditsOn` (album → people credited) |
+| `sleeveUrl`, `artistPhotoUrl`, `fanartUrl` | Image URLs via `image-utils` (R2 in production). `fanartUrl` is the hero fanart or null |
+| `sleeveCell`, `sleeveSheetUrl`, `avatarCell`, `AVATAR_SHEET_URL` | Atlas cells (px and UVs) and sheet URLs for WebGL and canvas |
+| `ytEmbed(id, { start, mute, loop })`, `ytThumb(id)` | YouTube embed and thumbnail URLs |
+| `describeLink(d, why, from, to)` | One sentence for a link: "Tony Visconti produced "Heroes" and Electric Warrior" (records in the order of the hop) |
+| `reasonLabel(why)`, `reasonWeight(why)`, `sortReasons(why[])` | Short label ("Same producer"), strength, strongest first |
+| `creditKind(role)`, `creditVerb(kind, role)` (`credits.ts`) | A Discogs role as a link kind (or null for plant and business roles), and as a verb ("played lead guitar on") |
+
 ## Genre Families (`src/lib/genreFamilies.ts`)
 
 The 12 slices of the genre record. Each album is filed in exactly one family:
 the first of its Discogs `styles` (most relevant first) that a family claims,
 then its `genre_names`, else Hard Rock & Metal for anything tagged Rock and
 Pop for the rest. `GENRE_FAMILIES` is in disc order (clockwise from 12
-o'clock) with codes A1–A6 / B1–B6. To move a style, edit its family's `terms`.
+o'clock) with codes A1–A6 / B1–B6. To move a style, edit its family's `terms`. The definitions live in
+`src/lib/genreFamilyDefs.ts` (no imports, so build scripts can read them) and are re-exported here.
 
 | Export | Description |
 |--------|-------------|

@@ -13,6 +13,7 @@ import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import type { Album } from '@/types/album';
 
 const FACET_CARDS: Array<{ key: FacetKey; to: string; title: string; noun: [string, string] }> = [
+  { key: 'genre', to: '/genres', title: 'Genres', noun: ['genre', 'genres'] },
   { key: 'label', to: '/labels', title: 'Labels', noun: ['label', 'labels'] },
   { key: 'decade', to: '/decades', title: 'Decades', noun: ['decade', 'decades'] },
   { key: 'country', to: '/countries', title: 'Countries', noun: ['country', 'countries'] },
@@ -23,7 +24,7 @@ const hueGap = (a: number, b: number) => Math.min(Math.abs(a - b), 1 - Math.abs(
 
 /**
  * Pick the most vivid sleeve whose hue is clear of the cards already coloured,
- * so the four cards don't all come out red. Returns the fan with that sleeve
+ * so the cards don't all come out red. Returns the fan with that sleeve
  * leading, or the fan unchanged when nothing qualifies.
  */
 function withDistinctLead(
@@ -109,7 +110,7 @@ export function BrowseMenuCards({ isActive }: { isActive: (path: string) => bool
   }
 
   return (
-    <div className="grid grid-cols-5 gap-3">
+    <div className="grid grid-cols-6 gap-3">
       {cards.map(card => (
         <DropdownMenuItem key={card.to} asChild className="p-0 focus:bg-transparent">
           <Link

@@ -5,6 +5,7 @@
 
 pub mod artist;
 pub mod collection;
+pub mod credits;
 pub mod descriptions;
 pub mod fanart;
 pub mod formats;
