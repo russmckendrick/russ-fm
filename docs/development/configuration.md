@@ -415,33 +415,27 @@ module.exports = {
 
 ### tsconfig.json
 
+The root file is a solution file that only points at the two real projects:
+
 ```json
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
 ```
+
+- `tsconfig.app.json`: everything in `src/` (tests included). ES2022 + DOM,
+  `jsx: react-jsx`, bundler resolution, the `@/*` → `./src/*` path alias,
+  `strict`, `noUnusedLocals`, `noUnusedParameters`, `erasableSyntaxOnly`.
+- `tsconfig.node.json`: `vite.config.ts` only. ES2023, no DOM,
+  `verbatimModuleSyntax`.
+
+Both set `noEmit`; Vite does the transpiling. Because the root has
+`"files": []`, type check with `pnpm run typecheck` (`tsc -b`), never a bare
+`tsc --noEmit`, which checks nothing.
 
 ---
 

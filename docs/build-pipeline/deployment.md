@@ -111,6 +111,9 @@ deploy:
     - name: Install dependencies
       run: pnpm install
 
+    - name: Type check
+      run: pnpm run typecheck   # tsc -b
+
     - name: Generate Assets
       run: |
         rm -rf dist
@@ -140,7 +143,6 @@ deploy:
 
     - name: Build Worker & Deploy to Cloudflare
       run: |
-        pnpm tsc --noEmit
         node scripts/build-worker.js
         pnpm exec wrangler deploy
       env:
@@ -158,10 +160,17 @@ Notes on the shape of the job:
   When that link step was missing, new albums reached R2 without their
   hi-res file and album pages showed a broken cover.
 
+- **The type check runs first.** `pnpm run typecheck` (`tsc -b`) is its own
+  step straight after `pnpm install`, so a type error fails the job before
+  any asset work or R2 upload. It must be `tsc -b`: the root `tsconfig.json`
+  has `"files": []` and only references `tsconfig.app.json` and
+  `tsconfig.node.json`, so the `tsc --noEmit` the job used to run checked
+  nothing and always passed.
 - **The app is type-checked and bundled once.** CI calls `build-worker.js`
   directly rather than `pnpm run deploy`, because `deploy` goes through
-  `build:fast`, which would run `tsc` and a throwaway Vite build into `dist/`
-  before `build-worker.js` runs its own Vite build into `dist-worker/`.
+  `build:fast`, which would run the type check again and a throwaway Vite
+  build into `dist/` before `build-worker.js` runs its own Vite build into
+  `dist-worker/`.
   The asset step therefore does not run Vite at all; `dist/` only receives
   processed images and OG images for the R2 sync. Because the script is
   launched with plain `node`, `node_modules/.bin` is not on `PATH`, so
@@ -589,7 +598,7 @@ R2 doesn't have versioning enabled. To rollback:
 
 ```bash
 # Check TypeScript errors
-pnpm run tsc --noEmit
+pnpm run typecheck
 
 # Verify build locally
 pnpm run build

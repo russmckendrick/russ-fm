@@ -70,6 +70,13 @@ jobs:
       - name: Install dependencies 🔧
         run: pnpm install
 
+      # Runs before any asset work or R2 upload so a type error fails fast.
+      # `typecheck` is `tsc -b`, which checks both project references
+      # (tsconfig.app.json for src/, tsconfig.node.json for vite.config.ts).
+      # A bare `tsc --noEmit` checks nothing: the root tsconfig has `"files": []`.
+      - name: Type check 🔍
+        run: pnpm run typecheck
+
       - name: Generate Assets 🏗️
         run: |
           echo "🚀 Starting asset generation..."
@@ -134,13 +141,11 @@ jobs:
             node scripts/sync-to-r2.js --compare --concurrency 16
           fi
 
-      # The app is type-checked and bundled exactly once, straight into
-      # dist-worker (build-worker.js runs Vite itself). `pnpm run deploy` is
-      # not used here because it would run tsc + Vite an extra time via build:fast.
+      # The app is bundled exactly once, straight into dist-worker
+      # (build-worker.js runs Vite itself). `pnpm run deploy` is not used here
+      # because it would run the type check + Vite an extra time via build:fast.
       - name: Build Worker & Deploy to Cloudflare 🚀
         run: |
-          echo "🔍 Type checking..."
-          pnpm tsc --noEmit
           echo "🔨 Building worker bundle..."
           node scripts/build-worker.js
           echo "☁️  Deploying to Cloudflare Workers..."

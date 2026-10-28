@@ -97,7 +97,7 @@ Common issues and solutions for russ.fm development and deployment.
 
 1. **Type errors**
    ```bash
-   pnpm run tsc --noEmit
+   pnpm run typecheck
    # Fix any type errors shown
    ```
 

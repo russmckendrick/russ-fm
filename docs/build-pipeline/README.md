@@ -60,7 +60,7 @@ Runtime requirement: Node.js 22.19.0 or newer with pnpm 10.
 pnpm run dev
 
 # Type checking (watch mode)
-pnpm run tsc --noEmit --watch
+pnpm exec tsc -b --watch
 ```
 
 ### Production Build
@@ -72,7 +72,7 @@ pnpm run build
 # Build steps:
 # 1. rm -rf dist
 # 2. generate-sitemap (write public/sitemap.xml from collection data)
-# 3. tsc --noEmit (type check)
+# 3. typecheck (tsc -b, see below)
 # 4. vite build (bundle)
 # 5. process-images (resize)
 # 6. generate-colors (album-colors.json + album-swatches.json)
@@ -83,6 +83,23 @@ pnpm run build
 # 9c. generate-explore (the /explore graph and atlases into public/explore/)
 # 10. cp dist/og-image.png public/og-image.png (for worker build)
 ```
+
+### Type Checking
+
+```bash
+pnpm run typecheck   # tsc -b
+```
+
+The root `tsconfig.json` is a solution file: `"files": []` plus project
+references to `tsconfig.app.json` (everything in `src/`, tests included) and
+`tsconfig.node.json` (`vite.config.ts`). A bare `tsc --noEmit` against it
+checks nothing and always passes, so `build`, `build:fast` and CI all call
+`pnpm run typecheck`, which is `tsc -b` and builds both references. Both
+configs set `noEmit`, so `-b` writes no JavaScript. It takes about four
+seconds.
+
+Not covered: the `tsx` scripts in `scripts/` (no tsconfig includes them) and
+`scrapper/web/` (its own project, `pnpm --dir scrapper/web typecheck`).
 
 ### Fast Build (Skip Assets)
 
@@ -109,6 +126,7 @@ pnpm run build:worker
 | `dev` | Start Vite dev server |
 | `build` | Full production build |
 | `build:fast` | Build without assets |
+| `typecheck` | `tsc -b`: type check `src/` and `vite.config.ts` through the project references (run by `build`, `build:fast` and CI) |
 | `build:worker` | Worker-optimized build |
 | `build:sync` | Build + sync to R2 |
 | `build:sync:dry` | Preview R2 sync |
