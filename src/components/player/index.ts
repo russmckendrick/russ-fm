@@ -1,6 +1,6 @@
 export { FloodProvider } from './FloodContext';
 export { useFloodValue, usePageFlood, type PageFloodExtras } from './flood-context';
-export { Vinyl } from './Vinyl';
+export { LabelCover, Vinyl } from './Vinyl';
 export { SpinningMark } from './SpinningMark';
 export { Sleeve } from './Sleeve';
 export { Sticker } from './Sticker';

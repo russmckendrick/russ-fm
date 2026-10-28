@@ -19,7 +19,7 @@ This document covers the route-level page components in russ.fm.
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
-| `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
+| `/genres` | Flood band: `BrowseHeader` + what the record shows (all genres, a family, or a lit genre) beside the genre record (`GenreDisc`) → Families (Side A / Side B, colour barcodes) + newest records → Most collected ranked rows + A–Z index, all coloured from sleeves. |
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
 | `/coloured-vinyl` | `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
@@ -566,10 +566,13 @@ axis is one entry in `FACETS` plus two routes. The format filter on
 
 ### GenrePage (`src/pages/GenrePage.tsx`)
 
-Single-page hybrid D3/React/Motion genre explorer built from
-`/collection.json` (via `loadCollection()`). The explorer data comes from
-`getGenreExplorer()`, which is memoised per collection array and shared
-with the album and artist pages.
+The collection drawn as a record, built from `/collection.json` (via
+`loadCollection()`, box set members excluded). Every album is one tile in
+its sleeve's flood colour; the disc is cut into 12 genre families
+(`buildGenreFamilies()` in `src/lib/genreFamilies.ts`), coded A1–A6 and
+B1–B6 like a record's sides, with the oldest records (by `originalYear()`)
+at the rim and the newest by the label. The ranked list and A–Z still come
+from `getGenreExplorer()`.
 
 **Route:** `/genres`
 
@@ -577,37 +580,44 @@ with the album and artist pages.
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `genre` | `all \| string` | `all` | Active scope, e.g. `/genres?genre=Rock` |
-| `artist` | `string` | – | Active artist slug; the graph switches to whole-collection artist focus |
-| `album` | `string` | – | Legacy/shared-link record slug used to highlight a record node |
-| `sort` | `dominance \| recent \| name \| year` | `dominance` | Artist/album ordering |
-| `q` | `string` | – | Search across genres, artists and albums |
-| `nodes` | `number` or legacy `standard \| more \| max` | responsive | Graph node budget |
+| `family` | family key (`prog`, `hard`, `pop`, `folk`, `soul`, `hiphop`, `screen`, `elec`, `wave`, `punk`, `indie`, `alt`) | – | Picked slice, e.g. `/genres?family=prog` |
+| `genre` | genre name | – | Lights that genre's records across the disc, e.g. `/genres?genre=Prog%20Rock`. Ignored when `family` is set |
+
+Both are written with `replace`, so picking slices does not fill the
+history. Old map parameters (`artist`, `album`, `sort`, `q`, `nodes`) are
+ignored.
 
 **Layout:**
 
-- `BrowseHeader` with genre / record / artist counts and the browse pills
-- When a genre is selected, an "On the map" chip in that genre's flood and
-  a pill to its `/genre/:slug` page
-- **Most collected** — ranked rows with a bar in each genre's sleeve
-  colour; **A–Z** index with letter tabs
-- The genre map (`GenreExplorerPanel` + `GenreGraph`)
+- A `FloodBand` holding the `BrowseHeader` (its title steps down to 80px from
+  `lg` until `2xl`, as it shares the row with the record) and one of
+  `AllDetail` / `FamilyDetail` / `LitDetail` (`src/components/genres/GenreRecord.tsx`),
+  beside the `GenreDisc`. Stacked (below `lg`) the record hangs over the next
+  section like a hero cover; from `lg` it sits inside the band.
+- The band, nav and page ground take: the picked family's boldest new record
+  (the most vivid of its 3 newest), a lit genre's lead (`genreLead()`), or the
+  boldest of the 3 newest additions. That record is also printed on the
+  disc's centre label (`LabelCover`, crossfading).
+- `FamilyList`: the families as Side A / Side B rows, each with a colour
+  barcode (its sleeves sorted by `colourSortKey`, as long as its share of the
+  biggest family), beside the six newest records in the current view
+  (`RecordTile`).
+- **Most collected** ranked rows and the **A–Z** index. Their record buttons
+  light that genre on the disc and scroll back up to it.
 
-**Graph behaviour:**
+**Record behaviour:**
 
-- Two focus modes: selected genre (genre hub, artist field, related genre
-  pills around the edge) or selected artist (artist portrait at the centre
-  radiating to records, genres and related artists)
-- D3 runs the off-DOM force layout and zoom/pan; React renders keyed SVG
-  nodes and Framer Motion animates transitions
-- Nodes take sleeve colours through `genreColours.ts`; the centre genre
-  hub uses the selected genre's flood and the record glyph in its ink
-- Click a genre to re-centre, an artist to focus them, a record to open it
-- Search, sort and the node-budget slider keep state in the URL; in-graph
-  Back / Forward, zoom and recentre controls
-- Keyboard: `[` Back, `]` Forward, `0` recentre, `+`/`=` zoom in, `-` zoom
-  out, `Esc` clears artist focus
-- Loading and empty states use `EditorialSkeleton` / `EditorialEmpty`
+- Click a slice (or its rim marker, or its row) to pull it out and dim the
+  rest; click a tile in the picked slice to open that record; click the
+  label to go back to all genres.
+- Pointing at a tile shows a card with the sleeve, title, artist, original
+  year and family.
+- Style buttons in the family detail and the top genres in the all-genres
+  detail light that genre. A lit genre shows where its records sit
+  ("Where it sits": records per family) and links to `/genre/:slug`.
+- Shuffle opens a random record from the current view.
+- Slice pull-out, dimming and lighting ease over a few frames on the canvas;
+  with `prefers-reduced-motion` they jump straight to the end state.
 
 ---
 

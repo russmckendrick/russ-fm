@@ -145,7 +145,7 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['@radix-ui/react-*'],
           'animation-vendor': ['framer-motion'],
-          'chart-vendor': ['d3', 'recharts'],
+          'chart-vendor': ['recharts'],
           'utils-vendor': ['fuse.js', 'clsx', 'tailwind-merge']
         }
       }

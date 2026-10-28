@@ -34,8 +34,7 @@ A dev-only `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) still ships in
 | React Router DOM | 7.x | Client-side routing |
 | Tailwind CSS | 3.x | Utility-first styling |
 | shadcn/ui | Latest | Component library (Radix UI) |
-| Framer Motion | Latest | Genre graph transitions |
-| D3 | 7.x | Genre graph layout and zoom |
+| Framer Motion | Latest | Wrapped presentation transitions |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
 | @fontsource-variable/archivo | Latest | Display type (`t-disp`, `t-cond`, `t-dispn`) |
@@ -50,7 +49,7 @@ src/
 │   ├── player/          # Player design: FloodProvider, CoverHero, HeroRecord, Sleeve, Vinyl, RecordTile…
 │   ├── album/           # BoxSet (box set hero art and "In this box")
 │   ├── browse/          # BrowseHeader, FacetFan, FacetCard, facetSleeves.ts
-│   ├── genres/          # Genre map, explorer panel, genreColours.ts
+│   ├── genres/          # GenreDisc (the genre record), GenreRecord panels, genreColours.ts
 │   ├── layout/          # PageContainer, PageStates (EditorialEmpty, EditorialSkeleton)
 │   ├── ui/              # shadcn/ui base components
 │   └── *.tsx            # Feature components

@@ -166,12 +166,13 @@ Colours and sleeve picks come from [`facetSleeves.ts`](./utilities.md#browse-sle
 
 ## Genre components (`src/components/genres/`)
 
-`GenreExplorerPanel` and `GenreGraph` take an optional `colorMap`
-(the `useAlbumColorMap()` result). Nodes, the selected-genre control bar
-and atlas rows are coloured from it via [`genreColours.ts`](./utilities.md#genre-colours-srccomponentsgenresgenrecoloursts):
-album nodes use their own sleeve, artist and genre nodes the most vivid
-recent record. `GenreGraph` also takes `centreFlood` for the centre node.
-Menus use the same rounded `--ground-2` panels as the rest of the site.
+| Component | Props | What it does |
+|-----------|-------|--------------|
+| `GenreDisc` | `families`, `colorMap`, `selected`, `lit`, `labelCover`, `labelColour`, `onSelect`, `onOpen` | The collection as a record on a `<canvas>`: one tile per album in its flood colour, a slice per family laid out by `layoutDisc()`. The picked slice is drawn out and the rest dimmed towards the vinyl; `lit` (a predicate) dims everything it rejects. Hover hit-tests with `hitDisc()` and shows a record card. Slice markers (A1…B6) are real buttons round the rim from `sm` up; the label is a `.vinyl-label` with `LabelCover`. The grooves are drawn once per size to an offscreen canvas. |
+| `AllDetail` / `FamilyDetail` / `LitDetail` | see `GenreRecord.tsx` | The band text for each state: counts, style buttons that light a genre, most collected artists, Shuffle and All genres. |
+| `FamilyList` | `families`, `selected`, `colorMap`, `onSelect` | Side A / Side B family rows with colour barcodes (a small canvas each). |
+
+Genre colours for the lists come from [`genreColours.ts`](./utilities.md#genre-colours-srccomponentsgenresgenrecoloursts).
 
 ## TV components (`src/components/tv/`)
 
