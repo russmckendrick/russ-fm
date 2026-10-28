@@ -28,6 +28,8 @@ const STATIC_ROUTES = [
   { path: '/shuffle', changefreq: 'weekly', priority: '0.4' },
   { path: '/tv', changefreq: 'weekly', priority: '0.5' },
   { path: '/tv/guide', changefreq: 'weekly', priority: '0.4' },
+  { path: '/explore', changefreq: 'weekly', priority: '0.6' },
+  { path: '/explore/thread', changefreq: 'weekly', priority: '0.5' },
 ];
 
 const routes = new Map();

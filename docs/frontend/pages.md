@@ -54,6 +54,8 @@ flowchart TB
         Tv["/tv, /tv/:channel"]
         TvArtist["/tv/artist/:slug"]
         TvGuide["/tv/guide"]
+        Explore["/explore, /explore/:slug"]
+        Thread["/explore/thread"]
         Search["/search"]
         Wrapped["/wrapped"]
         WrappedYear["/wrapped/:year"]
@@ -82,6 +84,8 @@ flowchart TB
     Tv --> TvPage
     TvArtist --> TvArtistPage
     TvGuide --> TvGuidePage
+    Explore --> ExploreGalaxyPage
+    Thread --> ExploreThreadPage
     Search --> SearchResultsPage
     Wrapped --> WrappedYear
     WrappedYear --> WrappedYearPage
@@ -766,6 +770,21 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   video count, linking to `/tv/artist/<slug>`.
 
 ---
+
+### Explore (`src/pages/explore/`)
+
+Two ways to follow the connections in the collection, both reading
+`public/explore/explore.json` through `useExplore()`
+([utilities](./utilities.md#explore-data-srclibexplore)). Both fill the screen under the nav, so
+`App.tsx` leaves the footer off /explore routes.
+
+- **The Galaxy** (`/explore`, `/explore/:slug`, `GalaxyPage.tsx`), the default: every artist as a
+  star in a 3D map, with the links drawn as trails. See [explore-galaxy.md](./explore-galaxy.md).
+- **The Thread** (`/explore/thread`, `ThreadPage.tsx`): a feed of hops from one artist or record to
+  the next, each saying why they connect. See [explore-thread.md](./explore-thread.md).
+
+`/explore/thread` is matched before `/explore/:slug`, so an artist slugged `thread` would be
+shadowed (none is). The data files under `public/explore/` are served as files before either route.
 
 ### SearchResultsPage (`src/pages/SearchResultsPage.tsx`)
 

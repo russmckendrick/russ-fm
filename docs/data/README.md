@@ -52,6 +52,7 @@ public/
 ├── album-colors.json         # Pre-extracted sleeve colour palettes
 ├── album-swatches.json       # Sleeve swatches, [hex, percent] pairs (album page only)
 ├── wrapped.json              # Year-in-review data
+├── explore/                  # /explore graph + 64px atlases (generated, gitignored)
 ├── album/
 │   └── {album-slug}/
 │       ├── {slug}.json       # Full album data

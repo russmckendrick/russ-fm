@@ -277,7 +277,7 @@ Sticky header that shares the page's flood colour.
   page flood (cream on plain pages) with a printed mark so the spin reads.
   The disc uses `.vinyl-lit` (lit rim and highlights) so it reads on the
   dark ground. Once scrolled, the header is the page's tinted `--ground`.
-- `xl+`: Home / Albums / Artists / Genres links, a Browse dropdown, Stats
+- `xl+`: Home / Albums / Artists / TV / Explore links, a Browse dropdown, Stats
   and Wrapped as pills. The current page is a solid pill: ink on the flood
   at the top, the flood itself once scrolled, so the colour follows you
   down. Then a pill search field (`/` focuses it) with `SearchOverlay`, a
@@ -288,7 +288,7 @@ Sticky header that shares the page's flood colour.
   Shuffle pill (and the mobile menu's Shuffle item) runs another shuffle in
   place instead of reloading the page (`shuffleLink()`, `src/lib/shuffleLink.ts`).
 - Browse opens `BrowseMenuCards` (`src/components/browse/BrowseMenu.tsx`):
-  Overview, Labels, Decades and Countries cards, each painted in its lead
+  Overview, Genres, Labels, Decades, Countries and Coloured cards, each painted in its lead
   sleeve's flood with a `FacetFan` of three sleeves. Leads are chosen so no
   two cards share a hue. The facet grouping only runs while the menu is open.
 - Below `xl`: search and menu icon buttons (Shuffle and the profile menu

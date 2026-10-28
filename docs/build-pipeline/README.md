@@ -80,6 +80,7 @@ pnpm run build
 # 8. generate-sitemap (refresh sitemap.xml in public/ and dist/)
 # 9. generate-og (social images)
 # 9b. generate-og-sections (TV and genre cards into public/og/)
+# 9c. generate-explore (the /explore graph and atlases into public/explore/)
 # 10. cp dist/og-image.png public/og-image.png (for worker build)
 ```
 
@@ -117,6 +118,7 @@ pnpm run build:worker
 | `generate-artist-images` | Artist photo placement and colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only (Apple Vision, needs the Xcode Command Line Tools), run locally after the scrapper adds artist photos and commit, not part of `build`; by default only artists without a file yet, `--full` redoes all, `--only <slug>` redoes one. See [asset-processing.md](./asset-processing.md#artist-image-notes) |
 | `generate-og` | Create OG images |
 | `generate-og-sections` | TV and genre OG cards into `public/og/` (see [asset-processing](./asset-processing.md#tv-and-genre-cards)) |
+| `generate-explore` | The /explore graph (`public/explore/explore.json`) and its 64px sleeve and avatar atlases (`sleeves-N.webp`, `avatars.webp`), from `collection.json`, `album-colors.json`, `tv.json` and the album and artist JSON (Discogs members, groups and aliases, guests on tracks, release `credits`). Gitignored like `public/og/`: CI makes it after `process-images` so the atlases read the cached medium and avatar sizes. `--no-atlas` skips the images; `--public <dir>` / `--out <dir>` read and write elsewhere. Shape: [schemas.md](../data/schemas.md#explore-json) |
 | `build:wrapped` | Generate wrapped.json |
 | `preview` | Preview production build |
 | `deploy` | Deploy to Cloudflare |

@@ -23,6 +23,8 @@ A dev-only `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) still ships in
 | [Pages](./pages.md) | Route-level components and features |
 | [Hooks](./hooks.md) | Custom React hooks |
 | [Utilities](./utilities.md) | Shared utility functions |
+| [Explore: The Galaxy](./explore-galaxy.md) | /explore, the 3D map of every artist (the default Explore page) |
+| [Explore: The Thread](./explore-thread.md) | /explore/thread, the feed of hops between artists and records |
 
 ## Technology Stack
 

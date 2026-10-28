@@ -99,6 +99,11 @@ jobs:
           echo "📺 Generating TV and genre OG cards..."
           pnpm run generate-og-sections
 
+          # The /explore graph and its atlases go to public/explore/ (after
+          # process-images, so the atlases read the cached medium sizes)
+          echo "🕸️  Generating explore data..."
+          pnpm run generate-explore
+
           # Copy generic og-image.png to public/ so it's included in worker build
           echo "🖼️  Copying og-image.png to public/..."
           cp dist/og-image.png public/og-image.png
