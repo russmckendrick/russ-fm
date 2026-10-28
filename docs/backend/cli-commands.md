@@ -814,8 +814,11 @@ scrapper backfill-credits
 - One `GET /releases/{id}` per release without stored credits or a stored payload, in the authed
   60/min bucket with the client's retries, so the 923 such releases take about 16 minutes.
 - Then every release with stored credits has its album JSON patched from the DB: `credits`
-  always, and `tracklist` only when a row carries `extraartists`. Values are key-sorted like a
-  full write, only those keys are touched, and a file that is already current is not rewritten.
+  always, and `tracklist` only when a row carries `extraartists`. When the file's tracklist rows
+  match the DB's (position and title), only `extraartists` is set on them, so keys a few older
+  files hold that the DB doesn't (per-track artists) are kept; otherwise the tracklist is written
+  from the DB. Values are key-sorted like a full write, only those keys are touched, and a file
+  that is already current is not rewritten.
   `collection.json` doesn't use credits, so it isn't regenerated.
 - Resumable: a failed lookup leaves the row without credits, so a re-run retries only those.
 - Prints one line per fetched or mapped release (`→ N credit(s), M track(s) with credits`), then

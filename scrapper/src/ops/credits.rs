@@ -85,6 +85,42 @@ fn merge_track_credits(stored: &Value, fresh: &[Value]) -> Value {
     Value::Array(merged.collect())
 }
 
+/// The `tracklist` of an album JSON file, if it has one.
+fn read_tracklist(path: &std::path::Path) -> Option<Value> {
+    let doc: Value = serde_json::from_str(&std::fs::read_to_string(path).ok()?).ok()?;
+    doc.get("tracklist").filter(|t| t.is_array()).cloned()
+}
+
+/// The album JSON tracklist with the DB's per-track credits. When the file's rows match the DB's
+/// row for row (position and title), the file's rows are kept and only `extraartists` is set or
+/// removed, so anything the file holds that the DB doesn't (per-track artists on a few older
+/// files) survives. Otherwise the tracklist is written from the DB, as `backfill-tracklists` does.
+fn with_track_credits(on_disk: Option<&Value>, tracklist: &Value) -> Value {
+    let public = public_tracklist(tracklist);
+    let (Some(file_rows), Some(db_rows)) = (on_disk.and_then(Value::as_array), public.as_array()) else {
+        return public;
+    };
+    let same_rows = file_rows.len() == db_rows.len()
+        && file_rows
+            .iter()
+            .zip(db_rows)
+            .all(|(f, d)| f.get("position") == d.get("position") && f.get("title") == d.get("title"));
+    if !same_rows {
+        return public;
+    }
+    let rows = file_rows.iter().zip(db_rows).map(|(f, d)| {
+        let mut row = f.clone();
+        if let Some(obj) = row.as_object_mut() {
+            match d.get("extraartists") {
+                Some(extra) => obj.insert("extraartists".into(), extra.clone()),
+                None => obj.remove("extraartists"),
+            };
+        }
+        crate::output::json::sort_value(&row)
+    });
+    Value::Array(rows.collect())
+}
+
 /// Rows carrying per-track credits.
 fn credited_tracks(tracklist: &Value) -> usize {
     tracklist.as_array().into_iter().flatten().filter(|t| t.get("extraartists").is_some()).count()
@@ -178,10 +214,11 @@ pub async fn run(cfg: &Config, args: BackfillCreditsArgs) -> Result<()> {
             continue;
         }
         let mut edits = credit_fields(&raw).to_vec();
-        if credited_tracks(&tracklist) > 0 {
-            edits.push(("tracklist", Some(public_tracklist(&tracklist))));
-        }
         let folder = release_folder_name(&c.title, &c.discogs_id);
+        if credited_tracks(&tracklist) > 0 {
+            let on_disk = read_tracklist(&album_dir.join(&folder).join(format!("{folder}.json")));
+            edits.push(("tracklist", Some(with_track_credits(on_disk.as_ref(), &tracklist))));
+        }
         match patch_album_fields(&album_dir, &folder, &edits) {
             Ok(Patch::Written) => written += 1,
             Ok(Patch::Unchanged) => unchanged += 1,
@@ -217,6 +254,25 @@ mod tests {
         assert_eq!(merged[0]["title"], "Beauty And The Beast (edit)");
         assert_eq!(merged[0]["extraartists"], json!([{"name": "Robert Fripp"}]));
         assert!(merged[1].get("extraartists").is_none());
+    }
+
+    #[test]
+    fn keeps_file_only_track_keys_when_rows_match() {
+        let db = json!([
+            {"position": "A1", "title": "Opener", "duration": "", "artists": [], "extraartists": [{"name": "A"}]},
+            {"position": "A2", "title": "Closer", "duration": "", "artists": []},
+        ]);
+        let file = json!([
+            {"position": "A1", "title": "Opener", "duration": "", "artists": [{"name": "Mouse Rat"}]},
+            {"position": "A2", "title": "Closer", "duration": "", "artists": [], "extraartists": [{"name": "Stale"}]},
+        ]);
+        let out = with_track_credits(Some(&file), &db);
+        assert_eq!(out[0]["artists"], json!([{"name": "Mouse Rat"}]));
+        assert_eq!(out[0]["extraartists"], json!([{"name": "A"}]));
+        assert!(out[1].get("extraartists").is_none());
+        // Rows that don't line up are written from the DB.
+        let other = json!([{"position": "1", "title": "Opener"}]);
+        assert_eq!(with_track_credits(Some(&other), &db), public_tracklist(&db));
     }
 
     #[test]
