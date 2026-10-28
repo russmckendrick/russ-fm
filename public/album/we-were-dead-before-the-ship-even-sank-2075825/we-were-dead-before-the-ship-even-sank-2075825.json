@@ -23,6 +23,98 @@
   },
   "country": "Europe",
   "created_at": "2025-07-10T08:29:00.774488",
+  "credits": [
+    {
+      "discogs_id": "426043",
+      "name": "Clay Jones",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "764433",
+      "name": "Kyle Johnson",
+      "role": "Engineer [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "327322",
+      "name": "Reto Peter",
+      "role": "Engineer [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "515130",
+      "name": "Rob Cooper",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "746018",
+      "name": "Tom Queyja",
+      "role": "Engineer [Assistant], Engineer [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "186355",
+      "name": "Joe Zook",
+      "role": "Engineer, Mixed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "716158",
+      "name": "Daniel Krieger",
+      "role": "Lacquer Cut By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "254262",
+      "name": "Howie Weinberg",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "260713",
+      "name": "Eric Judy",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "260715",
+      "name": "Isaac Brock",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "260714",
+      "name": "Jeremiah Green",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "258630",
+      "name": "Joe Plummer",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "37120",
+      "name": "Johnny Marr",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "272919",
+      "name": "Tom Peloso",
+      "role": "Performer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "202872",
+      "name": "Dennis Herring",
+      "role": "Producer, Mixed By",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-08-23T17:35:15-07:00",
   "discogs_id": "2075825",
   "discogs_url": "https://www.discogs.com/release/2075825-Modest-Mouse-We-Were-Dead-Before-The-Ship-Even-Sank",
@@ -191,18 +283,54 @@
     {
       "artists": [],
       "duration": "4:06",
+      "extraartists": [
+        {
+          "discogs_id": "764433",
+          "name": "Kyle Johnson",
+          "role": "Programmed By"
+        },
+        {
+          "discogs_id": "426043",
+          "name": "Clay Jones",
+          "role": "Shaker"
+        }
+      ],
       "position": "A2",
       "title": "Dashboard"
     },
     {
       "artists": [],
       "duration": "4:34",
+      "extraartists": [
+        {
+          "discogs_id": "778261",
+          "name": "Naheed Simjee",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "764433",
+          "name": "Kyle Johnson",
+          "role": "Programmed By"
+        }
+      ],
       "position": "A3",
       "title": "Fire It Up"
     },
     {
       "artists": [],
       "duration": "2:57",
+      "extraartists": [
+        {
+          "discogs_id": "270644",
+          "name": "James Mercer",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "426043",
+          "name": "Clay Jones",
+          "role": "Programmed By"
+        }
+      ],
       "position": "A4",
       "title": "Florida"
     },
@@ -216,18 +344,54 @@
     {
       "artists": [],
       "duration": "5:34",
+      "extraartists": [
+        {
+          "discogs_id": "202872",
+          "name": "Dennis Herring",
+          "role": "Handclaps, Percussion [Stomps]"
+        },
+        {
+          "discogs_id": "778261",
+          "name": "Naheed Simjee",
+          "role": "Handclaps, Percussion [Stomps]"
+        },
+        {
+          "discogs_id": "764433",
+          "name": "Kyle Johnson",
+          "role": "Programmed By"
+        }
+      ],
       "position": "B1",
       "title": "Parting Of The Sensory"
     },
     {
       "artists": [],
       "duration": "4:24",
+      "extraartists": [
+        {
+          "discogs_id": "426043",
+          "name": "Clay Jones",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "discogs_id": "270644",
+          "name": "James Mercer",
+          "role": "Backing Vocals"
+        }
+      ],
       "position": "B2",
       "title": "Missed The Boat"
     },
     {
       "artists": [],
       "duration": "3:40",
+      "extraartists": [
+        {
+          "discogs_id": "270644",
+          "name": "James Mercer",
+          "role": "Backing Vocals"
+        }
+      ],
       "position": "B3",
       "title": "We've Got Everything"
     },
@@ -253,12 +417,31 @@
     {
       "artists": [],
       "duration": "4:44",
+      "extraartists": [
+        {
+          "discogs_id": "202872",
+          "name": "Dennis Herring",
+          "role": "Electric Piano [Rhodes]"
+        },
+        {
+          "discogs_id": "764433",
+          "name": "Kyle Johnson",
+          "role": "Programmed By"
+        }
+      ],
       "position": "C3",
       "title": "Little Motel"
     },
     {
       "artists": [],
       "duration": "4:26",
+      "extraartists": [
+        {
+          "discogs_id": "202872",
+          "name": "Dennis Herring",
+          "role": "Backing Vocals"
+        }
+      ],
       "position": "C4",
       "title": "Steam Engenius"
     },
@@ -272,6 +455,13 @@
     {
       "artists": [],
       "duration": "8:27",
+      "extraartists": [
+        {
+          "discogs_id": "202872",
+          "name": "Dennis Herring",
+          "role": "Organ [Pump Organ]"
+        }
+      ],
       "position": "D1",
       "title": "Spitting Venom"
     },
@@ -284,6 +474,13 @@
     {
       "artists": [],
       "duration": "3:59",
+      "extraartists": [
+        {
+          "discogs_id": "764433",
+          "name": "Kyle Johnson",
+          "role": "Programmed By"
+        }
+      ],
       "position": "D3",
       "title": "Invisible"
     }

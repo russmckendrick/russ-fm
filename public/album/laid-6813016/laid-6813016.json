@@ -23,6 +23,122 @@
   },
   "country": "Europe",
   "created_at": "2025-07-10T08:33:59.315689",
+  "credits": [
+    {
+      "discogs_id": "2239254",
+      "name": "Jane Gott",
+      "role": "Artwork [Original Art]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "274927",
+      "name": "Jim Glennie",
+      "role": "Bass Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "634",
+      "name": "Brian Eno",
+      "role": "Bass [Additional], Keyboards [Additional]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "513241",
+      "name": "Stylorouge",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "520717",
+      "name": "David Baynton-Power",
+      "role": "Drums",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "263006",
+      "name": "Ben Findlay",
+      "role": "Engineer [Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "274925",
+      "name": "Larry Gott",
+      "role": "Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "273102",
+      "name": "Mark Hunter",
+      "role": "Keyboards",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1801252",
+      "name": "Peter Rudge",
+      "role": "Management [In The U.S.]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "275709",
+      "name": "Martine McDonagh",
+      "role": "Management [Worldwide Representation]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "151083",
+      "name": "Ben Fenner",
+      "role": "Mixed By",
+      "tracks": "1 to 7, 9, 11 to 13"
+    },
+    {
+      "discogs_id": "2239255",
+      "name": "Nigel Schermuly",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "354331",
+      "name": "Kevin Westenberg",
+      "role": "Photography By [Cover Photograph]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "634",
+      "name": "Brian Eno",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "151083",
+      "name": "Ben Fenner",
+      "role": "Recorded By",
+      "tracks": "1 to 6, 8 to 13"
+    },
+    {
+      "discogs_id": "12094",
+      "name": "James",
+      "role": "Typography [Cover Typography]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "273100",
+      "name": "Saul Davies",
+      "role": "Violin, Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "274926",
+      "name": "Tim Booth",
+      "role": "Vocals",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "12094",
+      "name": "James",
+      "role": "Written-By, Performer",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-05-04T21:09:51-07:00",
   "discogs_id": "6813016",
   "discogs_url": "https://www.discogs.com/release/6813016-James-Laid",
@@ -194,18 +310,49 @@
     {
       "artists": [],
       "duration": "4:27",
+      "extraartists": [
+        {
+          "discogs_id": "274925",
+          "name": "Larry Gott",
+          "role": "Vocals [Additional]"
+        }
+      ],
       "position": "A1",
       "title": "Out To Get You"
     },
     {
       "artists": [],
       "duration": "5:08",
+      "extraartists": [
+        {
+          "discogs_id": "634",
+          "name": "Brian Eno",
+          "role": "Vocals [Additional]"
+        },
+        {
+          "discogs_id": "275709",
+          "name": "Martine McDonagh",
+          "role": "Vocals [Additional]"
+        }
+      ],
       "position": "A2",
       "title": "Sometimes (Lester Piggott)"
     },
     {
       "artists": [],
       "duration": "4:47",
+      "extraartists": [
+        {
+          "discogs_id": "634",
+          "name": "Brian Eno",
+          "role": "Vocals [Additional]"
+        },
+        {
+          "discogs_id": "275709",
+          "name": "Martine McDonagh",
+          "role": "Vocals [Additional]"
+        }
+      ],
       "position": "A3",
       "title": "Dream Thrum"
     },
@@ -224,18 +371,54 @@
     {
       "artists": [],
       "duration": "5:24",
+      "extraartists": [
+        {
+          "discogs_id": "634",
+          "name": "Brian Eno",
+          "role": "Vocals [Additional]"
+        },
+        {
+          "discogs_id": "275709",
+          "name": "Martine McDonagh",
+          "role": "Vocals [Additional]"
+        }
+      ],
       "position": "B3",
       "title": "Five-O"
     },
     {
       "artists": [],
       "duration": "5:04",
+      "extraartists": [
+        {
+          "discogs_id": "381041",
+          "name": "Steve Williams",
+          "role": "Recorded By"
+        },
+        {
+          "discogs_id": "151083",
+          "name": "Ben Fenner",
+          "role": "Recorded By [Additional]"
+        },
+        {
+          "discogs_id": "2818699",
+          "name": "Mike Jones",
+          "role": "Recorded By [Assistant]"
+        }
+      ],
       "position": "C1",
       "title": "P.S."
     },
     {
       "artists": [],
       "duration": "3:28",
+      "extraartists": [
+        {
+          "discogs_id": "170283",
+          "name": "Markus Dravs",
+          "role": "Mixed By"
+        }
+      ],
       "position": "C2",
       "title": "Everybody Knows"
     },
@@ -248,6 +431,18 @@
     {
       "artists": [],
       "duration": "2:52",
+      "extraartists": [
+        {
+          "discogs_id": "170283",
+          "name": "Markus Dravs",
+          "role": "Mixed By"
+        },
+        {
+          "discogs_id": "275708",
+          "name": "The Kitchenettes",
+          "role": "Vocals [Additional]"
+        }
+      ],
       "position": "D1",
       "title": "Low Low Low"
     },

@@ -5,6 +5,10 @@
 //! `role: "member"` so `collection.json` headlines the band alone and lists the line-up as
 //! secondary `members`. The role is set by [`mark_band_members`] at ingest (or by the
 //! `maintenance band-members` backfill) and can be edited by hand in the TUI credit editor.
+//!
+//! It also maps Discogs `extraartists` (producers, engineers, session players, sleeve
+//! designers…) into the `credits` stored at `raw_data.discogs.credits` and the per-track
+//! `extraartists` on tracklist rows; see [`release_credits`] and [`track_credits`].
 
 use serde_json::{json, Value};
 
@@ -104,6 +108,60 @@ pub fn carry_over_roles(fresh: &mut [Value], previous: &Value) {
     }
 }
 
+// ── Discogs release credits (`extraartists`) ─────────────────────────────────
+
+/// One Discogs `extraartists` entry as `{name, discogs_id, role}`, plus Discogs's `tracks`
+/// scope ("A1 to A3, B2"; empty = the whole release) when `with_tracks`. The name loses its
+/// Discogs disambiguation suffix ("(2)") like release artists do; nameless entries are dropped.
+fn discogs_credit(entry: &Value, with_tracks: bool) -> Option<Value> {
+    let name = crate::ops::release::clean_artist_name(entry.get("name").and_then(|n| n.as_str()).unwrap_or(""));
+    if name.is_empty() {
+        return None;
+    }
+    let discogs_id = match entry.get("id") {
+        Some(Value::Number(n)) => n.as_i64().filter(|i| *i > 0).map(|i| json!(i.to_string())),
+        Some(Value::String(s)) => Some(s.trim()).filter(|s| !s.is_empty() && *s != "0").map(|s| json!(s)),
+        _ => None,
+    };
+    let text = |key: &str| entry.get(key).and_then(|v| v.as_str()).unwrap_or("").trim().to_string();
+    let mut out = json!({ "name": name, "discogs_id": discogs_id.unwrap_or(Value::Null), "role": text("role") });
+    if with_tracks {
+        out["tracks"] = json!(text("tracks"));
+    }
+    Some(out)
+}
+
+fn discogs_credits(list: Option<&Value>, with_tracks: bool) -> Vec<Value> {
+    list.and_then(|l| l.as_array())
+        .into_iter()
+        .flatten()
+        .filter_map(|e| discogs_credit(e, with_tracks))
+        .collect()
+}
+
+/// Release-level credits from a Discogs release payload's `extraartists`, in Discogs order:
+/// `[{name, discogs_id, role, tracks}]`. Empty when Discogs lists none.
+pub fn release_credits(release: &Value) -> Vec<Value> {
+    discogs_credits(release.get("extraartists"), true)
+}
+
+/// Credits of one Discogs tracklist row (its own `extraartists`): `[{name, discogs_id, role}]`.
+pub fn track_credits(track: &Value) -> Vec<Value> {
+    discogs_credits(track.get("extraartists"), false)
+}
+
+/// The release credits stored at `raw_data.discogs.credits`; `None` until fetched (an empty
+/// array means Discogs lists none).
+pub fn stored_credits(raw_data: &Value) -> Option<&Value> {
+    raw_data.pointer("/discogs/credits").filter(|c| c.is_array())
+}
+
+/// A full Discogs release payload kept in `raw_data.discogs` (releases first scraped by the
+/// Python tool), whose `extraartists` and `tracklist` give the credits without a request.
+pub fn stored_payload(raw_data: &Value) -> Option<&Value> {
+    raw_data.get("discogs").filter(|d| d.get("extraartists").is_some_and(Value::is_array))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -177,5 +235,34 @@ mod tests {
         ];
         carry_over_roles(&mut fresh, &prev);
         assert_eq!(roles(&fresh), vec!["main", "member", ""]);
+    }
+
+    #[test]
+    fn maps_discogs_extraartists() {
+        let release = json!({ "extraartists": [
+            { "name": "Tony Visconti", "anv": "", "role": "Producer ", "tracks": "", "id": 115089 },
+            { "name": "Robert Fripp (2)", "role": "Lead Guitar", "tracks": "A1 to A3, B2", "id": "20662" },
+            { "name": "Unlinked", "role": "Photography By", "id": 0 },
+            { "name": " ", "role": "Liner Notes", "id": 7 },
+        ]});
+        assert_eq!(
+            release_credits(&release),
+            vec![
+                json!({ "name": "Tony Visconti", "discogs_id": "115089", "role": "Producer", "tracks": "" }),
+                json!({ "name": "Robert Fripp", "discogs_id": "20662", "role": "Lead Guitar", "tracks": "A1 to A3, B2" }),
+                json!({ "name": "Unlinked", "discogs_id": null, "role": "Photography By", "tracks": "" }),
+            ]
+        );
+        let track = json!({ "position": "A1", "extraartists": [{ "name": "Brian Eno", "role": "Synthesizer", "tracks": "", "id": 3014 }] });
+        assert_eq!(track_credits(&track), vec![json!({ "name": "Brian Eno", "discogs_id": "3014", "role": "Synthesizer" })]);
+        assert!(release_credits(&json!({})).is_empty());
+    }
+
+    #[test]
+    fn stored_credits_and_payload() {
+        assert!(stored_credits(&json!({ "discogs": { "formats": [] } })).is_none());
+        assert_eq!(stored_credits(&json!({ "discogs": { "credits": [] } })), Some(&json!([])));
+        assert!(stored_payload(&json!({ "discogs": { "images": [] } })).is_none());
+        assert!(stored_payload(&json!({ "discogs": { "extraartists": [], "tracklist": [] } })).is_some());
     }
 }

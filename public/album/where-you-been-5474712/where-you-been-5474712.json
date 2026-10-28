@@ -23,6 +23,140 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:32:12.445046",
+  "credits": [
+    {
+      "discogs_id": "96302",
+      "name": "Geoff Travis",
+      "role": "A&R",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "317840",
+      "name": "Joe McEwen",
+      "role": "A&R",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "617608",
+      "name": "Mike Johnson",
+      "role": "Bass, Backing Vocals, Guitar",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "476034",
+      "name": "Abby Newton",
+      "role": "Cello",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "598148",
+      "name": "Rob Turner",
+      "role": "Cello, Arranged By [Strings Arranged By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "407175",
+      "name": "Murph",
+      "role": "Drums",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "254826",
+      "name": "Bryce Goggin",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "283516",
+      "name": "Dan McLoughlin",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "306087",
+      "name": "Matt Pakucko",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1004106",
+      "name": "Rojo",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "121657",
+      "name": "Steve Ett",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "419266",
+      "name": "Teddy Trewhella",
+      "role": "Engineer [Assistant Engineer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "85454",
+      "name": "John Agnello",
+      "role": "Engineer [Engineered By], Mixed By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "3148815",
+      "name": "Lynn Walsh",
+      "role": "Legal [Business Affairs]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1693455",
+      "name": "Marcia Hyman",
+      "role": "Legal [Business Affairs]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "97679",
+      "name": "J Mascis",
+      "role": "Producer [Produced By], Written-By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "293244",
+      "name": "Greg Dwinell",
+      "role": "Technician [Amp Fixer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "399873",
+      "name": "Roger Mayer",
+      "role": "Technician [Electronic Signal Shaping Coordinator]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "3228082",
+      "name": "Owen Davidson",
+      "role": "Technician [Guitar Fixer]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "853009",
+      "name": "Dave Mason",
+      "role": "Viola",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "2178268",
+      "name": "Larry Packer",
+      "role": "Violin",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "97679",
+      "name": "J Mascis",
+      "role": "Vocals, Guitar [Guitars], Percussion [Tympani], Chimes, Piano, Organ",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-06-04T10:36:38-07:00",
   "discogs_id": "5474712",
   "discogs_url": "https://www.discogs.com/release/5474712-Dinosaur-Jr-Where-You-Been",
@@ -156,6 +290,13 @@
     {
       "artists": [],
       "duration": "5:09",
+      "extraartists": [
+        {
+          "discogs_id": "97679",
+          "name": "J Mascis",
+          "role": "Drums"
+        }
+      ],
       "position": "A3",
       "title": "What Else Is New"
     },
@@ -168,30 +309,70 @@
     {
       "artists": [],
       "duration": "6:00",
+      "extraartists": [
+        {
+          "discogs_id": "617608",
+          "name": "Mike Johnson",
+          "role": "Piano [Low Notes On Piano]"
+        }
+      ],
       "position": "A5",
       "title": "Not The Same"
     },
     {
       "artists": [],
       "duration": "5:50",
+      "extraartists": [
+        {
+          "discogs_id": "617608",
+          "name": "Mike Johnson",
+          "role": "Guitar [1st Solo]"
+        },
+        {
+          "discogs_id": "243090",
+          "name": "Tiffany Anders",
+          "role": "Vocals"
+        }
+      ],
       "position": "B1",
       "title": "Get Me"
     },
     {
       "artists": [],
       "duration": "4:48",
+      "extraartists": [
+        {
+          "discogs_id": "419273",
+          "name": "Kurt Fedora",
+          "role": "Guitar [Right Speaker Rhythm Guitar]"
+        }
+      ],
       "position": "B2",
       "title": "Drawerings"
     },
     {
       "artists": [],
       "duration": "4:11",
+      "extraartists": [
+        {
+          "discogs_id": "617608",
+          "name": "Mike Johnson",
+          "role": "Guitar [Right Speaker Solo]"
+        }
+      ],
       "position": "B3",
       "title": "Hide"
     },
     {
       "artists": [],
       "duration": "4:15",
+      "extraartists": [
+        {
+          "discogs_id": "553835",
+          "name": "George Berz",
+          "role": "Tambourine"
+        }
+      ],
       "position": "B4",
       "title": "Goin Home"
     },

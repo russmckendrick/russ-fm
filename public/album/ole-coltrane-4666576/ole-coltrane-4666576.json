@@ -23,6 +23,86 @@
   },
   "country": "US",
   "created_at": "2026-09-13T17:52:34.253252",
+  "credits": [
+    {
+      "discogs_id": "327639",
+      "name": "George Lane",
+      "role": "Alto Saxophone",
+      "tracks": "B1, B2"
+    },
+    {
+      "discogs_id": "264868",
+      "name": "Art Davis",
+      "role": "Bass",
+      "tracks": "A, B1"
+    },
+    {
+      "discogs_id": "135874",
+      "name": "Reggie Workman",
+      "role": "Bass",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1889364",
+      "name": "Jagel & Slutzky Graphics",
+      "role": "Design [Cover]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "135885",
+      "name": "Elvin Jones",
+      "role": "Drums",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "125450",
+      "name": "Phil Ramone",
+      "role": "Engineer [Recording]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "327639",
+      "name": "George Lane",
+      "role": "Flute",
+      "tracks": "A"
+    },
+    {
+      "discogs_id": "463465",
+      "name": "Ralph J. Gleason",
+      "role": "Liner Notes",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "10620",
+      "name": "McCoy Tyner",
+      "role": "Piano",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "97545",
+      "name": "John Coltrane",
+      "role": "Soprano Saxophone",
+      "tracks": "A"
+    },
+    {
+      "discogs_id": "251691",
+      "name": "Nesuhi Ertegun",
+      "role": "Supervised By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "97545",
+      "name": "John Coltrane",
+      "role": "Tenor Saxophone",
+      "tracks": "B1, B2"
+    },
+    {
+      "discogs_id": "55745",
+      "name": "Freddie Hubbard",
+      "role": "Trumpet",
+      "tracks": ""
+    }
+  ],
   "date_added": "2017-07-12T18:58:35-07:00",
   "discogs_id": "4666576",
   "discogs_url": "https://www.discogs.com/release/4666576-John-Coltrane-Olé-Coltrane",
@@ -244,18 +324,39 @@
     {
       "artists": [],
       "duration": "18:05",
+      "extraartists": [
+        {
+          "discogs_id": "97545",
+          "name": "John Coltrane",
+          "role": "Written-By"
+        }
+      ],
       "position": "A",
       "title": "Olé"
     },
     {
       "artists": [],
       "duration": "10:50",
+      "extraartists": [
+        {
+          "discogs_id": "97545",
+          "name": "John Coltrane",
+          "role": "Written-By"
+        }
+      ],
       "position": "B1",
       "title": "Dahomey Dance"
     },
     {
       "artists": [],
       "duration": "7:32",
+      "extraartists": [
+        {
+          "discogs_id": "10620",
+          "name": "McCoy Tyner",
+          "role": "Written-By"
+        }
+      ],
       "position": "B2",
       "title": "Aisha"
     }

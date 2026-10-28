@@ -23,6 +23,92 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:58:28.686247",
+  "credits": [
+    {
+      "discogs_id": "81423",
+      "name": "Paul Gardiner",
+      "role": "Bass",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "282210",
+      "name": "Ced Sharpley",
+      "role": "Drums",
+      "tracks": "A1 to B3, B5"
+    },
+    {
+      "discogs_id": "291328",
+      "name": "Graeme Myhre",
+      "role": "Engineer",
+      "tracks": "A3, A5, B2, B3, B5"
+    },
+    {
+      "discogs_id": "396324",
+      "name": "Steve Smith",
+      "role": "Engineer",
+      "tracks": "A2, A4 to B2, B4"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Guitar",
+      "tracks": "A5, B1, B5"
+    },
+    {
+      "discogs_id": "446851",
+      "name": "Denis Haines",
+      "role": "Keyboards",
+      "tracks": "A2, A4, B1, B2"
+    },
+    {
+      "discogs_id": "540878",
+      "name": "Melvyn Abrahams",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "115832",
+      "name": "Jess Sutcliffe",
+      "role": "Mixed By",
+      "tracks": "A4, B1, B2, B4"
+    },
+    {
+      "discogs_id": "484928",
+      "name": "Nick Smith",
+      "role": "Mixed By",
+      "tracks": "A1 to A3, A5, B3, B5"
+    },
+    {
+      "discogs_id": "2236261",
+      "name": "Geoff Howes",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Piano",
+      "tracks": "A1, A3, B5"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Producer, Vocals, Keyboards",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "226516",
+      "name": "Chris Payne",
+      "role": "Viola",
+      "tracks": "A2, B1 to B3"
+    },
+    {
+      "discogs_id": "12588",
+      "name": "Gary Numan",
+      "role": "Written-By",
+      "tracks": "A1 to C"
+    }
+  ],
   "date_added": "2015-12-30T09:11:50-08:00",
   "discogs_id": "1709654",
   "discogs_url": "https://www.discogs.com/release/1709654-Gary-Numan-Telekon",
@@ -186,30 +272,110 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "484928",
+          "name": "Nick Smith",
+          "role": "Engineer"
+        },
+        {
+          "discogs_id": "245051",
+          "name": "James Freud",
+          "role": "Handclaps"
+        },
+        {
+          "discogs_id": "226519",
+          "name": "John Webb",
+          "role": "Handclaps"
+        }
+      ],
       "position": "A1",
       "title": "This Wreckage"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "282209",
+          "name": "Rrussell Bell",
+          "role": "Claves"
+        },
+        {
+          "discogs_id": "18547",
+          "name": "Simple Minds",
+          "role": "Handclaps"
+        }
+      ],
       "position": "A2",
       "title": "The Aircrash Bureau"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "226516",
+          "name": "Chris Payne",
+          "role": "Piano [Solo]"
+        }
+      ],
       "position": "A3",
       "title": "Telekon"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "282210",
+          "name": "Ced Sharpley",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "226516",
+          "name": "Chris Payne",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "446851",
+          "name": "Denis Haines",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "81423",
+          "name": "Paul Gardiner",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "282209",
+          "name": "Rrussell Bell",
+          "role": "Backing Vocals"
+        },
+        {
+          "discogs_id": "226516",
+          "name": "Chris Payne",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "282209",
+          "name": "Rrussell Bell",
+          "role": "Rhythm Guitar"
+        }
+      ],
       "position": "A4",
       "title": "Remind Me To Smile"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "12588",
+          "name": "Gary Numan",
+          "role": "Bass [Minibass]"
+        }
+      ],
       "position": "A5",
       "title": "Sleep By Windows"
     },
@@ -222,24 +388,67 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "446851",
+          "name": "Denis Haines",
+          "role": "Whistle"
+        }
+      ],
       "position": "B2",
       "title": "I Dream Of Wires"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "484928",
+          "name": "Nick Smith",
+          "role": "Engineer"
+        },
+        {
+          "discogs_id": "226516",
+          "name": "Chris Payne",
+          "role": "Keyboards"
+        },
+        {
+          "discogs_id": "282210",
+          "name": "Ced Sharpley",
+          "role": "Percussion"
+        },
+        {
+          "discogs_id": "226516",
+          "name": "Chris Payne",
+          "role": "Piano"
+        }
+      ],
       "position": "B3",
       "title": "Remember I Was Vapour"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "446851",
+          "name": "Denis Haines",
+          "role": "Piano"
+        }
+      ],
       "position": "B4",
       "title": "Please Push No More"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "282209",
+          "name": "Rrussell Bell",
+          "role": "Violin, Lead Guitar"
+        }
+      ],
       "position": "B5",
       "title": "The Joy Circuit"
     },
@@ -259,6 +468,28 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "288092",
+          "name": "Barry Mann",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "542306",
+          "name": "Cynthia Weil",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "328062",
+          "name": "Jerry Leiber",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "328060",
+          "name": "Mike Stoller",
+          "role": "Written-By"
+        }
+      ],
       "position": "D",
       "title": "On Broadway (Live)"
     }

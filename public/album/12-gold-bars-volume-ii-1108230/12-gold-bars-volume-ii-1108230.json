@@ -23,6 +23,44 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T09:00:24.651707",
+  "credits": [
+    {
+      "discogs_id": "142333",
+      "name": "John Eden",
+      "role": "Co-producer",
+      "tracks": "C1 to C4, C6"
+    },
+    {
+      "discogs_id": "103064",
+      "name": "Status Quo",
+      "role": "Co-producer",
+      "tracks": "C1 to C4, C6"
+    },
+    {
+      "discogs_id": "540878",
+      "name": "Melvyn Abrahams",
+      "role": "Lacquer Cut By",
+      "tracks": "C1 to D6"
+    },
+    {
+      "discogs_id": "257660",
+      "name": "Pip Williams",
+      "role": "Producer",
+      "tracks": "A1, A6, B5, B6, D5"
+    },
+    {
+      "discogs_id": "123906",
+      "name": "Roger Glover",
+      "role": "Producer",
+      "tracks": "B4"
+    },
+    {
+      "discogs_id": "103064",
+      "name": "Status Quo",
+      "role": "Producer",
+      "tracks": "A2 to A5, B1 to B3, C5, D1 to D4, D6"
+    }
+  ],
   "date_added": "2015-10-14T18:38:58-07:00",
   "discogs_id": "1108230",
   "discogs_url": "https://www.discogs.com/release/1108230-Status-Quo-12-Gold-Bars-Volume-II",
@@ -186,72 +224,241 @@
     {
       "artists": [],
       "duration": "3:37",
+      "extraartists": [
+        {
+          "discogs_id": "260458",
+          "name": "John Fogerty",
+          "role": "Written-By"
+        }
+      ],
       "position": "A1",
       "title": "Rockin' All Over The World"
     },
     {
       "artists": [],
       "duration": "3:53",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "A2",
       "title": "Down Down"
     },
     {
       "artists": [],
       "duration": "3:46",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "A3",
       "title": "Caroline"
     },
     {
       "artists": [],
       "duration": "2:56",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "A4",
       "title": "Paper Plane"
     },
     {
       "artists": [],
       "duration": "3:37",
+      "extraartists": [
+        {
+          "discogs_id": "467614",
+          "name": "Alan Lancaster",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "861984",
+          "name": "John Coghlan",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "A5",
       "title": "Break The Rules"
     },
     {
       "artists": [],
       "duration": "3:38",
+      "extraartists": [
+        {
+          "discogs_id": "251995",
+          "name": "Andy Bown",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "311961",
+          "name": "Jackie Lynton",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "A6",
       "title": "Again & Again"
     },
     {
       "artists": [],
       "duration": "4:00",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B1",
       "title": "Mystery Song"
     },
     {
       "artists": [],
       "duration": "5:41",
+      "extraartists": [
+        {
+          "discogs_id": "467614",
+          "name": "Alan Lancaster",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "861984",
+          "name": "John Coghlan",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B2",
       "title": "Roll Over Lay Down"
     },
     {
       "artists": [],
       "duration": "4:35",
+      "extraartists": [
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B3",
       "title": "Rain"
     },
     {
       "artists": [],
       "duration": "3:16",
+      "extraartists": [
+        {
+          "discogs_id": "710657",
+          "name": "Arlie Carter",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "710738",
+          "name": "William Warren",
+          "role": "Written-By"
+        }
+      ],
       "position": "B4",
       "title": "Wild Side Of Life"
     },
     {
       "artists": [],
       "duration": "4:03",
+      "extraartists": [
+        {
+          "discogs_id": "251995",
+          "name": "Andy Bown",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B5",
       "title": "Whatever You Want"
     },
     {
       "artists": [],
       "duration": "3:54",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "B6",
       "title": "Living On An Island"
     },
@@ -265,72 +472,201 @@
     {
       "artists": [],
       "duration": "4:08",
+      "extraartists": [
+        {
+          "discogs_id": "597220",
+          "name": "Bernie Frost",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "C1",
       "title": "What You're Proposin'"
     },
     {
       "artists": [],
       "duration": "3:50",
+      "extraartists": [
+        {
+          "discogs_id": "597220",
+          "name": "Bernie Frost",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "C2",
       "title": "Lies"
     },
     {
       "artists": [],
       "duration": "2:43",
+      "extraartists": [
+        {
+          "discogs_id": "765937",
+          "name": "Richard Supa",
+          "role": "Written-By"
+        }
+      ],
       "position": "C3",
       "title": "Something About You Baby I Like"
     },
     {
       "artists": [],
       "duration": "4:09",
+      "extraartists": [
+        {
+          "discogs_id": "251995",
+          "name": "Andy Bown",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "511638",
+          "name": "Rick Parfitt",
+          "role": "Written-By"
+        }
+      ],
       "position": "C4",
       "title": "Don't Drive My Car"
     },
     {
       "artists": [],
       "duration": "3:08",
+      "extraartists": [
+        {
+          "discogs_id": "1232714",
+          "name": "Jackie McAuley",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "355635",
+          "name": "John Gustafson",
+          "role": "Written-By"
+        }
+      ],
       "position": "C5",
       "title": "Dear John"
     },
     {
       "artists": [],
       "duration": "3:58",
+      "extraartists": [
+        {
+          "discogs_id": "597220",
+          "name": "Bernie Frost",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "C6",
       "title": "Rock 'n' Roll"
     },
     {
       "artists": [],
       "duration": "2:46",
+      "extraartists": [
+        {
+          "discogs_id": "467614",
+          "name": "Alan Lancaster",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "1278064",
+          "name": "Keith Lamb",
+          "role": "Written-By"
+        }
+      ],
       "position": "D1",
       "title": "Ol' Rag Blues"
     },
     {
       "artists": [],
       "duration": "3:15",
+      "extraartists": [
+        {
+          "discogs_id": "261803",
+          "name": "Doc Pomus",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "261801",
+          "name": "Mort Shuman",
+          "role": "Written-By"
+        }
+      ],
       "position": "D2",
       "title": "Mess Of Blues"
     },
     {
       "artists": [],
       "duration": "3:24",
+      "extraartists": [
+        {
+          "discogs_id": "597220",
+          "name": "Bernie Frost",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "D3",
       "title": "Marguerita Time"
     },
     {
       "artists": [],
       "duration": "3:32",
+      "extraartists": [
+        {
+          "discogs_id": "1233570",
+          "name": "Guy Johnson",
+          "role": "Written-By"
+        }
+      ],
       "position": "D4",
       "title": "Going Down Town Tonight"
     },
     {
       "artists": [],
       "duration": "3:26",
+      "extraartists": [
+        {
+          "discogs_id": "423955",
+          "name": "Ernie Maresca",
+          "role": "Written-By"
+        }
+      ],
       "position": "D5",
       "title": "The Wanderer"
     },
     {
       "artists": [],
       "duration": "4:49",
+      "extraartists": [
+        {
+          "discogs_id": "453155",
+          "name": "Bob Young",
+          "role": "Written-By"
+        },
+        {
+          "discogs_id": "288920",
+          "name": "Francis Rossi",
+          "role": "Written-By"
+        }
+      ],
       "position": "D6",
       "title": "Caroline (Live At The N.E.C.)"
     }

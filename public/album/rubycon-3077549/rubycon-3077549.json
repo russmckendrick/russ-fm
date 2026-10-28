@@ -23,6 +23,56 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:13:51.274119",
+  "credits": [
+    {
+      "discogs_id": "34347",
+      "name": "Christopher Franke",
+      "role": "Composed By, Performer [Played By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "10361",
+      "name": "Edgar Froese",
+      "role": "Composed By, Performer [Played By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "54855",
+      "name": "Peter Baumann",
+      "role": "Composed By, Performer [Played By]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "83382",
+      "name": "Mick Glossop",
+      "role": "Engineer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": null,
+      "name": "Andrew Graham-Stewart",
+      "role": "Other [Personal Assistant]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "656189",
+      "name": "Monique Froese",
+      "role": "Photography By [Cover Photographs]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "10343",
+      "name": "Tangerine Dream",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "484102",
+      "name": "Roland Paulick",
+      "role": "Technician [Technical Assistant]",
+      "tracks": ""
+    }
+  ],
   "date_added": "2018-10-24T11:41:07-07:00",
   "discogs_id": "3077549",
   "discogs_url": "https://www.discogs.com/release/3077549-Tangerine-Dream-Rubycon",
@@ -144,12 +194,46 @@
     {
       "artists": [],
       "duration": "17:18",
+      "extraartists": [
+        {
+          "discogs_id": "10361",
+          "name": "Edgar Froese",
+          "role": "Guitar, Mellotron, Synthesizer [Vcs 3 Synthi]"
+        },
+        {
+          "discogs_id": "54855",
+          "name": "Peter Baumann",
+          "role": "Organ, Synthesizer [Synthi A], Electric Piano, Piano [Prepared]"
+        },
+        {
+          "discogs_id": "34347",
+          "name": "Christopher Franke",
+          "role": "Synthesizer [Double Moog, Synthi A], Organ, Organ [Modified Elka], Piano [Prepared]"
+        }
+      ],
       "position": "A",
       "title": "Rubycon (Part I)"
     },
     {
       "artists": [],
       "duration": "17:35",
+      "extraartists": [
+        {
+          "discogs_id": "54855",
+          "name": "Peter Baumann",
+          "role": "Electric Piano, Organ, Synthesizer [Synthi A, Arp 2600], Voice"
+        },
+        {
+          "discogs_id": "10361",
+          "name": "Edgar Froese",
+          "role": "Organ, Mellotron, Guitar, Gong, Synthesizer [Vcs 3 Synthi]"
+        },
+        {
+          "discogs_id": "34347",
+          "name": "Christopher Franke",
+          "role": "Synthesizer [Double Moog, Synthi A], Gong, Organ"
+        }
+      ],
       "position": "B",
       "title": "Rubycon (Part II)"
     }

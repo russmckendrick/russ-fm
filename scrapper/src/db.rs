@@ -163,6 +163,18 @@ pub struct FormatCandidate {
     pub raw_data: Value,
 }
 
+/// A release row for `backfill-credits` (see [`Db::releases_for_credits`]).
+#[derive(Debug, Clone)]
+pub struct CreditCandidate {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    /// The release's stored `raw_data`, whose `discogs.credits` may be missing.
+    pub raw_data: Value,
+    /// The stored tracklist, which per-track credits are merged into.
+    pub tracklist: Value,
+}
+
 /// A release for `backfill-tracklists`.
 #[derive(Debug, Clone)]
 pub struct TracklistCandidate {
@@ -959,6 +971,35 @@ impl Db {
         Ok(out)
     }
 
+    /// Every release with a Discogs id, newest additions first, with its `raw_data` and tracklist.
+    pub fn releases_for_credits(&self) -> Result<Vec<CreditCandidate>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, title, artists, raw_data, tracklist FROM releases WHERE discogs_id IS NOT NULL ORDER BY date_added DESC",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, Option<String>>(2)?,
+                row.get::<_, Option<String>>(3)?,
+                row.get::<_, Option<String>>(4)?,
+            ))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (discogs_id, title, artists, raw, tracklist) = row?;
+            out.push(CreditCandidate {
+                discogs_id,
+                title,
+                artists: artist_names(&parse_json(artists, "[]")),
+                raw_data: parse_json(raw, "{}"),
+                tracklist: parse_json(tracklist, "[]"),
+            });
+        }
+        Ok(out)
+    }
+
     /// Every release with a Discogs id, newest additions first, with its stored tracklist.
     pub fn releases_for_tracklists(&self) -> Result<Vec<TracklistCandidate>> {
         let conn = self.conn()?;
@@ -1001,6 +1042,13 @@ impl Db {
     /// release is not in the database.
     pub fn set_release_discogs_formats(&self, discogs_id: &str, formats: Value) -> Result<Option<Value>> {
         self.merge_release_discogs(discogs_id, [("formats", formats)], true)
+    }
+
+    /// Set `raw_data.discogs.credits` (the release's mapped Discogs `extraartists`) on a release,
+    /// keeping every other key. Returns the updated `raw_data`, or `None` when the release is
+    /// not in the database.
+    pub fn set_release_discogs_credits(&self, discogs_id: &str, credits: Value) -> Result<Option<Value>> {
+        self.merge_release_discogs(discogs_id, [("credits", credits)], true)
     }
 
     /// Set `raw_data.discogs.master_id` / `master_year` on a release, keeping every other key.

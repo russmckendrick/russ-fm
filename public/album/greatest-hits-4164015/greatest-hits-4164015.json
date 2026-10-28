@@ -23,6 +23,26 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T08:57:48.166416",
+  "credits": [
+    {
+      "discogs_id": "37606",
+      "name": "Cat Stevens",
+      "role": "Producer",
+      "tracks": "A2, A6, B2, B6"
+    },
+    {
+      "discogs_id": "274221",
+      "name": "Paul Samwell-Smith",
+      "role": "Producer",
+      "tracks": "A1 to A5, B1 to B5"
+    },
+    {
+      "discogs_id": "37606",
+      "name": "Cat Stevens",
+      "role": "Written-By",
+      "tracks": "A1 to B4"
+    }
+  ],
   "date_added": "2016-01-09T07:44:46-08:00",
   "discogs_id": "4164015",
   "discogs_url": "https://www.discogs.com/release/4164015-Cat-Stevens-Greatest-Hits",
@@ -190,12 +210,36 @@
     {
       "artists": [],
       "duration": "3:17",
+      "extraartists": [
+        {
+          "discogs_id": "37606",
+          "name": "Cat Stevens",
+          "role": "Arranged By"
+        },
+        {
+          "discogs_id": "605772",
+          "name": "Eleanor Farjeon",
+          "role": "Lyrics By"
+        },
+        {
+          "discogs_id": "151641",
+          "name": "Traditional",
+          "role": "Music By"
+        }
+      ],
       "position": "B5",
       "title": "Morning Has Broken"
     },
     {
       "artists": [],
       "duration": "2:28",
+      "extraartists": [
+        {
+          "discogs_id": "295202",
+          "name": "Sam Cooke",
+          "role": "Written-By"
+        }
+      ],
       "position": "B6",
       "title": "Another Saturday Night"
     }

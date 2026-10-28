@@ -23,6 +23,98 @@
   },
   "country": "US",
   "created_at": "2025-07-10T08:58:39.762010",
+  "credits": [
+    {
+      "discogs_id": "1879797",
+      "name": "Daniel Murphy",
+      "role": "Design",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1163737",
+      "name": "David Hartley",
+      "role": "Engineer [Additional Engineering]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "265534",
+      "name": "John Congleton",
+      "role": "Engineer [Additional Engineering]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "666960",
+      "name": "Michael Johnson",
+      "role": "Engineer [Additional Engineering]",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "520392",
+      "name": "Paul Gold",
+      "role": "Mastered By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1203536",
+      "name": "Adam Granduciel",
+      "role": "Photography By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1203536",
+      "name": "Adam Granduciel",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "454938",
+      "name": "Jeff Zeigler",
+      "role": "Producer",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1203536",
+      "name": "Adam Granduciel",
+      "role": "Recorded By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "454938",
+      "name": "Jeff Zeigler",
+      "role": "Recorded By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1288472",
+      "name": "John Ashley",
+      "role": "Recorded By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1203536",
+      "name": "Adam Granduciel",
+      "role": "Words By, Music By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "1163737",
+      "name": "David Hartley",
+      "role": "Words By, Music By",
+      "tracks": "A2, B3"
+    },
+    {
+      "discogs_id": "607078",
+      "name": "Michael Zanghi",
+      "role": "Words By, Music By",
+      "tracks": "A2"
+    },
+    {
+      "discogs_id": "2038068",
+      "name": "Robbie Bennett",
+      "role": "Words By, Music By",
+      "tracks": "A2, C2"
+    }
+  ],
   "date_added": "2015-12-28T14:58:23-08:00",
   "discogs_id": "3052756",
   "discogs_url": "https://www.discogs.com/release/3052756-The-War-On-Drugs-Slave-Ambient",
@@ -171,72 +263,306 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Bass"
+        },
+        {
+          "discogs_id": "2390149",
+          "name": "Steven Urgo",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "1203535",
+          "name": "Kurt Vile",
+          "role": "Electric Guitar"
+        },
+        {
+          "discogs_id": "2038068",
+          "name": "Robbie Bennett",
+          "role": "Piano"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Acoustic Guitar, Electric Guitar [Electric Phased Guitars], Guitar [Animator Guitars], Piano [Tom Thumb Piano], Sampler, Harmonica"
+        }
+      ],
       "position": "A1",
       "title": "Best Night"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "607078",
+          "name": "Michael Zanghi",
+          "role": "Drums, Percussion"
+        },
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Guitar [Nashville Guitar], Bass, Synthesizer [Voyager]"
+        },
+        {
+          "discogs_id": "2038068",
+          "name": "Robbie Bennett",
+          "role": "Piano, Acoustic Guitar"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Electric Guitar, Effects [Harmonizer]"
+        }
+      ],
       "position": "A2",
       "title": "Brothers"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "10162144",
+          "name": "Jeff Ryan",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Synthesizer [Juno 60]"
+        },
+        {
+          "discogs_id": "1224988",
+          "name": "Chad Stockslager",
+          "role": "Upright Piano"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Harmonica, Electric Guitar, Bass"
+        }
+      ],
       "position": "A3",
       "title": "I Was There"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "454938",
+          "name": "Jeff Zeigler",
+          "role": "Drum Programming, Effects [Harmonizers], Electronics [Patch Bay]"
+        },
+        {
+          "discogs_id": "607078",
+          "name": "Michael Zanghi",
+          "role": "Drums [Hayman], Drums [Pig]"
+        },
+        {
+          "discogs_id": "666960",
+          "name": "Michael Johnson",
+          "role": "Effects [Eventide], Synthesizer [Modular Moog Treatments]"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Guitar, Synthesizer [Siel OR400], Synthesizer [ARP Omni I], Organ [Farfisa], Effects [Animator], Harmonica, Effects [Harmonizers], Sampler, Tape"
+        }
+      ],
       "position": "B1",
       "title": "Your Love Is Calling My Name"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "666960",
+          "name": "Michael Johnson",
+          "role": "Effects [Harmonizer Settings]"
+        },
+        {
+          "discogs_id": "454938",
+          "name": "Jeff Zeigler",
+          "role": "Effects [SPX90], Electronics [Patch Bay]"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Organ, Synthesizer [Siel OR400], Synthesizer [Mono/Poly], Tape [Cassettes], Effects [Eventide], Effects [Moogerfooger]"
+        },
+        {
+          "discogs_id": "513860",
+          "name": "Jesse Trbovich",
+          "role": "Saxophone"
+        }
+      ],
       "position": "B2",
       "title": "The Animator"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Bass, Drums, Twelve-String Guitar"
+        },
+        {
+          "discogs_id": "666960",
+          "name": "Michael Johnson",
+          "role": "Drums"
+        },
+        {
+          "discogs_id": "607078",
+          "name": "Michael Zanghi",
+          "role": "Drums, Percussion"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Harmonica, Organ, Synthesizer [Voyager], Effects [Animator], Sampler, Tape"
+        }
+      ],
       "position": "B3",
       "title": "Come To The City"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Synthesizer, Tape"
+        }
+      ],
       "position": "C1",
       "title": "Come For It"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Bass, Electric Guitar"
+        },
+        {
+          "discogs_id": "1203535",
+          "name": "Kurt Vile",
+          "role": "Electric Guitar"
+        },
+        {
+          "discogs_id": "2038068",
+          "name": "Robbie Bennett",
+          "role": "Piano"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Sampler, Synthesizer [Siel OR400], Synthesizer [ARP Omni], Guitar [Jazzmaster], Percussion"
+        }
+      ],
       "position": "C2",
       "title": "It's Your Destiny"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Synthesizer [Siel OR400], Effects [Harmonizer], Drum Machine, Tape [CAssettes]"
+        }
+      ],
       "position": "C3",
       "title": "City Reprise #12"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Bass, Guitar [Stratocaster], Autoharp [Electric Autoharp]"
+        },
+        {
+          "discogs_id": "607078",
+          "name": "Michael Zanghi",
+          "role": "Drums, Percussion, Effects [Mutron Bi-Phase]"
+        },
+        {
+          "discogs_id": "348155",
+          "name": "Brian McTear",
+          "role": "Mixed By"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Harmonica, Electric Guitar, Keyboards, Effects [Filters]"
+        }
+      ],
       "position": "D1",
       "title": "Baby Missiles"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Effects [Dubs], Harmonica, Tape [Cassettes]"
+        }
+      ],
       "position": "D2",
       "title": "Original Slave"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "1163737",
+          "name": "David Hartley",
+          "role": "Bass, Twelve-String Guitar [Acoustic 12-String]"
+        },
+        {
+          "discogs_id": "607078",
+          "name": "Michael Zanghi",
+          "role": "Drums, Percussion"
+        },
+        {
+          "discogs_id": "2390150",
+          "name": "Kim Roney",
+          "role": "Piano"
+        },
+        {
+          "discogs_id": "2038068",
+          "name": "Robbie Bennett",
+          "role": "Synthesizer [ARP Omni II]"
+        },
+        {
+          "discogs_id": "1288472",
+          "name": "John Ashley",
+          "role": "Synthesizer [Voyager]"
+        },
+        {
+          "discogs_id": "1203536",
+          "name": "Adam Granduciel",
+          "role": "Vocals, Electric Guitar, Drums, Organ"
+        }
+      ],
       "position": "D3",
       "title": "Black Water Falls"
     }

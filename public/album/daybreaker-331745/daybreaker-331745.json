@@ -23,6 +23,26 @@
   },
   "country": "UK",
   "created_at": "2025-07-10T07:40:29.004598",
+  "credits": [
+    {
+      "discogs_id": "83087",
+      "name": "Ryan Adams",
+      "role": "Guitar",
+      "tracks": "B1, B2, B3"
+    },
+    {
+      "discogs_id": "383408",
+      "name": "Miles Showell",
+      "role": "Lacquer Cut By",
+      "tracks": ""
+    },
+    {
+      "discogs_id": "224957",
+      "name": "Victor Van Vugt",
+      "role": "Producer",
+      "tracks": "A1, A2, A3, A4, B4, B5"
+    }
+  ],
   "date_added": "2022-06-22T04:12:15-07:00",
   "discogs_id": "331745",
   "discogs_url": "https://www.discogs.com/release/331745-Beth-Orton-Daybreaker",
@@ -145,36 +165,83 @@
     {
       "artists": [],
       "duration": "4:34",
+      "extraartists": [
+        {
+          "discogs_id": "83087",
+          "name": "Ryan Adams",
+          "role": "Vocals [Guest]"
+        }
+      ],
       "position": "A2",
       "title": "Concrete Sky"
     },
     {
       "artists": [],
       "duration": "6:27",
+      "extraartists": [
+        {
+          "discogs_id": "23899",
+          "name": "Keith Tenniswood",
+          "role": "Co-producer"
+        }
+      ],
       "position": "A3",
       "title": "Mount Washington"
     },
     {
       "artists": [],
       "duration": "4:35",
+      "extraartists": [
+        {
+          "discogs_id": "23899",
+          "name": "Keith Tenniswood",
+          "role": "Co-producer"
+        }
+      ],
       "position": "A4",
       "title": "Anywhere"
     },
     {
       "artists": [],
       "duration": "3:55",
+      "extraartists": [
+        {
+          "discogs_id": "2290",
+          "name": "The Chemical Brothers",
+          "role": "Co-producer"
+        }
+      ],
       "position": "A5",
       "title": "Daybreaker"
     },
     {
       "artists": [],
       "duration": "3:36",
+      "extraartists": [
+        {
+          "discogs_id": "19004",
+          "name": "Ben Watt",
+          "role": "Co-producer"
+        }
+      ],
       "position": "B1",
       "title": "Carmella"
     },
     {
       "artists": [],
       "duration": "5:15",
+      "extraartists": [
+        {
+          "discogs_id": "83609",
+          "name": "Emmylou Harris",
+          "role": "Vocals [Guest]"
+        },
+        {
+          "discogs_id": "83087",
+          "name": "Ryan Adams",
+          "role": "Vocals [Guest]"
+        }
+      ],
       "position": "B2",
       "title": "God Song"
     },
@@ -193,6 +260,13 @@
     {
       "artists": [],
       "duration": "6:40",
+      "extraartists": [
+        {
+          "discogs_id": "2728",
+          "name": "William Orbit",
+          "role": "Co-producer"
+        }
+      ],
       "position": "B5",
       "title": "Thinking About Tomorrow"
     }

@@ -287,6 +287,44 @@ a heading. `scrapper backfill-tracklists` re-maps those releases (see
 through `src/lib/tracklistRows.ts` (see
 [utilities.md](../frontend/utilities.md#tracklist-rows-srclibtracklistrowsts)).
 
+Rows Discogs credits people on also carry `extraartists` (see below).
+
+#### Release credits (`credits`, `tracklist[].extraartists`)
+
+Discogs `extraartists`: the producers, engineers, mixers, session players and sleeve designers
+behind a release, as opposed to its `artists`.
+
+```json
+"credits": [
+  { "discogs_id": "55761", "name": "Tony Visconti", "role": "Producer", "tracks": "" },
+  { "discogs_id": "10355", "name": "Robert Fripp", "role": "Lead Guitar", "tracks": "" },
+  { "discogs_id": "634", "name": "Brian Eno", "role": "Written-By", "tracks": "B3, B4" }
+],
+"tracklist": [
+  {
+    "position": "A1", "title": "...", "duration": "", "artists": [],
+    "extraartists": [{ "discogs_id": "634", "name": "Brian Eno", "role": "Music By" }]
+  }
+]
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `credits` | object[]? | Release-level credits in Discogs order. Present once the release's credits are stored; absent means "not backfilled", `[]` means Discogs lists none |
+| `credits[].name` | string | Discogs artist name without its `(2)` disambiguation suffix |
+| `credits[].discogs_id` | string \| null | Discogs artist id (null when Discogs links none) |
+| `credits[].role` | string | As Discogs writes it: several roles are comma-separated and detail is in brackets (`"Synthesizer, Keyboards, Effects [Guitar Treatments]"`) |
+| `credits[].tracks` | string | Discogs's track scope, e.g. `"A1, A2, A4 to B4"`; `""` means the whole release |
+| `tracklist[].extraartists` | object[]? | Credits Discogs puts on that track: `{name, discogs_id, role}`. Present only on rows that have any |
+
+One person can appear several times, once per role group. Everyone credited on a release is
+`artists` ∪ `credits` ∪ every row's `extraartists`. Credit people are not artists in the
+collection: they get no artist pages and don't reach `collection.json`.
+
+The source is `raw_data.discogs.credits` and the stored tracklist in the SQLite row, written by
+`process_release` and the Discogs refresh, or filled for older rows by `scrapper backfill-credits`
+(see [cli-commands.md](../backend/cli-commands.md#backfill-credits)). No SQLite schema change.
+
 ---
 
 ### Artist JSON (`artist/{slug}/{slug}.json`)

@@ -23,6 +23,20 @@
   },
   "country": "Worldwide",
   "created_at": "2026-07-18T10:18:46.020052",
+  "credits": [
+    {
+      "discogs_id": "3909",
+      "name": "New Order",
+      "role": "Producer",
+      "tracks": "A3, A4, B2 to B4, C2 to C4, D4"
+    },
+    {
+      "discogs_id": "3909",
+      "name": "New Order",
+      "role": "Written-By",
+      "tracks": ""
+    }
+  ],
   "date_added": "2026-07-18T00:13:28-07:00",
   "discogs_id": "37907823",
   "discogs_url": "https://www.discogs.com/release/37907823-NewOrder-The-Best-Of-NewOrder",
@@ -212,24 +226,72 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "3909",
+          "name": "New Order",
+          "role": "Producer [Original]"
+        },
+        {
+          "discogs_id": "34233",
+          "name": "Mike \"Spike\" Drake",
+          "role": "Producer, Mixed By"
+        },
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer, Mixed By, Written-By"
+        }
+      ],
       "position": "A1",
       "title": "True Faith-94"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "34233",
+          "name": "Mike \"Spike\" Drake",
+          "role": "Producer, Mixed By"
+        },
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer, Mixed By"
+        }
+      ],
       "position": "A2",
       "title": "Bizarre Love Triangle-94"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "34233",
+          "name": "Mike \"Spike\" Drake",
+          "role": "Producer, Mixed By"
+        },
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer, Mixed By, Written-By"
+        }
+      ],
       "position": "A3",
       "title": "1963-94"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Written-By, Producer"
+        }
+      ],
       "position": "A4",
       "title": "Regret"
     },
@@ -248,12 +310,26 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "23679",
+          "name": "John Robie",
+          "role": "Written-By, Producer"
+        }
+      ],
       "position": "B3",
       "title": "Shell Shock"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "4158",
+          "name": "Arthur Baker",
+          "role": "Written-By"
+        }
+      ],
       "position": "B4",
       "title": "Thieves Like Us"
     },
@@ -272,18 +348,44 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "34233",
+          "name": "Mike \"Spike\" Drake",
+          "role": "Producer, Mixed By"
+        },
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer, Mixed By"
+        }
+      ],
       "position": "C3",
       "title": "Round & Round-94"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer"
+        }
+      ],
       "position": "C4",
       "title": "World (Price Of Love)"
     },
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "23029",
+          "name": "Stephen Hague",
+          "role": "Producer"
+        }
+      ],
       "position": "D1",
       "title": "Ruined In A Day"
     },
@@ -302,6 +404,13 @@
     {
       "artists": [],
       "duration": "",
+      "extraartists": [
+        {
+          "discogs_id": "56831",
+          "name": "Keith Allen",
+          "role": "Written-By"
+        }
+      ],
       "position": "D4",
       "title": "World In Motion"
     }
