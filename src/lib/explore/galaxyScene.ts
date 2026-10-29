@@ -71,20 +71,20 @@ const FAT_LINES = 40;
 
 const STAR_VS = /* glsl */ `
 attribute vec3 iPos; attribute float iSize; attribute vec3 iCol; attribute vec4 iCell;
-attribute float iDim; attribute float iHi; attribute float iSeed;
+attribute float iDim; attribute float iHi; attribute float iSeed; attribute float iClear;
 uniform vec2 uRes; uniform float uMinPx; uniform float uQuad; uniform float uTime; uniform float uFocus;
 varying vec2 vUv; varying vec3 vCol; varying vec4 vCell; varying float vDim; varying float vHi; varying float vPx; varying float vTw;
 void main() {
   vec4 mv = modelViewMatrix * vec4(iPos, 1.0);
   float z = max(-mv.z, 0.1);
   float px = iSize * projectionMatrix[1][1] * uRes.y * 0.5 / z;
-  float s = iSize * max(1.0, uMinPx / max(px, 0.001));
+  float s = iSize * iClear * max(1.0, uMinPx / max(px, 0.001));
   vPx = px;
   vec2 q = position.xy * 2.0 * uQuad;
   mv.xy += q * s;
   vUv = q; vCol = iCol; vCell = iCell; vDim = iDim * uFocus; vHi = iHi;
   vTw = 0.82 + 0.18 * sin(uTime * (0.5 + fract(iSeed * 7.0)) + iSeed * 40.0);
-  gl_Position = iSize <= 0.0 ? vec4(2.0, 2.0, 2.0, 1.0) : projectionMatrix * mv;
+  gl_Position = iSize <= 0.0 || iClear < 0.01 ? vec4(2.0, 2.0, 2.0, 1.0) : projectionMatrix * mv;
 }`;
 
 const CORE_FS = /* glsl */ `
@@ -251,6 +251,8 @@ export class GalaxyScene {
   };
   private coreMat: THREE.ShaderMaterial;
   private dimAttr: THREE.InstancedBufferAttribute;
+  /** Per star: 1 drawn at full size, down to 0 when it sits in front of the focused artist and shrinks out of the way. */
+  private clearAttr: THREE.InstancedBufferAttribute;
   private hiAttr: THREE.InstancedBufferAttribute;
   private trailPos: Float32Array;
   private trailOn: Float32Array;
@@ -352,6 +354,8 @@ export class GalaxyScene {
     this.hiAttr = new THREE.InstancedBufferAttribute(new Float32Array(this.p.n), 1).setUsage(THREE.DynamicDrawUsage);
     starGeo.setAttribute('iDim', this.dimAttr);
     starGeo.setAttribute('iHi', this.hiAttr);
+    this.clearAttr = new THREE.InstancedBufferAttribute(new Float32Array(this.p.n).fill(1), 1).setUsage(THREE.DynamicDrawUsage);
+    starGeo.setAttribute('iClear', this.clearAttr);
     this.coreMat = new THREE.ShaderMaterial({
       uniforms: { ...this.shared, uQuad: { value: 1 }, uAtlas: { value: this.blank }, uHaveAtlas: { value: 0 }, uBg: { value: this.sky } },
       vertexShader: STAR_VS,
@@ -1085,6 +1089,48 @@ export class GalaxyScene {
     return { x: (p.x * 0.5 + 0.5) * this.W, y: (-p.y * 0.5 + 0.5) * this.H, z };
   }
 
+  /**
+   * Stars nearer the camera than the focused artist that cover it, or its
+   * orbiting records, shrink out of the way as the focus fades in, so the
+   * focus is never hidden (or its hover taken) by a dimmed star in front.
+   */
+  private updateClear(f: number) {
+    const clear = this.clearAttr.array as Float32Array;
+    const i0 = this.focus;
+    if (i0 < 0 || f < 0.001) {
+      if (this.clearing) {
+        clear.fill(1);
+        this.clearAttr.needsUpdate = true;
+        this.clearing = false;
+      }
+      return;
+    }
+    this.clearing = true;
+    const fp = this.project(this.P(i0));
+    if (!fp) return;
+    const o = this.orbit;
+    const zone = this.pxRadius(Math.max(this.p.size[i0] * 1.15, o.artist === i0 ? o.outer + o.disc : 0), fp.z);
+    const v = new THREE.Vector3();
+    for (let i = 0; i < this.p.n; i++) {
+      let c = 1;
+      if (i !== i0 && !this.p.hidden[i]) {
+        v.set(this.pos[i * 3], this.pos[i * 3 + 1], this.pos[i * 3 + 2]).applyMatrix4(this.camera.matrixWorldInverse);
+        const z = -v.z;
+        if (z > 1 && z < fp.z) {
+          v.applyMatrix4(this.camera.projectionMatrix);
+          const r = this.pxRadius(this.p.size[i], z);
+          const d = Math.hypot((v.x * 0.5 + 0.5) * this.W - fp.x, (-v.y * 0.5 + 0.5) * this.H - fp.y);
+          // 0 with its centre inside the zone, 1 once its edge is clear of it
+          const t = Math.min(1, Math.max(0, (d - zone) / Math.max(r, 1)));
+          c = 1 - f * (1 - t * t * (3 - 2 * t));
+        }
+      }
+      clear[i] = c;
+    }
+    this.clearAttr.needsUpdate = true;
+  }
+  private clearing = false;
+
   private pxRadius(worldR: number, z: number) {
     return (worldR * this.camera.projectionMatrix.elements[5] * this.H * 0.5) / z;
   }
@@ -1094,14 +1140,15 @@ export class GalaxyScene {
     let bestZ = Infinity;
     const v = new THREE.Vector3();
     for (let i = 0; i < this.p.n; i++) {
-      if (this.p.hidden[i]) continue;
+      const c = (this.clearAttr.array as Float32Array)[i];
+      if (this.p.hidden[i] || c < 0.3) continue;
       v.set(this.pos[i * 3], this.pos[i * 3 + 1], this.pos[i * 3 + 2]).applyMatrix4(this.camera.matrixWorldInverse);
       const z = -v.z;
       if (z <= 1) continue;
       v.applyMatrix4(this.camera.projectionMatrix);
       const dx = (v.x * 0.5 + 0.5) * this.W - mx;
       const dy = (-v.y * 0.5 + 0.5) * this.H - my;
-      const r = Math.max(this.pxRadius(this.p.size[i], z), MIN_PX) + 5;
+      const r = Math.max(this.pxRadius(this.p.size[i] * c, z), MIN_PX) + 5;
       if (dx * dx + dy * dy < r * r && z < bestZ) {
         best = i;
         bestZ = z;
@@ -1246,10 +1293,12 @@ export class GalaxyScene {
     this.stepOffset(raw);
     this.camera.updateMatrixWorld();
     this.updateOrbit(this.time);
+    this.updateClear(f.value);
     const dim = this.dimAttr.array as Float32Array;
+    const clear = this.clearAttr.array as Float32Array;
     const spin = this.discMat.uniforms.uSpin.value as number;
     this.hiRes.update(
-      { camera: this.camera, W: this.W, H: this.H, dim: i => dim[i] * f.value, dt: raw, reducedMotion: this.rm },
+      { camera: this.camera, W: this.W, H: this.H, dim: i => dim[i] * f.value, clear: i => clear[i], dt: raw, reducedMotion: this.rm },
       this.orbit.artist >= 0
         ? {
             albums: this.orbit.recs,

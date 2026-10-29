@@ -111,7 +111,12 @@ for (const slug of artistSlugs) {
   // Only the fanart the artist page hero uses (scripts/generate-artist-images.js) is uploaded to R2.
   const fanart = img.fanart?.file && fs.existsSync(path.join(PUB, 'artist', slug, img.fanart.file)) ? String(img.fanart.file) : null;
   const salient = (fanart ? img.fanart.salient : img.subject && [img.subject[0], img.subject[1], img.subject[2] - img.subject[0], img.subject[3] - img.subject[1]]) as number[] | undefined;
-  const bio = String(d.biography || tadb.biography_en || '').replace(/\r/g, '').trim();
+  // Last.fm bios end in a "Read more on Last.fm" link: drop the tags and the sign-off, as the artist page does.
+  const bio = String(d.biography || tadb.biography_en || '')
+    .replace(/\r/g, '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/\s*Read more on Last\.fm[\s\S]*$/, '')
+    .trim();
   artistIndex.set(slug, artists.length);
   artists.push({
     slug,

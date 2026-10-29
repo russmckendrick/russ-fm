@@ -125,8 +125,8 @@ export interface ThreadNode {
 
 export const MAX_WAYS_OUT = 7;
 
-/** Where The Thread lives; The Galaxy (the map) is `/explore` and `/explore/<artist-slug>`. */
-export const THREAD_PATH = '/explore/thread';
+/** Where The Thread lives (`links.ts`); The Galaxy (the map) is `/explore` and `/explore/<artist-slug>`. */
+export { THREAD_PATH } from './links';
 /** An artist on The Galaxy's map. */
 export const galaxyPath = (artistSlug: string) => `/explore/${artistSlug}`;
 

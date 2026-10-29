@@ -1,6 +1,6 @@
 /* /explore: The Thread. A full-height feed under the sticky nav (64px, 84px from md).
    Phone: the feed fills the screen. From 700px: a tall centred column with the
-   details as a sheet. From 1180px: trail | feed | details. */
+   details as a sheet. From 1180px: trail | feed | details, the feed as wide as the room between. */
 
 .thr-page {
   position: relative;
@@ -286,10 +286,19 @@
 
 /* ---- desktop: trail | feed | details ---- */
 @media (min-width: 1180px) {
+  /* The feed takes all the room between the trail (24 + 280 + 24) and the details (24 + 380 + 24),
+     so fanart and video get a landscape card on a wide screen. */
   .thr-stage {
-    --thr-col: min(calc((100dvh - 84px - 40px) * 0.5625), calc(100vw - 800px), 520px);
-    left: calc((100vw - 100px) / 2);
+    inset: 20px 428px 20px 328px;
+    width: auto;
+    max-width: 1320px;
+    margin-inline: auto;
+    transform: none;
   }
+  /* No trail row over the card here, so the connection line can sit near the top. */
+  .thr-via { padding: 30px 32px 0; max-width: 40em; }
+  .thr-via-text { font-size: clamp(20px, 3.2cqw, 30px); }
+  .thr-info { padding: 0 32px 30px; max-width: 52em; }
   .thr-trail {
     left: 24px;
     top: 20px;
@@ -328,6 +337,15 @@
   }
   .thr-sheet, .thr-scrim { display: none !important; }
   .thr-hint { display: none; }
+}
+
+/* A landscape card (desktop): a record's sleeve on the left, its connection line and title on the right. */
+@container (min-aspect-ratio: 6 / 5) {
+  .thr-card--sleeve .thr-media { position: absolute; inset: 0 auto 0 0; width: 56cqw; }
+  .thr-card--sleeve .thr-sleeve { width: min(100cqw - 64px, 100cqh - 64px, 760px); }
+  .thr-card--sleeve .thr-via, .thr-card--sleeve .thr-info { margin-left: 54cqw; }
+  .thr-card--sleeve .thr-via { padding-top: 48px; }
+  .thr-card--sleeve .thr-info { margin-top: auto; padding-bottom: 48px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

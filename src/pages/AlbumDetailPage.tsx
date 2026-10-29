@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
@@ -21,6 +21,7 @@ import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
+import { threadFromAlbum } from '@/lib/explore/links';
 import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
@@ -958,6 +959,11 @@ export function AlbumDetailPage() {
             {s.label}
           </PillLink>
         ))}
+        <Link to={threadFromAlbum(album.uri_release)} className="pill" title="Follow the links from this record in The Thread">
+          <Waypoints className="h-[18px] w-[18px] shrink-0" aria-hidden />
+          <span className="max-sm:hidden">Follow the thread</span>
+          <span className="sm:hidden">Thread</span>
+        </Link>
       </div>
       {showScrobbleReadout ? (
         <div className="scrobble-readout flex min-h-[30px] items-baseline gap-3.5" aria-live="polite">

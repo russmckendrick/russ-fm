@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, type CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Tv } from 'lucide-react';
+import { Tv, Waypoints } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
 import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -16,6 +16,7 @@ import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { artistMatcher } from '@/lib/artistMatch';
+import { threadFromArtist } from '@/lib/explore/links';
 import { artistChannel, loadTv } from '@/lib/tv';
 import { slugify } from '@/lib/browseFacets';
 import { floodFor, GROUND, inkOn, subInk } from '@/lib/sleeveColour';
@@ -302,6 +303,9 @@ export function ArtistDetailPage() {
   const bio = pickBiography(artistData);
 
   const artistUri = `/artist/${artistPath}/`;
+  // The Thread only knows artists credited on a record, not players known only from a band's line-up.
+  const { matches: isThisArtist } = artistMatcher(artistPath || '');
+  const threadUri = artistPath === 'various' ? null : (albums.flatMap(a => a.artists ?? []).find(a => isThisArtist(a.uri_artist))?.uri_artist ?? null);
   const wikipediaUrl =
     artistData?.wikipedia_url ||
     `https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`;
@@ -400,6 +404,12 @@ export function ArtistDetailPage() {
                   {s.label}
                 </PillLink>
               ))}
+              {threadUri && (
+                <Link to={threadFromArtist(threadUri)} className="pill" title={`Follow the links from ${artistName} in The Thread`}>
+                  <Waypoints className="h-[18px] w-[18px] shrink-0" aria-hidden />
+                  Follow the thread
+                </Link>
+              )}
             </div>
             {cleanGenres.length > 0 && (
               <div className="flex flex-wrap gap-2">

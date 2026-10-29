@@ -2,6 +2,7 @@ import { forwardRef, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, X } from 'lucide-react';
 import { artistPhotoUrl, fanartUrl, sleeveUrl } from '@/lib/explore/data';
+import { THREAD_PATH } from '@/lib/explore/links';
 import { TRAIL_KINDS, connectionGroups, leadRecord, type GalaxyPrep } from '@/lib/explore/galaxyLayout';
 import type { ExploreData } from '@/lib/explore/types';
 import { cn } from '@/lib/utils';
@@ -113,7 +114,7 @@ export const GalaxyPanel = forwardRef<HTMLElement, GalaxyPanelProps>(function Ga
           )}
 
           <div className="flex flex-wrap gap-2">
-            <Link to={`/explore/thread?seed=${a.slug}`} className="pill pill-sm">
+            <Link to={`${THREAD_PATH}?seed=${a.slug}`} className="pill pill-sm">
               Follow the thread from here
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
