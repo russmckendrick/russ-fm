@@ -198,6 +198,8 @@ export interface StarFrame {
   H: number;
   /** Per-star dim (0 lit, 1 dimmed) times the focus fade. */
   dim: (i: number) => number;
+  /** Per-star size factor: below 1 while the star shrinks out of the focused artist's way. */
+  clear: (i: number) => number;
   /** Seconds since the last frame, for the fade in. */
   dt: number;
   reducedMotion: boolean;
@@ -317,6 +319,9 @@ export class GalaxyHiRes {
       s.fade += (1 - s.fade) * fadeStep;
       s.mat.uniforms.uFade.value = s.fade;
       s.mat.uniforms.uDim.value = f.dim(s.id);
+      const c = f.clear(s.id);
+      s.mat.uniforms.uRadius.value = this.o.size[s.id] * c;
+      s.mesh.visible = c >= 0.01;
     }
 
     // disc labels for the focused artist's records

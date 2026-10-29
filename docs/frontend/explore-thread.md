@@ -19,18 +19,19 @@ Escape closes the details sheet. The details sheet can also be dragged down by i
 
 | Parameter | Meaning |
 | --- | --- |
-| `seed=<artist-slug>` | Start from this artist. The Galaxy's "Follow the thread from here" links to `/explore/thread?seed=<artist-slug>`. |
-| `album=<album-slug>` | Start from this record. |
+| `seed=<artist-slug>` | Start from this artist. The Galaxy's "Follow the thread from here" and the artist page's "Follow the thread" pill link here. |
+| `album=<album-slug>` | Start from this record. The album page's "Follow the thread" pill (just "Thread" on phones) links here. |
 | `trail=<slug>,<slug>,…` | A shared trail: artist and record slugs in order. It opens on the last one. |
 | `r=<seed>` | The trail's random seed. With it, a shared trail replays exactly: the same cards, reasons and card types (fanart, sleeve or video). |
 
-With none of these (plain `/explore/thread`), the feed starts from a random artist with four or more links (and a fanart hero). The page keeps the URL current with `?trail=…&r=…` (replace, not push), so the address bar is always a shareable link. A different search arriving from outside (a link to `/explore/thread`, back/forward) starts again from it. The path is `THREAD_PATH` in `thread.ts`; The Galaxy (`/explore`, `/explore/<artist-slug>`) is the default Explore page.
+With none of these (plain `/explore/thread`), the feed starts from a random artist with four or more links (and a fanart hero). The page keeps the URL current with `?trail=…&r=…` (replace, not push), so the address bar is always a shareable link. A different search arriving from outside (a link to `/explore/thread`, back/forward) starts again from it. The path is `THREAD_PATH` in `src/lib/explore/links.ts` (re-exported from `thread.ts`), which also has `threadFromArtist(uri_artist)` and `threadFromAlbum(uri_release)`. It has no imports, so the album and artist pages link in without pulling the Thread into their chunk. The artist page shows its pill only when the artist is credited on a record (`album.artists`), since players known only from a band's line-up aren't in the Thread, and never on Various; The Galaxy (`/explore`, `/explore/<artist-slug>`) is the default Explore page.
 
 ## Layout
 
 - **Phone** (below 700px): the feed fills the space under the sticky nav (`100dvh - 64px`); the trail is a row of avatars and sleeves over the top of the card, and the details open in a bottom sheet.
 - **Tablet** (700px up): the feed is a tall 9:16 column, centred; the details are still a sheet.
-- **Desktop** (1180px up): trail column (280px) | feed column | details panel (380px).
+- **Desktop** (1180px up): trail column (280px) | feed | details panel (380px). The feed takes all the room between them (up to 1320px wide, centred), so on a wide screen the card is landscape, which suits fanart and video. The connection line sits nearer the top (no trail row over the card) and is larger.
+- **Landscape cards** (`@container (min-aspect-ratio: 6 / 5)` on the card): a record's sleeve moves to the left (56% of the card) with the connection line and title on the right, rather than stacked.
 
 The nav and page ground take the current card's colours through `usePageFlood`: a record's own flood, ink and ground, or an artist's newest record's.
 

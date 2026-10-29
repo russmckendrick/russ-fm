@@ -15,7 +15,7 @@ Links in: The Thread's details link "See on the map" to `/explore/<artist>`. Lin
 
 - Drag to turn, wheel or pinch to zoom, right-drag or two fingers to pan. After 7 s untouched the camera drifts slowly round (not with reduced motion).
 - Hover a star, a disc or a focused trail for a tooltip (name, records, family, connections / title, year, vinyl / the reason).
-- Click a star to focus it. Its trails brighten, everything else dims, its records orbit it (the sleeve on the label, the pressing colour from `vinylLook` on the vinyl), the nav and sky take the colours of its most vivid sleeve, and the panel opens.
+- Click a star to focus it. Stars nearer the camera that would cover the focused artist or its orbiting records shrink out of the way (`updateClear`, the `iClear` star attribute; hi-res close-ups and picking follow it), so a dimmed star never hides the focus or takes its hover. Its trails brighten, everything else dims, its records orbit it (the sleeve on the label, the pressing colour from `vinylLook` on the vinyl), the nav and sky take the colours of its most vivid sleeve, and the panel opens.
 - Click a linked star, its label, a focused trail, an edge pill or a row in the panel to hop along that trail. Labels for linked artists off screen are pinned to the screen edge with an arrow pointing their way.
 - The breadcrumb in the panel lists the hops; clicking an earlier artist goes back there and cuts the path.
 - Search (top left) flies to an artist; arrow keys and Enter work. The shuffle button goes to a random artist with at least two connections, the map button back to the whole map. Family labels fly to that nebula. Escape closes the focus.
