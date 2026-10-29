@@ -218,7 +218,7 @@
         "release_artist": "John Parr",
         "date_added": "2016-01-07",
         "date_release_year": "1985-01-01",
-        "year_original": 1985,
+        "year_original": 1984,
         "genre_names": [
           "Hard Rock",
           "Pop Rock",
@@ -410,7 +410,7 @@
         "release_artist": "Faces",
         "date_added": "2016-01-08",
         "date_release_year": "1977-01-01",
-        "year_original": 1973,
+        "year_original": 1977,
         "genre_names": [
           "Blues Rock",
           "Classic Rock",
@@ -463,7 +463,7 @@
         "release_artist": "The Kinks",
         "date_added": "2016-01-08",
         "date_release_year": "1985-01-01",
-        "year_original": 1967,
+        "year_original": 1984,
         "genre_names": [
           "Classic Rock",
           "Rock"
@@ -564,7 +564,7 @@
         "release_artist": "Elvis Presley",
         "date_added": "2016-01-08",
         "date_release_year": "1974-01-01",
-        "year_original": 1956,
+        "year_original": 1974,
         "genre_names": [
           "Ballad",
           "Pop",
@@ -1555,7 +1555,7 @@
         "release_artist": "Carter The Unstoppable Sex Machine",
         "date_added": "2016-01-15",
         "date_release_year": "1990-01-01",
-        "year_original": 1989,
+        "year_original": 1990,
         "genre_names": [
           "Indie Rock",
           "Rock"
@@ -1603,7 +1603,7 @@
         "release_artist": "The Temperance Movement",
         "date_added": "2016-01-17",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 2015,
         "genre_names": [
           "Blues",
           "Blues Rock",
@@ -1901,7 +1901,7 @@
         "release_artist": "Eels",
         "date_added": "2016-01-19",
         "date_release_year": "2015-01-01",
-        "year_original": 2005,
+        "year_original": 2015,
         "genre_names": [
           "Indie Rock",
           "Lo-Fi",
@@ -1957,7 +1957,7 @@
         "release_artist": "Bruce Springsteen",
         "date_added": "2016-01-19",
         "date_release_year": "2014-01-01",
-        "year_original": 2012,
+        "year_original": 2014,
         "genre_names": [
           "Classic Rock",
           "Rock"
@@ -2428,6 +2428,56 @@
     },
     {
       "release": {
+        "release_name": "4½",
+        "release_artist": "Steven Wilson",
+        "date_added": "2016-01-22",
+        "date_release_year": "2016-01-01",
+        "year_original": 2016,
+        "genre_names": [
+          "Alternative Rock",
+          "Prog Rock",
+          "Rock"
+        ],
+        "slug": "4-half-8005929",
+        "images": {
+          "hi-res": "/album/4-half-8005929/4-half-8005929-hi-res.jpg",
+          "medium": "/album/4-half-8005929/4-half-8005929-medium.jpg",
+          "avatar": "/album/4-half-8005929/4-half-8005929-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Steven Wilson",
+            "slug": "steven-wilson",
+            "images": {
+              "hi-res": "/artist/steven-wilson/steven-wilson-hi-res.jpg",
+              "medium": "/artist/steven-wilson/steven-wilson-medium.jpg",
+              "avatar": "/artist/steven-wilson/steven-wilson-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#af964a",
+          "ink": "#0e0d0c",
+          "ground": "#06232e",
+          "glow": "#af964a",
+          "secondary": "#019ddf",
+          "hue": 0.255,
+          "vivid": 0.74
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Alternative Rock",
+          "Prog Rock"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "Hours...",
         "release_artist": "David Bowie",
         "date_added": "2016-01-22",
@@ -2531,108 +2581,6 @@
     },
     {
       "release": {
-        "release_name": "4½",
-        "release_artist": "Steven Wilson",
-        "date_added": "2016-01-22",
-        "date_release_year": "2016-01-01",
-        "year_original": 2016,
-        "genre_names": [
-          "Alternative Rock",
-          "Prog Rock",
-          "Rock"
-        ],
-        "slug": "4-half-8005929",
-        "images": {
-          "hi-res": "/album/4-half-8005929/4-half-8005929-hi-res.jpg",
-          "medium": "/album/4-half-8005929/4-half-8005929-medium.jpg",
-          "avatar": "/album/4-half-8005929/4-half-8005929-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Steven Wilson",
-            "slug": "steven-wilson",
-            "images": {
-              "hi-res": "/artist/steven-wilson/steven-wilson-hi-res.jpg",
-              "medium": "/artist/steven-wilson/steven-wilson-medium.jpg",
-              "avatar": "/artist/steven-wilson/steven-wilson-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#af964a",
-          "ink": "#0e0d0c",
-          "ground": "#06232e",
-          "glow": "#af964a",
-          "secondary": "#019ddf",
-          "hue": 0.255,
-          "vivid": 0.74
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Alternative Rock",
-          "Prog Rock"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "Goo",
-        "release_artist": "Sonic Youth",
-        "date_added": "2016-01-23",
-        "date_release_year": "2005-01-01",
-        "year_original": 1990,
-        "genre_names": [
-          "Alternative Rock",
-          "Noise Rock",
-          "Rock"
-        ],
-        "slug": "goo-655290",
-        "images": {
-          "hi-res": "/album/goo-655290/goo-655290-hi-res.jpg",
-          "medium": "/album/goo-655290/goo-655290-medium.jpg",
-          "avatar": "/album/goo-655290/goo-655290-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Sonic Youth",
-            "slug": "sonic-youth",
-            "images": {
-              "hi-res": "/artist/sonic-youth/sonic-youth-hi-res.jpg",
-              "medium": "/artist/sonic-youth/sonic-youth-medium.jpg",
-              "avatar": "/artist/sonic-youth/sonic-youth-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#e0dbd5",
-          "ink": "#0e0d0c",
-          "ground": "#111312",
-          "glow": "#e0dbd5",
-          "secondary": null,
-          "hue": 0.208,
-          "vivid": 0
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Alternative Rock",
-          "Noise Rock"
-        ],
-        "formats": [
-          "Vinyl",
-          "Vinyl",
-          "Box Set"
-        ]
-      }
-    },
-    {
-      "release": {
         "release_name": "The Complete Studio Albums 1990-2000",
         "release_artist": "Pantera",
         "date_added": "2016-01-23",
@@ -2691,11 +2639,63 @@
     },
     {
       "release": {
+        "release_name": "Goo",
+        "release_artist": "Sonic Youth",
+        "date_added": "2016-01-23",
+        "date_release_year": "2005-01-01",
+        "year_original": 1990,
+        "genre_names": [
+          "Alternative Rock",
+          "Noise Rock",
+          "Rock"
+        ],
+        "slug": "goo-655290",
+        "images": {
+          "hi-res": "/album/goo-655290/goo-655290-hi-res.jpg",
+          "medium": "/album/goo-655290/goo-655290-medium.jpg",
+          "avatar": "/album/goo-655290/goo-655290-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Sonic Youth",
+            "slug": "sonic-youth",
+            "images": {
+              "hi-res": "/artist/sonic-youth/sonic-youth-hi-res.jpg",
+              "medium": "/artist/sonic-youth/sonic-youth-medium.jpg",
+              "avatar": "/artist/sonic-youth/sonic-youth-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#e0dbd5",
+          "ink": "#0e0d0c",
+          "ground": "#111312",
+          "glow": "#e0dbd5",
+          "secondary": null,
+          "hue": 0.208,
+          "vivid": 0
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Alternative Rock",
+          "Noise Rock"
+        ],
+        "formats": [
+          "Vinyl",
+          "Vinyl",
+          "Box Set"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "Kubrick",
         "release_artist": "The Soulsavers",
         "date_added": "2016-01-24",
         "date_release_year": "2015-01-01",
-        "year_original": 2012,
+        "year_original": 2015,
         "genre_names": [
           "Classical",
           "Downtempo",
@@ -2954,7 +2954,7 @@
         "release_artist": "Oceansize",
         "date_added": "2016-01-28",
         "date_release_year": "2010-01-01",
-        "year_original": 2003,
+        "year_original": 2010,
         "genre_names": [
           "Alternative Rock",
           "Prog Rock",
@@ -3216,7 +3216,7 @@
         "release_artist": "Split Enz",
         "date_added": "2016-01-29",
         "date_release_year": "1981-01-01",
-        "year_original": 1981,
+        "year_original": 1979,
         "genre_names": [
           "Pop Rock",
           "Rock"
@@ -3264,7 +3264,7 @@
         "release_artist": "Split Enz",
         "date_added": "2016-01-29",
         "date_release_year": "1982-01-01",
-        "year_original": 1980,
+        "year_original": 1982,
         "genre_names": [
           "New Wave",
           "Pop",
@@ -4051,6 +4051,54 @@
     },
     {
       "release": {
+        "release_name": "Radio-Aktivität",
+        "release_artist": "Kraftwerk",
+        "date_added": "2016-02-14",
+        "date_release_year": "2014-01-01",
+        "year_original": 1975,
+        "genre_names": [
+          "Electronic",
+          "Experimental"
+        ],
+        "slug": "radio-aktivitat-6872562",
+        "images": {
+          "hi-res": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-hi-res.jpg",
+          "medium": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-medium.jpg",
+          "avatar": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Kraftwerk",
+            "slug": "kraftwerk",
+            "images": {
+              "hi-res": "/artist/kraftwerk/kraftwerk-hi-res.jpg",
+              "medium": "/artist/kraftwerk/kraftwerk-medium.jpg",
+              "avatar": "/artist/kraftwerk/kraftwerk-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#c11425",
+          "ink": "#fbf7ef",
+          "ground": "#250e0d",
+          "glow": "#c51a28",
+          "secondary": "#ded732",
+          "hue": 0.068,
+          "vivid": 1.26
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Experimental"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "Funeral",
         "release_artist": "Arcade Fire",
         "date_added": "2016-02-14",
@@ -4093,54 +4141,6 @@
         "styles": [
           "Alternative Rock",
           "Indie Rock"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "Radio-Aktivität",
-        "release_artist": "Kraftwerk",
-        "date_added": "2016-02-14",
-        "date_release_year": "2014-01-01",
-        "year_original": 1975,
-        "genre_names": [
-          "Electronic",
-          "Experimental"
-        ],
-        "slug": "radio-aktivitat-6872562",
-        "images": {
-          "hi-res": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-hi-res.jpg",
-          "medium": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-medium.jpg",
-          "avatar": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Kraftwerk",
-            "slug": "kraftwerk",
-            "images": {
-              "hi-res": "/artist/kraftwerk/kraftwerk-hi-res.jpg",
-              "medium": "/artist/kraftwerk/kraftwerk-medium.jpg",
-              "avatar": "/artist/kraftwerk/kraftwerk-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#c11425",
-          "ink": "#fbf7ef",
-          "ground": "#250e0d",
-          "glow": "#c51a28",
-          "secondary": "#ded732",
-          "hue": 0.068,
-          "vivid": 1.26
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Experimental"
         ],
         "formats": [
           "Vinyl"
@@ -4415,7 +4415,7 @@
         "release_artist": "The Beta Band",
         "date_added": "2016-02-18",
         "date_release_year": "2013-01-01",
-        "year_original": 2004,
+        "year_original": 1998,
         "genre_names": [
           "Downtempo",
           "Electronic",
@@ -4468,7 +4468,7 @@
         "release_artist": "The Beta Band",
         "date_added": "2016-02-19",
         "date_release_year": "2015-01-01",
-        "year_original": 2013,
+        "year_original": 1998,
         "genre_names": [
           "Downtempo",
           "Electronic",
@@ -4767,7 +4767,7 @@
         "release_artist": "Kraftwerk",
         "date_added": "2016-02-21",
         "date_release_year": "2009-01-01",
-        "year_original": 2009,
+        "year_original": 1974,
         "genre_names": [
           "Electro",
           "Electronic",
@@ -5120,7 +5120,7 @@
         "release_artist": "Various",
         "date_added": "2016-02-29",
         "date_release_year": "2015-01-01",
-        "year_original": 2015,
+        "year_original": 2000,
         "genre_names": [
           "Acoustic",
           "Alternative Rock",
@@ -5216,6 +5216,59 @@
         "styles": [
           "Electro",
           "Synth-pop"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "Champion Versions",
+        "release_artist": "The Beta Band",
+        "date_added": "2016-02-29",
+        "date_release_year": "2015-01-01",
+        "year_original": 1997,
+        "genre_names": [
+          "Electronic",
+          "Experimental",
+          "Folk Rock",
+          "Rock",
+          "Trip Hop"
+        ],
+        "slug": "champion-versions-7425314",
+        "images": {
+          "hi-res": "/album/champion-versions-7425314/champion-versions-7425314-hi-res.jpg",
+          "medium": "/album/champion-versions-7425314/champion-versions-7425314-medium.jpg",
+          "avatar": "/album/champion-versions-7425314/champion-versions-7425314-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "The Beta Band",
+            "slug": "the-beta-band",
+            "images": {
+              "hi-res": "/artist/the-beta-band/the-beta-band-hi-res.jpg",
+              "medium": "/artist/the-beta-band/the-beta-band-medium.jpg",
+              "avatar": "/artist/the-beta-band/the-beta-band-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#992d2f",
+          "ink": "#fbf7ef",
+          "ground": "#250e0d",
+          "glow": "#aa3d3d",
+          "secondary": "#d7b268",
+          "hue": 0.066,
+          "vivid": 1.1
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Folk Rock",
+          "Trip Hop",
+          "Experimental"
         ],
         "formats": [
           "Vinyl"
@@ -5625,64 +5678,11 @@
     },
     {
       "release": {
-        "release_name": "Champion Versions",
-        "release_artist": "The Beta Band",
-        "date_added": "2016-02-29",
-        "date_release_year": "2015-01-01",
-        "year_original": 2015,
-        "genre_names": [
-          "Electronic",
-          "Experimental",
-          "Folk Rock",
-          "Rock",
-          "Trip Hop"
-        ],
-        "slug": "champion-versions-7425314",
-        "images": {
-          "hi-res": "/album/champion-versions-7425314/champion-versions-7425314-hi-res.jpg",
-          "medium": "/album/champion-versions-7425314/champion-versions-7425314-medium.jpg",
-          "avatar": "/album/champion-versions-7425314/champion-versions-7425314-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "The Beta Band",
-            "slug": "the-beta-band",
-            "images": {
-              "hi-res": "/artist/the-beta-band/the-beta-band-hi-res.jpg",
-              "medium": "/artist/the-beta-band/the-beta-band-medium.jpg",
-              "avatar": "/artist/the-beta-band/the-beta-band-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#992d2f",
-          "ink": "#fbf7ef",
-          "ground": "#250e0d",
-          "glow": "#aa3d3d",
-          "secondary": "#d7b268",
-          "hue": 0.066,
-          "vivid": 1.1
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Folk Rock",
-          "Trip Hop",
-          "Experimental"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
         "release_name": "Sing To God",
         "release_artist": "Cardiacs",
         "date_added": "2016-03-03",
         "date_release_year": "2014-01-01",
-        "year_original": 1995,
+        "year_original": 1996,
         "genre_names": [
           "Alternative Rock",
           "Art Rock",
@@ -6097,7 +6097,7 @@
         "release_artist": "Emerson, Lake & Palmer",
         "date_added": "2016-03-16",
         "date_release_year": "0-01-01",
-        "year_original": 1970,
+        "year_original": 1980,
         "genre_names": [
           "Classic Rock",
           "Rock",
@@ -6862,7 +6862,7 @@
         "release_artist": "Various",
         "date_added": "2016-03-29",
         "date_release_year": "2016-01-01",
-        "year_original": 2006,
+        "year_original": 1985,
         "genre_names": [
           "Soundtrack",
           "Stage & Screen"
@@ -7312,7 +7312,7 @@
         "release_artist": "Jimi Hendrix",
         "date_added": "2016-04-08",
         "date_release_year": "1983-01-01",
-        "year_original": 1967,
+        "year_original": 1983,
         "genre_names": [
           "Blues Rock",
           "Psychedelic Rock",
@@ -7565,7 +7565,7 @@
         "release_artist": "Little Angels",
         "date_added": "2016-04-15",
         "date_release_year": "1994-01-01",
-        "year_original": 1957,
+        "year_original": 1994,
         "genre_names": [
           "Heavy Metal",
           "Rock"
@@ -7613,7 +7613,7 @@
         "release_artist": "Little Angels",
         "date_added": "2016-04-15",
         "date_release_year": "1993-01-01",
-        "year_original": 1992,
+        "year_original": 1993,
         "genre_names": [
           "Hard Rock",
           "Rock",
@@ -8060,7 +8060,7 @@
         "release_artist": "Soulwax",
         "date_added": "2016-04-23",
         "date_release_year": "2012-01-01",
-        "year_original": 1999,
+        "year_original": 1998,
         "genre_names": [
           "Alternative Rock",
           "Rock"
@@ -8108,7 +8108,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-04-25",
         "date_release_year": "1990-01-01",
-        "year_original": 1989,
+        "year_original": 1990,
         "genre_names": [
           "Art Rock",
           "Pop Rock",
@@ -8206,7 +8206,7 @@
         "release_artist": "Public Image Limited",
         "date_added": "2016-04-25",
         "date_release_year": "2014-01-01",
-        "year_original": 2014,
+        "year_original": 1990,
         "genre_names": [
           "Electronic",
           "New Wave",
@@ -8257,7 +8257,7 @@
         "release_artist": "Various",
         "date_added": "2016-04-27",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 2007,
         "genre_names": [
           "Country",
           "Folk, World, & Country"
@@ -9051,7 +9051,7 @@
         "release_artist": "Devin Townsend Project",
         "date_added": "2016-05-03",
         "date_release_year": "2015-01-01",
-        "year_original": 2013,
+        "year_original": 2015,
         "genre_names": [
           "Rock"
         ],
@@ -9143,7 +9143,7 @@
         "release_artist": "The Jimi Hendrix Experience",
         "date_added": "2016-05-03",
         "date_release_year": "2016-01-01",
-        "year_original": 2015,
+        "year_original": 1968,
         "genre_names": [
           "Blues Rock",
           "Psychedelic Rock",
@@ -10174,7 +10174,7 @@
         "release_artist": "Status Quo",
         "date_added": "2016-05-23",
         "date_release_year": "2015-01-01",
-        "year_original": 1973,
+        "year_original": 1972,
         "genre_names": [
           "Classic Rock",
           "Pop Rock",
@@ -10226,7 +10226,7 @@
         "release_artist": "Status Quo",
         "date_added": "2016-05-23",
         "date_release_year": "2015-01-01",
-        "year_original": 2015,
+        "year_original": 1977,
         "genre_names": [
           "Classic Rock",
           "Pop Rock",
@@ -11097,7 +11097,7 @@
         "release_artist": "John Williams & London Symphony Orchestra",
         "date_added": "2016-06-20",
         "date_release_year": "2016-01-01",
-        "year_original": 1990,
+        "year_original": 1977,
         "genre_names": [
           "Classical",
           "Neo-Romantic",
@@ -11404,7 +11404,7 @@
         "release_artist": "Bob Marley & The Wailers",
         "date_added": "2016-06-21",
         "date_release_year": "2015-01-01",
-        "year_original": 2015,
+        "year_original": 1984,
         "genre_names": [
           "Reggae",
           "Roots Reggae"
@@ -11657,7 +11657,7 @@
         "release_artist": "Electric Light Orchestra",
         "date_added": "2016-06-27",
         "date_release_year": "2016-01-01",
-        "year_original": 1977,
+        "year_original": 2005,
         "genre_names": [
           "Disco",
           "Electronic",
@@ -12064,7 +12064,7 @@
         "release_artist": "Orchestral Manoeuvres In The Dark",
         "date_added": "2016-07-05",
         "date_release_year": "1988-01-01",
-        "year_original": 1980,
+        "year_original": 1988,
         "genre_names": [
           "Dance-pop",
           "Electronic",
@@ -12217,7 +12217,7 @@
         "release_artist": "John Martyn",
         "date_added": "2016-07-08",
         "date_release_year": "2014-01-01",
-        "year_original": 1973,
+        "year_original": 2002,
         "genre_names": [
           "Blues",
           "Folk Rock",
@@ -12726,7 +12726,7 @@
         "release_artist": "Slade",
         "date_added": "2016-07-13",
         "date_release_year": "2015-01-01",
-        "year_original": 2011,
+        "year_original": 2015,
         "genre_names": [
           "Classic Rock",
           "Glam",
@@ -12991,7 +12991,7 @@
         "release_artist": "Suede",
         "date_added": "2016-07-18",
         "date_release_year": "2014-01-01",
-        "year_original": 2011,
+        "year_original": 1996,
         "genre_names": [
           "Alternative Rock",
           "Britpop",
@@ -13845,7 +13845,7 @@
         "release_artist": "Daryl Hall & John Oates",
         "date_added": "2016-08-13",
         "date_release_year": "2016-01-01",
-        "year_original": 2015,
+        "year_original": 2001,
         "genre_names": [
           "Electronic",
           "Funk / Soul",
@@ -13899,7 +13899,7 @@
         "release_artist": "John Williams",
         "date_added": "2016-08-17",
         "date_release_year": "2016-01-01",
-        "year_original": 2015,
+        "year_original": 1983,
         "genre_names": [
           "Classical",
           "Soundtrack",
@@ -14305,7 +14305,7 @@
         "release_artist": "Angelo Badalamenti",
         "date_added": "2016-08-26",
         "date_release_year": "2016-01-01",
-        "year_original": 2007,
+        "year_original": 1990,
         "genre_names": [
           "Ambient",
           "Electronic",
@@ -14562,7 +14562,7 @@
         "release_artist": "Captain Beefheart",
         "date_added": "2016-09-05",
         "date_release_year": "2016-01-01",
-        "year_original": 1971,
+        "year_original": 1972,
         "genre_names": [
           "Avantgarde",
           "Blues Rock",
@@ -14764,7 +14764,7 @@
         "release_artist": "Aretha Franklin",
         "date_added": "2016-09-06",
         "date_release_year": "2016-01-01",
-        "year_original": 1980,
+        "year_original": 1971,
         "genre_names": [
           "Funk / Soul",
           "Soul"
@@ -15707,7 +15707,7 @@
         "release_artist": "Ian Dury And The Blockheads",
         "date_added": "2016-09-21",
         "date_release_year": "2013-01-01",
-        "year_original": 1977,
+        "year_original": 1979,
         "genre_names": [
           "Disco",
           "Dub",
@@ -15811,6 +15811,159 @@
     },
     {
       "release": {
+        "release_name": "Lord Upminster",
+        "release_artist": "Ian Dury",
+        "date_added": "2016-09-21",
+        "date_release_year": "2014-01-01",
+        "year_original": 1981,
+        "genre_names": [
+          "Disco",
+          "Dub",
+          "Electronic",
+          "Funk / Soul",
+          "New Wave",
+          "Reggae"
+        ],
+        "slug": "lord-upminster-8396639",
+        "images": {
+          "hi-res": "/album/lord-upminster-8396639/lord-upminster-8396639-hi-res.jpg",
+          "medium": "/album/lord-upminster-8396639/lord-upminster-8396639-medium.jpg",
+          "avatar": "/album/lord-upminster-8396639/lord-upminster-8396639-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Ian Dury",
+            "slug": "ian-dury",
+            "images": {
+              "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
+              "medium": "/artist/ian-dury/ian-dury-medium.jpg",
+              "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#d9cfc9",
+          "ink": "#0e0d0c",
+          "ground": "#1d1410",
+          "glow": "#d9cfc9",
+          "secondary": null,
+          "hue": 0.154,
+          "vivid": 0
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "New Wave",
+          "Dub",
+          "Disco"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "4.000 Weeks' Holiday",
+        "release_artist": "Ian Dury And The Music Students",
+        "date_added": "2016-09-21",
+        "date_release_year": "2014-01-01",
+        "year_original": 1984,
+        "genre_names": [
+          "Disco",
+          "Electronic",
+          "Leftfield",
+          "Rock"
+        ],
+        "slug": "4000-weeks-holiday-8396748",
+        "images": {
+          "hi-res": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-hi-res.jpg",
+          "medium": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-medium.jpg",
+          "avatar": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Ian Dury And The Music Students",
+            "slug": "ian-dury-and-the-music-students",
+            "images": {
+              "hi-res": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-hi-res.jpg",
+              "medium": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-medium.jpg",
+              "avatar": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#b46d36",
+          "ink": "#0e0d0c",
+          "ground": "#1e201e",
+          "glow": "#b46d36",
+          "secondary": null,
+          "hue": 0.155,
+          "vivid": 0.65
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Leftfield",
+          "Disco"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "Apples",
+        "release_artist": "Ian Dury",
+        "date_added": "2016-09-21",
+        "date_release_year": "2014-01-01",
+        "year_original": 1989,
+        "genre_names": [
+          "New Wave",
+          "Rock"
+        ],
+        "slug": "apples-8396799",
+        "images": {
+          "hi-res": "/album/apples-8396799/apples-8396799-hi-res.jpg",
+          "medium": "/album/apples-8396799/apples-8396799-medium.jpg",
+          "avatar": "/album/apples-8396799/apples-8396799-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Ian Dury",
+            "slug": "ian-dury",
+            "images": {
+              "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
+              "medium": "/artist/ian-dury/ian-dury-medium.jpg",
+              "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#cf3646",
+          "ink": "#fbf7ef",
+          "ground": "#14231b",
+          "glow": "#cf3646",
+          "secondary": "#0f5ea8",
+          "hue": 0.056,
+          "vivid": 1.42
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "New Wave"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "The Bus Driver's Prayer & Other Stories",
         "release_artist": "Ian Dury",
         "date_added": "2016-09-21",
@@ -15866,7 +16019,7 @@
         "release_artist": "Ian Dury And The Blockheads",
         "date_added": "2016-09-21",
         "date_release_year": "2015-01-01",
-        "year_original": 1977,
+        "year_original": 1998,
         "genre_names": [
           "Funk",
           "Funk / Soul",
@@ -16056,159 +16209,6 @@
         "styles": [
           "Psychedelic Rock",
           "Prog Rock"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "4.000 Weeks' Holiday",
-        "release_artist": "Ian Dury And The Music Students",
-        "date_added": "2016-09-21",
-        "date_release_year": "2014-01-01",
-        "year_original": 2014,
-        "genre_names": [
-          "Disco",
-          "Electronic",
-          "Leftfield",
-          "Rock"
-        ],
-        "slug": "4000-weeks-holiday-8396748",
-        "images": {
-          "hi-res": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-hi-res.jpg",
-          "medium": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-medium.jpg",
-          "avatar": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Ian Dury And The Music Students",
-            "slug": "ian-dury-and-the-music-students",
-            "images": {
-              "hi-res": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-hi-res.jpg",
-              "medium": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-medium.jpg",
-              "avatar": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#b46d36",
-          "ink": "#0e0d0c",
-          "ground": "#1e201e",
-          "glow": "#b46d36",
-          "secondary": null,
-          "hue": 0.155,
-          "vivid": 0.65
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Leftfield",
-          "Disco"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "Apples",
-        "release_artist": "Ian Dury",
-        "date_added": "2016-09-21",
-        "date_release_year": "2014-01-01",
-        "year_original": 1989,
-        "genre_names": [
-          "New Wave",
-          "Rock"
-        ],
-        "slug": "apples-8396799",
-        "images": {
-          "hi-res": "/album/apples-8396799/apples-8396799-hi-res.jpg",
-          "medium": "/album/apples-8396799/apples-8396799-medium.jpg",
-          "avatar": "/album/apples-8396799/apples-8396799-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Ian Dury",
-            "slug": "ian-dury",
-            "images": {
-              "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
-              "medium": "/artist/ian-dury/ian-dury-medium.jpg",
-              "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#cf3646",
-          "ink": "#fbf7ef",
-          "ground": "#14231b",
-          "glow": "#cf3646",
-          "secondary": "#0f5ea8",
-          "hue": 0.056,
-          "vivid": 1.42
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "New Wave"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "Lord Upminster",
-        "release_artist": "Ian Dury",
-        "date_added": "2016-09-21",
-        "date_release_year": "2014-01-01",
-        "year_original": 1981,
-        "genre_names": [
-          "Disco",
-          "Dub",
-          "Electronic",
-          "Funk / Soul",
-          "New Wave",
-          "Reggae"
-        ],
-        "slug": "lord-upminster-8396639",
-        "images": {
-          "hi-res": "/album/lord-upminster-8396639/lord-upminster-8396639-hi-res.jpg",
-          "medium": "/album/lord-upminster-8396639/lord-upminster-8396639-medium.jpg",
-          "avatar": "/album/lord-upminster-8396639/lord-upminster-8396639-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Ian Dury",
-            "slug": "ian-dury",
-            "images": {
-              "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
-              "medium": "/artist/ian-dury/ian-dury-medium.jpg",
-              "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#d9cfc9",
-          "ink": "#0e0d0c",
-          "ground": "#1d1410",
-          "glow": "#d9cfc9",
-          "secondary": null,
-          "hue": 0.154,
-          "vivid": 0
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "New Wave",
-          "Dub",
-          "Disco"
         ],
         "formats": [
           "Vinyl"
@@ -16894,7 +16894,7 @@
         "release_artist": "Suede",
         "date_added": "2016-10-01",
         "date_release_year": "2014-01-01",
-        "year_original": 2011,
+        "year_original": 2002,
         "genre_names": [
           "Alternative Rock",
           "Britpop",
@@ -16944,7 +16944,7 @@
         "release_artist": "Suede",
         "date_added": "2016-10-01",
         "date_release_year": "2014-01-01",
-        "year_original": 2014,
+        "year_original": 1994,
         "genre_names": [
           "Alternative Rock",
           "Art Rock",
@@ -17892,7 +17892,7 @@
         "release_artist": "David Bowie",
         "date_added": "2016-10-14",
         "date_release_year": "2016-01-01",
-        "year_original": 2010,
+        "year_original": 2004,
         "genre_names": [
           "Alternative Rock",
           "Art Rock",
@@ -17994,7 +17994,7 @@
         "release_artist": "Billy Joel",
         "date_added": "2016-10-14",
         "date_release_year": "1985-01-01",
-        "year_original": 1983,
+        "year_original": 1985,
         "genre_names": [
           "Ballad",
           "Classic Rock",
@@ -18404,7 +18404,7 @@
         "release_artist": "David Bowie",
         "date_added": "2016-10-18",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 2000,
         "genre_names": [
           "Art Rock",
           "Glam",
@@ -18550,7 +18550,7 @@
         "release_artist": "Tell 'Em Steve-Dave",
         "date_added": "2016-10-19",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 2011,
         "genre_names": [
           "Stage & Screen"
         ],
@@ -19557,7 +19557,7 @@
         "release_artist": "The Beach Boys",
         "date_added": "2016-10-28",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 1966,
         "genre_names": [
           "Pop Rock",
           "Rock"
@@ -19915,7 +19915,7 @@
         "release_artist": "Original New York Cast Of Lazarus & David Bowie & Enda Walsh",
         "date_added": "2016-11-06",
         "date_release_year": "2016-01-01",
-        "year_original": 1971,
+        "year_original": 2016,
         "genre_names": [
           "Classic Rock",
           "Musical",
@@ -19986,7 +19986,7 @@
         "release_artist": "Crowded House",
         "date_added": "2016-11-08",
         "date_release_year": "2016-01-01",
-        "year_original": 2000,
+        "year_original": 1999,
         "genre_names": [
           "Pop Rock",
           "Rock"
@@ -20230,7 +20230,7 @@
         "release_artist": "The Sea Nymphs",
         "date_added": "2016-11-09",
         "date_release_year": "2016-01-01",
-        "year_original": 1991,
+        "year_original": 1995,
         "genre_names": [
           "Alternative Rock",
           "Art Rock",
@@ -20500,7 +20500,7 @@
         "release_artist": "Various",
         "date_added": "2016-11-11",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 1996,
         "genre_names": [
           "Ambient",
           "Britpop",
@@ -21377,54 +21377,6 @@
     },
     {
       "release": {
-        "release_name": "Animals",
-        "release_artist": "Pink Floyd",
-        "date_added": "2016-11-18",
-        "date_release_year": "2016-01-01",
-        "year_original": 1977,
-        "genre_names": [
-          "Prog Rock",
-          "Rock"
-        ],
-        "slug": "animals-9359985",
-        "images": {
-          "hi-res": "/album/animals-9359985/animals-9359985-hi-res.jpg",
-          "medium": "/album/animals-9359985/animals-9359985-medium.jpg",
-          "avatar": "/album/animals-9359985/animals-9359985-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Pink Floyd",
-            "slug": "pink-floyd",
-            "images": {
-              "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
-              "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
-              "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#954636",
-          "ink": "#fbf7ef",
-          "ground": "#161623",
-          "glow": "#9f4f3e",
-          "secondary": "#e39252",
-          "hue": 0.091,
-          "vivid": 0.71
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Prog Rock"
-        ],
-        "formats": [
-          "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
         "release_name": "Ágætis Byrjun",
         "release_artist": "Sigur Rós",
         "date_added": "2016-11-18",
@@ -21477,11 +21429,59 @@
     },
     {
       "release": {
+        "release_name": "Animals",
+        "release_artist": "Pink Floyd",
+        "date_added": "2016-11-18",
+        "date_release_year": "2016-01-01",
+        "year_original": 1977,
+        "genre_names": [
+          "Prog Rock",
+          "Rock"
+        ],
+        "slug": "animals-9359985",
+        "images": {
+          "hi-res": "/album/animals-9359985/animals-9359985-hi-res.jpg",
+          "medium": "/album/animals-9359985/animals-9359985-medium.jpg",
+          "avatar": "/album/animals-9359985/animals-9359985-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Pink Floyd",
+            "slug": "pink-floyd",
+            "images": {
+              "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
+              "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
+              "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#954636",
+          "ink": "#fbf7ef",
+          "ground": "#161623",
+          "glow": "#9f4f3e",
+          "secondary": "#e39252",
+          "hue": 0.091,
+          "vivid": 0.71
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Prog Rock"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "Rarities",
         "release_artist": "Emiliana Torrini",
         "date_added": "2016-11-21",
         "date_release_year": "2011-01-01",
-        "year_original": 2011,
+        "year_original": 2001,
         "genre_names": [
           "Electronic",
           "Pop",
@@ -22112,7 +22112,7 @@
         "release_artist": "The Beatles",
         "date_added": "2016-11-27",
         "date_release_year": "2012-01-01",
-        "year_original": 1968,
+        "year_original": 2009,
         "genre_names": [
           "Beat",
           "Pop",
@@ -22181,7 +22181,7 @@
         "release_artist": "The Levellers",
         "date_added": "2016-11-30",
         "date_release_year": "2016-01-01",
-        "year_original": 1992,
+        "year_original": 1991,
         "genre_names": [
           "Alternative Rock",
           "Folk Rock",
@@ -22226,6 +22226,60 @@
           "CD",
           "DVD",
           "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "( )",
+        "release_artist": "Sigur Rós",
+        "date_added": "2016-11-30",
+        "date_release_year": "2015-01-01",
+        "year_original": 2002,
+        "genre_names": [
+          "Abstract",
+          "Ambient",
+          "Electronic",
+          "Post Rock",
+          "Rock"
+        ],
+        "slug": "unknown-6589097",
+        "images": {
+          "hi-res": "/album/unknown-6589097/unknown-6589097-hi-res.jpg",
+          "medium": "/album/unknown-6589097/unknown-6589097-medium.jpg",
+          "avatar": "/album/unknown-6589097/unknown-6589097-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Sigur Rós",
+            "slug": "sigur-ros",
+            "images": {
+              "hi-res": "/artist/sigur-ros/sigur-ros-hi-res.jpg",
+              "medium": "/artist/sigur-ros/sigur-ros-medium.jpg",
+              "avatar": "/artist/sigur-ros/sigur-ros-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "v": 2,
+          "flood": "#e6e1db",
+          "ink": "#0e0d0c",
+          "ground": "#171615",
+          "glow": "#e6e1db",
+          "secondary": null,
+          "hue": 0.208,
+          "vivid": 0
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Abstract",
+          "Post Rock",
+          "Ambient"
+        ],
+        "formats": [
+          "Vinyl",
+          "CD"
         ]
       }
     },
@@ -22324,60 +22378,6 @@
         ],
         "formats": [
           "Vinyl"
-        ]
-      }
-    },
-    {
-      "release": {
-        "release_name": "( )",
-        "release_artist": "Sigur Rós",
-        "date_added": "2016-11-30",
-        "date_release_year": "2015-01-01",
-        "year_original": 2015,
-        "genre_names": [
-          "Abstract",
-          "Ambient",
-          "Electronic",
-          "Post Rock",
-          "Rock"
-        ],
-        "slug": "unknown-6589097",
-        "images": {
-          "hi-res": "/album/unknown-6589097/unknown-6589097-hi-res.jpg",
-          "medium": "/album/unknown-6589097/unknown-6589097-medium.jpg",
-          "avatar": "/album/unknown-6589097/unknown-6589097-avatar.jpg"
-        },
-        "artists": [
-          {
-            "name": "Sigur Rós",
-            "slug": "sigur-ros",
-            "images": {
-              "hi-res": "/artist/sigur-ros/sigur-ros-hi-res.jpg",
-              "medium": "/artist/sigur-ros/sigur-ros-medium.jpg",
-              "avatar": "/artist/sigur-ros/sigur-ros-avatar.jpg"
-            }
-          }
-        ],
-        "colors": {
-          "v": 2,
-          "flood": "#e6e1db",
-          "ink": "#0e0d0c",
-          "ground": "#171615",
-          "glow": "#e6e1db",
-          "secondary": null,
-          "hue": 0.208,
-          "vivid": 0
-        }
-      },
-      "albumDetail": {
-        "styles": [
-          "Abstract",
-          "Post Rock",
-          "Ambient"
-        ],
-        "formats": [
-          "Vinyl",
-          "CD"
         ]
       }
     },
@@ -23369,7 +23369,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-12-08",
         "date_release_year": "2013-01-01",
-        "year_original": 2010,
+        "year_original": 2013,
         "genre_names": [
           "Acoustic",
           "Avantgarde",
@@ -23479,7 +23479,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-12-08",
         "date_release_year": "2016-01-01",
-        "year_original": 1989,
+        "year_original": 1992,
         "genre_names": [
           "Art Rock",
           "Downtempo",
@@ -23536,7 +23536,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-12-08",
         "date_release_year": "2016-01-01",
-        "year_original": 1977,
+        "year_original": 1982,
         "genre_names": [
           "Art Rock",
           "Pop Rock",
@@ -23588,7 +23588,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-12-08",
         "date_release_year": "2016-01-01",
-        "year_original": 1977,
+        "year_original": 1980,
         "genre_names": [
           "Art Rock",
           "Pop",
@@ -23848,7 +23848,7 @@
         "release_artist": "Jean-Michel Jarre",
         "date_added": "2016-12-08",
         "date_release_year": "2015-01-01",
-        "year_original": 2015,
+        "year_original": 1978,
         "genre_names": [
           "Ambient",
           "Electronic",
@@ -23999,7 +23999,7 @@
         "release_artist": "Survive",
         "date_added": "2016-12-08",
         "date_release_year": "2016-01-01",
-        "year_original": 2016,
+        "year_original": 2012,
         "genre_names": [
           "Electro",
           "Electronic",
@@ -24161,7 +24161,7 @@
         "release_artist": "Peter Gabriel",
         "date_added": "2016-12-11",
         "date_release_year": "2016-01-01",
-        "year_original": 1977,
+        "year_original": 1978,
         "genre_names": [
           "Prog Rock",
           "Rock"
@@ -24675,7 +24675,7 @@
         "release_artist": "The Breeders",
         "date_added": "2016-12-19",
         "date_release_year": "2013-01-01",
-        "year_original": 2008,
+        "year_original": 1993,
         "genre_names": [
           "Alternative Rock",
           "Rock"
@@ -24783,7 +24783,7 @@
         "release_artist": "John Shuttleworth",
         "date_added": "2016-12-19",
         "date_release_year": "2015-01-01",
-        "year_original": 1999,
+        "year_original": 1997,
         "genre_names": [
           "Comedy",
           "Electronic",
@@ -24878,7 +24878,7 @@
         "release_artist": "Steven Wilson",
         "date_added": "2016-12-20",
         "date_release_year": "2014-01-01",
-        "year_original": 2005,
+        "year_original": 2014,
         "genre_names": [
           "Ambient",
           "Electronic",
@@ -24932,7 +24932,7 @@
         "release_artist": "Pink Floyd",
         "date_added": "2016-12-24",
         "date_release_year": "2016-01-01",
-        "year_original": 2014,
+        "year_original": 2016,
         "genre_names": [
           "Blues",
           "Pop",
@@ -25829,19 +25829,19 @@
     "decades": [
       {
         "name": "2010s",
-        "count": 153
+        "count": 136
       },
       {
         "name": "2000s",
-        "count": 59
+        "count": 61
       },
       {
         "name": "1990s",
-        "count": 109
+        "count": 123
       },
       {
         "name": "1980s",
-        "count": 79
+        "count": 83
       },
       {
         "name": "1970s",
@@ -25849,11 +25849,7 @@
       },
       {
         "name": "1960s",
-        "count": 22
-      },
-      {
-        "name": "1950s",
-        "count": 2
+        "count": 21
       }
     ],
     "timeline": [
@@ -26022,7 +26018,7 @@
             "release_artist": "John Parr",
             "date_added": "2016-01-07",
             "date_release_year": "1985-01-01",
-            "year_original": 1985,
+            "year_original": 1984,
             "genre_names": [
               "Hard Rock",
               "Pop Rock",
@@ -26175,7 +26171,7 @@
             "release_artist": "Faces",
             "date_added": "2016-01-08",
             "date_release_year": "1977-01-01",
-            "year_original": 1973,
+            "year_original": 1977,
             "genre_names": [
               "Blues Rock",
               "Classic Rock",
@@ -26216,7 +26212,7 @@
             "release_artist": "The Kinks",
             "date_added": "2016-01-08",
             "date_release_year": "1985-01-01",
-            "year_original": 1967,
+            "year_original": 1984,
             "genre_names": [
               "Classic Rock",
               "Rock"
@@ -26295,7 +26291,7 @@
             "release_artist": "Elvis Presley",
             "date_added": "2016-01-08",
             "date_release_year": "1974-01-01",
-            "year_original": 1956,
+            "year_original": 1974,
             "genre_names": [
               "Ballad",
               "Pop",
@@ -27066,7 +27062,7 @@
             "release_artist": "Carter The Unstoppable Sex Machine",
             "date_added": "2016-01-15",
             "date_release_year": "1990-01-01",
-            "year_original": 1989,
+            "year_original": 1990,
             "genre_names": [
               "Indie Rock",
               "Rock"
@@ -27104,7 +27100,7 @@
             "release_artist": "The Temperance Movement",
             "date_added": "2016-01-17",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 2015,
             "genre_names": [
               "Blues",
               "Blues Rock",
@@ -27336,7 +27332,7 @@
             "release_artist": "Eels",
             "date_added": "2016-01-19",
             "date_release_year": "2015-01-01",
-            "year_original": 2005,
+            "year_original": 2015,
             "genre_names": [
               "Indie Rock",
               "Lo-Fi",
@@ -27375,7 +27371,7 @@
             "release_artist": "Bruce Springsteen",
             "date_added": "2016-01-19",
             "date_release_year": "2014-01-01",
-            "year_original": 2012,
+            "year_original": 2014,
             "genre_names": [
               "Classic Rock",
               "Rock"
@@ -27735,6 +27731,45 @@
             }
           },
           {
+            "release_name": "4½",
+            "release_artist": "Steven Wilson",
+            "date_added": "2016-01-22",
+            "date_release_year": "2016-01-01",
+            "year_original": 2016,
+            "genre_names": [
+              "Alternative Rock",
+              "Prog Rock",
+              "Rock"
+            ],
+            "slug": "4-half-8005929",
+            "images": {
+              "hi-res": "/album/4-half-8005929/4-half-8005929-hi-res.jpg",
+              "medium": "/album/4-half-8005929/4-half-8005929-medium.jpg",
+              "avatar": "/album/4-half-8005929/4-half-8005929-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Steven Wilson",
+                "slug": "steven-wilson",
+                "images": {
+                  "hi-res": "/artist/steven-wilson/steven-wilson-hi-res.jpg",
+                  "medium": "/artist/steven-wilson/steven-wilson-medium.jpg",
+                  "avatar": "/artist/steven-wilson/steven-wilson-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#af964a",
+              "ink": "#0e0d0c",
+              "ground": "#06232e",
+              "glow": "#af964a",
+              "secondary": "#019ddf",
+              "hue": 0.255,
+              "vivid": 0.74
+            }
+          },
+          {
             "release_name": "Hours...",
             "release_artist": "David Bowie",
             "date_added": "2016-01-22",
@@ -27815,42 +27850,43 @@
             }
           },
           {
-            "release_name": "4½",
-            "release_artist": "Steven Wilson",
-            "date_added": "2016-01-22",
-            "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "release_name": "The Complete Studio Albums 1990-2000",
+            "release_artist": "Pantera",
+            "date_added": "2016-01-23",
+            "date_release_year": "2015-01-01",
+            "year_original": 2015,
             "genre_names": [
-              "Alternative Rock",
-              "Prog Rock",
-              "Rock"
+              "Groove Metal",
+              "Heavy Metal",
+              "Rock",
+              "Thrash"
             ],
-            "slug": "4-half-8005929",
+            "slug": "the-complete-studio-albums-1990-2000-7864084",
             "images": {
-              "hi-res": "/album/4-half-8005929/4-half-8005929-hi-res.jpg",
-              "medium": "/album/4-half-8005929/4-half-8005929-medium.jpg",
-              "avatar": "/album/4-half-8005929/4-half-8005929-avatar.jpg"
+              "hi-res": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-hi-res.jpg",
+              "medium": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-medium.jpg",
+              "avatar": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-avatar.jpg"
             },
             "artists": [
               {
-                "name": "Steven Wilson",
-                "slug": "steven-wilson",
+                "name": "Pantera",
+                "slug": "pantera",
                 "images": {
-                  "hi-res": "/artist/steven-wilson/steven-wilson-hi-res.jpg",
-                  "medium": "/artist/steven-wilson/steven-wilson-medium.jpg",
-                  "avatar": "/artist/steven-wilson/steven-wilson-avatar.jpg"
+                  "hi-res": "/artist/pantera/pantera-hi-res.jpg",
+                  "medium": "/artist/pantera/pantera-medium.jpg",
+                  "avatar": "/artist/pantera/pantera-avatar.jpg"
                 }
               }
             ],
             "colors": {
               "v": 2,
-              "flood": "#af964a",
-              "ink": "#0e0d0c",
-              "ground": "#06232e",
-              "glow": "#af964a",
-              "secondary": "#019ddf",
-              "hue": 0.255,
-              "vivid": 0.74
+              "flood": "#952521",
+              "ink": "#fbf7ef",
+              "ground": "#221e20",
+              "glow": "#b7463d",
+              "secondary": null,
+              "hue": 0.076,
+              "vivid": 1.12
             }
           },
           {
@@ -27893,51 +27929,11 @@
             }
           },
           {
-            "release_name": "The Complete Studio Albums 1990-2000",
-            "release_artist": "Pantera",
-            "date_added": "2016-01-23",
-            "date_release_year": "2015-01-01",
-            "year_original": 2015,
-            "genre_names": [
-              "Groove Metal",
-              "Heavy Metal",
-              "Rock",
-              "Thrash"
-            ],
-            "slug": "the-complete-studio-albums-1990-2000-7864084",
-            "images": {
-              "hi-res": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-hi-res.jpg",
-              "medium": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-medium.jpg",
-              "avatar": "/album/the-complete-studio-albums-1990-2000-7864084/the-complete-studio-albums-1990-2000-7864084-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Pantera",
-                "slug": "pantera",
-                "images": {
-                  "hi-res": "/artist/pantera/pantera-hi-res.jpg",
-                  "medium": "/artist/pantera/pantera-medium.jpg",
-                  "avatar": "/artist/pantera/pantera-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#952521",
-              "ink": "#fbf7ef",
-              "ground": "#221e20",
-              "glow": "#b7463d",
-              "secondary": null,
-              "hue": 0.076,
-              "vivid": 1.12
-            }
-          },
-          {
             "release_name": "Kubrick",
             "release_artist": "The Soulsavers",
             "date_added": "2016-01-24",
             "date_release_year": "2015-01-01",
-            "year_original": 2012,
+            "year_original": 2015,
             "genre_names": [
               "Classical",
               "Downtempo",
@@ -28138,7 +28134,7 @@
             "release_artist": "Oceansize",
             "date_added": "2016-01-28",
             "date_release_year": "2010-01-01",
-            "year_original": 2003,
+            "year_original": 2010,
             "genre_names": [
               "Alternative Rock",
               "Prog Rock",
@@ -28339,7 +28335,7 @@
             "release_artist": "Split Enz",
             "date_added": "2016-01-29",
             "date_release_year": "1981-01-01",
-            "year_original": 1981,
+            "year_original": 1979,
             "genre_names": [
               "Pop Rock",
               "Rock"
@@ -28377,7 +28373,7 @@
             "release_artist": "Split Enz",
             "date_added": "2016-01-29",
             "date_release_year": "1982-01-01",
-            "year_original": 1980,
+            "year_original": 1982,
             "genre_names": [
               "New Wave",
               "Pop",
@@ -29008,6 +29004,44 @@
             }
           },
           {
+            "release_name": "Radio-Aktivität",
+            "release_artist": "Kraftwerk",
+            "date_added": "2016-02-14",
+            "date_release_year": "2014-01-01",
+            "year_original": 1975,
+            "genre_names": [
+              "Electronic",
+              "Experimental"
+            ],
+            "slug": "radio-aktivitat-6872562",
+            "images": {
+              "hi-res": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-hi-res.jpg",
+              "medium": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-medium.jpg",
+              "avatar": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Kraftwerk",
+                "slug": "kraftwerk",
+                "images": {
+                  "hi-res": "/artist/kraftwerk/kraftwerk-hi-res.jpg",
+                  "medium": "/artist/kraftwerk/kraftwerk-medium.jpg",
+                  "avatar": "/artist/kraftwerk/kraftwerk-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#c11425",
+              "ink": "#fbf7ef",
+              "ground": "#250e0d",
+              "glow": "#c51a28",
+              "secondary": "#ded732",
+              "hue": 0.068,
+              "vivid": 1.26
+            }
+          },
+          {
             "release_name": "Funeral",
             "release_artist": "Arcade Fire",
             "date_added": "2016-02-14",
@@ -29044,44 +29078,6 @@
               "secondary": "#7f473c",
               "hue": 0.104,
               "vivid": 0.88
-            }
-          },
-          {
-            "release_name": "Radio-Aktivität",
-            "release_artist": "Kraftwerk",
-            "date_added": "2016-02-14",
-            "date_release_year": "2014-01-01",
-            "year_original": 1975,
-            "genre_names": [
-              "Electronic",
-              "Experimental"
-            ],
-            "slug": "radio-aktivitat-6872562",
-            "images": {
-              "hi-res": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-hi-res.jpg",
-              "medium": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-medium.jpg",
-              "avatar": "/album/radio-aktivitat-6872562/radio-aktivitat-6872562-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Kraftwerk",
-                "slug": "kraftwerk",
-                "images": {
-                  "hi-res": "/artist/kraftwerk/kraftwerk-hi-res.jpg",
-                  "medium": "/artist/kraftwerk/kraftwerk-medium.jpg",
-                  "avatar": "/artist/kraftwerk/kraftwerk-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#c11425",
-              "ink": "#fbf7ef",
-              "ground": "#250e0d",
-              "glow": "#c51a28",
-              "secondary": "#ded732",
-              "hue": 0.068,
-              "vivid": 1.26
             }
           },
           {
@@ -29283,7 +29279,7 @@
             "release_artist": "The Beta Band",
             "date_added": "2016-02-18",
             "date_release_year": "2013-01-01",
-            "year_original": 2004,
+            "year_original": 1998,
             "genre_names": [
               "Downtempo",
               "Electronic",
@@ -29324,7 +29320,7 @@
             "release_artist": "The Beta Band",
             "date_added": "2016-02-19",
             "date_release_year": "2015-01-01",
-            "year_original": 2013,
+            "year_original": 1998,
             "genre_names": [
               "Downtempo",
               "Electronic",
@@ -29559,7 +29555,7 @@
             "release_artist": "Kraftwerk",
             "date_added": "2016-02-21",
             "date_release_year": "2009-01-01",
-            "year_original": 2009,
+            "year_original": 1974,
             "genre_names": [
               "Electro",
               "Electronic",
@@ -29835,7 +29831,7 @@
             "release_artist": "Various",
             "date_added": "2016-02-29",
             "date_release_year": "2015-01-01",
-            "year_original": 2015,
+            "year_original": 2000,
             "genre_names": [
               "Acoustic",
               "Alternative Rock",
@@ -29911,6 +29907,47 @@
               "secondary": "#830110",
               "hue": 0.074,
               "vivid": 1.8
+            }
+          },
+          {
+            "release_name": "Champion Versions",
+            "release_artist": "The Beta Band",
+            "date_added": "2016-02-29",
+            "date_release_year": "2015-01-01",
+            "year_original": 1997,
+            "genre_names": [
+              "Electronic",
+              "Experimental",
+              "Folk Rock",
+              "Rock",
+              "Trip Hop"
+            ],
+            "slug": "champion-versions-7425314",
+            "images": {
+              "hi-res": "/album/champion-versions-7425314/champion-versions-7425314-hi-res.jpg",
+              "medium": "/album/champion-versions-7425314/champion-versions-7425314-medium.jpg",
+              "avatar": "/album/champion-versions-7425314/champion-versions-7425314-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "The Beta Band",
+                "slug": "the-beta-band",
+                "images": {
+                  "hi-res": "/artist/the-beta-band/the-beta-band-hi-res.jpg",
+                  "medium": "/artist/the-beta-band/the-beta-band-medium.jpg",
+                  "avatar": "/artist/the-beta-band/the-beta-band-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#992d2f",
+              "ink": "#fbf7ef",
+              "ground": "#250e0d",
+              "glow": "#aa3d3d",
+              "secondary": "#d7b268",
+              "hue": 0.066,
+              "vivid": 1.1
             }
           },
           {
@@ -30226,47 +30263,6 @@
               "hue": 0.173,
               "vivid": 0.94
             }
-          },
-          {
-            "release_name": "Champion Versions",
-            "release_artist": "The Beta Band",
-            "date_added": "2016-02-29",
-            "date_release_year": "2015-01-01",
-            "year_original": 2015,
-            "genre_names": [
-              "Electronic",
-              "Experimental",
-              "Folk Rock",
-              "Rock",
-              "Trip Hop"
-            ],
-            "slug": "champion-versions-7425314",
-            "images": {
-              "hi-res": "/album/champion-versions-7425314/champion-versions-7425314-hi-res.jpg",
-              "medium": "/album/champion-versions-7425314/champion-versions-7425314-medium.jpg",
-              "avatar": "/album/champion-versions-7425314/champion-versions-7425314-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "The Beta Band",
-                "slug": "the-beta-band",
-                "images": {
-                  "hi-res": "/artist/the-beta-band/the-beta-band-hi-res.jpg",
-                  "medium": "/artist/the-beta-band/the-beta-band-medium.jpg",
-                  "avatar": "/artist/the-beta-band/the-beta-band-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#992d2f",
-              "ink": "#fbf7ef",
-              "ground": "#250e0d",
-              "glow": "#aa3d3d",
-              "secondary": "#d7b268",
-              "hue": 0.066,
-              "vivid": 1.1
-            }
           }
         ],
         "dominantColor": {
@@ -30289,7 +30285,7 @@
             "release_artist": "Cardiacs",
             "date_added": "2016-03-03",
             "date_release_year": "2014-01-01",
-            "year_original": 1995,
+            "year_original": 1996,
             "genre_names": [
               "Alternative Rock",
               "Art Rock",
@@ -30616,7 +30612,7 @@
             "release_artist": "Emerson, Lake & Palmer",
             "date_added": "2016-03-16",
             "date_release_year": "0-01-01",
-            "year_original": 1970,
+            "year_original": 1980,
             "genre_names": [
               "Classic Rock",
               "Rock",
@@ -31210,7 +31206,7 @@
             "release_artist": "Various",
             "date_added": "2016-03-29",
             "date_release_year": "2016-01-01",
-            "year_original": 2006,
+            "year_original": 1985,
             "genre_names": [
               "Soundtrack",
               "Stage & Screen"
@@ -31577,7 +31573,7 @@
             "release_artist": "Jimi Hendrix",
             "date_added": "2016-04-08",
             "date_release_year": "1983-01-01",
-            "year_original": 1967,
+            "year_original": 1983,
             "genre_names": [
               "Blues Rock",
               "Psychedelic Rock",
@@ -31774,7 +31770,7 @@
             "release_artist": "Little Angels",
             "date_added": "2016-04-15",
             "date_release_year": "1994-01-01",
-            "year_original": 1957,
+            "year_original": 1994,
             "genre_names": [
               "Heavy Metal",
               "Rock"
@@ -31812,7 +31808,7 @@
             "release_artist": "Little Angels",
             "date_added": "2016-04-15",
             "date_release_year": "1993-01-01",
-            "year_original": 1992,
+            "year_original": 1993,
             "genre_names": [
               "Hard Rock",
               "Rock",
@@ -32162,7 +32158,7 @@
             "release_artist": "Soulwax",
             "date_added": "2016-04-23",
             "date_release_year": "2012-01-01",
-            "year_original": 1999,
+            "year_original": 1998,
             "genre_names": [
               "Alternative Rock",
               "Rock"
@@ -32200,7 +32196,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-04-25",
             "date_release_year": "1990-01-01",
-            "year_original": 1989,
+            "year_original": 1990,
             "genre_names": [
               "Art Rock",
               "Pop Rock",
@@ -32277,7 +32273,7 @@
             "release_artist": "Public Image Limited",
             "date_added": "2016-04-25",
             "date_release_year": "2014-01-01",
-            "year_original": 2014,
+            "year_original": 1990,
             "genre_names": [
               "Electronic",
               "New Wave",
@@ -32317,7 +32313,7 @@
             "release_artist": "Various",
             "date_added": "2016-04-27",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 2007,
             "genre_names": [
               "Country",
               "Folk, World, & Country"
@@ -32953,7 +32949,7 @@
             "release_artist": "Devin Townsend Project",
             "date_added": "2016-05-03",
             "date_release_year": "2015-01-01",
-            "year_original": 2013,
+            "year_original": 2015,
             "genre_names": [
               "Rock"
             ],
@@ -33027,7 +33023,7 @@
             "release_artist": "The Jimi Hendrix Experience",
             "date_added": "2016-05-03",
             "date_release_year": "2016-01-01",
-            "year_original": 2015,
+            "year_original": 1968,
             "genre_names": [
               "Blues Rock",
               "Psychedelic Rock",
@@ -33824,7 +33820,7 @@
             "release_artist": "Status Quo",
             "date_added": "2016-05-23",
             "date_release_year": "2015-01-01",
-            "year_original": 1973,
+            "year_original": 1972,
             "genre_names": [
               "Classic Rock",
               "Pop Rock",
@@ -33864,7 +33860,7 @@
             "release_artist": "Status Quo",
             "date_added": "2016-05-23",
             "date_release_year": "2015-01-01",
-            "year_original": 2015,
+            "year_original": 1977,
             "genre_names": [
               "Classic Rock",
               "Pop Rock",
@@ -34558,7 +34554,7 @@
             "release_artist": "John Williams & London Symphony Orchestra",
             "date_added": "2016-06-20",
             "date_release_year": "2016-01-01",
-            "year_original": 1990,
+            "year_original": 1977,
             "genre_names": [
               "Classical",
               "Neo-Romantic",
@@ -34801,7 +34797,7 @@
             "release_artist": "Bob Marley & The Wailers",
             "date_added": "2016-06-21",
             "date_release_year": "2015-01-01",
-            "year_original": 2015,
+            "year_original": 1984,
             "genre_names": [
               "Reggae",
               "Roots Reggae"
@@ -34999,7 +34995,7 @@
             "release_artist": "Electric Light Orchestra",
             "date_added": "2016-06-27",
             "date_release_year": "2016-01-01",
-            "year_original": 1977,
+            "year_original": 2005,
             "genre_names": [
               "Disco",
               "Electronic",
@@ -35333,7 +35329,7 @@
             "release_artist": "Orchestral Manoeuvres In The Dark",
             "date_added": "2016-07-05",
             "date_release_year": "1988-01-01",
-            "year_original": 1980,
+            "year_original": 1988,
             "genre_names": [
               "Dance-pop",
               "Electronic",
@@ -35452,7 +35448,7 @@
             "release_artist": "John Martyn",
             "date_added": "2016-07-08",
             "date_release_year": "2014-01-01",
-            "year_original": 1973,
+            "year_original": 2002,
             "genre_names": [
               "Blues",
               "Folk Rock",
@@ -35849,7 +35845,7 @@
             "release_artist": "Slade",
             "date_added": "2016-07-13",
             "date_release_year": "2015-01-01",
-            "year_original": 2011,
+            "year_original": 2015,
             "genre_names": [
               "Classic Rock",
               "Glam",
@@ -36049,7 +36045,7 @@
             "release_artist": "Suede",
             "date_added": "2016-07-18",
             "date_release_year": "2014-01-01",
-            "year_original": 2011,
+            "year_original": 1996,
             "genre_names": [
               "Alternative Rock",
               "Britpop",
@@ -36734,7 +36730,7 @@
             "release_artist": "Daryl Hall & John Oates",
             "date_added": "2016-08-13",
             "date_release_year": "2016-01-01",
-            "year_original": 2015,
+            "year_original": 2001,
             "genre_names": [
               "Electronic",
               "Funk / Soul",
@@ -36776,7 +36772,7 @@
             "release_artist": "John Williams",
             "date_added": "2016-08-17",
             "date_release_year": "2016-01-01",
-            "year_original": 2015,
+            "year_original": 1983,
             "genre_names": [
               "Classical",
               "Soundtrack",
@@ -37097,7 +37093,7 @@
             "release_artist": "Angelo Badalamenti",
             "date_added": "2016-08-26",
             "date_release_year": "2016-01-01",
-            "year_original": 2007,
+            "year_original": 1990,
             "genre_names": [
               "Ambient",
               "Electronic",
@@ -37312,7 +37308,7 @@
             "release_artist": "Captain Beefheart",
             "date_added": "2016-09-05",
             "date_release_year": "2016-01-01",
-            "year_original": 1971,
+            "year_original": 1972,
             "genre_names": [
               "Avantgarde",
               "Blues Rock",
@@ -37470,7 +37466,7 @@
             "release_artist": "Aretha Franklin",
             "date_added": "2016-09-06",
             "date_release_year": "2016-01-01",
-            "year_original": 1980,
+            "year_original": 1971,
             "genre_names": [
               "Funk / Soul",
               "Soul"
@@ -38207,7 +38203,7 @@
             "release_artist": "Ian Dury And The Blockheads",
             "date_added": "2016-09-21",
             "date_release_year": "2013-01-01",
-            "year_original": 1977,
+            "year_original": 1979,
             "genre_names": [
               "Disco",
               "Dub",
@@ -38286,6 +38282,126 @@
             }
           },
           {
+            "release_name": "Lord Upminster",
+            "release_artist": "Ian Dury",
+            "date_added": "2016-09-21",
+            "date_release_year": "2014-01-01",
+            "year_original": 1981,
+            "genre_names": [
+              "Disco",
+              "Dub",
+              "Electronic",
+              "Funk / Soul",
+              "New Wave",
+              "Reggae"
+            ],
+            "slug": "lord-upminster-8396639",
+            "images": {
+              "hi-res": "/album/lord-upminster-8396639/lord-upminster-8396639-hi-res.jpg",
+              "medium": "/album/lord-upminster-8396639/lord-upminster-8396639-medium.jpg",
+              "avatar": "/album/lord-upminster-8396639/lord-upminster-8396639-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Ian Dury",
+                "slug": "ian-dury",
+                "images": {
+                  "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
+                  "medium": "/artist/ian-dury/ian-dury-medium.jpg",
+                  "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#d9cfc9",
+              "ink": "#0e0d0c",
+              "ground": "#1d1410",
+              "glow": "#d9cfc9",
+              "secondary": null,
+              "hue": 0.154,
+              "vivid": 0
+            }
+          },
+          {
+            "release_name": "4.000 Weeks' Holiday",
+            "release_artist": "Ian Dury And The Music Students",
+            "date_added": "2016-09-21",
+            "date_release_year": "2014-01-01",
+            "year_original": 1984,
+            "genre_names": [
+              "Disco",
+              "Electronic",
+              "Leftfield",
+              "Rock"
+            ],
+            "slug": "4000-weeks-holiday-8396748",
+            "images": {
+              "hi-res": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-hi-res.jpg",
+              "medium": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-medium.jpg",
+              "avatar": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Ian Dury And The Music Students",
+                "slug": "ian-dury-and-the-music-students",
+                "images": {
+                  "hi-res": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-hi-res.jpg",
+                  "medium": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-medium.jpg",
+                  "avatar": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#b46d36",
+              "ink": "#0e0d0c",
+              "ground": "#1e201e",
+              "glow": "#b46d36",
+              "secondary": null,
+              "hue": 0.155,
+              "vivid": 0.65
+            }
+          },
+          {
+            "release_name": "Apples",
+            "release_artist": "Ian Dury",
+            "date_added": "2016-09-21",
+            "date_release_year": "2014-01-01",
+            "year_original": 1989,
+            "genre_names": [
+              "New Wave",
+              "Rock"
+            ],
+            "slug": "apples-8396799",
+            "images": {
+              "hi-res": "/album/apples-8396799/apples-8396799-hi-res.jpg",
+              "medium": "/album/apples-8396799/apples-8396799-medium.jpg",
+              "avatar": "/album/apples-8396799/apples-8396799-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Ian Dury",
+                "slug": "ian-dury",
+                "images": {
+                  "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
+                  "medium": "/artist/ian-dury/ian-dury-medium.jpg",
+                  "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#cf3646",
+              "ink": "#fbf7ef",
+              "ground": "#14231b",
+              "glow": "#cf3646",
+              "secondary": "#0f5ea8",
+              "hue": 0.056,
+              "vivid": 1.42
+            }
+          },
+          {
             "release_name": "The Bus Driver's Prayer & Other Stories",
             "release_artist": "Ian Dury",
             "date_added": "2016-09-21",
@@ -38330,7 +38446,7 @@
             "release_artist": "Ian Dury And The Blockheads",
             "date_added": "2016-09-21",
             "date_release_year": "2015-01-01",
-            "year_original": 1977,
+            "year_original": 1998,
             "genre_names": [
               "Funk",
               "Funk / Soul",
@@ -38481,126 +38597,6 @@
               "secondary": null,
               "hue": 0.901,
               "vivid": 0.45
-            }
-          },
-          {
-            "release_name": "4.000 Weeks' Holiday",
-            "release_artist": "Ian Dury And The Music Students",
-            "date_added": "2016-09-21",
-            "date_release_year": "2014-01-01",
-            "year_original": 2014,
-            "genre_names": [
-              "Disco",
-              "Electronic",
-              "Leftfield",
-              "Rock"
-            ],
-            "slug": "4000-weeks-holiday-8396748",
-            "images": {
-              "hi-res": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-hi-res.jpg",
-              "medium": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-medium.jpg",
-              "avatar": "/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Ian Dury And The Music Students",
-                "slug": "ian-dury-and-the-music-students",
-                "images": {
-                  "hi-res": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-hi-res.jpg",
-                  "medium": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-medium.jpg",
-                  "avatar": "/artist/ian-dury-and-the-music-students/ian-dury-and-the-music-students-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#b46d36",
-              "ink": "#0e0d0c",
-              "ground": "#1e201e",
-              "glow": "#b46d36",
-              "secondary": null,
-              "hue": 0.155,
-              "vivid": 0.65
-            }
-          },
-          {
-            "release_name": "Apples",
-            "release_artist": "Ian Dury",
-            "date_added": "2016-09-21",
-            "date_release_year": "2014-01-01",
-            "year_original": 1989,
-            "genre_names": [
-              "New Wave",
-              "Rock"
-            ],
-            "slug": "apples-8396799",
-            "images": {
-              "hi-res": "/album/apples-8396799/apples-8396799-hi-res.jpg",
-              "medium": "/album/apples-8396799/apples-8396799-medium.jpg",
-              "avatar": "/album/apples-8396799/apples-8396799-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Ian Dury",
-                "slug": "ian-dury",
-                "images": {
-                  "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
-                  "medium": "/artist/ian-dury/ian-dury-medium.jpg",
-                  "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#cf3646",
-              "ink": "#fbf7ef",
-              "ground": "#14231b",
-              "glow": "#cf3646",
-              "secondary": "#0f5ea8",
-              "hue": 0.056,
-              "vivid": 1.42
-            }
-          },
-          {
-            "release_name": "Lord Upminster",
-            "release_artist": "Ian Dury",
-            "date_added": "2016-09-21",
-            "date_release_year": "2014-01-01",
-            "year_original": 1981,
-            "genre_names": [
-              "Disco",
-              "Dub",
-              "Electronic",
-              "Funk / Soul",
-              "New Wave",
-              "Reggae"
-            ],
-            "slug": "lord-upminster-8396639",
-            "images": {
-              "hi-res": "/album/lord-upminster-8396639/lord-upminster-8396639-hi-res.jpg",
-              "medium": "/album/lord-upminster-8396639/lord-upminster-8396639-medium.jpg",
-              "avatar": "/album/lord-upminster-8396639/lord-upminster-8396639-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Ian Dury",
-                "slug": "ian-dury",
-                "images": {
-                  "hi-res": "/artist/ian-dury/ian-dury-hi-res.jpg",
-                  "medium": "/artist/ian-dury/ian-dury-medium.jpg",
-                  "avatar": "/artist/ian-dury/ian-dury-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#d9cfc9",
-              "ink": "#0e0d0c",
-              "ground": "#1d1410",
-              "glow": "#d9cfc9",
-              "secondary": null,
-              "hue": 0.154,
-              "vivid": 0
             }
           },
           {
@@ -39141,7 +39137,7 @@
             "release_artist": "Suede",
             "date_added": "2016-10-01",
             "date_release_year": "2014-01-01",
-            "year_original": 2011,
+            "year_original": 2002,
             "genre_names": [
               "Alternative Rock",
               "Britpop",
@@ -39180,7 +39176,7 @@
             "release_artist": "Suede",
             "date_added": "2016-10-01",
             "date_release_year": "2014-01-01",
-            "year_original": 2014,
+            "year_original": 1994,
             "genre_names": [
               "Alternative Rock",
               "Art Rock",
@@ -39919,7 +39915,7 @@
             "release_artist": "David Bowie",
             "date_added": "2016-10-14",
             "date_release_year": "2016-01-01",
-            "year_original": 2010,
+            "year_original": 2004,
             "genre_names": [
               "Alternative Rock",
               "Art Rock",
@@ -39998,7 +39994,7 @@
             "release_artist": "Billy Joel",
             "date_added": "2016-10-14",
             "date_release_year": "1985-01-01",
-            "year_original": 1983,
+            "year_original": 1985,
             "genre_names": [
               "Ballad",
               "Classic Rock",
@@ -40315,7 +40311,7 @@
             "release_artist": "David Bowie",
             "date_added": "2016-10-18",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 2000,
             "genre_names": [
               "Art Rock",
               "Glam",
@@ -40430,7 +40426,7 @@
             "release_artist": "Tell 'Em Steve-Dave",
             "date_added": "2016-10-19",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 2011,
             "genre_names": [
               "Stage & Screen"
             ],
@@ -41213,7 +41209,7 @@
             "release_artist": "The Beach Boys",
             "date_added": "2016-10-28",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 1966,
             "genre_names": [
               "Pop Rock",
               "Rock"
@@ -41506,7 +41502,7 @@
             "release_artist": "Original New York Cast Of Lazarus & David Bowie & Enda Walsh",
             "date_added": "2016-11-06",
             "date_release_year": "2016-01-01",
-            "year_original": 1971,
+            "year_original": 2016,
             "genre_names": [
               "Classic Rock",
               "Musical",
@@ -41564,7 +41560,7 @@
             "release_artist": "Crowded House",
             "date_added": "2016-11-08",
             "date_release_year": "2016-01-01",
-            "year_original": 2000,
+            "year_original": 1999,
             "genre_names": [
               "Pop Rock",
               "Rock"
@@ -41755,7 +41751,7 @@
             "release_artist": "The Sea Nymphs",
             "date_added": "2016-11-09",
             "date_release_year": "2016-01-01",
-            "year_original": 1991,
+            "year_original": 1995,
             "genre_names": [
               "Alternative Rock",
               "Art Rock",
@@ -41968,7 +41964,7 @@
             "release_artist": "Various",
             "date_added": "2016-11-11",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 1996,
             "genre_names": [
               "Ambient",
               "Britpop",
@@ -42652,44 +42648,6 @@
             }
           },
           {
-            "release_name": "Animals",
-            "release_artist": "Pink Floyd",
-            "date_added": "2016-11-18",
-            "date_release_year": "2016-01-01",
-            "year_original": 1977,
-            "genre_names": [
-              "Prog Rock",
-              "Rock"
-            ],
-            "slug": "animals-9359985",
-            "images": {
-              "hi-res": "/album/animals-9359985/animals-9359985-hi-res.jpg",
-              "medium": "/album/animals-9359985/animals-9359985-medium.jpg",
-              "avatar": "/album/animals-9359985/animals-9359985-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Pink Floyd",
-                "slug": "pink-floyd",
-                "images": {
-                  "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
-                  "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
-                  "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#954636",
-              "ink": "#fbf7ef",
-              "ground": "#161623",
-              "glow": "#9f4f3e",
-              "secondary": "#e39252",
-              "hue": 0.091,
-              "vivid": 0.71
-            }
-          },
-          {
             "release_name": "Ágætis Byrjun",
             "release_artist": "Sigur Rós",
             "date_added": "2016-11-18",
@@ -42730,11 +42688,49 @@
             }
           },
           {
+            "release_name": "Animals",
+            "release_artist": "Pink Floyd",
+            "date_added": "2016-11-18",
+            "date_release_year": "2016-01-01",
+            "year_original": 1977,
+            "genre_names": [
+              "Prog Rock",
+              "Rock"
+            ],
+            "slug": "animals-9359985",
+            "images": {
+              "hi-res": "/album/animals-9359985/animals-9359985-hi-res.jpg",
+              "medium": "/album/animals-9359985/animals-9359985-medium.jpg",
+              "avatar": "/album/animals-9359985/animals-9359985-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Pink Floyd",
+                "slug": "pink-floyd",
+                "images": {
+                  "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
+                  "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
+                  "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#954636",
+              "ink": "#fbf7ef",
+              "ground": "#161623",
+              "glow": "#9f4f3e",
+              "secondary": "#e39252",
+              "hue": 0.091,
+              "vivid": 0.71
+            }
+          },
+          {
             "release_name": "Rarities",
             "release_artist": "Emiliana Torrini",
             "date_added": "2016-11-21",
             "date_release_year": "2011-01-01",
-            "year_original": 2011,
+            "year_original": 2001,
             "genre_names": [
               "Electronic",
               "Pop",
@@ -43222,7 +43218,7 @@
             "release_artist": "The Beatles",
             "date_added": "2016-11-27",
             "date_release_year": "2012-01-01",
-            "year_original": 1968,
+            "year_original": 2009,
             "genre_names": [
               "Beat",
               "Pop",
@@ -43264,7 +43260,7 @@
             "release_artist": "The Levellers",
             "date_added": "2016-11-30",
             "date_release_year": "2016-01-01",
-            "year_original": 1992,
+            "year_original": 1991,
             "genre_names": [
               "Alternative Rock",
               "Folk Rock",
@@ -43296,6 +43292,47 @@
               "secondary": "#c9917f",
               "hue": 0.084,
               "vivid": 0.85
+            }
+          },
+          {
+            "release_name": "( )",
+            "release_artist": "Sigur Rós",
+            "date_added": "2016-11-30",
+            "date_release_year": "2015-01-01",
+            "year_original": 2002,
+            "genre_names": [
+              "Abstract",
+              "Ambient",
+              "Electronic",
+              "Post Rock",
+              "Rock"
+            ],
+            "slug": "unknown-6589097",
+            "images": {
+              "hi-res": "/album/unknown-6589097/unknown-6589097-hi-res.jpg",
+              "medium": "/album/unknown-6589097/unknown-6589097-medium.jpg",
+              "avatar": "/album/unknown-6589097/unknown-6589097-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Sigur Rós",
+                "slug": "sigur-ros",
+                "images": {
+                  "hi-res": "/artist/sigur-ros/sigur-ros-hi-res.jpg",
+                  "medium": "/artist/sigur-ros/sigur-ros-medium.jpg",
+                  "avatar": "/artist/sigur-ros/sigur-ros-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "v": 2,
+              "flood": "#e6e1db",
+              "ink": "#0e0d0c",
+              "ground": "#171615",
+              "glow": "#e6e1db",
+              "secondary": null,
+              "hue": 0.208,
+              "vivid": 0
             }
           },
           {
@@ -43373,47 +43410,6 @@
               "secondary": null,
               "hue": 0.228,
               "vivid": 0.56
-            }
-          },
-          {
-            "release_name": "( )",
-            "release_artist": "Sigur Rós",
-            "date_added": "2016-11-30",
-            "date_release_year": "2015-01-01",
-            "year_original": 2015,
-            "genre_names": [
-              "Abstract",
-              "Ambient",
-              "Electronic",
-              "Post Rock",
-              "Rock"
-            ],
-            "slug": "unknown-6589097",
-            "images": {
-              "hi-res": "/album/unknown-6589097/unknown-6589097-hi-res.jpg",
-              "medium": "/album/unknown-6589097/unknown-6589097-medium.jpg",
-              "avatar": "/album/unknown-6589097/unknown-6589097-avatar.jpg"
-            },
-            "artists": [
-              {
-                "name": "Sigur Rós",
-                "slug": "sigur-ros",
-                "images": {
-                  "hi-res": "/artist/sigur-ros/sigur-ros-hi-res.jpg",
-                  "medium": "/artist/sigur-ros/sigur-ros-medium.jpg",
-                  "avatar": "/artist/sigur-ros/sigur-ros-avatar.jpg"
-                }
-              }
-            ],
-            "colors": {
-              "v": 2,
-              "flood": "#e6e1db",
-              "ink": "#0e0d0c",
-              "ground": "#171615",
-              "glow": "#e6e1db",
-              "secondary": null,
-              "hue": 0.208,
-              "vivid": 0
             }
           }
         ],
@@ -44199,7 +44195,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-12-08",
             "date_release_year": "2013-01-01",
-            "year_original": 2010,
+            "year_original": 2013,
             "genre_names": [
               "Acoustic",
               "Avantgarde",
@@ -44283,7 +44279,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-12-08",
             "date_release_year": "2016-01-01",
-            "year_original": 1989,
+            "year_original": 1992,
             "genre_names": [
               "Art Rock",
               "Downtempo",
@@ -44327,7 +44323,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-12-08",
             "date_release_year": "2016-01-01",
-            "year_original": 1977,
+            "year_original": 1982,
             "genre_names": [
               "Art Rock",
               "Pop Rock",
@@ -44367,7 +44363,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-12-08",
             "date_release_year": "2016-01-01",
-            "year_original": 1977,
+            "year_original": 1980,
             "genre_names": [
               "Art Rock",
               "Pop",
@@ -44570,7 +44566,7 @@
             "release_artist": "Jean-Michel Jarre",
             "date_added": "2016-12-08",
             "date_release_year": "2015-01-01",
-            "year_original": 2015,
+            "year_original": 1978,
             "genre_names": [
               "Ambient",
               "Electronic",
@@ -44687,7 +44683,7 @@
             "release_artist": "Survive",
             "date_added": "2016-12-08",
             "date_release_year": "2016-01-01",
-            "year_original": 2016,
+            "year_original": 2012,
             "genre_names": [
               "Electro",
               "Electronic",
@@ -44810,7 +44806,7 @@
             "release_artist": "Peter Gabriel",
             "date_added": "2016-12-11",
             "date_release_year": "2016-01-01",
-            "year_original": 1977,
+            "year_original": 1978,
             "genre_names": [
               "Prog Rock",
               "Rock"
@@ -45215,7 +45211,7 @@
             "release_artist": "The Breeders",
             "date_added": "2016-12-19",
             "date_release_year": "2013-01-01",
-            "year_original": 2008,
+            "year_original": 1993,
             "genre_names": [
               "Alternative Rock",
               "Rock"
@@ -45293,7 +45289,7 @@
             "release_artist": "John Shuttleworth",
             "date_added": "2016-12-19",
             "date_release_year": "2015-01-01",
-            "year_original": 1999,
+            "year_original": 1997,
             "genre_names": [
               "Comedy",
               "Electronic",
@@ -45369,7 +45365,7 @@
             "release_artist": "Steven Wilson",
             "date_added": "2016-12-20",
             "date_release_year": "2014-01-01",
-            "year_original": 2005,
+            "year_original": 2014,
             "genre_names": [
               "Ambient",
               "Electronic",
@@ -45411,7 +45407,7 @@
             "release_artist": "Pink Floyd",
             "date_added": "2016-12-24",
             "date_release_year": "2016-01-01",
-            "year_original": 2014,
+            "year_original": 2016,
             "genre_names": [
               "Blues",
               "Pop",
