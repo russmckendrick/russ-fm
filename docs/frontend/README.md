@@ -351,7 +351,7 @@ function SearchComponent() {
 pnpm run dev
 
 # Type checking
-pnpm run tsc --noEmit
+pnpm run typecheck
 
 # Linting
 pnpm run lint

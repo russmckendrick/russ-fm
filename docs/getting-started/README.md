@@ -157,7 +157,7 @@ Navigate to `http://localhost:5173` to see your collection.
 pnpm run dev
 
 # Type checking
-pnpm run tsc --noEmit
+pnpm run typecheck
 
 # Linting
 pnpm run lint

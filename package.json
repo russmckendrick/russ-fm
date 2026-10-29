@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler dev",
-    "build": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-sitemap && pnpm run generate-og && pnpm run generate-og-sections && pnpm run generate-explore && pnpm run generate-static-meta",
+    "build": "rm -rf dist && pnpm run generate-sitemap && pnpm run typecheck && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-sitemap && pnpm run generate-og && pnpm run generate-og-sections && pnpm run generate-explore && pnpm run generate-static-meta",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-colors": "node scripts/generate-album-colors.js",
     "generate-artist-images": "node scripts/generate-artist-images.js",
@@ -19,7 +19,7 @@
     "generate-og-sections": "tsx scripts/generate-og-sections.ts",
     "generate-static-meta": "node scripts/generate-static-meta.mjs",
     "generate-explore": "tsx scripts/generate-explore.ts",
-    "build:fast": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build && pnpm run generate-static-meta",
+    "build:fast": "rm -rf dist && pnpm run generate-sitemap && pnpm run typecheck && vite build && pnpm run generate-static-meta",
     "build:generate-sync": "pnpm run build && pnpm run build:sync",
     "build:sync": "node scripts/sync-to-r2.js",
     "build:sync:dry": "node scripts/sync-to-r2.js --dry-run",
@@ -36,6 +36,7 @@
     "clear-cache": "./clear-cache.sh",
     "hooks:install": "node scripts/install-git-hooks.js",
     "prepare": "node scripts/install-git-hooks.js",
+    "typecheck": "tsc -b",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview --outDir dist-worker"

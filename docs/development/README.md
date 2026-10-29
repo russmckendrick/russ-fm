@@ -74,7 +74,7 @@ pnpm run dev
 | `pnpm run build` | Production build |
 | `pnpm run build:fast` | Build without assets |
 | `pnpm run lint` | Run ESLint |
-| `pnpm exec tsc -b --noEmit` | Type check (`-b` follows the project references; plain `tsc --noEmit` checks nothing) |
+| `pnpm run typecheck` | Type check (`tsc -b`, which follows the project references; plain `tsc --noEmit` checks nothing) |
 | `pnpm test` | Run the Vitest unit tests (`src/**/__tests__`) |
 | `pnpm run preview` | Preview production build |
 | `pnpm run generate-artist-images` | Artist photo placement/colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only, run after the scrapper adds artist photos, then commit; by default only new photos, `-- --full` redoes all, `-- --only <slug>` one (or a comma-separated list). See [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) |
@@ -176,7 +176,7 @@ russ-fm/
 1. Start dev server: `pnpm run dev`
 2. Edit files in `src/`
 3. Changes hot reload automatically
-4. Type check: `pnpm exec tsc -b --noEmit`
+4. Type check: `pnpm run typecheck`
 5. Lint: `pnpm run lint`
 6. Tests: `pnpm test`
 
@@ -224,7 +224,7 @@ export function MyComponent({ className }: { className?: string }) {
 
 ```bash
 # Type checking
-pnpm exec tsc -b --noEmit
+pnpm run typecheck
 
 # Unit tests (Vitest)
 pnpm test
@@ -307,7 +307,7 @@ refactor: Simplify color extraction
 ```bash
 # Before committing
 pnpm run lint
-pnpm exec tsc -b --noEmit
+pnpm run typecheck
 pnpm test
 pnpm run build
 ```
