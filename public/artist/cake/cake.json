@@ -123,22 +123,133 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='472322', url='https://music.apple.com/gb/artist/cake/472322', name='CAKE', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/48/46/c3/4846c352-1d2d-fd12-30bc-fd57379d8a27/pr_source.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '472322', 'type': 'artists', 'href': '/v1/catalog/gb/artists/472322', 'attributes': {'name': 'CAKE', 'genreNames': ['Rock'], 'artwork': {'width': 2828, 'height': 2828, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/48/46/c3/4846c352-1d2d-fd12-30bc-fd57379d8a27/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '181818', 'textColor1': 'ffffff', 'textColor2': 'c1c1c1', 'textColor3': 'd0d0d0', 'textColor4': '9f9f9f'}, 'url': 'https://music.apple.com/gb/artist/cake/472322'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/472322/albums', 'data': [{'id': '1632472281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632472281'}, {'id': '181630530', 'type': 'albums', 'href': '/v1/catalog/gb/albums/181630530'}, {'id': '1632540361', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632540361'}, {'id': '267846803', 'type': 'albums', 'href': '/v1/catalog/gb/albums/267846803'}, {'id': '159001685', 'type': 'albums', 'href': '/v1/catalog/gb/albums/159001685'}, {'id': '254347645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254347645'}, {'id': '277260090', 'type': 'albums', 'href': '/v1/catalog/gb/albums/277260090'}, {'id': '1439388349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439388349'}, {'id': '270055627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/270055627'}, {'id': '283516841', 'type': 'albums', 'href': '/v1/catalog/gb/albums/283516841'}, {'id': '1632569206', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632569206'}, {'id': '1699272107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699272107'}, {'id': '1727780146', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1727780146'}, {'id': '283518867', 'type': 'albums', 'href': '/v1/catalog/gb/albums/283518867'}, {'id': '1671621051', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1671621051'}, {'id': '254830898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254830898'}, {'id': '251081511', 'type': 'albums', 'href': '/v1/catalog/gb/albums/251081511'}, {'id': '202995925', 'type': 'albums', 'href': '/v1/catalog/gb/albums/202995925'}, {'id': '336011253', 'type': 'albums', 'href': '/v1/catalog/gb/albums/336011253'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "141809",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 141809,
+      "images": [
+        {
+          "height": 542,
+          "resource_url": "https://i.discogs.com/nXoV1MO0ja7nHz9JopinelW_2gwShIjPbePVbHurWTU/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/nXoV1MO0ja7nHz9JopinelW_2gwShIjPbePVbHurWTU/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/46PdgqnF_GqeGEBM47ncT7hq3kufVl8JU9HMIiMPUhs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/5eDmZSJyErTginsuum8LozmQD_9qynoA4-3_Escg440/rs:fit/g:sm/q:90/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5eDmZSJyErTginsuum8LozmQD_9qynoA4-3_Escg440/rs:fit/g:sm/q:90/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Lr3X0vBwt0qszqsLW9qY91ZPJqqtCSgtn5aUQvDm7kE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "width": 595
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/oTpvkq6bAiJwGP1rCrBJs1bnb8gsLdyBZvWGtn5Z3aE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oTpvkq6bAiJwGP1rCrBJs1bnb8gsLdyBZvWGtn5Z3aE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fuhAME8lIEMryTVQzOJjDs2PPt4vEfT7dmwEhxjzwgc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 165,
+          "resource_url": "https://i.discogs.com/HdGM4a1RAXWiwv-KOyx9d4Z51Syt7rCuzkXLYpI9quY/rs:fit/g:sm/q:90/h:165/w:299/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HdGM4a1RAXWiwv-KOyx9d4Z51Syt7rCuzkXLYpI9quY/rs:fit/g:sm/q:90/h:165/w:299/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/rSOz9X1RBua6JRBhJTLldPT4gVgHCe1dfAOp7wyuOSU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "width": 299
+        },
+        {
+          "height": 464,
+          "resource_url": "https://i.discogs.com/yqoKk11f7c2g1CnfYTqkY6VbWKUPpXKqm_EBodP76kc/rs:fit/g:sm/q:90/h:464/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yqoKk11f7c2g1CnfYTqkY6VbWKUPpXKqm_EBodP76kc/rs:fit/g:sm/q:90/h:464/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/cwAJ3pQOcH3f58VV0SstMJrNiez7cG1ihEIs-jytu3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 252287,
+          "name": "John McCrea",
+          "resource_url": "https://api.discogs.com/artists/252287"
+        },
+        {
+          "active": false,
+          "id": 306437,
+          "name": "Tyler Pope",
+          "resource_url": "https://api.discogs.com/artists/306437"
+        },
+        {
+          "active": false,
+          "id": 395578,
+          "name": "Pete McNeal",
+          "resource_url": "https://api.discogs.com/artists/395578"
+        },
+        {
+          "active": false,
+          "id": 663137,
+          "name": "Frank French",
+          "resource_url": "https://api.discogs.com/artists/663137"
+        },
+        {
+          "active": true,
+          "id": 689160,
+          "name": "Todd Roper",
+          "resource_url": "https://api.discogs.com/artists/689160"
+        },
+        {
+          "active": false,
+          "id": 689162,
+          "name": "Victor Damiani",
+          "resource_url": "https://api.discogs.com/artists/689162"
+        },
+        {
+          "active": true,
+          "id": 689163,
+          "name": "Vincent Di Fiore",
+          "resource_url": "https://api.discogs.com/artists/689163"
+        },
+        {
+          "active": false,
+          "id": 697507,
+          "name": "Paulo Baldi",
+          "resource_url": "https://api.discogs.com/artists/697507"
+        },
+        {
+          "active": false,
+          "id": 739631,
+          "name": "Greg Brown (7)",
+          "resource_url": "https://api.discogs.com/artists/739631"
+        },
+        {
+          "active": true,
+          "id": 808024,
+          "name": "Xan McCurdy",
+          "resource_url": "https://api.discogs.com/artists/808024"
+        },
+        {
+          "active": false,
+          "id": 907027,
+          "name": "Gabriel Nelson",
+          "resource_url": "https://api.discogs.com/artists/907027"
+        }
+      ],
       "name": "Cake",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "141809",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/141809"
-      },
+      "namevariations": [
+        "蛋糕樂隊"
+      ],
+      "profile": "Alternative rock band from Sacramento, California, USA, formed in 1991.\r\n\r\nCurrent members:\r\nVince DiFiore – trumpet / keyboards / backing vocals (1991–present)\r\nJohn McCrea – lead vocals / acoustic guitar / keys (1991–present)\r\nTodd Roper – drums / backing vocals (1994–2001, 2016–present)\r\nXan McCurdy – lead guitar / backing vocals (1997–present)\r\nDaniel McCallum – bass / backing vocals (2016–present)\r\n\r\nFormer members:\r\nGreg Brown – lead guitar / backing vocals (1991–1997)\r\nFrank French – drums / backing vocals (1991–1994)\r\nShon Meckfessel – bass / backing vocals (1991)\r\nRusty Miller - guitar (1998)\r\nMarcus Mindte - bass (1991)\r\nGabe Nelson – bass / backing vocals (1992–1994, 1997–2015)\r\nVictor Damiani – bass / backing vocals (1994–1997)\r\nPete McNeal – drums / backing vocals (2001–2004)\r\nPaulo Baldi – drums / backing vocals (2004–2015)\r\nCasey Lipka – bass / backing vocals (2016–2018)",
+      "releases_url": "https://api.discogs.com/artists/141809/releases",
       "resource_url": "https://api.discogs.com/artists/141809",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/141809",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/141809-Cake",
+      "urls": [
+        "https://www.cakemusic.com/",
+        "https://www.facebook.com/cakemusic/",
+        "https://myspace.com/cake",
+        "https://en.wikipedia.org/wiki/Cake_(band)",
+        "https://www.instagram.com/thebandcake?srtk=MWFqcXRueHpiZ2wwMA=="
+      ]
     },
     "identity": {
       "musicbrainz_id": "fa7b9055-3703-473a-8a09-adf2fe031a24",
@@ -292,27 +403,152 @@
         "track": "Sheep Go to Heaven",
         "uri": "https://www.youtube.com/watch?v=xau1ZQUtW5c"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q3487557",
+        "track": "Short Skirt/Long Jacket",
+        "uri": "https://www.youtube.com/watch?v=X5KmB8Laemg"
+      },
+      {
+        "album": null,
+        "id": "Q7730374",
+        "track": "The Distance",
+        "uri": "https://www.youtube.com/watch?v=F_HoMkkRHv8"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='472322', url='https://music.apple.com/gb/artist/cake/472322', name='CAKE', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/48/46/c3/4846c352-1d2d-fd12-30bc-fd57379d8a27/pr_source.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '472322', 'type': 'artists', 'href': '/v1/catalog/gb/artists/472322', 'attributes': {'name': 'CAKE', 'genreNames': ['Rock'], 'artwork': {'width': 2828, 'height': 2828, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/48/46/c3/4846c352-1d2d-fd12-30bc-fd57379d8a27/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '181818', 'textColor1': 'ffffff', 'textColor2': 'c1c1c1', 'textColor3': 'd0d0d0', 'textColor4': '9f9f9f'}, 'url': 'https://music.apple.com/gb/artist/cake/472322'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/472322/albums', 'data': [{'id': '1632472281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632472281'}, {'id': '181630530', 'type': 'albums', 'href': '/v1/catalog/gb/albums/181630530'}, {'id': '1632540361', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632540361'}, {'id': '267846803', 'type': 'albums', 'href': '/v1/catalog/gb/albums/267846803'}, {'id': '159001685', 'type': 'albums', 'href': '/v1/catalog/gb/albums/159001685'}, {'id': '254347645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254347645'}, {'id': '277260090', 'type': 'albums', 'href': '/v1/catalog/gb/albums/277260090'}, {'id': '1439388349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439388349'}, {'id': '270055627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/270055627'}, {'id': '283516841', 'type': 'albums', 'href': '/v1/catalog/gb/albums/283516841'}, {'id': '1632569206', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632569206'}, {'id': '1699272107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699272107'}, {'id': '1727780146', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1727780146'}, {'id': '283518867', 'type': 'albums', 'href': '/v1/catalog/gb/albums/283518867'}, {'id': '1671621051', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1671621051'}, {'id': '254830898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254830898'}, {'id': '251081511', 'type': 'albums', 'href': '/v1/catalog/gb/albums/251081511'}, {'id': '202995925', 'type': 'albums', 'href': '/v1/catalog/gb/albums/202995925'}, {'id': '336011253', 'type': 'albums', 'href': '/v1/catalog/gb/albums/336011253'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "141809",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 141809,
+      "images": [
+        {
+          "height": 542,
+          "resource_url": "https://i.discogs.com/nXoV1MO0ja7nHz9JopinelW_2gwShIjPbePVbHurWTU/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/nXoV1MO0ja7nHz9JopinelW_2gwShIjPbePVbHurWTU/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/46PdgqnF_GqeGEBM47ncT7hq3kufVl8JU9HMIiMPUhs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTc4/LTIzOTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/5eDmZSJyErTginsuum8LozmQD_9qynoA4-3_Escg440/rs:fit/g:sm/q:90/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5eDmZSJyErTginsuum8LozmQD_9qynoA4-3_Escg440/rs:fit/g:sm/q:90/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Lr3X0vBwt0qszqsLW9qY91ZPJqqtCSgtn5aUQvDm7kE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTE3/LTQwODIuanBlZw.jpeg",
+          "width": 595
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/oTpvkq6bAiJwGP1rCrBJs1bnb8gsLdyBZvWGtn5Z3aE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oTpvkq6bAiJwGP1rCrBJs1bnb8gsLdyBZvWGtn5Z3aE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fuhAME8lIEMryTVQzOJjDs2PPt4vEfT7dmwEhxjzwgc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xNTA5NTAyMTMz/LTcxMzguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 165,
+          "resource_url": "https://i.discogs.com/HdGM4a1RAXWiwv-KOyx9d4Z51Syt7rCuzkXLYpI9quY/rs:fit/g:sm/q:90/h:165/w:299/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HdGM4a1RAXWiwv-KOyx9d4Z51Syt7rCuzkXLYpI9quY/rs:fit/g:sm/q:90/h:165/w:299/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/rSOz9X1RBua6JRBhJTLldPT4gVgHCe1dfAOp7wyuOSU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMTA5ODcwNDUz/LmpwZw.jpeg",
+          "width": 299
+        },
+        {
+          "height": 464,
+          "resource_url": "https://i.discogs.com/yqoKk11f7c2g1CnfYTqkY6VbWKUPpXKqm_EBodP76kc/rs:fit/g:sm/q:90/h:464/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yqoKk11f7c2g1CnfYTqkY6VbWKUPpXKqm_EBodP76kc/rs:fit/g:sm/q:90/h:464/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/cwAJ3pQOcH3f58VV0SstMJrNiez7cG1ihEIs-jytu3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MTgw/OS0xMzQ5MzE5MTU1/LTc0NTguanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 252287,
+          "name": "John McCrea",
+          "resource_url": "https://api.discogs.com/artists/252287"
+        },
+        {
+          "active": false,
+          "id": 306437,
+          "name": "Tyler Pope",
+          "resource_url": "https://api.discogs.com/artists/306437"
+        },
+        {
+          "active": false,
+          "id": 395578,
+          "name": "Pete McNeal",
+          "resource_url": "https://api.discogs.com/artists/395578"
+        },
+        {
+          "active": false,
+          "id": 663137,
+          "name": "Frank French",
+          "resource_url": "https://api.discogs.com/artists/663137"
+        },
+        {
+          "active": true,
+          "id": 689160,
+          "name": "Todd Roper",
+          "resource_url": "https://api.discogs.com/artists/689160"
+        },
+        {
+          "active": false,
+          "id": 689162,
+          "name": "Victor Damiani",
+          "resource_url": "https://api.discogs.com/artists/689162"
+        },
+        {
+          "active": true,
+          "id": 689163,
+          "name": "Vincent Di Fiore",
+          "resource_url": "https://api.discogs.com/artists/689163"
+        },
+        {
+          "active": false,
+          "id": 697507,
+          "name": "Paulo Baldi",
+          "resource_url": "https://api.discogs.com/artists/697507"
+        },
+        {
+          "active": false,
+          "id": 739631,
+          "name": "Greg Brown (7)",
+          "resource_url": "https://api.discogs.com/artists/739631"
+        },
+        {
+          "active": true,
+          "id": 808024,
+          "name": "Xan McCurdy",
+          "resource_url": "https://api.discogs.com/artists/808024"
+        },
+        {
+          "active": false,
+          "id": 907027,
+          "name": "Gabriel Nelson",
+          "resource_url": "https://api.discogs.com/artists/907027"
+        }
+      ],
       "name": "Cake",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "141809",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/141809"
-      },
+      "namevariations": [
+        "蛋糕樂隊"
+      ],
+      "profile": "Alternative rock band from Sacramento, California, USA, formed in 1991.\r\n\r\nCurrent members:\r\nVince DiFiore – trumpet / keyboards / backing vocals (1991–present)\r\nJohn McCrea – lead vocals / acoustic guitar / keys (1991–present)\r\nTodd Roper – drums / backing vocals (1994–2001, 2016–present)\r\nXan McCurdy – lead guitar / backing vocals (1997–present)\r\nDaniel McCallum – bass / backing vocals (2016–present)\r\n\r\nFormer members:\r\nGreg Brown – lead guitar / backing vocals (1991–1997)\r\nFrank French – drums / backing vocals (1991–1994)\r\nShon Meckfessel – bass / backing vocals (1991)\r\nRusty Miller - guitar (1998)\r\nMarcus Mindte - bass (1991)\r\nGabe Nelson – bass / backing vocals (1992–1994, 1997–2015)\r\nVictor Damiani – bass / backing vocals (1994–1997)\r\nPete McNeal – drums / backing vocals (2001–2004)\r\nPaulo Baldi – drums / backing vocals (2004–2015)\r\nCasey Lipka – bass / backing vocals (2016–2018)",
+      "releases_url": "https://api.discogs.com/artists/141809/releases",
       "resource_url": "https://api.discogs.com/artists/141809",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/141809",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/141809-Cake",
+      "urls": [
+        "https://www.cakemusic.com/",
+        "https://www.facebook.com/cakemusic/",
+        "https://myspace.com/cake",
+        "https://en.wikipedia.org/wiki/Cake_(band)",
+        "https://www.instagram.com/thebandcake?srtk=MWFqcXRueHpiZ2wwMA=="
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Cake', url='https://www.last.fm/music/Cake', mbid='fa7b9055-3703-473a-8a09-adf2fe031a24', listeners=2134308, playcount=58509995, bio_summary='At least 3 bands have the name Cake:\\n\\n1.) 90s alternative rock band\\n2.) Underground 70s pop/funk band\\n3.) 60s Girl pop band\\n\\n1.) Best-known for their ubiquitous hit \"The Distance,\" Cake epitomized the postmodern, irony-drenched aesthetic of \\'90s geek rock. Their sound freely mixed and matched pastiches of widely varying genres -- white-boy funk, hip-hop, country, new wave pop, jazz, college rock, and guitar rock -- with a particular delight in the clashes that resulted. <a href=\"https://www.last.fm/music/Cake\">Read more on Last.fm</a>', bio_content='At least 3 bands have the name Cake:\\n\\n1.) 90s alternative rock band\\n2.) Underground 70s pop/funk band\\n3.) 60s Girl pop band\\n\\n1.) Best-known for their ubiquitous hit \"The Distance,\" Cake epitomized the postmodern, irony-drenched aesthetic of \\'90s geek rock. Their sound freely mixed and matched pastiches of widely varying genres -- white-boy funk, hip-hop, country, new wave pop, jazz, college rock, and guitar rock -- with a particular delight in the clashes that resulted. Their songs were filled with lyrical non-sequiturs, pop-culture references, and smirky satire, all delivered with bone-dry detachment by speak/singing frontman John McCrea. Cake\\'s music most frequently earned comparisons to Soul Coughing and King Missile, but lacked the downtown New York artiness of those two predecessors; instead, Cake cultivated an image of average guys with no illusions and pretensions about their role as entertainers. At the same time, critics lambasted what they saw as a smugly superior attitude behind the band\\'s habitual sarcasm. Perhaps there was something in Cake\\'s doggedly spare, low-key presentation that amplified their ironic detachment even when they didn\\'t intend it, but most reviewers pegged them as one-hit wonders after the success of \"The Distance.\" Nonetheless, Cake managed a few more alternative radio hits in the years that followed, while largely retaining the same approach.\\n\\nCake was formed in Sacramento, California in 1991 by vocalist/songwriter John McCrea, who\\'d recently returned home after spending a few years in Los Angeles, unsuccessfully trying to break into the music business. The original lineup of Cake also featured guitarist Greg Brown, trumpeter Vince DiFiore, bassist Sean McFessel, and drummer Frank French; McFessel soon left to attend college, and was replaced by Gabe Nelson. In 1993, the band released their debut single, \"Rock ‘n\\' Roll Lifestyle,\" on a local basis, and followed it with a self-produced, self-released, self-distributed album, Motorcade of Generosity. Motorcade found its way to the revived Capricorn label, which released the album nationally after Cake signed a contract with them. With the prospect of extensive national touring, both Gabe Nelson and Frank French left the band, and were replaced by bassist Victor Damiani and drummer Todd Roper. Re-released by Capricorn, \"Rock ‘n\\' Roll Lifestyle\" caught on at college radio in 1995, and was followed by two more singles, \"Ruby Sees All,\" and \"Jolene\" (not the Dolly Parton song).\\n\\nCake\\'s second album, Fashion Nugget, was released in 1996 and spawned a breakout smash in the Greg Brown-penned \"The Distance,\" which dominated alternative radio that fall, and even turned into an unlikely sporting-event anthem. Mostly on the strength of \"The Distance,\" Fashion Nugget charted in the Top 40 and sold over a million copies. It also spun off a somewhat controversial follow-up single in a cover of Gloria Gaynor\\'s \"I Will Survive\"; although the band professed its sincere admiration for the song, some critics and listeners took it as a smarmy putdown, in part because of McCrea\\'s deadpan vocals. In 1997, Greg Brown and Victor Damiani both left Cake and formed a new group, the new wave-influenced Deathray, which eventually released its debut album on Capricorn in 2000. Meanwhile, McCrea briefly considered putting Cake to rest, but brought original bassist Gabe Nelson back to replace Damiani instead. For Cake\\'s next album, McCrea used a tag-team procession of guitarists -- five in all -- on different tracks; the result, Prolonging the Magic, was released in 1998. True to its sardonic title, it defied critical opinion to produce another big, alternative radio hit in \"Never There,\" plus decently successful follow-ups in \"Sheep Go to Heaven\" and \"Let Go.\"\\n\\nProlonging the Magic sold nearly as well as Fashion Nugget, and was also certified platinum. For the supporting tour, one of the album\\'s guitarists, Xan McCurdy, officially joined Cake full-time. In the spring of 2000, the band signed a new deal with Columbia, and debuted in 2001 with their fourth overall album, Comfort Eagle, which became their highest-charting yet (at number 13). The lead single, \"Short Skirt/Long Jacket,\" was a hit on alternative radio, and even earned some MTV airplay -- no longer an easy task for any artist -- with a video that featured reactions to the song by randomly selected people on the street. Following the completion of the album, drummer Todd Roper left the group to spend more time with his children, and was replaced on the supporting tour by Pete McNeal. Pressure Chief appeared in 2004. Redefining the meaning of independent -- the band was by then recording in a studio powered entirely by solar energy, and free of the corporate involvement of even so much as a utility bill -- released Showroom of Compassion some six years later in 2011.\\n\\nBiography by  Steve Huey\\n\\n2. Cake, a 70s funk/pop band who’s most popular track was “Make Up Your Mind” in 1979.\\n\\n3. The Cake (which is currently being redirected to this page) were a psychedelic girl pop group from the 1960s with the album Slice of the Cake in 1968. <a href=\"https://www.last.fm/music/Cake\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['alternative', 'rock', 'indie', 'alternative rock', 'indie rock'], similar_artists=[{'name': 'The Presidents of the United States of America', 'url': 'https://www.last.fm/music/The+Presidents+of+the+United+States+of+America'}, {'name': 'Marcy Playground', 'url': 'https://www.last.fm/music/Marcy+Playground'}, {'name': 'Soul Coughing', 'url': 'https://www.last.fm/music/Soul+Coughing'}, {'name': 'They Might Be Giants', 'url': 'https://www.last.fm/music/They+Might+Be+Giants'}, {'name': 'Harvey Danger', 'url': 'https://www.last.fm/music/Harvey+Danger'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Cake', 'mbid': 'fa7b9055-3703-473a-8a09-adf2fe031a24', 'url': 'https://www.last.fm/music/Cake', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '2134308', 'playcount': '58509995'}, 'similar': {'artist': [{'name': 'The Presidents of the United States of America', 'url': 'https://www.last.fm/music/The+Presidents+of+the+United+States+of+America', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Marcy Playground', 'url': 'https://www.last.fm/music/Marcy+Playground', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Soul Coughing', 'url': 'https://www.last.fm/music/Soul+Coughing', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'They Might Be Giants', 'url': 'https://www.last.fm/music/They+Might+Be+Giants', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Harvey Danger', 'url': 'https://www.last.fm/music/Harvey+Danger', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Cake/+wiki'}}, 'published': '04 Feb 2006, 05:34', 'summary': 'At least 3 bands have the name Cake:\\n\\n1.) 90s alternative rock band\\n2.) Underground 70s pop/funk band\\n3.) 60s Girl pop band\\n\\n1.) Best-known for their ubiquitous hit \"The Distance,\" Cake epitomized the postmodern, irony-drenched aesthetic of \\'90s geek rock. Their sound freely mixed and matched pastiches of widely varying genres -- white-boy funk, hip-hop, country, new wave pop, jazz, college rock, and guitar rock -- with a particular delight in the clashes that resulted. <a href=\"https://www.last.fm/music/Cake\">Read more on Last.fm</a>', 'content': 'At least 3 bands have the name Cake:\\n\\n1.) 90s alternative rock band\\n2.) Underground 70s pop/funk band\\n3.) 60s Girl pop band\\n\\n1.) Best-known for their ubiquitous hit \"The Distance,\" Cake epitomized the postmodern, irony-drenched aesthetic of \\'90s geek rock. Their sound freely mixed and matched pastiches of widely varying genres -- white-boy funk, hip-hop, country, new wave pop, jazz, college rock, and guitar rock -- with a particular delight in the clashes that resulted. Their songs were filled with lyrical non-sequiturs, pop-culture references, and smirky satire, all delivered with bone-dry detachment by speak/singing frontman John McCrea. Cake\\'s music most frequently earned comparisons to Soul Coughing and King Missile, but lacked the downtown New York artiness of those two predecessors; instead, Cake cultivated an image of average guys with no illusions and pretensions about their role as entertainers. At the same time, critics lambasted what they saw as a smugly superior attitude behind the band\\'s habitual sarcasm. Perhaps there was something in Cake\\'s doggedly spare, low-key presentation that amplified their ironic detachment even when they didn\\'t intend it, but most reviewers pegged them as one-hit wonders after the success of \"The Distance.\" Nonetheless, Cake managed a few more alternative radio hits in the years that followed, while largely retaining the same approach.\\n\\nCake was formed in Sacramento, California in 1991 by vocalist/songwriter John McCrea, who\\'d recently returned home after spending a few years in Los Angeles, unsuccessfully trying to break into the music business. The original lineup of Cake also featured guitarist Greg Brown, trumpeter Vince DiFiore, bassist Sean McFessel, and drummer Frank French; McFessel soon left to attend college, and was replaced by Gabe Nelson. In 1993, the band released their debut single, \"Rock ‘n\\' Roll Lifestyle,\" on a local basis, and followed it with a self-produced, self-released, self-distributed album, Motorcade of Generosity. Motorcade found its way to the revived Capricorn label, which released the album nationally after Cake signed a contract with them. With the prospect of extensive national touring, both Gabe Nelson and Frank French left the band, and were replaced by bassist Victor Damiani and drummer Todd Roper. Re-released by Capricorn, \"Rock ‘n\\' Roll Lifestyle\" caught on at college radio in 1995, and was followed by two more singles, \"Ruby Sees All,\" and \"Jolene\" (not the Dolly Parton song).\\n\\nCake\\'s second album, Fashion Nugget, was released in 1996 and spawned a breakout smash in the Greg Brown-penned \"The Distance,\" which dominated alternative radio that fall, and even turned into an unlikely sporting-event anthem. Mostly on the strength of \"The Distance,\" Fashion Nugget charted in the Top 40 and sold over a million copies. It also spun off a somewhat controversial follow-up single in a cover of Gloria Gaynor\\'s \"I Will Survive\"; although the band professed its sincere admiration for the song, some critics and listeners took it as a smarmy putdown, in part because of McCrea\\'s deadpan vocals. In 1997, Greg Brown and Victor Damiani both left Cake and formed a new group, the new wave-influenced Deathray, which eventually released its debut album on Capricorn in 2000. Meanwhile, McCrea briefly considered putting Cake to rest, but brought original bassist Gabe Nelson back to replace Damiani instead. For Cake\\'s next album, McCrea used a tag-team procession of guitarists -- five in all -- on different tracks; the result, Prolonging the Magic, was released in 1998. True to its sardonic title, it defied critical opinion to produce another big, alternative radio hit in \"Never There,\" plus decently successful follow-ups in \"Sheep Go to Heaven\" and \"Let Go.\"\\n\\nProlonging the Magic sold nearly as well as Fashion Nugget, and was also certified platinum. For the supporting tour, one of the album\\'s guitarists, Xan McCurdy, officially joined Cake full-time. In the spring of 2000, the band signed a new deal with Columbia, and debuted in 2001 with their fourth overall album, Comfort Eagle, which became their highest-charting yet (at number 13). The lead single, \"Short Skirt/Long Jacket,\" was a hit on alternative radio, and even earned some MTV airplay -- no longer an easy task for any artist -- with a video that featured reactions to the song by randomly selected people on the street. Following the completion of the album, drummer Todd Roper left the group to spend more time with his children, and was replaced on the supporting tour by Pete McNeal. Pressure Chief appeared in 2004. Redefining the meaning of independent -- the band was by then recording in a studio powered entirely by solar energy, and free of the corporate involvement of even so much as a utility bill -- released Showroom of Compassion some six years later in 2011.\\n\\nBiography by  Steve Huey\\n\\n2. Cake, a 70s funk/pop band who’s most popular track was “Make Up Your Mind” in 1979.\\n\\n3. The Cake (which is currently being redirected to this page) were a psychedelic girl pop group from the 1960s with the album Slice of the Cake in 1968. <a href=\"https://www.last.fm/music/Cake\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='6A43Djmhbe9100UwnI7epV', url='https://open.spotify.com/artist/6A43Djmhbe9100UwnI7epV', name='CAKE', popularity=66, followers=1283029, genres=['alternative rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb8bf71301acec36f0256c0f8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b8bf71301acec36f0256c0f8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b8bf71301acec36f0256c0f8', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/6A43Djmhbe9100UwnI7epV'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/6A43Djmhbe9100UwnI7epV'}, 'followers': {'href': None, 'total': 1283029}, 'genres': ['alternative rock'], 'href': 'https://api.spotify.com/v1/artists/6A43Djmhbe9100UwnI7epV', 'id': '6A43Djmhbe9100UwnI7epV', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb8bf71301acec36f0256c0f8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b8bf71301acec36f0256c0f8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b8bf71301acec36f0256c0f8', 'height': 160, 'width': 160}], 'name': 'CAKE', 'popularity': 66, 'type': 'artist', 'uri': 'spotify:artist:6A43Djmhbe9100UwnI7epV'})",
@@ -390,6 +626,6 @@
   },
   "spotify_id": "6A43Djmhbe9100UwnI7epV",
   "spotify_url": "https://open.spotify.com/artist/6A43Djmhbe9100UwnI7epV",
-  "updated_at": "2026-10-22T14:05:34.008919",
+  "updated_at": "2026-10-30T18:37:18.011839",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Cake_(band)"
 }

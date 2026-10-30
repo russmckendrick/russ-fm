@@ -134,22 +134,218 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='646178956', url='https://music.apple.com/gb/artist/greta-van-fleet/646178956', name='Greta Van Fleet', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3d/9c/c1/3d9cc1d3-3559-8990-7975-1d6f4623ab34/ee01a260-e5ca-406a-ab1d-75690cc3e773_ami-identity-e44564f1ddcbf77baa4a0e9266bbd512-2023-04-06T12-14-32.329Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '646178956', 'type': 'artists', 'href': '/v1/catalog/gb/artists/646178956', 'attributes': {'name': 'Greta Van Fleet', 'genreNames': ['Rock'], 'artwork': {'width': 7304, 'height': 7304, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3d/9c/c1/3d9cc1d3-3559-8990-7975-1d6f4623ab34/ee01a260-e5ca-406a-ab1d-75690cc3e773_ami-identity-e44564f1ddcbf77baa4a0e9266bbd512-2023-04-06T12-14-32.329Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'd0e1f2', 'textColor1': '0d0d0d', 'textColor2': '1e160e', 'textColor3': '34383b', 'textColor4': '413f3c'}, 'url': 'https://music.apple.com/gb/artist/greta-van-fleet/646178956'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/646178956/albums', 'data': [{'id': '1440900183', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440900183'}, {'id': '1543007580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543007580'}, {'id': '1435351050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1435351050'}, {'id': '1680068243', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1680068243'}, {'id': '1478302334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478302334'}, {'id': '1533376687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533376687'}, {'id': '1434924917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434924917'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5880038",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5880038,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/w6UMe0wpitkdRu1AyiXsMRj58l83eQwLhjXASmB_Ixg/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/w6UMe0wpitkdRu1AyiXsMRj58l83eQwLhjXASmB_Ixg/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XXwI4T3iSnEo09_DmXSoe14XvVRM7nWSCORD7fdrrZI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "width": 588
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/1_fLVMJFyZaJV1nO8QDD9qHEHnFkaR-bi38xo811caE/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1_fLVMJFyZaJV1nO8QDD9qHEHnFkaR-bi38xo811caE/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MY-JWxrmtyLsHhg41TQWrqV6KRvhhpqCPsZHudGK7sA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "width": 591
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Ry-v5xCgwO7ToaQn3aufovlDQcU52j__RzOFms5BJdU/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ry-v5xCgwO7ToaQn3aufovlDQcU52j__RzOFms5BJdU/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/zM_tQcmGM3VAevkhndAJQFvpKX3efQo2-y26aLYOIoQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "width": 590
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/rZ43Hp0b4YTBoylZl_Tiu9NoNqs2lMG4BN6oaIk4S78/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rZ43Hp0b4YTBoylZl_Tiu9NoNqs2lMG4BN6oaIk4S78/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KpYdoGPRicY27HBdSnEjFRTWT3oSN43mh-HEk2B3jyk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/GeTKptV6eAsyHFzMtKp6omkplqWtN7qJF7N2GXprj10/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GeTKptV6eAsyHFzMtKp6omkplqWtN7qJF7N2GXprj10/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jtZO-fZeeZsqnzhpLdS17jaF_uyv_5UC5sambiE5YTs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/pMCIPv7r9gbEVk-v7x2Hwzsy1BVYmM24u0JGLmQVRV8/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pMCIPv7r9gbEVk-v7x2Hwzsy1BVYmM24u0JGLmQVRV8/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_yTChbtzqO_X1VRiztpyOPD6GqlLA7rzq-6QR9gGm1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/O0yHWCXPqiWY2KJX63kCs3pq7cM6qbshM2uBlOneFyA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O0yHWCXPqiWY2KJX63kCs3pq7cM6qbshM2uBlOneFyA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/YQI3oRxJQHiTksxZ6Vc3z8DF_7LNOhSTXyVfcgp5BPc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2KqOMeXT6fsd020H0YSej5yhYm6vvk_G12wg6d3BR2g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2KqOMeXT6fsd020H0YSej5yhYm6vvk_G12wg6d3BR2g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/gAreTjJn1LUpZcvfCbrQ5TlsBj2BLmT1rnQQvzT5ULc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/LKIGzHDWa3ZBbyEPnWeiX0jsZ_Zh6urs-0OwMdXW7bE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LKIGzHDWa3ZBbyEPnWeiX0jsZ_Zh6urs-0OwMdXW7bE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sLGOLi8hSVo8lALRpqnQDa-nYu3_zcftz_bQzm-Ns70/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VhNulDn5UG4oEv9Qhvb6XHc45bEANZ0xMyvIB28Qly8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VhNulDn5UG4oEv9Qhvb6XHc45bEANZ0xMyvIB28Qly8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/U0Pb90d_3t2L2Bt3QvtE3lzTlwDB35HHT64mhES15i0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/RgujUleL0gQ9FFGMi01sXvEN48R-bbiRjjczgiymR6A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RgujUleL0gQ9FFGMi01sXvEN48R-bbiRjjczgiymR6A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/7jXGKRCkuu-ORdHeAlpcrdZbTu6yKLPUZWpcpFrUuSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/UwvHJld5j8iaVnx9bGQlfepxeL7RrWqnIuxlyifEmOo/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UwvHJld5j8iaVnx9bGQlfepxeL7RrWqnIuxlyifEmOo/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/UCVmeIvaGC9udeuT8x2vUI26vXPsX-a4Ty6tpCpbuIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/5hAl7LkbcRHNSUTqFid9XjaPmW18nDYjNKtVBPCcXps/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5hAl7LkbcRHNSUTqFid9XjaPmW18nDYjNKtVBPCcXps/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IoRQ4pjM8Z1JcwujYvyJUWatOi03Opcyfw1EmDo4fIY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/Lpo6BbRUgC4OcBHBgtrtGeTPa1W5NdVJgjSH6NdffZ0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Lpo6BbRUgC4OcBHBgtrtGeTPa1W5NdVJgjSH6NdffZ0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/wdPXd5eOSJmUSzVOhBlyD70whP5Kp6Cocx9UKu01h7o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/LCIcrp02xYQuHU7bB-p1VHbssqmwSVQ7yYdPA1L2Fyw/rs:fit/g:sm/q:90/h:450/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LCIcrp02xYQuHU7bB-p1VHbssqmwSVQ7yYdPA1L2Fyw/rs:fit/g:sm/q:90/h:450/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/hRVRMqLkEoQ9gRTpY2qlH1rnN9GDb4uIYWT9PFD11ec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "width": 571
+        },
+        {
+          "height": 444,
+          "resource_url": "https://i.discogs.com/zEQFfb_kRGU6e7c06GgbiHJN4QKTWHytecWGB6-1Ccc/rs:fit/g:sm/q:90/h:444/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zEQFfb_kRGU6e7c06GgbiHJN4QKTWHytecWGB6-1Ccc/rs:fit/g:sm/q:90/h:444/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/3kwoGDWjLOjpVWMD2NClr4iGLj0zHbeVMDH7PDnw80s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 483,
+          "resource_url": "https://i.discogs.com/GVsRt7xnz9B9R1HGLQq0Xo34M_Gv4sUCQjR9y4eF-OQ/rs:fit/g:sm/q:90/h:483/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GVsRt7xnz9B9R1HGLQq0Xo34M_Gv4sUCQjR9y4eF-OQ/rs:fit/g:sm/q:90/h:483/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/AuEjZBS7xFlVU8RtGwyuz0lNDLurj3ITED8tCzQfNEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/LKBsRjFvmDKx89N17EJ_1rrGwYy1W2vmqGQNySgwmtk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LKBsRjFvmDKx89N17EJ_1rrGwYy1W2vmqGQNySgwmtk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eU96q0OzTQQE8-dx1P-_fTvk2zCdfHmCyZUyBp_aQBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 513,
+          "resource_url": "https://i.discogs.com/Tezs33e7T9T5zPvsbGZL2tHDyF9UXGnsDKsnREBU5Y8/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Tezs33e7T9T5zPvsbGZL2tHDyF9UXGnsDKsnREBU5Y8/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GcW3NpKQMauIo73zCroQyunB2Cx6S0jU_hHjXSN-9Cc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 565,
+          "resource_url": "https://i.discogs.com/lcsoROr-Wke4DOn5mOdz2Q9DX7i8Zu0Yf59VHiI3zJg/rs:fit/g:sm/q:90/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lcsoROr-Wke4DOn5mOdz2Q9DX7i8Zu0Yf59VHiI3zJg/rs:fit/g:sm/q:90/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vVBwyzudDPfDhK5h1uVCA_M91kKV-m0wEwca__WRymg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 561,
+          "resource_url": "https://i.discogs.com/61oA_om2bSJv8qWrvNvVxVMxFrDc2VHiKMzm56c63h0/rs:fit/g:sm/q:90/h:561/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/61oA_om2bSJv8qWrvNvVxVMxFrDc2VHiKMzm56c63h0/rs:fit/g:sm/q:90/h:561/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/G_ifHpWPO4G-1OzzacUJh_8ZOogN_nEJSSgKdhbDYCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 6108166,
+          "name": "Joshua Michael Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108166"
+        },
+        {
+          "active": true,
+          "id": 6108167,
+          "name": "Samuel Francis Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108167"
+        },
+        {
+          "active": true,
+          "id": 6108168,
+          "name": "Jacob Thomas Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108168"
+        },
+        {
+          "active": true,
+          "id": 6108169,
+          "name": "Daniel Robert Wagner",
+          "resource_url": "https://api.discogs.com/artists/6108169"
+        }
+      ],
       "name": "Greta Van Fleet",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5880038",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5880038"
-      },
+      "profile": "Hard Rock band from Frankenmuth, Michigan (USA).\r\n\r\nThe band was formed in 2012 by brothers Joshua \"Josh\" Kiszka, Samuel \"Sam\" Kiszka, Jacob \"Jake\" Kiszka and Kyle Hauck. Hauck subsequently left the band, in Oct. 2013 and was replaced by Daniel \"Danny\" Wagner the same year.  The band name was created when one of its members heard a relative mention Gretna Van Fleet, a resident of Frankenmuth; the variation on her name is used with her blessing.",
+      "releases_url": "https://api.discogs.com/artists/5880038/releases",
       "resource_url": "https://api.discogs.com/artists/5880038",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5880038",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5880038-Greta-Van-Fleet",
+      "urls": [
+        "http://gretavanfleet.com",
+        "https://www.facebook.com/gretavanfleet",
+        "https://twitter.com/GretaVanFleet",
+        "https://www.instagram.com/gretavanfleet/",
+        "https://www.youtube.com/@GretaVanFleet",
+        "https://soundcloud.com/gretavanfleet",
+        "https://en.wikipedia.org/wiki/Greta_Van_Fleet"
+      ]
     },
     "identity": {
       "musicbrainz_id": "0be22557-d8c7-4706-a531-625c4c570162",
@@ -263,27 +459,243 @@
         "track": "Heat Above",
         "uri": "https://www.youtube.com/watch?v=vrWFu5k1Jpg"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q42529718",
+        "track": "Highway Tune",
+        "uri": "https://www.youtube.com/watch?v=aJg4OJxp-co"
+      },
+      {
+        "album": null,
+        "id": "Q48743266",
+        "track": "Safari Song",
+        "uri": "https://www.youtube.com/watch?v=PJXizasWnIo"
+      },
+      {
+        "album": null,
+        "id": "Q55955433",
+        "track": "When the Curtain Falls",
+        "uri": "https://www.youtube.com/watch?v=86_vnQc1oBE"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='646178956', url='https://music.apple.com/gb/artist/greta-van-fleet/646178956', name='Greta Van Fleet', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3d/9c/c1/3d9cc1d3-3559-8990-7975-1d6f4623ab34/ee01a260-e5ca-406a-ab1d-75690cc3e773_ami-identity-e44564f1ddcbf77baa4a0e9266bbd512-2023-04-06T12-14-32.329Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '646178956', 'type': 'artists', 'href': '/v1/catalog/gb/artists/646178956', 'attributes': {'name': 'Greta Van Fleet', 'genreNames': ['Rock'], 'artwork': {'width': 7304, 'height': 7304, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3d/9c/c1/3d9cc1d3-3559-8990-7975-1d6f4623ab34/ee01a260-e5ca-406a-ab1d-75690cc3e773_ami-identity-e44564f1ddcbf77baa4a0e9266bbd512-2023-04-06T12-14-32.329Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'd0e1f2', 'textColor1': '0d0d0d', 'textColor2': '1e160e', 'textColor3': '34383b', 'textColor4': '413f3c'}, 'url': 'https://music.apple.com/gb/artist/greta-van-fleet/646178956'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/646178956/albums', 'data': [{'id': '1440900183', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440900183'}, {'id': '1543007580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543007580'}, {'id': '1435351050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1435351050'}, {'id': '1680068243', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1680068243'}, {'id': '1478302334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478302334'}, {'id': '1533376687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533376687'}, {'id': '1434924917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434924917'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5880038",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5880038,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/w6UMe0wpitkdRu1AyiXsMRj58l83eQwLhjXASmB_Ixg/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/w6UMe0wpitkdRu1AyiXsMRj58l83eQwLhjXASmB_Ixg/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XXwI4T3iSnEo09_DmXSoe14XvVRM7nWSCORD7fdrrZI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzNjE3/NS05ODI3LmpwZWc.jpeg",
+          "width": 588
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/1_fLVMJFyZaJV1nO8QDD9qHEHnFkaR-bi38xo811caE/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1_fLVMJFyZaJV1nO8QDD9qHEHnFkaR-bi38xo811caE/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MY-JWxrmtyLsHhg41TQWrqV6KRvhhpqCPsZHudGK7sA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xMjU5LmpwZWc.jpeg",
+          "width": 591
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Ry-v5xCgwO7ToaQn3aufovlDQcU52j__RzOFms5BJdU/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ry-v5xCgwO7ToaQn3aufovlDQcU52j__RzOFms5BJdU/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/zM_tQcmGM3VAevkhndAJQFvpKX3efQo2-y26aLYOIoQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0yNDc2LmpwZWc.jpeg",
+          "width": 590
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/rZ43Hp0b4YTBoylZl_Tiu9NoNqs2lMG4BN6oaIk4S78/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rZ43Hp0b4YTBoylZl_Tiu9NoNqs2lMG4BN6oaIk4S78/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KpYdoGPRicY27HBdSnEjFRTWT3oSN43mh-HEk2B3jyk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03NjA1LmpwZWc.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/GeTKptV6eAsyHFzMtKp6omkplqWtN7qJF7N2GXprj10/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GeTKptV6eAsyHFzMtKp6omkplqWtN7qJF7N2GXprj10/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jtZO-fZeeZsqnzhpLdS17jaF_uyv_5UC5sambiE5YTs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi02OTkyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/pMCIPv7r9gbEVk-v7x2Hwzsy1BVYmM24u0JGLmQVRV8/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pMCIPv7r9gbEVk-v7x2Hwzsy1BVYmM24u0JGLmQVRV8/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_yTChbtzqO_X1VRiztpyOPD6GqlLA7rzq-6QR9gGm1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MDEwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/O0yHWCXPqiWY2KJX63kCs3pq7cM6qbshM2uBlOneFyA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O0yHWCXPqiWY2KJX63kCs3pq7cM6qbshM2uBlOneFyA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/YQI3oRxJQHiTksxZ6Vc3z8DF_7LNOhSTXyVfcgp5BPc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi03ODY2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2KqOMeXT6fsd020H0YSej5yhYm6vvk_G12wg6d3BR2g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2KqOMeXT6fsd020H0YSej5yhYm6vvk_G12wg6d3BR2g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/gAreTjJn1LUpZcvfCbrQ5TlsBj2BLmT1rnQQvzT5ULc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi00NzQzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/LKIGzHDWa3ZBbyEPnWeiX0jsZ_Zh6urs-0OwMdXW7bE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LKIGzHDWa3ZBbyEPnWeiX0jsZ_Zh6urs-0OwMdXW7bE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sLGOLi8hSVo8lALRpqnQDa-nYu3_zcftz_bQzm-Ns70/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi04MzI0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VhNulDn5UG4oEv9Qhvb6XHc45bEANZ0xMyvIB28Qly8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VhNulDn5UG4oEv9Qhvb6XHc45bEANZ0xMyvIB28Qly8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/U0Pb90d_3t2L2Bt3QvtE3lzTlwDB35HHT64mhES15i0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi0xNTg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/RgujUleL0gQ9FFGMi01sXvEN48R-bbiRjjczgiymR6A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RgujUleL0gQ9FFGMi01sXvEN48R-bbiRjjczgiymR6A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/7jXGKRCkuu-ORdHeAlpcrdZbTu6yKLPUZWpcpFrUuSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi01MTAxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/UwvHJld5j8iaVnx9bGQlfepxeL7RrWqnIuxlyifEmOo/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UwvHJld5j8iaVnx9bGQlfepxeL7RrWqnIuxlyifEmOo/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/UCVmeIvaGC9udeuT8x2vUI26vXPsX-a4Ty6tpCpbuIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA4/Ni00NzUwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/5hAl7LkbcRHNSUTqFid9XjaPmW18nDYjNKtVBPCcXps/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5hAl7LkbcRHNSUTqFid9XjaPmW18nDYjNKtVBPCcXps/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IoRQ4pjM8Z1JcwujYvyJUWatOi03Opcyfw1EmDo4fIY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjA5/Ny0xMDUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/Lpo6BbRUgC4OcBHBgtrtGeTPa1W5NdVJgjSH6NdffZ0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Lpo6BbRUgC4OcBHBgtrtGeTPa1W5NdVJgjSH6NdffZ0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/wdPXd5eOSJmUSzVOhBlyD70whP5Kp6Cocx9UKu01h7o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/MC0yOTExLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/LCIcrp02xYQuHU7bB-p1VHbssqmwSVQ7yYdPA1L2Fyw/rs:fit/g:sm/q:90/h:450/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LCIcrp02xYQuHU7bB-p1VHbssqmwSVQ7yYdPA1L2Fyw/rs:fit/g:sm/q:90/h:450/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/hRVRMqLkEoQ9gRTpY2qlH1rnN9GDb4uIYWT9PFD11ec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEw/NC05OTcwLmpwZWc.jpeg",
+          "width": 571
+        },
+        {
+          "height": 444,
+          "resource_url": "https://i.discogs.com/zEQFfb_kRGU6e7c06GgbiHJN4QKTWHytecWGB6-1Ccc/rs:fit/g:sm/q:90/h:444/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zEQFfb_kRGU6e7c06GgbiHJN4QKTWHytecWGB6-1Ccc/rs:fit/g:sm/q:90/h:444/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/3kwoGDWjLOjpVWMD2NClr4iGLj0zHbeVMDH7PDnw80s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/MC04OTgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 483,
+          "resource_url": "https://i.discogs.com/GVsRt7xnz9B9R1HGLQq0Xo34M_Gv4sUCQjR9y4eF-OQ/rs:fit/g:sm/q:90/h:483/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GVsRt7xnz9B9R1HGLQq0Xo34M_Gv4sUCQjR9y4eF-OQ/rs:fit/g:sm/q:90/h:483/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/AuEjZBS7xFlVU8RtGwyuz0lNDLurj3ITED8tCzQfNEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/NC02MjgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/LKBsRjFvmDKx89N17EJ_1rrGwYy1W2vmqGQNySgwmtk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LKBsRjFvmDKx89N17EJ_1rrGwYy1W2vmqGQNySgwmtk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eU96q0OzTQQE8-dx1P-_fTvk2zCdfHmCyZUyBp_aQBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEx/Ny0xOTQ0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 513,
+          "resource_url": "https://i.discogs.com/Tezs33e7T9T5zPvsbGZL2tHDyF9UXGnsDKsnREBU5Y8/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Tezs33e7T9T5zPvsbGZL2tHDyF9UXGnsDKsnREBU5Y8/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GcW3NpKQMauIo73zCroQyunB2Cx6S0jU_hHjXSN-9Cc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTM4MjEy/MS0xMTU1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 565,
+          "resource_url": "https://i.discogs.com/lcsoROr-Wke4DOn5mOdz2Q9DX7i8Zu0Yf59VHiI3zJg/rs:fit/g:sm/q:90/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lcsoROr-Wke4DOn5mOdz2Q9DX7i8Zu0Yf59VHiI3zJg/rs:fit/g:sm/q:90/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vVBwyzudDPfDhK5h1uVCA_M91kKV-m0wEwca__WRymg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTYxOTIzODAx/Mi05MTYzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 561,
+          "resource_url": "https://i.discogs.com/61oA_om2bSJv8qWrvNvVxVMxFrDc2VHiKMzm56c63h0/rs:fit/g:sm/q:90/h:561/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/61oA_om2bSJv8qWrvNvVxVMxFrDc2VHiKMzm56c63h0/rs:fit/g:sm/q:90/h:561/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/G_ifHpWPO4G-1OzzacUJh_8ZOogN_nEJSSgKdhbDYCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODAw/MzgtMTcyMzIxNDcz/Ny00MTM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 6108166,
+          "name": "Joshua Michael Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108166"
+        },
+        {
+          "active": true,
+          "id": 6108167,
+          "name": "Samuel Francis Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108167"
+        },
+        {
+          "active": true,
+          "id": 6108168,
+          "name": "Jacob Thomas Kiszka",
+          "resource_url": "https://api.discogs.com/artists/6108168"
+        },
+        {
+          "active": true,
+          "id": 6108169,
+          "name": "Daniel Robert Wagner",
+          "resource_url": "https://api.discogs.com/artists/6108169"
+        }
+      ],
       "name": "Greta Van Fleet",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5880038",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5880038"
-      },
+      "profile": "Hard Rock band from Frankenmuth, Michigan (USA).\r\n\r\nThe band was formed in 2012 by brothers Joshua \"Josh\" Kiszka, Samuel \"Sam\" Kiszka, Jacob \"Jake\" Kiszka and Kyle Hauck. Hauck subsequently left the band, in Oct. 2013 and was replaced by Daniel \"Danny\" Wagner the same year.  The band name was created when one of its members heard a relative mention Gretna Van Fleet, a resident of Frankenmuth; the variation on her name is used with her blessing.",
+      "releases_url": "https://api.discogs.com/artists/5880038/releases",
       "resource_url": "https://api.discogs.com/artists/5880038",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5880038",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5880038-Greta-Van-Fleet",
+      "urls": [
+        "http://gretavanfleet.com",
+        "https://www.facebook.com/gretavanfleet",
+        "https://twitter.com/GretaVanFleet",
+        "https://www.instagram.com/gretavanfleet/",
+        "https://www.youtube.com/@GretaVanFleet",
+        "https://soundcloud.com/gretavanfleet",
+        "https://en.wikipedia.org/wiki/Greta_Van_Fleet"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Greta Van Fleet', url='https://www.last.fm/music/Greta+Van+Fleet', mbid=None, listeners=701136, playcount=26927316, bio_summary='Formed in Frankenmuth, Michigan in 2012, GRETA VAN FLEET consists of three brothers — vocalist Josh Kiszka, guitarist Jake Kiszka and bassist/keyboardist Sam Kiszka — as well as drummer Danny Wagner. Together they have performed across multiple continents and sold over 3.5 million records worldwide.\\n\\nThey were signed to Lava Records in March 2017 and a month later the band released their debut studio EP, \"Black Smoke Rising\". Their debut single <a href=\"https://www.last.fm/music/Greta+Van+Fleet\">Read more on Last.fm</a>', bio_content='Formed in Frankenmuth, Michigan in 2012, GRETA VAN FLEET consists of three brothers — vocalist Josh Kiszka, guitarist Jake Kiszka and bassist/keyboardist Sam Kiszka — as well as drummer Danny Wagner. Together they have performed across multiple continents and sold over 3.5 million records worldwide.\\n\\nThey were signed to Lava Records in March 2017 and a month later the band released their debut studio EP, \"Black Smoke Rising\". Their debut single, \"Highway Tune\", topped the Billboard US Mainstream Rock and Active Rock Rock stations in September 2017 for four weeks in a row. A second EP  \"From the Fires\", containing the four songs from Black Smoke Rising and four new songs, was released on November 10, 2017, alongside a second single, \"Safari Song\". \\n\\nGRETA VAN FLEET\\'s debut LP,  \"Anthem Of The Peaceful Army\", was released in 2018 to countless accolades including No. 1 Billboard Rock Album and Top 3 on the Billboard 200. Their \"From The Fires\" EP, released in 2017, won \"Best Rock Album\" at the 61st Grammy Awards.\\n\\nTheir 3rd studio album, \"Starcatcher\" (2023) follows GRETA VAN FLEET\\'s second  album  \"The Battle At Garden\\'s Gate\", released in 2021 to extensive chart and critical success. In the US, the album debuted at No. 1 Billboard Rock Album, No. 1 Billboard Hard Rock Album, No. 1 Billboard Vinyl Album, No. 2 Billboard Top Album Sales and in the Top 10 on the Billboard 200. It was a Top 10 album in the U.K. and a major hit around the world.\\n\\nGRETA VAN FLEET is best known for its renowned live performances, selling over one million tickets worldwide. They sold out their entire 2022 arena tour, holding a special energy between them and their devoted fans. With \"Starcatcher\" the band aims to capture that energy in the recording studio.\\n\\nThe band\\'s heavy rock sound is influenced by the work of Led Zeppelin and many other rock and blues acts, with lead vocalist Josh Kiszka having a voice that has been compared to Robert Plant\\'s \"husky howl.\\n\\nGreta Van Fleet\\'s music has been categorized as hard rock and blues rock. Although all four members bonded over blues, each does have their own music tastes; Jake gravitates towards rock and roll, Sam likes jazz, Danny prefers folk, and Josh likes world music. Sam stated that \"It\\'s not like we set out to be a rock and roll band, it\\'s just that sound that comes out [when] we get together and play.\" Songwriting is done by the band as a whole after one of the four members finds the concept for a song. Danny said a lot of their songs are first written in a \"folk set up\" before evolving into something else.\\n\\nGreta Van Fleet are often compared to Led Zeppelin. Jake related that he \"... went through a year of really intensely studying what [Jimmy] Page did ...\", but he has studied other virtuoso rock guitarists in a similar manner, specifically mentioning Pete Townshend. Likewise, on his voice being compared to Robert Plant\\'s, Josh said that Plant has certainly been an influence, \"though it\\'s not what I was going for.\" Stating that he did not even know who Led Zeppelin was until high school, he explained that his singing style came out naturally one day while struggling to be heard over the rest of the band. In a March 2018 interview, Plant cited Greta Van Fleet as one of his favorite young bands, saying \"they are Led Zeppelin I\" and describing Josh as \"a beautiful little singer.\"\\n\\nSome of Jake\\'s guitar influences include John Lee Hooker, Elmore James, Bert Jansch, Eric Clapton and Keith Richards. Some of the drummers that inspired Danny are Carmine Appice, John Bonham, Mitch Mitchell and Michael Shrieve. Sam\\'s favorite bass player is Motown session bassist James Jamerson. <a href=\"https://www.last.fm/music/Greta+Van+Fleet\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['hard rock', 'blues rock', 'rock', 'seen live', 'Led Zeppelin'], similar_artists=[{'name': 'Dirty Honey', 'url': 'https://www.last.fm/music/Dirty+Honey'}, {'name': 'Rival Sons', 'url': 'https://www.last.fm/music/Rival+Sons'}, {'name': 'Goodbye June', 'url': 'https://www.last.fm/music/Goodbye+June'}, {'name': 'Crown Lands', 'url': 'https://www.last.fm/music/Crown+Lands'}, {'name': 'Wolfmother', 'url': 'https://www.last.fm/music/Wolfmother'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Greta Van Fleet', 'url': 'https://www.last.fm/music/Greta+Van+Fleet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '701136', 'playcount': '26927316'}, 'similar': {'artist': [{'name': 'Dirty Honey', 'url': 'https://www.last.fm/music/Dirty+Honey', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rival Sons', 'url': 'https://www.last.fm/music/Rival+Sons', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Goodbye June', 'url': 'https://www.last.fm/music/Goodbye+June', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Crown Lands', 'url': 'https://www.last.fm/music/Crown+Lands', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wolfmother', 'url': 'https://www.last.fm/music/Wolfmother', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}, {'name': 'blues rock', 'url': 'https://www.last.fm/tag/blues+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'Led Zeppelin', 'url': 'https://www.last.fm/tag/Led+Zeppelin'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Greta+Van+Fleet/+wiki'}}, 'published': '17 Nov 2017, 02:55', 'summary': 'Formed in Frankenmuth, Michigan in 2012, GRETA VAN FLEET consists of three brothers — vocalist Josh Kiszka, guitarist Jake Kiszka and bassist/keyboardist Sam Kiszka — as well as drummer Danny Wagner. Together they have performed across multiple continents and sold over 3.5 million records worldwide.\\n\\nThey were signed to Lava Records in March 2017 and a month later the band released their debut studio EP, \"Black Smoke Rising\". Their debut single <a href=\"https://www.last.fm/music/Greta+Van+Fleet\">Read more on Last.fm</a>', 'content': 'Formed in Frankenmuth, Michigan in 2012, GRETA VAN FLEET consists of three brothers — vocalist Josh Kiszka, guitarist Jake Kiszka and bassist/keyboardist Sam Kiszka — as well as drummer Danny Wagner. Together they have performed across multiple continents and sold over 3.5 million records worldwide.\\n\\nThey were signed to Lava Records in March 2017 and a month later the band released their debut studio EP, \"Black Smoke Rising\". Their debut single, \"Highway Tune\", topped the Billboard US Mainstream Rock and Active Rock Rock stations in September 2017 for four weeks in a row. A second EP  \"From the Fires\", containing the four songs from Black Smoke Rising and four new songs, was released on November 10, 2017, alongside a second single, \"Safari Song\". \\n\\nGRETA VAN FLEET\\'s debut LP,  \"Anthem Of The Peaceful Army\", was released in 2018 to countless accolades including No. 1 Billboard Rock Album and Top 3 on the Billboard 200. Their \"From The Fires\" EP, released in 2017, won \"Best Rock Album\" at the 61st Grammy Awards.\\n\\nTheir 3rd studio album, \"Starcatcher\" (2023) follows GRETA VAN FLEET\\'s second  album  \"The Battle At Garden\\'s Gate\", released in 2021 to extensive chart and critical success. In the US, the album debuted at No. 1 Billboard Rock Album, No. 1 Billboard Hard Rock Album, No. 1 Billboard Vinyl Album, No. 2 Billboard Top Album Sales and in the Top 10 on the Billboard 200. It was a Top 10 album in the U.K. and a major hit around the world.\\n\\nGRETA VAN FLEET is best known for its renowned live performances, selling over one million tickets worldwide. They sold out their entire 2022 arena tour, holding a special energy between them and their devoted fans. With \"Starcatcher\" the band aims to capture that energy in the recording studio.\\n\\nThe band\\'s heavy rock sound is influenced by the work of Led Zeppelin and many other rock and blues acts, with lead vocalist Josh Kiszka having a voice that has been compared to Robert Plant\\'s \"husky howl.\\n\\nGreta Van Fleet\\'s music has been categorized as hard rock and blues rock. Although all four members bonded over blues, each does have their own music tastes; Jake gravitates towards rock and roll, Sam likes jazz, Danny prefers folk, and Josh likes world music. Sam stated that \"It\\'s not like we set out to be a rock and roll band, it\\'s just that sound that comes out [when] we get together and play.\" Songwriting is done by the band as a whole after one of the four members finds the concept for a song. Danny said a lot of their songs are first written in a \"folk set up\" before evolving into something else.\\n\\nGreta Van Fleet are often compared to Led Zeppelin. Jake related that he \"... went through a year of really intensely studying what [Jimmy] Page did ...\", but he has studied other virtuoso rock guitarists in a similar manner, specifically mentioning Pete Townshend. Likewise, on his voice being compared to Robert Plant\\'s, Josh said that Plant has certainly been an influence, \"though it\\'s not what I was going for.\" Stating that he did not even know who Led Zeppelin was until high school, he explained that his singing style came out naturally one day while struggling to be heard over the rest of the band. In a March 2018 interview, Plant cited Greta Van Fleet as one of his favorite young bands, saying \"they are Led Zeppelin I\" and describing Josh as \"a beautiful little singer.\"\\n\\nSome of Jake\\'s guitar influences include John Lee Hooker, Elmore James, Bert Jansch, Eric Clapton and Keith Richards. Some of the drummers that inspired Danny are Carmine Appice, John Bonham, Mitch Mitchell and Michael Shrieve. Sam\\'s favorite bass player is Motown session bassist James Jamerson. <a href=\"https://www.last.fm/music/Greta+Van+Fleet\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4NpFxQe2UvRCAjto3JqlSl', url='https://open.spotify.com/artist/4NpFxQe2UvRCAjto3JqlSl', name='Greta Van Fleet', popularity=68, followers=2721114, genres=['rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb301eb2b9d83cf86efa024ccb', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174301eb2b9d83cf86efa024ccb', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178301eb2b9d83cf86efa024ccb', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4NpFxQe2UvRCAjto3JqlSl'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4NpFxQe2UvRCAjto3JqlSl'}, 'followers': {'href': None, 'total': 2721114}, 'genres': ['rock'], 'href': 'https://api.spotify.com/v1/artists/4NpFxQe2UvRCAjto3JqlSl', 'id': '4NpFxQe2UvRCAjto3JqlSl', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb301eb2b9d83cf86efa024ccb', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174301eb2b9d83cf86efa024ccb', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178301eb2b9d83cf86efa024ccb', 'height': 160, 'width': 160}], 'name': 'Greta Van Fleet', 'popularity': 68, 'type': 'artist', 'uri': 'spotify:artist:4NpFxQe2UvRCAjto3JqlSl'})",
@@ -375,6 +787,6 @@
   },
   "spotify_id": "4NpFxQe2UvRCAjto3JqlSl",
   "spotify_url": "https://open.spotify.com/artist/4NpFxQe2UvRCAjto3JqlSl",
-  "updated_at": "2026-10-22T14:07:26.049899",
+  "updated_at": "2026-10-30T18:40:30.622858",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Greta_Van_Fleet"
 }

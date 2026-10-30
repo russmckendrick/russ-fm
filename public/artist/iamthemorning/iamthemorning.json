@@ -94,22 +94,95 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='620341592', url='https://music.apple.com/gb/artist/iamthemorning/620341592', name='Iamthemorning', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/f7/8f/42/f78f4261-d45a-473d-33b1-5650790e0763/mzl.xhzuwwjh.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '620341592', 'type': 'artists', 'href': '/v1/catalog/gb/artists/620341592', 'attributes': {'name': 'Iamthemorning', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/f7/8f/42/f78f4261-d45a-473d-33b1-5650790e0763/mzl.xhzuwwjh.jpg/{w}x{h}bb.jpg', 'bgColor': '1f1e19', 'textColor1': 'd2ddd4', 'textColor2': 'cacabb', 'textColor3': 'aeb6af', 'textColor4': 'a8a79b'}, 'url': 'https://music.apple.com/gb/artist/iamthemorning/620341592'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/620341592/albums', 'data': [{'id': '1086183990', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1086183990'}, {'id': '1463682674', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1463682674'}, {'id': '908329279', 'type': 'albums', 'href': '/v1/catalog/gb/albums/908329279'}, {'id': '1424578057', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1424578057'}, {'id': '628568613', 'type': 'albums', 'href': '/v1/catalog/gb/albums/628568613'}, {'id': '1539532257', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539532257'}, {'id': '1098879201', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1098879201'}, {'id': '795664944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/795664944'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3215892",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3215892,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/eQyn9j4F1ungqltGmbxG0VWY4WoVTM_9EPv7joXUSoY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eQyn9j4F1ungqltGmbxG0VWY4WoVTM_9EPv7joXUSoY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oGUslY2XC_UjpRFVLvTQAZTfe4WscHDe3ClbgLVDLsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/nRWRaQJdCAHF_HsZThlHK-X7xCqsZTJ457269Xe53a0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nRWRaQJdCAHF_HsZThlHK-X7xCqsZTJ457269Xe53a0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iWdCQrCSaT0CWm9x3YuNGHJ2TLIv1Izsm6DotIkk15Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/CFaom3b17cubbMQA4pXVbasIrEpSP9PFDhHmKukQ7A4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CFaom3b17cubbMQA4pXVbasIrEpSP9PFDhHmKukQ7A4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/CnqA6fIWyQ4vY0jzW_7ctCeRxBvlSiI_S4xnscCyuMA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/F-71_0ovNjxg5wmiPZEGmKWGjmup3WC_Qruxhg7rZ_M/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/F-71_0ovNjxg5wmiPZEGmKWGjmup3WC_Qruxhg7rZ_M/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/YLGkTZ7C8GyyxTZX7cVcj4maml_bz7CPYGii0ctJsDg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/BuDrTwjm3Oxam6xF9tfDoMAHFsdP_I69YIYwhxZgSNU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BuDrTwjm3Oxam6xF9tfDoMAHFsdP_I69YIYwhxZgSNU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/pwDhvoJFfC9nyPQlP4WySqJKloltn4o1H4-ydv3S9-E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/bXJ4ikeRiPLLJZWXpgS4TcgXHVOh9Tr4KZnnCcfVMU4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bXJ4ikeRiPLLJZWXpgS4TcgXHVOh9Tr4KZnnCcfVMU4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/haIn7ywOWD3gUP9RSTHeBPjqNIj8ZTp-ZXEoaqeWPWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3653315,
+          "name": "Marjana Semkina",
+          "resource_url": "https://api.discogs.com/artists/3653315"
+        },
+        {
+          "active": true,
+          "id": 3974087,
+          "name": "Gleb Kolyadin",
+          "resource_url": "https://api.discogs.com/artists/3974087"
+        },
+        {
+          "active": true,
+          "id": 4998269,
+          "name": "Evan Carson",
+          "resource_url": "https://api.discogs.com/artists/4998269"
+        }
+      ],
       "name": "Iamthemorning",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3215892",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3215892"
-      },
+      "profile": "Acoustic/chamber progressive rock duo from Saint Petersburg, Russia, formed in 2010.",
+      "releases_url": "https://api.discogs.com/artists/3215892/releases",
       "resource_url": "https://api.discogs.com/artists/3215892",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3215892",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3215892-Iamthemorning",
+      "urls": [
+        "https://www.facebook.com/iamthemorningband",
+        "https://www.AllMusic.com/artist/iamthemorning-mn0003095245",
+        "http://iamthemorningband.bandcamp.com/",
+        "https://www.Deezer.com/fi/artist/4544667",
+        "https://www.instagram.com/iamthemorningband/?hl=de",
+        "http://www.ProgArchives.com/artist.asp?id=7504",
+        "https://open.Spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS/discography/album",
+        "https://twitter.com/themorningband?lang=de",
+        "https://en.wikipedia.org/wiki/Iamthemorning",
+        "https://www.youtube.com/channel/UCS7-B6eEgPHL0G5znR9eTRg"
+      ]
     },
     "identity": {
       "musicbrainz_id": "5854a6de-af8f-4b99-8710-cb47d6436a19",
@@ -119,27 +192,101 @@
     },
     "lastfm": "ArtistLastFmData(name='Iamthemorning', url='https://www.last.fm/music/Iamthemorning', mbid='5854a6de-af8f-4b99-8710-cb47d6436a19', listeners=39863, playcount=1362930, bio_summary='iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>', bio_content='iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar, bass-guitar, drums, string quartet, and number of rather unconventional instruments including harp. \\nAs the cofounder of the band, Gleb, has a classic music education, he takes a great care knowing that all of the listed above are also with the conservatory background. In fact this precise worrying with music quality became a band motto quite from the beginning.\\n\\nThemes and references\\nThe songwriting is rather rich with metaphorical layers: it references Shakespearean poetry, images and a sign of modern culture, visual aesthetics of Pre-Raphaelites and at the same time adopts nearly every significant musical achievement of a progressive rock genre, connotating with the kind of Porcupine Tree, Philip Glass and Kate Bush, musically and lyrically.\\nFor a careful listener the songwriting of Iamthemorning vocalist Marjana tends to describe these deep emotional places, where ones go when overwhelmed with the reality of the world. On the contrary of what might have been thought, there isn\\'t just «sadness, loneliness and pain» in Iamthemorning\\'s lyrical field; there are beauty, happiness and hope too.\\n\\nTone \\nAs St. Petersburg is benamed a cultural capital of Russia, being at the same time one of the most dark and gloomy places in the world; the city of origin couldn\\'t not affect the music of Iamthemorning. The ways of this music are as moody and melancholy as they are sometimes strong, clear and bright. \\n\\nThe big idea\\nTheir sound may vary from chamber acoustic programs to dynamic rockish sets — depending on a stage and circumstances, but central pieces of iamthemorning’s essence always stand out: masterful piano of band cofounder Gleb, sophisticated music structures and modulations, and last but not least — voice of vocalist Marjana with her recognizable intonations and harmony backing vocals. Her singing gives iamthemorning’s music the very intonation that distinguishes the band from the kind. <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-rock', 'acoustic', 'chamber pop', 'russian', 'Progressive rock'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Iamthemorning', 'mbid': '5854a6de-af8f-4b99-8710-cb47d6436a19', 'url': 'https://www.last.fm/music/Iamthemorning', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '39863', 'playcount': '1362930'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'acoustic', 'url': 'https://www.last.fm/tag/acoustic'}, {'name': 'chamber pop', 'url': 'https://www.last.fm/tag/chamber+pop'}, {'name': 'russian', 'url': 'https://www.last.fm/tag/russian'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Iamthemorning/+wiki'}}, 'published': '05 Dec 2011, 16:18', 'summary': 'iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>', 'content': 'iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar, bass-guitar, drums, string quartet, and number of rather unconventional instruments including harp. \\nAs the cofounder of the band, Gleb, has a classic music education, he takes a great care knowing that all of the listed above are also with the conservatory background. In fact this precise worrying with music quality became a band motto quite from the beginning.\\n\\nThemes and references\\nThe songwriting is rather rich with metaphorical layers: it references Shakespearean poetry, images and a sign of modern culture, visual aesthetics of Pre-Raphaelites and at the same time adopts nearly every significant musical achievement of a progressive rock genre, connotating with the kind of Porcupine Tree, Philip Glass and Kate Bush, musically and lyrically.\\nFor a careful listener the songwriting of Iamthemorning vocalist Marjana tends to describe these deep emotional places, where ones go when overwhelmed with the reality of the world. On the contrary of what might have been thought, there isn\\'t just «sadness, loneliness and pain» in Iamthemorning\\'s lyrical field; there are beauty, happiness and hope too.\\n\\nTone \\nAs St. Petersburg is benamed a cultural capital of Russia, being at the same time one of the most dark and gloomy places in the world; the city of origin couldn\\'t not affect the music of Iamthemorning. The ways of this music are as moody and melancholy as they are sometimes strong, clear and bright. \\n\\nThe big idea\\nTheir sound may vary from chamber acoustic programs to dynamic rockish sets — depending on a stage and circumstances, but central pieces of iamthemorning’s essence always stand out: masterful piano of band cofounder Gleb, sophisticated music structures and modulations, and last but not least — voice of vocalist Marjana with her recognizable intonations and harmony backing vocals. Her singing gives iamthemorning’s music the very intonation that distinguishes the band from the kind. <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7xmvkKWYKuJGhmQmuoL7CS', url='https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS', name='Iamthemorning', popularity=20, followers=18423, genres=['progressive rock', 'art rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb89b2848a95330913c4217c4b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517489b2848a95330913c4217c4b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17889b2848a95330913c4217c4b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS'}, 'followers': {'href': None, 'total': 18423}, 'genres': ['progressive rock', 'art rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/7xmvkKWYKuJGhmQmuoL7CS', 'id': '7xmvkKWYKuJGhmQmuoL7CS', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb89b2848a95330913c4217c4b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517489b2848a95330913c4217c4b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17889b2848a95330913c4217c4b', 'height': 160, 'width': 160}], 'name': 'Iamthemorning', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:7xmvkKWYKuJGhmQmuoL7CS'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='620341592', url='https://music.apple.com/gb/artist/iamthemorning/620341592', name='Iamthemorning', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/f7/8f/42/f78f4261-d45a-473d-33b1-5650790e0763/mzl.xhzuwwjh.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '620341592', 'type': 'artists', 'href': '/v1/catalog/gb/artists/620341592', 'attributes': {'name': 'Iamthemorning', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/f7/8f/42/f78f4261-d45a-473d-33b1-5650790e0763/mzl.xhzuwwjh.jpg/{w}x{h}bb.jpg', 'bgColor': '1f1e19', 'textColor1': 'd2ddd4', 'textColor2': 'cacabb', 'textColor3': 'aeb6af', 'textColor4': 'a8a79b'}, 'url': 'https://music.apple.com/gb/artist/iamthemorning/620341592'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/620341592/albums', 'data': [{'id': '1086183990', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1086183990'}, {'id': '1463682674', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1463682674'}, {'id': '908329279', 'type': 'albums', 'href': '/v1/catalog/gb/albums/908329279'}, {'id': '1424578057', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1424578057'}, {'id': '628568613', 'type': 'albums', 'href': '/v1/catalog/gb/albums/628568613'}, {'id': '1539532257', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539532257'}, {'id': '1098879201', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1098879201'}, {'id': '795664944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/795664944'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3215892",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3215892,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/eQyn9j4F1ungqltGmbxG0VWY4WoVTM_9EPv7joXUSoY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eQyn9j4F1ungqltGmbxG0VWY4WoVTM_9EPv7joXUSoY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oGUslY2XC_UjpRFVLvTQAZTfe4WscHDe3ClbgLVDLsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0yMjA0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/nRWRaQJdCAHF_HsZThlHK-X7xCqsZTJ457269Xe53a0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nRWRaQJdCAHF_HsZThlHK-X7xCqsZTJ457269Xe53a0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iWdCQrCSaT0CWm9x3YuNGHJ2TLIv1Izsm6DotIkk15Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTQwMTAzODYz/MS0zOTAwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/CFaom3b17cubbMQA4pXVbasIrEpSP9PFDhHmKukQ7A4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CFaom3b17cubbMQA4pXVbasIrEpSP9PFDhHmKukQ7A4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/CnqA6fIWyQ4vY0jzW_7ctCeRxBvlSiI_S4xnscCyuMA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC02OTI4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/F-71_0ovNjxg5wmiPZEGmKWGjmup3WC_Qruxhg7rZ_M/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/F-71_0ovNjxg5wmiPZEGmKWGjmup3WC_Qruxhg7rZ_M/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/YLGkTZ7C8GyyxTZX7cVcj4maml_bz7CPYGii0ctJsDg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS02NTcwLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/BuDrTwjm3Oxam6xF9tfDoMAHFsdP_I69YIYwhxZgSNU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BuDrTwjm3Oxam6xF9tfDoMAHFsdP_I69YIYwhxZgSNU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/pwDhvoJFfC9nyPQlP4WySqJKloltn4o1H4-ydv3S9-E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OS0zNzM1LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/bXJ4ikeRiPLLJZWXpgS4TcgXHVOh9Tr4KZnnCcfVMU4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bXJ4ikeRiPLLJZWXpgS4TcgXHVOh9Tr4KZnnCcfVMU4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/haIn7ywOWD3gUP9RSTHeBPjqNIj8ZTp-ZXEoaqeWPWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMTU4/OTItMTY5MjEyNjQx/OC01NDg2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3653315,
+          "name": "Marjana Semkina",
+          "resource_url": "https://api.discogs.com/artists/3653315"
+        },
+        {
+          "active": true,
+          "id": 3974087,
+          "name": "Gleb Kolyadin",
+          "resource_url": "https://api.discogs.com/artists/3974087"
+        },
+        {
+          "active": true,
+          "id": 4998269,
+          "name": "Evan Carson",
+          "resource_url": "https://api.discogs.com/artists/4998269"
+        }
+      ],
       "name": "Iamthemorning",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3215892",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3215892"
-      },
+      "profile": "Acoustic/chamber progressive rock duo from Saint Petersburg, Russia, formed in 2010.",
+      "releases_url": "https://api.discogs.com/artists/3215892/releases",
       "resource_url": "https://api.discogs.com/artists/3215892",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3215892",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3215892-Iamthemorning",
+      "urls": [
+        "https://www.facebook.com/iamthemorningband",
+        "https://www.AllMusic.com/artist/iamthemorning-mn0003095245",
+        "http://iamthemorningband.bandcamp.com/",
+        "https://www.Deezer.com/fi/artist/4544667",
+        "https://www.instagram.com/iamthemorningband/?hl=de",
+        "http://www.ProgArchives.com/artist.asp?id=7504",
+        "https://open.Spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS/discography/album",
+        "https://twitter.com/themorningband?lang=de",
+        "https://en.wikipedia.org/wiki/Iamthemorning",
+        "https://www.youtube.com/channel/UCS7-B6eEgPHL0G5znR9eTRg"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Iamthemorning', url='https://www.last.fm/music/Iamthemorning', mbid='5854a6de-af8f-4b99-8710-cb47d6436a19', listeners=39863, playcount=1362930, bio_summary='iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>', bio_content='iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar, bass-guitar, drums, string quartet, and number of rather unconventional instruments including harp. \\nAs the cofounder of the band, Gleb, has a classic music education, he takes a great care knowing that all of the listed above are also with the conservatory background. In fact this precise worrying with music quality became a band motto quite from the beginning.\\n\\nThemes and references\\nThe songwriting is rather rich with metaphorical layers: it references Shakespearean poetry, images and a sign of modern culture, visual aesthetics of Pre-Raphaelites and at the same time adopts nearly every significant musical achievement of a progressive rock genre, connotating with the kind of Porcupine Tree, Philip Glass and Kate Bush, musically and lyrically.\\nFor a careful listener the songwriting of Iamthemorning vocalist Marjana tends to describe these deep emotional places, where ones go when overwhelmed with the reality of the world. On the contrary of what might have been thought, there isn\\'t just «sadness, loneliness and pain» in Iamthemorning\\'s lyrical field; there are beauty, happiness and hope too.\\n\\nTone \\nAs St. Petersburg is benamed a cultural capital of Russia, being at the same time one of the most dark and gloomy places in the world; the city of origin couldn\\'t not affect the music of Iamthemorning. The ways of this music are as moody and melancholy as they are sometimes strong, clear and bright. \\n\\nThe big idea\\nTheir sound may vary from chamber acoustic programs to dynamic rockish sets — depending on a stage and circumstances, but central pieces of iamthemorning’s essence always stand out: masterful piano of band cofounder Gleb, sophisticated music structures and modulations, and last but not least — voice of vocalist Marjana with her recognizable intonations and harmony backing vocals. Her singing gives iamthemorning’s music the very intonation that distinguishes the band from the kind. <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-rock', 'acoustic', 'chamber pop', 'russian', 'Progressive rock'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Iamthemorning', 'mbid': '5854a6de-af8f-4b99-8710-cb47d6436a19', 'url': 'https://www.last.fm/music/Iamthemorning', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '39863', 'playcount': '1362930'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'acoustic', 'url': 'https://www.last.fm/tag/acoustic'}, {'name': 'chamber pop', 'url': 'https://www.last.fm/tag/chamber+pop'}, {'name': 'russian', 'url': 'https://www.last.fm/tag/russian'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Iamthemorning/+wiki'}}, 'published': '05 Dec 2011, 16:18', 'summary': 'iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>', 'content': 'iamthemorning.com\\niamthemorningband.bandcamp.com\\nFacebook\\n\\nWhere are they from \\nIamthemorning is an independent chamber progressive band originated in Russian city St. Petersburg in 2010.\\n\\nWho are they\\nThe core and permanent line-up of the band consists of mere piano (Gleb Kolyadin) and vocals (Mariana Semkina). In times iamthemorning performs as an acoustic duet. However, for the most live performances and occasional recordings band sometimes uses — in various combinations — sessional guitar, bass-guitar, drums, string quartet, and number of rather unconventional instruments including harp. \\nAs the cofounder of the band, Gleb, has a classic music education, he takes a great care knowing that all of the listed above are also with the conservatory background. In fact this precise worrying with music quality became a band motto quite from the beginning.\\n\\nThemes and references\\nThe songwriting is rather rich with metaphorical layers: it references Shakespearean poetry, images and a sign of modern culture, visual aesthetics of Pre-Raphaelites and at the same time adopts nearly every significant musical achievement of a progressive rock genre, connotating with the kind of Porcupine Tree, Philip Glass and Kate Bush, musically and lyrically.\\nFor a careful listener the songwriting of Iamthemorning vocalist Marjana tends to describe these deep emotional places, where ones go when overwhelmed with the reality of the world. On the contrary of what might have been thought, there isn\\'t just «sadness, loneliness and pain» in Iamthemorning\\'s lyrical field; there are beauty, happiness and hope too.\\n\\nTone \\nAs St. Petersburg is benamed a cultural capital of Russia, being at the same time one of the most dark and gloomy places in the world; the city of origin couldn\\'t not affect the music of Iamthemorning. The ways of this music are as moody and melancholy as they are sometimes strong, clear and bright. \\n\\nThe big idea\\nTheir sound may vary from chamber acoustic programs to dynamic rockish sets — depending on a stage and circumstances, but central pieces of iamthemorning’s essence always stand out: masterful piano of band cofounder Gleb, sophisticated music structures and modulations, and last but not least — voice of vocalist Marjana with her recognizable intonations and harmony backing vocals. Her singing gives iamthemorning’s music the very intonation that distinguishes the band from the kind. <a href=\"https://www.last.fm/music/Iamthemorning\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7xmvkKWYKuJGhmQmuoL7CS', url='https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS', name='Iamthemorning', popularity=20, followers=18423, genres=['progressive rock', 'art rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb89b2848a95330913c4217c4b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517489b2848a95330913c4217c4b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17889b2848a95330913c4217c4b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS'}, 'followers': {'href': None, 'total': 18423}, 'genres': ['progressive rock', 'art rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/7xmvkKWYKuJGhmQmuoL7CS', 'id': '7xmvkKWYKuJGhmQmuoL7CS', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb89b2848a95330913c4217c4b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517489b2848a95330913c4217c4b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17889b2848a95330913c4217c4b', 'height': 160, 'width': 160}], 'name': 'Iamthemorning', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:7xmvkKWYKuJGhmQmuoL7CS'})",
@@ -147,6 +294,6 @@
   },
   "spotify_id": "7xmvkKWYKuJGhmQmuoL7CS",
   "spotify_url": "https://open.spotify.com/artist/7xmvkKWYKuJGhmQmuoL7CS",
-  "updated_at": "2026-10-22T14:07:44.428985",
+  "updated_at": "2026-10-30T18:41:01.629213",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Iamthemorning"
 }

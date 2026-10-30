@@ -136,22 +136,69 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='94579', url='https://music.apple.com/gb/artist/temple-of-the-dog/94579', name='Temple of the Dog', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/c2/a9/f8/c2a9f855-7cd8-85a5-77e5-47528ca9a19f/mzl.jjvhunmw.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '94579', 'type': 'artists', 'href': '/v1/catalog/gb/artists/94579', 'attributes': {'name': 'Temple of the Dog', 'genreNames': ['Alternative'], 'artwork': {'width': 3452, 'height': 3452, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/c2/a9/f8/c2a9f855-7cd8-85a5-77e5-47528ca9a19f/mzl.jjvhunmw.jpg/{w}x{h}bb.jpg', 'bgColor': '020202', 'textColor1': 'fbfbfb', 'textColor2': 'd6d6d6', 'textColor3': 'c9c9c9', 'textColor4': 'ababab'}, 'url': 'https://music.apple.com/gb/artist/temple-of-the-dog/94579'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/94579/albums', 'data': [{'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1440657497', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440657497'}, {'id': '1440864963', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440864963'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "262213",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 262213,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/oxs5b1tyDQCiT8sT9hozvF_LFOzGG1_wYWiZSSrmwq8/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/oxs5b1tyDQCiT8sT9hozvF_LFOzGG1_wYWiZSSrmwq8/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/b4PDpYKE74BhOk4C19KEH08t96u8wx86m60ntYN5hkQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261561,
+          "name": "Chris Cornell",
+          "resource_url": "https://api.discogs.com/artists/261561"
+        },
+        {
+          "active": true,
+          "id": 262214,
+          "name": "Eddie Vedder",
+          "resource_url": "https://api.discogs.com/artists/262214"
+        },
+        {
+          "active": true,
+          "id": 275980,
+          "name": "Mike McCready",
+          "resource_url": "https://api.discogs.com/artists/275980"
+        },
+        {
+          "active": true,
+          "id": 284484,
+          "name": "Matt Cameron",
+          "resource_url": "https://api.discogs.com/artists/284484"
+        },
+        {
+          "active": true,
+          "id": 377056,
+          "name": "Jeff Ament",
+          "resource_url": "https://api.discogs.com/artists/377056"
+        },
+        {
+          "active": true,
+          "id": 377057,
+          "name": "Stone Gossard",
+          "resource_url": "https://api.discogs.com/artists/377057"
+        }
+      ],
       "name": "Temple Of The Dog",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "262213",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/262213"
-      },
+      "profile": "Temple Of The Dog was a collaboration between members of [a=Soundgarden] (Cornell & Cameron) and [a=Mother Love Bone] (Gossard & Ament), initiated as a tribute to Mother Love Bone's vocalist Andrew Wood who died of a heroin overdose in March, 1990 - two weeks before the release of MLB's debut album, \"Apple\". \r\n\r\nThe group's one and only album also featured the first recorded appearance of [a=Eddie Vedder], who contributes backing vocals on several tracks. Vedder had recently moved from San Diego to Seattle, and became friends with the band members during the recording of the record. Soon after the Temple Of The Dog sessions, Gossard, Ament, McCready & Vedder went on to form [a=Pearl Jam].\r\n\r\nThe self-titled Temple Of The Dog album was originally released in April, 1991 to very little acclaim and low sales. It was reissued later that year following the success of Soundgarden's \"Badmotorfinger\" and Pearl Jam's \"Ten\", and was marketed at that time as a sort of \"grunge supergroup\" project.\r\n",
+      "releases_url": "https://api.discogs.com/artists/262213/releases",
       "resource_url": "https://api.discogs.com/artists/262213",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/262213",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/262213-Temple-Of-The-Dog",
+      "urls": [
+        "http://www.templeofthedog.com/",
+        "https://en.wikipedia.org/wiki/Temple_of_the_Dog",
+        "https://www.allmusic.com/artist/temple-of-the-dog-mn0000022875",
+        "https://www.instagram.com/templeofthedog/",
+        "https://www.facebook.com/TempleofTheDog/",
+        "https://x.com/templeofthedog"
+      ]
     },
     "identity": {
       "musicbrainz_id": "e9571c17-817f-4d34-ae3f-0c7a96f822c1",
@@ -253,27 +300,82 @@
         "track": "Hunger Strike",
         "uri": "https://www.youtube.com/watch?v=VUb450Alpps"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q3143326",
+        "track": "Hunger Strike",
+        "uri": "https://www.youtube.com/watch?v=VUb450Alpps"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='94579', url='https://music.apple.com/gb/artist/temple-of-the-dog/94579', name='Temple of the Dog', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/c2/a9/f8/c2a9f855-7cd8-85a5-77e5-47528ca9a19f/mzl.jjvhunmw.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '94579', 'type': 'artists', 'href': '/v1/catalog/gb/artists/94579', 'attributes': {'name': 'Temple of the Dog', 'genreNames': ['Alternative'], 'artwork': {'width': 3452, 'height': 3452, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/c2/a9/f8/c2a9f855-7cd8-85a5-77e5-47528ca9a19f/mzl.jjvhunmw.jpg/{w}x{h}bb.jpg', 'bgColor': '020202', 'textColor1': 'fbfbfb', 'textColor2': 'd6d6d6', 'textColor3': 'c9c9c9', 'textColor4': 'ababab'}, 'url': 'https://music.apple.com/gb/artist/temple-of-the-dog/94579'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/94579/albums', 'data': [{'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1436558289', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436558289'}, {'id': '1440657497', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440657497'}, {'id': '1440864963', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440864963'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "262213",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 262213,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/oxs5b1tyDQCiT8sT9hozvF_LFOzGG1_wYWiZSSrmwq8/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/oxs5b1tyDQCiT8sT9hozvF_LFOzGG1_wYWiZSSrmwq8/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/b4PDpYKE74BhOk4C19KEH08t96u8wx86m60ntYN5hkQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MjIx/My0xMTMzMzMzNTg4/LmpwZWc.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261561,
+          "name": "Chris Cornell",
+          "resource_url": "https://api.discogs.com/artists/261561"
+        },
+        {
+          "active": true,
+          "id": 262214,
+          "name": "Eddie Vedder",
+          "resource_url": "https://api.discogs.com/artists/262214"
+        },
+        {
+          "active": true,
+          "id": 275980,
+          "name": "Mike McCready",
+          "resource_url": "https://api.discogs.com/artists/275980"
+        },
+        {
+          "active": true,
+          "id": 284484,
+          "name": "Matt Cameron",
+          "resource_url": "https://api.discogs.com/artists/284484"
+        },
+        {
+          "active": true,
+          "id": 377056,
+          "name": "Jeff Ament",
+          "resource_url": "https://api.discogs.com/artists/377056"
+        },
+        {
+          "active": true,
+          "id": 377057,
+          "name": "Stone Gossard",
+          "resource_url": "https://api.discogs.com/artists/377057"
+        }
+      ],
       "name": "Temple Of The Dog",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "262213",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/262213"
-      },
+      "profile": "Temple Of The Dog was a collaboration between members of [a=Soundgarden] (Cornell & Cameron) and [a=Mother Love Bone] (Gossard & Ament), initiated as a tribute to Mother Love Bone's vocalist Andrew Wood who died of a heroin overdose in March, 1990 - two weeks before the release of MLB's debut album, \"Apple\". \r\n\r\nThe group's one and only album also featured the first recorded appearance of [a=Eddie Vedder], who contributes backing vocals on several tracks. Vedder had recently moved from San Diego to Seattle, and became friends with the band members during the recording of the record. Soon after the Temple Of The Dog sessions, Gossard, Ament, McCready & Vedder went on to form [a=Pearl Jam].\r\n\r\nThe self-titled Temple Of The Dog album was originally released in April, 1991 to very little acclaim and low sales. It was reissued later that year following the success of Soundgarden's \"Badmotorfinger\" and Pearl Jam's \"Ten\", and was marketed at that time as a sort of \"grunge supergroup\" project.\r\n",
+      "releases_url": "https://api.discogs.com/artists/262213/releases",
       "resource_url": "https://api.discogs.com/artists/262213",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/262213",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/262213-Temple-Of-The-Dog",
+      "urls": [
+        "http://www.templeofthedog.com/",
+        "https://en.wikipedia.org/wiki/Temple_of_the_Dog",
+        "https://www.allmusic.com/artist/temple-of-the-dog-mn0000022875",
+        "https://www.instagram.com/templeofthedog/",
+        "https://www.facebook.com/TempleofTheDog/",
+        "https://x.com/templeofthedog"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Temple of the Dog', url='https://www.last.fm/music/Temple+of+the+Dog', mbid='e9571c17-817f-4d34-ae3f-0c7a96f822c1', listeners=890860, playcount=10972183, bio_summary='Temple of the Dog were an American grunge supergroup that formed in Seattle, Washington in 1990. It was conceived by vocalist Chris Cornell of Soundgarden as a tribute to his friend, the late Andrew Wood, lead singer of the bands Malfunkshun and Mother Love Bone. The lineup included Stone Gossard on rhythm guitar, Jeff Ament on bass guitar (both ex-members of Mother Love Bone), Mike McCready (Pearl Jam) on lead guitar, and Matt Cameron (Soundgarden and later Pearl Jam) on drums. <a href=\"https://www.last.fm/music/Temple+of+the+Dog\">Read more on Last.fm</a>', bio_content='Temple of the Dog were an American grunge supergroup that formed in Seattle, Washington in 1990. It was conceived by vocalist Chris Cornell of Soundgarden as a tribute to his friend, the late Andrew Wood, lead singer of the bands Malfunkshun and Mother Love Bone. The lineup included Stone Gossard on rhythm guitar, Jeff Ament on bass guitar (both ex-members of Mother Love Bone), Mike McCready (Pearl Jam) on lead guitar, and Matt Cameron (Soundgarden and later Pearl Jam) on drums. Eddie Vedder appeared as a guest to provide some lead and backing vocals.\\n\\nThe band released its only album, the self-titled Temple of the Dog, in April 1991 through A&M Records. The recording sessions took place in November and December 1990 at London Bridge Studios, in Seattle, Washington with producer Rakesh \"Rick\" Parashar. Although earning praise from music critics at the time of its release, the album was not widely recognized until 1992, when Vedder, Ament, Gossard, and McCready had their breakthrough with Pearl Jam. Cameron would later join Pearl Jam, serving as drummer since 1998.\\n\\nThe band toured in 2016 in celebration of the 25th anniversary of their self-titled album. \\n\\nTemple of the Dog was started by Soundgarden frontman Chris Cornell, who had been a roommate of Andrew Wood, the lead singer of Malfunkshun and Mother Love Bone. Wood died on March 19, 1990, of a heroin overdose, the day Cornell got back from a tour. As he went on to tour Europe a few days later, he started writing songs in tribute to his late friend. The result was two songs, \"Reach Down\" and \"Say Hello 2 Heaven\", which he recorded as soon as he returned home from touring.\\n\\nThe recorded material was slow and melodic, musically different from the aggressive rock music of Soundgarden. Cornell approached Wood\\'s former bandmates, Stone Gossard and Jeff Ament—who were still figuring out how to continue without Mother Love Bone—with the intention of releasing the songs as a single. Ament described the collaboration as \"a really good thing at the time\" for Gossard and him that put them into a \"band situation where we could play and make music.\" The band\\'s lineup was completed by the addition of Soundgarden (and later Pearl Jam) drummer Matt Cameron and future Pearl Jam lead guitarist Mike McCready. They named themselves Temple of the Dog, a reference to a line in the lyrics of the Mother Love Bone song \"Man of Golden Words\". <a href=\"https://www.last.fm/music/Temple+of+the+Dog\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Grunge', 'rock', 'alternative rock', 'alternative', 'seattle'], similar_artists=[{'name': 'Mother Love Bone', 'url': 'https://www.last.fm/music/Mother+Love+Bone'}, {'name': 'Soundgarden', 'url': 'https://www.last.fm/music/Soundgarden'}, {'name': 'Chris Cornell', 'url': 'https://www.last.fm/music/Chris+Cornell'}, {'name': 'Mad Season', 'url': 'https://www.last.fm/music/Mad+Season'}, {'name': 'Stone Temple Pilots', 'url': 'https://www.last.fm/music/Stone+Temple+Pilots'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Temple of the Dog', 'mbid': 'e9571c17-817f-4d34-ae3f-0c7a96f822c1', 'url': 'https://www.last.fm/music/Temple+of+the+Dog', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '890860', 'playcount': '10972183'}, 'similar': {'artist': [{'name': 'Mother Love Bone', 'url': 'https://www.last.fm/music/Mother+Love+Bone', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Soundgarden', 'url': 'https://www.last.fm/music/Soundgarden', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Chris Cornell', 'url': 'https://www.last.fm/music/Chris+Cornell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Mad Season', 'url': 'https://www.last.fm/music/Mad+Season', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Stone Temple Pilots', 'url': 'https://www.last.fm/music/Stone+Temple+Pilots', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Grunge', 'url': 'https://www.last.fm/tag/Grunge'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'seattle', 'url': 'https://www.last.fm/tag/seattle'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Temple+of+the+Dog/+wiki'}}, 'published': '10 Feb 2006, 20:07', 'summary': 'Temple of the Dog were an American grunge supergroup that formed in Seattle, Washington in 1990. It was conceived by vocalist Chris Cornell of Soundgarden as a tribute to his friend, the late Andrew Wood, lead singer of the bands Malfunkshun and Mother Love Bone. The lineup included Stone Gossard on rhythm guitar, Jeff Ament on bass guitar (both ex-members of Mother Love Bone), Mike McCready (Pearl Jam) on lead guitar, and Matt Cameron (Soundgarden and later Pearl Jam) on drums. <a href=\"https://www.last.fm/music/Temple+of+the+Dog\">Read more on Last.fm</a>', 'content': 'Temple of the Dog were an American grunge supergroup that formed in Seattle, Washington in 1990. It was conceived by vocalist Chris Cornell of Soundgarden as a tribute to his friend, the late Andrew Wood, lead singer of the bands Malfunkshun and Mother Love Bone. The lineup included Stone Gossard on rhythm guitar, Jeff Ament on bass guitar (both ex-members of Mother Love Bone), Mike McCready (Pearl Jam) on lead guitar, and Matt Cameron (Soundgarden and later Pearl Jam) on drums. Eddie Vedder appeared as a guest to provide some lead and backing vocals.\\n\\nThe band released its only album, the self-titled Temple of the Dog, in April 1991 through A&M Records. The recording sessions took place in November and December 1990 at London Bridge Studios, in Seattle, Washington with producer Rakesh \"Rick\" Parashar. Although earning praise from music critics at the time of its release, the album was not widely recognized until 1992, when Vedder, Ament, Gossard, and McCready had their breakthrough with Pearl Jam. Cameron would later join Pearl Jam, serving as drummer since 1998.\\n\\nThe band toured in 2016 in celebration of the 25th anniversary of their self-titled album. \\n\\nTemple of the Dog was started by Soundgarden frontman Chris Cornell, who had been a roommate of Andrew Wood, the lead singer of Malfunkshun and Mother Love Bone. Wood died on March 19, 1990, of a heroin overdose, the day Cornell got back from a tour. As he went on to tour Europe a few days later, he started writing songs in tribute to his late friend. The result was two songs, \"Reach Down\" and \"Say Hello 2 Heaven\", which he recorded as soon as he returned home from touring.\\n\\nThe recorded material was slow and melodic, musically different from the aggressive rock music of Soundgarden. Cornell approached Wood\\'s former bandmates, Stone Gossard and Jeff Ament—who were still figuring out how to continue without Mother Love Bone—with the intention of releasing the songs as a single. Ament described the collaboration as \"a really good thing at the time\" for Gossard and him that put them into a \"band situation where we could play and make music.\" The band\\'s lineup was completed by the addition of Soundgarden (and later Pearl Jam) drummer Matt Cameron and future Pearl Jam lead guitarist Mike McCready. They named themselves Temple of the Dog, a reference to a line in the lyrics of the Mother Love Bone song \"Man of Golden Words\". <a href=\"https://www.last.fm/music/Temple+of+the+Dog\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0iHb0mCbqZTYeb4y9Pirrd', url='https://open.spotify.com/artist/0iHb0mCbqZTYeb4y9Pirrd', name='Temple Of The Dog', popularity=59, followers=1371600, genres=['grunge', 'post-grunge'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf47df3543858204550cc19d3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f47df3543858204550cc19d3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f47df3543858204550cc19d3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0iHb0mCbqZTYeb4y9Pirrd'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0iHb0mCbqZTYeb4y9Pirrd'}, 'followers': {'href': None, 'total': 1371600}, 'genres': ['grunge', 'post-grunge'], 'href': 'https://api.spotify.com/v1/artists/0iHb0mCbqZTYeb4y9Pirrd', 'id': '0iHb0mCbqZTYeb4y9Pirrd', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf47df3543858204550cc19d3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f47df3543858204550cc19d3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f47df3543858204550cc19d3', 'height': 160, 'width': 160}], 'name': 'Temple Of The Dog', 'popularity': 59, 'type': 'artist', 'uri': 'spotify:artist:0iHb0mCbqZTYeb4y9Pirrd'})",
@@ -365,6 +467,6 @@
   },
   "spotify_id": "0iHb0mCbqZTYeb4y9Pirrd",
   "spotify_url": "https://open.spotify.com/artist/0iHb0mCbqZTYeb4y9Pirrd",
-  "updated_at": "2026-10-22T14:11:51.146189",
+  "updated_at": "2026-10-30T18:45:53.184076",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Temple_of_the_Dog"
 }

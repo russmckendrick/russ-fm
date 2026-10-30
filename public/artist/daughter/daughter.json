@@ -135,22 +135,69 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='469701923', url='https://music.apple.com/gb/artist/daughter/469701923', name='Daughter', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/dc/19/90/dc1990cd-2292-0293-d8a1-b131cd8e644a/f4c487a4-832d-4e1b-a794-51825f2163bb_ami-identity-b19fa17eff175314fbe1b279eb85cc54-2023-01-09T15-26-20.081Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '469701923', 'type': 'artists', 'href': '/v1/catalog/gb/artists/469701923', 'attributes': {'name': 'Daughter', 'genreNames': ['Alternative'], 'artwork': {'width': 2127, 'height': 2127, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/dc/19/90/dc1990cd-2292-0293-d8a1-b131cd8e644a/f4c487a4-832d-4e1b-a794-51825f2163bb_ami-identity-b19fa17eff175314fbe1b279eb85cc54-2023-01-09T15-26-20.081Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '171719', 'textColor1': 'd2dff1', 'textColor2': '7aa8df', 'textColor3': 'adb7c5', 'textColor4': '668bb7'}, 'url': 'https://music.apple.com/gb/artist/daughter/469701923'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/469701923/albums', 'data': [{'id': '593614982', 'type': 'albums', 'href': '/v1/catalog/gb/albums/593614982'}, {'id': '1040326532', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1040326532'}, {'id': '506433765', 'type': 'albums', 'href': '/v1/catalog/gb/albums/506433765'}, {'id': '1265372774', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1265372774'}, {'id': '435915339', 'type': 'albums', 'href': '/v1/catalog/gb/albums/435915339'}, {'id': '1654233350', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1654233350'}, {'id': '555850540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/555850540'}, {'id': '1159784094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1159784094'}, {'id': '850913585', 'type': 'albums', 'href': '/v1/catalog/gb/albums/850913585'}, {'id': '1380171980', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380171980'}, {'id': '633978529', 'type': 'albums', 'href': '/v1/catalog/gb/albums/633978529'}, {'id': '1788964919', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788964919'}, {'id': '942454473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/942454473'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2218596",
-      "images": [],
-      "members": [],
-      "name": "Daughter",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2218596",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2218596"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2218596,
+      "images": [
+        {
+          "height": 326,
+          "resource_url": "https://i.discogs.com/5v_JKizRHhLWiv_xHjzsGUE4ywQymM-eb1vIg0MoJ_U/rs:fit/g:sm/q:90/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/5v_JKizRHhLWiv_xHjzsGUE4ywQymM-eb1vIg0MoJ_U/rs:fit/g:sm/q:90/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/YOZqooxBSkEIisFH85afwGpvMk10rNCKQDbxHFB5Pj8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/5863Nfi_GPqTHuzXCRXc7ajYhtwCO8nOVkeGDeT1__8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5863Nfi_GPqTHuzXCRXc7ajYhtwCO8nOVkeGDeT1__8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/nsLh10_f4f_JAfRVxaIhurFe4OlJ91jvHBvvcgFWyrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/s5suh4mdoQM8Cl0bwclfFRVYwJL0yFk4j3O_505tbQU/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s5suh4mdoQM8Cl0bwclfFRVYwJL0yFk4j3O_505tbQU/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/i7LcPOnNMkbnEIvpb3HGib5cZAaEq7gI8REcrkuSpNY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1914011,
+          "name": "Elena Tonra",
+          "resource_url": "https://api.discogs.com/artists/1914011"
+        },
+        {
+          "active": true,
+          "id": 2218595,
+          "name": "Igor Haefeli",
+          "resource_url": "https://api.discogs.com/artists/2218595"
+        },
+        {
+          "active": true,
+          "id": 2844566,
+          "name": "Remi Aguilella",
+          "resource_url": "https://api.discogs.com/artists/2844566"
+        }
+      ],
+      "name": "Daughter (2)",
+      "profile": "London-based indie folk trio of Elena Tonra (vocals, guitar), Igor Haefeli (guitar) and Remi Aguilella (drums).\r\nStarting life in 2010 as an outlet for the musings of Elena and Igor, then fellow class-mates studying music in college, they soon gained attention with their self-released four-track EP, His Young Heart, in April 2011, and the Communion Records sanctioned The Wild Youth EP, which followed that October (around the same time as Remi joined the band).",
+      "releases_url": "https://api.discogs.com/artists/2218596/releases",
       "resource_url": "https://api.discogs.com/artists/2218596",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2218596",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2218596-Daughter-2",
+      "urls": [
+        "http://www.ohdaughter.com",
+        "https://www.facebook.com/ohdaughter",
+        "https://twitter.com/ohdaughter",
+        "https://www.instagram.com/ohdaughter/",
+        "https://www.youtube.com/user/ohdaughter",
+        "https://ohdaughter.bandcamp.com/",
+        "https://myspace.com/ohdaughter",
+        "https://soundcloud.com/ohdaughter"
+      ]
     },
     "identity": {
       "musicbrainz_id": "a1ced3e5-476c-4046-bd74-d428f419989b",
@@ -258,27 +305,75 @@
         "track": "Still",
         "uri": "https://www.youtube.com/watch?v=uUWrcFpmI5U"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='469701923', url='https://music.apple.com/gb/artist/daughter/469701923', name='Daughter', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/dc/19/90/dc1990cd-2292-0293-d8a1-b131cd8e644a/f4c487a4-832d-4e1b-a794-51825f2163bb_ami-identity-b19fa17eff175314fbe1b279eb85cc54-2023-01-09T15-26-20.081Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '469701923', 'type': 'artists', 'href': '/v1/catalog/gb/artists/469701923', 'attributes': {'name': 'Daughter', 'genreNames': ['Alternative'], 'artwork': {'width': 2127, 'height': 2127, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/dc/19/90/dc1990cd-2292-0293-d8a1-b131cd8e644a/f4c487a4-832d-4e1b-a794-51825f2163bb_ami-identity-b19fa17eff175314fbe1b279eb85cc54-2023-01-09T15-26-20.081Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '171719', 'textColor1': 'd2dff1', 'textColor2': '7aa8df', 'textColor3': 'adb7c5', 'textColor4': '668bb7'}, 'url': 'https://music.apple.com/gb/artist/daughter/469701923'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/469701923/albums', 'data': [{'id': '593614982', 'type': 'albums', 'href': '/v1/catalog/gb/albums/593614982'}, {'id': '1040326532', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1040326532'}, {'id': '506433765', 'type': 'albums', 'href': '/v1/catalog/gb/albums/506433765'}, {'id': '1265372774', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1265372774'}, {'id': '435915339', 'type': 'albums', 'href': '/v1/catalog/gb/albums/435915339'}, {'id': '1654233350', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1654233350'}, {'id': '555850540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/555850540'}, {'id': '1159784094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1159784094'}, {'id': '850913585', 'type': 'albums', 'href': '/v1/catalog/gb/albums/850913585'}, {'id': '1380171980', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380171980'}, {'id': '633978529', 'type': 'albums', 'href': '/v1/catalog/gb/albums/633978529'}, {'id': '1788964919', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788964919'}, {'id': '942454473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/942454473'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2218596",
-      "images": [],
-      "members": [],
-      "name": "Daughter",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2218596",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2218596"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2218596,
+      "images": [
+        {
+          "height": 326,
+          "resource_url": "https://i.discogs.com/5v_JKizRHhLWiv_xHjzsGUE4ywQymM-eb1vIg0MoJ_U/rs:fit/g:sm/q:90/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/5v_JKizRHhLWiv_xHjzsGUE4ywQymM-eb1vIg0MoJ_U/rs:fit/g:sm/q:90/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/YOZqooxBSkEIisFH85afwGpvMk10rNCKQDbxHFB5Pj8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTQwNjEzODY4/NC0zOTg2LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/5863Nfi_GPqTHuzXCRXc7ajYhtwCO8nOVkeGDeT1__8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5863Nfi_GPqTHuzXCRXc7ajYhtwCO8nOVkeGDeT1__8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/nsLh10_f4f_JAfRVxaIhurFe4OlJ91jvHBvvcgFWyrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTYyNDUwNzAw/NS03NzIxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/s5suh4mdoQM8Cl0bwclfFRVYwJL0yFk4j3O_505tbQU/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s5suh4mdoQM8Cl0bwclfFRVYwJL0yFk4j3O_505tbQU/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/i7LcPOnNMkbnEIvpb3HGib5cZAaEq7gI8REcrkuSpNY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyMTg1/OTYtMTM2NDI1NTgw/Ny02NzEwLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1914011,
+          "name": "Elena Tonra",
+          "resource_url": "https://api.discogs.com/artists/1914011"
+        },
+        {
+          "active": true,
+          "id": 2218595,
+          "name": "Igor Haefeli",
+          "resource_url": "https://api.discogs.com/artists/2218595"
+        },
+        {
+          "active": true,
+          "id": 2844566,
+          "name": "Remi Aguilella",
+          "resource_url": "https://api.discogs.com/artists/2844566"
+        }
+      ],
+      "name": "Daughter (2)",
+      "profile": "London-based indie folk trio of Elena Tonra (vocals, guitar), Igor Haefeli (guitar) and Remi Aguilella (drums).\r\nStarting life in 2010 as an outlet for the musings of Elena and Igor, then fellow class-mates studying music in college, they soon gained attention with their self-released four-track EP, His Young Heart, in April 2011, and the Communion Records sanctioned The Wild Youth EP, which followed that October (around the same time as Remi joined the band).",
+      "releases_url": "https://api.discogs.com/artists/2218596/releases",
       "resource_url": "https://api.discogs.com/artists/2218596",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2218596",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2218596-Daughter-2",
+      "urls": [
+        "http://www.ohdaughter.com",
+        "https://www.facebook.com/ohdaughter",
+        "https://twitter.com/ohdaughter",
+        "https://www.instagram.com/ohdaughter/",
+        "https://www.youtube.com/user/ohdaughter",
+        "https://ohdaughter.bandcamp.com/",
+        "https://myspace.com/ohdaughter",
+        "https://soundcloud.com/ohdaughter"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Daughter', url='https://www.last.fm/music/Daughter', mbid='a1ced3e5-476c-4046-bd74-d428f419989b', listeners=1392829, playcount=51608213, bio_summary='Daughter is Elena Tonra, a singer/songwriter from North London, UK.\\n\\nAfter releasing a 4 track Demo EP, Elena joined forces with Igor Haefeli to produce \\'His Young Heart\\' in April 2011. On November 2011, with the addition of Remi Aguilella on drums, \\'The Wild Youth - EP\\' was released via Communion Records.\\n\\nThe band signed in 2012 with 4AD and in August a new track, \\'Smother\\', surface online. A 7\" single of the song was released on October 1st, including a new version of \\'Run\\'. <a href=\"https://www.last.fm/music/Daughter\">Read more on Last.fm</a>', bio_content='Daughter is Elena Tonra, a singer/songwriter from North London, UK.\\n\\nAfter releasing a 4 track Demo EP, Elena joined forces with Igor Haefeli to produce \\'His Young Heart\\' in April 2011. On November 2011, with the addition of Remi Aguilella on drums, \\'The Wild Youth - EP\\' was released via Communion Records.\\n\\nThe band signed in 2012 with 4AD and in August a new track, \\'Smother\\', surface online. A 7\" single of the song was released on October 1st, including a new version of \\'Run\\'. The final advance of their first full length album, \\'Still\\', premiered its video on January 28th 2013. \\n\\n\\'If You Leave\\' was released on March 18th through 4AD and April 30th in North America through Glassnote, closely followed by the single \\'Human\\' backed with the previously only available on the Japanese version of the album, \\'Drift\\'. \\n\\'Youth\\' was released on the 12th August as a limited edition 7\" together with a new track, \\'Smoke\\'.\\n\\nOn September 2013, the band performed at Festival no.6 in Portmeirion Town Hall with an 8 piece ensemble alongside composer, arranger and conductor Joe Duddell. They reconvened to re-enact the set with 10 graduates of the Royal Northern College of Music at London\\'s iconic Air Studio. Filmed by Jane Pollard and Iain Forsyth, the \\'4AD Session EP\\' was released on 15th April 2014.\\n\\nThe first of a video trilogy filmed by Pollard and Forsyth, \\'Doing The Right Thing\\', was launched on 30th September 2015. The song was also the first single off their second album \\'Not to Disappear\\' released on 15th January 2016. The debut follow-up was recorded with Nicolas Vernhes (Deerhunter, War On Drugs, Animal Collective) at his Rare Book Room studio in Greenpoint, Brooklyn. \\'Numbers\\' was released on November 10th, as the band embarked on a European and US Tour through March 2016. ‘How’, the final video in the \\'3 Films\\' trilogy, was released on February 26, 2016. \\n\\nIn 2017, the band were selected to make the soundtrack for the episodic adventure game series Life is Strange\\'s prequel, Before the Storm, and the band released the album \"Music From Before the Storm\" at September 1, 2017.\\nThe album contains 13 tracks, and the track named \"The Right Way Around\" is the main song played in the game.\\nAt April 19, 2018, the track \"All I Wanted\" was performed live at Asylum Chapel.\\n\\nIn January 2023, Daughter released a new single, \"Be On Your Way\" from their upcoming album \"Stereo Mind Game\". Following the single, the band released another track, \"Party\" on February 8, and three weeks later, they shared the song \"Swim Back\". The full album was officially released on April 7, 2023, still under the 4AD label.\\n\\nThe video session featuring Elena, Igor, and Remi, consisting of 7 tracks from Middle Farm Studios and originally published on YouTube in April 2024, is now available on streaming platforms as an EP \"Middle Farm Session\".\\nhttp://ohdaughter.com <a href=\"https://www.last.fm/music/Daughter\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'indie folk', 'acoustic', 'female vocalists', 'british'], similar_artists=[{'name': 'Ex:Re', 'url': 'https://www.last.fm/music/Ex:Re'}, {'name': 'Lanterns on the Lake', 'url': 'https://www.last.fm/music/Lanterns+on+the+Lake'}, {'name': 'Syd Matters', 'url': 'https://www.last.fm/music/Syd+Matters'}, {'name': 'Lucy Rose', 'url': 'https://www.last.fm/music/Lucy+Rose'}, {'name': 'Angus & Julia Stone', 'url': 'https://www.last.fm/music/Angus+&+Julia+Stone'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Daughter', 'mbid': 'a1ced3e5-476c-4046-bd74-d428f419989b', 'url': 'https://www.last.fm/music/Daughter', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1392829', 'playcount': '51608213'}, 'similar': {'artist': [{'name': 'Ex:Re', 'url': 'https://www.last.fm/music/Ex:Re', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lanterns on the Lake', 'url': 'https://www.last.fm/music/Lanterns+on+the+Lake', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Syd Matters', 'url': 'https://www.last.fm/music/Syd+Matters', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lucy Rose', 'url': 'https://www.last.fm/music/Lucy+Rose', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Angus & Julia Stone', 'url': 'https://www.last.fm/music/Angus+&+Julia+Stone', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'indie folk', 'url': 'https://www.last.fm/tag/indie+folk'}, {'name': 'acoustic', 'url': 'https://www.last.fm/tag/acoustic'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Daughter/+wiki'}}, 'published': '17 Nov 2010, 16:43', 'summary': 'Daughter is Elena Tonra, a singer/songwriter from North London, UK.\\n\\nAfter releasing a 4 track Demo EP, Elena joined forces with Igor Haefeli to produce \\'His Young Heart\\' in April 2011. On November 2011, with the addition of Remi Aguilella on drums, \\'The Wild Youth - EP\\' was released via Communion Records.\\n\\nThe band signed in 2012 with 4AD and in August a new track, \\'Smother\\', surface online. A 7\" single of the song was released on October 1st, including a new version of \\'Run\\'. <a href=\"https://www.last.fm/music/Daughter\">Read more on Last.fm</a>', 'content': 'Daughter is Elena Tonra, a singer/songwriter from North London, UK.\\n\\nAfter releasing a 4 track Demo EP, Elena joined forces with Igor Haefeli to produce \\'His Young Heart\\' in April 2011. On November 2011, with the addition of Remi Aguilella on drums, \\'The Wild Youth - EP\\' was released via Communion Records.\\n\\nThe band signed in 2012 with 4AD and in August a new track, \\'Smother\\', surface online. A 7\" single of the song was released on October 1st, including a new version of \\'Run\\'. The final advance of their first full length album, \\'Still\\', premiered its video on January 28th 2013. \\n\\n\\'If You Leave\\' was released on March 18th through 4AD and April 30th in North America through Glassnote, closely followed by the single \\'Human\\' backed with the previously only available on the Japanese version of the album, \\'Drift\\'. \\n\\'Youth\\' was released on the 12th August as a limited edition 7\" together with a new track, \\'Smoke\\'.\\n\\nOn September 2013, the band performed at Festival no.6 in Portmeirion Town Hall with an 8 piece ensemble alongside composer, arranger and conductor Joe Duddell. They reconvened to re-enact the set with 10 graduates of the Royal Northern College of Music at London\\'s iconic Air Studio. Filmed by Jane Pollard and Iain Forsyth, the \\'4AD Session EP\\' was released on 15th April 2014.\\n\\nThe first of a video trilogy filmed by Pollard and Forsyth, \\'Doing The Right Thing\\', was launched on 30th September 2015. The song was also the first single off their second album \\'Not to Disappear\\' released on 15th January 2016. The debut follow-up was recorded with Nicolas Vernhes (Deerhunter, War On Drugs, Animal Collective) at his Rare Book Room studio in Greenpoint, Brooklyn. \\'Numbers\\' was released on November 10th, as the band embarked on a European and US Tour through March 2016. ‘How’, the final video in the \\'3 Films\\' trilogy, was released on February 26, 2016. \\n\\nIn 2017, the band were selected to make the soundtrack for the episodic adventure game series Life is Strange\\'s prequel, Before the Storm, and the band released the album \"Music From Before the Storm\" at September 1, 2017.\\nThe album contains 13 tracks, and the track named \"The Right Way Around\" is the main song played in the game.\\nAt April 19, 2018, the track \"All I Wanted\" was performed live at Asylum Chapel.\\n\\nIn January 2023, Daughter released a new single, \"Be On Your Way\" from their upcoming album \"Stereo Mind Game\". Following the single, the band released another track, \"Party\" on February 8, and three weeks later, they shared the song \"Swim Back\". The full album was officially released on April 7, 2023, still under the 4AD label.\\n\\nThe video session featuring Elena, Igor, and Remi, consisting of 7 tracks from Middle Farm Studios and originally published on YouTube in April 2024, is now available on streaming platforms as an EP \"Middle Farm Session\".\\nhttp://ohdaughter.com <a href=\"https://www.last.fm/music/Daughter\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='46CitWgnWrvF9t70C2p1Me', url='https://open.spotify.com/artist/46CitWgnWrvF9t70C2p1Me', name='Daughter', popularity=62, followers=1406844, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb0df313bc99b24276ea978437', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051740df313bc99b24276ea978437', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1780df313bc99b24276ea978437', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/46CitWgnWrvF9t70C2p1Me'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/46CitWgnWrvF9t70C2p1Me'}, 'followers': {'href': None, 'total': 1406844}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/46CitWgnWrvF9t70C2p1Me', 'id': '46CitWgnWrvF9t70C2p1Me', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb0df313bc99b24276ea978437', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051740df313bc99b24276ea978437', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1780df313bc99b24276ea978437', 'height': 160, 'width': 160}], 'name': 'Daughter', 'popularity': 62, 'type': 'artist', 'uri': 'spotify:artist:46CitWgnWrvF9t70C2p1Me'})",
@@ -370,6 +465,6 @@
   },
   "spotify_id": "46CitWgnWrvF9t70C2p1Me",
   "spotify_url": "https://open.spotify.com/artist/46CitWgnWrvF9t70C2p1Me",
-  "updated_at": "2026-10-22T14:06:04.032995",
+  "updated_at": "2026-10-30T18:38:28.132988",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Daughter_(band)"
 }

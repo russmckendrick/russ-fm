@@ -98,22 +98,230 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1464756', url='https://music.apple.com/gb/artist/peter-buck/1464756', name='Peter Buck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/16/2d/91162d10-1aeb-6736-0f72-dbaba9821724/190296861369.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1464756', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1464756', 'attributes': {'name': 'Peter Buck', 'genreNames': ['Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/16/2d/91162d10-1aeb-6736-0f72-dbaba9821724/190296861369.jpg/{w}x{h}ac.jpg', 'bgColor': '231d1d', 'textColor1': 'ffffff', 'textColor2': '16dad5', 'textColor3': 'd2d1d1', 'textColor4': '19b4b0'}, 'url': 'https://music.apple.com/gb/artist/peter-buck/1464756'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1464756/albums', 'next': '/v1/catalog/gb/artists/1464756/albums?offset=25', 'data': [{'id': '1637127211', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1637127211'}, {'id': '1491896559', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1491896559'}, {'id': '1436935176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436935176'}, {'id': '1811382502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811382502'}, {'id': '1813895656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1813895656'}, {'id': '1769485173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769485173'}, {'id': '1818391323', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1818391323'}, {'id': '1495872624', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1495872624'}, {'id': '1822567886', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1822567886'}, {'id': '1816995759', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816995759'}, {'id': '1816996922', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816996922'}, {'id': '1644398001', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1644398001'}, {'id': '1657049205', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1657049205'}, {'id': '1818429395', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1818429395'}, {'id': '1724284389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1724284389'}, {'id': '1640215931', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1640215931'}, {'id': '337002604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/337002604'}, {'id': '1646165252', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1646165252'}, {'id': '342871125', 'type': 'albums', 'href': '/v1/catalog/gb/albums/342871125'}, {'id': '1699988142', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699988142'}, {'id': '1643571366', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1643571366'}, {'id': '1800290973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1800290973'}, {'id': '1299622360', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1299622360'}, {'id': '492308080', 'type': 'albums', 'href': '/v1/catalog/gb/albums/492308080'}, {'id': '1771457509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1771457509'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "268477",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 7104090,
+          "name": "Raoul (26)",
+          "resource_url": "https://api.discogs.com/artists/7104090"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 74500,
+          "name": "R.E.M.",
+          "resource_url": "https://api.discogs.com/artists/74500"
+        },
+        {
+          "active": true,
+          "id": 275497,
+          "name": "Bingo Hand Job",
+          "resource_url": "https://api.discogs.com/artists/275497"
+        },
+        {
+          "active": true,
+          "id": 288329,
+          "name": "The Minus 5",
+          "resource_url": "https://api.discogs.com/artists/288329"
+        },
+        {
+          "active": true,
+          "id": 306086,
+          "name": "Musical Kings",
+          "resource_url": "https://api.discogs.com/artists/306086"
+        },
+        {
+          "active": true,
+          "id": 508108,
+          "name": "Tuatara",
+          "resource_url": "https://api.discogs.com/artists/508108"
+        },
+        {
+          "active": true,
+          "id": 531534,
+          "name": "Nigel And The Crosses",
+          "resource_url": "https://api.discogs.com/artists/531534"
+        },
+        {
+          "active": true,
+          "id": 953278,
+          "name": "Hindu Love Gods",
+          "resource_url": "https://api.discogs.com/artists/953278"
+        },
+        {
+          "active": false,
+          "id": 1134116,
+          "name": "Full Time Men",
+          "resource_url": "https://api.discogs.com/artists/1134116"
+        },
+        {
+          "active": true,
+          "id": 1209010,
+          "name": "The Baseball Project",
+          "resource_url": "https://api.discogs.com/artists/1209010"
+        },
+        {
+          "active": true,
+          "id": 1438371,
+          "name": "Robyn Hitchcock & The Venus 3",
+          "resource_url": "https://api.discogs.com/artists/1438371"
+        },
+        {
+          "active": true,
+          "id": 1882249,
+          "name": "Tired Pony",
+          "resource_url": "https://api.discogs.com/artists/1882249"
+        },
+        {
+          "active": true,
+          "id": 2934817,
+          "name": "Slow Music Project",
+          "resource_url": "https://api.discogs.com/artists/2934817"
+        },
+        {
+          "active": true,
+          "id": 3988222,
+          "name": "Barrett Martin Group",
+          "resource_url": "https://api.discogs.com/artists/3988222"
+        },
+        {
+          "active": true,
+          "id": 5614153,
+          "name": "Filthy Friends",
+          "resource_url": "https://api.discogs.com/artists/5614153"
+        },
+        {
+          "active": true,
+          "id": 5831094,
+          "name": "The No Ones",
+          "resource_url": "https://api.discogs.com/artists/5831094"
+        },
+        {
+          "active": true,
+          "id": 6494085,
+          "name": "Arthur Buck (2)",
+          "resource_url": "https://api.discogs.com/artists/6494085"
+        },
+        {
+          "active": true,
+          "id": 9439408,
+          "name": "Berry, Buck, Mills, Stipe",
+          "resource_url": "https://api.discogs.com/artists/9439408"
+        },
+        {
+          "active": true,
+          "id": 16180474,
+          "name": "Drink The Sea",
+          "resource_url": "https://api.discogs.com/artists/16180474"
+        }
+      ],
+      "id": 268477,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kK6PfD2YfNsHxKoLy18QOWt2hgKkXw1GzeZ9lT7zzCE/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/kK6PfD2YfNsHxKoLy18QOWt2hgKkXw1GzeZ9lT7zzCE/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4qKtvIRlksV9iYMEwjICjsSP6fXIIm1YiKHtncCB2JM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "width": 504
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/fUZmMVpJqeijYZcFo4rDmhfcG9XnA2anV5Al9RiJtmY/rs:fit/g:sm/q:90/h:600/w:529/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fUZmMVpJqeijYZcFo4rDmhfcG9XnA2anV5Al9RiJtmY/rs:fit/g:sm/q:90/h:600/w:529/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yAKHqZkwDIWYvQ2G0w5Gu79Tp0EFD46RYJrGWoSLPNY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "width": 529
+        },
+        {
+          "height": 520,
+          "resource_url": "https://i.discogs.com/ZFe_qRW3Pck8lg0lNSaiPx27Ogdd57iRFXikyBZb-0o/rs:fit/g:sm/q:90/h:520/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZFe_qRW3Pck8lg0lNSaiPx27Ogdd57iRFXikyBZb-0o/rs:fit/g:sm/q:90/h:520/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RvN8ARDKboieyxhKhforCvC878FpRCtM5LNkXljBNVU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/-feiTQNbeqGlSu5_exQiAWYRJ5mUNBVeKNXLYaeI3CE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-feiTQNbeqGlSu5_exQiAWYRJ5mUNBVeKNXLYaeI3CE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/vu4mobhrECdcIRRvTMdu7SIVlmvapIMSQcvOtViACMo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 580,
+          "resource_url": "https://i.discogs.com/rBn8Oor30Zc1Eq4ye1dFxbvufUiyGdUKlJvCmckLaXk/rs:fit/g:sm/q:90/h:580/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rBn8Oor30Zc1Eq4ye1dFxbvufUiyGdUKlJvCmckLaXk/rs:fit/g:sm/q:90/h:580/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kX-QLV0KnTeuDNjO_YzcRIb-8bYcDwUrvr_D906hQrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/qBEMlVoAe9zj63Iq98ZA40MM4WgCzCLANvxE4_1usjE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qBEMlVoAe9zj63Iq98ZA40MM4WgCzCLANvxE4_1usjE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0SXyRyimlHj7Sm32lBYWbjzeceN-UF6bFzDHX6U_YW0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/JlKZWh_zLkmt1RXF0dBJKz_qNiY4oOvLWhFy5ujiI38/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JlKZWh_zLkmt1RXF0dBJKz_qNiY4oOvLWhFy5ujiI38/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/OuKm0MXn_COOmWalaxmxZtfar2WoqP-vf0FnIB1MarQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/S521k6_cfj3r1mtDlLpKpSCW_GzVatkF6yg5HRMG1Kk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S521k6_cfj3r1mtDlLpKpSCW_GzVatkF6yg5HRMG1Kk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qOR14WNToRe_r0F6pKKyq0jL_8WS5ew96qGHn7jBaTc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Peter Buck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "268477",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/268477"
-      },
+      "namevariations": [
+        "Back",
+        "Brick",
+        "Buch",
+        "Buck",
+        "Buck 250",
+        "Buck Peter",
+        "Buck Peter Lawrence",
+        "Bucks",
+        "Lawrence P. Buck",
+        "P Buck",
+        "P L Buck",
+        "P. Buck",
+        "P. L. Buck",
+        "P.B.",
+        "P.Buck",
+        "P.L. Buck",
+        "P.l. Buck",
+        "PB",
+        "PL Buck",
+        "Pater Lawrence Buck",
+        "Pete",
+        "Pete Buck",
+        "Peter",
+        "Peter L. Buck",
+        "Peter Lawrence Buck",
+        "Peter T. Buck",
+        "Бак"
+      ],
+      "profile": "American rock guitarist born December 6, 1956 in Oakland, California.\r\n\r\nGuitarist for [a=R.E.M.].",
+      "realname": "Peter Ernest Lawrence Buck",
+      "releases_url": "https://api.discogs.com/artists/268477/releases",
       "resource_url": "https://api.discogs.com/artists/268477",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/268477",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/268477-Peter-Buck",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Peter_Buck",
+        "https://www.allmusic.com/artist/peter-buck-mn0000319364"
+      ]
     },
     "identity": {
       "musicbrainz_id": "2bab20bf-8dab-4af8-b7b0-ba8e30860261",
@@ -166,27 +374,236 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1464756', url='https://music.apple.com/gb/artist/peter-buck/1464756', name='Peter Buck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/16/2d/91162d10-1aeb-6736-0f72-dbaba9821724/190296861369.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1464756', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1464756', 'attributes': {'name': 'Peter Buck', 'genreNames': ['Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/16/2d/91162d10-1aeb-6736-0f72-dbaba9821724/190296861369.jpg/{w}x{h}ac.jpg', 'bgColor': '231d1d', 'textColor1': 'ffffff', 'textColor2': '16dad5', 'textColor3': 'd2d1d1', 'textColor4': '19b4b0'}, 'url': 'https://music.apple.com/gb/artist/peter-buck/1464756'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1464756/albums', 'next': '/v1/catalog/gb/artists/1464756/albums?offset=25', 'data': [{'id': '1637127211', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1637127211'}, {'id': '1491896559', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1491896559'}, {'id': '1436935176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436935176'}, {'id': '1811382502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811382502'}, {'id': '1813895656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1813895656'}, {'id': '1769485173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769485173'}, {'id': '1818391323', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1818391323'}, {'id': '1495872624', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1495872624'}, {'id': '1822567886', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1822567886'}, {'id': '1816995759', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816995759'}, {'id': '1816996922', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816996922'}, {'id': '1644398001', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1644398001'}, {'id': '1657049205', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1657049205'}, {'id': '1818429395', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1818429395'}, {'id': '1724284389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1724284389'}, {'id': '1640215931', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1640215931'}, {'id': '337002604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/337002604'}, {'id': '1646165252', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1646165252'}, {'id': '342871125', 'type': 'albums', 'href': '/v1/catalog/gb/albums/342871125'}, {'id': '1699988142', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699988142'}, {'id': '1643571366', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1643571366'}, {'id': '1800290973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1800290973'}, {'id': '1299622360', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1299622360'}, {'id': '492308080', 'type': 'albums', 'href': '/v1/catalog/gb/albums/492308080'}, {'id': '1771457509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1771457509'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "268477",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 7104090,
+          "name": "Raoul (26)",
+          "resource_url": "https://api.discogs.com/artists/7104090"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 74500,
+          "name": "R.E.M.",
+          "resource_url": "https://api.discogs.com/artists/74500"
+        },
+        {
+          "active": true,
+          "id": 275497,
+          "name": "Bingo Hand Job",
+          "resource_url": "https://api.discogs.com/artists/275497"
+        },
+        {
+          "active": true,
+          "id": 288329,
+          "name": "The Minus 5",
+          "resource_url": "https://api.discogs.com/artists/288329"
+        },
+        {
+          "active": true,
+          "id": 306086,
+          "name": "Musical Kings",
+          "resource_url": "https://api.discogs.com/artists/306086"
+        },
+        {
+          "active": true,
+          "id": 508108,
+          "name": "Tuatara",
+          "resource_url": "https://api.discogs.com/artists/508108"
+        },
+        {
+          "active": true,
+          "id": 531534,
+          "name": "Nigel And The Crosses",
+          "resource_url": "https://api.discogs.com/artists/531534"
+        },
+        {
+          "active": true,
+          "id": 953278,
+          "name": "Hindu Love Gods",
+          "resource_url": "https://api.discogs.com/artists/953278"
+        },
+        {
+          "active": false,
+          "id": 1134116,
+          "name": "Full Time Men",
+          "resource_url": "https://api.discogs.com/artists/1134116"
+        },
+        {
+          "active": true,
+          "id": 1209010,
+          "name": "The Baseball Project",
+          "resource_url": "https://api.discogs.com/artists/1209010"
+        },
+        {
+          "active": true,
+          "id": 1438371,
+          "name": "Robyn Hitchcock & The Venus 3",
+          "resource_url": "https://api.discogs.com/artists/1438371"
+        },
+        {
+          "active": true,
+          "id": 1882249,
+          "name": "Tired Pony",
+          "resource_url": "https://api.discogs.com/artists/1882249"
+        },
+        {
+          "active": true,
+          "id": 2934817,
+          "name": "Slow Music Project",
+          "resource_url": "https://api.discogs.com/artists/2934817"
+        },
+        {
+          "active": true,
+          "id": 3988222,
+          "name": "Barrett Martin Group",
+          "resource_url": "https://api.discogs.com/artists/3988222"
+        },
+        {
+          "active": true,
+          "id": 5614153,
+          "name": "Filthy Friends",
+          "resource_url": "https://api.discogs.com/artists/5614153"
+        },
+        {
+          "active": true,
+          "id": 5831094,
+          "name": "The No Ones",
+          "resource_url": "https://api.discogs.com/artists/5831094"
+        },
+        {
+          "active": true,
+          "id": 6494085,
+          "name": "Arthur Buck (2)",
+          "resource_url": "https://api.discogs.com/artists/6494085"
+        },
+        {
+          "active": true,
+          "id": 9439408,
+          "name": "Berry, Buck, Mills, Stipe",
+          "resource_url": "https://api.discogs.com/artists/9439408"
+        },
+        {
+          "active": true,
+          "id": 16180474,
+          "name": "Drink The Sea",
+          "resource_url": "https://api.discogs.com/artists/16180474"
+        }
+      ],
+      "id": 268477,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kK6PfD2YfNsHxKoLy18QOWt2hgKkXw1GzeZ9lT7zzCE/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/kK6PfD2YfNsHxKoLy18QOWt2hgKkXw1GzeZ9lT7zzCE/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4qKtvIRlksV9iYMEwjICjsSP6fXIIm1YiKHtncCB2JM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTgxMzYuanBlZw.jpeg",
+          "width": 504
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/fUZmMVpJqeijYZcFo4rDmhfcG9XnA2anV5Al9RiJtmY/rs:fit/g:sm/q:90/h:600/w:529/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fUZmMVpJqeijYZcFo4rDmhfcG9XnA2anV5Al9RiJtmY/rs:fit/g:sm/q:90/h:600/w:529/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yAKHqZkwDIWYvQ2G0w5Gu79Tp0EFD46RYJrGWoSLPNY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTMyMDkuanBlZw.jpeg",
+          "width": 529
+        },
+        {
+          "height": 520,
+          "resource_url": "https://i.discogs.com/ZFe_qRW3Pck8lg0lNSaiPx27Ogdd57iRFXikyBZb-0o/rs:fit/g:sm/q:90/h:520/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZFe_qRW3Pck8lg0lNSaiPx27Ogdd57iRFXikyBZb-0o/rs:fit/g:sm/q:90/h:520/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RvN8ARDKboieyxhKhforCvC878FpRCtM5LNkXljBNVU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNzg1MDkzMDc4/LTY1MDAuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/-feiTQNbeqGlSu5_exQiAWYRJ5mUNBVeKNXLYaeI3CE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-feiTQNbeqGlSu5_exQiAWYRJ5mUNBVeKNXLYaeI3CE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/vu4mobhrECdcIRRvTMdu7SIVlmvapIMSQcvOtViACMo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjE2NDc5MzUw/LTE4OTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 580,
+          "resource_url": "https://i.discogs.com/rBn8Oor30Zc1Eq4ye1dFxbvufUiyGdUKlJvCmckLaXk/rs:fit/g:sm/q:90/h:580/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rBn8Oor30Zc1Eq4ye1dFxbvufUiyGdUKlJvCmckLaXk/rs:fit/g:sm/q:90/h:580/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kX-QLV0KnTeuDNjO_YzcRIb-8bYcDwUrvr_D906hQrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMTgzMTQ4OTIw/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/qBEMlVoAe9zj63Iq98ZA40MM4WgCzCLANvxE4_1usjE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qBEMlVoAe9zj63Iq98ZA40MM4WgCzCLANvxE4_1usjE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0SXyRyimlHj7Sm32lBYWbjzeceN-UF6bFzDHX6U_YW0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzQ5/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/JlKZWh_zLkmt1RXF0dBJKz_qNiY4oOvLWhFy5ujiI38/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JlKZWh_zLkmt1RXF0dBJKz_qNiY4oOvLWhFy5ujiI38/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/OuKm0MXn_COOmWalaxmxZtfar2WoqP-vf0FnIB1MarQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xMjI5OTkzMzU4/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/S521k6_cfj3r1mtDlLpKpSCW_GzVatkF6yg5HRMG1Kk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S521k6_cfj3r1mtDlLpKpSCW_GzVatkF6yg5HRMG1Kk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qOR14WNToRe_r0F6pKKyq0jL_8WS5ew96qGHn7jBaTc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODQ3/Ny0xNjkyNzcwNzEz/LTQ0MDMuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Peter Buck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "268477",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/268477"
-      },
+      "namevariations": [
+        "Back",
+        "Brick",
+        "Buch",
+        "Buck",
+        "Buck 250",
+        "Buck Peter",
+        "Buck Peter Lawrence",
+        "Bucks",
+        "Lawrence P. Buck",
+        "P Buck",
+        "P L Buck",
+        "P. Buck",
+        "P. L. Buck",
+        "P.B.",
+        "P.Buck",
+        "P.L. Buck",
+        "P.l. Buck",
+        "PB",
+        "PL Buck",
+        "Pater Lawrence Buck",
+        "Pete",
+        "Pete Buck",
+        "Peter",
+        "Peter L. Buck",
+        "Peter Lawrence Buck",
+        "Peter T. Buck",
+        "Бак"
+      ],
+      "profile": "American rock guitarist born December 6, 1956 in Oakland, California.\r\n\r\nGuitarist for [a=R.E.M.].",
+      "realname": "Peter Ernest Lawrence Buck",
+      "releases_url": "https://api.discogs.com/artists/268477/releases",
       "resource_url": "https://api.discogs.com/artists/268477",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/268477",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/268477-Peter-Buck",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Peter_Buck",
+        "https://www.allmusic.com/artist/peter-buck-mn0000319364"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Peter Buck', url='https://www.last.fm/music/Peter+Buck', mbid='2bab20bf-8dab-4af8-b7b0-ba8e30860261', listeners=1715, playcount=30349, bio_summary='Peter Buck was born December 6, 1956 in Berkeley, California. \\nHe is most well known as the guitarist in R.E.M.. <a href=\"https://www.last.fm/music/Peter+Buck\">Read more on Last.fm</a>', bio_content='Peter Buck was born December 6, 1956 in Berkeley, California. \\nHe is most well known as the guitarist in R.E.M.. <a href=\"https://www.last.fm/music/Peter+Buck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['alternative rock', 'Garage Rock', 'seen live', 'rock', 'classic rock'], similar_artists=[{'name': 'Mike Mills', 'url': 'https://www.last.fm/music/Mike+Mills'}, {'name': 'Lee Ranaldo and the Dust', 'url': 'https://www.last.fm/music/Lee+Ranaldo+and+the+Dust'}, {'name': 'Girl Trouble', 'url': 'https://www.last.fm/music/Girl+Trouble'}, {'name': 'Nova Mob', 'url': 'https://www.last.fm/music/Nova+Mob'}, {'name': 'Gallon Drunk', 'url': 'https://www.last.fm/music/Gallon+Drunk'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Peter Buck', 'mbid': '2bab20bf-8dab-4af8-b7b0-ba8e30860261', 'url': 'https://www.last.fm/music/Peter+Buck', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1715', 'playcount': '30349'}, 'similar': {'artist': [{'name': 'Mike Mills', 'url': 'https://www.last.fm/music/Mike+Mills', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lee Ranaldo and the Dust', 'url': 'https://www.last.fm/music/Lee+Ranaldo+and+the+Dust', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Girl Trouble', 'url': 'https://www.last.fm/music/Girl+Trouble', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Nova Mob', 'url': 'https://www.last.fm/music/Nova+Mob', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gallon Drunk', 'url': 'https://www.last.fm/music/Gallon+Drunk', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'Garage Rock', 'url': 'https://www.last.fm/tag/Garage+Rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'classic rock', 'url': 'https://www.last.fm/tag/classic+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Peter+Buck/+wiki'}}, 'published': '09 Jul 2008, 03:20', 'summary': 'Peter Buck was born December 6, 1956 in Berkeley, California. \\nHe is most well known as the guitarist in R.E.M.. <a href=\"https://www.last.fm/music/Peter+Buck\">Read more on Last.fm</a>', 'content': 'Peter Buck was born December 6, 1956 in Berkeley, California. \\nHe is most well known as the guitarist in R.E.M.. <a href=\"https://www.last.fm/music/Peter+Buck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0sqfioVq0W7KyfszjuiDMu', url='https://open.spotify.com/artist/0sqfioVq0W7KyfszjuiDMu', name='Peter Buck', popularity=27, followers=2063, genres=['chamber music'], images=[{'url': 'https://i.scdn.co/image/da62399eced9bcd2ff84fd93321b0f1007a80f01', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/18d9d2f1b41156c9cea97c95b7e42c65f7f8503f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/923746f74204f3406516965ccc982a8f0e8d84ce', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/be3d094cb1a1f75ac05593a2d86d6d67f2c745e8', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0sqfioVq0W7KyfszjuiDMu'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0sqfioVq0W7KyfszjuiDMu'}, 'followers': {'href': None, 'total': 2063}, 'genres': ['chamber music'], 'href': 'https://api.spotify.com/v1/artists/0sqfioVq0W7KyfszjuiDMu', 'id': '0sqfioVq0W7KyfszjuiDMu', 'images': [{'url': 'https://i.scdn.co/image/da62399eced9bcd2ff84fd93321b0f1007a80f01', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/18d9d2f1b41156c9cea97c95b7e42c65f7f8503f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/923746f74204f3406516965ccc982a8f0e8d84ce', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/be3d094cb1a1f75ac05593a2d86d6d67f2c745e8', 'height': 64, 'width': 64}], 'name': 'Peter Buck', 'popularity': 27, 'type': 'artist', 'uri': 'spotify:artist:0sqfioVq0W7KyfszjuiDMu'})",
@@ -236,6 +653,6 @@
   },
   "spotify_id": "0sqfioVq0W7KyfszjuiDMu",
   "spotify_url": "https://open.spotify.com/artist/0sqfioVq0W7KyfszjuiDMu",
-  "updated_at": "2026-10-22T14:10:11.349830",
+  "updated_at": "2026-10-30T18:43:58.292335",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Peter_Buck"
 }

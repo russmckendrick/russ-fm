@@ -91,151 +91,116 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1503046976', url='https://music.apple.com/gb/artist/tori-handsley/1503046976', name='Tori Handsley', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/5d/22/695d22a3-38f7-2596-48bb-478030574b7c/5020675000124.png/2000x2000ac.jpg', genres=['Jazz'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1503046976', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1503046976', 'attributes': {'name': 'Tori Handsley', 'genreNames': ['Jazz'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/5d/22/695d22a3-38f7-2596-48bb-478030574b7c/5020675000124.png/{w}x{h}ac.jpg', 'bgColor': 'f3e3ca', 'textColor1': '0f0e0e', 'textColor2': '161614', 'textColor3': '3c3834', 'textColor4': '423f38'}, 'url': 'https://music.apple.com/gb/artist/tori-handsley/1503046976'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1503046976/albums', 'data': [{'id': '1617398228', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617398228'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5790492",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 5816519,
+          "name": "Tori Handsley Trio",
+          "resource_url": "https://api.discogs.com/artists/5816519"
+        }
+      ],
+      "id": 5790492,
+      "images": [
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/OmLepQM262xaKx3MUybX1ARUn1FsliyL_cXO8C2ijbo/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/OmLepQM262xaKx3MUybX1ARUn1FsliyL_cXO8C2ijbo/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/TjJ1G4H-DxTik8iJGyWrV3po0dD3BjPJPkLPIinfrxU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 445,
+          "resource_url": "https://i.discogs.com/dCgrFzZlVkuVRKQKz4IhBwEtFt3GWCkknuScSif_zc0/rs:fit/g:sm/q:90/h:445/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dCgrFzZlVkuVRKQKz4IhBwEtFt3GWCkknuScSif_zc0/rs:fit/g:sm/q:90/h:445/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/T1XSMxztl9wSljiF-ETkpnfsS2mgCw4LK3bqyxvBne0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "width": 306
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/th3LGRh0oeE-CjtSoMHTNdsT179TyYxCsli1hQ_QxR4/rs:fit/g:sm/q:90/h:459/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/th3LGRh0oeE-CjtSoMHTNdsT179TyYxCsli1hQ_QxR4/rs:fit/g:sm/q:90/h:459/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ULesZ-jnXnWDHVnkBaka5e6QMqKmmGIbqW_4PuvGCNM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "width": 306
+        }
+      ],
       "name": "Tori Handsley",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5790492",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5790492"
-      },
+      "profile": "British harpist",
+      "releases_url": "https://api.discogs.com/artists/5790492/releases",
       "resource_url": "https://api.discogs.com/artists/5790492",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5790492",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5790492-Tori-Handsley",
+      "urls": [
+        "http://www.torishands.com"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:13:20.795809",
+      "wikidata_id": "Q120186213",
+      "wikipedia_title": null
+    },
+    "lastfm": "ArtistLastFmData(name='Tori Handsley', url='https://www.last.fm/music/Tori+Handsley', mbid=None, listeners=1211, playcount=5766, bio_summary='Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>', bio_content='Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. \\'As We Stand\\' her debut album released on Cadillac Records 27th November 2020. She co-hosts and curates the monthly session \"Freedom: The Art of Improvisation\" at the Vortex, Voted One of the Top 6 Sessions in the UK by the Evening Standard, and is a qualified Performance Coach ILM coaching individuals in the Art of Performance. She is a member of Warriors International and has performed with artists including: Shabaka Hutchings, Binker and Moses, Yussef Dayes, Nikki Yeoh, Mark Mondesir, Orphy Robinson, Pat Thomas, Evan Parker and Nigel Kennedy for his Duke Ellington European Tour.\\n\\nTori has performed at venues including: Royal Albert Hall, Purcell Room, Queen Elizabeth Hall, Ronnie Scotts, Vortex, Union Chapel, Jazz in the Round and is the recommended harpist for many venues including: Blenheim Palace, Highclere Castle, The Ashmolean, Waddesdon Dairy, Caswell House, Compleat Angler, Taplow House & Eynsham Hall.\\nhttp://www.torishands.com/ <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['jazz', 'experimental', 'UK', 'avant-jazz'], similar_artists=[{'name': 'Waaju', 'url': 'https://www.last.fm/music/Waaju'}, {'name': 'Run Logan Run', 'url': 'https://www.last.fm/music/Run+Logan+Run'}, {'name': 'Jeremy Cunningham', 'url': 'https://www.last.fm/music/Jeremy+Cunningham'}, {'name': 'Petter Eldh', 'url': 'https://www.last.fm/music/Petter+Eldh'}, {'name': 'Levitation Orchestra', 'url': 'https://www.last.fm/music/Levitation+Orchestra'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Tori Handsley', 'url': 'https://www.last.fm/music/Tori+Handsley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1211', 'playcount': '5766'}, 'similar': {'artist': [{'name': 'Waaju', 'url': 'https://www.last.fm/music/Waaju', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Run Logan Run', 'url': 'https://www.last.fm/music/Run+Logan+Run', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jeremy Cunningham', 'url': 'https://www.last.fm/music/Jeremy+Cunningham', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Petter Eldh', 'url': 'https://www.last.fm/music/Petter+Eldh', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Levitation Orchestra', 'url': 'https://www.last.fm/music/Levitation+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'UK', 'url': 'https://www.last.fm/tag/UK'}, {'name': 'avant-jazz', 'url': 'https://www.last.fm/tag/avant-jazz'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Tori+Handsley/+wiki'}}, 'published': '06 Nov 2020, 15:19', 'summary': 'Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>', 'content': 'Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. \\'As We Stand\\' her debut album released on Cadillac Records 27th November 2020. She co-hosts and curates the monthly session \"Freedom: The Art of Improvisation\" at the Vortex, Voted One of the Top 6 Sessions in the UK by the Evening Standard, and is a qualified Performance Coach ILM coaching individuals in the Art of Performance. She is a member of Warriors International and has performed with artists including: Shabaka Hutchings, Binker and Moses, Yussef Dayes, Nikki Yeoh, Mark Mondesir, Orphy Robinson, Pat Thomas, Evan Parker and Nigel Kennedy for his Duke Ellington European Tour.\\n\\nTori has performed at venues including: Royal Albert Hall, Purcell Room, Queen Elizabeth Hall, Ronnie Scotts, Vortex, Union Chapel, Jazz in the Round and is the recommended harpist for many venues including: Blenheim Palace, Highclere Castle, The Ashmolean, Waddesdon Dairy, Caswell House, Compleat Angler, Taplow House & Eynsham Hall.\\nhttp://www.torishands.com/ <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='55oSUcWSIYc2mObuVdnT9Z', url='https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z', name='Tori Handsley', popularity=1, followers=568, genres=['nu jazz'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2737ce993e4fb5300c4e06195cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0293dd2ae131441b34584670d3', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048517ce993e4fb5300c4e06195cc', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z'}, 'followers': {'href': None, 'total': 568}, 'genres': ['nu jazz'], 'href': 'https://api.spotify.com/v1/artists/55oSUcWSIYc2mObuVdnT9Z', 'id': '55oSUcWSIYc2mObuVdnT9Z', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2737ce993e4fb5300c4e06195cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0293dd2ae131441b34584670d3', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048517ce993e4fb5300c4e06195cc', 'height': 64, 'width': 64}], 'name': 'Tori Handsley', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:55oSUcWSIYc2mObuVdnT9Z'})",
+    "theaudiodb": {},
+    "wikidata_videos": []
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='1503046976', url='https://music.apple.com/gb/artist/tori-handsley/1503046976', name='Tori Handsley', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/5d/22/695d22a3-38f7-2596-48bb-478030574b7c/5020675000124.png/2000x2000ac.jpg', genres=['Jazz'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1503046976', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1503046976', 'attributes': {'name': 'Tori Handsley', 'genreNames': ['Jazz'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/5d/22/695d22a3-38f7-2596-48bb-478030574b7c/5020675000124.png/{w}x{h}ac.jpg', 'bgColor': 'f3e3ca', 'textColor1': '0f0e0e', 'textColor2': '161614', 'textColor3': '3c3834', 'textColor4': '423f38'}, 'url': 'https://music.apple.com/gb/artist/tori-handsley/1503046976'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1503046976/albums', 'data': [{'id': '1617398228', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617398228'}]}}})",
+    "discogs": {
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 5816519,
+          "name": "Tori Handsley Trio",
+          "resource_url": "https://api.discogs.com/artists/5816519"
+        }
+      ],
+      "id": 5790492,
+      "images": [
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/OmLepQM262xaKx3MUybX1ARUn1FsliyL_cXO8C2ijbo/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/OmLepQM262xaKx3MUybX1ARUn1FsliyL_cXO8C2ijbo/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/TjJ1G4H-DxTik8iJGyWrV3po0dD3BjPJPkLPIinfrxU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/My01NjM0LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 445,
+          "resource_url": "https://i.discogs.com/dCgrFzZlVkuVRKQKz4IhBwEtFt3GWCkknuScSif_zc0/rs:fit/g:sm/q:90/h:445/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dCgrFzZlVkuVRKQKz4IhBwEtFt3GWCkknuScSif_zc0/rs:fit/g:sm/q:90/h:445/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/T1XSMxztl9wSljiF-ETkpnfsS2mgCw4LK3bqyxvBne0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIx/Ny0zNjU2LmpwZWc.jpeg",
+          "width": 306
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/th3LGRh0oeE-CjtSoMHTNdsT179TyYxCsli1hQ_QxR4/rs:fit/g:sm/q:90/h:459/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/th3LGRh0oeE-CjtSoMHTNdsT179TyYxCsli1hQ_QxR4/rs:fit/g:sm/q:90/h:459/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ULesZ-jnXnWDHVnkBaka5e6QMqKmmGIbqW_4PuvGCNM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTA0/OTItMTQ5NzM5MDIy/Mi0yNjY3LmpwZWc.jpeg",
+          "width": 306
+        }
+      ],
+      "name": "Tori Handsley",
+      "profile": "British harpist",
+      "releases_url": "https://api.discogs.com/artists/5790492/releases",
+      "resource_url": "https://api.discogs.com/artists/5790492",
+      "uri": "https://www.discogs.com/artist/5790492-Tori-Handsley",
+      "urls": [
+        "http://www.torishands.com"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Tori Handsley', url='https://www.last.fm/music/Tori+Handsley', mbid=None, listeners=1211, playcount=5766, bio_summary='Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>', bio_content='Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. \\'As We Stand\\' her debut album released on Cadillac Records 27th November 2020. She co-hosts and curates the monthly session \"Freedom: The Art of Improvisation\" at the Vortex, Voted One of the Top 6 Sessions in the UK by the Evening Standard, and is a qualified Performance Coach ILM coaching individuals in the Art of Performance. She is a member of Warriors International and has performed with artists including: Shabaka Hutchings, Binker and Moses, Yussef Dayes, Nikki Yeoh, Mark Mondesir, Orphy Robinson, Pat Thomas, Evan Parker and Nigel Kennedy for his Duke Ellington European Tour.\\n\\nTori has performed at venues including: Royal Albert Hall, Purcell Room, Queen Elizabeth Hall, Ronnie Scotts, Vortex, Union Chapel, Jazz in the Round and is the recommended harpist for many venues including: Blenheim Palace, Highclere Castle, The Ashmolean, Waddesdon Dairy, Caswell House, Compleat Angler, Taplow House & Eynsham Hall.\\nhttp://www.torishands.com/ <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['jazz', 'experimental', 'UK', 'avant-jazz'], similar_artists=[{'name': 'Waaju', 'url': 'https://www.last.fm/music/Waaju'}, {'name': 'Run Logan Run', 'url': 'https://www.last.fm/music/Run+Logan+Run'}, {'name': 'Jeremy Cunningham', 'url': 'https://www.last.fm/music/Jeremy+Cunningham'}, {'name': 'Petter Eldh', 'url': 'https://www.last.fm/music/Petter+Eldh'}, {'name': 'Levitation Orchestra', 'url': 'https://www.last.fm/music/Levitation+Orchestra'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Tori Handsley', 'url': 'https://www.last.fm/music/Tori+Handsley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1211', 'playcount': '5766'}, 'similar': {'artist': [{'name': 'Waaju', 'url': 'https://www.last.fm/music/Waaju', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Run Logan Run', 'url': 'https://www.last.fm/music/Run+Logan+Run', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jeremy Cunningham', 'url': 'https://www.last.fm/music/Jeremy+Cunningham', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Petter Eldh', 'url': 'https://www.last.fm/music/Petter+Eldh', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Levitation Orchestra', 'url': 'https://www.last.fm/music/Levitation+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'UK', 'url': 'https://www.last.fm/tag/UK'}, {'name': 'avant-jazz', 'url': 'https://www.last.fm/tag/avant-jazz'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Tori+Handsley/+wiki'}}, 'published': '06 Nov 2020, 15:19', 'summary': 'Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>', 'content': 'Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\\n\\n\\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\\n\\n \\n\\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\\n(Selwyn Harris, Jazzwise).\\n\\n \\n\\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. \\'As We Stand\\' her debut album released on Cadillac Records 27th November 2020. She co-hosts and curates the monthly session \"Freedom: The Art of Improvisation\" at the Vortex, Voted One of the Top 6 Sessions in the UK by the Evening Standard, and is a qualified Performance Coach ILM coaching individuals in the Art of Performance. She is a member of Warriors International and has performed with artists including: Shabaka Hutchings, Binker and Moses, Yussef Dayes, Nikki Yeoh, Mark Mondesir, Orphy Robinson, Pat Thomas, Evan Parker and Nigel Kennedy for his Duke Ellington European Tour.\\n\\nTori has performed at venues including: Royal Albert Hall, Purcell Room, Queen Elizabeth Hall, Ronnie Scotts, Vortex, Union Chapel, Jazz in the Round and is the recommended harpist for many venues including: Blenheim Palace, Highclere Castle, The Ashmolean, Waddesdon Dairy, Caswell House, Compleat Angler, Taplow House & Eynsham Hall.\\nhttp://www.torishands.com/ <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='55oSUcWSIYc2mObuVdnT9Z', url='https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z', name='Tori Handsley', popularity=1, followers=568, genres=['nu jazz'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2737ce993e4fb5300c4e06195cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0293dd2ae131441b34584670d3', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048517ce993e4fb5300c4e06195cc', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z'}, 'followers': {'href': None, 'total': 568}, 'genres': ['nu jazz'], 'href': 'https://api.spotify.com/v1/artists/55oSUcWSIYc2mObuVdnT9Z', 'id': '55oSUcWSIYc2mObuVdnT9Z', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2737ce993e4fb5300c4e06195cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0293dd2ae131441b34584670d3', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048517ce993e4fb5300c4e06195cc', 'height': 64, 'width': 64}], 'name': 'Tori Handsley', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:55oSUcWSIYc2mObuVdnT9Z'})",
     "theaudiodb": {}
   },
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/5d/22/695d22a3-38f7-2596-48bb-478030574b7c/5020675000124.png/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Jazz"
-      ],
-      "id": "1503046976",
-      "name": "Tori Handsley",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/tori-handsley/1503046976"
-    },
-    "discogs": {
-      "cover_image": "",
-      "id": "5790492",
-      "images": [],
-      "members": [],
-      "name": "Tori Handsley",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5790492",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5790492"
-      },
-      "resource_url": "https://api.discogs.com/artists/5790492",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5790492",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\n\n\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\n\n \n\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\n(Selwyn Harris, Jazzwise).\n\n \n\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. 'As We Stand' her debut album released on Cadillac Records 27th November 2020. She co-hosts and curates the monthly session \"Freedom: The Art of Improvisation\" at the Vortex, Voted One of the Top 6 Sessions in the UK by the Evening Standard, and is a qualified Performance Coach ILM coaching individuals in the Art of Performance. She is a member of Warriors International and has performed with artists including: Shabaka Hutchings, Binker and Moses, Yussef Dayes, Nikki Yeoh, Mark Mondesir, Orphy Robinson, Pat Thomas, Evan Parker and Nigel Kennedy for his Duke Ellington European Tour.\n\nTori has performed at venues including: Royal Albert Hall, Purcell Room, Queen Elizabeth Hall, Ronnie Scotts, Vortex, Union Chapel, Jazz in the Round and is the recommended harpist for many venues including: Blenheim Palace, Highclere Castle, The Ashmolean, Waddesdon Dairy, Caswell House, Compleat Angler, Taplow House & Eynsham Hall.\nhttp://www.torishands.com/ <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Composer, arranger, performer & improviser, playing pedal harp, electric harp and piano.\n\n\nTori is renowned for her unique take on the harp, specialising in rock, pop, jazz and contemporary music.\n\n \n\n\"Tori Handsley took the harp into unexplored territory with her open-minded, mesmerizing post-EST compositions\"\n(Selwyn Harris, Jazzwise).\n\n \n\nTori is an active member of the live music scene, and leads her own band TORI HANDSLEY - Band (electric harp-bass-drums) with Ruth Goller and Moses Boyd. <a href=\"https://www.last.fm/music/Tori+Handsley\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 1211,
-      "mbid": null,
-      "name": "Tori Handsley",
-      "playcount": 5766,
-      "similar_artists": [
-        {
-          "name": "Waaju",
-          "url": "https://www.last.fm/music/Waaju"
-        },
-        {
-          "name": "Run Logan Run",
-          "url": "https://www.last.fm/music/Run+Logan+Run"
-        },
-        {
-          "name": "Jeremy Cunningham",
-          "url": "https://www.last.fm/music/Jeremy+Cunningham"
-        },
-        {
-          "name": "Petter Eldh",
-          "url": "https://www.last.fm/music/Petter+Eldh"
-        },
-        {
-          "name": "Levitation Orchestra",
-          "url": "https://www.last.fm/music/Levitation+Orchestra"
-        }
-      ],
-      "tags": [
-        "jazz",
-        "experimental",
-        "UK",
-        "avant-jazz"
-      ],
-      "url": "https://www.last.fm/music/Tori+Handsley"
-    },
-    "spotify": {
-      "followers": 568,
-      "genres": [
-        "nu jazz"
-      ],
-      "id": "55oSUcWSIYc2mObuVdnT9Z",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2737ce993e4fb5300c4e06195cc",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0293dd2ae131441b34584670d3",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048517ce993e4fb5300c4e06195cc",
-          "width": 64
-        }
-      ],
-      "name": "Tori Handsley",
-      "popularity": 1,
-      "url": "https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z"
-    },
-    "theaudiodb": {}
-  },
   "spotify_id": "55oSUcWSIYc2mObuVdnT9Z",
   "spotify_url": "https://open.spotify.com/artist/55oSUcWSIYc2mObuVdnT9Z",
-  "updated_at": "2025-07-08T20:50:13.427326",
+  "updated_at": "2026-10-30T18:47:49.823173",
   "wikipedia_url": null
 }

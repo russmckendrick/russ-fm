@@ -100,22 +100,136 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='312557635', url='https://music.apple.com/gb/artist/knifeworld/312557635', name='Knifeworld', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d3/fc/f8/d3fcf879-6a85-bd09-89d5-ba3100bef35d/886445719970.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '312557635', 'type': 'artists', 'href': '/v1/catalog/gb/artists/312557635', 'attributes': {'name': 'Knifeworld', 'genreNames': ['Alternative'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d3/fc/f8/d3fcf879-6a85-bd09-89d5-ba3100bef35d/886445719970.jpg/{w}x{h}ac.jpg', 'bgColor': '0f0a11', 'textColor1': 'e2c398', 'textColor2': 'd88f55', 'textColor3': 'b89e7d', 'textColor4': 'b07448'}, 'url': 'https://music.apple.com/gb/artist/knifeworld/312557635'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/312557635/albums', 'data': [{'id': '1087654773', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1087654773'}, {'id': '1049125354', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1049125354'}, {'id': '1510605584', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510605584'}, {'id': '1510598560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510598560'}, {'id': '1521552157', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521552157'}, {'id': '1521523600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521523600'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1970722",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 1970722,
+      "images": [
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/7hBGq10Tn7EIj2ieA5yvyeGWiHrCydPQnJRRZ0-cENk/rs:fit/g:sm/q:90/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/7hBGq10Tn7EIj2ieA5yvyeGWiHrCydPQnJRRZ0-cENk/rs:fit/g:sm/q:90/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/TJreMexArVWkdLbtdNCrqTc9UJ1fgZ0aprcSAifdhyc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 534,
+          "resource_url": "https://i.discogs.com/PlG-AinOd_kZCPzk1yhecjSptM9yPOB4LuUI-j5bQ7E/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PlG-AinOd_kZCPzk1yhecjSptM9yPOB4LuUI-j5bQ7E/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/xl-wbnGg3reL1WnBU3Gm-UA656J5B077Bksa4Yy586U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/oaXLyr7LJPavNCteQ2C0QSHzmcN3xcpNqhLYn0bjO3E/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oaXLyr7LJPavNCteQ2C0QSHzmcN3xcpNqhLYn0bjO3E/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yxvAnFr-a9_oTXxCXYBCm7WZiHV0C5nnMR2Ap0aMBIY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/J73zTN9FH1Qd2ZXC2nl7E4XFdzVk4_lhyXCzX_tP2iU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J73zTN9FH1Qd2ZXC2nl7E4XFdzVk4_lhyXCzX_tP2iU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kZ0IelCaQsxIbExQq8Def2TH_iSvX9IuEzx4xDgyfg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/3xG7Td28mYI73TrXbXNu4xHw_rhli6IL_obSssI-dnc/rs:fit/g:sm/q:90/h:350/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3xG7Td28mYI73TrXbXNu4xHw_rhli6IL_obSssI-dnc/rs:fit/g:sm/q:90/h:350/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rb78RMlt07BHIX9Un-AtuYp5sm4tn4LZZzE0wefLrPY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 185,
+          "resource_url": "https://i.discogs.com/CFspH_blhr3RofJ0j0xiAOqgTSvmJ3SvIvyP2hgTe4c/rs:fit/g:sm/q:90/h:185/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CFspH_blhr3RofJ0j0xiAOqgTSvmJ3SvIvyP2hgTe4c/rs:fit/g:sm/q:90/h:185/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HJrXZ7z-QJ2-BEFau4ekXf-MUVKl6O75MrY3K9OZxyw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 545019,
+          "name": "Melanie Woods",
+          "resource_url": "https://api.discogs.com/artists/545019"
+        },
+        {
+          "active": false,
+          "id": 550386,
+          "name": "Craig Fortnam",
+          "resource_url": "https://api.discogs.com/artists/550386"
+        },
+        {
+          "active": true,
+          "id": 677560,
+          "name": "Ben Woollacott",
+          "resource_url": "https://api.discogs.com/artists/677560"
+        },
+        {
+          "active": true,
+          "id": 951957,
+          "name": "Emmett Elvin",
+          "resource_url": "https://api.discogs.com/artists/951957"
+        },
+        {
+          "active": true,
+          "id": 962595,
+          "name": "Kavus Torabi",
+          "resource_url": "https://api.discogs.com/artists/962595"
+        },
+        {
+          "active": true,
+          "id": 1126292,
+          "name": "Khyam Allami",
+          "resource_url": "https://api.discogs.com/artists/1126292"
+        },
+        {
+          "active": true,
+          "id": 2787537,
+          "name": "Charlie Cawood",
+          "resource_url": "https://api.discogs.com/artists/2787537"
+        },
+        {
+          "active": false,
+          "id": 3459450,
+          "name": "Nicki Maher",
+          "resource_url": "https://api.discogs.com/artists/3459450"
+        },
+        {
+          "active": true,
+          "id": 3459451,
+          "name": "Josh Perl",
+          "resource_url": "https://api.discogs.com/artists/3459451"
+        },
+        {
+          "active": true,
+          "id": 5010919,
+          "name": "Oliver Sellwood",
+          "resource_url": "https://api.discogs.com/artists/5010919"
+        },
+        {
+          "active": true,
+          "id": 13227024,
+          "name": "Chlöe Herington",
+          "resource_url": "https://api.discogs.com/artists/13227024"
+        }
+      ],
       "name": "Knifeworld",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1970722",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1970722"
-      },
+      "profile": "British-based Psychedelic Rock Band led by Kavus Torabi. Originally a Torabi solo project, it became a full band in summer 2009.",
+      "releases_url": "https://api.discogs.com/artists/1970722/releases",
       "resource_url": "https://api.discogs.com/artists/1970722",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1970722",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1970722-Knifeworld",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Knifeworld",
+        "http://www.knifeworld.co.uk/",
+        "https://knifeworld.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "7017ea98-6c01-4d7b-be7b-8ec29522314d",
@@ -125,27 +239,142 @@
     },
     "lastfm": "ArtistLastFmData(name='Knifeworld', url='https://www.last.fm/music/Knifeworld', mbid='7017ea98-6c01-4d7b-be7b-8ec29522314d', listeners=5429, playcount=90328, bio_summary='Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>', bio_content='Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. It is probably the closest thing to a \\'straightforward rock song\\' Torabi has ever written.  The B-side, Happy Half-life, Dear Friend is not.  It\\'s barely even rock. It is, however, extremely psychedelic.\\n\\nForthcoming debut album, Buried Alone: Tales Of Crushing Defeat, is a sprawling psychedelic meisterwork, taking in elements of pop, heavy rock, hardcore, avant-progressive and folk, and is due out on August 10th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'Psychedelic Rock', 'seen live', 'Avant-Garde', 'heavy metal'], similar_artists=[{'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake'}, {'name': 'Tim Smith', 'url': 'https://www.last.fm/music/Tim+Smith'}, {'name': 'Panixphere', 'url': 'https://www.last.fm/music/Panixphere'}, {'name': 'Sterbus', 'url': 'https://www.last.fm/music/Sterbus'}, {'name': 'Lost Crowns', 'url': 'https://www.last.fm/music/Lost+Crowns'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Knifeworld', 'mbid': '7017ea98-6c01-4d7b-be7b-8ec29522314d', 'url': 'https://www.last.fm/music/Knifeworld', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5429', 'playcount': '90328'}, 'similar': {'artist': [{'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tim Smith', 'url': 'https://www.last.fm/music/Tim+Smith', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Panixphere', 'url': 'https://www.last.fm/music/Panixphere', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sterbus', 'url': 'https://www.last.fm/music/Sterbus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lost Crowns', 'url': 'https://www.last.fm/music/Lost+Crowns', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'Avant-Garde', 'url': 'https://www.last.fm/tag/Avant-Garde'}, {'name': 'heavy metal', 'url': 'https://www.last.fm/tag/heavy+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Knifeworld/+wiki'}}, 'published': '18 May 2009, 13:36', 'summary': 'Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>', 'content': 'Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. It is probably the closest thing to a \\'straightforward rock song\\' Torabi has ever written.  The B-side, Happy Half-life, Dear Friend is not.  It\\'s barely even rock. It is, however, extremely psychedelic.\\n\\nForthcoming debut album, Buried Alone: Tales Of Crushing Defeat, is a sprawling psychedelic meisterwork, taking in elements of pop, heavy rock, hardcore, avant-progressive and folk, and is due out on August 10th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4ETqIsiPHUyXDgXmKtZTpM', url='https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM', name='Knifeworld', popularity=3, followers=2457, genres=['progressive rock', 'art rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/d5a387398379b03df825d13c353479d657c1d5aa', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/df588aa6b85f7df23a4c5986d0dfacab1ed667e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/e21848a2c18d6652bae154c91cb2dc6045c07b91', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7895bfe8b9c7ef3459e896453c796c0dfc1df72a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM'}, 'followers': {'href': None, 'total': 2457}, 'genres': ['progressive rock', 'art rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/4ETqIsiPHUyXDgXmKtZTpM', 'id': '4ETqIsiPHUyXDgXmKtZTpM', 'images': [{'url': 'https://i.scdn.co/image/d5a387398379b03df825d13c353479d657c1d5aa', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/df588aa6b85f7df23a4c5986d0dfacab1ed667e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/e21848a2c18d6652bae154c91cb2dc6045c07b91', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7895bfe8b9c7ef3459e896453c796c0dfc1df72a', 'height': 64, 'width': 64}], 'name': 'Knifeworld', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:4ETqIsiPHUyXDgXmKtZTpM'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='312557635', url='https://music.apple.com/gb/artist/knifeworld/312557635', name='Knifeworld', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d3/fc/f8/d3fcf879-6a85-bd09-89d5-ba3100bef35d/886445719970.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '312557635', 'type': 'artists', 'href': '/v1/catalog/gb/artists/312557635', 'attributes': {'name': 'Knifeworld', 'genreNames': ['Alternative'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d3/fc/f8/d3fcf879-6a85-bd09-89d5-ba3100bef35d/886445719970.jpg/{w}x{h}ac.jpg', 'bgColor': '0f0a11', 'textColor1': 'e2c398', 'textColor2': 'd88f55', 'textColor3': 'b89e7d', 'textColor4': 'b07448'}, 'url': 'https://music.apple.com/gb/artist/knifeworld/312557635'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/312557635/albums', 'data': [{'id': '1087654773', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1087654773'}, {'id': '1049125354', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1049125354'}, {'id': '1510605584', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510605584'}, {'id': '1510598560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510598560'}, {'id': '1521552157', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521552157'}, {'id': '1521523600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521523600'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1970722",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 1970722,
+      "images": [
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/7hBGq10Tn7EIj2ieA5yvyeGWiHrCydPQnJRRZ0-cENk/rs:fit/g:sm/q:90/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/7hBGq10Tn7EIj2ieA5yvyeGWiHrCydPQnJRRZ0-cENk/rs:fit/g:sm/q:90/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/TJreMexArVWkdLbtdNCrqTc9UJ1fgZ0aprcSAifdhyc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTMwOTI0MDQx/NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 534,
+          "resource_url": "https://i.discogs.com/PlG-AinOd_kZCPzk1yhecjSptM9yPOB4LuUI-j5bQ7E/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PlG-AinOd_kZCPzk1yhecjSptM9yPOB4LuUI-j5bQ7E/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/xl-wbnGg3reL1WnBU3Gm-UA656J5B077Bksa4Yy586U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE0/NC0zNTM5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/oaXLyr7LJPavNCteQ2C0QSHzmcN3xcpNqhLYn0bjO3E/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oaXLyr7LJPavNCteQ2C0QSHzmcN3xcpNqhLYn0bjO3E/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yxvAnFr-a9_oTXxCXYBCm7WZiHV0C5nnMR2Ap0aMBIY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE1/NC0yOTM2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/J73zTN9FH1Qd2ZXC2nl7E4XFdzVk4_lhyXCzX_tP2iU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J73zTN9FH1Qd2ZXC2nl7E4XFdzVk4_lhyXCzX_tP2iU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kZ0IelCaQsxIbExQq8Def2TH_iSvX9IuEzx4xDgyfg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE2/My01NjQ4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/3xG7Td28mYI73TrXbXNu4xHw_rhli6IL_obSssI-dnc/rs:fit/g:sm/q:90/h:350/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3xG7Td28mYI73TrXbXNu4xHw_rhli6IL_obSssI-dnc/rs:fit/g:sm/q:90/h:350/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rb78RMlt07BHIX9Un-AtuYp5sm4tn4LZZzE0wefLrPY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTY4ODg1ODY4/OS0zNjM4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 185,
+          "resource_url": "https://i.discogs.com/CFspH_blhr3RofJ0j0xiAOqgTSvmJ3SvIvyP2hgTe4c/rs:fit/g:sm/q:90/h:185/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CFspH_blhr3RofJ0j0xiAOqgTSvmJ3SvIvyP2hgTe4c/rs:fit/g:sm/q:90/h:185/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HJrXZ7z-QJ2-BEFau4ekXf-MUVKl6O75MrY3K9OZxyw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NzA3/MjItMTQ1OTI2NjE3/MC01Nzg1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 545019,
+          "name": "Melanie Woods",
+          "resource_url": "https://api.discogs.com/artists/545019"
+        },
+        {
+          "active": false,
+          "id": 550386,
+          "name": "Craig Fortnam",
+          "resource_url": "https://api.discogs.com/artists/550386"
+        },
+        {
+          "active": true,
+          "id": 677560,
+          "name": "Ben Woollacott",
+          "resource_url": "https://api.discogs.com/artists/677560"
+        },
+        {
+          "active": true,
+          "id": 951957,
+          "name": "Emmett Elvin",
+          "resource_url": "https://api.discogs.com/artists/951957"
+        },
+        {
+          "active": true,
+          "id": 962595,
+          "name": "Kavus Torabi",
+          "resource_url": "https://api.discogs.com/artists/962595"
+        },
+        {
+          "active": true,
+          "id": 1126292,
+          "name": "Khyam Allami",
+          "resource_url": "https://api.discogs.com/artists/1126292"
+        },
+        {
+          "active": true,
+          "id": 2787537,
+          "name": "Charlie Cawood",
+          "resource_url": "https://api.discogs.com/artists/2787537"
+        },
+        {
+          "active": false,
+          "id": 3459450,
+          "name": "Nicki Maher",
+          "resource_url": "https://api.discogs.com/artists/3459450"
+        },
+        {
+          "active": true,
+          "id": 3459451,
+          "name": "Josh Perl",
+          "resource_url": "https://api.discogs.com/artists/3459451"
+        },
+        {
+          "active": true,
+          "id": 5010919,
+          "name": "Oliver Sellwood",
+          "resource_url": "https://api.discogs.com/artists/5010919"
+        },
+        {
+          "active": true,
+          "id": 13227024,
+          "name": "Chlöe Herington",
+          "resource_url": "https://api.discogs.com/artists/13227024"
+        }
+      ],
       "name": "Knifeworld",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1970722",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1970722"
-      },
+      "profile": "British-based Psychedelic Rock Band led by Kavus Torabi. Originally a Torabi solo project, it became a full band in summer 2009.",
+      "releases_url": "https://api.discogs.com/artists/1970722/releases",
       "resource_url": "https://api.discogs.com/artists/1970722",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1970722",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1970722-Knifeworld",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Knifeworld",
+        "http://www.knifeworld.co.uk/",
+        "https://knifeworld.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Knifeworld', url='https://www.last.fm/music/Knifeworld', mbid='7017ea98-6c01-4d7b-be7b-8ec29522314d', listeners=5429, playcount=90328, bio_summary='Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>', bio_content='Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. It is probably the closest thing to a \\'straightforward rock song\\' Torabi has ever written.  The B-side, Happy Half-life, Dear Friend is not.  It\\'s barely even rock. It is, however, extremely psychedelic.\\n\\nForthcoming debut album, Buried Alone: Tales Of Crushing Defeat, is a sprawling psychedelic meisterwork, taking in elements of pop, heavy rock, hardcore, avant-progressive and folk, and is due out on August 10th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'Psychedelic Rock', 'seen live', 'Avant-Garde', 'heavy metal'], similar_artists=[{'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake'}, {'name': 'Tim Smith', 'url': 'https://www.last.fm/music/Tim+Smith'}, {'name': 'Panixphere', 'url': 'https://www.last.fm/music/Panixphere'}, {'name': 'Sterbus', 'url': 'https://www.last.fm/music/Sterbus'}, {'name': 'Lost Crowns', 'url': 'https://www.last.fm/music/Lost+Crowns'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Knifeworld', 'mbid': '7017ea98-6c01-4d7b-be7b-8ec29522314d', 'url': 'https://www.last.fm/music/Knifeworld', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5429', 'playcount': '90328'}, 'similar': {'artist': [{'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tim Smith', 'url': 'https://www.last.fm/music/Tim+Smith', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Panixphere', 'url': 'https://www.last.fm/music/Panixphere', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sterbus', 'url': 'https://www.last.fm/music/Sterbus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lost Crowns', 'url': 'https://www.last.fm/music/Lost+Crowns', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'Avant-Garde', 'url': 'https://www.last.fm/tag/Avant-Garde'}, {'name': 'heavy metal', 'url': 'https://www.last.fm/tag/heavy+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Knifeworld/+wiki'}}, 'published': '18 May 2009, 13:36', 'summary': 'Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>', 'content': 'Knifeworld is the new band from Kavus Torabi (Cardiacs, The Monsoon Bassoon, Guapo). The forthcoming album also features a handful of special guests, including Ben Jacobs (Max Tundra) on trumpet, Melanie Woods (Sidi Bou Said, Cardiacs) on vocals, Katharine Blake (Miranda Sex Garden, Mediæval Bæbes) on recorders, Sarah Measures (The Monsoon Bassoon, Mothlite) on horns and flute, and Khyam Allami on drums.\\n\\nPissed Up On Brake Fluid, the first Knifeworld single, will be released by Believers Roast on July 13th 2009. It is probably the closest thing to a \\'straightforward rock song\\' Torabi has ever written.  The B-side, Happy Half-life, Dear Friend is not.  It\\'s barely even rock. It is, however, extremely psychedelic.\\n\\nForthcoming debut album, Buried Alone: Tales Of Crushing Defeat, is a sprawling psychedelic meisterwork, taking in elements of pop, heavy rock, hardcore, avant-progressive and folk, and is due out on August 10th 2009. <a href=\"https://www.last.fm/music/Knifeworld\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4ETqIsiPHUyXDgXmKtZTpM', url='https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM', name='Knifeworld', popularity=3, followers=2457, genres=['progressive rock', 'art rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/d5a387398379b03df825d13c353479d657c1d5aa', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/df588aa6b85f7df23a4c5986d0dfacab1ed667e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/e21848a2c18d6652bae154c91cb2dc6045c07b91', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7895bfe8b9c7ef3459e896453c796c0dfc1df72a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM'}, 'followers': {'href': None, 'total': 2457}, 'genres': ['progressive rock', 'art rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/4ETqIsiPHUyXDgXmKtZTpM', 'id': '4ETqIsiPHUyXDgXmKtZTpM', 'images': [{'url': 'https://i.scdn.co/image/d5a387398379b03df825d13c353479d657c1d5aa', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/df588aa6b85f7df23a4c5986d0dfacab1ed667e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/e21848a2c18d6652bae154c91cb2dc6045c07b91', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7895bfe8b9c7ef3459e896453c796c0dfc1df72a', 'height': 64, 'width': 64}], 'name': 'Knifeworld', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:4ETqIsiPHUyXDgXmKtZTpM'})",
@@ -153,6 +382,6 @@
   },
   "spotify_id": "4ETqIsiPHUyXDgXmKtZTpM",
   "spotify_url": "https://open.spotify.com/artist/4ETqIsiPHUyXDgXmKtZTpM",
-  "updated_at": "2026-10-22T14:08:31.649707",
+  "updated_at": "2026-10-30T18:41:35.409953",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Knifeworld"
 }

@@ -117,22 +117,368 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='464266722', url='https://music.apple.com/gb/artist/ozric-tentacles/464266722', name='Ozric Tentacles', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/cb/92/cbcb92b8-0699-c0af-afae-1418683c1d74/mzi.qkevjeak.tif/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '464266722', 'type': 'artists', 'href': '/v1/catalog/gb/artists/464266722', 'attributes': {'name': 'Ozric Tentacles', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/cb/92/cbcb92b8-0699-c0af-afae-1418683c1d74/mzi.qkevjeak.tif/{w}x{h}ac.jpg', 'bgColor': '310410', 'textColor1': 'ffff05', 'textColor2': '3e85f4', 'textColor3': 'd5cc07', 'textColor4': '3b6bc7'}, 'url': 'https://music.apple.com/gb/artist/ozric-tentacles/464266722'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/464266722/albums', 'next': '/v1/catalog/gb/artists/464266722/albums?offset=25', 'data': [{'id': '988158722', 'type': 'albums', 'href': '/v1/catalog/gb/albums/988158722'}, {'id': '152119041', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152119041'}, {'id': '1189443799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189443799'}, {'id': '1707428182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1707428182'}, {'id': '151954221', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151954221'}, {'id': '214136665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/214136665'}, {'id': '1524291057', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1524291057'}, {'id': '310872703', 'type': 'albums', 'href': '/v1/catalog/gb/albums/310872703'}, {'id': '1584973577', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584973577'}, {'id': '152118973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152118973'}, {'id': '1189442088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189442088'}, {'id': '74473046', 'type': 'albums', 'href': '/v1/catalog/gb/albums/74473046'}, {'id': '217397237', 'type': 'albums', 'href': '/v1/catalog/gb/albums/217397237'}, {'id': '151953586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151953586'}, {'id': '295866523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/295866523'}, {'id': '674008585', 'type': 'albums', 'href': '/v1/catalog/gb/albums/674008585'}, {'id': '1538223630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538223630'}, {'id': '152118848', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152118848'}, {'id': '151953951', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151953951'}, {'id': '110821562', 'type': 'albums', 'href': '/v1/catalog/gb/albums/110821562'}, {'id': '296566182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/296566182'}, {'id': '297383269', 'type': 'albums', 'href': '/v1/catalog/gb/albums/297383269'}, {'id': '994891030', 'type': 'albums', 'href': '/v1/catalog/gb/albums/994891030'}, {'id': '994891220', 'type': 'albums', 'href': '/v1/catalog/gb/albums/994891220'}, {'id': '1189264963', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189264963'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "17419",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 17419,
+      "images": [
+        {
+          "height": 414,
+          "resource_url": "https://i.discogs.com/zndYb_D48oBsF_oW_6bGRaBvTkKGuID1j8L_zJq2kJA/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/zndYb_D48oBsF_oW_6bGRaBvTkKGuID1j8L_zJq2kJA/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AeFFp8PA_TcCUJO8XTQ8WnSy6WiYoFrm1rWmSY9Tb6w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 437,
+          "resource_url": "https://i.discogs.com/pRtzfW_YcFOjhzeIHDg1R9vHr7JHjXBkeijK_rLlcso/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pRtzfW_YcFOjhzeIHDg1R9vHr7JHjXBkeijK_rLlcso/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/iG7JhcHur_ExTT5itQkjI9t8o8VEl01fPx2ssSS-ePc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/uT7wWSErPfrINjXNfDvwmbKJ0db6Yp5-StsVh1yHDJc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uT7wWSErPfrINjXNfDvwmbKJ0db6Yp5-StsVh1yHDJc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/25pQXMwdq0SECmVsGOaXHQbUX8mz8pEmuA02UigTkwo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/W2lQKJ6fDqdaHNaMsRkHdsavci5jnwj1o0ORUBS8B5c/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/W2lQKJ6fDqdaHNaMsRkHdsavci5jnwj1o0ORUBS8B5c/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/p72g9dObs2qJIOjIcT9yCsnbdVo5FaAb3RPgSqbB8C8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "width": 596
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/t5Nw6EdTC3J4KfhruKmk0x5ftJ0FiIDRB5LXW-9CgCM/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t5Nw6EdTC3J4KfhruKmk0x5ftJ0FiIDRB5LXW-9CgCM/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/b5lASl9enKDSC-XMJYK-tv1ZLGUImBjrbD0i4ILJtwY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/CBguQoCIfIAPnxmHp7EdzbolqjnZEbdFdE2UiC1iEQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CBguQoCIfIAPnxmHp7EdzbolqjnZEbdFdE2UiC1iEQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tv2rX295Cbj-siehB6Rvt4aT0QklwM70RMKI4zUyghc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/aSlfQOvPR0zKx12gKAtewa7IOi4aqmon7gUBjN54qN4/rs:fit/g:sm/q:90/h:600/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aSlfQOvPR0zKx12gKAtewa7IOi4aqmon7gUBjN54qN4/rs:fit/g:sm/q:90/h:600/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YUnDmwVDCc5Cp45k-nJ54HcC2L-n-2s3JoYGjA-zNnc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "width": 498
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/E5uNiVkyohJch0Me4VImCLInAMooWfdJKXP2QCO9Mu8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/E5uNiVkyohJch0Me4VImCLInAMooWfdJKXP2QCO9Mu8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HIBjBxHvJgU6-qhHCafzPSKWn--bI7zQe7BhcAwP-Qc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/0EeGHyUbJnyOHufOr3-N60Q8xKvla3KZJnypwtmf9Xg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0EeGHyUbJnyOHufOr3-N60Q8xKvla3KZJnypwtmf9Xg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zAuNghHCzFJSCvKEQCFltKdv3qp-GiuFe1Lkl52q708/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/O7rYyJJEBgo9huPQa5sjHwhOyq_P9rEWuNmkYOjour4/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O7rYyJJEBgo9huPQa5sjHwhOyq_P9rEWuNmkYOjour4/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FJH3Mciwbsyoc3toGxJobbON9PT5W0t98J3Gn8fpc3k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/_lKTO_W_pU8pSNqb5aGwn_xNf-ez2LKX4YjfgbHxY_o/rs:fit/g:sm/q:90/h:450/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_lKTO_W_pU8pSNqb5aGwn_xNf-ez2LKX4YjfgbHxY_o/rs:fit/g:sm/q:90/h:450/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1a-CwOyCldJrpicHmbELcPpq5FA1m4Z0NLmmA5U_YSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 440,
+          "resource_url": "https://i.discogs.com/v5K7G5WvNXmqp7OkNu7FMnkKxV6laB9jw1QfNYb285U/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v5K7G5WvNXmqp7OkNu7FMnkKxV6laB9jw1QfNYb285U/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FJWfm7rCOP6MbRelO4Fk9u5c3fYIUXtgfSpXN1IuCPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/9j5mLmWLKx0rssFRYXY3Uc5F8zZwbfJ7ik2TWkoe1PM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9j5mLmWLKx0rssFRYXY3Uc5F8zZwbfJ7ik2TWkoe1PM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Zc9mEcOxFFH43d3cyXlLNRluLOG3tL4ZMhVSX6hV1_w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "width": 408
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/GRr4awx8djPC1dwF-9pEGJvZBIBc_nIjP4kuPEnKcKc/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GRr4awx8djPC1dwF-9pEGJvZBIBc_nIjP4kuPEnKcKc/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ol4UvghfRXIPBCz0c5NsI4EJbL-6PhureC1nBHDFfYg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/b13dbUzH6YvPJ95SmiWInyCLQlN59-weGyeIfKYp3fw/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/b13dbUzH6YvPJ95SmiWInyCLQlN59-weGyeIfKYp3fw/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rAc5Hs8PyGTCnOyNECr58iPqp4KlQNng-aIrpUDNQH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "width": 350
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/n29GYEXIZ86WxZJlb4E1hqDJb3Y5Mz5ZjAc4KvbCw6M/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n29GYEXIZ86WxZJlb4E1hqDJb3Y5Mz5ZjAc4KvbCw6M/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tJk0mNsg8Hpt3Yw-0EkHqT3fqNcPziqIdUmQ_1x4Nis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 203,
+          "resource_url": "https://i.discogs.com/hbg8-UGDY0PvYGmzImfFjq5bOmamINWgZYu97uNbbCY/rs:fit/g:sm/q:90/h:203/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hbg8-UGDY0PvYGmzImfFjq5bOmamINWgZYu97uNbbCY/rs:fit/g:sm/q:90/h:203/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fNjFer9lkM6MpvsfkbHsGjT8TlZDEdmS5oX7FEWocwQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/GftKcT0vLxC5uWmWA8nb3DIfeMK34S9NLyk8mum98eg/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GftKcT0vLxC5uWmWA8nb3DIfeMK34S9NLyk8mum98eg/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/a47GkVlRLUhcmpAFPMZyvealsR34F-ZDuhWzDIM3skw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 7877,
+          "name": "Merv Pepler",
+          "resource_url": "https://api.discogs.com/artists/7877"
+        },
+        {
+          "active": false,
+          "id": 61169,
+          "name": "Nick van Gelder",
+          "resource_url": "https://api.discogs.com/artists/61169"
+        },
+        {
+          "active": true,
+          "id": 159507,
+          "name": "Ed Wynne",
+          "resource_url": "https://api.discogs.com/artists/159507"
+        },
+        {
+          "active": true,
+          "id": 268428,
+          "name": "Paul Hankin",
+          "resource_url": "https://api.discogs.com/artists/268428"
+        },
+        {
+          "active": false,
+          "id": 382275,
+          "name": "Steve Everitt",
+          "resource_url": "https://api.discogs.com/artists/382275"
+        },
+        {
+          "active": false,
+          "id": 388786,
+          "name": "Zia Geelani",
+          "resource_url": "https://api.discogs.com/artists/388786"
+        },
+        {
+          "active": false,
+          "id": 388797,
+          "name": "John Egan",
+          "resource_url": "https://api.discogs.com/artists/388797"
+        },
+        {
+          "active": false,
+          "id": 415347,
+          "name": "Joie Hinton",
+          "resource_url": "https://api.discogs.com/artists/415347"
+        },
+        {
+          "active": false,
+          "id": 422963,
+          "name": "Roly Wynne",
+          "resource_url": "https://api.discogs.com/artists/422963"
+        },
+        {
+          "active": false,
+          "id": 579102,
+          "name": "Brandi Wynne",
+          "resource_url": "https://api.discogs.com/artists/579102"
+        },
+        {
+          "active": true,
+          "id": 597865,
+          "name": "Pat Garvey",
+          "resource_url": "https://api.discogs.com/artists/597865"
+        },
+        {
+          "active": false,
+          "id": 656348,
+          "name": "Paul Chousmer",
+          "resource_url": "https://api.discogs.com/artists/656348"
+        },
+        {
+          "active": false,
+          "id": 828133,
+          "name": "Gavin Griffiths",
+          "resource_url": "https://api.discogs.com/artists/828133"
+        },
+        {
+          "active": false,
+          "id": 841534,
+          "name": "Tom Brooks (3)",
+          "resource_url": "https://api.discogs.com/artists/841534"
+        },
+        {
+          "active": false,
+          "id": 1102789,
+          "name": "Kay Springer",
+          "resource_url": "https://api.discogs.com/artists/1102789"
+        },
+        {
+          "active": false,
+          "id": 1233363,
+          "name": "Conrad Prince",
+          "resource_url": "https://api.discogs.com/artists/1233363"
+        },
+        {
+          "active": false,
+          "id": 1233364,
+          "name": "Chris Lenox-Smith",
+          "resource_url": "https://api.discogs.com/artists/1233364"
+        },
+        {
+          "active": false,
+          "id": 1390381,
+          "name": "Matt Shmigelsky",
+          "resource_url": "https://api.discogs.com/artists/1390381"
+        },
+        {
+          "active": true,
+          "id": 1398258,
+          "name": "Silas Wynne",
+          "resource_url": "https://api.discogs.com/artists/1398258"
+        },
+        {
+          "active": false,
+          "id": 1438682,
+          "name": "Vinny Shillito",
+          "resource_url": "https://api.discogs.com/artists/1438682"
+        },
+        {
+          "active": false,
+          "id": 1438683,
+          "name": "Roy Brosh",
+          "resource_url": "https://api.discogs.com/artists/1438683"
+        },
+        {
+          "active": false,
+          "id": 1969814,
+          "name": "Marcus C. Diess",
+          "resource_url": "https://api.discogs.com/artists/1969814"
+        },
+        {
+          "active": false,
+          "id": 2070642,
+          "name": "Oliver Seagle",
+          "resource_url": "https://api.discogs.com/artists/2070642"
+        },
+        {
+          "active": false,
+          "id": 2227020,
+          "name": "Stuart Fisher (2)",
+          "resource_url": "https://api.discogs.com/artists/2227020"
+        },
+        {
+          "active": false,
+          "id": 2389356,
+          "name": "Harry Waters (2)",
+          "resource_url": "https://api.discogs.com/artists/2389356"
+        },
+        {
+          "active": false,
+          "id": 2774154,
+          "name": "John Schuchard",
+          "resource_url": "https://api.discogs.com/artists/2774154"
+        },
+        {
+          "active": false,
+          "id": 4281413,
+          "name": "Tim Wallander",
+          "resource_url": "https://api.discogs.com/artists/4281413"
+        },
+        {
+          "active": false,
+          "id": 4400076,
+          "name": "Balázs Szende",
+          "resource_url": "https://api.discogs.com/artists/4400076"
+        },
+        {
+          "active": false,
+          "id": 6918434,
+          "name": "Ben Smith (41)",
+          "resource_url": "https://api.discogs.com/artists/6918434"
+        },
+        {
+          "active": true,
+          "id": 7403205,
+          "name": "Corey Atheleny Wallace",
+          "resource_url": "https://api.discogs.com/artists/7403205"
+        },
+        {
+          "active": true,
+          "id": 7848661,
+          "name": "Saskia Maxwell",
+          "resource_url": "https://api.discogs.com/artists/7848661"
+        },
+        {
+          "active": false,
+          "id": 16066170,
+          "name": "Metro (83)",
+          "resource_url": "https://api.discogs.com/artists/16066170"
+        }
+      ],
       "name": "Ozric Tentacles",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "17419",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/17419"
-      },
+      "profile": "English progressive/space/psychedelic rock band founded in 1983 in Somerset. \r\n\r\nOver the course of 40 years, the band has released over 30 albums, selling over a million copies worldwide. Throughout numerous line-up changes, co-founder and guitarist Ed Wynne has remained the sole original member of the band.\r\n\r\nCurrent line-up:\r\nEd Wynne - guitars, keyboards, bass, programming, various instruments (1983–present)\r\nSilas Wynne - keyboards, synthesizers (2009–present)\r\nSaskia Maxwell - flute (2022–present)\r\nPat Garvey - drums, percussion (2023–present)\r\nCorey Wallace - bass (2024–present)\r\n",
+      "releases_url": "https://api.discogs.com/artists/17419/releases",
       "resource_url": "https://api.discogs.com/artists/17419",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/17419",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/17419-Ozric-Tentacles",
+      "urls": [
+        "http://www.ozrics.com/",
+        "https://en.wikipedia.org/wiki/Ozric_Tentacles",
+        "https://www.facebook.com/OfficialOzricTentacles",
+        "https://www.youtube.com/channel/UCsbWPmIwbmnvM-DykpEfwzA",
+        "https://www.instagram.com/ozrictentaclesofficial/",
+        "https://ozrictentaclesmagnacarta.bandcamp.com/",
+        "https://twitter.com/OZRICSOFFICIAL",
+        "https://myspace.com/ozrictentaclesuk",
+        "https://www.AllMusic.com/artist/ozric-tentacles-mn0000499489",
+        "http://ozrics.proboards.com/",
+        "http://www.ProgArchives.com/artist.asp?id=281",
+        "https://soundcloud.com/ozric-tentacles-official",
+        "https://open.Spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9/discography"
+      ]
     },
     "identity": {
       "musicbrainz_id": "5629ca87-9086-48c4-8dc4-b4a966c45067",
@@ -205,27 +551,374 @@
         "track": "Jurassic Shift",
         "uri": "http://www.youtube.com/watch?v=8WCFiwFE1Kg"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='464266722', url='https://music.apple.com/gb/artist/ozric-tentacles/464266722', name='Ozric Tentacles', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/cb/92/cbcb92b8-0699-c0af-afae-1418683c1d74/mzi.qkevjeak.tif/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '464266722', 'type': 'artists', 'href': '/v1/catalog/gb/artists/464266722', 'attributes': {'name': 'Ozric Tentacles', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/cb/92/cbcb92b8-0699-c0af-afae-1418683c1d74/mzi.qkevjeak.tif/{w}x{h}ac.jpg', 'bgColor': '310410', 'textColor1': 'ffff05', 'textColor2': '3e85f4', 'textColor3': 'd5cc07', 'textColor4': '3b6bc7'}, 'url': 'https://music.apple.com/gb/artist/ozric-tentacles/464266722'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/464266722/albums', 'next': '/v1/catalog/gb/artists/464266722/albums?offset=25', 'data': [{'id': '988158722', 'type': 'albums', 'href': '/v1/catalog/gb/albums/988158722'}, {'id': '152119041', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152119041'}, {'id': '1189443799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189443799'}, {'id': '1707428182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1707428182'}, {'id': '151954221', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151954221'}, {'id': '214136665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/214136665'}, {'id': '1524291057', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1524291057'}, {'id': '310872703', 'type': 'albums', 'href': '/v1/catalog/gb/albums/310872703'}, {'id': '1584973577', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584973577'}, {'id': '152118973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152118973'}, {'id': '1189442088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189442088'}, {'id': '74473046', 'type': 'albums', 'href': '/v1/catalog/gb/albums/74473046'}, {'id': '217397237', 'type': 'albums', 'href': '/v1/catalog/gb/albums/217397237'}, {'id': '151953586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151953586'}, {'id': '295866523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/295866523'}, {'id': '674008585', 'type': 'albums', 'href': '/v1/catalog/gb/albums/674008585'}, {'id': '1538223630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538223630'}, {'id': '152118848', 'type': 'albums', 'href': '/v1/catalog/gb/albums/152118848'}, {'id': '151953951', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151953951'}, {'id': '110821562', 'type': 'albums', 'href': '/v1/catalog/gb/albums/110821562'}, {'id': '296566182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/296566182'}, {'id': '297383269', 'type': 'albums', 'href': '/v1/catalog/gb/albums/297383269'}, {'id': '994891030', 'type': 'albums', 'href': '/v1/catalog/gb/albums/994891030'}, {'id': '994891220', 'type': 'albums', 'href': '/v1/catalog/gb/albums/994891220'}, {'id': '1189264963', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189264963'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "17419",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 17419,
+      "images": [
+        {
+          "height": 414,
+          "resource_url": "https://i.discogs.com/zndYb_D48oBsF_oW_6bGRaBvTkKGuID1j8L_zJq2kJA/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/zndYb_D48oBsF_oW_6bGRaBvTkKGuID1j8L_zJq2kJA/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AeFFp8PA_TcCUJO8XTQ8WnSy6WiYoFrm1rWmSY9Tb6w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE3NTYzMDQyNjIt/OTI3NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 437,
+          "resource_url": "https://i.discogs.com/pRtzfW_YcFOjhzeIHDg1R9vHr7JHjXBkeijK_rLlcso/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pRtzfW_YcFOjhzeIHDg1R9vHr7JHjXBkeijK_rLlcso/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/iG7JhcHur_ExTT5itQkjI9t8o8VEl01fPx2ssSS-ePc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/uT7wWSErPfrINjXNfDvwmbKJ0db6Yp5-StsVh1yHDJc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uT7wWSErPfrINjXNfDvwmbKJ0db6Yp5-StsVh1yHDJc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/25pQXMwdq0SECmVsGOaXHQbUX8mz8pEmuA02UigTkwo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyMTQt/MjQ2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/W2lQKJ6fDqdaHNaMsRkHdsavci5jnwj1o0ORUBS8B5c/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/W2lQKJ6fDqdaHNaMsRkHdsavci5jnwj1o0ORUBS8B5c/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/p72g9dObs2qJIOjIcT9yCsnbdVo5FaAb3RPgSqbB8C8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5MjIu/anBlZw.jpeg",
+          "width": 596
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/t5Nw6EdTC3J4KfhruKmk0x5ftJ0FiIDRB5LXW-9CgCM/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t5Nw6EdTC3J4KfhruKmk0x5ftJ0FiIDRB5LXW-9CgCM/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/b5lASl9enKDSC-XMJYK-tv1ZLGUImBjrbD0i4ILJtwY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyNDA2NTk5NTAu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/CBguQoCIfIAPnxmHp7EdzbolqjnZEbdFdE2UiC1iEQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CBguQoCIfIAPnxmHp7EdzbolqjnZEbdFdE2UiC1iEQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tv2rX295Cbj-siehB6Rvt4aT0QklwM70RMKI4zUyghc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE0MzE2MjU0OTEt/MTU4My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/aSlfQOvPR0zKx12gKAtewa7IOi4aqmon7gUBjN54qN4/rs:fit/g:sm/q:90/h:600/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aSlfQOvPR0zKx12gKAtewa7IOi4aqmon7gUBjN54qN4/rs:fit/g:sm/q:90/h:600/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YUnDmwVDCc5Cp45k-nJ54HcC2L-n-2s3JoYGjA-zNnc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgwNzMt/OTM1My5qcGVn.jpeg",
+          "width": 498
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/E5uNiVkyohJch0Me4VImCLInAMooWfdJKXP2QCO9Mu8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/E5uNiVkyohJch0Me4VImCLInAMooWfdJKXP2QCO9Mu8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HIBjBxHvJgU6-qhHCafzPSKWn--bI7zQe7BhcAwP-Qc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNjkt/NTkwOS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/0EeGHyUbJnyOHufOr3-N60Q8xKvla3KZJnypwtmf9Xg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0EeGHyUbJnyOHufOr3-N60Q8xKvla3KZJnypwtmf9Xg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zAuNghHCzFJSCvKEQCFltKdv3qp-GiuFe1Lkl52q708/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyODAyNzMxMTgu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/O7rYyJJEBgo9huPQa5sjHwhOyq_P9rEWuNmkYOjour4/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O7rYyJJEBgo9huPQa5sjHwhOyq_P9rEWuNmkYOjour4/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FJH3Mciwbsyoc3toGxJobbON9PT5W0t98J3Gn8fpc3k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMzY4MDMyMjMu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/_lKTO_W_pU8pSNqb5aGwn_xNf-ez2LKX4YjfgbHxY_o/rs:fit/g:sm/q:90/h:450/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_lKTO_W_pU8pSNqb5aGwn_xNf-ez2LKX4YjfgbHxY_o/rs:fit/g:sm/q:90/h:450/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1a-CwOyCldJrpicHmbELcPpq5FA1m4Z0NLmmA5U_YSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgyNTQt/OTY2OS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 440,
+          "resource_url": "https://i.discogs.com/v5K7G5WvNXmqp7OkNu7FMnkKxV6laB9jw1QfNYb285U/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v5K7G5WvNXmqp7OkNu7FMnkKxV6laB9jw1QfNYb285U/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/FJWfm7rCOP6MbRelO4Fk9u5c3fYIUXtgfSpXN1IuCPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEyMDc3NjYxNzUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/9j5mLmWLKx0rssFRYXY3Uc5F8zZwbfJ7ik2TWkoe1PM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9j5mLmWLKx0rssFRYXY3Uc5F8zZwbfJ7ik2TWkoe1PM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Zc9mEcOxFFH43d3cyXlLNRluLOG3tL4ZMhVSX6hV1_w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxMTAt/NzYwNS5qcGVn.jpeg",
+          "width": 408
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/GRr4awx8djPC1dwF-9pEGJvZBIBc_nIjP4kuPEnKcKc/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GRr4awx8djPC1dwF-9pEGJvZBIBc_nIjP4kuPEnKcKc/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ol4UvghfRXIPBCz0c5NsI4EJbL-6PhureC1nBHDFfYg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NTA1MzgxNDMt/NDI4Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/b13dbUzH6YvPJ95SmiWInyCLQlN59-weGyeIfKYp3fw/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/b13dbUzH6YvPJ95SmiWInyCLQlN59-weGyeIfKYp3fw/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rAc5Hs8PyGTCnOyNECr58iPqp4KlQNng-aIrpUDNQH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTEzODk2OTIwOTkt/NjU2Mi5qcGVn.jpeg",
+          "width": 350
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/n29GYEXIZ86WxZJlb4E1hqDJb3Y5Mz5ZjAc4KvbCw6M/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n29GYEXIZ86WxZJlb4E1hqDJb3Y5Mz5ZjAc4KvbCw6M/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tJk0mNsg8Hpt3Yw-0EkHqT3fqNcPziqIdUmQ_1x4Nis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE1MzY4MTQ3NjYt/OTY2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 203,
+          "resource_url": "https://i.discogs.com/hbg8-UGDY0PvYGmzImfFjq5bOmamINWgZYu97uNbbCY/rs:fit/g:sm/q:90/h:203/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hbg8-UGDY0PvYGmzImfFjq5bOmamINWgZYu97uNbbCY/rs:fit/g:sm/q:90/h:203/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fNjFer9lkM6MpvsfkbHsGjT8TlZDEdmS5oX7FEWocwQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTExNzA4NjYzNTEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/GftKcT0vLxC5uWmWA8nb3DIfeMK34S9NLyk8mum98eg/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GftKcT0vLxC5uWmWA8nb3DIfeMK34S9NLyk8mum98eg/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/a47GkVlRLUhcmpAFPMZyvealsR34F-ZDuhWzDIM3skw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2NjE4Njk1NjYt/NjMwMy5qcGVn.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 7877,
+          "name": "Merv Pepler",
+          "resource_url": "https://api.discogs.com/artists/7877"
+        },
+        {
+          "active": false,
+          "id": 61169,
+          "name": "Nick van Gelder",
+          "resource_url": "https://api.discogs.com/artists/61169"
+        },
+        {
+          "active": true,
+          "id": 159507,
+          "name": "Ed Wynne",
+          "resource_url": "https://api.discogs.com/artists/159507"
+        },
+        {
+          "active": true,
+          "id": 268428,
+          "name": "Paul Hankin",
+          "resource_url": "https://api.discogs.com/artists/268428"
+        },
+        {
+          "active": false,
+          "id": 382275,
+          "name": "Steve Everitt",
+          "resource_url": "https://api.discogs.com/artists/382275"
+        },
+        {
+          "active": false,
+          "id": 388786,
+          "name": "Zia Geelani",
+          "resource_url": "https://api.discogs.com/artists/388786"
+        },
+        {
+          "active": false,
+          "id": 388797,
+          "name": "John Egan",
+          "resource_url": "https://api.discogs.com/artists/388797"
+        },
+        {
+          "active": false,
+          "id": 415347,
+          "name": "Joie Hinton",
+          "resource_url": "https://api.discogs.com/artists/415347"
+        },
+        {
+          "active": false,
+          "id": 422963,
+          "name": "Roly Wynne",
+          "resource_url": "https://api.discogs.com/artists/422963"
+        },
+        {
+          "active": false,
+          "id": 579102,
+          "name": "Brandi Wynne",
+          "resource_url": "https://api.discogs.com/artists/579102"
+        },
+        {
+          "active": true,
+          "id": 597865,
+          "name": "Pat Garvey",
+          "resource_url": "https://api.discogs.com/artists/597865"
+        },
+        {
+          "active": false,
+          "id": 656348,
+          "name": "Paul Chousmer",
+          "resource_url": "https://api.discogs.com/artists/656348"
+        },
+        {
+          "active": false,
+          "id": 828133,
+          "name": "Gavin Griffiths",
+          "resource_url": "https://api.discogs.com/artists/828133"
+        },
+        {
+          "active": false,
+          "id": 841534,
+          "name": "Tom Brooks (3)",
+          "resource_url": "https://api.discogs.com/artists/841534"
+        },
+        {
+          "active": false,
+          "id": 1102789,
+          "name": "Kay Springer",
+          "resource_url": "https://api.discogs.com/artists/1102789"
+        },
+        {
+          "active": false,
+          "id": 1233363,
+          "name": "Conrad Prince",
+          "resource_url": "https://api.discogs.com/artists/1233363"
+        },
+        {
+          "active": false,
+          "id": 1233364,
+          "name": "Chris Lenox-Smith",
+          "resource_url": "https://api.discogs.com/artists/1233364"
+        },
+        {
+          "active": false,
+          "id": 1390381,
+          "name": "Matt Shmigelsky",
+          "resource_url": "https://api.discogs.com/artists/1390381"
+        },
+        {
+          "active": true,
+          "id": 1398258,
+          "name": "Silas Wynne",
+          "resource_url": "https://api.discogs.com/artists/1398258"
+        },
+        {
+          "active": false,
+          "id": 1438682,
+          "name": "Vinny Shillito",
+          "resource_url": "https://api.discogs.com/artists/1438682"
+        },
+        {
+          "active": false,
+          "id": 1438683,
+          "name": "Roy Brosh",
+          "resource_url": "https://api.discogs.com/artists/1438683"
+        },
+        {
+          "active": false,
+          "id": 1969814,
+          "name": "Marcus C. Diess",
+          "resource_url": "https://api.discogs.com/artists/1969814"
+        },
+        {
+          "active": false,
+          "id": 2070642,
+          "name": "Oliver Seagle",
+          "resource_url": "https://api.discogs.com/artists/2070642"
+        },
+        {
+          "active": false,
+          "id": 2227020,
+          "name": "Stuart Fisher (2)",
+          "resource_url": "https://api.discogs.com/artists/2227020"
+        },
+        {
+          "active": false,
+          "id": 2389356,
+          "name": "Harry Waters (2)",
+          "resource_url": "https://api.discogs.com/artists/2389356"
+        },
+        {
+          "active": false,
+          "id": 2774154,
+          "name": "John Schuchard",
+          "resource_url": "https://api.discogs.com/artists/2774154"
+        },
+        {
+          "active": false,
+          "id": 4281413,
+          "name": "Tim Wallander",
+          "resource_url": "https://api.discogs.com/artists/4281413"
+        },
+        {
+          "active": false,
+          "id": 4400076,
+          "name": "Balázs Szende",
+          "resource_url": "https://api.discogs.com/artists/4400076"
+        },
+        {
+          "active": false,
+          "id": 6918434,
+          "name": "Ben Smith (41)",
+          "resource_url": "https://api.discogs.com/artists/6918434"
+        },
+        {
+          "active": true,
+          "id": 7403205,
+          "name": "Corey Atheleny Wallace",
+          "resource_url": "https://api.discogs.com/artists/7403205"
+        },
+        {
+          "active": true,
+          "id": 7848661,
+          "name": "Saskia Maxwell",
+          "resource_url": "https://api.discogs.com/artists/7848661"
+        },
+        {
+          "active": false,
+          "id": 16066170,
+          "name": "Metro (83)",
+          "resource_url": "https://api.discogs.com/artists/16066170"
+        }
+      ],
       "name": "Ozric Tentacles",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "17419",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/17419"
-      },
+      "profile": "English progressive/space/psychedelic rock band founded in 1983 in Somerset. \r\n\r\nOver the course of 40 years, the band has released over 30 albums, selling over a million copies worldwide. Throughout numerous line-up changes, co-founder and guitarist Ed Wynne has remained the sole original member of the band.\r\n\r\nCurrent line-up:\r\nEd Wynne - guitars, keyboards, bass, programming, various instruments (1983–present)\r\nSilas Wynne - keyboards, synthesizers (2009–present)\r\nSaskia Maxwell - flute (2022–present)\r\nPat Garvey - drums, percussion (2023–present)\r\nCorey Wallace - bass (2024–present)\r\n",
+      "releases_url": "https://api.discogs.com/artists/17419/releases",
       "resource_url": "https://api.discogs.com/artists/17419",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/17419",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/17419-Ozric-Tentacles",
+      "urls": [
+        "http://www.ozrics.com/",
+        "https://en.wikipedia.org/wiki/Ozric_Tentacles",
+        "https://www.facebook.com/OfficialOzricTentacles",
+        "https://www.youtube.com/channel/UCsbWPmIwbmnvM-DykpEfwzA",
+        "https://www.instagram.com/ozrictentaclesofficial/",
+        "https://ozrictentaclesmagnacarta.bandcamp.com/",
+        "https://twitter.com/OZRICSOFFICIAL",
+        "https://myspace.com/ozrictentaclesuk",
+        "https://www.AllMusic.com/artist/ozric-tentacles-mn0000499489",
+        "http://ozrics.proboards.com/",
+        "http://www.ProgArchives.com/artist.asp?id=281",
+        "https://soundcloud.com/ozric-tentacles-official",
+        "https://open.Spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9/discography"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Ozric Tentacles', url='https://www.last.fm/music/Ozric+Tentacles', mbid='5629ca87-9086-48c4-8dc4-b4a966c45067', listeners=167009, playcount=5852293, bio_summary='Ozric Tentacles is an instrumental band from Somerset, England, whose music can loosely be described as psychedelic rock. Formed in 1984, the band has released well over twenty albums as of 2005, and has become a cottage industry selling around a million albums worldwide despite never having major label backing.\\n\\nThe original line up met on the 21st June 1984 at the Stonehenge Free Festival; their name came from discussions of hypothetical cereal brands (Malcolm Segments <a href=\"https://www.last.fm/music/Ozric+Tentacles\">Read more on Last.fm</a>', bio_content='Ozric Tentacles is an instrumental band from Somerset, England, whose music can loosely be described as psychedelic rock. Formed in 1984, the band has released well over twenty albums as of 2005, and has become a cottage industry selling around a million albums worldwide despite never having major label backing.\\n\\nThe original line up met on the 21st June 1984 at the Stonehenge Free Festival; their name came from discussions of hypothetical cereal brands (Malcolm Segments, Desmond Whisps, and Gordon Lumps are among the names that were considered). In the 1980s the band built a fan base on the festival circuit, becoming particularly associated with the Glastonbury Festival, and made a series of cassette releases, sold at gigs and via a fan club.\\n\\nTheir first label release was Pungent Effulgent in 1989, which was also re-released in the early 2000s, packaged with Strangeitude. This was followed by Erpland (1990), an album dedicated to Erp, a character who appears on many of the band\\'s album artworks. 1991 saw the Strangeitude LP. The track \"Sploosh!\" was used by BMW in an advertising campaign, and became the band\\'s only single. By 1993 the band had grossed over three million dollars, and their Jurassic Shift album reached the top ten of the U.K. album charts.\\n\\nThe band has gone through many line-up changes, with only Ed Wynne (guitar and keyboards) and Champignon [John Egan] (flute) maintaining a constant presence since the early 1990s. Many members left to pursue more electronic music spin-off acts, namely Eat Static, Nodens Ictus, ZubZub (Former Ozrics bassist Zia\\'s new project), and Moksha. Nevertheless, the band maintained their identity and continued with this prolific rate of albums throughout the 1990s, and into the new millennium. They also continued to tour extensively, releasing a live DVD in 2002.\\n\\nThe band is famous for their live performances, long fronted by Champignon, who danced around the stage in a trance-like manner and occasionally played the flute. Ozric Tentacles has long taken an audio-visual approach to live performance, with an integrated lighting and projections crew. As of 2007, the line up features Ed Wynne (guitar, keyboards), Vinny Shillito (bass), Ed\\'s wife Brandi Wynne (keyboards), and Merv Pepler (drums, percussion), Champignon having parted company with the band in 2005. <a href=\"https://www.last.fm/music/Ozric+Tentacles\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'space rock', 'Psychedelic Rock', 'psychedelic', 'instrumental'], similar_artists=[{'name': 'Hidria Spacefolk', 'url': 'https://www.last.fm/music/Hidria+Spacefolk'}, {'name': 'Gong', 'url': 'https://www.last.fm/music/Gong'}, {'name': 'Steve Hillage', 'url': 'https://www.last.fm/music/Steve+Hillage'}, {'name': 'Hawkwind', 'url': 'https://www.last.fm/music/Hawkwind'}, {'name': 'Eloy', 'url': 'https://www.last.fm/music/Eloy'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Ozric Tentacles', 'mbid': '5629ca87-9086-48c4-8dc4-b4a966c45067', 'url': 'https://www.last.fm/music/Ozric+Tentacles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '167009', 'playcount': '5852293'}, 'similar': {'artist': [{'name': 'Hidria Spacefolk', 'url': 'https://www.last.fm/music/Hidria+Spacefolk', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gong', 'url': 'https://www.last.fm/music/Gong', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Steve Hillage', 'url': 'https://www.last.fm/music/Steve+Hillage', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Hawkwind', 'url': 'https://www.last.fm/music/Hawkwind', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Eloy', 'url': 'https://www.last.fm/music/Eloy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'space rock', 'url': 'https://www.last.fm/tag/space+rock'}, {'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'psychedelic', 'url': 'https://www.last.fm/tag/psychedelic'}, {'name': 'instrumental', 'url': 'https://www.last.fm/tag/instrumental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Ozric+Tentacles/+wiki'}}, 'published': '16 Feb 2006, 20:48', 'summary': 'Ozric Tentacles is an instrumental band from Somerset, England, whose music can loosely be described as psychedelic rock. Formed in 1984, the band has released well over twenty albums as of 2005, and has become a cottage industry selling around a million albums worldwide despite never having major label backing.\\n\\nThe original line up met on the 21st June 1984 at the Stonehenge Free Festival; their name came from discussions of hypothetical cereal brands (Malcolm Segments <a href=\"https://www.last.fm/music/Ozric+Tentacles\">Read more on Last.fm</a>', 'content': 'Ozric Tentacles is an instrumental band from Somerset, England, whose music can loosely be described as psychedelic rock. Formed in 1984, the band has released well over twenty albums as of 2005, and has become a cottage industry selling around a million albums worldwide despite never having major label backing.\\n\\nThe original line up met on the 21st June 1984 at the Stonehenge Free Festival; their name came from discussions of hypothetical cereal brands (Malcolm Segments, Desmond Whisps, and Gordon Lumps are among the names that were considered). In the 1980s the band built a fan base on the festival circuit, becoming particularly associated with the Glastonbury Festival, and made a series of cassette releases, sold at gigs and via a fan club.\\n\\nTheir first label release was Pungent Effulgent in 1989, which was also re-released in the early 2000s, packaged with Strangeitude. This was followed by Erpland (1990), an album dedicated to Erp, a character who appears on many of the band\\'s album artworks. 1991 saw the Strangeitude LP. The track \"Sploosh!\" was used by BMW in an advertising campaign, and became the band\\'s only single. By 1993 the band had grossed over three million dollars, and their Jurassic Shift album reached the top ten of the U.K. album charts.\\n\\nThe band has gone through many line-up changes, with only Ed Wynne (guitar and keyboards) and Champignon [John Egan] (flute) maintaining a constant presence since the early 1990s. Many members left to pursue more electronic music spin-off acts, namely Eat Static, Nodens Ictus, ZubZub (Former Ozrics bassist Zia\\'s new project), and Moksha. Nevertheless, the band maintained their identity and continued with this prolific rate of albums throughout the 1990s, and into the new millennium. They also continued to tour extensively, releasing a live DVD in 2002.\\n\\nThe band is famous for their live performances, long fronted by Champignon, who danced around the stage in a trance-like manner and occasionally played the flute. Ozric Tentacles has long taken an audio-visual approach to live performance, with an integrated lighting and projections crew. As of 2007, the line up features Ed Wynne (guitar, keyboards), Vinny Shillito (bass), Ed\\'s wife Brandi Wynne (keyboards), and Merv Pepler (drums, percussion), Champignon having parted company with the band in 2005. <a href=\"https://www.last.fm/music/Ozric+Tentacles\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0Iv00ucAIqr5KVS7bXGFa9', url='https://open.spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9', name='Ozric Tentacles', popularity=36, followers=90338, genres=['space rock', 'progressive rock', 'psychedelic rock', 'krautrock', 'neo-psychedelic', 'acid rock', 'jam band', 'space music'], images=[{'url': 'https://i.scdn.co/image/2404a62e8b362948196ff1971b187f7f405a3e59', 'height': 1236, 'width': 1000}, {'url': 'https://i.scdn.co/image/277c815e9a8161b37e8fdb2adf5a71c148dfa8c4', 'height': 791, 'width': 640}, {'url': 'https://i.scdn.co/image/8834f3e239b5caa298d3931f8575651d40a0ee58', 'height': 247, 'width': 200}, {'url': 'https://i.scdn.co/image/b5a0b0e8798cef83ff2cae36ca8859799630fb17', 'height': 79, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9'}, 'followers': {'href': None, 'total': 90338}, 'genres': ['space rock', 'progressive rock', 'psychedelic rock', 'krautrock', 'neo-psychedelic', 'acid rock', 'jam band', 'space music'], 'href': 'https://api.spotify.com/v1/artists/0Iv00ucAIqr5KVS7bXGFa9', 'id': '0Iv00ucAIqr5KVS7bXGFa9', 'images': [{'url': 'https://i.scdn.co/image/2404a62e8b362948196ff1971b187f7f405a3e59', 'height': 1236, 'width': 1000}, {'url': 'https://i.scdn.co/image/277c815e9a8161b37e8fdb2adf5a71c148dfa8c4', 'height': 791, 'width': 640}, {'url': 'https://i.scdn.co/image/8834f3e239b5caa298d3931f8575651d40a0ee58', 'height': 247, 'width': 200}, {'url': 'https://i.scdn.co/image/b5a0b0e8798cef83ff2cae36ca8859799630fb17', 'height': 79, 'width': 64}], 'name': 'Ozric Tentacles', 'popularity': 36, 'type': 'artist', 'uri': 'spotify:artist:0Iv00ucAIqr5KVS7bXGFa9'})",
@@ -282,6 +975,6 @@
   },
   "spotify_id": "0Iv00ucAIqr5KVS7bXGFa9",
   "spotify_url": "https://open.spotify.com/artist/0Iv00ucAIqr5KVS7bXGFa9",
-  "updated_at": "2026-10-22T14:09:59.456674",
+  "updated_at": "2026-10-30T18:43:35.930761",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Ozric_Tentacles"
 }

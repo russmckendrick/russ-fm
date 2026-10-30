@@ -93,22 +93,70 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='435820296', url='https://music.apple.com/gb/artist/nathaniel-merriweather/435820296', name='Nathaniel Merriweather', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2b/1c/24/2b1c24a8-6423-0705-8f45-2fc451ab03ff/888608718097.jpg/2000x2000ac.jpg', genres=['Hip-Hop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '435820296', 'type': 'artists', 'href': '/v1/catalog/gb/artists/435820296', 'attributes': {'name': 'Nathaniel Merriweather', 'genreNames': ['Hip-Hop'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2b/1c/24/2b1c24a8-6423-0705-8f45-2fc451ab03ff/888608718097.jpg/{w}x{h}ac.jpg', 'bgColor': '050003', 'textColor1': 'fbaa27', 'textColor2': '1badf4', 'textColor3': 'ca8820', 'textColor4': '168bc4'}, 'url': 'https://music.apple.com/gb/artist/nathaniel-merriweather/435820296'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/435820296/albums', 'data': [{'id': '844768342', 'type': 'albums', 'href': '/v1/catalog/gb/albums/844768342'}, {'id': '435820292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/435820292'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "38039",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 27341,
+          "name": "Dan The Automator",
+          "resource_url": "https://api.discogs.com/artists/27341"
+        },
+        {
+          "id": 499393,
+          "name": "Dan Nakamura",
+          "resource_url": "https://api.discogs.com/artists/499393"
+        },
+        {
+          "id": 7183408,
+          "name": "The Cantankerous Captain Aptos",
+          "resource_url": "https://api.discogs.com/artists/7183408"
+        }
+      ],
+      "data_quality": "Correct",
+      "id": 38039,
+      "images": [
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/QG3PaQJmycI59k9Wm0rA5_ndgfc3eCiJKFIJ9dequ80/rs:fit/g:sm/q:90/h:461/w:386/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QG3PaQJmycI59k9Wm0rA5_ndgfc3eCiJKFIJ9dequ80/rs:fit/g:sm/q:90/h:461/w:386/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RKA9dbhC5HNlUJZzpyBO0J5sDrx6VhRcPnEuDcrsm9Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "width": 386
+        },
+        {
+          "height": 298,
+          "resource_url": "https://i.discogs.com/OOJYeI9Xv8N9FWRsM6cFm8ey7IR-Cuy0OS1oJojwUuQ/rs:fit/g:sm/q:90/h:298/w:303/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OOJYeI9Xv8N9FWRsM6cFm8ey7IR-Cuy0OS1oJojwUuQ/rs:fit/g:sm/q:90/h:298/w:303/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/k0m1cxMidZWSW1SBHP265kMyD2_s36WqYFnZzyTgN1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "width": 303
+        },
+        {
+          "height": 349,
+          "resource_url": "https://i.discogs.com/vteHtHsU5OkHkoz45LIM0yVgcthCo1ECZ2oi05bMI-I/rs:fit/g:sm/q:90/h:349/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vteHtHsU5OkHkoz45LIM0yVgcthCo1ECZ2oi05bMI-I/rs:fit/g:sm/q:90/h:349/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/H6_KEvMGcPQ9I7-58q8r4zw8gC7D2D0MF0ABM9E413g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 281,
+          "resource_url": "https://i.discogs.com/cyT3ADigoGMV2lY7jW7NQ9HCKLcsfB9qMEvcxbcZ_Zw/rs:fit/g:sm/q:90/h:281/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cyT3ADigoGMV2lY7jW7NQ9HCKLcsfB9qMEvcxbcZ_Zw/rs:fit/g:sm/q:90/h:281/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/nb4kTxRrWo2s69naQJJqaoPxCWNnj33H7cCYRBfau8A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "width": 216
+        }
+      ],
       "name": "Nathaniel Merriweather",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "38039",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/38039"
-      },
+      "namevariations": [
+        "Nathanael Merriweather",
+        "Nathaniel Merriweather (Dan The Automator)",
+        "Nathaniel Merryweather"
+      ],
+      "profile": "American hip hop producer, born 9 September 1967 in San Francisco, California, USA.",
+      "realname": "Daniel M. Nakamura",
+      "releases_url": "https://api.discogs.com/artists/38039/releases",
       "resource_url": "https://api.discogs.com/artists/38039",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/38039",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/38039-Nathaniel-Merriweather"
     },
     "identity": {
       "musicbrainz_id": "33945eeb-e2d2-4257-a199-661cbadcf8af",
@@ -118,27 +166,76 @@
     },
     "lastfm": "ArtistLastFmData(name='Nathaniel Merriweather', url='https://www.last.fm/music/+noredirect/Nathaniel+Merriweather', mbid=None, listeners=77975, playcount=603278, bio_summary='see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>', bio_content='see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['wrong tag', 'lovage', 'robertitus global', 'ambient ram', 'die wucht'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Nathaniel Merriweather', 'url': 'https://www.last.fm/music/+noredirect/Nathaniel+Merriweather', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '77975', 'playcount': '603278'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'wrong tag', 'url': 'https://www.last.fm/tag/wrong+tag'}, {'name': 'lovage', 'url': 'https://www.last.fm/tag/lovage'}, {'name': 'robertitus global', 'url': 'https://www.last.fm/tag/robertitus+global'}, {'name': 'ambient ram', 'url': 'https://www.last.fm/tag/ambient+ram'}, {'name': 'die wucht', 'url': 'https://www.last.fm/tag/die+wucht'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Nathaniel+Merriweather/+wiki'}}, 'published': '26 May 2009, 07:57', 'summary': 'see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>', 'content': 'see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='75Hc85c2sVptUPHFykMVTY', url='https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY', name='Nathaniel Merriweather', popularity=45, followers=32821, genres=['trip hop', 'downtempo'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2735dcad25f4cd8b318e0b539b9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e025dcad25f4cd8b318e0b539b9', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048515dcad25f4cd8b318e0b539b9', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY'}, 'followers': {'href': None, 'total': 32821}, 'genres': ['trip hop', 'downtempo'], 'href': 'https://api.spotify.com/v1/artists/75Hc85c2sVptUPHFykMVTY', 'id': '75Hc85c2sVptUPHFykMVTY', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2735dcad25f4cd8b318e0b539b9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e025dcad25f4cd8b318e0b539b9', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048515dcad25f4cd8b318e0b539b9', 'height': 64, 'width': 64}], 'name': 'Nathaniel Merriweather', 'popularity': 45, 'type': 'artist', 'uri': 'spotify:artist:75Hc85c2sVptUPHFykMVTY'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='435820296', url='https://music.apple.com/gb/artist/nathaniel-merriweather/435820296', name='Nathaniel Merriweather', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2b/1c/24/2b1c24a8-6423-0705-8f45-2fc451ab03ff/888608718097.jpg/2000x2000ac.jpg', genres=['Hip-Hop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '435820296', 'type': 'artists', 'href': '/v1/catalog/gb/artists/435820296', 'attributes': {'name': 'Nathaniel Merriweather', 'genreNames': ['Hip-Hop'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2b/1c/24/2b1c24a8-6423-0705-8f45-2fc451ab03ff/888608718097.jpg/{w}x{h}ac.jpg', 'bgColor': '050003', 'textColor1': 'fbaa27', 'textColor2': '1badf4', 'textColor3': 'ca8820', 'textColor4': '168bc4'}, 'url': 'https://music.apple.com/gb/artist/nathaniel-merriweather/435820296'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/435820296/albums', 'data': [{'id': '844768342', 'type': 'albums', 'href': '/v1/catalog/gb/albums/844768342'}, {'id': '435820292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/435820292'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "38039",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 27341,
+          "name": "Dan The Automator",
+          "resource_url": "https://api.discogs.com/artists/27341"
+        },
+        {
+          "id": 499393,
+          "name": "Dan Nakamura",
+          "resource_url": "https://api.discogs.com/artists/499393"
+        },
+        {
+          "id": 7183408,
+          "name": "The Cantankerous Captain Aptos",
+          "resource_url": "https://api.discogs.com/artists/7183408"
+        }
+      ],
+      "data_quality": "Correct",
+      "id": 38039,
+      "images": [
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/QG3PaQJmycI59k9Wm0rA5_ndgfc3eCiJKFIJ9dequ80/rs:fit/g:sm/q:90/h:461/w:386/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QG3PaQJmycI59k9Wm0rA5_ndgfc3eCiJKFIJ9dequ80/rs:fit/g:sm/q:90/h:461/w:386/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RKA9dbhC5HNlUJZzpyBO0J5sDrx6VhRcPnEuDcrsm9Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE2NDkwODA2MTIt/OTYwNS5qcGVn.jpeg",
+          "width": 386
+        },
+        {
+          "height": 298,
+          "resource_url": "https://i.discogs.com/OOJYeI9Xv8N9FWRsM6cFm8ey7IR-Cuy0OS1oJojwUuQ/rs:fit/g:sm/q:90/h:298/w:303/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OOJYeI9Xv8N9FWRsM6cFm8ey7IR-Cuy0OS1oJojwUuQ/rs:fit/g:sm/q:90/h:298/w:303/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/k0m1cxMidZWSW1SBHP265kMyD2_s36WqYFnZzyTgN1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE1MDQ0Nzk3MjAt/NzM1OC5qcGVn.jpeg",
+          "width": 303
+        },
+        {
+          "height": 349,
+          "resource_url": "https://i.discogs.com/vteHtHsU5OkHkoz45LIM0yVgcthCo1ECZ2oi05bMI-I/rs:fit/g:sm/q:90/h:349/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vteHtHsU5OkHkoz45LIM0yVgcthCo1ECZ2oi05bMI-I/rs:fit/g:sm/q:90/h:349/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/H6_KEvMGcPQ9I7-58q8r4zw8gC7D2D0MF0ABM9E413g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTE0NDk1Nzk1MDMt/ODQ3MS5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 281,
+          "resource_url": "https://i.discogs.com/cyT3ADigoGMV2lY7jW7NQ9HCKLcsfB9qMEvcxbcZ_Zw/rs:fit/g:sm/q:90/h:281/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cyT3ADigoGMV2lY7jW7NQ9HCKLcsfB9qMEvcxbcZ_Zw/rs:fit/g:sm/q:90/h:281/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/nb4kTxRrWo2s69naQJJqaoPxCWNnj33H7cCYRBfau8A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDM5/LTEyMTAyNjk2NDUu/anBlZw.jpeg",
+          "width": 216
+        }
+      ],
       "name": "Nathaniel Merriweather",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "38039",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/38039"
-      },
+      "namevariations": [
+        "Nathanael Merriweather",
+        "Nathaniel Merriweather (Dan The Automator)",
+        "Nathaniel Merryweather"
+      ],
+      "profile": "American hip hop producer, born 9 September 1967 in San Francisco, California, USA.",
+      "realname": "Daniel M. Nakamura",
+      "releases_url": "https://api.discogs.com/artists/38039/releases",
       "resource_url": "https://api.discogs.com/artists/38039",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/38039",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/38039-Nathaniel-Merriweather"
     },
     "lastfm": "ArtistLastFmData(name='Nathaniel Merriweather', url='https://www.last.fm/music/+noredirect/Nathaniel+Merriweather', mbid=None, listeners=77975, playcount=603278, bio_summary='see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>', bio_content='see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['wrong tag', 'lovage', 'robertitus global', 'ambient ram', 'die wucht'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Nathaniel Merriweather', 'url': 'https://www.last.fm/music/+noredirect/Nathaniel+Merriweather', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '77975', 'playcount': '603278'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'wrong tag', 'url': 'https://www.last.fm/tag/wrong+tag'}, {'name': 'lovage', 'url': 'https://www.last.fm/tag/lovage'}, {'name': 'robertitus global', 'url': 'https://www.last.fm/tag/robertitus+global'}, {'name': 'ambient ram', 'url': 'https://www.last.fm/tag/ambient+ram'}, {'name': 'die wucht', 'url': 'https://www.last.fm/tag/die+wucht'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Nathaniel+Merriweather/+wiki'}}, 'published': '26 May 2009, 07:57', 'summary': 'see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>', 'content': 'see-Lovage <a href=\"https://www.last.fm/music/+noredirect/Nathaniel+Merriweather\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='75Hc85c2sVptUPHFykMVTY', url='https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY', name='Nathaniel Merriweather', popularity=45, followers=32821, genres=['trip hop', 'downtempo'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2735dcad25f4cd8b318e0b539b9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e025dcad25f4cd8b318e0b539b9', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048515dcad25f4cd8b318e0b539b9', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY'}, 'followers': {'href': None, 'total': 32821}, 'genres': ['trip hop', 'downtempo'], 'href': 'https://api.spotify.com/v1/artists/75Hc85c2sVptUPHFykMVTY', 'id': '75Hc85c2sVptUPHFykMVTY', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2735dcad25f4cd8b318e0b539b9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e025dcad25f4cd8b318e0b539b9', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048515dcad25f4cd8b318e0b539b9', 'height': 64, 'width': 64}], 'name': 'Nathaniel Merriweather', 'popularity': 45, 'type': 'artist', 'uri': 'spotify:artist:75Hc85c2sVptUPHFykMVTY'})",
@@ -146,6 +243,6 @@
   },
   "spotify_id": "75Hc85c2sVptUPHFykMVTY",
   "spotify_url": "https://open.spotify.com/artist/75Hc85c2sVptUPHFykMVTY",
-  "updated_at": "2026-10-22T14:09:32.836983",
+  "updated_at": "2026-10-30T18:42:51.335284",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Dan_the_Automator"
 }

@@ -92,131 +92,95 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1637942422', url='https://music.apple.com/gb/artist/milkbone/1637942422', name='Milkbone', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b7/e7/92/b7e79277-a845-8463-bd63-fc1624226cef/artwork.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1637942422', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1637942422', 'attributes': {'name': 'Milkbone', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b7/e7/92/b7e79277-a845-8463-bd63-fc1624226cef/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': '0a1412', 'textColor1': 'e18262', 'textColor2': 'fc3e0b', 'textColor3': 'b66c52', 'textColor4': 'cb360c'}, 'url': 'https://music.apple.com/gb/artist/milkbone/1637942422'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1637942422/albums', 'data': [{'id': '1638000363', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1638000363'}, {'id': '1803668388', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1803668388'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "10476739",
-      "images": [],
-      "members": [],
-      "name": "Milkbone",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "10476739",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/10476739"
-      },
+      "data_quality": "Needs Vote",
+      "id": 10476739,
+      "members": [
+        {
+          "active": true,
+          "id": 271125,
+          "name": "Phil Scragg",
+          "resource_url": "https://api.discogs.com/artists/271125"
+        },
+        {
+          "active": true,
+          "id": 1921186,
+          "name": "Matt Berry (3)",
+          "resource_url": "https://api.discogs.com/artists/1921186"
+        },
+        {
+          "active": true,
+          "id": 3355133,
+          "name": "James Sedge",
+          "resource_url": "https://api.discogs.com/artists/3355133"
+        }
+      ],
+      "name": "Milkbone (4)",
+      "profile": "Milkbone is a group comprising Phil Scragg (Robert Plant, Cobalt Chapel) on bass, guitar, and keyboards, Matt Berry on keyboards and acoustic guitar, and James Sedge on drums.\r\n\r\nPhil Scragg, Matt Berry and James Sedge have been writing and recording remotely during 2020 on a new side project called Milkbone. There were no preconceptions about the material apart from initial references to artists such as Weather Report, Eno, Brand X, Gong, Mike Oldfield etc...The music came together quickly with ideas flowing right from the start.\r\nThe album 'Milkbone' will initially be released only as a limited edition vinyl record that will be made available soon.\r\n\r\nA true labour of love, the trio's magical 2021 debut offers an inspired evocation of the classic early 1970s Canterbury sound fused with elements of Electronic and Fusion music (with echoes of peak period Soft Machine, Weather Report, Jean-Michel Jarre, Terry Riley, Robert Wyatt and more).\r\n\r\nGraham Mann (trombone/percussion) and Cecilia Fage (vocals) guest.\r\n\r\nMilkbone is the name of musician and comedian, Matt Berry’s latest musical project. Evoking the jazz-rock stylings of Brand X, Gong, Weather Report etc... the new group features bassist Phil Scragg and drummer James Sedge alongside Berry on keyboards. You can listen to a teaser of the band's upcoming album below.\r\n\r\nHaving previously worked together in Matt Berry and The Maypoles, the seeds of the idea of a group coming together on the band’s tour bus where they shared their mutual admiration for 1970s-era progressive and electronic music. “We decided to make an instrumental album that channeled/referenced our shared love of Canterbury era prog mixed with European electronica, Electric period Miles Davis as well as a love of the instruments, both acoustic and electronic, associated with those genres,” explains James Sedge.\r\n\r\n“We were aspiring to get some of the atmosphere and ‘wonkiness’ of the recordings of that era rather than the sterile precision you occasionally encounter in contemporary production. We all enjoy the sound of real instruments playing with sequenced synths - the perfection of the sequencer with the imperfections of live drums and bass. We left in all the quirky feel things, so it wouldn’t sound overproduced and polished,” says Sedge.\r\n\r\nBecause of Covid restrictions, the album was recorded remotely with the players file-sharing remotely from their respective studios but Sedge says rather than letting this factor inhibit their creativity, they were able to exploit it to their advantage. “The music came together surprisingly quickly, with ideas flowing between the three of us right from the start. There was a lot of freedom to improvise and change direction. Tracks would be sent back and forth with ideas added or subtracted. Occasionally the contribution of one of us would be a complete surprise and take the music in a completely new direction.”\r\n\r\nThe trio’s self-titled album will be released on a limited-edition vinyl-only album via Burning Shed though the date has yet to be finalised. You can view the album artwork and tracklisting below.\r\n\r\n“This is a studio project for now, but there are discussions about how we might bring it to a live audience in the not too distant future,” says Sedge.",
+      "releases_url": "https://api.discogs.com/artists/10476739/releases",
       "resource_url": "https://api.discogs.com/artists/10476739",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/10476739",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/10476739-Milkbone-4",
+      "urls": [
+        "https://burningshed.com/genres/CanterburyScene/milkbone_milkbone_red-vinyl?fbclid=IwAR3tdYUZL9ZxcBoc9FIQI41NG2ml2pZVW1B3lNC-joODcJtKvb12YfkB8rI",
+        "",
+        "https://www.facebook.com/MilkBoneDebutAlbum/",
+        "",
+        "https://www.loudersound.com/news/matt-berry-and-friends-launch-new-instrumental-prog-outfit-milkbone?fbclid=IwAR08s1XR7VkpZ3sT_N6lPK_spVuNmGEEKGl4vzib9jqjrMGZk1QRXy8Ww0k"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:09:16.417263",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Milkbone', url='https://www.last.fm/music/+noredirect/Milkbone', mbid='1f6afdb8-9ec0-4487-8085-03b636a2468d', listeners=296, playcount=3600, bio_summary='Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>', bio_content='Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Hip-Hop', 'hip hop', 'Progressive rock', 'USA', 'underground rap'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Milkbone', 'mbid': '1f6afdb8-9ec0-4487-8085-03b636a2468d', 'url': 'https://www.last.fm/music/+noredirect/Milkbone', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '296', 'playcount': '3600'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'Hip-Hop', 'url': 'https://www.last.fm/tag/Hip-Hop'}, {'name': 'hip hop', 'url': 'https://www.last.fm/tag/hip+hop'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}, {'name': 'underground rap', 'url': 'https://www.last.fm/tag/underground+rap'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Milkbone/+wiki'}}, 'published': '15 Jan 2013, 17:10', 'summary': 'Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>', 'content': 'Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5MwLr777brOv2Tx7U0tMau', url='https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau', name='Milkbone', popularity=1, followers=205, genres=['progressive rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2734770e0efde449dc136d15308', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e024770e0efde449dc136d15308', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048514770e0efde449dc136d15308', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau'}, 'followers': {'href': None, 'total': 205}, 'genres': ['progressive rock'], 'href': 'https://api.spotify.com/v1/artists/5MwLr777brOv2Tx7U0tMau', 'id': '5MwLr777brOv2Tx7U0tMau', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2734770e0efde449dc136d15308', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e024770e0efde449dc136d15308', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048514770e0efde449dc136d15308', 'height': 64, 'width': 64}], 'name': 'Milkbone', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:5MwLr777brOv2Tx7U0tMau'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b7/e7/92/b7e79277-a845-8463-bd63-fc1624226cef/artwork.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Rock"
-      ],
-      "id": "1637942422",
-      "name": "Milkbone",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/milkbone/1637942422"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1637942422', url='https://music.apple.com/gb/artist/milkbone/1637942422', name='Milkbone', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b7/e7/92/b7e79277-a845-8463-bd63-fc1624226cef/artwork.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1637942422', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1637942422', 'attributes': {'name': 'Milkbone', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b7/e7/92/b7e79277-a845-8463-bd63-fc1624226cef/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': '0a1412', 'textColor1': 'e18262', 'textColor2': 'fc3e0b', 'textColor3': 'b66c52', 'textColor4': 'cb360c'}, 'url': 'https://music.apple.com/gb/artist/milkbone/1637942422'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1637942422/albums', 'data': [{'id': '1638000363', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1638000363'}, {'id': '1803668388', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1803668388'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "10476739",
-      "images": [],
-      "members": [],
-      "name": "Milkbone",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "10476739",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/10476739"
-      },
+      "data_quality": "Needs Vote",
+      "id": 10476739,
+      "members": [
+        {
+          "active": true,
+          "id": 271125,
+          "name": "Phil Scragg",
+          "resource_url": "https://api.discogs.com/artists/271125"
+        },
+        {
+          "active": true,
+          "id": 1921186,
+          "name": "Matt Berry (3)",
+          "resource_url": "https://api.discogs.com/artists/1921186"
+        },
+        {
+          "active": true,
+          "id": 3355133,
+          "name": "James Sedge",
+          "resource_url": "https://api.discogs.com/artists/3355133"
+        }
+      ],
+      "name": "Milkbone (4)",
+      "profile": "Milkbone is a group comprising Phil Scragg (Robert Plant, Cobalt Chapel) on bass, guitar, and keyboards, Matt Berry on keyboards and acoustic guitar, and James Sedge on drums.\r\n\r\nPhil Scragg, Matt Berry and James Sedge have been writing and recording remotely during 2020 on a new side project called Milkbone. There were no preconceptions about the material apart from initial references to artists such as Weather Report, Eno, Brand X, Gong, Mike Oldfield etc...The music came together quickly with ideas flowing right from the start.\r\nThe album 'Milkbone' will initially be released only as a limited edition vinyl record that will be made available soon.\r\n\r\nA true labour of love, the trio's magical 2021 debut offers an inspired evocation of the classic early 1970s Canterbury sound fused with elements of Electronic and Fusion music (with echoes of peak period Soft Machine, Weather Report, Jean-Michel Jarre, Terry Riley, Robert Wyatt and more).\r\n\r\nGraham Mann (trombone/percussion) and Cecilia Fage (vocals) guest.\r\n\r\nMilkbone is the name of musician and comedian, Matt Berry’s latest musical project. Evoking the jazz-rock stylings of Brand X, Gong, Weather Report etc... the new group features bassist Phil Scragg and drummer James Sedge alongside Berry on keyboards. You can listen to a teaser of the band's upcoming album below.\r\n\r\nHaving previously worked together in Matt Berry and The Maypoles, the seeds of the idea of a group coming together on the band’s tour bus where they shared their mutual admiration for 1970s-era progressive and electronic music. “We decided to make an instrumental album that channeled/referenced our shared love of Canterbury era prog mixed with European electronica, Electric period Miles Davis as well as a love of the instruments, both acoustic and electronic, associated with those genres,” explains James Sedge.\r\n\r\n“We were aspiring to get some of the atmosphere and ‘wonkiness’ of the recordings of that era rather than the sterile precision you occasionally encounter in contemporary production. We all enjoy the sound of real instruments playing with sequenced synths - the perfection of the sequencer with the imperfections of live drums and bass. We left in all the quirky feel things, so it wouldn’t sound overproduced and polished,” says Sedge.\r\n\r\nBecause of Covid restrictions, the album was recorded remotely with the players file-sharing remotely from their respective studios but Sedge says rather than letting this factor inhibit their creativity, they were able to exploit it to their advantage. “The music came together surprisingly quickly, with ideas flowing between the three of us right from the start. There was a lot of freedom to improvise and change direction. Tracks would be sent back and forth with ideas added or subtracted. Occasionally the contribution of one of us would be a complete surprise and take the music in a completely new direction.”\r\n\r\nThe trio’s self-titled album will be released on a limited-edition vinyl-only album via Burning Shed though the date has yet to be finalised. You can view the album artwork and tracklisting below.\r\n\r\n“This is a studio project for now, but there are discussions about how we might bring it to a live audience in the not too distant future,” says Sedge.",
+      "releases_url": "https://api.discogs.com/artists/10476739/releases",
       "resource_url": "https://api.discogs.com/artists/10476739",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/10476739",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/10476739-Milkbone-4",
+      "urls": [
+        "https://burningshed.com/genres/CanterburyScene/milkbone_milkbone_red-vinyl?fbclid=IwAR3tdYUZL9ZxcBoc9FIQI41NG2ml2pZVW1B3lNC-joODcJtKvb12YfkB8rI",
+        "",
+        "https://www.facebook.com/MilkBoneDebutAlbum/",
+        "",
+        "https://www.loudersound.com/news/matt-berry-and-friends-launch-new-instrumental-prog-outfit-milkbone?fbclid=IwAR08s1XR7VkpZ3sT_N6lPK_spVuNmGEEKGl4vzib9jqjrMGZk1QRXy8Ww0k"
+      ]
     },
-    "lastfm": {
-      "bio_content": "Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 296,
-      "mbid": "1f6afdb8-9ec0-4487-8085-03b636a2468d",
-      "name": "Milkbone",
-      "playcount": 3600,
-      "similar_artists": [],
-      "tags": [
-        "Hip-Hop",
-        "hip hop",
-        "Progressive rock",
-        "USA",
-        "underground rap"
-      ],
-      "url": "https://www.last.fm/music/+noredirect/Milkbone"
-    },
-    "spotify": {
-      "followers": 205,
-      "genres": [
-        "progressive rock"
-      ],
-      "id": "5MwLr777brOv2Tx7U0tMau",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2734770e0efde449dc136d15308",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e024770e0efde449dc136d15308",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048514770e0efde449dc136d15308",
-          "width": 64
-        }
-      ],
-      "name": "Milkbone",
-      "popularity": 1,
-      "url": "https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau"
-    },
+    "lastfm": "ArtistLastFmData(name='Milkbone', url='https://www.last.fm/music/+noredirect/Milkbone', mbid='1f6afdb8-9ec0-4487-8085-03b636a2468d', listeners=296, playcount=3600, bio_summary='Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>', bio_content='Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Hip-Hop', 'hip hop', 'Progressive rock', 'USA', 'underground rap'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Milkbone', 'mbid': '1f6afdb8-9ec0-4487-8085-03b636a2468d', 'url': 'https://www.last.fm/music/+noredirect/Milkbone', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '296', 'playcount': '3600'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'Hip-Hop', 'url': 'https://www.last.fm/tag/Hip-Hop'}, {'name': 'hip hop', 'url': 'https://www.last.fm/tag/hip+hop'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}, {'name': 'underground rap', 'url': 'https://www.last.fm/tag/underground+rap'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Milkbone/+wiki'}}, 'published': '15 Jan 2013, 17:10', 'summary': 'Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>', 'content': 'Miilkbone <a href=\"https://www.last.fm/music/+noredirect/Milkbone\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='5MwLr777brOv2Tx7U0tMau', url='https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau', name='Milkbone', popularity=1, followers=205, genres=['progressive rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2734770e0efde449dc136d15308', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e024770e0efde449dc136d15308', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048514770e0efde449dc136d15308', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau'}, 'followers': {'href': None, 'total': 205}, 'genres': ['progressive rock'], 'href': 'https://api.spotify.com/v1/artists/5MwLr777brOv2Tx7U0tMau', 'id': '5MwLr777brOv2Tx7U0tMau', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2734770e0efde449dc136d15308', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e024770e0efde449dc136d15308', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048514770e0efde449dc136d15308', 'height': 64, 'width': 64}], 'name': 'Milkbone', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:5MwLr777brOv2Tx7U0tMau'})",
     "theaudiodb": {}
   },
   "spotify_id": "5MwLr777brOv2Tx7U0tMau",
   "spotify_url": "https://open.spotify.com/artist/5MwLr777brOv2Tx7U0tMau",
-  "updated_at": "2025-07-08T20:49:25.181183",
+  "updated_at": "2026-10-30T18:42:25.413488",
   "wikipedia_url": null
 }

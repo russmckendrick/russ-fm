@@ -49,22 +49,45 @@
   "raw_data": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "8147549",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 8147549,
+      "members": [
+        {
+          "active": true,
+          "id": 554514,
+          "name": "Raymond MacDonald",
+          "resource_url": "https://api.discogs.com/artists/554514"
+        },
+        {
+          "active": true,
+          "id": 2750544,
+          "name": "Malcolm Benzie",
+          "resource_url": "https://api.discogs.com/artists/2750544"
+        },
+        {
+          "active": true,
+          "id": 3107052,
+          "name": "Andy Monaghan",
+          "resource_url": "https://api.discogs.com/artists/3107052"
+        },
+        {
+          "active": true,
+          "id": 7621290,
+          "name": "Citizen Bravo",
+          "resource_url": "https://api.discogs.com/artists/7621290"
+        }
+      ],
       "name": "Citizen Bravo, Raymond MacDonald And Friends",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "8147549",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8147549"
-      },
+      "releases_url": "https://api.discogs.com/artists/8147549/releases",
       "resource_url": "https://api.discogs.com/artists/8147549",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8147549",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/8147549-Citizen-Bravo-Raymond-MacDonald-And-Friends"
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:05:46.342516",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Citizen Bravo, Raymond MacDonald And Friends', url='https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends', mbid=None, listeners=33, playcount=198, bio_summary='<a href=\"https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Citizen Bravo, Raymond MacDonald And Friends', 'url': 'https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '33', 'playcount': '198'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='5S3EbUETKlfsBRUiBKnqer', url='https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer', name='Roachford', popularity=44, followers=41535, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebfa2271b0884a8fe62f6cca59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fa2271b0884a8fe62f6cca59', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fa2271b0884a8fe62f6cca59', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer'}, 'followers': {'href': None, 'total': 41535}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5S3EbUETKlfsBRUiBKnqer', 'id': '5S3EbUETKlfsBRUiBKnqer', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebfa2271b0884a8fe62f6cca59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fa2271b0884a8fe62f6cca59', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fa2271b0884a8fe62f6cca59', 'height': 160, 'width': 160}], 'name': 'Roachford', 'popularity': 44, 'type': 'artist', 'uri': 'spotify:artist:5S3EbUETKlfsBRUiBKnqer'})",
@@ -73,89 +96,46 @@
   "services": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "8147549",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 8147549,
+      "members": [
+        {
+          "active": true,
+          "id": 554514,
+          "name": "Raymond MacDonald",
+          "resource_url": "https://api.discogs.com/artists/554514"
+        },
+        {
+          "active": true,
+          "id": 2750544,
+          "name": "Malcolm Benzie",
+          "resource_url": "https://api.discogs.com/artists/2750544"
+        },
+        {
+          "active": true,
+          "id": 3107052,
+          "name": "Andy Monaghan",
+          "resource_url": "https://api.discogs.com/artists/3107052"
+        },
+        {
+          "active": true,
+          "id": 7621290,
+          "name": "Citizen Bravo",
+          "resource_url": "https://api.discogs.com/artists/7621290"
+        }
+      ],
       "name": "Citizen Bravo, Raymond MacDonald And Friends",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "8147549",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8147549"
-      },
+      "releases_url": "https://api.discogs.com/artists/8147549/releases",
       "resource_url": "https://api.discogs.com/artists/8147549",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8147549",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/8147549-Citizen-Bravo-Raymond-MacDonald-And-Friends"
     },
-    "lastfm": {
-      "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": ""
-        },
-        {
-          "size": "medium",
-          "url": ""
-        },
-        {
-          "size": "large",
-          "url": ""
-        },
-        {
-          "size": "extralarge",
-          "url": ""
-        },
-        {
-          "size": "mega",
-          "url": ""
-        },
-        {
-          "size": "",
-          "url": ""
-        }
-      ],
-      "listeners": 33,
-      "mbid": null,
-      "name": "Citizen Bravo, Raymond MacDonald And Friends",
-      "playcount": 198,
-      "similar_artists": [],
-      "tags": [],
-      "url": "https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends"
-    },
-    "spotify": {
-      "followers": 41535,
-      "genres": [],
-      "id": "5S3EbUETKlfsBRUiBKnqer",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebfa2271b0884a8fe62f6cca59",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174fa2271b0884a8fe62f6cca59",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178fa2271b0884a8fe62f6cca59",
-          "width": 160
-        }
-      ],
-      "name": "Roachford",
-      "popularity": 44,
-      "url": "https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer"
-    },
+    "lastfm": "ArtistLastFmData(name='Citizen Bravo, Raymond MacDonald And Friends', url='https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends', mbid=None, listeners=33, playcount=198, bio_summary='<a href=\"https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Citizen Bravo, Raymond MacDonald And Friends', 'url': 'https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '33', 'playcount': '198'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Citizen+Bravo,+Raymond+MacDonald+And+Friends\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='5S3EbUETKlfsBRUiBKnqer', url='https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer', name='Roachford', popularity=44, followers=41535, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebfa2271b0884a8fe62f6cca59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fa2271b0884a8fe62f6cca59', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fa2271b0884a8fe62f6cca59', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer'}, 'followers': {'href': None, 'total': 41535}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5S3EbUETKlfsBRUiBKnqer', 'id': '5S3EbUETKlfsBRUiBKnqer', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebfa2271b0884a8fe62f6cca59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fa2271b0884a8fe62f6cca59', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fa2271b0884a8fe62f6cca59', 'height': 160, 'width': 160}], 'name': 'Roachford', 'popularity': 44, 'type': 'artist', 'uri': 'spotify:artist:5S3EbUETKlfsBRUiBKnqer'})",
     "theaudiodb": {}
   },
   "spotify_id": "5S3EbUETKlfsBRUiBKnqer",
   "spotify_url": "https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer",
-  "updated_at": "2025-07-08T20:51:40.340121",
+  "updated_at": "2026-10-30T18:37:51.629578",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Raymond_MacDonald"
 }

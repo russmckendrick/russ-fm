@@ -94,154 +94,252 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='280466125', url='https://music.apple.com/gb/artist/abel-ganz/280466125', name='Abel Ganz', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3f/8a/d8/3f8ad84c-157e-d21f-6adf-a9270153a261/febbce42-e4aa-4d1c-a25a-b649c7fdfedf_ami-identity-f4f6bc9d3dada1b7a2e50f909d2c5639-2023-06-17T13-55-03.166Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '280466125', 'type': 'artists', 'href': '/v1/catalog/gb/artists/280466125', 'attributes': {'name': 'Abel Ganz', 'genreNames': ['Rock'], 'artwork': {'width': 800, 'height': 800, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3f/8a/d8/3f8ad84c-157e-d21f-6adf-a9270153a261/febbce42-e4aa-4d1c-a25a-b649c7fdfedf_ami-identity-f4f6bc9d3dada1b7a2e50f909d2c5639-2023-06-17T13-55-03.166Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '4b427f', 'textColor1': 'faf7ff', 'textColor2': '9499ff', 'textColor3': 'd7d2e5', 'textColor4': '8587e5'}, 'url': 'https://music.apple.com/gb/artist/abel-ganz/280466125'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/280466125/albums', 'data': [{'id': '1510099512', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510099512'}, {'id': '882689798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/882689798'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1829021",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 1829021,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/ReWyLfNv-3C1gQmU9nwuL5mM2VI-OLFKwI_o0AJoTeY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ReWyLfNv-3C1gQmU9nwuL5mM2VI-OLFKwI_o0AJoTeY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QeTl-gG4a__SuG625Qrx8dtwXyMuQvXxsfwLEE2esI8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/kOYnIpF91ic09scCTWSPYPC8JDOw-QSS_co1IwlJmo4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kOYnIpF91ic09scCTWSPYPC8JDOw-QSS_co1IwlJmo4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EAIgnwDQ5atkLhSAylk2uydaJmdoAX-8nlGgvjjs78w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 954415,
+          "name": "Alan Reed (3)",
+          "resource_url": "https://api.discogs.com/artists/954415"
+        },
+        {
+          "active": false,
+          "id": 1222161,
+          "name": "Hew Montgomery",
+          "resource_url": "https://api.discogs.com/artists/1222161"
+        },
+        {
+          "active": false,
+          "id": 1828996,
+          "name": "Paul Kelly (12)",
+          "resource_url": "https://api.discogs.com/artists/1828996"
+        },
+        {
+          "active": false,
+          "id": 1829012,
+          "name": "Malky McNiven",
+          "resource_url": "https://api.discogs.com/artists/1829012"
+        },
+        {
+          "active": false,
+          "id": 1829019,
+          "name": "Hugh Carter (2)",
+          "resource_url": "https://api.discogs.com/artists/1829019"
+        },
+        {
+          "active": true,
+          "id": 3281523,
+          "name": "Denis Smith (4)",
+          "resource_url": "https://api.discogs.com/artists/3281523"
+        },
+        {
+          "active": false,
+          "id": 3761442,
+          "name": "Kenny Weir",
+          "resource_url": "https://api.discogs.com/artists/3761442"
+        },
+        {
+          "active": false,
+          "id": 3761455,
+          "name": "Gordon Mackie",
+          "resource_url": "https://api.discogs.com/artists/3761455"
+        },
+        {
+          "active": true,
+          "id": 3808474,
+          "name": "Davie Mitchell",
+          "resource_url": "https://api.discogs.com/artists/3808474"
+        },
+        {
+          "active": true,
+          "id": 3808476,
+          "name": "Stephen Donnelly",
+          "resource_url": "https://api.discogs.com/artists/3808476"
+        },
+        {
+          "active": true,
+          "id": 3900803,
+          "name": "Stephen Lightbody (2)",
+          "resource_url": "https://api.discogs.com/artists/3900803"
+        },
+        {
+          "active": true,
+          "id": 3900810,
+          "name": "Mick Macfarlane",
+          "resource_url": "https://api.discogs.com/artists/3900810"
+        },
+        {
+          "active": true,
+          "id": 7309249,
+          "name": "Robert Wilson (24)",
+          "resource_url": "https://api.discogs.com/artists/7309249"
+        }
+      ],
       "name": "Abel Ganz",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1829021",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1829021"
-      },
+      "profile": "Abel Ganz was formed in Glasgow, UK in 1980.\r\n\r\nMembers:\r\n[a3281523]\r\n[a3808476]\r\n[a3808474]\r\n[a3900810]\r\n[a3900802]\r\n\r\nPrevious members:\r\n[a1829019]\r\n[a1222161]\r\n[a954415]\r\n[a1829012]\r\n[a3900803]",
+      "releases_url": "https://api.discogs.com/artists/1829021/releases",
       "resource_url": "https://api.discogs.com/artists/1829021",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1829021",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1829021-Abel-Ganz",
+      "urls": [
+        "http://www.abelganz.com",
+        "http://www.facebook.com/pages/Abel-Ganz/104282746280548",
+        "http://abelganz.bandcamp.com",
+        "http://www.pledgemusic.com/projects/abelganz",
+        "http://twitter.com/abelganz"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": "e6cbdaaa-6eef-492f-9dd2-35670b75f0f3",
+      "resolved_at": "2026-10-22T14:04:25.455133",
+      "wikidata_id": "Q127506033",
+      "wikipedia_title": null
+    },
+    "lastfm": "ArtistLastFmData(name='Abel Ganz', url='https://www.last.fm/music/Abel+Ganz', mbid='e6cbdaaa-6eef-492f-9dd2-35670b75f0f3', listeners=5183, playcount=72334, bio_summary='In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>', bio_content='In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly, Mick Macfarlane, Denis Smith, Davie Mitchell, and Jack Webb. With this stable line up new creative elements began to emerge and a more pastoral and diverse sound began to surface.\\n\\nAfter some notable gigs at The Baltic Prog Festival in Lithuania and the Electric Garden Festival in the UK work began on their latest release titled simply Abel Ganz.   On this new release the band were able to draw upon everyone’s creative input - the results of which have earned the band some of the highest praise from reviewers around the world and seen the band fully make the transition from one era to the next with a fusion of melodies and harmonies with subtle nuances and a truly progressive feel.  \\n\\nThe decision to utilize brass along with pedal steel, flutes, and whistles infusing traditional themes, Americana, rock and jazzy overtones has borne fruit and has allowed Abel Ganz to step away from their neo and symphonic roots to become something entirely original and captivating while staying true to the essence of progressive music.  Initial reactions to the new album have been incredibly positive with very high praise from reviewers from sites such as Dutch Progressive Rock Page and Lady Obscure.  The band are both honored and excited to have been invited to perform in 2015 at the ROSfest festival in USA.\\n <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'neo-progressive rock', 'Progressive', 'Neo-prog', 'seen live'], similar_artists=[{'name': 'Little Atlas', 'url': 'https://www.last.fm/music/Little+Atlas'}, {'name': 'Landmarq', 'url': 'https://www.last.fm/music/Landmarq'}, {'name': 'Mindgames', 'url': 'https://www.last.fm/music/Mindgames'}, {'name': 'Brother Ape', 'url': 'https://www.last.fm/music/Brother+Ape'}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Abel Ganz', 'mbid': 'e6cbdaaa-6eef-492f-9dd2-35670b75f0f3', 'url': 'https://www.last.fm/music/Abel+Ganz', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5183', 'playcount': '72334'}, 'similar': {'artist': [{'name': 'Little Atlas', 'url': 'https://www.last.fm/music/Little+Atlas', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Landmarq', 'url': 'https://www.last.fm/music/Landmarq', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Mindgames', 'url': 'https://www.last.fm/music/Mindgames', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Brother Ape', 'url': 'https://www.last.fm/music/Brother+Ape', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'neo-progressive rock', 'url': 'https://www.last.fm/tag/neo-progressive+rock'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'Neo-prog', 'url': 'https://www.last.fm/tag/Neo-prog'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Abel+Ganz/+wiki'}}, 'published': '20 Nov 2006, 20:30', 'summary': 'In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>', 'content': 'In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly, Mick Macfarlane, Denis Smith, Davie Mitchell, and Jack Webb. With this stable line up new creative elements began to emerge and a more pastoral and diverse sound began to surface.\\n\\nAfter some notable gigs at The Baltic Prog Festival in Lithuania and the Electric Garden Festival in the UK work began on their latest release titled simply Abel Ganz.   On this new release the band were able to draw upon everyone’s creative input - the results of which have earned the band some of the highest praise from reviewers around the world and seen the band fully make the transition from one era to the next with a fusion of melodies and harmonies with subtle nuances and a truly progressive feel.  \\n\\nThe decision to utilize brass along with pedal steel, flutes, and whistles infusing traditional themes, Americana, rock and jazzy overtones has borne fruit and has allowed Abel Ganz to step away from their neo and symphonic roots to become something entirely original and captivating while staying true to the essence of progressive music.  Initial reactions to the new album have been incredibly positive with very high praise from reviewers from sites such as Dutch Progressive Rock Page and Lady Obscure.  The band are both honored and excited to have been invited to perform in 2015 at the ROSfest festival in USA.\\n <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='20FkzGa1heAvwRRxKSMlAX', url='https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX', name='Abel Ganz', popularity=6, followers=4422, genres=['progressive rock', 'progressive metal', 'art rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf222aa1e0b0277bc4d4abb51', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f222aa1e0b0277bc4d4abb51', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f222aa1e0b0277bc4d4abb51', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX'}, 'followers': {'href': None, 'total': 4422}, 'genres': ['progressive rock', 'progressive metal', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/20FkzGa1heAvwRRxKSMlAX', 'id': '20FkzGa1heAvwRRxKSMlAX', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf222aa1e0b0277bc4d4abb51', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f222aa1e0b0277bc4d4abb51', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f222aa1e0b0277bc4d4abb51', 'height': 160, 'width': 160}], 'name': 'Abel Ganz', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:20FkzGa1heAvwRRxKSMlAX'})",
+    "theaudiodb": {},
+    "wikidata_videos": []
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='280466125', url='https://music.apple.com/gb/artist/abel-ganz/280466125', name='Abel Ganz', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3f/8a/d8/3f8ad84c-157e-d21f-6adf-a9270153a261/febbce42-e4aa-4d1c-a25a-b649c7fdfedf_ami-identity-f4f6bc9d3dada1b7a2e50f909d2c5639-2023-06-17T13-55-03.166Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '280466125', 'type': 'artists', 'href': '/v1/catalog/gb/artists/280466125', 'attributes': {'name': 'Abel Ganz', 'genreNames': ['Rock'], 'artwork': {'width': 800, 'height': 800, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3f/8a/d8/3f8ad84c-157e-d21f-6adf-a9270153a261/febbce42-e4aa-4d1c-a25a-b649c7fdfedf_ami-identity-f4f6bc9d3dada1b7a2e50f909d2c5639-2023-06-17T13-55-03.166Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '4b427f', 'textColor1': 'faf7ff', 'textColor2': '9499ff', 'textColor3': 'd7d2e5', 'textColor4': '8587e5'}, 'url': 'https://music.apple.com/gb/artist/abel-ganz/280466125'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/280466125/albums', 'data': [{'id': '1510099512', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510099512'}, {'id': '882689798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/882689798'}]}}})",
+    "discogs": {
+      "data_quality": "Needs Vote",
+      "id": 1829021,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/ReWyLfNv-3C1gQmU9nwuL5mM2VI-OLFKwI_o0AJoTeY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ReWyLfNv-3C1gQmU9nwuL5mM2VI-OLFKwI_o0AJoTeY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QeTl-gG4a__SuG625Qrx8dtwXyMuQvXxsfwLEE2esI8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/NS0xMTUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/kOYnIpF91ic09scCTWSPYPC8JDOw-QSS_co1IwlJmo4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kOYnIpF91ic09scCTWSPYPC8JDOw-QSS_co1IwlJmo4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EAIgnwDQ5atkLhSAylk2uydaJmdoAX-8nlGgvjjs78w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Mjkw/MjEtMTQxNjAwOTY0/Ni00NTExLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 954415,
+          "name": "Alan Reed (3)",
+          "resource_url": "https://api.discogs.com/artists/954415"
+        },
+        {
+          "active": false,
+          "id": 1222161,
+          "name": "Hew Montgomery",
+          "resource_url": "https://api.discogs.com/artists/1222161"
+        },
+        {
+          "active": false,
+          "id": 1828996,
+          "name": "Paul Kelly (12)",
+          "resource_url": "https://api.discogs.com/artists/1828996"
+        },
+        {
+          "active": false,
+          "id": 1829012,
+          "name": "Malky McNiven",
+          "resource_url": "https://api.discogs.com/artists/1829012"
+        },
+        {
+          "active": false,
+          "id": 1829019,
+          "name": "Hugh Carter (2)",
+          "resource_url": "https://api.discogs.com/artists/1829019"
+        },
+        {
+          "active": true,
+          "id": 3281523,
+          "name": "Denis Smith (4)",
+          "resource_url": "https://api.discogs.com/artists/3281523"
+        },
+        {
+          "active": false,
+          "id": 3761442,
+          "name": "Kenny Weir",
+          "resource_url": "https://api.discogs.com/artists/3761442"
+        },
+        {
+          "active": false,
+          "id": 3761455,
+          "name": "Gordon Mackie",
+          "resource_url": "https://api.discogs.com/artists/3761455"
+        },
+        {
+          "active": true,
+          "id": 3808474,
+          "name": "Davie Mitchell",
+          "resource_url": "https://api.discogs.com/artists/3808474"
+        },
+        {
+          "active": true,
+          "id": 3808476,
+          "name": "Stephen Donnelly",
+          "resource_url": "https://api.discogs.com/artists/3808476"
+        },
+        {
+          "active": true,
+          "id": 3900803,
+          "name": "Stephen Lightbody (2)",
+          "resource_url": "https://api.discogs.com/artists/3900803"
+        },
+        {
+          "active": true,
+          "id": 3900810,
+          "name": "Mick Macfarlane",
+          "resource_url": "https://api.discogs.com/artists/3900810"
+        },
+        {
+          "active": true,
+          "id": 7309249,
+          "name": "Robert Wilson (24)",
+          "resource_url": "https://api.discogs.com/artists/7309249"
+        }
+      ],
+      "name": "Abel Ganz",
+      "profile": "Abel Ganz was formed in Glasgow, UK in 1980.\r\n\r\nMembers:\r\n[a3281523]\r\n[a3808476]\r\n[a3808474]\r\n[a3900810]\r\n[a3900802]\r\n\r\nPrevious members:\r\n[a1829019]\r\n[a1222161]\r\n[a954415]\r\n[a1829012]\r\n[a3900803]",
+      "releases_url": "https://api.discogs.com/artists/1829021/releases",
+      "resource_url": "https://api.discogs.com/artists/1829021",
+      "uri": "https://www.discogs.com/artist/1829021-Abel-Ganz",
+      "urls": [
+        "http://www.abelganz.com",
+        "http://www.facebook.com/pages/Abel-Ganz/104282746280548",
+        "http://abelganz.bandcamp.com",
+        "http://www.pledgemusic.com/projects/abelganz",
+        "http://twitter.com/abelganz"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Abel Ganz', url='https://www.last.fm/music/Abel+Ganz', mbid='e6cbdaaa-6eef-492f-9dd2-35670b75f0f3', listeners=5183, playcount=72334, bio_summary='In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>', bio_content='In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly, Mick Macfarlane, Denis Smith, Davie Mitchell, and Jack Webb. With this stable line up new creative elements began to emerge and a more pastoral and diverse sound began to surface.\\n\\nAfter some notable gigs at The Baltic Prog Festival in Lithuania and the Electric Garden Festival in the UK work began on their latest release titled simply Abel Ganz.   On this new release the band were able to draw upon everyone’s creative input - the results of which have earned the band some of the highest praise from reviewers around the world and seen the band fully make the transition from one era to the next with a fusion of melodies and harmonies with subtle nuances and a truly progressive feel.  \\n\\nThe decision to utilize brass along with pedal steel, flutes, and whistles infusing traditional themes, Americana, rock and jazzy overtones has borne fruit and has allowed Abel Ganz to step away from their neo and symphonic roots to become something entirely original and captivating while staying true to the essence of progressive music.  Initial reactions to the new album have been incredibly positive with very high praise from reviewers from sites such as Dutch Progressive Rock Page and Lady Obscure.  The band are both honored and excited to have been invited to perform in 2015 at the ROSfest festival in USA.\\n <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'neo-progressive rock', 'Progressive', 'Neo-prog', 'seen live'], similar_artists=[{'name': 'Little Atlas', 'url': 'https://www.last.fm/music/Little+Atlas'}, {'name': 'Landmarq', 'url': 'https://www.last.fm/music/Landmarq'}, {'name': 'Mindgames', 'url': 'https://www.last.fm/music/Mindgames'}, {'name': 'Brother Ape', 'url': 'https://www.last.fm/music/Brother+Ape'}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Abel Ganz', 'mbid': 'e6cbdaaa-6eef-492f-9dd2-35670b75f0f3', 'url': 'https://www.last.fm/music/Abel+Ganz', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5183', 'playcount': '72334'}, 'similar': {'artist': [{'name': 'Little Atlas', 'url': 'https://www.last.fm/music/Little+Atlas', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Landmarq', 'url': 'https://www.last.fm/music/Landmarq', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Mindgames', 'url': 'https://www.last.fm/music/Mindgames', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Brother Ape', 'url': 'https://www.last.fm/music/Brother+Ape', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'neo-progressive rock', 'url': 'https://www.last.fm/tag/neo-progressive+rock'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'Neo-prog', 'url': 'https://www.last.fm/tag/Neo-prog'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Abel+Ganz/+wiki'}}, 'published': '20 Nov 2006, 20:30', 'summary': 'In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>', 'content': 'In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly, Mick Macfarlane, Denis Smith, Davie Mitchell, and Jack Webb. With this stable line up new creative elements began to emerge and a more pastoral and diverse sound began to surface.\\n\\nAfter some notable gigs at The Baltic Prog Festival in Lithuania and the Electric Garden Festival in the UK work began on their latest release titled simply Abel Ganz.   On this new release the band were able to draw upon everyone’s creative input - the results of which have earned the band some of the highest praise from reviewers around the world and seen the band fully make the transition from one era to the next with a fusion of melodies and harmonies with subtle nuances and a truly progressive feel.  \\n\\nThe decision to utilize brass along with pedal steel, flutes, and whistles infusing traditional themes, Americana, rock and jazzy overtones has borne fruit and has allowed Abel Ganz to step away from their neo and symphonic roots to become something entirely original and captivating while staying true to the essence of progressive music.  Initial reactions to the new album have been incredibly positive with very high praise from reviewers from sites such as Dutch Progressive Rock Page and Lady Obscure.  The band are both honored and excited to have been invited to perform in 2015 at the ROSfest festival in USA.\\n <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='20FkzGa1heAvwRRxKSMlAX', url='https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX', name='Abel Ganz', popularity=6, followers=4422, genres=['progressive rock', 'progressive metal', 'art rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf222aa1e0b0277bc4d4abb51', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f222aa1e0b0277bc4d4abb51', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f222aa1e0b0277bc4d4abb51', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX'}, 'followers': {'href': None, 'total': 4422}, 'genres': ['progressive rock', 'progressive metal', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/20FkzGa1heAvwRRxKSMlAX', 'id': '20FkzGa1heAvwRRxKSMlAX', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf222aa1e0b0277bc4d4abb51', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f222aa1e0b0277bc4d4abb51', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f222aa1e0b0277bc4d4abb51', 'height': 160, 'width': 160}], 'name': 'Abel Ganz', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:20FkzGa1heAvwRRxKSMlAX'})",
     "theaudiodb": {}
   },
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/3f/8a/d8/3f8ad84c-157e-d21f-6adf-a9270153a261/febbce42-e4aa-4d1c-a25a-b649c7fdfedf_ami-identity-f4f6bc9d3dada1b7a2e50f909d2c5639-2023-06-17T13-55-03.166Z_cropped.png/2000x2000bb.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Rock"
-      ],
-      "id": "280466125",
-      "name": "Abel Ganz",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/abel-ganz/280466125"
-    },
-    "discogs": {
-      "cover_image": "",
-      "id": "1829021",
-      "images": [],
-      "members": [],
-      "name": "Abel Ganz",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1829021",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1829021"
-      },
-      "resource_url": "https://api.discogs.com/artists/1829021",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1829021",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly, Mick Macfarlane, Denis Smith, Davie Mitchell, and Jack Webb. With this stable line up new creative elements began to emerge and a more pastoral and diverse sound began to surface.\n\nAfter some notable gigs at The Baltic Prog Festival in Lithuania and the Electric Garden Festival in the UK work began on their latest release titled simply Abel Ganz.   On this new release the band were able to draw upon everyone’s creative input - the results of which have earned the band some of the highest praise from reviewers around the world and seen the band fully make the transition from one era to the next with a fusion of melodies and harmonies with subtle nuances and a truly progressive feel.  \n\nThe decision to utilize brass along with pedal steel, flutes, and whistles infusing traditional themes, Americana, rock and jazzy overtones has borne fruit and has allowed Abel Ganz to step away from their neo and symphonic roots to become something entirely original and captivating while staying true to the essence of progressive music.  Initial reactions to the new album have been incredibly positive with very high praise from reviewers from sites such as Dutch Progressive Rock Page and Lady Obscure.  The band are both honored and excited to have been invited to perform in 2015 at the ROSfest festival in USA.\n <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "In 2002 after a very lengthy hiatus Abel Ganz reformed to perform at a benefit gig at the Classic Rock Society in Rotherham, UK.  This was enjoyed so much by all involved that it sparked off the desire to produce a new album.  In 2008 Shooting Albatross was released.  The album was very well received and was the essence of the new direction the band was heading.  Not long after this release founding members Hugh Carter and Hew Montgomery decided to pass the baton and leave the band in the safe hands of Stevie Donnelly <a href=\"https://www.last.fm/music/Abel+Ganz\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 5183,
-      "mbid": "e6cbdaaa-6eef-492f-9dd2-35670b75f0f3",
-      "name": "Abel Ganz",
-      "playcount": 72334,
-      "similar_artists": [
-        {
-          "name": "Little Atlas",
-          "url": "https://www.last.fm/music/Little+Atlas"
-        },
-        {
-          "name": "Landmarq",
-          "url": "https://www.last.fm/music/Landmarq"
-        },
-        {
-          "name": "Mindgames",
-          "url": "https://www.last.fm/music/Mindgames"
-        },
-        {
-          "name": "Brother Ape",
-          "url": "https://www.last.fm/music/Brother+Ape"
-        },
-        {
-          "name": "Also Eden",
-          "url": "https://www.last.fm/music/Also+Eden"
-        }
-      ],
-      "tags": [
-        "Progressive rock",
-        "neo-progressive rock",
-        "Progressive",
-        "Neo-prog",
-        "seen live"
-      ],
-      "url": "https://www.last.fm/music/Abel+Ganz"
-    },
-    "spotify": {
-      "followers": 4422,
-      "genres": [
-        "progressive rock",
-        "progressive metal",
-        "art rock"
-      ],
-      "id": "20FkzGa1heAvwRRxKSMlAX",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebf222aa1e0b0277bc4d4abb51",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174f222aa1e0b0277bc4d4abb51",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178f222aa1e0b0277bc4d4abb51",
-          "width": 160
-        }
-      ],
-      "name": "Abel Ganz",
-      "popularity": 6,
-      "url": "https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX"
-    },
-    "theaudiodb": {}
-  },
   "spotify_id": "20FkzGa1heAvwRRxKSMlAX",
   "spotify_url": "https://open.spotify.com/artist/20FkzGa1heAvwRRxKSMlAX",
-  "updated_at": "2025-07-08T20:50:16.938700",
+  "updated_at": "2026-10-30T18:35:32.194128",
   "wikipedia_url": null
 }

@@ -92,22 +92,73 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='818494911', url='https://music.apple.com/gb/artist/glasgow-coma-scale/818494911', name='Glasgow Coma Scale', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/67/fd/18/67fd188d-4381-9474-2a84-ba4c862902d3/cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '818494911', 'type': 'artists', 'href': '/v1/catalog/gb/artists/818494911', 'attributes': {'name': 'Glasgow Coma Scale', 'genreNames': ['Rock'], 'artwork': {'width': 1440, 'height': 1440, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/67/fd/18/67fd188d-4381-9474-2a84-ba4c862902d3/cover.jpg/{w}x{h}ac.jpg', 'bgColor': 'f4e2ce', 'textColor1': '090501', 'textColor2': '363129', 'textColor3': '38312a', 'textColor4': '5c544a'}, 'url': 'https://music.apple.com/gb/artist/glasgow-coma-scale/818494911'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/818494911/albums', 'data': [{'id': '1180715615', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1180715615'}, {'id': '1772889401', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1772889401'}, {'id': '1616665275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1616665275'}, {'id': '1748528088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1748528088'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5272013",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5272013,
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/7UwczZFvOLGJREgLpbbOyVis6cT6n0aA9t23hAl4fYU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/7UwczZFvOLGJREgLpbbOyVis6cT6n0aA9t23hAl4fYU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ImsqsdTKY5gN1yFw68RJfzlCa07ySqis0N8IFtNNqG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 491,
+          "resource_url": "https://i.discogs.com/u-UjKJm1o20HgN5NH0cagqP1jLVJRqwsch5n8E21SKI/rs:fit/g:sm/q:90/h:491/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/u-UjKJm1o20HgN5NH0cagqP1jLVJRqwsch5n8E21SKI/rs:fit/g:sm/q:90/h:491/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/y0dztvzFIlBCxR9iaa3XCS9-9FY-RoWegHiPliEJXro/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "width": 492
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/XCPMPqE2nCUvGCAgOdCXc2aWaXimO7zaY2pUMAA1eTU/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XCPMPqE2nCUvGCAgOdCXc2aWaXimO7zaY2pUMAA1eTU/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PIiTvCkD9hFrdBulP8Epc3Gk1eMqcpK-Nd__5huHNq0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/oWR2OvluFkhxrJTJzVEmzHRvCEKo-RWQOR2Mkdm2xkU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oWR2OvluFkhxrJTJzVEmzHRvCEKo-RWQOR2Mkdm2xkU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w0g_GpEJuY4G4kgzAg3FdQHYYL04NwELa3ryBsG2Avw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 9955078,
+          "name": "Marek Kowalski (4)",
+          "resource_url": "https://api.discogs.com/artists/9955078"
+        },
+        {
+          "active": true,
+          "id": 9955084,
+          "name": "Piotr Kowalski (11)",
+          "resource_url": "https://api.discogs.com/artists/9955084"
+        },
+        {
+          "active": true,
+          "id": 11720327,
+          "name": "Peter Adamowicz",
+          "resource_url": "https://api.discogs.com/artists/11720327"
+        }
+      ],
       "name": "Glasgow Coma Scale",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5272013",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5272013"
-      },
+      "profile": "Postrock/Experimental/Ambience band from Frankfurt am Main, Germany\r\n\r\nPiotr Kowalski - Guitars/Soundscapes/Programming; \r\nMarek Kowalski - Bass; \r\nHelmes Bode - Drums",
+      "releases_url": "https://api.discogs.com/artists/5272013/releases",
       "resource_url": "https://api.discogs.com/artists/5272013",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5272013",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5272013-Glasgow-Coma-Scale",
+      "urls": [
+        "https://www.glasgowcomascale.de/",
+        "https://glasgow-coma-scale.bandcamp.com",
+        "https://www.facebook.com/glasgowcomascale/",
+        "https://glasgow-coma-scale-music.bandcamp.com/releases"
+      ]
     },
     "identity": {
       "musicbrainz_id": "5ca3c7f7-370c-4829-98f0-b33ff3cbc584",
@@ -122,22 +173,73 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='818494911', url='https://music.apple.com/gb/artist/glasgow-coma-scale/818494911', name='Glasgow Coma Scale', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/67/fd/18/67fd188d-4381-9474-2a84-ba4c862902d3/cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '818494911', 'type': 'artists', 'href': '/v1/catalog/gb/artists/818494911', 'attributes': {'name': 'Glasgow Coma Scale', 'genreNames': ['Rock'], 'artwork': {'width': 1440, 'height': 1440, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/67/fd/18/67fd188d-4381-9474-2a84-ba4c862902d3/cover.jpg/{w}x{h}ac.jpg', 'bgColor': 'f4e2ce', 'textColor1': '090501', 'textColor2': '363129', 'textColor3': '38312a', 'textColor4': '5c544a'}, 'url': 'https://music.apple.com/gb/artist/glasgow-coma-scale/818494911'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/818494911/albums', 'data': [{'id': '1180715615', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1180715615'}, {'id': '1772889401', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1772889401'}, {'id': '1616665275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1616665275'}, {'id': '1748528088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1748528088'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5272013",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5272013,
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/7UwczZFvOLGJREgLpbbOyVis6cT6n0aA9t23hAl4fYU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/7UwczZFvOLGJREgLpbbOyVis6cT6n0aA9t23hAl4fYU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ImsqsdTKY5gN1yFw68RJfzlCa07ySqis0N8IFtNNqG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0yNDIzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 491,
+          "resource_url": "https://i.discogs.com/u-UjKJm1o20HgN5NH0cagqP1jLVJRqwsch5n8E21SKI/rs:fit/g:sm/q:90/h:491/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/u-UjKJm1o20HgN5NH0cagqP1jLVJRqwsch5n8E21SKI/rs:fit/g:sm/q:90/h:491/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/y0dztvzFIlBCxR9iaa3XCS9-9FY-RoWegHiPliEJXro/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/NS02NzE4LmpwZWc.jpeg",
+          "width": 492
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/XCPMPqE2nCUvGCAgOdCXc2aWaXimO7zaY2pUMAA1eTU/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XCPMPqE2nCUvGCAgOdCXc2aWaXimO7zaY2pUMAA1eTU/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PIiTvCkD9hFrdBulP8Epc3Gk1eMqcpK-Nd__5huHNq0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/OS05NDI5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/oWR2OvluFkhxrJTJzVEmzHRvCEKo-RWQOR2Mkdm2xkU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oWR2OvluFkhxrJTJzVEmzHRvCEKo-RWQOR2Mkdm2xkU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w0g_GpEJuY4G4kgzAg3FdQHYYL04NwELa3ryBsG2Avw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNzIw/MTMtMTQ3NDM5OTY3/Ny0zMzgxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 9955078,
+          "name": "Marek Kowalski (4)",
+          "resource_url": "https://api.discogs.com/artists/9955078"
+        },
+        {
+          "active": true,
+          "id": 9955084,
+          "name": "Piotr Kowalski (11)",
+          "resource_url": "https://api.discogs.com/artists/9955084"
+        },
+        {
+          "active": true,
+          "id": 11720327,
+          "name": "Peter Adamowicz",
+          "resource_url": "https://api.discogs.com/artists/11720327"
+        }
+      ],
       "name": "Glasgow Coma Scale",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5272013",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5272013"
-      },
+      "profile": "Postrock/Experimental/Ambience band from Frankfurt am Main, Germany\r\n\r\nPiotr Kowalski - Guitars/Soundscapes/Programming; \r\nMarek Kowalski - Bass; \r\nHelmes Bode - Drums",
+      "releases_url": "https://api.discogs.com/artists/5272013/releases",
       "resource_url": "https://api.discogs.com/artists/5272013",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5272013",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5272013-Glasgow-Coma-Scale",
+      "urls": [
+        "https://www.glasgowcomascale.de/",
+        "https://glasgow-coma-scale.bandcamp.com",
+        "https://www.facebook.com/glasgowcomascale/",
+        "https://glasgow-coma-scale-music.bandcamp.com/releases"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Glasgow Coma scale', url='https://www.last.fm/music/Glasgow+Coma+scale', mbid=None, listeners=24395, playcount=274074, bio_summary='Glasgow Coma Scale is an ambient post rock band from Frankfurt on the river Main and was formed in February 2011 by Piotr and Marek Kowalski. The two brothers and trained classical musicians lived their lives between Krakow, Barcelona and Frankfurt. However, they never got the chance to play together in the same band. Along with drummer Helmes Bode the idea has now come full circle. <a href=\"https://www.last.fm/music/Glasgow+Coma+scale\">Read more on Last.fm</a>', bio_content='Glasgow Coma Scale is an ambient post rock band from Frankfurt on the river Main and was formed in February 2011 by Piotr and Marek Kowalski. The two brothers and trained classical musicians lived their lives between Krakow, Barcelona and Frankfurt. However, they never got the chance to play together in the same band. Along with drummer Helmes Bode the idea has now come full circle. <a href=\"https://www.last.fm/music/Glasgow+Coma+scale\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-rock', 'instrumental', 'german', 'experimental', 'germany'], similar_artists=[{'name': 'Ships Fly Up', 'url': 'https://www.last.fm/music/Ships+Fly+Up'}, {'name': 'Sisters of...', 'url': 'https://www.last.fm/music/Sisters+of...'}, {'name': 'Collapse Under the Empire', 'url': 'https://www.last.fm/music/Collapse+Under+the+Empire'}, {'name': 'Degree of Arc', 'url': 'https://www.last.fm/music/Degree+of+Arc'}, {'name': 'Collapse.Rebuild.', 'url': 'https://www.last.fm/music/Collapse.Rebuild.'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Glasgow Coma scale', 'url': 'https://www.last.fm/music/Glasgow+Coma+scale', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '24395', 'playcount': '274074'}, 'similar': {'artist': [{'name': 'Ships Fly Up', 'url': 'https://www.last.fm/music/Ships+Fly+Up', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sisters of...', 'url': 'https://www.last.fm/music/Sisters+of...', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Collapse Under the Empire', 'url': 'https://www.last.fm/music/Collapse+Under+the+Empire', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Degree of Arc', 'url': 'https://www.last.fm/music/Degree+of+Arc', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Collapse.Rebuild.', 'url': 'https://www.last.fm/music/Collapse.Rebuild.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'instrumental', 'url': 'https://www.last.fm/tag/instrumental'}, {'name': 'german', 'url': 'https://www.last.fm/tag/german'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'germany', 'url': 'https://www.last.fm/tag/germany'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Glasgow+Coma+scale/+wiki'}}, 'published': '09 Feb 2014, 14:28', 'summary': 'Glasgow Coma Scale is an ambient post rock band from Frankfurt on the river Main and was formed in February 2011 by Piotr and Marek Kowalski. The two brothers and trained classical musicians lived their lives between Krakow, Barcelona and Frankfurt. However, they never got the chance to play together in the same band. Along with drummer Helmes Bode the idea has now come full circle. <a href=\"https://www.last.fm/music/Glasgow+Coma+scale\">Read more on Last.fm</a>', 'content': 'Glasgow Coma Scale is an ambient post rock band from Frankfurt on the river Main and was formed in February 2011 by Piotr and Marek Kowalski. The two brothers and trained classical musicians lived their lives between Krakow, Barcelona and Frankfurt. However, they never got the chance to play together in the same band. Along with drummer Helmes Bode the idea has now come full circle. <a href=\"https://www.last.fm/music/Glasgow+Coma+scale\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3OilnTuGkR6gZKZa0sV8E8', url='https://open.spotify.com/artist/3OilnTuGkR6gZKZa0sV8E8', name='Glasgow Coma Scale', popularity=33, followers=11790, genres=['post-rock', 'space rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb279afd7947680d320f09bf6', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b279afd7947680d320f09bf6', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b279afd7947680d320f09bf6', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3OilnTuGkR6gZKZa0sV8E8'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3OilnTuGkR6gZKZa0sV8E8'}, 'followers': {'href': None, 'total': 11790}, 'genres': ['post-rock', 'space rock'], 'href': 'https://api.spotify.com/v1/artists/3OilnTuGkR6gZKZa0sV8E8', 'id': '3OilnTuGkR6gZKZa0sV8E8', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb279afd7947680d320f09bf6', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b279afd7947680d320f09bf6', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b279afd7947680d320f09bf6', 'height': 160, 'width': 160}], 'name': 'Glasgow Coma Scale', 'popularity': 33, 'type': 'artist', 'uri': 'spotify:artist:3OilnTuGkR6gZKZa0sV8E8'})",
@@ -145,6 +247,6 @@
   },
   "spotify_id": "3OilnTuGkR6gZKZa0sV8E8",
   "spotify_url": "https://open.spotify.com/artist/3OilnTuGkR6gZKZa0sV8E8",
-  "updated_at": "2026-10-22T14:07:18.189017",
+  "updated_at": "2026-10-30T18:40:19.560575",
   "wikipedia_url": null
 }

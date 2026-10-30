@@ -28,22 +28,295 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='6925799', url='https://music.apple.com/gb/artist/broken-social-scene/6925799', name='Broken Social Scene', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/f6/16/bc/f616bc0a-0d3e-e6c5-a579-0d125ac1f547/ami-identity-42f40efbc5ff9bfc585f6a4cc55e572d-2026-01-09T00-14-43.972Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '6925799', 'type': 'artists', 'href': '/v1/catalog/gb/artists/6925799', 'attributes': {'artwork': {'bgColor': '000000', 'height': 1563, 'textColor1': 'f3f3f3', 'textColor2': 'd3d3d3', 'textColor3': 'c2c2c2', 'textColor4': 'a9a9a9', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/f6/16/bc/f616bc0a-0d3e-e6c5-a579-0d125ac1f547/ami-identity-42f40efbc5ff9bfc585f6a4cc55e572d-2026-01-09T00-14-43.972Z_cropped.png/{w}x{h}bb.jpg', 'width': 1563}, 'genreNames': ['Alternative'], 'name': 'Broken Social Scene', 'url': 'https://music.apple.com/gb/artist/broken-social-scene/6925799'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/6925799/albums', 'data': [{'id': '1442853882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442853882'}, {'id': '1721039988', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1721039988'}, {'id': '1598970309', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598970309'}, {'id': '1590910405', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1590910405'}, {'id': '1449493761', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1449493761'}, {'id': '1456272760', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1456272760'}, {'id': '1872628808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1872628808'}, {'id': '6938446', 'type': 'albums', 'href': '/v1/catalog/gb/albums/6938446'}, {'id': '1598651390', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598651390'}, {'id': '1443161316', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443161316'}, {'id': '1854900940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1854900940'}, {'id': '1443266107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443266107'}, {'id': '1595933129', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1595933129'}, {'id': '1443197116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443197116'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "138844",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 138844,
+      "images": [
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/R5_ICAlLRJivnl_4T5excAl5NfN5c74OtWZAbeQ_kcU/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/R5_ICAlLRJivnl_4T5excAl5NfN5c74OtWZAbeQ_kcU/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yu-fIE8WNU89rlSa2N585myRBTda38AOHvj_Fn3GKBk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4zKDdp7si5OWCkXRvjTXKC9n8eh7KNlHWU0qmBcxCWg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4zKDdp7si5OWCkXRvjTXKC9n8eh7KNlHWU0qmBcxCWg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/esBjsPOZyZ4D_IeGBZEx5j_03JeuEt20lNllqvk9Bzs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 504,
+          "resource_url": "https://i.discogs.com/FclOY6Xa5F4emKgiINw-OM1qszbXfSA7D1dK-rqg3yU/rs:fit/g:sm/q:90/h:504/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FclOY6Xa5F4emKgiINw-OM1qszbXfSA7D1dK-rqg3yU/rs:fit/g:sm/q:90/h:504/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ljN4utV51XjAphR4HYFzeZQaKXr-RSnOowo-3n-Mbdo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "width": 396
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ckg7R3NlB06h5G5eov5DTxfR4R1G5trOTL1n6BPR_cI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ckg7R3NlB06h5G5eov5DTxfR4R1G5trOTL1n6BPR_cI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/NddmCOm0oVdmEQY05NPgMtMDz-m_11WpOEEJ_JJGicY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 176,
+          "resource_url": "https://i.discogs.com/91XPKoEgjJ_qUYeoicHw7yH5UdXlFi4nGw9sF-ssm68/rs:fit/g:sm/q:90/h:176/w:272/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/91XPKoEgjJ_qUYeoicHw7yH5UdXlFi4nGw9sF-ssm68/rs:fit/g:sm/q:90/h:176/w:272/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/5YJBidYHAipVorO2ZwIa3ZK50Z1TpBwvlwrnV14_OQg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "width": 272
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/s1WfdlGkX_6g_fv3lVYGmGvA0rJTVCtJCJM-8VcGHA8/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s1WfdlGkX_6g_fv3lVYGmGvA0rJTVCtJCJM-8VcGHA8/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DhG80JEXDJiydTtotcxUeVHtkPDjjeBVhitqipSBbNE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/Rfe9d_cwlcSbAlndWjb0QHZQBWi7IYpHpm-Dd-UUSGM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Rfe9d_cwlcSbAlndWjb0QHZQBWi7IYpHpm-Dd-UUSGM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/IRfAX3d3iVC3eDneruyzRiY4Ueju9fFTAtddpDuVzhg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/Hgh9ln3ftPej7d2GVwlsMBakZUIzAPPEkGFBAzBofYc/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hgh9ln3ftPej7d2GVwlsMBakZUIzAPPEkGFBAzBofYc/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_8eybKJTon_2IzOA-gKNbWtFI4VWYGdFFS-njsI2mlg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/pgq_zatkbGtL0gzJU0YAnsKGH7xUUms1UNt2L_yVurk/rs:fit/g:sm/q:90/h:300/w:433/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pgq_zatkbGtL0gzJU0YAnsKGH7xUUms1UNt2L_yVurk/rs:fit/g:sm/q:90/h:300/w:433/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ALy2WOiAkErS5oDZj75sSsXeXzSvZ-Lq2s6XhwJVAOI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "width": 433
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ag8aMIx3q04fu3wO-ozSBITrp9X9uZTbnjbEVIYl5YI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ag8aMIx3q04fu3wO-ozSBITrp9X9uZTbnjbEVIYl5YI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/cIWNSnjsl8KT0cdIswfJ4Y1ASsB-G-IiDfBSJgUGXU0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/z6MacWBaYGfASu8HvX78CWYS25B2I58CApgCR15TEcY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z6MacWBaYGfASu8HvX78CWYS25B2I58CApgCR15TEcY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/P-wdmAxUooSA1XMufrcoKT1X0LMdHTwJfC5oka8CZUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 175,
+          "resource_url": "https://i.discogs.com/Nn-btumnMmO2rH20YvOxuwFwxtB5_SOZXUh9hYc2FdU/rs:fit/g:sm/q:90/h:175/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nn-btumnMmO2rH20YvOxuwFwxtB5_SOZXUh9hYc2FdU/rs:fit/g:sm/q:90/h:175/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/LTtBKUGW8OdovStNCVttUPyaDk__rx-_zdFigt6GsAo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "width": 324
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3545,
+          "name": "John McEntire",
+          "resource_url": "https://api.discogs.com/artists/3545"
+        },
+        {
+          "active": true,
+          "id": 19828,
+          "name": "Feist",
+          "resource_url": "https://api.discogs.com/artists/19828"
+        },
+        {
+          "active": true,
+          "id": 125142,
+          "name": "Emily Haines",
+          "resource_url": "https://api.discogs.com/artists/125142"
+        },
+        {
+          "active": true,
+          "id": 210997,
+          "name": "Leslie Feist",
+          "resource_url": "https://api.discogs.com/artists/210997"
+        },
+        {
+          "active": true,
+          "id": 272805,
+          "name": "Brendan Canning",
+          "resource_url": "https://api.discogs.com/artists/272805"
+        },
+        {
+          "active": true,
+          "id": 272806,
+          "name": "Kevin Drew",
+          "resource_url": "https://api.discogs.com/artists/272806"
+        },
+        {
+          "active": true,
+          "id": 300330,
+          "name": "Amy Millan",
+          "resource_url": "https://api.discogs.com/artists/300330"
+        },
+        {
+          "active": false,
+          "id": 300331,
+          "name": "Dave Hodge",
+          "resource_url": "https://api.discogs.com/artists/300331"
+        },
+        {
+          "active": false,
+          "id": 305819,
+          "name": "David Newfeld",
+          "resource_url": "https://api.discogs.com/artists/305819"
+        },
+        {
+          "active": true,
+          "id": 312708,
+          "name": "Ariel Engle",
+          "resource_url": "https://api.discogs.com/artists/312708"
+        },
+        {
+          "active": true,
+          "id": 316872,
+          "name": "Charles Spearin",
+          "resource_url": "https://api.discogs.com/artists/316872"
+        },
+        {
+          "active": true,
+          "id": 316873,
+          "name": "Ohad Benchetrit",
+          "resource_url": "https://api.discogs.com/artists/316873"
+        },
+        {
+          "active": false,
+          "id": 344242,
+          "name": "Leon Kingstone",
+          "resource_url": "https://api.discogs.com/artists/344242"
+        },
+        {
+          "active": false,
+          "id": 368318,
+          "name": "Julie Penner",
+          "resource_url": "https://api.discogs.com/artists/368318"
+        },
+        {
+          "active": true,
+          "id": 417974,
+          "name": "James Shaw",
+          "resource_url": "https://api.discogs.com/artists/417974"
+        },
+        {
+          "active": false,
+          "id": 418259,
+          "name": "Bill Priddle",
+          "resource_url": "https://api.discogs.com/artists/418259"
+        },
+        {
+          "active": true,
+          "id": 434969,
+          "name": "Evan Cranley",
+          "resource_url": "https://api.discogs.com/artists/434969"
+        },
+        {
+          "active": true,
+          "id": 444479,
+          "name": "Jason Collett",
+          "resource_url": "https://api.discogs.com/artists/444479"
+        },
+        {
+          "active": true,
+          "id": 446269,
+          "name": "Justin Peroff",
+          "resource_url": "https://api.discogs.com/artists/446269"
+        },
+        {
+          "active": true,
+          "id": 446270,
+          "name": "Andrew Whiteman",
+          "resource_url": "https://api.discogs.com/artists/446270"
+        },
+        {
+          "active": true,
+          "id": 446272,
+          "name": "John Crossingham",
+          "resource_url": "https://api.discogs.com/artists/446272"
+        },
+        {
+          "active": false,
+          "id": 541717,
+          "name": "Torquil Campbell",
+          "resource_url": "https://api.discogs.com/artists/541717"
+        },
+        {
+          "active": true,
+          "id": 616052,
+          "name": "David French",
+          "resource_url": "https://api.discogs.com/artists/616052"
+        },
+        {
+          "active": true,
+          "id": 768080,
+          "name": "Lisa Lobsinger",
+          "resource_url": "https://api.discogs.com/artists/768080"
+        },
+        {
+          "active": false,
+          "id": 961859,
+          "name": "Jo-Ann Goldsmith",
+          "resource_url": "https://api.discogs.com/artists/961859"
+        },
+        {
+          "active": true,
+          "id": 1150769,
+          "name": "Marty Kinack",
+          "resource_url": "https://api.discogs.com/artists/1150769"
+        },
+        {
+          "active": true,
+          "id": 2048239,
+          "name": "Julia Hambleton",
+          "resource_url": "https://api.discogs.com/artists/2048239"
+        },
+        {
+          "active": true,
+          "id": 4946724,
+          "name": "Sam Goldberg (3)",
+          "resource_url": "https://api.discogs.com/artists/4946724"
+        }
+      ],
       "name": "Broken Social Scene",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "138844",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/138844"
-      },
+      "namevariations": [
+        "BSS",
+        "Boken Social Scene"
+      ],
+      "profile": "Canadian indie rock band formed in 1999 in Toronto, Ontario.",
+      "releases_url": "https://api.discogs.com/artists/138844/releases",
       "resource_url": "https://api.discogs.com/artists/138844",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/138844",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/138844-Broken-Social-Scene",
+      "urls": [
+        "http://www.brokensocialscene.ca/",
+        "https://www.facebook.com/brokensocialscene",
+        "https://twitter.com/bssmusic",
+        "https://www.instagram.com/brokensocialscene/",
+        "http://www.myspace.com/brokensocialscene",
+        "http://en.wikipedia.org/wiki/Broken_Social_Scene",
+        "https://www.youtube.com/@BrokenSocialSceneOfficial",
+        "https://brokensocialscene.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "2eada8f8-056a-4093-bbc2-004909ce743b",
@@ -130,27 +403,301 @@
       "twitter": "1",
       "website": "www.brokensocialscene.ca"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='6925799', url='https://music.apple.com/gb/artist/broken-social-scene/6925799', name='Broken Social Scene', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/f6/16/bc/f616bc0a-0d3e-e6c5-a579-0d125ac1f547/ami-identity-42f40efbc5ff9bfc585f6a4cc55e572d-2026-01-09T00-14-43.972Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '6925799', 'type': 'artists', 'href': '/v1/catalog/gb/artists/6925799', 'attributes': {'artwork': {'bgColor': '000000', 'height': 1563, 'textColor1': 'f3f3f3', 'textColor2': 'd3d3d3', 'textColor3': 'c2c2c2', 'textColor4': 'a9a9a9', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/f6/16/bc/f616bc0a-0d3e-e6c5-a579-0d125ac1f547/ami-identity-42f40efbc5ff9bfc585f6a4cc55e572d-2026-01-09T00-14-43.972Z_cropped.png/{w}x{h}bb.jpg', 'width': 1563}, 'genreNames': ['Alternative'], 'name': 'Broken Social Scene', 'url': 'https://music.apple.com/gb/artist/broken-social-scene/6925799'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/6925799/albums', 'data': [{'id': '1442853882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442853882'}, {'id': '1721039988', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1721039988'}, {'id': '1598970309', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598970309'}, {'id': '1590910405', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1590910405'}, {'id': '1449493761', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1449493761'}, {'id': '1456272760', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1456272760'}, {'id': '1872628808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1872628808'}, {'id': '6938446', 'type': 'albums', 'href': '/v1/catalog/gb/albums/6938446'}, {'id': '1598651390', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598651390'}, {'id': '1443161316', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443161316'}, {'id': '1854900940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1854900940'}, {'id': '1443266107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443266107'}, {'id': '1595933129', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1595933129'}, {'id': '1443197116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443197116'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "138844",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 138844,
+      "images": [
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/R5_ICAlLRJivnl_4T5excAl5NfN5c74OtWZAbeQ_kcU/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/R5_ICAlLRJivnl_4T5excAl5NfN5c74OtWZAbeQ_kcU/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yu-fIE8WNU89rlSa2N585myRBTda38AOHvj_Fn3GKBk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzc4MjQ3NjU4/LTQzODUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4zKDdp7si5OWCkXRvjTXKC9n8eh7KNlHWU0qmBcxCWg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4zKDdp7si5OWCkXRvjTXKC9n8eh7KNlHWU0qmBcxCWg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/esBjsPOZyZ4D_IeGBZEx5j_03JeuEt20lNllqvk9Bzs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTUz/LTkzMjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 504,
+          "resource_url": "https://i.discogs.com/FclOY6Xa5F4emKgiINw-OM1qszbXfSA7D1dK-rqg3yU/rs:fit/g:sm/q:90/h:504/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FclOY6Xa5F4emKgiINw-OM1qszbXfSA7D1dK-rqg3yU/rs:fit/g:sm/q:90/h:504/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ljN4utV51XjAphR4HYFzeZQaKXr-RSnOowo-3n-Mbdo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjY0OTg4OTQ3/LTUzNDEuanBlZw.jpeg",
+          "width": 396
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ckg7R3NlB06h5G5eov5DTxfR4R1G5trOTL1n6BPR_cI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ckg7R3NlB06h5G5eov5DTxfR4R1G5trOTL1n6BPR_cI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/NddmCOm0oVdmEQY05NPgMtMDz-m_11WpOEEJ_JJGicY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNjYzOTU5NzI4/LTYxNDYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 176,
+          "resource_url": "https://i.discogs.com/91XPKoEgjJ_qUYeoicHw7yH5UdXlFi4nGw9sF-ssm68/rs:fit/g:sm/q:90/h:176/w:272/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/91XPKoEgjJ_qUYeoicHw7yH5UdXlFi4nGw9sF-ssm68/rs:fit/g:sm/q:90/h:176/w:272/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/5YJBidYHAipVorO2ZwIa3ZK50Z1TpBwvlwrnV14_OQg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTY0NTQ4/LmpwZw.jpeg",
+          "width": 272
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/s1WfdlGkX_6g_fv3lVYGmGvA0rJTVCtJCJM-8VcGHA8/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s1WfdlGkX_6g_fv3lVYGmGvA0rJTVCtJCJM-8VcGHA8/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DhG80JEXDJiydTtotcxUeVHtkPDjjeBVhitqipSBbNE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNTcwMDUxNjk1/LTc2ODcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/Rfe9d_cwlcSbAlndWjb0QHZQBWi7IYpHpm-Dd-UUSGM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Rfe9d_cwlcSbAlndWjb0QHZQBWi7IYpHpm-Dd-UUSGM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/IRfAX3d3iVC3eDneruyzRiY4Ueju9fFTAtddpDuVzhg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDkxMjA3ODY3/LTQyNjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/Hgh9ln3ftPej7d2GVwlsMBakZUIzAPPEkGFBAzBofYc/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hgh9ln3ftPej7d2GVwlsMBakZUIzAPPEkGFBAzBofYc/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_8eybKJTon_2IzOA-gKNbWtFI4VWYGdFFS-njsI2mlg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE1/LTM1NTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/pgq_zatkbGtL0gzJU0YAnsKGH7xUUms1UNt2L_yVurk/rs:fit/g:sm/q:90/h:300/w:433/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pgq_zatkbGtL0gzJU0YAnsKGH7xUUms1UNt2L_yVurk/rs:fit/g:sm/q:90/h:300/w:433/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ALy2WOiAkErS5oDZj75sSsXeXzSvZ-Lq2s6XhwJVAOI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTI0NDIuanBlZw.jpeg",
+          "width": 433
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ag8aMIx3q04fu3wO-ozSBITrp9X9uZTbnjbEVIYl5YI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ag8aMIx3q04fu3wO-ozSBITrp9X9uZTbnjbEVIYl5YI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/cIWNSnjsl8KT0cdIswfJ4Y1ASsB-G-IiDfBSJgUGXU0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNzU0MTg4OTA3/LTIwMzQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/z6MacWBaYGfASu8HvX78CWYS25B2I58CApgCR15TEcY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z6MacWBaYGfASu8HvX78CWYS25B2I58CApgCR15TEcY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/P-wdmAxUooSA1XMufrcoKT1X0LMdHTwJfC5oka8CZUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xNDU0MDk4MDE0/LTU2NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 175,
+          "resource_url": "https://i.discogs.com/Nn-btumnMmO2rH20YvOxuwFwxtB5_SOZXUh9hYc2FdU/rs:fit/g:sm/q:90/h:175/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nn-btumnMmO2rH20YvOxuwFwxtB5_SOZXUh9hYc2FdU/rs:fit/g:sm/q:90/h:175/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/LTtBKUGW8OdovStNCVttUPyaDk__rx-_zdFigt6GsAo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzODg0/NC0xMTA3OTYzNzIy/LmpwZw.jpeg",
+          "width": 324
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3545,
+          "name": "John McEntire",
+          "resource_url": "https://api.discogs.com/artists/3545"
+        },
+        {
+          "active": true,
+          "id": 19828,
+          "name": "Feist",
+          "resource_url": "https://api.discogs.com/artists/19828"
+        },
+        {
+          "active": true,
+          "id": 125142,
+          "name": "Emily Haines",
+          "resource_url": "https://api.discogs.com/artists/125142"
+        },
+        {
+          "active": true,
+          "id": 210997,
+          "name": "Leslie Feist",
+          "resource_url": "https://api.discogs.com/artists/210997"
+        },
+        {
+          "active": true,
+          "id": 272805,
+          "name": "Brendan Canning",
+          "resource_url": "https://api.discogs.com/artists/272805"
+        },
+        {
+          "active": true,
+          "id": 272806,
+          "name": "Kevin Drew",
+          "resource_url": "https://api.discogs.com/artists/272806"
+        },
+        {
+          "active": true,
+          "id": 300330,
+          "name": "Amy Millan",
+          "resource_url": "https://api.discogs.com/artists/300330"
+        },
+        {
+          "active": false,
+          "id": 300331,
+          "name": "Dave Hodge",
+          "resource_url": "https://api.discogs.com/artists/300331"
+        },
+        {
+          "active": false,
+          "id": 305819,
+          "name": "David Newfeld",
+          "resource_url": "https://api.discogs.com/artists/305819"
+        },
+        {
+          "active": true,
+          "id": 312708,
+          "name": "Ariel Engle",
+          "resource_url": "https://api.discogs.com/artists/312708"
+        },
+        {
+          "active": true,
+          "id": 316872,
+          "name": "Charles Spearin",
+          "resource_url": "https://api.discogs.com/artists/316872"
+        },
+        {
+          "active": true,
+          "id": 316873,
+          "name": "Ohad Benchetrit",
+          "resource_url": "https://api.discogs.com/artists/316873"
+        },
+        {
+          "active": false,
+          "id": 344242,
+          "name": "Leon Kingstone",
+          "resource_url": "https://api.discogs.com/artists/344242"
+        },
+        {
+          "active": false,
+          "id": 368318,
+          "name": "Julie Penner",
+          "resource_url": "https://api.discogs.com/artists/368318"
+        },
+        {
+          "active": true,
+          "id": 417974,
+          "name": "James Shaw",
+          "resource_url": "https://api.discogs.com/artists/417974"
+        },
+        {
+          "active": false,
+          "id": 418259,
+          "name": "Bill Priddle",
+          "resource_url": "https://api.discogs.com/artists/418259"
+        },
+        {
+          "active": true,
+          "id": 434969,
+          "name": "Evan Cranley",
+          "resource_url": "https://api.discogs.com/artists/434969"
+        },
+        {
+          "active": true,
+          "id": 444479,
+          "name": "Jason Collett",
+          "resource_url": "https://api.discogs.com/artists/444479"
+        },
+        {
+          "active": true,
+          "id": 446269,
+          "name": "Justin Peroff",
+          "resource_url": "https://api.discogs.com/artists/446269"
+        },
+        {
+          "active": true,
+          "id": 446270,
+          "name": "Andrew Whiteman",
+          "resource_url": "https://api.discogs.com/artists/446270"
+        },
+        {
+          "active": true,
+          "id": 446272,
+          "name": "John Crossingham",
+          "resource_url": "https://api.discogs.com/artists/446272"
+        },
+        {
+          "active": false,
+          "id": 541717,
+          "name": "Torquil Campbell",
+          "resource_url": "https://api.discogs.com/artists/541717"
+        },
+        {
+          "active": true,
+          "id": 616052,
+          "name": "David French",
+          "resource_url": "https://api.discogs.com/artists/616052"
+        },
+        {
+          "active": true,
+          "id": 768080,
+          "name": "Lisa Lobsinger",
+          "resource_url": "https://api.discogs.com/artists/768080"
+        },
+        {
+          "active": false,
+          "id": 961859,
+          "name": "Jo-Ann Goldsmith",
+          "resource_url": "https://api.discogs.com/artists/961859"
+        },
+        {
+          "active": true,
+          "id": 1150769,
+          "name": "Marty Kinack",
+          "resource_url": "https://api.discogs.com/artists/1150769"
+        },
+        {
+          "active": true,
+          "id": 2048239,
+          "name": "Julia Hambleton",
+          "resource_url": "https://api.discogs.com/artists/2048239"
+        },
+        {
+          "active": true,
+          "id": 4946724,
+          "name": "Sam Goldberg (3)",
+          "resource_url": "https://api.discogs.com/artists/4946724"
+        }
+      ],
       "name": "Broken Social Scene",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "138844",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/138844"
-      },
+      "namevariations": [
+        "BSS",
+        "Boken Social Scene"
+      ],
+      "profile": "Canadian indie rock band formed in 1999 in Toronto, Ontario.",
+      "releases_url": "https://api.discogs.com/artists/138844/releases",
       "resource_url": "https://api.discogs.com/artists/138844",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/138844",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/138844-Broken-Social-Scene",
+      "urls": [
+        "http://www.brokensocialscene.ca/",
+        "https://www.facebook.com/brokensocialscene",
+        "https://twitter.com/bssmusic",
+        "https://www.instagram.com/brokensocialscene/",
+        "http://www.myspace.com/brokensocialscene",
+        "http://en.wikipedia.org/wiki/Broken_Social_Scene",
+        "https://www.youtube.com/@BrokenSocialSceneOfficial",
+        "https://brokensocialscene.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Broken Social Scene', url='https://www.last.fm/music/Broken+Social+Scene', mbid='2eada8f8-056a-4093-bbc2-004909ce743b', listeners=2041792, playcount=78493196, bio_summary='Broken Social Scene are a Canadian indie rock collective formed in 1999 in Toronto, Ontario. The band\\'s core members were Kevin Drew and Brendan Canning. This duo recorded and released the band\\'s ambient debut album Feel Good Lost, in 2001, with contributions from Ohad Benchetrit (also known as Years), Evan Cranley, Leslie Feist, Justin Peroff, Bill Priddle, and Charles Spearin. All of these musicians would emerge as key members of Broken Social Scene in future endeavors.  <a href=\"https://www.last.fm/music/Broken+Social+Scene\">Read more on Last.fm</a>', bio_content='Broken Social Scene are a Canadian indie rock collective formed in 1999 in Toronto, Ontario. The band\\'s core members were Kevin Drew and Brendan Canning. This duo recorded and released the band\\'s ambient debut album Feel Good Lost, in 2001, with contributions from Ohad Benchetrit (also known as Years), Evan Cranley, Leslie Feist, Justin Peroff, Bill Priddle, and Charles Spearin. All of these musicians would emerge as key members of Broken Social Scene in future endeavors. \\n\\nAfter the release of Feel Good Lost (an almost entirely instrumental album), Drew and Canning decided to transition the band into a more energetic sound reflective of the Toronto indie music scene of the early 2000\\'s. As a result, they brought in a number of local artistic and musicial friends -- the Apostle of Hustle Andrew Whiteman, Jason Collett, Metric\\'s Emily Haines, and Leslie Feist -- to flesh out their live show with lyrics and vocals. Over time, the band also came to include contributions from James Shaw, John Crossingham, Lisa Lobsinger, Julie Penner, Sam Goldberg, and Stars\\' Amy Millan.\\n\\nMany of the later guest musicians joined with Drew, Canning, Peroff and Spearin to record the band\\'s second album You Forgot It In People in 2002 on the label Arts & Crafts. This album, an eclectic, restlessly creative collection of experimental yet accessible pop songs, became the band\\'s critical and commercial breakthrough -- it was greeted with widely positive reviews, and landed on many music critics\\' year-end Best-Of lists. For the success of the release, Broken Social Scene was awarded the Alternative Album of the Year Juno Award in 2003.\\n\\nThe album also included musical contributions by Bill Priddle, Jessica Moss, Brodie West, Susannah Brady and Ohad Benchetrit, but these were credited as supporting musicians rather than band members. On the supporting tour, the band consisted of Drew, Canning, Peroff, Whiteman and Jason Collett, along with whoever else was available to attend any individual show. Amy Millan and Gentleman Reg also joined for some shows.\\n\\nIn 2004, the B-sides and remix collection Bee Hives was released.\\n\\nBroken Social Scene released their third full-length, self-titled album on October 4, 2005, with new contributors including k-os, Jason Tait and Murray Lightburn. The inside booklet accompanying album also noted several new faces as part of Broken Social Scene. A limited edition EP To Be You And Me was also printed along with the album. For the first time David Newfeld, who had produced Broken Social Scene\\'s albums, was listed as a band member.\\n\\nThe group appeared on Late Night with Conan O\\'Brien on January 31, 2006 performing 7/4 (Shoreline). During the several-year recording hiatus that followed, many members focused on their respective solo musical efforts; Drew and Canning both released albums under the name Broken Social Scene. The entire band appeared in the 2009 film  The Time Traveler\\'s Wife, performing an acoustic/folk-like cover of Joy Division\\'s \"Love Will Tear Us Apart.\" In Spring 2009, the band reported that it was in the process of recording a new album under the production guidance of John McEntire (of The Sea and Cake and Tortoise). The album, titled Forgiveness Rock Record, was released on May 4, 2010.\\n\\nIt was announced on August 15, 2011 that the band would go on an indefinite hiatus following an October 1, 2011 show featuring Isaac Brock and a fall tour in support of TV on the Radio. On November 8, 2011, a tweet in advance of a concert in Rio de Janeiro stated that it would be the band\\'s final live performance.\\n\\nThe band returned in 2017 with a tour of Europe, Canada, and California. Their new single \"Half-Way Home\", was part of their latest album due to be released later in 2017. This was their first time writing a full-length album in 7 years.\\n\\nThe sub-unit of K-pop boy group SEVENTEEN - BSS incorrectly redirects here. Alternatively, please use 부석순. <a href=\"https://www.last.fm/music/Broken+Social+Scene\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie rock', 'indie', 'post-rock', 'Canadian', 'alternative'], similar_artists=[{'name': 'Kevin Drew', 'url': 'https://www.last.fm/music/Kevin+Drew'}, {'name': 'Stars', 'url': 'https://www.last.fm/music/Stars'}, {'name': 'K.C. Accidental', 'url': 'https://www.last.fm/music/K.C.+Accidental'}, {'name': 'Wolf Parade', 'url': 'https://www.last.fm/music/Wolf+Parade'}, {'name': 'Brendan Canning', 'url': 'https://www.last.fm/music/Brendan+Canning'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Broken Social Scene', 'mbid': '2eada8f8-056a-4093-bbc2-004909ce743b', 'url': 'https://www.last.fm/music/Broken+Social+Scene', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '2041792', 'playcount': '78493196'}, 'similar': {'artist': [{'name': 'Kevin Drew', 'url': 'https://www.last.fm/music/Kevin+Drew', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Stars', 'url': 'https://www.last.fm/music/Stars', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'K.C. Accidental', 'url': 'https://www.last.fm/music/K.C.+Accidental', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wolf Parade', 'url': 'https://www.last.fm/music/Wolf+Parade', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Brendan Canning', 'url': 'https://www.last.fm/music/Brendan+Canning', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'Canadian', 'url': 'https://www.last.fm/tag/Canadian'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Broken+Social+Scene/+wiki'}}, 'published': '10 Feb 2006, 12:01', 'summary': 'Broken Social Scene are a Canadian indie rock collective formed in 1999 in Toronto, Ontario. The band\\'s core members were Kevin Drew and Brendan Canning. This duo recorded and released the band\\'s ambient debut album Feel Good Lost, in 2001, with contributions from Ohad Benchetrit (also known as Years), Evan Cranley, Leslie Feist, Justin Peroff, Bill Priddle, and Charles Spearin. All of these musicians would emerge as key members of Broken Social Scene in future endeavors.  <a href=\"https://www.last.fm/music/Broken+Social+Scene\">Read more on Last.fm</a>', 'content': 'Broken Social Scene are a Canadian indie rock collective formed in 1999 in Toronto, Ontario. The band\\'s core members were Kevin Drew and Brendan Canning. This duo recorded and released the band\\'s ambient debut album Feel Good Lost, in 2001, with contributions from Ohad Benchetrit (also known as Years), Evan Cranley, Leslie Feist, Justin Peroff, Bill Priddle, and Charles Spearin. All of these musicians would emerge as key members of Broken Social Scene in future endeavors. \\n\\nAfter the release of Feel Good Lost (an almost entirely instrumental album), Drew and Canning decided to transition the band into a more energetic sound reflective of the Toronto indie music scene of the early 2000\\'s. As a result, they brought in a number of local artistic and musicial friends -- the Apostle of Hustle Andrew Whiteman, Jason Collett, Metric\\'s Emily Haines, and Leslie Feist -- to flesh out their live show with lyrics and vocals. Over time, the band also came to include contributions from James Shaw, John Crossingham, Lisa Lobsinger, Julie Penner, Sam Goldberg, and Stars\\' Amy Millan.\\n\\nMany of the later guest musicians joined with Drew, Canning, Peroff and Spearin to record the band\\'s second album You Forgot It In People in 2002 on the label Arts & Crafts. This album, an eclectic, restlessly creative collection of experimental yet accessible pop songs, became the band\\'s critical and commercial breakthrough -- it was greeted with widely positive reviews, and landed on many music critics\\' year-end Best-Of lists. For the success of the release, Broken Social Scene was awarded the Alternative Album of the Year Juno Award in 2003.\\n\\nThe album also included musical contributions by Bill Priddle, Jessica Moss, Brodie West, Susannah Brady and Ohad Benchetrit, but these were credited as supporting musicians rather than band members. On the supporting tour, the band consisted of Drew, Canning, Peroff, Whiteman and Jason Collett, along with whoever else was available to attend any individual show. Amy Millan and Gentleman Reg also joined for some shows.\\n\\nIn 2004, the B-sides and remix collection Bee Hives was released.\\n\\nBroken Social Scene released their third full-length, self-titled album on October 4, 2005, with new contributors including k-os, Jason Tait and Murray Lightburn. The inside booklet accompanying album also noted several new faces as part of Broken Social Scene. A limited edition EP To Be You And Me was also printed along with the album. For the first time David Newfeld, who had produced Broken Social Scene\\'s albums, was listed as a band member.\\n\\nThe group appeared on Late Night with Conan O\\'Brien on January 31, 2006 performing 7/4 (Shoreline). During the several-year recording hiatus that followed, many members focused on their respective solo musical efforts; Drew and Canning both released albums under the name Broken Social Scene. The entire band appeared in the 2009 film  The Time Traveler\\'s Wife, performing an acoustic/folk-like cover of Joy Division\\'s \"Love Will Tear Us Apart.\" In Spring 2009, the band reported that it was in the process of recording a new album under the production guidance of John McEntire (of The Sea and Cake and Tortoise). The album, titled Forgiveness Rock Record, was released on May 4, 2010.\\n\\nIt was announced on August 15, 2011 that the band would go on an indefinite hiatus following an October 1, 2011 show featuring Isaac Brock and a fall tour in support of TV on the Radio. On November 8, 2011, a tweet in advance of a concert in Rio de Janeiro stated that it would be the band\\'s final live performance.\\n\\nThe band returned in 2017 with a tour of Europe, Canada, and California. Their new single \"Half-Way Home\", was part of their latest album due to be released later in 2017. This was their first time writing a full-length album in 7 years.\\n\\nThe sub-unit of K-pop boy group SEVENTEEN - BSS incorrectly redirects here. Alternatively, please use 부석순. <a href=\"https://www.last.fm/music/Broken+Social+Scene\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "perplexity": {
@@ -234,6 +781,6 @@
   },
   "spotify_id": "7lOJ7WXyopaxri0dbOiZkd",
   "spotify_url": "https://open.spotify.com/artist/7lOJ7WXyopaxri0dbOiZkd",
-  "updated_at": "2026-10-22T14:05:28.822973",
+  "updated_at": "2026-10-30T18:37:03.622120",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Broken_Social_Scene"
 }

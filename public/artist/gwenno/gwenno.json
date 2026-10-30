@@ -135,22 +135,55 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='151796532', url='https://music.apple.com/gb/artist/gwenno/151796532', name='Gwenno', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/4a/0a/19/4a0a19f8-5b9e-c81c-0817-22fe704a5f66/ami-identity-e7b8e9ce7aeb72817bebd334c8b93494-2025-04-06T19-49-02.456Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '151796532', 'type': 'artists', 'href': '/v1/catalog/gb/artists/151796532', 'attributes': {'name': 'Gwenno', 'genreNames': ['Alternative'], 'artwork': {'width': 703, 'height': 703, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/4a/0a/19/4a0a19f8-5b9e-c81c-0817-22fe704a5f66/ami-identity-e7b8e9ce7aeb72817bebd334c8b93494-2025-04-06T19-49-02.456Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'aac7d7', 'textColor1': '090707', 'textColor2': '090808', 'textColor3': '292d31', 'textColor4': '292e31'}, 'url': 'https://music.apple.com/gb/artist/gwenno/151796532'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/151796532/albums', 'data': [{'id': '1316525300', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1316525300'}, {'id': '1611343916', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611343916'}, {'id': '991340149', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991340149'}, {'id': '1013794456', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1013794456'}, {'id': '1794396724', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794396724'}, {'id': '1597588973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597588973'}, {'id': '1668202426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668202426'}, {'id': '1608932569', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1608932569'}, {'id': '1092814126', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1092814126'}, {'id': '1641342012', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1641342012'}, {'id': '1801759149', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1801759149'}, {'id': '1631606890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1631606890'}, {'id': '1533935226', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533935226'}, {'id': '1807559497', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807559497'}, {'id': '1725351628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725351628'}, {'id': '1538710918', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538710918'}, {'id': '1812904388', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812904388'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "592899",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3939913,
+          "name": "Gwenno Saunders",
+          "resource_url": "https://api.discogs.com/artists/3939913"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 592899,
+      "images": [
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/g6LE7-ru_F1oV26DVoiXUJPJb_k3rLGTeE8Ck0QqWcc/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/g6LE7-ru_F1oV26DVoiXUJPJb_k3rLGTeE8Ck0QqWcc/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rVLvqLbYP6KUjJM63Ic4_Y6bpGjZYxykT0dEl-AhUWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/txwOt8i_cOCJjwqRwxw93ziWZLD7UDNNi4wHXZ4Z_ZI/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/txwOt8i_cOCJjwqRwxw93ziWZLD7UDNNi4wHXZ4Z_ZI/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "uri150": "https://i.discogs.com/J65P1gCrL_nYTQ4GFN4owmjKcza4DoKHnIgRipWDgZ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Gwenno",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "592899",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/592899"
-      },
+      "profile": "British dancer, and artist. \r\n\r\nBorn: 23 May 1981 in Cardiff, Wales, UK. \r\n\r\nWelsh-Cornish dancer turned solo artist, known for singing in the Cornish language. Her third album, \"[m=2693510]\" (2022), was shortlisted for the [url=https://www.discogs.com/lists/Mercury-Music-Prize-shortlist-2021-30th-year/821818]2022 Mercury Prize[/url]. \r\n",
+      "realname": "Gwenno Mererid Saunders",
+      "releases_url": "https://api.discogs.com/artists/592899/releases",
       "resource_url": "https://api.discogs.com/artists/592899",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/592899",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/592899-Gwenno",
+      "urls": [
+        "https://www.gwenno.info",
+        "https://www.facebook.com/Gwennomusic",
+        "https://twitter.com/gwennosaunders",
+        "https://vine.co/u/929198383955062784",
+        "https://instagram.com/gwennosaunders",
+        "https://gwennogwenno.tumblr.com",
+        "https://myspace.com/gwenno",
+        "http://www.bandsintown.com/Gwenno",
+        "https://soundcloud.com/gwenno",
+        "https://www.mixcloud.com/gwenno",
+        "https://gwenno.bandcamp.com",
+        "https://www.youtube.com/user/gwennosaunders",
+        "https://vimeo.com/user39497245",
+        "https://en.wikipedia.org/wiki/Gwenno_Saunders"
+      ]
     },
     "identity": {
       "musicbrainz_id": "8f5b15bd-0777-4564-9801-17462e5ff715",
@@ -264,27 +297,61 @@
         "track": "Amser",
         "uri": "https://www.youtube.com/watch?v=oleVny7jz7Q"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='151796532', url='https://music.apple.com/gb/artist/gwenno/151796532', name='Gwenno', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/4a/0a/19/4a0a19f8-5b9e-c81c-0817-22fe704a5f66/ami-identity-e7b8e9ce7aeb72817bebd334c8b93494-2025-04-06T19-49-02.456Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '151796532', 'type': 'artists', 'href': '/v1/catalog/gb/artists/151796532', 'attributes': {'name': 'Gwenno', 'genreNames': ['Alternative'], 'artwork': {'width': 703, 'height': 703, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/4a/0a/19/4a0a19f8-5b9e-c81c-0817-22fe704a5f66/ami-identity-e7b8e9ce7aeb72817bebd334c8b93494-2025-04-06T19-49-02.456Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'aac7d7', 'textColor1': '090707', 'textColor2': '090808', 'textColor3': '292d31', 'textColor4': '292e31'}, 'url': 'https://music.apple.com/gb/artist/gwenno/151796532'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/151796532/albums', 'data': [{'id': '1316525300', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1316525300'}, {'id': '1611343916', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611343916'}, {'id': '991340149', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991340149'}, {'id': '1013794456', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1013794456'}, {'id': '1794396724', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794396724'}, {'id': '1597588973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597588973'}, {'id': '1668202426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668202426'}, {'id': '1608932569', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1608932569'}, {'id': '1092814126', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1092814126'}, {'id': '1641342012', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1641342012'}, {'id': '1801759149', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1801759149'}, {'id': '1631606890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1631606890'}, {'id': '1533935226', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533935226'}, {'id': '1807559497', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807559497'}, {'id': '1725351628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725351628'}, {'id': '1538710918', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538710918'}, {'id': '1812904388', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812904388'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "592899",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3939913,
+          "name": "Gwenno Saunders",
+          "resource_url": "https://api.discogs.com/artists/3939913"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 592899,
+      "images": [
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/g6LE7-ru_F1oV26DVoiXUJPJb_k3rLGTeE8Ck0QqWcc/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/g6LE7-ru_F1oV26DVoiXUJPJb_k3rLGTeE8Ck0QqWcc/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rVLvqLbYP6KUjJM63Ic4_Y6bpGjZYxykT0dEl-AhUWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNTIwMjU0OTI0/LTk2MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/txwOt8i_cOCJjwqRwxw93ziWZLD7UDNNi4wHXZ4Z_ZI/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/txwOt8i_cOCJjwqRwxw93ziWZLD7UDNNi4wHXZ4Z_ZI/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "uri150": "https://i.discogs.com/J65P1gCrL_nYTQ4GFN4owmjKcza4DoKHnIgRipWDgZ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Mjg5/OS0xNDM3Nzg0NzI3/LTc0NDkucG5n.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Gwenno",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "592899",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/592899"
-      },
+      "profile": "British dancer, and artist. \r\n\r\nBorn: 23 May 1981 in Cardiff, Wales, UK. \r\n\r\nWelsh-Cornish dancer turned solo artist, known for singing in the Cornish language. Her third album, \"[m=2693510]\" (2022), was shortlisted for the [url=https://www.discogs.com/lists/Mercury-Music-Prize-shortlist-2021-30th-year/821818]2022 Mercury Prize[/url]. \r\n",
+      "realname": "Gwenno Mererid Saunders",
+      "releases_url": "https://api.discogs.com/artists/592899/releases",
       "resource_url": "https://api.discogs.com/artists/592899",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/592899",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/592899-Gwenno",
+      "urls": [
+        "https://www.gwenno.info",
+        "https://www.facebook.com/Gwennomusic",
+        "https://twitter.com/gwennosaunders",
+        "https://vine.co/u/929198383955062784",
+        "https://instagram.com/gwennosaunders",
+        "https://gwennogwenno.tumblr.com",
+        "https://myspace.com/gwenno",
+        "http://www.bandsintown.com/Gwenno",
+        "https://soundcloud.com/gwenno",
+        "https://www.mixcloud.com/gwenno",
+        "https://gwenno.bandcamp.com",
+        "https://www.youtube.com/user/gwennosaunders",
+        "https://vimeo.com/user39497245",
+        "https://en.wikipedia.org/wiki/Gwenno_Saunders"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Gwenno', url='https://www.last.fm/music/Gwenno', mbid='8f5b15bd-0777-4564-9801-17462e5ff715', listeners=70622, playcount=747156, bio_summary='Gwenno Mererid Saunders (born 23 May 1981) is a Welsh musician, known by the stage name Gwenno. She was born in Cardiff, and when growing up, her father spoke Cornish; her mother spoke Welsh. By 17, she was a cast member in Michael Flatley\\'s Lord of the Dance, playing a lead role in a Las Vegas production. Her recording career began with two solo EPs - Môr Hud in 2002 and Vodya in 2004. In 2005, she joined The Pipettes, remaining (and ultimately leading) the group through several personnel changes, until they broke up in 2010. <a href=\"https://www.last.fm/music/Gwenno\">Read more on Last.fm</a>', bio_content='Gwenno Mererid Saunders (born 23 May 1981) is a Welsh musician, known by the stage name Gwenno. She was born in Cardiff, and when growing up, her father spoke Cornish; her mother spoke Welsh. By 17, she was a cast member in Michael Flatley\\'s Lord of the Dance, playing a lead role in a Las Vegas production. Her recording career began with two solo EPs - Môr Hud in 2002 and Vodya in 2004. In 2005, she joined The Pipettes, remaining (and ultimately leading) the group through several personnel changes, until they broke up in 2010. She released her first solo LP, the Welsh-language Y Dydd Olaf, initially in 2014 on the indie label Peski. In 2015 she signed to Heavenly, which re-released the album. In 2018, she released a Cornish-language LP, Le Kov. <a href=\"https://www.last.fm/music/Gwenno\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie pop', 'welsh', 'female vocalists', 'seen live', 'female vocalist'], similar_artists=[{'name': 'Gruff Rhys', 'url': 'https://www.last.fm/music/Gruff+Rhys'}, {'name': \"Gorky's Zygotic Mynci\", 'url': 'https://www.last.fm/music/Gorky%27s+Zygotic+Mynci'}, {'name': 'Katy J Pearson', 'url': 'https://www.last.fm/music/Katy+J+Pearson'}, {'name': 'The Orielles', 'url': 'https://www.last.fm/music/The+Orielles'}, {'name': 'Pale Blue Eyes', 'url': 'https://www.last.fm/music/Pale+Blue+Eyes'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Gwenno', 'mbid': '8f5b15bd-0777-4564-9801-17462e5ff715', 'url': 'https://www.last.fm/music/Gwenno', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '70622', 'playcount': '747156'}, 'similar': {'artist': [{'name': 'Gruff Rhys', 'url': 'https://www.last.fm/music/Gruff+Rhys', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Gorky's Zygotic Mynci\", 'url': 'https://www.last.fm/music/Gorky%27s+Zygotic+Mynci', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Katy J Pearson', 'url': 'https://www.last.fm/music/Katy+J+Pearson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Orielles', 'url': 'https://www.last.fm/music/The+Orielles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pale Blue Eyes', 'url': 'https://www.last.fm/music/Pale+Blue+Eyes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie pop', 'url': 'https://www.last.fm/tag/indie+pop'}, {'name': 'welsh', 'url': 'https://www.last.fm/tag/welsh'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'female vocalist', 'url': 'https://www.last.fm/tag/female+vocalist'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Gwenno/+wiki'}}, 'published': '08 Sep 2006, 00:30', 'summary': 'Gwenno Mererid Saunders (born 23 May 1981) is a Welsh musician, known by the stage name Gwenno. She was born in Cardiff, and when growing up, her father spoke Cornish; her mother spoke Welsh. By 17, she was a cast member in Michael Flatley\\'s Lord of the Dance, playing a lead role in a Las Vegas production. Her recording career began with two solo EPs - Môr Hud in 2002 and Vodya in 2004. In 2005, she joined The Pipettes, remaining (and ultimately leading) the group through several personnel changes, until they broke up in 2010. <a href=\"https://www.last.fm/music/Gwenno\">Read more on Last.fm</a>', 'content': 'Gwenno Mererid Saunders (born 23 May 1981) is a Welsh musician, known by the stage name Gwenno. She was born in Cardiff, and when growing up, her father spoke Cornish; her mother spoke Welsh. By 17, she was a cast member in Michael Flatley\\'s Lord of the Dance, playing a lead role in a Las Vegas production. Her recording career began with two solo EPs - Môr Hud in 2002 and Vodya in 2004. In 2005, she joined The Pipettes, remaining (and ultimately leading) the group through several personnel changes, until they broke up in 2010. She released her first solo LP, the Welsh-language Y Dydd Olaf, initially in 2014 on the indie label Peski. In 2015 she signed to Heavenly, which re-released the album. In 2018, she released a Cornish-language LP, Le Kov. <a href=\"https://www.last.fm/music/Gwenno\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='44mRrrRjaV8iu1VLIKuwty', url='https://open.spotify.com/artist/44mRrrRjaV8iu1VLIKuwty', name='Gwenno', popularity=30, followers=26666, genres=['space rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb1182db77898a1975306c21a8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051741182db77898a1975306c21a8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1781182db77898a1975306c21a8', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/44mRrrRjaV8iu1VLIKuwty'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/44mRrrRjaV8iu1VLIKuwty'}, 'followers': {'href': None, 'total': 26666}, 'genres': ['space rock'], 'href': 'https://api.spotify.com/v1/artists/44mRrrRjaV8iu1VLIKuwty', 'id': '44mRrrRjaV8iu1VLIKuwty', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb1182db77898a1975306c21a8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051741182db77898a1975306c21a8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1781182db77898a1975306c21a8', 'height': 160, 'width': 160}], 'name': 'Gwenno', 'popularity': 30, 'type': 'artist', 'uri': 'spotify:artist:44mRrrRjaV8iu1VLIKuwty'})",
@@ -376,6 +443,6 @@
   },
   "spotify_id": "44mRrrRjaV8iu1VLIKuwty",
   "spotify_url": "https://open.spotify.com/artist/44mRrrRjaV8iu1VLIKuwty",
-  "updated_at": "2026-10-22T14:07:28.030299",
+  "updated_at": "2026-10-30T18:40:36.294924",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Gwenno"
 }

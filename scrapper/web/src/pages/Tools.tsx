@@ -15,7 +15,7 @@ const GROUPS: { title: string; names: string[] }[] = [
   { title: 'Collection', names: ['collection', 'release', 'artist', 'artist-batch'] },
   {
     title: 'Backfill & enrich',
-    names: ['enrich-description', 'backfill-videos', 'backfill-original-years', 'backfill-formats', 'backfill-tracklists', 'backfill-identities'],
+    names: ['enrich-description', 'backfill-videos', 'backfill-original-years', 'backfill-formats', 'backfill-tracklists', 'backfill-credits', 'backfill-identities', 'backfill-artist-discogs'],
   },
   { title: 'Output', names: ['generate-collection', 'report'] },
   { title: 'Database', names: ['status', 'backup', 'db'] },
@@ -99,7 +99,7 @@ export function ToolsPage() {
                   splat === 'site-assets' ? 'bg-hover font-medium text-fg' : 'text-muted hover:bg-hover/60 hover:text-fg',
                 )}
               >
-                generate-colors · artist-images
+                generate-colors · artist-images · explore
               </Link>
             </div>
           </nav>

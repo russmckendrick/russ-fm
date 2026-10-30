@@ -111,22 +111,181 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='13494122', url='https://music.apple.com/gb/artist/deus/13494122', name='dEUS', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages122/v4/88/cb/49/88cb4988-e074-2d8b-eee3-397f7b517839/0a979855-a6bb-419b-940c-aadbea79b755_ami-identity-6bf500f0cbc31d3f7cfea25c61abdf1e-2022-11-02T14-48-24.419Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13494122', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13494122', 'attributes': {'name': 'dEUS', 'genreNames': ['Alternative'], 'artwork': {'width': 1280, 'height': 1280, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages122/v4/88/cb/49/88cb4988-e074-2d8b-eee3-397f7b517839/0a979855-a6bb-419b-940c-aadbea79b755_ami-identity-6bf500f0cbc31d3f7cfea25c61abdf1e-2022-11-02T14-48-24.419Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '8d4a2c', 'textColor1': 'f9f3ee', 'textColor2': 'fcede4', 'textColor3': 'e4d1c7', 'textColor4': 'e6cdbf'}, 'url': 'https://music.apple.com/gb/artist/deus/13494122'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13494122/albums', 'next': '/v1/catalog/gb/artists/13494122/albums?offset=25', 'data': [{'id': '1647227256', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647227256'}, {'id': '1650427627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1650427627'}, {'id': '1647351546', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647351546'}, {'id': '531382139', 'type': 'albums', 'href': '/v1/catalog/gb/albums/531382139'}, {'id': '1655000595', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1655000595'}, {'id': '943431684', 'type': 'albums', 'href': '/v1/catalog/gb/albums/943431684'}, {'id': '945088623', 'type': 'albums', 'href': '/v1/catalog/gb/albums/945088623'}, {'id': '932376829', 'type': 'albums', 'href': '/v1/catalog/gb/albums/932376829'}, {'id': '1647247189', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647247189'}, {'id': '456897278', 'type': 'albums', 'href': '/v1/catalog/gb/albums/456897278'}, {'id': '531788121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/531788121'}, {'id': '1647179661', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647179661'}, {'id': '1647214501', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647214501'}, {'id': '1647349551', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647349551'}, {'id': '671904704', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671904704'}, {'id': '1647215264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647215264'}, {'id': '1538745638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538745638'}, {'id': '1647222434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647222434'}, {'id': '556190579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/556190579'}, {'id': '1647234691', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647234691'}, {'id': '449962977', 'type': 'albums', 'href': '/v1/catalog/gb/albums/449962977'}, {'id': '1647212681', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647212681'}, {'id': '460016311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/460016311'}, {'id': '484708328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/484708328'}, {'id': '1647212793', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647212793'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "74984",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 5720567,
+          "name": "Anti Narcotics League",
+          "resource_url": "https://api.discogs.com/artists/5720567"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 74984,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/9Km_t2sKiare9ZCqsGz8RUyk7kx7y0tJLYL5o9dOliI/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/9Km_t2sKiare9ZCqsGz8RUyk7kx7y0tJLYL5o9dOliI/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/BzecTqVSBNN6QwVad02m_W6ukTMj-8fQGl8vw1z7E5g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/BuQrJPJbbA0qdWKVARYwKL-eK1PSDipIYzz1I5skLP0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BuQrJPJbbA0qdWKVARYwKL-eK1PSDipIYzz1I5skLP0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/s18RhtcelRZI8fD8OZFKxIoGBIdH0k65e6He5k0okDs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/njbMZFWjlfDZ-Dp1JgA9bFkxkel6frZN5bQrNnaZ21Y/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/njbMZFWjlfDZ-Dp1JgA9bFkxkel6frZN5bQrNnaZ21Y/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "uri150": "https://i.discogs.com/7ZV84iHE_sx_kkEPcZTgv5qaDmADxxwG1TfJfuzb29Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 376,
+          "resource_url": "https://i.discogs.com/Or58NX9CnbHht2pTNQJvXK2sz5nAvFtDP7YaLwyDmQ4/rs:fit/g:sm/q:90/h:376/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Or58NX9CnbHht2pTNQJvXK2sz5nAvFtDP7YaLwyDmQ4/rs:fit/g:sm/q:90/h:376/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/El1xCNAjbiv4chG5w99kDa-rHoJhP64PRXJ5jFonkJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "width": 598
+        },
+        {
+          "height": 433,
+          "resource_url": "https://i.discogs.com/CJS2Vyv3KtFZe8AYR9BiWbBBFfpNETvlW5fBEFbX-mQ/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CJS2Vyv3KtFZe8AYR9BiWbBBFfpNETvlW5fBEFbX-mQ/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TVf-VZj5fm81h_s5w_-6mWDcj9sSYRU0RCNX8NVk2JU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/e52_UvY1bpDcVXlDvEm8ontizEoyLIjqc9a2k1gCHow/rs:fit/g:sm/q:90/h:600/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e52_UvY1bpDcVXlDvEm8ontizEoyLIjqc9a2k1gCHow/rs:fit/g:sm/q:90/h:600/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PkaEiT6gbIfINGdsc9yEy0a6t4tvs_Qr7aRiUQR0tmg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "width": 581
+        },
+        {
+          "height": 552,
+          "resource_url": "https://i.discogs.com/sFh0jC3a2DIX_2nde3eviqzqN91Y5roTUJAw6ubwa58/rs:fit/g:sm/q:90/h:552/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sFh0jC3a2DIX_2nde3eviqzqN91Y5roTUJAw6ubwa58/rs:fit/g:sm/q:90/h:552/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XxowryYolx_xEOfT2_0m9OjeGE2Bymrt_OFTa-ywlII/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 112377,
+          "name": "Mauro Pawlowski",
+          "resource_url": "https://api.discogs.com/artists/112377"
+        },
+        {
+          "active": false,
+          "id": 237711,
+          "name": "Rudy Trouvé",
+          "resource_url": "https://api.discogs.com/artists/237711"
+        },
+        {
+          "active": false,
+          "id": 264874,
+          "name": "Craig Ward",
+          "resource_url": "https://api.discogs.com/artists/264874"
+        },
+        {
+          "active": false,
+          "id": 333170,
+          "name": "Danny Mommens",
+          "resource_url": "https://api.discogs.com/artists/333170"
+        },
+        {
+          "active": false,
+          "id": 345031,
+          "name": "Tim Vanhamel",
+          "resource_url": "https://api.discogs.com/artists/345031"
+        },
+        {
+          "active": false,
+          "id": 385729,
+          "name": "Stef Kamil Carlens",
+          "resource_url": "https://api.discogs.com/artists/385729"
+        },
+        {
+          "active": true,
+          "id": 389116,
+          "name": "Tom Barman",
+          "resource_url": "https://api.discogs.com/artists/389116"
+        },
+        {
+          "active": false,
+          "id": 403683,
+          "name": "Kris Dane",
+          "resource_url": "https://api.discogs.com/artists/403683"
+        },
+        {
+          "active": true,
+          "id": 435061,
+          "name": "Stéphane Misseghers",
+          "resource_url": "https://api.discogs.com/artists/435061"
+        },
+        {
+          "active": true,
+          "id": 444715,
+          "name": "Alan Gevaert",
+          "resource_url": "https://api.discogs.com/artists/444715"
+        },
+        {
+          "active": true,
+          "id": 444716,
+          "name": "Klaas Janzoons",
+          "resource_url": "https://api.discogs.com/artists/444716"
+        },
+        {
+          "active": false,
+          "id": 498726,
+          "name": "Jules De Borgher",
+          "resource_url": "https://api.discogs.com/artists/498726"
+        },
+        {
+          "active": false,
+          "id": 848349,
+          "name": "Mark Meyers",
+          "resource_url": "https://api.discogs.com/artists/848349"
+        },
+        {
+          "active": false,
+          "id": 883558,
+          "name": "Bruno De Groote",
+          "resource_url": "https://api.discogs.com/artists/883558"
+        },
+        {
+          "active": true,
+          "id": 1968859,
+          "name": "Simen Følstad Nilsen",
+          "resource_url": "https://api.discogs.com/artists/1968859"
+        }
+      ],
       "name": "dEUS",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "74984",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/74984"
-      },
+      "profile": "Alternative rock band formed in 1991, based in Antwerp, Belgium.\r\n",
+      "releases_url": "https://api.discogs.com/artists/74984/releases",
       "resource_url": "https://api.discogs.com/artists/74984",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/74984",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/74984-dEUS",
+      "urls": [
+        "https://www.deusmusic.be/",
+        "https://www.instagram.com/deus_band",
+        "https://www.facebook.com/dEUSmusic",
+        "https://twitter.com/deusbe",
+        "http://www.hotellounge.be/",
+        "http://www.deus-fr.net/",
+        "http://en.wikipedia.org/wiki/DEUS_(band)",
+        "https://www.youtube.com/@dEUSbe",
+        "https://soundcloud.com/deusbe"
+      ]
     },
     "identity": {
       "musicbrainz_id": "2d0ec174-2bff-4f46-ae1b-dfea0ed9391c",
@@ -248,27 +407,187 @@
         "track": "The Soft Fall",
         "uri": "https://www.youtube.com/watch?v=vypfSoO4VR0"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='13494122', url='https://music.apple.com/gb/artist/deus/13494122', name='dEUS', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages122/v4/88/cb/49/88cb4988-e074-2d8b-eee3-397f7b517839/0a979855-a6bb-419b-940c-aadbea79b755_ami-identity-6bf500f0cbc31d3f7cfea25c61abdf1e-2022-11-02T14-48-24.419Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13494122', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13494122', 'attributes': {'name': 'dEUS', 'genreNames': ['Alternative'], 'artwork': {'width': 1280, 'height': 1280, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages122/v4/88/cb/49/88cb4988-e074-2d8b-eee3-397f7b517839/0a979855-a6bb-419b-940c-aadbea79b755_ami-identity-6bf500f0cbc31d3f7cfea25c61abdf1e-2022-11-02T14-48-24.419Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '8d4a2c', 'textColor1': 'f9f3ee', 'textColor2': 'fcede4', 'textColor3': 'e4d1c7', 'textColor4': 'e6cdbf'}, 'url': 'https://music.apple.com/gb/artist/deus/13494122'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13494122/albums', 'next': '/v1/catalog/gb/artists/13494122/albums?offset=25', 'data': [{'id': '1647227256', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647227256'}, {'id': '1650427627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1650427627'}, {'id': '1647351546', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647351546'}, {'id': '531382139', 'type': 'albums', 'href': '/v1/catalog/gb/albums/531382139'}, {'id': '1655000595', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1655000595'}, {'id': '943431684', 'type': 'albums', 'href': '/v1/catalog/gb/albums/943431684'}, {'id': '945088623', 'type': 'albums', 'href': '/v1/catalog/gb/albums/945088623'}, {'id': '932376829', 'type': 'albums', 'href': '/v1/catalog/gb/albums/932376829'}, {'id': '1647247189', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647247189'}, {'id': '456897278', 'type': 'albums', 'href': '/v1/catalog/gb/albums/456897278'}, {'id': '531788121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/531788121'}, {'id': '1647179661', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647179661'}, {'id': '1647214501', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647214501'}, {'id': '1647349551', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647349551'}, {'id': '671904704', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671904704'}, {'id': '1647215264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647215264'}, {'id': '1538745638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1538745638'}, {'id': '1647222434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647222434'}, {'id': '556190579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/556190579'}, {'id': '1647234691', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647234691'}, {'id': '449962977', 'type': 'albums', 'href': '/v1/catalog/gb/albums/449962977'}, {'id': '1647212681', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647212681'}, {'id': '460016311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/460016311'}, {'id': '484708328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/484708328'}, {'id': '1647212793', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647212793'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "74984",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 5720567,
+          "name": "Anti Narcotics League",
+          "resource_url": "https://api.discogs.com/artists/5720567"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 74984,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/9Km_t2sKiare9ZCqsGz8RUyk7kx7y0tJLYL5o9dOliI/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/9Km_t2sKiare9ZCqsGz8RUyk7kx7y0tJLYL5o9dOliI/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/BzecTqVSBNN6QwVad02m_W6ukTMj-8fQGl8vw1z7E5g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTc0MTUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/BuQrJPJbbA0qdWKVARYwKL-eK1PSDipIYzz1I5skLP0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BuQrJPJbbA0qdWKVARYwKL-eK1PSDipIYzz1I5skLP0/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/s18RhtcelRZI8fD8OZFKxIoGBIdH0k65e6He5k0okDs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEyNDE1MTczNjgu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/njbMZFWjlfDZ-Dp1JgA9bFkxkel6frZN5bQrNnaZ21Y/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/njbMZFWjlfDZ-Dp1JgA9bFkxkel6frZN5bQrNnaZ21Y/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "uri150": "https://i.discogs.com/7ZV84iHE_sx_kkEPcZTgv5qaDmADxxwG1TfJfuzb29Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTEwNzM3MzkwOTku/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 376,
+          "resource_url": "https://i.discogs.com/Or58NX9CnbHht2pTNQJvXK2sz5nAvFtDP7YaLwyDmQ4/rs:fit/g:sm/q:90/h:376/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Or58NX9CnbHht2pTNQJvXK2sz5nAvFtDP7YaLwyDmQ4/rs:fit/g:sm/q:90/h:376/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/El1xCNAjbiv4chG5w99kDa-rHoJhP64PRXJ5jFonkJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExMzU2NTAyOTAu/anBlZw.jpeg",
+          "width": 598
+        },
+        {
+          "height": 433,
+          "resource_url": "https://i.discogs.com/CJS2Vyv3KtFZe8AYR9BiWbBBFfpNETvlW5fBEFbX-mQ/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CJS2Vyv3KtFZe8AYR9BiWbBBFfpNETvlW5fBEFbX-mQ/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TVf-VZj5fm81h_s5w_-6mWDcj9sSYRU0RCNX8NVk2JU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTExNDYxMzg0MDYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/e52_UvY1bpDcVXlDvEm8ontizEoyLIjqc9a2k1gCHow/rs:fit/g:sm/q:90/h:600/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e52_UvY1bpDcVXlDvEm8ontizEoyLIjqc9a2k1gCHow/rs:fit/g:sm/q:90/h:600/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PkaEiT6gbIfINGdsc9yEy0a6t4tvs_Qr7aRiUQR0tmg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE1MTgwODI5NDAt/NzUyOC5qcGVn.jpeg",
+          "width": 581
+        },
+        {
+          "height": 552,
+          "resource_url": "https://i.discogs.com/sFh0jC3a2DIX_2nde3eviqzqN91Y5roTUJAw6ubwa58/rs:fit/g:sm/q:90/h:552/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sFh0jC3a2DIX_2nde3eviqzqN91Y5roTUJAw6ubwa58/rs:fit/g:sm/q:90/h:552/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XxowryYolx_xEOfT2_0m9OjeGE2Bymrt_OFTa-ywlII/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTg0/LTE3NjQ2ODM2MTAt/NTUxMS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 112377,
+          "name": "Mauro Pawlowski",
+          "resource_url": "https://api.discogs.com/artists/112377"
+        },
+        {
+          "active": false,
+          "id": 237711,
+          "name": "Rudy Trouvé",
+          "resource_url": "https://api.discogs.com/artists/237711"
+        },
+        {
+          "active": false,
+          "id": 264874,
+          "name": "Craig Ward",
+          "resource_url": "https://api.discogs.com/artists/264874"
+        },
+        {
+          "active": false,
+          "id": 333170,
+          "name": "Danny Mommens",
+          "resource_url": "https://api.discogs.com/artists/333170"
+        },
+        {
+          "active": false,
+          "id": 345031,
+          "name": "Tim Vanhamel",
+          "resource_url": "https://api.discogs.com/artists/345031"
+        },
+        {
+          "active": false,
+          "id": 385729,
+          "name": "Stef Kamil Carlens",
+          "resource_url": "https://api.discogs.com/artists/385729"
+        },
+        {
+          "active": true,
+          "id": 389116,
+          "name": "Tom Barman",
+          "resource_url": "https://api.discogs.com/artists/389116"
+        },
+        {
+          "active": false,
+          "id": 403683,
+          "name": "Kris Dane",
+          "resource_url": "https://api.discogs.com/artists/403683"
+        },
+        {
+          "active": true,
+          "id": 435061,
+          "name": "Stéphane Misseghers",
+          "resource_url": "https://api.discogs.com/artists/435061"
+        },
+        {
+          "active": true,
+          "id": 444715,
+          "name": "Alan Gevaert",
+          "resource_url": "https://api.discogs.com/artists/444715"
+        },
+        {
+          "active": true,
+          "id": 444716,
+          "name": "Klaas Janzoons",
+          "resource_url": "https://api.discogs.com/artists/444716"
+        },
+        {
+          "active": false,
+          "id": 498726,
+          "name": "Jules De Borgher",
+          "resource_url": "https://api.discogs.com/artists/498726"
+        },
+        {
+          "active": false,
+          "id": 848349,
+          "name": "Mark Meyers",
+          "resource_url": "https://api.discogs.com/artists/848349"
+        },
+        {
+          "active": false,
+          "id": 883558,
+          "name": "Bruno De Groote",
+          "resource_url": "https://api.discogs.com/artists/883558"
+        },
+        {
+          "active": true,
+          "id": 1968859,
+          "name": "Simen Følstad Nilsen",
+          "resource_url": "https://api.discogs.com/artists/1968859"
+        }
+      ],
       "name": "dEUS",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "74984",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/74984"
-      },
+      "profile": "Alternative rock band formed in 1991, based in Antwerp, Belgium.\r\n",
+      "releases_url": "https://api.discogs.com/artists/74984/releases",
       "resource_url": "https://api.discogs.com/artists/74984",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/74984",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/74984-dEUS",
+      "urls": [
+        "https://www.deusmusic.be/",
+        "https://www.instagram.com/deus_band",
+        "https://www.facebook.com/dEUSmusic",
+        "https://twitter.com/deusbe",
+        "http://www.hotellounge.be/",
+        "http://www.deus-fr.net/",
+        "http://en.wikipedia.org/wiki/DEUS_(band)",
+        "https://www.youtube.com/@dEUSbe",
+        "https://soundcloud.com/deusbe"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='dEUS', url='https://www.last.fm/music/dEUS', mbid='d9887f3b-266e-49b0-be26-9049cfa884e8', listeners=407960, playcount=11835339, bio_summary='dEUS is an alternative/experimental rock band based and formed in Antwerp, Belgium. dEUS’s lineup has changed frequently, with only singer and guitarist Tom Barman and multi-instrumentalist Klaas Janzoons remaining from the original setting. The other current members are guitarist and vocalist Mauro Pawlowski, bassist Alan Gevaert and drummer Stephane Misseghers.\\n\\nThe Band, whose songs are primarily sung in English, performed their first concert on November 20th, 1989. <a href=\"https://www.last.fm/music/dEUS\">Read more on Last.fm</a>', bio_content='dEUS is an alternative/experimental rock band based and formed in Antwerp, Belgium. dEUS’s lineup has changed frequently, with only singer and guitarist Tom Barman and multi-instrumentalist Klaas Janzoons remaining from the original setting. The other current members are guitarist and vocalist Mauro Pawlowski, bassist Alan Gevaert and drummer Stephane Misseghers.\\n\\nThe Band, whose songs are primarily sung in English, performed their first concert on November 20th, 1989. The band displayed a bewildering array of influences, including Can, Captain Beefheart, Mingus-styled jazz, J.J. Cale, Leonard Cohen and Velvet Underground. Consequently, they incorporate a wide variety of styles into their work. dEUS have become one of the most successful (and influential) Belgian rock bands.\\n\\nMany musicians became well-known after having been members of dEUS: Stef-Kamil Carlens (Moondog Jr., Zita Swoon), Rudy Trouvé (Kiss My Jazz), Danny Mommens (Vive La Fête), Craig Ward (The Love Substitutes), Jules de Borgher and Tim Vanhamel (Millionaire, solo). The current line-up (as from the album Pocket Revolution) includes Mauro Pawlowski (who became famous as solo artist and before with the band Evil Superstars) on guitars and vocals, Alan Gevaert on bass and Stephane Misseghers on drums. \\nErik Drew Feldman and David Bottrill have acted as producers. \\n\\ndEUS has made 8 studio albums up to now: \\nWorst Case Scenario (1994), \\nIn A Bar, Under The Sea (1996),\\nThe Ideal Crash (1999) \\nPocket Revolution (2005)\\nVantage Point (April 21st 2008)\\nKeep You Close (September 20st 2011)\\nFollowing Sea (June 1st 2012)\\nHow To Replace It(February 17th 2023)\\n\\nOther releases include:\\nMy Sister = My Clock (1995) and\\nNo More Loud Music - The Singles (2001), a best-of compilation.\\n\\nBefore Pocket Revolution (2005), dEUS took a \"sabbatical\" for over 6 years. In these years, Barman was busy with his second passion: film. He wrote and directed Anyway The Wind Blows, a movie received well by critics in Belgium. The key-song of the soundtrack for the film was Summer\\'s Here by Magnus, a project by Tom Barman together with CJ Bolland. \\n\\nMore info can be found on their official website, www.deus.be <a href=\"https://www.last.fm/music/dEUS\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'alternative', 'rock', 'indie', 'belgian'], similar_artists=[{'name': 'Absynthe Minded', 'url': 'https://www.last.fm/music/Absynthe+Minded'}, {'name': 'Admiral Freebee', 'url': 'https://www.last.fm/music/Admiral+Freebee'}, {'name': 'Noordkaap', 'url': 'https://www.last.fm/music/Noordkaap'}, {'name': 'Gorki', 'url': 'https://www.last.fm/music/Gorki'}, {'name': 'Millionaire', 'url': 'https://www.last.fm/music/Millionaire'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'dEUS', 'mbid': 'd9887f3b-266e-49b0-be26-9049cfa884e8', 'url': 'https://www.last.fm/music/dEUS', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '407960', 'playcount': '11835339'}, 'similar': {'artist': [{'name': 'Absynthe Minded', 'url': 'https://www.last.fm/music/Absynthe+Minded', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Admiral Freebee', 'url': 'https://www.last.fm/music/Admiral+Freebee', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Noordkaap', 'url': 'https://www.last.fm/music/Noordkaap', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gorki', 'url': 'https://www.last.fm/music/Gorki', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Millionaire', 'url': 'https://www.last.fm/music/Millionaire', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'belgian', 'url': 'https://www.last.fm/tag/belgian'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/dEUS/+wiki'}}, 'published': '15 Feb 2006, 15:41', 'summary': 'dEUS is an alternative/experimental rock band based and formed in Antwerp, Belgium. dEUS’s lineup has changed frequently, with only singer and guitarist Tom Barman and multi-instrumentalist Klaas Janzoons remaining from the original setting. The other current members are guitarist and vocalist Mauro Pawlowski, bassist Alan Gevaert and drummer Stephane Misseghers.\\n\\nThe Band, whose songs are primarily sung in English, performed their first concert on November 20th, 1989. <a href=\"https://www.last.fm/music/dEUS\">Read more on Last.fm</a>', 'content': 'dEUS is an alternative/experimental rock band based and formed in Antwerp, Belgium. dEUS’s lineup has changed frequently, with only singer and guitarist Tom Barman and multi-instrumentalist Klaas Janzoons remaining from the original setting. The other current members are guitarist and vocalist Mauro Pawlowski, bassist Alan Gevaert and drummer Stephane Misseghers.\\n\\nThe Band, whose songs are primarily sung in English, performed their first concert on November 20th, 1989. The band displayed a bewildering array of influences, including Can, Captain Beefheart, Mingus-styled jazz, J.J. Cale, Leonard Cohen and Velvet Underground. Consequently, they incorporate a wide variety of styles into their work. dEUS have become one of the most successful (and influential) Belgian rock bands.\\n\\nMany musicians became well-known after having been members of dEUS: Stef-Kamil Carlens (Moondog Jr., Zita Swoon), Rudy Trouvé (Kiss My Jazz), Danny Mommens (Vive La Fête), Craig Ward (The Love Substitutes), Jules de Borgher and Tim Vanhamel (Millionaire, solo). The current line-up (as from the album Pocket Revolution) includes Mauro Pawlowski (who became famous as solo artist and before with the band Evil Superstars) on guitars and vocals, Alan Gevaert on bass and Stephane Misseghers on drums. \\nErik Drew Feldman and David Bottrill have acted as producers. \\n\\ndEUS has made 8 studio albums up to now: \\nWorst Case Scenario (1994), \\nIn A Bar, Under The Sea (1996),\\nThe Ideal Crash (1999) \\nPocket Revolution (2005)\\nVantage Point (April 21st 2008)\\nKeep You Close (September 20st 2011)\\nFollowing Sea (June 1st 2012)\\nHow To Replace It(February 17th 2023)\\n\\nOther releases include:\\nMy Sister = My Clock (1995) and\\nNo More Loud Music - The Singles (2001), a best-of compilation.\\n\\nBefore Pocket Revolution (2005), dEUS took a \"sabbatical\" for over 6 years. In these years, Barman was busy with his second passion: film. He wrote and directed Anyway The Wind Blows, a movie received well by critics in Belgium. The key-song of the soundtrack for the film was Summer\\'s Here by Magnus, a project by Tom Barman together with CJ Bolland. \\n\\nMore info can be found on their official website, www.deus.be <a href=\"https://www.last.fm/music/dEUS\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3zMir00BoCKhwNTjlT61KN', url='https://open.spotify.com/artist/3zMir00BoCKhwNTjlT61KN', name='dEUS', popularity=45, followers=129211, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb88fba9fcf9e6023db03517a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b88fba9fcf9e6023db03517a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b88fba9fcf9e6023db03517a', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3zMir00BoCKhwNTjlT61KN'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3zMir00BoCKhwNTjlT61KN'}, 'followers': {'href': None, 'total': 129211}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/3zMir00BoCKhwNTjlT61KN', 'id': '3zMir00BoCKhwNTjlT61KN', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb88fba9fcf9e6023db03517a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b88fba9fcf9e6023db03517a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b88fba9fcf9e6023db03517a', 'height': 160, 'width': 160}], 'name': 'dEUS', 'popularity': 45, 'type': 'artist', 'uri': 'spotify:artist:3zMir00BoCKhwNTjlT61KN'})",
@@ -332,6 +651,6 @@
   },
   "spotify_id": "3zMir00BoCKhwNTjlT61KN",
   "spotify_url": "https://open.spotify.com/artist/3zMir00BoCKhwNTjlT61KN",
-  "updated_at": "2026-10-22T14:13:55.697637",
+  "updated_at": "2026-10-30T18:48:32.520309",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Deus_(band)"
 }

@@ -4,6 +4,7 @@
 //! and [`crate::orchestrator`]. Pure-local operations (maintenance) are implemented directly.
 
 pub mod artist;
+pub mod artist_discogs;
 pub mod collection;
 pub mod credits;
 pub mod descriptions;

@@ -11,7 +11,7 @@
   "genres": [
     "Pop"
   ],
-  "id": null,
+  "id": "dee-c.-lee-1774009086",
   "images": [
     {
       "height": 2000,
@@ -72,22 +72,297 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='58003267', url='https://music.apple.com/gb/artist/dee-c-lee/58003267', name='Dee C. Lee', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/cc/9c/1bcc9c93-ed91-7ff5-bcea-96b73642a46d/mzi.iovrxhse.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '58003267', 'type': 'artists', 'href': '/v1/catalog/gb/artists/58003267', 'attributes': {'artwork': {'bgColor': '2b1415', 'height': 600, 'textColor1': 'eb99a7', 'textColor2': 'ee8357', 'textColor3': 'c47f8a', 'textColor4': 'c76d4a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/cc/9c/1bcc9c93-ed91-7ff5-bcea-96b73642a46d/mzi.iovrxhse.jpg/{w}x{h}ac.jpg', 'width': 600}, 'genreNames': ['Pop'], 'name': 'Dee C. Lee', 'url': 'https://music.apple.com/gb/artist/dee-c-lee/58003267'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/58003267/albums', 'data': [{'id': '274673142', 'type': 'albums', 'href': '/v1/catalog/gb/albums/274673142'}, {'id': '765679813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/765679813'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "25395",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 553746,
+          "name": "Dee Sealy",
+          "resource_url": "https://api.discogs.com/artists/553746"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 28875,
+          "name": "The Style Council",
+          "resource_url": "https://api.discogs.com/artists/28875"
+        },
+        {
+          "active": true,
+          "id": 69376,
+          "name": "Slam Slam",
+          "resource_url": "https://api.discogs.com/artists/69376"
+        },
+        {
+          "active": true,
+          "id": 148760,
+          "name": "Animal Nightlife",
+          "resource_url": "https://api.discogs.com/artists/148760"
+        },
+        {
+          "active": true,
+          "id": 1032196,
+          "name": "The Council Collective",
+          "resource_url": "https://api.discogs.com/artists/1032196"
+        },
+        {
+          "active": true,
+          "id": 6738886,
+          "name": "Weller Family",
+          "resource_url": "https://api.discogs.com/artists/6738886"
+        }
+      ],
+      "id": 25395,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wO35uqK24c-JXTHTTHiyPLaqmL7odULygVSS-f6h2r8/rs:fit/g:sm/q:90/h:600/w:506/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/wO35uqK24c-JXTHTTHiyPLaqmL7odULygVSS-f6h2r8/rs:fit/g:sm/q:90/h:600/w:506/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_0sXw8AEPRvbZdqyWfnNm4J61VtFVuku3He-lJ5c0FI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "width": 506
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NjC8MUAm3WXAOovDkajmTcVCAh-G4n4kG7VtBkMFpYo/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NjC8MUAm3WXAOovDkajmTcVCAh-G4n4kG7VtBkMFpYo/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/GSit8Mcz7fsyM2BkWHH1U-VlokuP8lq_9rZ7d85ee9A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Hk_RIBdcdLxaPvK_ow7Uws45-2FCECKaK8H1kaXicXg/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hk_RIBdcdLxaPvK_ow7Uws45-2FCECKaK8H1kaXicXg/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XwrB7zJejcPprOk6twFOl6-CpQS4fYQHbshwh7mZYSg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "width": 411
+        },
+        {
+          "height": 393,
+          "resource_url": "https://i.discogs.com/CjCQtM_k5k_FIjIT60IGUtVT0E8zh3AcRBXnR2672ng/rs:fit/g:sm/q:90/h:393/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CjCQtM_k5k_FIjIT60IGUtVT0E8zh3AcRBXnR2672ng/rs:fit/g:sm/q:90/h:393/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rJ2ghiK6J8qWvcKO0Ca4SVLfIZDv7ObLDvUhjKqw22Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "width": 564
+        },
+        {
+          "height": 583,
+          "resource_url": "https://i.discogs.com/AxxqGpiE7WyBoz1ToLPpeu5UU3jG169gkR_VAIkh-_0/rs:fit/g:sm/q:90/h:583/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AxxqGpiE7WyBoz1ToLPpeu5UU3jG169gkR_VAIkh-_0/rs:fit/g:sm/q:90/h:583/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/h3Y77xIAWT1_Dchx0CeT0gmv8hbCpUKOtM4RiDzpMw8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "width": 594
+        }
+      ],
       "name": "Dee C. Lee",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "25395",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/25395"
-      },
+      "namevariations": [
+        "D C Lee",
+        "D. C. Lee",
+        "D.C. Lee",
+        "D.C.Lee",
+        "DC Lee",
+        "Dee",
+        "Dee C Lee",
+        "Dee C.Lee",
+        "Dee-C-Lee",
+        "Dee. C. Lee",
+        "Dee. C. Lee.",
+        "Dee.C. Lee",
+        "Dee.C.Lee",
+        "Dee.Cee.Lee",
+        "Lee"
+      ],
+      "profile": "Born 6 June 1961 in Balham, South London, England, UK.\r\nBritish soul, R&B and pop singer. Early in her career, she was a backing singer for [a=Wham!], and then became a member of [a=The Style Council], as well as also performing as a solo artist.\r\nLee was married to her fellow Style Council member, band founder [a=Paul Weller] from 1987 until their divorce in 1998. They have two children, daughter [a=Leah Weller], and son Nathaniel ([a10310152]).",
+      "realname": "Diane Catherine Sealy",
+      "releases_url": "https://api.discogs.com/artists/25395/releases",
       "resource_url": "https://api.discogs.com/artists/25395",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/25395",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/25395-Dee-C-Lee",
+      "urls": [
+        "http://www.deeclee.com/",
+        "http://www.myspace.com/dianesealey",
+        "https://www.facebook.com/deecleeofficial/",
+        "https://www.facebook.com/deec.lee.50",
+        "https://en.wikipedia.org/wiki/Dee_C._Lee"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": "467c79f4-2a6f-413a-abbd-79669f285284",
+      "resolved_at": "2026-10-22T14:06:12.093563",
+      "wikidata_id": "Q3704645",
+      "wikipedia_title": "Dee C. Lee"
+    },
+    "lastfm": "ArtistLastFmData(name='Dee C. Lee', url='https://www.last.fm/music/Dee+C.+Lee', mbid='467c79f4-2a6f-413a-abbd-79669f285284', listeners=26616, playcount=92396, bio_summary='Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>', bio_content='Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. Despite considerable airplay, the single failed to reach the top 40. In 1984, she then worked with The Style Council and appeared on their debut album Café Bleu (released as My Ever Changing Moods in North America). Lee can be heard on the tracks \"Headstart for Happiness,\" \"It Didn\\'t Matter,\" \"The Lodgers,\" \"Walls Come Tumbling Down,\" and \"Shout to the Top.\" Lee continued to record solo material during this time, but singles \"Yippee Yi Yay!\" and \"Don\\'t Do It Baby\" failed to chart.\\n\\nIn 1985, after the release of the second Style Council album Our Favourite Shop (which reached no.1) and a stint working with the band Animal Nightlife, Lee released another solo single; the self-penned ballad \"See the Day\". The single became a UK hit and peaked at no.2 in December 1985, selling a quarter of a million copies in the UK alone, and earning Lee a silver disc. Twenty years later, the song was covered by Girls Aloud, their version peaking at no.9 on the UK Singles Chart in December 2005.\\n\\nLee\\'s follow-up singles, a cover of Judie Tzuke\\'s \"Come Hell Or Waters High\" and \"Hold On\" failed to make the UK Top 40. All tracks were featured on her 1986 album, Shrine.\\n\\nThroughout the rest of the 1980s, Lee continued to work with The Style Council on their albums The Cost of Loving (1987) and Confessions of a Pop Group (1988). She also worked with the band on their 1989 recording Modernism: A New Decade, but this album was rejected by the band\\'s label, Polydor, and did not see a release until almost ten years later, when it was included in the boxed set, The Complete Adventures of The Style Council.\\n\\nBetween 1989 and 1991, Lee teamed up with Robert Howard of The Blow Monkeys to form Slam Slam. They achieved a number of minor UK club hits including \"Move (Dance All Night)\" and \"Free Your Feelings\", the latter produced by Young Disciples. In 1993, Lee later collaborated with Gang Starr frontman Guru (rapper) née Keith Alam, on a single from his solo project Jazzmatazz called \"No Time to Play\" on which also featured Ronny Jordan. Later in the 1990s, Lee released two further solo albums; Things Will Be Sweeter (1994) and Smiles (1998).\\n\\nIn 2006, Lee had a small part as a pop star in the comedy film Rabbit Fever. In September 2007, Lee performed her hit \"See The Day\" on ITV1\\'s Loose Women show. In September 2007, she also performed at a charity event in aid of domestic violence a cause close to her heart.\\n\\nLee also played the part of Preaching Nut-Nut in a 2008 short film, The Town that Boars Me. It tells the tale of a Pig Boy created by the lonely town butcher. The Pig Boy, now banished from the town, returns at nightfall to torment the local women and satisfy his insatiable fetish for high-heeled shoes. It also starred Kelly Osbourne, Sadie Frost, Lee\\'s son Natt Weller, Zandra Rhodes and Sophie Ellis-Bextor. The film was released in London on 28 August 2008.\\n\\nOn 31 May 2009, Lee joined ex-Level 42 musicians, Mike Lindup and Phil Gould, to play a comeback gig with a collective called \\'Favoured Nations\\'. The gig took place at Ginglik, Shepherd\\'s Bush, London. On 11 October 2009, she played a gig at Dingwalls in Camden Town.\\n\\nDee played 2 concerts in 2010 - The 1st was on 30 April 2010, at Pizza on the Park, Hyde Park Corner, London and the second on 31 December at Shades of Soul, New Year\\'s Eve Extravaganza, Live Funk and Soul at The Pheasantry. This was a night featuring Dee, Louise (Funk Affair) and Nathan Watson. Billed as “A night of unforgettable Funk and Soul Classics.\"\\n\\nThe setlist was:- Things Will be Sweeter, See The Day, Walk Away From the Floor, It\\'s Gonna Be Alright, No Time To Play, Set Your Spirit Free and Come Hell or Waters High.\\n\\nJanuary 2011 - Dee is currently getting a band together and is holding auditions. No album release date is yet known. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['pop', 'soul', '80s', 'female vocalists', 'female vocalist'], similar_artists=[{'name': 'The Style Council', 'url': 'https://www.last.fm/music/The+Style+Council'}, {'name': 'Owen Paul', 'url': 'https://www.last.fm/music/Owen+Paul'}, {'name': 'Five Star', 'url': 'https://www.last.fm/music/Five+Star'}, {'name': 'Curiosity Killed the Cat', 'url': 'https://www.last.fm/music/Curiosity+Killed+the+Cat'}, {'name': 'Boy Meets Girl', 'url': 'https://www.last.fm/music/Boy+Meets+Girl'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Dee C. Lee', 'mbid': '467c79f4-2a6f-413a-abbd-79669f285284', 'url': 'https://www.last.fm/music/Dee+C.+Lee', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '26616', 'playcount': '92396'}, 'similar': {'artist': [{'name': 'The Style Council', 'url': 'https://www.last.fm/music/The+Style+Council', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Owen Paul', 'url': 'https://www.last.fm/music/Owen+Paul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Five Star', 'url': 'https://www.last.fm/music/Five+Star', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Curiosity Killed the Cat', 'url': 'https://www.last.fm/music/Curiosity+Killed+the+Cat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Boy Meets Girl', 'url': 'https://www.last.fm/music/Boy+Meets+Girl', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'soul', 'url': 'https://www.last.fm/tag/soul'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'female vocalist', 'url': 'https://www.last.fm/tag/female+vocalist'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Dee+C.+Lee/+wiki'}}, 'published': '20 Mar 2011, 17:31', 'summary': 'Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>', 'content': 'Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. Despite considerable airplay, the single failed to reach the top 40. In 1984, she then worked with The Style Council and appeared on their debut album Café Bleu (released as My Ever Changing Moods in North America). Lee can be heard on the tracks \"Headstart for Happiness,\" \"It Didn\\'t Matter,\" \"The Lodgers,\" \"Walls Come Tumbling Down,\" and \"Shout to the Top.\" Lee continued to record solo material during this time, but singles \"Yippee Yi Yay!\" and \"Don\\'t Do It Baby\" failed to chart.\\n\\nIn 1985, after the release of the second Style Council album Our Favourite Shop (which reached no.1) and a stint working with the band Animal Nightlife, Lee released another solo single; the self-penned ballad \"See the Day\". The single became a UK hit and peaked at no.2 in December 1985, selling a quarter of a million copies in the UK alone, and earning Lee a silver disc. Twenty years later, the song was covered by Girls Aloud, their version peaking at no.9 on the UK Singles Chart in December 2005.\\n\\nLee\\'s follow-up singles, a cover of Judie Tzuke\\'s \"Come Hell Or Waters High\" and \"Hold On\" failed to make the UK Top 40. All tracks were featured on her 1986 album, Shrine.\\n\\nThroughout the rest of the 1980s, Lee continued to work with The Style Council on their albums The Cost of Loving (1987) and Confessions of a Pop Group (1988). She also worked with the band on their 1989 recording Modernism: A New Decade, but this album was rejected by the band\\'s label, Polydor, and did not see a release until almost ten years later, when it was included in the boxed set, The Complete Adventures of The Style Council.\\n\\nBetween 1989 and 1991, Lee teamed up with Robert Howard of The Blow Monkeys to form Slam Slam. They achieved a number of minor UK club hits including \"Move (Dance All Night)\" and \"Free Your Feelings\", the latter produced by Young Disciples. In 1993, Lee later collaborated with Gang Starr frontman Guru (rapper) née Keith Alam, on a single from his solo project Jazzmatazz called \"No Time to Play\" on which also featured Ronny Jordan. Later in the 1990s, Lee released two further solo albums; Things Will Be Sweeter (1994) and Smiles (1998).\\n\\nIn 2006, Lee had a small part as a pop star in the comedy film Rabbit Fever. In September 2007, Lee performed her hit \"See The Day\" on ITV1\\'s Loose Women show. In September 2007, she also performed at a charity event in aid of domestic violence a cause close to her heart.\\n\\nLee also played the part of Preaching Nut-Nut in a 2008 short film, The Town that Boars Me. It tells the tale of a Pig Boy created by the lonely town butcher. The Pig Boy, now banished from the town, returns at nightfall to torment the local women and satisfy his insatiable fetish for high-heeled shoes. It also starred Kelly Osbourne, Sadie Frost, Lee\\'s son Natt Weller, Zandra Rhodes and Sophie Ellis-Bextor. The film was released in London on 28 August 2008.\\n\\nOn 31 May 2009, Lee joined ex-Level 42 musicians, Mike Lindup and Phil Gould, to play a comeback gig with a collective called \\'Favoured Nations\\'. The gig took place at Ginglik, Shepherd\\'s Bush, London. On 11 October 2009, she played a gig at Dingwalls in Camden Town.\\n\\nDee played 2 concerts in 2010 - The 1st was on 30 April 2010, at Pizza on the Park, Hyde Park Corner, London and the second on 31 December at Shades of Soul, New Year\\'s Eve Extravaganza, Live Funk and Soul at The Pheasantry. This was a night featuring Dee, Louise (Funk Affair) and Nathan Watson. Billed as “A night of unforgettable Funk and Soul Classics.\"\\n\\nThe setlist was:- Things Will be Sweeter, See The Day, Walk Away From the Floor, It\\'s Gonna Be Alright, No Time To Play, Set Your Spirit Free and Come Hell or Waters High.\\n\\nJanuary 2011 - Dee is currently getting a band together and is holding auditions. No album release date is yet known. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": {},
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "",
+      "biography_de": null,
+      "biography_en": null,
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "1961",
+      "country": "",
+      "country_code": "GB",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": "",
+      "formed_year": "1961",
+      "gender": "",
+      "genre": "",
+      "id": "147351",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rrrtyw1559640645.jpg",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": null,
+      "members": "1",
+      "mood": "",
+      "music_videos": null,
+      "musicbrainz_id": "467c79f4-2a6f-413a-abbd-79669f285284",
+      "name": "Dee C. Lee",
+      "raw_data": {},
+      "style": "",
+      "twitter": "1",
+      "website": ""
+    },
+    "theaudiodb_videos": [],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q2544883",
+        "track": "See the Day",
+        "uri": "https://www.youtube.com/watch?v=7qKSC8w4qC4"
+      }
+    ]
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='58003267', url='https://music.apple.com/gb/artist/dee-c-lee/58003267', name='Dee C. Lee', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/cc/9c/1bcc9c93-ed91-7ff5-bcea-96b73642a46d/mzi.iovrxhse.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '58003267', 'type': 'artists', 'href': '/v1/catalog/gb/artists/58003267', 'attributes': {'artwork': {'bgColor': '2b1415', 'height': 600, 'textColor1': 'eb99a7', 'textColor2': 'ee8357', 'textColor3': 'c47f8a', 'textColor4': 'c76d4a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/cc/9c/1bcc9c93-ed91-7ff5-bcea-96b73642a46d/mzi.iovrxhse.jpg/{w}x{h}ac.jpg', 'width': 600}, 'genreNames': ['Pop'], 'name': 'Dee C. Lee', 'url': 'https://music.apple.com/gb/artist/dee-c-lee/58003267'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/58003267/albums', 'data': [{'id': '274673142', 'type': 'albums', 'href': '/v1/catalog/gb/albums/274673142'}, {'id': '765679813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/765679813'}]}}})",
+    "discogs": {
+      "aliases": [
+        {
+          "id": 553746,
+          "name": "Dee Sealy",
+          "resource_url": "https://api.discogs.com/artists/553746"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 28875,
+          "name": "The Style Council",
+          "resource_url": "https://api.discogs.com/artists/28875"
+        },
+        {
+          "active": true,
+          "id": 69376,
+          "name": "Slam Slam",
+          "resource_url": "https://api.discogs.com/artists/69376"
+        },
+        {
+          "active": true,
+          "id": 148760,
+          "name": "Animal Nightlife",
+          "resource_url": "https://api.discogs.com/artists/148760"
+        },
+        {
+          "active": true,
+          "id": 1032196,
+          "name": "The Council Collective",
+          "resource_url": "https://api.discogs.com/artists/1032196"
+        },
+        {
+          "active": true,
+          "id": 6738886,
+          "name": "Weller Family",
+          "resource_url": "https://api.discogs.com/artists/6738886"
+        }
+      ],
+      "id": 25395,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wO35uqK24c-JXTHTTHiyPLaqmL7odULygVSS-f6h2r8/rs:fit/g:sm/q:90/h:600/w:506/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/wO35uqK24c-JXTHTTHiyPLaqmL7odULygVSS-f6h2r8/rs:fit/g:sm/q:90/h:600/w:506/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_0sXw8AEPRvbZdqyWfnNm4J61VtFVuku3He-lJ5c0FI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODQt/NzE2MC5qcGVn.jpeg",
+          "width": 506
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NjC8MUAm3WXAOovDkajmTcVCAh-G4n4kG7VtBkMFpYo/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NjC8MUAm3WXAOovDkajmTcVCAh-G4n4kG7VtBkMFpYo/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/GSit8Mcz7fsyM2BkWHH1U-VlokuP8lq_9rZ7d85ee9A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTE2ODg2MjMyODUt/Mzc1MS5qcGVn.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Hk_RIBdcdLxaPvK_ow7Uws45-2FCECKaK8H1kaXicXg/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hk_RIBdcdLxaPvK_ow7Uws45-2FCECKaK8H1kaXicXg/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XwrB7zJejcPprOk6twFOl6-CpQS4fYQHbshwh7mZYSg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzODQ4ODc0NTgt/NDM1NC5qcGVn.jpeg",
+          "width": 411
+        },
+        {
+          "height": 393,
+          "resource_url": "https://i.discogs.com/CjCQtM_k5k_FIjIT60IGUtVT0E8zh3AcRBXnR2672ng/rs:fit/g:sm/q:90/h:393/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CjCQtM_k5k_FIjIT60IGUtVT0E8zh3AcRBXnR2672ng/rs:fit/g:sm/q:90/h:393/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rJ2ghiK6J8qWvcKO0Ca4SVLfIZDv7ObLDvUhjKqw22Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMDQ4OTkwODgu/anBlZw.jpeg",
+          "width": 564
+        },
+        {
+          "height": 583,
+          "resource_url": "https://i.discogs.com/AxxqGpiE7WyBoz1ToLPpeu5UU3jG169gkR_VAIkh-_0/rs:fit/g:sm/q:90/h:583/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AxxqGpiE7WyBoz1ToLPpeu5UU3jG169gkR_VAIkh-_0/rs:fit/g:sm/q:90/h:583/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/h3Y77xIAWT1_Dchx0CeT0gmv8hbCpUKOtM4RiDzpMw8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzk1/LTEzMjg2MzM1NzIu/anBlZw.jpeg",
+          "width": 594
+        }
+      ],
+      "name": "Dee C. Lee",
+      "namevariations": [
+        "D C Lee",
+        "D. C. Lee",
+        "D.C. Lee",
+        "D.C.Lee",
+        "DC Lee",
+        "Dee",
+        "Dee C Lee",
+        "Dee C.Lee",
+        "Dee-C-Lee",
+        "Dee. C. Lee",
+        "Dee. C. Lee.",
+        "Dee.C. Lee",
+        "Dee.C.Lee",
+        "Dee.Cee.Lee",
+        "Lee"
+      ],
+      "profile": "Born 6 June 1961 in Balham, South London, England, UK.\r\nBritish soul, R&B and pop singer. Early in her career, she was a backing singer for [a=Wham!], and then became a member of [a=The Style Council], as well as also performing as a solo artist.\r\nLee was married to her fellow Style Council member, band founder [a=Paul Weller] from 1987 until their divorce in 1998. They have two children, daughter [a=Leah Weller], and son Nathaniel ([a10310152]).",
+      "realname": "Diane Catherine Sealy",
+      "releases_url": "https://api.discogs.com/artists/25395/releases",
+      "resource_url": "https://api.discogs.com/artists/25395",
+      "uri": "https://www.discogs.com/artist/25395-Dee-C-Lee",
+      "urls": [
+        "http://www.deeclee.com/",
+        "http://www.myspace.com/dianesealey",
+        "https://www.facebook.com/deecleeofficial/",
+        "https://www.facebook.com/deec.lee.50",
+        "https://en.wikipedia.org/wiki/Dee_C._Lee"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Dee C. Lee', url='https://www.last.fm/music/Dee+C.+Lee', mbid='467c79f4-2a6f-413a-abbd-79669f285284', listeners=26616, playcount=92396, bio_summary='Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>', bio_content='Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. Despite considerable airplay, the single failed to reach the top 40. In 1984, she then worked with The Style Council and appeared on their debut album Café Bleu (released as My Ever Changing Moods in North America). Lee can be heard on the tracks \"Headstart for Happiness,\" \"It Didn\\'t Matter,\" \"The Lodgers,\" \"Walls Come Tumbling Down,\" and \"Shout to the Top.\" Lee continued to record solo material during this time, but singles \"Yippee Yi Yay!\" and \"Don\\'t Do It Baby\" failed to chart.\\n\\nIn 1985, after the release of the second Style Council album Our Favourite Shop (which reached no.1) and a stint working with the band Animal Nightlife, Lee released another solo single; the self-penned ballad \"See the Day\". The single became a UK hit and peaked at no.2 in December 1985, selling a quarter of a million copies in the UK alone, and earning Lee a silver disc. Twenty years later, the song was covered by Girls Aloud, their version peaking at no.9 on the UK Singles Chart in December 2005.\\n\\nLee\\'s follow-up singles, a cover of Judie Tzuke\\'s \"Come Hell Or Waters High\" and \"Hold On\" failed to make the UK Top 40. All tracks were featured on her 1986 album, Shrine.\\n\\nThroughout the rest of the 1980s, Lee continued to work with The Style Council on their albums The Cost of Loving (1987) and Confessions of a Pop Group (1988). She also worked with the band on their 1989 recording Modernism: A New Decade, but this album was rejected by the band\\'s label, Polydor, and did not see a release until almost ten years later, when it was included in the boxed set, The Complete Adventures of The Style Council.\\n\\nBetween 1989 and 1991, Lee teamed up with Robert Howard of The Blow Monkeys to form Slam Slam. They achieved a number of minor UK club hits including \"Move (Dance All Night)\" and \"Free Your Feelings\", the latter produced by Young Disciples. In 1993, Lee later collaborated with Gang Starr frontman Guru (rapper) née Keith Alam, on a single from his solo project Jazzmatazz called \"No Time to Play\" on which also featured Ronny Jordan. Later in the 1990s, Lee released two further solo albums; Things Will Be Sweeter (1994) and Smiles (1998).\\n\\nIn 2006, Lee had a small part as a pop star in the comedy film Rabbit Fever. In September 2007, Lee performed her hit \"See The Day\" on ITV1\\'s Loose Women show. In September 2007, she also performed at a charity event in aid of domestic violence a cause close to her heart.\\n\\nLee also played the part of Preaching Nut-Nut in a 2008 short film, The Town that Boars Me. It tells the tale of a Pig Boy created by the lonely town butcher. The Pig Boy, now banished from the town, returns at nightfall to torment the local women and satisfy his insatiable fetish for high-heeled shoes. It also starred Kelly Osbourne, Sadie Frost, Lee\\'s son Natt Weller, Zandra Rhodes and Sophie Ellis-Bextor. The film was released in London on 28 August 2008.\\n\\nOn 31 May 2009, Lee joined ex-Level 42 musicians, Mike Lindup and Phil Gould, to play a comeback gig with a collective called \\'Favoured Nations\\'. The gig took place at Ginglik, Shepherd\\'s Bush, London. On 11 October 2009, she played a gig at Dingwalls in Camden Town.\\n\\nDee played 2 concerts in 2010 - The 1st was on 30 April 2010, at Pizza on the Park, Hyde Park Corner, London and the second on 31 December at Shades of Soul, New Year\\'s Eve Extravaganza, Live Funk and Soul at The Pheasantry. This was a night featuring Dee, Louise (Funk Affair) and Nathan Watson. Billed as “A night of unforgettable Funk and Soul Classics.\"\\n\\nThe setlist was:- Things Will be Sweeter, See The Day, Walk Away From the Floor, It\\'s Gonna Be Alright, No Time To Play, Set Your Spirit Free and Come Hell or Waters High.\\n\\nJanuary 2011 - Dee is currently getting a band together and is holding auditions. No album release date is yet known. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['pop', 'soul', '80s', 'female vocalists', 'female vocalist'], similar_artists=[{'name': 'The Style Council', 'url': 'https://www.last.fm/music/The+Style+Council'}, {'name': 'Owen Paul', 'url': 'https://www.last.fm/music/Owen+Paul'}, {'name': 'Five Star', 'url': 'https://www.last.fm/music/Five+Star'}, {'name': 'Curiosity Killed the Cat', 'url': 'https://www.last.fm/music/Curiosity+Killed+the+Cat'}, {'name': 'Boy Meets Girl', 'url': 'https://www.last.fm/music/Boy+Meets+Girl'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Dee C. Lee', 'mbid': '467c79f4-2a6f-413a-abbd-79669f285284', 'url': 'https://www.last.fm/music/Dee+C.+Lee', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '26616', 'playcount': '92396'}, 'similar': {'artist': [{'name': 'The Style Council', 'url': 'https://www.last.fm/music/The+Style+Council', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Owen Paul', 'url': 'https://www.last.fm/music/Owen+Paul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Five Star', 'url': 'https://www.last.fm/music/Five+Star', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Curiosity Killed the Cat', 'url': 'https://www.last.fm/music/Curiosity+Killed+the+Cat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Boy Meets Girl', 'url': 'https://www.last.fm/music/Boy+Meets+Girl', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'soul', 'url': 'https://www.last.fm/tag/soul'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'female vocalist', 'url': 'https://www.last.fm/tag/female+vocalist'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Dee+C.+Lee/+wiki'}}, 'published': '20 Mar 2011, 17:31', 'summary': 'Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>', 'content': 'Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller\\'s band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\\n\\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. Despite considerable airplay, the single failed to reach the top 40. In 1984, she then worked with The Style Council and appeared on their debut album Café Bleu (released as My Ever Changing Moods in North America). Lee can be heard on the tracks \"Headstart for Happiness,\" \"It Didn\\'t Matter,\" \"The Lodgers,\" \"Walls Come Tumbling Down,\" and \"Shout to the Top.\" Lee continued to record solo material during this time, but singles \"Yippee Yi Yay!\" and \"Don\\'t Do It Baby\" failed to chart.\\n\\nIn 1985, after the release of the second Style Council album Our Favourite Shop (which reached no.1) and a stint working with the band Animal Nightlife, Lee released another solo single; the self-penned ballad \"See the Day\". The single became a UK hit and peaked at no.2 in December 1985, selling a quarter of a million copies in the UK alone, and earning Lee a silver disc. Twenty years later, the song was covered by Girls Aloud, their version peaking at no.9 on the UK Singles Chart in December 2005.\\n\\nLee\\'s follow-up singles, a cover of Judie Tzuke\\'s \"Come Hell Or Waters High\" and \"Hold On\" failed to make the UK Top 40. All tracks were featured on her 1986 album, Shrine.\\n\\nThroughout the rest of the 1980s, Lee continued to work with The Style Council on their albums The Cost of Loving (1987) and Confessions of a Pop Group (1988). She also worked with the band on their 1989 recording Modernism: A New Decade, but this album was rejected by the band\\'s label, Polydor, and did not see a release until almost ten years later, when it was included in the boxed set, The Complete Adventures of The Style Council.\\n\\nBetween 1989 and 1991, Lee teamed up with Robert Howard of The Blow Monkeys to form Slam Slam. They achieved a number of minor UK club hits including \"Move (Dance All Night)\" and \"Free Your Feelings\", the latter produced by Young Disciples. In 1993, Lee later collaborated with Gang Starr frontman Guru (rapper) née Keith Alam, on a single from his solo project Jazzmatazz called \"No Time to Play\" on which also featured Ronny Jordan. Later in the 1990s, Lee released two further solo albums; Things Will Be Sweeter (1994) and Smiles (1998).\\n\\nIn 2006, Lee had a small part as a pop star in the comedy film Rabbit Fever. In September 2007, Lee performed her hit \"See The Day\" on ITV1\\'s Loose Women show. In September 2007, she also performed at a charity event in aid of domestic violence a cause close to her heart.\\n\\nLee also played the part of Preaching Nut-Nut in a 2008 short film, The Town that Boars Me. It tells the tale of a Pig Boy created by the lonely town butcher. The Pig Boy, now banished from the town, returns at nightfall to torment the local women and satisfy his insatiable fetish for high-heeled shoes. It also starred Kelly Osbourne, Sadie Frost, Lee\\'s son Natt Weller, Zandra Rhodes and Sophie Ellis-Bextor. The film was released in London on 28 August 2008.\\n\\nOn 31 May 2009, Lee joined ex-Level 42 musicians, Mike Lindup and Phil Gould, to play a comeback gig with a collective called \\'Favoured Nations\\'. The gig took place at Ginglik, Shepherd\\'s Bush, London. On 11 October 2009, she played a gig at Dingwalls in Camden Town.\\n\\nDee played 2 concerts in 2010 - The 1st was on 30 April 2010, at Pizza on the Park, Hyde Park Corner, London and the second on 31 December at Shades of Soul, New Year\\'s Eve Extravaganza, Live Funk and Soul at The Pheasantry. This was a night featuring Dee, Louise (Funk Affair) and Nathan Watson. Billed as “A night of unforgettable Funk and Soul Classics.\"\\n\\nThe setlist was:- Things Will be Sweeter, See The Day, Walk Away From the Floor, It\\'s Gonna Be Alright, No Time To Play, Set Your Spirit Free and Come Hell or Waters High.\\n\\nJanuary 2011 - Dee is currently getting a band together and is holding auditions. No album release date is yet known. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": {},
@@ -135,147 +410,8 @@
       "website": ""
     }
   },
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/cc/9c/1bcc9c93-ed91-7ff5-bcea-96b73642a46d/mzi.iovrxhse.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Pop"
-      ],
-      "id": "58003267",
-      "name": "Dee C. Lee",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/dee-c-lee/58003267"
-    },
-    "discogs": {
-      "cover_image": "",
-      "id": "25395",
-      "images": [],
-      "members": [],
-      "name": "Dee C. Lee",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "25395",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/25395"
-      },
-      "resource_url": "https://api.discogs.com/artists/25395",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/25395",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller's band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\n\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. Despite considerable airplay, the single failed to reach the top 40. In 1984, she then worked with The Style Council and appeared on their debut album Café Bleu (released as My Ever Changing Moods in North America). Lee can be heard on the tracks \"Headstart for Happiness,\" \"It Didn't Matter,\" \"The Lodgers,\" \"Walls Come Tumbling Down,\" and \"Shout to the Top.\" Lee continued to record solo material during this time, but singles \"Yippee Yi Yay!\" and \"Don't Do It Baby\" failed to chart.\n\nIn 1985, after the release of the second Style Council album Our Favourite Shop (which reached no.1) and a stint working with the band Animal Nightlife, Lee released another solo single; the self-penned ballad \"See the Day\". The single became a UK hit and peaked at no.2 in December 1985, selling a quarter of a million copies in the UK alone, and earning Lee a silver disc. Twenty years later, the song was covered by Girls Aloud, their version peaking at no.9 on the UK Singles Chart in December 2005.\n\nLee's follow-up singles, a cover of Judie Tzuke's \"Come Hell Or Waters High\" and \"Hold On\" failed to make the UK Top 40. All tracks were featured on her 1986 album, Shrine.\n\nThroughout the rest of the 1980s, Lee continued to work with The Style Council on their albums The Cost of Loving (1987) and Confessions of a Pop Group (1988). She also worked with the band on their 1989 recording Modernism: A New Decade, but this album was rejected by the band's label, Polydor, and did not see a release until almost ten years later, when it was included in the boxed set, The Complete Adventures of The Style Council.\n\nBetween 1989 and 1991, Lee teamed up with Robert Howard of The Blow Monkeys to form Slam Slam. They achieved a number of minor UK club hits including \"Move (Dance All Night)\" and \"Free Your Feelings\", the latter produced by Young Disciples. In 1993, Lee later collaborated with Gang Starr frontman Guru (rapper) née Keith Alam, on a single from his solo project Jazzmatazz called \"No Time to Play\" on which also featured Ronny Jordan. Later in the 1990s, Lee released two further solo albums; Things Will Be Sweeter (1994) and Smiles (1998).\n\nIn 2006, Lee had a small part as a pop star in the comedy film Rabbit Fever. In September 2007, Lee performed her hit \"See The Day\" on ITV1's Loose Women show. In September 2007, she also performed at a charity event in aid of domestic violence a cause close to her heart.\n\nLee also played the part of Preaching Nut-Nut in a 2008 short film, The Town that Boars Me. It tells the tale of a Pig Boy created by the lonely town butcher. The Pig Boy, now banished from the town, returns at nightfall to torment the local women and satisfy his insatiable fetish for high-heeled shoes. It also starred Kelly Osbourne, Sadie Frost, Lee's son Natt Weller, Zandra Rhodes and Sophie Ellis-Bextor. The film was released in London on 28 August 2008.\n\nOn 31 May 2009, Lee joined ex-Level 42 musicians, Mike Lindup and Phil Gould, to play a comeback gig with a collective called 'Favoured Nations'. The gig took place at Ginglik, Shepherd's Bush, London. On 11 October 2009, she played a gig at Dingwalls in Camden Town.\n\nDee played 2 concerts in 2010 - The 1st was on 30 April 2010, at Pizza on the Park, Hyde Park Corner, London and the second on 31 December at Shades of Soul, New Year's Eve Extravaganza, Live Funk and Soul at The Pheasantry. This was a night featuring Dee, Louise (Funk Affair) and Nathan Watson. Billed as “A night of unforgettable Funk and Soul Classics.\"\n\nThe setlist was:- Things Will be Sweeter, See The Day, Walk Away From the Floor, It's Gonna Be Alright, No Time To Play, Set Your Spirit Free and Come Hell or Waters High.\n\nJanuary 2011 - Dee is currently getting a band together and is holding auditions. No album release date is yet known. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Lee was a backing vocalist for the pop group Wham! in the early 1980s, but she left the group to work as a solo artist and also to join Paul Weller's band, The Style Council. She was later married to Weller for 10 years (but now divorced), they have two children, Leah and Natt, who is also a working musician and appeared on stage with his father at Hammersmith Apollo aged 12.\n\nFollowing her departure from Wham!, Lee released her first solo single, \"Selina Wow Wow\", in 1983. <a href=\"https://www.last.fm/music/Dee+C.+Lee\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 26616,
-      "mbid": "467c79f4-2a6f-413a-abbd-79669f285284",
-      "name": "Dee C. Lee",
-      "playcount": 92396,
-      "similar_artists": [
-        {
-          "name": "The Style Council",
-          "url": "https://www.last.fm/music/The+Style+Council"
-        },
-        {
-          "name": "Owen Paul",
-          "url": "https://www.last.fm/music/Owen+Paul"
-        },
-        {
-          "name": "Five Star",
-          "url": "https://www.last.fm/music/Five+Star"
-        },
-        {
-          "name": "Curiosity Killed the Cat",
-          "url": "https://www.last.fm/music/Curiosity+Killed+the+Cat"
-        },
-        {
-          "name": "Boy Meets Girl",
-          "url": "https://www.last.fm/music/Boy+Meets+Girl"
-        }
-      ],
-      "tags": [
-        "pop",
-        "soul",
-        "80s",
-        "female vocalists",
-        "female vocalist"
-      ],
-      "url": "https://www.last.fm/music/Dee+C.+Lee"
-    },
-    "spotify": {},
-    "theaudiodb": {
-      "albums": null,
-      "alternate_names": "",
-      "biography_de": null,
-      "biography_en": null,
-      "biography_es": null,
-      "biography_fr": null,
-      "biography_it": null,
-      "biography_jp": null,
-      "biography_nl": null,
-      "biography_pt": null,
-      "biography_ru": null,
-      "biography_se": null,
-      "born_year": "1961",
-      "country": "",
-      "country_code": "GB",
-      "died_year": null,
-      "disbanded": false,
-      "facebook": "",
-      "formed_year": "1961",
-      "gender": "",
-      "genre": "",
-      "id": "147351",
-      "images": [
-        {
-          "height": 1000,
-          "resource_url": null,
-          "type": "artist",
-          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rrrtyw1559640645.jpg",
-          "width": 1000
-        }
-      ],
-      "last_fm_chart": null,
-      "members": "1",
-      "mood": "",
-      "music_videos": null,
-      "musicbrainz_id": "467c79f4-2a6f-413a-abbd-79669f285284",
-      "name": "Dee C. Lee",
-      "raw_data": {},
-      "style": "",
-      "twitter": "1",
-      "website": ""
-    }
-  },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2026-03-20T12:18:06.081741",
+  "updated_at": "2026-10-30T18:38:36.421906",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Dee_C._Lee"
 }

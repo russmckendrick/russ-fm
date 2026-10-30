@@ -111,22 +111,82 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1317475786', url='https://music.apple.com/gb/artist/magenta/1317475786', name='Magenta', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/98/32/91/98329168-062a-4a58-b78b-3e40176fa8be/ami-identity-74b07a3277d3c7127beadb401c9184e0-2025-01-15T11-36-27.995Z_cropped.png/2000x2000bb.jpg', genres=['Dance'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1317475786', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1317475786', 'attributes': {'name': 'Magenta', 'genreNames': ['Dance'], 'artwork': {'width': 1484, 'height': 1484, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/98/32/91/98329168-062a-4a58-b78b-3e40176fa8be/ami-identity-74b07a3277d3c7127beadb401c9184e0-2025-01-15T11-36-27.995Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0d0d0d', 'textColor1': 'fcf6e8', 'textColor2': 'f9d8b0', 'textColor3': 'ccc7bc', 'textColor4': 'c9af8f'}, 'url': 'https://music.apple.com/gb/artist/magenta/1317475786'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1317475786/albums', 'next': '/v1/catalog/gb/artists/1317475786/albums?offset=25', 'data': [{'id': '1743929328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1743929328'}, {'id': '1714991349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1714991349'}, {'id': '1804269423', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1804269423'}, {'id': '1475308779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1475308779'}, {'id': '1543926976', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543926976'}, {'id': '1690026724', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1690026724'}, {'id': '1675473224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675473224'}, {'id': '1540088657', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540088657'}, {'id': '1442631629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442631629'}, {'id': '1726610828', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726610828'}, {'id': '1659625327', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1659625327'}, {'id': '1715899503', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1715899503'}, {'id': '1716044604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1716044604'}, {'id': '1455161112', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1455161112'}, {'id': '1613978705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613978705'}, {'id': '1508417244', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1508417244'}, {'id': '1630407137', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1630407137'}, {'id': '1666594835', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666594835'}, {'id': '1590872473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1590872473'}, {'id': '1575899007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575899007'}, {'id': '1819937922', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819937922'}, {'id': '1446935723', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1446935723'}, {'id': '1683153064', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1683153064'}, {'id': '1739768381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739768381'}, {'id': '1754925790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1754925790'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1120292",
-      "images": [],
-      "members": [],
-      "name": "Magenta",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1120292",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1120292"
-      },
+      "data_quality": "Needs Vote",
+      "id": 1120292,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/yxYNCSkFxfCU6b1vCQxDokQZ1dorMHmJ0K99ccxApsQ/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/yxYNCSkFxfCU6b1vCQxDokQZ1dorMHmJ0K99ccxApsQ/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/C3KXf6FQPSIMxFcMDOVfbHdU9FFzJ-26pDqEjvDoIgs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 169,
+          "resource_url": "https://i.discogs.com/Nl3NGz2MC6alsF1-lUwS7N-9FIaxVwJF0dkJfIOxIvc/rs:fit/g:sm/q:90/h:169/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nl3NGz2MC6alsF1-lUwS7N-9FIaxVwJF0dkJfIOxIvc/rs:fit/g:sm/q:90/h:169/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "uri150": "https://i.discogs.com/oXuk-bxWYwmkEC0f25Tpznc3lkLOKUaClcX-0caA-2Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "width": 300
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/3XRbBRRn5MmUVSgKEwSiEQm5Pyfq08lcL4S2vpNyxQ8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3XRbBRRn5MmUVSgKEwSiEQm5Pyfq08lcL4S2vpNyxQ8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/JMHpFuidTLGwFyuphfUhc5BuryiHmDzSF-OEecnW-5Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 604388,
+          "name": "Rob Reed",
+          "resource_url": "https://api.discogs.com/artists/604388"
+        },
+        {
+          "active": false,
+          "id": 756480,
+          "name": "Colin Edwards",
+          "resource_url": "https://api.discogs.com/artists/756480"
+        },
+        {
+          "active": true,
+          "id": 1120291,
+          "name": "Chris Fry (2)",
+          "resource_url": "https://api.discogs.com/artists/1120291"
+        },
+        {
+          "active": true,
+          "id": 1120293,
+          "name": "Christina Booth",
+          "resource_url": "https://api.discogs.com/artists/1120293"
+        },
+        {
+          "active": true,
+          "id": 3190400,
+          "name": "Dan Nelson (3)",
+          "resource_url": "https://api.discogs.com/artists/3190400"
+        }
+      ],
+      "name": "Magenta (10)",
+      "namevariations": [
+        "Magenta & Friends"
+      ],
+      "profile": "Welsh progressive rock/symphonic rock group.",
+      "releases_url": "https://api.discogs.com/artists/1120292/releases",
       "resource_url": "https://api.discogs.com/artists/1120292",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1120292",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1120292-Magenta-10",
+      "urls": [
+        "https://www.AllMusic.com/artist/magenta-mn0000812401",
+        "https://books.discogs.com/credit/808502-magenta",
+        "http://www.ProgArchives.com/artist.asp?id=450",
+        "https://en.wikipedia.org/wiki/Magenta_(Welsh_band)",
+        "https://magenta.bandcamp.com/music",
+        "https://www.facebook.com/profile.php?id=100063764792161"
+      ]
     },
     "identity": {
       "musicbrainz_id": "ebcde1c3-2e18-42a8-ab9b-3f5f20c935f8",
@@ -186,27 +246,88 @@
       "twitter": "1",
       "website": "www.magenta-web.co.uk/index2.html"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1317475786', url='https://music.apple.com/gb/artist/magenta/1317475786', name='Magenta', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/98/32/91/98329168-062a-4a58-b78b-3e40176fa8be/ami-identity-74b07a3277d3c7127beadb401c9184e0-2025-01-15T11-36-27.995Z_cropped.png/2000x2000bb.jpg', genres=['Dance'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1317475786', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1317475786', 'attributes': {'name': 'Magenta', 'genreNames': ['Dance'], 'artwork': {'width': 1484, 'height': 1484, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/98/32/91/98329168-062a-4a58-b78b-3e40176fa8be/ami-identity-74b07a3277d3c7127beadb401c9184e0-2025-01-15T11-36-27.995Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0d0d0d', 'textColor1': 'fcf6e8', 'textColor2': 'f9d8b0', 'textColor3': 'ccc7bc', 'textColor4': 'c9af8f'}, 'url': 'https://music.apple.com/gb/artist/magenta/1317475786'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1317475786/albums', 'next': '/v1/catalog/gb/artists/1317475786/albums?offset=25', 'data': [{'id': '1743929328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1743929328'}, {'id': '1714991349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1714991349'}, {'id': '1804269423', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1804269423'}, {'id': '1475308779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1475308779'}, {'id': '1543926976', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543926976'}, {'id': '1690026724', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1690026724'}, {'id': '1675473224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675473224'}, {'id': '1540088657', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540088657'}, {'id': '1442631629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442631629'}, {'id': '1726610828', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726610828'}, {'id': '1659625327', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1659625327'}, {'id': '1715899503', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1715899503'}, {'id': '1716044604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1716044604'}, {'id': '1455161112', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1455161112'}, {'id': '1613978705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613978705'}, {'id': '1508417244', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1508417244'}, {'id': '1630407137', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1630407137'}, {'id': '1666594835', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666594835'}, {'id': '1590872473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1590872473'}, {'id': '1575899007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575899007'}, {'id': '1819937922', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819937922'}, {'id': '1446935723', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1446935723'}, {'id': '1683153064', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1683153064'}, {'id': '1739768381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739768381'}, {'id': '1754925790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1754925790'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1120292",
-      "images": [],
-      "members": [],
-      "name": "Magenta",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1120292",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1120292"
-      },
+      "data_quality": "Needs Vote",
+      "id": 1120292,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/yxYNCSkFxfCU6b1vCQxDokQZ1dorMHmJ0K99ccxApsQ/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/yxYNCSkFxfCU6b1vCQxDokQZ1dorMHmJ0K99ccxApsQ/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/C3KXf6FQPSIMxFcMDOVfbHdU9FFzJ-26pDqEjvDoIgs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM4/MS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 169,
+          "resource_url": "https://i.discogs.com/Nl3NGz2MC6alsF1-lUwS7N-9FIaxVwJF0dkJfIOxIvc/rs:fit/g:sm/q:90/h:169/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nl3NGz2MC6alsF1-lUwS7N-9FIaxVwJF0dkJfIOxIvc/rs:fit/g:sm/q:90/h:169/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "uri150": "https://i.discogs.com/oXuk-bxWYwmkEC0f25Tpznc3lkLOKUaClcX-0caA-2Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MTkx/Mi5naWY.jpeg",
+          "width": 300
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/3XRbBRRn5MmUVSgKEwSiEQm5Pyfq08lcL4S2vpNyxQ8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3XRbBRRn5MmUVSgKEwSiEQm5Pyfq08lcL4S2vpNyxQ8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/JMHpFuidTLGwFyuphfUhc5BuryiHmDzSF-OEecnW-5Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjAy/OTItMTIxMDI4MjM5/MS5qcGVn.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 604388,
+          "name": "Rob Reed",
+          "resource_url": "https://api.discogs.com/artists/604388"
+        },
+        {
+          "active": false,
+          "id": 756480,
+          "name": "Colin Edwards",
+          "resource_url": "https://api.discogs.com/artists/756480"
+        },
+        {
+          "active": true,
+          "id": 1120291,
+          "name": "Chris Fry (2)",
+          "resource_url": "https://api.discogs.com/artists/1120291"
+        },
+        {
+          "active": true,
+          "id": 1120293,
+          "name": "Christina Booth",
+          "resource_url": "https://api.discogs.com/artists/1120293"
+        },
+        {
+          "active": true,
+          "id": 3190400,
+          "name": "Dan Nelson (3)",
+          "resource_url": "https://api.discogs.com/artists/3190400"
+        }
+      ],
+      "name": "Magenta (10)",
+      "namevariations": [
+        "Magenta & Friends"
+      ],
+      "profile": "Welsh progressive rock/symphonic rock group.",
+      "releases_url": "https://api.discogs.com/artists/1120292/releases",
       "resource_url": "https://api.discogs.com/artists/1120292",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1120292",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1120292-Magenta-10",
+      "urls": [
+        "https://www.AllMusic.com/artist/magenta-mn0000812401",
+        "https://books.discogs.com/credit/808502-magenta",
+        "http://www.ProgArchives.com/artist.asp?id=450",
+        "https://en.wikipedia.org/wiki/Magenta_(Welsh_band)",
+        "https://magenta.bandcamp.com/music",
+        "https://www.facebook.com/profile.php?id=100063764792161"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Magenta', url='https://www.last.fm/music/Magenta', mbid='ebcde1c3-2e18-42a8-ab9b-3f5f20c935f8', listeners=58205, playcount=697279, bio_summary='There are at least seven artists which have used this name\\n1. progressive rock band from Wales\\n2. rock group from Norway\\n3. 70s folk rock band from England\\n4. musical group from Greece\\n5. synthpop group from Spain\\n6. rock group from Belgium\\n7. Drum N Bass producer from Czech Republic\\n\\nMagenta (1): Cyan was formed in 1984 while Reed was still at school, although the band broke up after only a few gigs and one demo tape release. Reed takes his influences from bands like Genesis, Mike Oldfield, Yes, Eurythmics, and Björk. <a href=\"https://www.last.fm/music/Magenta\">Read more on Last.fm</a>', bio_content='There are at least seven artists which have used this name\\n1. progressive rock band from Wales\\n2. rock group from Norway\\n3. 70s folk rock band from England\\n4. musical group from Greece\\n5. synthpop group from Spain\\n6. rock group from Belgium\\n7. Drum N Bass producer from Czech Republic\\n\\nMagenta (1): Cyan was formed in 1984 while Reed was still at school, although the band broke up after only a few gigs and one demo tape release. Reed takes his influences from bands like Genesis, Mike Oldfield, Yes, Eurythmics, and Björk. Though heavily influenced by progressive rock, Reed is a professional songwriter and has done many other projects for both film and television\\n\\nThe most successful of these projects was called Trippa. Described as \"a contemporary Eurythmics for the new millennium\" mixing their own brand of edgy industrial pop with soaring orchestral arrangements. The band featured Christina Booth on vocals and Rob Reed on guitars and keyboards, joined by Rhiannon Stundon (backing vocals) and Ryan Aston (drums). The band released the Trippa EP in 1999, and were voted ‘Record of the Week’ on Virgin Radio, appearing on British television a number of times. It was during this time that Reed asked Christina to be lead vocalist for a progressive rock project he had in mind, and the initial ideas for Magenta were born. \\nMagenta was originally a studio project, with Rob playing most of the instruments. However, once their debut Revolutions was released  in 1999 there was a demand for live shows. Rob recruited (along with Christina) Chris Fry and Martin Rosser on guitar, Matthew Cohen on bass and Allan Mason-Jones on drums. Recently, Matt left the band and was replaced by Chris\\' younger brother Dan. The band released their third album Home in 2006 together with New York Suite. In 2008 the much darker album Metamorphosis saw the light of day. Their latest release to date with new songs Chameleon appeared in 2011.\\n\\nMagenta (2): Magenta was formed by Anders Odden during the summer of 1995. Vilde Lockert joined him on vocals that autumn. They released their first EP simply named Magenta in 1997. The song Secret Sky went into the charts in Norway and established their career. Anders Odden was already a well-known name to most of the music-oriented people. He’s been members of bands like Apoptygma Berzerk, Cadaver as well as recording for Satyricon, and being liveguitarist for Celtic Frost. The album Periode was released in March 1998, and Magenta went on tour in Norway and Germany. Magenta signed a new record-deal in April 2001 with the German indielabel Re:pop Music. The summer of 2001 saw the recording of the album Little Girl Lost, when they joined forces with producer, Vegard Ibo Blomberg The album was released in Germany the 24th of June 2002, and was very well received in the German alternative press. It reached number 4 in both the German Alternative Charts during the fall of 2002. Magenta made a video for All Over featuring Mortiis, but were quite stunned to find out that Coca-Cola company wanted this song for their worldwide release of Sprite Zero. The best chart position so far has been reached when Magenta CD single All Over climbed to number 2 in the official charts in Greece on the 8.7.2002 when this campaign went into a frenzy there.\\n\\nMagenta played a lot of gigs in 2002/2003 and the took some time off after the Arvika Festival in Sweden in 2003. Anders re-joined Apoptygma Berzerk on the recording of their new album \"You And Me Against The World\" in 2004/2005. In 2006 Magenta was reinforced with guitar manic Daniel Hill. This was very inspiring for the band and led to one of the most creative period in the bands history. Magenta released a track together with Apoptygma Berzerk called Friendly Fire in the beginning of 2006, and this kicked Magenta into a serious writing process for the new album. The first new song of the new direction is Darkest Dream. Magenta was also enforced with Jonas Groth who contributed to the production of the rest of the new album. Art And Accidents was release in November 2008 digitally and then officially on February 9, 2009.\\n\\nA new album is recorded and will be released in February 09 featuring new band member Daniel Hill (Guitar, Bass, Vocals) and guest appearances from several known Norwegian musicians including members of Apoptygma Berzerk, Gluecifer and Gothminister.\\n\\nMagenta (3): A folk band from UK which released at least the album Canterbury Moon in 1978.\\n\\nMagenta (4): An ethnic/entechna music project from Greece, with songs written by Michalis Nikoloudis (music) and Michalis Koumbios (lyrics) sung by Anastasia Moutsatsou. They have released one CD.\\n\\nMagenta (5): A synthpop band from Spain. They released a LP titled \"La Reina del Salón\" in 1985.\\n\\nMagenta (6): little is known about this band from Belgium <a href=\"https://www.last.fm/music/Magenta\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'female vocalists', 'symphonic prog', 'Gothic Rock', 'neo-progressive rock'], similar_artists=[{'name': 'Pendragon', 'url': 'https://www.last.fm/music/Pendragon'}, {'name': 'Glass Hammer', 'url': 'https://www.last.fm/music/Glass+Hammer'}, {'name': 'It Bites', 'url': 'https://www.last.fm/music/It+Bites'}, {'name': 'IQ', 'url': 'https://www.last.fm/music/IQ'}, {'name': 'Big Big Train', 'url': 'https://www.last.fm/music/Big+Big+Train'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Magenta', 'mbid': 'ebcde1c3-2e18-42a8-ab9b-3f5f20c935f8', 'url': 'https://www.last.fm/music/Magenta', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '58205', 'playcount': '697279'}, 'similar': {'artist': [{'name': 'Pendragon', 'url': 'https://www.last.fm/music/Pendragon', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Glass Hammer', 'url': 'https://www.last.fm/music/Glass+Hammer', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'It Bites', 'url': 'https://www.last.fm/music/It+Bites', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'IQ', 'url': 'https://www.last.fm/music/IQ', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Big Big Train', 'url': 'https://www.last.fm/music/Big+Big+Train', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'symphonic prog', 'url': 'https://www.last.fm/tag/symphonic+prog'}, {'name': 'Gothic Rock', 'url': 'https://www.last.fm/tag/Gothic+Rock'}, {'name': 'neo-progressive rock', 'url': 'https://www.last.fm/tag/neo-progressive+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Magenta/+wiki'}}, 'published': '25 Jun 2006, 23:35', 'summary': 'There are at least seven artists which have used this name\\n1. progressive rock band from Wales\\n2. rock group from Norway\\n3. 70s folk rock band from England\\n4. musical group from Greece\\n5. synthpop group from Spain\\n6. rock group from Belgium\\n7. Drum N Bass producer from Czech Republic\\n\\nMagenta (1): Cyan was formed in 1984 while Reed was still at school, although the band broke up after only a few gigs and one demo tape release. Reed takes his influences from bands like Genesis, Mike Oldfield, Yes, Eurythmics, and Björk. <a href=\"https://www.last.fm/music/Magenta\">Read more on Last.fm</a>', 'content': 'There are at least seven artists which have used this name\\n1. progressive rock band from Wales\\n2. rock group from Norway\\n3. 70s folk rock band from England\\n4. musical group from Greece\\n5. synthpop group from Spain\\n6. rock group from Belgium\\n7. Drum N Bass producer from Czech Republic\\n\\nMagenta (1): Cyan was formed in 1984 while Reed was still at school, although the band broke up after only a few gigs and one demo tape release. Reed takes his influences from bands like Genesis, Mike Oldfield, Yes, Eurythmics, and Björk. Though heavily influenced by progressive rock, Reed is a professional songwriter and has done many other projects for both film and television\\n\\nThe most successful of these projects was called Trippa. Described as \"a contemporary Eurythmics for the new millennium\" mixing their own brand of edgy industrial pop with soaring orchestral arrangements. The band featured Christina Booth on vocals and Rob Reed on guitars and keyboards, joined by Rhiannon Stundon (backing vocals) and Ryan Aston (drums). The band released the Trippa EP in 1999, and were voted ‘Record of the Week’ on Virgin Radio, appearing on British television a number of times. It was during this time that Reed asked Christina to be lead vocalist for a progressive rock project he had in mind, and the initial ideas for Magenta were born. \\nMagenta was originally a studio project, with Rob playing most of the instruments. However, once their debut Revolutions was released  in 1999 there was a demand for live shows. Rob recruited (along with Christina) Chris Fry and Martin Rosser on guitar, Matthew Cohen on bass and Allan Mason-Jones on drums. Recently, Matt left the band and was replaced by Chris\\' younger brother Dan. The band released their third album Home in 2006 together with New York Suite. In 2008 the much darker album Metamorphosis saw the light of day. Their latest release to date with new songs Chameleon appeared in 2011.\\n\\nMagenta (2): Magenta was formed by Anders Odden during the summer of 1995. Vilde Lockert joined him on vocals that autumn. They released their first EP simply named Magenta in 1997. The song Secret Sky went into the charts in Norway and established their career. Anders Odden was already a well-known name to most of the music-oriented people. He’s been members of bands like Apoptygma Berzerk, Cadaver as well as recording for Satyricon, and being liveguitarist for Celtic Frost. The album Periode was released in March 1998, and Magenta went on tour in Norway and Germany. Magenta signed a new record-deal in April 2001 with the German indielabel Re:pop Music. The summer of 2001 saw the recording of the album Little Girl Lost, when they joined forces with producer, Vegard Ibo Blomberg The album was released in Germany the 24th of June 2002, and was very well received in the German alternative press. It reached number 4 in both the German Alternative Charts during the fall of 2002. Magenta made a video for All Over featuring Mortiis, but were quite stunned to find out that Coca-Cola company wanted this song for their worldwide release of Sprite Zero. The best chart position so far has been reached when Magenta CD single All Over climbed to number 2 in the official charts in Greece on the 8.7.2002 when this campaign went into a frenzy there.\\n\\nMagenta played a lot of gigs in 2002/2003 and the took some time off after the Arvika Festival in Sweden in 2003. Anders re-joined Apoptygma Berzerk on the recording of their new album \"You And Me Against The World\" in 2004/2005. In 2006 Magenta was reinforced with guitar manic Daniel Hill. This was very inspiring for the band and led to one of the most creative period in the bands history. Magenta released a track together with Apoptygma Berzerk called Friendly Fire in the beginning of 2006, and this kicked Magenta into a serious writing process for the new album. The first new song of the new direction is Darkest Dream. Magenta was also enforced with Jonas Groth who contributed to the production of the rest of the new album. Art And Accidents was release in November 2008 digitally and then officially on February 9, 2009.\\n\\nA new album is recorded and will be released in February 09 featuring new band member Daniel Hill (Guitar, Bass, Vocals) and guest appearances from several known Norwegian musicians including members of Apoptygma Berzerk, Gluecifer and Gothminister.\\n\\nMagenta (3): A folk band from UK which released at least the album Canterbury Moon in 1978.\\n\\nMagenta (4): An ethnic/entechna music project from Greece, with songs written by Michalis Nikoloudis (music) and Michalis Koumbios (lyrics) sung by Anastasia Moutsatsou. They have released one CD.\\n\\nMagenta (5): A synthpop band from Spain. They released a LP titled \"La Reina del Salón\" in 1985.\\n\\nMagenta (6): little is known about this band from Belgium <a href=\"https://www.last.fm/music/Magenta\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0uT3lm3wY3LnyP6dtok0q4', url='https://open.spotify.com/artist/0uT3lm3wY3LnyP6dtok0q4', name='Magenta', popularity=61, followers=6076, genres=['cumbia', 'cuarteto'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebdffbf44a74496190a1385bd3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dffbf44a74496190a1385bd3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dffbf44a74496190a1385bd3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0uT3lm3wY3LnyP6dtok0q4'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0uT3lm3wY3LnyP6dtok0q4'}, 'followers': {'href': None, 'total': 6076}, 'genres': ['cumbia', 'cuarteto'], 'href': 'https://api.spotify.com/v1/artists/0uT3lm3wY3LnyP6dtok0q4', 'id': '0uT3lm3wY3LnyP6dtok0q4', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebdffbf44a74496190a1385bd3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dffbf44a74496190a1385bd3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dffbf44a74496190a1385bd3', 'height': 160, 'width': 160}], 'name': 'Magenta', 'popularity': 61, 'type': 'artist', 'uri': 'spotify:artist:0uT3lm3wY3LnyP6dtok0q4'})",
@@ -263,6 +384,6 @@
   },
   "spotify_id": "0uT3lm3wY3LnyP6dtok0q4",
   "spotify_url": "https://open.spotify.com/artist/0uT3lm3wY3LnyP6dtok0q4",
-  "updated_at": "2026-10-22T14:08:54.134865",
+  "updated_at": "2026-10-30T18:42:06.059747",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Magenta_(Welsh_band)"
 }

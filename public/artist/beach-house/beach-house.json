@@ -135,22 +135,159 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='200823564', url='https://music.apple.com/gb/artist/beach-house/200823564', name='Beach House', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/50/af/9b50afcf-1263-fd13-1870-c35c2bed0731/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '200823564', 'type': 'artists', 'href': '/v1/catalog/gb/artists/200823564', 'attributes': {'name': 'Beach House', 'genreNames': ['Alternative'], 'artwork': {'width': 5400, 'height': 5400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/50/af/9b50afcf-1263-fd13-1870-c35c2bed0731/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '0d0d0d', 'textColor1': 'fbfbfb', 'textColor2': 'd8d8d8', 'textColor3': 'cbcbcb', 'textColor4': 'afafaf'}, 'url': 'https://music.apple.com/gb/artist/beach-house/200823564'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/200823564/albums', 'data': [{'id': '998474196', 'type': 'albums', 'href': '/v1/catalog/gb/albums/998474196'}, {'id': '671860588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671860588'}, {'id': '671867707', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671867707'}, {'id': '1345782392', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1345782392'}, {'id': '1047742746', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1047742746'}, {'id': '1592324846', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592324846'}, {'id': '1248058009', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1248058009'}, {'id': '1247691975', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1247691975'}, {'id': '1677181065', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1677181065'}, {'id': '1438958586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438958586'}, {'id': '1345660307', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1345660307'}, {'id': '1233656222', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1233656222'}, {'id': '674023522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/674023522'}, {'id': '671945821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671945821'}, {'id': '1609266619', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1609266619'}, {'id': '671837827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671837827'}, {'id': '671957014', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671957014'}, {'id': '671879736', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671879736'}, {'id': '671951872', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671951872'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "592308",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 592308,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/QPjvYkknVyRTDvSZZs8M1GsFakVnlgW8PQnrHfKJVds/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QPjvYkknVyRTDvSZZs8M1GsFakVnlgW8PQnrHfKJVds/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yVuyx_dPfEsyziInj4BxTYmP2llNOUSo4bApwroOiJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/wTh9OQ0ioUTZs7kJkYbdLmFnTfumFTYthSKAgh0Xmb0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wTh9OQ0ioUTZs7kJkYbdLmFnTfumFTYthSKAgh0Xmb0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TsV1XHO7VMc1boaLN8-_2ZjRGY2ViWW7hf0j8pCkveE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/HesSe07D5bV64D-Q-jRqOEE421ldwrKsK5YTdnO2DnE/rs:fit/g:sm/q:90/h:338/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HesSe07D5bV64D-Q-jRqOEE421ldwrKsK5YTdnO2DnE/rs:fit/g:sm/q:90/h:338/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tXHOxI0HyM94CGY01nHQJjnPvez3s_U72cvKoNVVrp0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/yTLKTJDoWO_LHvDwIe3YfKDHOdtQIe-w_o9ljFsNmM8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yTLKTJDoWO_LHvDwIe3YfKDHOdtQIe-w_o9ljFsNmM8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/pKH-2mDEQZl9LHRb3F6C2BJK-aabI5W61rjXnqFg1Xo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/VRMMW_R8gGr0Wg8MyjxgqnUcLHBOFYixLu_Mkq3WzBk/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VRMMW_R8gGr0Wg8MyjxgqnUcLHBOFYixLu_Mkq3WzBk/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/OdrDmX9ypEOBrg9EyX-JdJV4Dr8uo2ls6YbVV7XkyqQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wSgcclch9dH0ppgHmFKdENpkzV-0VR6t03zb8fACulc/rs:fit/g:sm/q:90/h:600/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wSgcclch9dH0ppgHmFKdENpkzV-0VR6t03zb8fACulc/rs:fit/g:sm/q:90/h:600/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/x0ssjDYHMvJLrqPrDf0VjErD_uY8GqpSIHuOzEltyRc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "width": 432
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/ydWN-7AP8NRaSGBSrBHNrrAHCekeSLkwXH4wPzQrrtw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ydWN-7AP8NRaSGBSrBHNrrAHCekeSLkwXH4wPzQrrtw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Hbkq6S63SYJ5tEmrRsEau4zabEsmK0dX4EQ4NlGnEcs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/F7fCcUVDSrWy68JcTWBztogQgJwSG9d1RuSiFtwy8pA/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/F7fCcUVDSrWy68JcTWBztogQgJwSG9d1RuSiFtwy8pA/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tyPzt9wef1YwH7lUEgvkl8xBjGhiAWl_pbx9idyJrLQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kAl1RU0P1aML9tSzlf8O-_fB4oTZ8_QGiAJ4vvuCXd4/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kAl1RU0P1aML9tSzlf8O-_fB4oTZ8_QGiAJ4vvuCXd4/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/xZn19Heh9yPfHXgWTm_IMVWrDlXFZ-SBgI3r6cdm4Hk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "width": 450
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/6_M5hfKkUMsWFp4iyrwOlK5cexj2XIkZDWK-q9RZLoo/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6_M5hfKkUMsWFp4iyrwOlK5cexj2XIkZDWK-q9RZLoo/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-SoQ32h1jfNF0oa2FbmSIZkzreMxN2xvjAtzDgLrh0I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/fSyTK04RIo-lwmfEqjp-rHNSwVKxYJqXZ4bU-NMtkYc/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fSyTK04RIo-lwmfEqjp-rHNSwVKxYJqXZ4bU-NMtkYc/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/QzTFPLpQt1vqV-PEDkQxg1I3MFidesIBvMDNMwS-srI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/dnxCBZ71KYVEJTs2LfK6-tR6rrn7JwGsFP8Mvq20mHo/rs:fit/g:sm/q:90/h:600/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dnxCBZ71KYVEJTs2LfK6-tR6rrn7JwGsFP8Mvq20mHo/rs:fit/g:sm/q:90/h:600/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eQOww7qemJV1QnnWF2Ekly-K8dPD-_5FnKUlNb4Ym1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "width": 463
+        },
+        {
+          "height": 432,
+          "resource_url": "https://i.discogs.com/frN_bow1RmuFYyblYmutYfp1WkgvEI8KchW_qr5B-HE/rs:fit/g:sm/q:90/h:432/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/frN_bow1RmuFYyblYmutYfp1WkgvEI8KchW_qr5B-HE/rs:fit/g:sm/q:90/h:432/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/fyk73Ts_2royL5pEYx71YjVnDZUjwt8MXcAXa2_1YYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "width": 576
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 515073,
+          "name": "Daniel Franz",
+          "resource_url": "https://api.discogs.com/artists/515073"
+        },
+        {
+          "active": true,
+          "id": 592309,
+          "name": "Victoria Legrand",
+          "resource_url": "https://api.discogs.com/artists/592309"
+        },
+        {
+          "active": true,
+          "id": 592310,
+          "name": "Alex Scally",
+          "resource_url": "https://api.discogs.com/artists/592310"
+        },
+        {
+          "active": true,
+          "id": 1104681,
+          "name": "James Barone",
+          "resource_url": "https://api.discogs.com/artists/1104681"
+        }
+      ],
       "name": "Beach House",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "592308",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/592308"
-      },
+      "namevariations": [
+        "BH",
+        "海灘小屋"
+      ],
+      "profile": "Beach House is a dream pop duo from Baltimore, Maryland (USA), formed in 2004.\r\nThe band consists of French-born Victoria Legrand, who's the niece of [a84236] and [a311164], Baltimore native Alex Scally plus, first appearing in 2017, James Barone on drums.\r\n\r\n[b]Beach House :[/b]\r\n[a592309] - lead vocals, keyboards\r\n[a592310] - guitar, bass, keyboards, backing vocals\r\n[a1104681] - drums\r\n[b]Touring Musician :[/b]\r\n[a515073] - drums, percussion",
+      "releases_url": "https://api.discogs.com/artists/592308/releases",
       "resource_url": "https://api.discogs.com/artists/592308",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/592308",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/592308-Beach-House",
+      "urls": [
+        "http://www.beachhousebaltimore.com/",
+        "https://myspace.com/beachhousemusic",
+        "https://www.facebook.com/beachhouse",
+        "https://twitter.com/BeaccchHoussse",
+        "https://en.wikipedia.org/wiki/Beach_House",
+        "https://soundcloud.com/beachhouse",
+        "https://beachhouse.bandcamp.com/",
+        "https://www.instagram.com/beaccchhoussse/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "d5cc67b8-1cc4-453b-96e8-44487acdebea",
@@ -312,27 +449,184 @@
         "track": "Used to Be",
         "uri": "https://www.youtube.com/watch?v=vCrr4d98pc4"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "Bloom",
+        "id": "Q21160917",
+        "track": "Myth",
+        "uri": "https://www.youtube.com/watch?v=Bv7IcjmxjGo"
+      },
+      {
+        "album": "Teen Dream",
+        "id": "Q21161238",
+        "track": "Norway",
+        "uri": "https://www.youtube.com/watch?v=2L_R-DELtX8"
+      },
+      {
+        "album": null,
+        "id": "Q114414674",
+        "track": "Space Song",
+        "uri": "https://www.youtube.com/watch?v=RBtlPT23PTM"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='200823564', url='https://music.apple.com/gb/artist/beach-house/200823564', name='Beach House', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/50/af/9b50afcf-1263-fd13-1870-c35c2bed0731/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '200823564', 'type': 'artists', 'href': '/v1/catalog/gb/artists/200823564', 'attributes': {'name': 'Beach House', 'genreNames': ['Alternative'], 'artwork': {'width': 5400, 'height': 5400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/50/af/9b50afcf-1263-fd13-1870-c35c2bed0731/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '0d0d0d', 'textColor1': 'fbfbfb', 'textColor2': 'd8d8d8', 'textColor3': 'cbcbcb', 'textColor4': 'afafaf'}, 'url': 'https://music.apple.com/gb/artist/beach-house/200823564'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/200823564/albums', 'data': [{'id': '998474196', 'type': 'albums', 'href': '/v1/catalog/gb/albums/998474196'}, {'id': '671860588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671860588'}, {'id': '671867707', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671867707'}, {'id': '1345782392', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1345782392'}, {'id': '1047742746', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1047742746'}, {'id': '1592324846', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592324846'}, {'id': '1248058009', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1248058009'}, {'id': '1247691975', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1247691975'}, {'id': '1677181065', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1677181065'}, {'id': '1438958586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438958586'}, {'id': '1345660307', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1345660307'}, {'id': '1233656222', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1233656222'}, {'id': '674023522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/674023522'}, {'id': '671945821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671945821'}, {'id': '1609266619', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1609266619'}, {'id': '671837827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671837827'}, {'id': '671957014', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671957014'}, {'id': '671879736', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671879736'}, {'id': '671951872', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671951872'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "592308",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 592308,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/QPjvYkknVyRTDvSZZs8M1GsFakVnlgW8PQnrHfKJVds/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QPjvYkknVyRTDvSZZs8M1GsFakVnlgW8PQnrHfKJVds/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yVuyx_dPfEsyziInj4BxTYmP2llNOUSo4bApwroOiJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjgx/LTEwMzIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/wTh9OQ0ioUTZs7kJkYbdLmFnTfumFTYthSKAgh0Xmb0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wTh9OQ0ioUTZs7kJkYbdLmFnTfumFTYthSKAgh0Xmb0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TsV1XHO7VMc1boaLN8-_2ZjRGY2ViWW7hf0j8pCkveE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNzU2Nzg1NjIz/LTkxOTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/HesSe07D5bV64D-Q-jRqOEE421ldwrKsK5YTdnO2DnE/rs:fit/g:sm/q:90/h:338/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HesSe07D5bV64D-Q-jRqOEE421ldwrKsK5YTdnO2DnE/rs:fit/g:sm/q:90/h:338/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tXHOxI0HyM94CGY01nHQJjnPvez3s_U72cvKoNVVrp0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDA4OTc3MTgy/LTQyNjIuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/yTLKTJDoWO_LHvDwIe3YfKDHOdtQIe-w_o9ljFsNmM8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yTLKTJDoWO_LHvDwIe3YfKDHOdtQIe-w_o9ljFsNmM8/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/pKH-2mDEQZl9LHRb3F6C2BJK-aabI5W61rjXnqFg1Xo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzQ1/LTUwNTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/VRMMW_R8gGr0Wg8MyjxgqnUcLHBOFYixLu_Mkq3WzBk/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VRMMW_R8gGr0Wg8MyjxgqnUcLHBOFYixLu_Mkq3WzBk/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/OdrDmX9ypEOBrg9EyX-JdJV4Dr8uo2ls6YbVV7XkyqQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNjQ3/LTc5MzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wSgcclch9dH0ppgHmFKdENpkzV-0VR6t03zb8fACulc/rs:fit/g:sm/q:90/h:600/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wSgcclch9dH0ppgHmFKdENpkzV-0VR6t03zb8fACulc/rs:fit/g:sm/q:90/h:600/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/x0ssjDYHMvJLrqPrDf0VjErD_uY8GqpSIHuOzEltyRc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzA0/LTE1MTguanBlZw.jpeg",
+          "width": 432
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/ydWN-7AP8NRaSGBSrBHNrrAHCekeSLkwXH4wPzQrrtw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ydWN-7AP8NRaSGBSrBHNrrAHCekeSLkwXH4wPzQrrtw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Hbkq6S63SYJ5tEmrRsEau4zabEsmK0dX4EQ4NlGnEcs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNDUx/LTY2MDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/F7fCcUVDSrWy68JcTWBztogQgJwSG9d1RuSiFtwy8pA/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/F7fCcUVDSrWy68JcTWBztogQgJwSG9d1RuSiFtwy8pA/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tyPzt9wef1YwH7lUEgvkl8xBjGhiAWl_pbx9idyJrLQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNTQ2/LTExMzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kAl1RU0P1aML9tSzlf8O-_fB4oTZ8_QGiAJ4vvuCXd4/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kAl1RU0P1aML9tSzlf8O-_fB4oTZ8_QGiAJ4vvuCXd4/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/xZn19Heh9yPfHXgWTm_IMVWrDlXFZ-SBgI3r6cdm4Hk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNjU1NTkwNzk4/LTk2MjYucG5n.jpeg",
+          "width": 450
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/6_M5hfKkUMsWFp4iyrwOlK5cexj2XIkZDWK-q9RZLoo/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6_M5hfKkUMsWFp4iyrwOlK5cexj2XIkZDWK-q9RZLoo/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-SoQ32h1jfNF0oa2FbmSIZkzreMxN2xvjAtzDgLrh0I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xNDAwODg1MDgx/LTY2MDkuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/fSyTK04RIo-lwmfEqjp-rHNSwVKxYJqXZ4bU-NMtkYc/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fSyTK04RIo-lwmfEqjp-rHNSwVKxYJqXZ4bU-NMtkYc/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/QzTFPLpQt1vqV-PEDkQxg1I3MFidesIBvMDNMwS-srI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMzgxODI5NzUz/LTQ3MjUuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/dnxCBZ71KYVEJTs2LfK6-tR6rrn7JwGsFP8Mvq20mHo/rs:fit/g:sm/q:90/h:600/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dnxCBZ71KYVEJTs2LfK6-tR6rrn7JwGsFP8Mvq20mHo/rs:fit/g:sm/q:90/h:600/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eQOww7qemJV1QnnWF2Ekly-K8dPD-_5FnKUlNb4Ym1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMjAzNjAxNDk3/LmpwZWc.jpeg",
+          "width": 463
+        },
+        {
+          "height": 432,
+          "resource_url": "https://i.discogs.com/frN_bow1RmuFYyblYmutYfp1WkgvEI8KchW_qr5B-HE/rs:fit/g:sm/q:90/h:432/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/frN_bow1RmuFYyblYmutYfp1WkgvEI8KchW_qr5B-HE/rs:fit/g:sm/q:90/h:432/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/fyk73Ts_2royL5pEYx71YjVnDZUjwt8MXcAXa2_1YYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MjMw/OC0xMTg2MTY0NjQy/LmpwZWc.jpeg",
+          "width": 576
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 515073,
+          "name": "Daniel Franz",
+          "resource_url": "https://api.discogs.com/artists/515073"
+        },
+        {
+          "active": true,
+          "id": 592309,
+          "name": "Victoria Legrand",
+          "resource_url": "https://api.discogs.com/artists/592309"
+        },
+        {
+          "active": true,
+          "id": 592310,
+          "name": "Alex Scally",
+          "resource_url": "https://api.discogs.com/artists/592310"
+        },
+        {
+          "active": true,
+          "id": 1104681,
+          "name": "James Barone",
+          "resource_url": "https://api.discogs.com/artists/1104681"
+        }
+      ],
       "name": "Beach House",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "592308",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/592308"
-      },
+      "namevariations": [
+        "BH",
+        "海灘小屋"
+      ],
+      "profile": "Beach House is a dream pop duo from Baltimore, Maryland (USA), formed in 2004.\r\nThe band consists of French-born Victoria Legrand, who's the niece of [a84236] and [a311164], Baltimore native Alex Scally plus, first appearing in 2017, James Barone on drums.\r\n\r\n[b]Beach House :[/b]\r\n[a592309] - lead vocals, keyboards\r\n[a592310] - guitar, bass, keyboards, backing vocals\r\n[a1104681] - drums\r\n[b]Touring Musician :[/b]\r\n[a515073] - drums, percussion",
+      "releases_url": "https://api.discogs.com/artists/592308/releases",
       "resource_url": "https://api.discogs.com/artists/592308",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/592308",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/592308-Beach-House",
+      "urls": [
+        "http://www.beachhousebaltimore.com/",
+        "https://myspace.com/beachhousemusic",
+        "https://www.facebook.com/beachhouse",
+        "https://twitter.com/BeaccchHoussse",
+        "https://en.wikipedia.org/wiki/Beach_House",
+        "https://soundcloud.com/beachhouse",
+        "https://beachhouse.bandcamp.com/",
+        "https://www.instagram.com/beaccchhoussse/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Beach House', url='https://www.last.fm/music/Beach+House', mbid='d5cc67b8-1cc4-453b-96e8-44487acdebea', listeners=3059874, playcount=203479367, bio_summary='Beach House is an American dream pop band that formed in 2004 in Baltimore, Maryland, United States. The group consists of Victoria Legrand  (vocals, organ), who is the niece of French composer Michel Legrand, Alex Scally, and as of 2022,  James Barone (drums, percussion, bass guitar). Since their formation, the group has released eight studio albums: Beach House (2006), Devotion (2008), Teen Dream (2010), Bloom (2012), Depression Cherry (2015), Thank Your Lucky Stars (2015), 7 (2018), and Once Twice Melody (2022). <a href=\"https://www.last.fm/music/Beach+House\">Read more on Last.fm</a>', bio_content='Beach House is an American dream pop band that formed in 2004 in Baltimore, Maryland, United States. The group consists of Victoria Legrand  (vocals, organ), who is the niece of French composer Michel Legrand, Alex Scally, and as of 2022,  James Barone (drums, percussion, bass guitar). Since their formation, the group has released eight studio albums: Beach House (2006), Devotion (2008), Teen Dream (2010), Bloom (2012), Depression Cherry (2015), Thank Your Lucky Stars (2015), 7 (2018), and Once Twice Melody (2022).\\n\\nCareer\\nWithin a year of formation, Beach House charmed indie music enthusiasts across the blogosphere with their languid songcraft, while the eerie warmth of \"Apple Orchard\" landed on Pitchfork\\'s Infinite Mixtape MP3 series in August 2006. Two months later, they issued their eponymous debut album for Carpark. Fall shows with labelmates Over the Atlantic were also scheduled. Victoria can also be heard on Frenemies\\' Birds in High School album.  She and Chris Freeland created harmonies on the song \"Waiting for the Ambulance\". Victoria can also be heard on Grizzly Bear\\'s 2009 release Veckatimest and she sings on \"Slow Life\", a Grizzly Bear track featured on the official soundtrack for Twilight: New Moon.\\n\\nIn September of 2009, Sub Pop Records announced that Beach House had signed and that a follow up album to 2008\\'s Devotion, Teen Dream, would be released in early 2010. The album received universal acclaim from contemporary music critics, additionally hailed as one of the best albums of 2010. Their fourth studio album, Bloom, was released on May 15, 2012, as their second release with Sub Pop. Released to further acclaim from music critics, it was supported by the lead single \"Myth\", with the album debuting at number seven on the US Billboard 200 album chart.\\n\\nFollowing the success of Bloom, Beach House began recording their fifth album, Depression Cherry (2015), in November 2014.  Earlier that year, the group contributed to Lefse Records\\' compliation album The Space Project, with the track  Saturn Song. Recording for Depression Cherry ended in January 2015, with the album\\'s lead single \"Sparks\" being released at the beginning of July 2015. Depression Cherry was released on August 28, 2015, and debuted at number eight on the US Billboard 200 album chart. Two months after its release, the group announced that they would release their sixth studio album, Thank Your Lucky Stars (2015), later that same year, adding that it is \"not a companion to Depression Cherry, or a surprise, or b-sides\".\\n\\nAfter releasing those two albums in 2015, Beach House announced that a compilation album, B-Sides and Rarities (2017), would be released in 2017 as a way of \"cleaning out the closet\" to pave the way for a new creative process. It was released on June 30, 2017, containing two unreleased tracks and other \"rare\" tracks. The next year, the band announced their seventh studio album, 7 (2018) and released four singles to promote it; \"Lemon Glow\", \"Dive\", \"Dark Spring\" and \"Black Car\". 7 was released on May 11, 2018, and was co-produced by Sonic Boom (alias of Peter Kember), singer and guitarist of Spacemen 3. It received universal acclaim by music critics, who praised the adventurous nature of the album and the consistency of the band, with some considering it the group\\'s best album to date.\\n\\nIn 2019, Beach House collaborated with arts company Meow Wolf to release a short film titled \"Marin\\'s Dreams\", contributing to the Omega Mart exhibition. In 2021, the group announced that their eighth studio album, Once Twice Melody (2022), was ready for release. It was also announced that it would be released in four chapters; the first chapter was released on November 10, 2021, the second on December 8 of the same year and the third on January 19, 2022. The fourth chapter, as well as the entire album itself, was released on February 18, 2022, through Sub Pop. It became the best-selling album in the United States within its first week of release, debuting atop the US Billboard Top Album Sales chart, with 20,300 copies sold in its first week. In April 2023, the band released the EP Become (2023), which contains five tracks that were recorded in the sessions of Once Twice Melody, in which the band described as \"(not fitting) in the world of (Once Twice Melody), but... a little world of their own\".\\n\\nDiscography\\nBeach House (2006)Devotion (2008)Teen Dream (2010)Bloom (2012)Depression Cherry (2015)Thank Your Lucky Stars (2015)7 (2018)Once Twice Melody (2022) <a href=\"https://www.last.fm/music/Beach+House\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['dream pop', 'seen live', 'indie pop', 'indie', 'Lo-Fi'], similar_artists=[{'name': 'Alvvays', 'url': 'https://www.last.fm/music/Alvvays'}, {'name': 'Slowdive', 'url': 'https://www.last.fm/music/Slowdive'}, {'name': \"Melody's Echo Chamber\", 'url': 'https://www.last.fm/music/Melody%27s+Echo+Chamber'}, {'name': 'The Radio Dept.', 'url': 'https://www.last.fm/music/The+Radio+Dept.'}, {'name': 'Castlebeat', 'url': 'https://www.last.fm/music/Castlebeat'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Beach House', 'mbid': 'd5cc67b8-1cc4-453b-96e8-44487acdebea', 'url': 'https://www.last.fm/music/Beach+House', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3059874', 'playcount': '203479367'}, 'similar': {'artist': [{'name': 'Alvvays', 'url': 'https://www.last.fm/music/Alvvays', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Slowdive', 'url': 'https://www.last.fm/music/Slowdive', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Melody's Echo Chamber\", 'url': 'https://www.last.fm/music/Melody%27s+Echo+Chamber', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Radio Dept.', 'url': 'https://www.last.fm/music/The+Radio+Dept.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Castlebeat', 'url': 'https://www.last.fm/music/Castlebeat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'dream pop', 'url': 'https://www.last.fm/tag/dream+pop'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'indie pop', 'url': 'https://www.last.fm/tag/indie+pop'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'Lo-Fi', 'url': 'https://www.last.fm/tag/Lo-Fi'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Beach+House/+wiki'}}, 'published': '04 Aug 2006, 15:50', 'summary': 'Beach House is an American dream pop band that formed in 2004 in Baltimore, Maryland, United States. The group consists of Victoria Legrand  (vocals, organ), who is the niece of French composer Michel Legrand, Alex Scally, and as of 2022,  James Barone (drums, percussion, bass guitar). Since their formation, the group has released eight studio albums: Beach House (2006), Devotion (2008), Teen Dream (2010), Bloom (2012), Depression Cherry (2015), Thank Your Lucky Stars (2015), 7 (2018), and Once Twice Melody (2022). <a href=\"https://www.last.fm/music/Beach+House\">Read more on Last.fm</a>', 'content': 'Beach House is an American dream pop band that formed in 2004 in Baltimore, Maryland, United States. The group consists of Victoria Legrand  (vocals, organ), who is the niece of French composer Michel Legrand, Alex Scally, and as of 2022,  James Barone (drums, percussion, bass guitar). Since their formation, the group has released eight studio albums: Beach House (2006), Devotion (2008), Teen Dream (2010), Bloom (2012), Depression Cherry (2015), Thank Your Lucky Stars (2015), 7 (2018), and Once Twice Melody (2022).\\n\\nCareer\\nWithin a year of formation, Beach House charmed indie music enthusiasts across the blogosphere with their languid songcraft, while the eerie warmth of \"Apple Orchard\" landed on Pitchfork\\'s Infinite Mixtape MP3 series in August 2006. Two months later, they issued their eponymous debut album for Carpark. Fall shows with labelmates Over the Atlantic were also scheduled. Victoria can also be heard on Frenemies\\' Birds in High School album.  She and Chris Freeland created harmonies on the song \"Waiting for the Ambulance\". Victoria can also be heard on Grizzly Bear\\'s 2009 release Veckatimest and she sings on \"Slow Life\", a Grizzly Bear track featured on the official soundtrack for Twilight: New Moon.\\n\\nIn September of 2009, Sub Pop Records announced that Beach House had signed and that a follow up album to 2008\\'s Devotion, Teen Dream, would be released in early 2010. The album received universal acclaim from contemporary music critics, additionally hailed as one of the best albums of 2010. Their fourth studio album, Bloom, was released on May 15, 2012, as their second release with Sub Pop. Released to further acclaim from music critics, it was supported by the lead single \"Myth\", with the album debuting at number seven on the US Billboard 200 album chart.\\n\\nFollowing the success of Bloom, Beach House began recording their fifth album, Depression Cherry (2015), in November 2014.  Earlier that year, the group contributed to Lefse Records\\' compliation album The Space Project, with the track  Saturn Song. Recording for Depression Cherry ended in January 2015, with the album\\'s lead single \"Sparks\" being released at the beginning of July 2015. Depression Cherry was released on August 28, 2015, and debuted at number eight on the US Billboard 200 album chart. Two months after its release, the group announced that they would release their sixth studio album, Thank Your Lucky Stars (2015), later that same year, adding that it is \"not a companion to Depression Cherry, or a surprise, or b-sides\".\\n\\nAfter releasing those two albums in 2015, Beach House announced that a compilation album, B-Sides and Rarities (2017), would be released in 2017 as a way of \"cleaning out the closet\" to pave the way for a new creative process. It was released on June 30, 2017, containing two unreleased tracks and other \"rare\" tracks. The next year, the band announced their seventh studio album, 7 (2018) and released four singles to promote it; \"Lemon Glow\", \"Dive\", \"Dark Spring\" and \"Black Car\". 7 was released on May 11, 2018, and was co-produced by Sonic Boom (alias of Peter Kember), singer and guitarist of Spacemen 3. It received universal acclaim by music critics, who praised the adventurous nature of the album and the consistency of the band, with some considering it the group\\'s best album to date.\\n\\nIn 2019, Beach House collaborated with arts company Meow Wolf to release a short film titled \"Marin\\'s Dreams\", contributing to the Omega Mart exhibition. In 2021, the group announced that their eighth studio album, Once Twice Melody (2022), was ready for release. It was also announced that it would be released in four chapters; the first chapter was released on November 10, 2021, the second on December 8 of the same year and the third on January 19, 2022. The fourth chapter, as well as the entire album itself, was released on February 18, 2022, through Sub Pop. It became the best-selling album in the United States within its first week of release, debuting atop the US Billboard Top Album Sales chart, with 20,300 copies sold in its first week. In April 2023, the band released the EP Become (2023), which contains five tracks that were recorded in the sessions of Once Twice Melody, in which the band described as \"(not fitting) in the world of (Once Twice Melody), but... a little world of their own\".\\n\\nDiscography\\nBeach House (2006)Devotion (2008)Teen Dream (2010)Bloom (2012)Depression Cherry (2015)Thank Your Lucky Stars (2015)7 (2018)Once Twice Melody (2022) <a href=\"https://www.last.fm/music/Beach+House\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='56ZTgzPBDge0OvCGgMO3OY', url='https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY', name='Beach House', popularity=76, followers=2676645, genres=['dream pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb3e38a46a56a423d8f741c09', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b3e38a46a56a423d8f741c09', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b3e38a46a56a423d8f741c09', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY'}, 'followers': {'href': None, 'total': 2676645}, 'genres': ['dream pop'], 'href': 'https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY', 'id': '56ZTgzPBDge0OvCGgMO3OY', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb3e38a46a56a423d8f741c09', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b3e38a46a56a423d8f741c09', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b3e38a46a56a423d8f741c09', 'height': 160, 'width': 160}], 'name': 'Beach House', 'popularity': 76, 'type': 'artist', 'uri': 'spotify:artist:56ZTgzPBDge0OvCGgMO3OY'})",
@@ -424,6 +718,6 @@
   },
   "spotify_id": "56ZTgzPBDge0OvCGgMO3OY",
   "spotify_url": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY",
-  "updated_at": "2026-10-22T14:05:00.059863",
+  "updated_at": "2026-10-30T18:36:22.177008",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Beach_House"
 }

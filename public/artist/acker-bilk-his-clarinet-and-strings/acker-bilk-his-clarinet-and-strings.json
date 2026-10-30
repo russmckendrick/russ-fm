@@ -42,22 +42,40 @@
   "raw_data": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "2805723",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 2805723,
+      "members": [
+        {
+          "active": true,
+          "id": 271488,
+          "name": "Acker Bilk",
+          "resource_url": "https://api.discogs.com/artists/271488"
+        }
+      ],
       "name": "Acker Bilk His Clarinet And Strings",
-      "namevariations": [],
+      "namevariations": [
+        "Acker Bilk & His Clarinet & Strings",
+        "Acker Bilk And His Clarinet",
+        "Acker Bilk His Clarinet & Strings",
+        "Acker Bilk, Clarinet, Et Son Orchestre",
+        "Acker Bilk, His Clarinet & Strings",
+        "Acker Bilk, His Clarinet And Orchestra",
+        "Acker Bilk, His Clarinet And Strings",
+        "Acker Bilk, Klarinét És Zenekar",
+        "Mr. Acker Bilk His Clarinet & Strings",
+        "Mr. Acker Bilk With His Clarinet And Strings",
+        "Mr. Acker Bilk, His Clarinet And Strings"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "2805723",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2805723"
-      },
+      "releases_url": "https://api.discogs.com/artists/2805723/releases",
       "resource_url": "https://api.discogs.com/artists/2805723",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2805723",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2805723-Acker-Bilk-His-Clarinet-And-Strings"
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:04:26.369248",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Acker Bilk His Clarinet and Strings', url='https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings', mbid=None, listeners=6, playcount=8, bio_summary='<a href=\"https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Acker Bilk His Clarinet and Strings', 'url': 'https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '6', 'playcount': '8'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Acker+Bilk+His+Clarinet+and+Strings/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='79hIyTprTNhtNGjYBW42s1', url='https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1', name='Tristan Axvall', popularity=56, followers=1082, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2732a6b427e47267d734561df8b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e022a6b427e47267d734561df8b', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048512a6b427e47267d734561df8b', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1'}, 'followers': {'href': None, 'total': 1082}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/79hIyTprTNhtNGjYBW42s1', 'id': '79hIyTprTNhtNGjYBW42s1', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2732a6b427e47267d734561df8b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e022a6b427e47267d734561df8b', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048512a6b427e47267d734561df8b', 'height': 64, 'width': 64}], 'name': 'Tristan Axvall', 'popularity': 56, 'type': 'artist', 'uri': 'spotify:artist:79hIyTprTNhtNGjYBW42s1'})",
@@ -66,89 +84,41 @@
   "services": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "2805723",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 2805723,
+      "members": [
+        {
+          "active": true,
+          "id": 271488,
+          "name": "Acker Bilk",
+          "resource_url": "https://api.discogs.com/artists/271488"
+        }
+      ],
       "name": "Acker Bilk His Clarinet And Strings",
-      "namevariations": [],
+      "namevariations": [
+        "Acker Bilk & His Clarinet & Strings",
+        "Acker Bilk And His Clarinet",
+        "Acker Bilk His Clarinet & Strings",
+        "Acker Bilk, Clarinet, Et Son Orchestre",
+        "Acker Bilk, His Clarinet & Strings",
+        "Acker Bilk, His Clarinet And Orchestra",
+        "Acker Bilk, His Clarinet And Strings",
+        "Acker Bilk, Klarinét És Zenekar",
+        "Mr. Acker Bilk His Clarinet & Strings",
+        "Mr. Acker Bilk With His Clarinet And Strings",
+        "Mr. Acker Bilk, His Clarinet And Strings"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "2805723",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2805723"
-      },
+      "releases_url": "https://api.discogs.com/artists/2805723/releases",
       "resource_url": "https://api.discogs.com/artists/2805723",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2805723",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2805723-Acker-Bilk-His-Clarinet-And-Strings"
     },
-    "lastfm": {
-      "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": ""
-        },
-        {
-          "size": "medium",
-          "url": ""
-        },
-        {
-          "size": "large",
-          "url": ""
-        },
-        {
-          "size": "extralarge",
-          "url": ""
-        },
-        {
-          "size": "mega",
-          "url": ""
-        },
-        {
-          "size": "",
-          "url": ""
-        }
-      ],
-      "listeners": 6,
-      "mbid": null,
-      "name": "Acker Bilk His Clarinet and Strings",
-      "playcount": 8,
-      "similar_artists": [],
-      "tags": [],
-      "url": "https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings"
-    },
-    "spotify": {
-      "followers": 1082,
-      "genres": [],
-      "id": "79hIyTprTNhtNGjYBW42s1",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2732a6b427e47267d734561df8b",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e022a6b427e47267d734561df8b",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048512a6b427e47267d734561df8b",
-          "width": 64
-        }
-      ],
-      "name": "Tristan Axvall",
-      "popularity": 56,
-      "url": "https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1"
-    },
+    "lastfm": "ArtistLastFmData(name='Acker Bilk His Clarinet and Strings', url='https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings', mbid=None, listeners=6, playcount=8, bio_summary='<a href=\"https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Acker Bilk His Clarinet and Strings', 'url': 'https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '6', 'playcount': '8'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Acker+Bilk+His+Clarinet+and+Strings/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Acker+Bilk+His+Clarinet+and+Strings\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='79hIyTprTNhtNGjYBW42s1', url='https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1', name='Tristan Axvall', popularity=56, followers=1082, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2732a6b427e47267d734561df8b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e022a6b427e47267d734561df8b', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048512a6b427e47267d734561df8b', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1'}, 'followers': {'href': None, 'total': 1082}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/79hIyTprTNhtNGjYBW42s1', 'id': '79hIyTprTNhtNGjYBW42s1', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2732a6b427e47267d734561df8b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e022a6b427e47267d734561df8b', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048512a6b427e47267d734561df8b', 'height': 64, 'width': 64}], 'name': 'Tristan Axvall', 'popularity': 56, 'type': 'artist', 'uri': 'spotify:artist:79hIyTprTNhtNGjYBW42s1'})",
     "theaudiodb": {}
   },
   "spotify_id": "79hIyTprTNhtNGjYBW42s1",
   "spotify_url": "https://open.spotify.com/artist/79hIyTprTNhtNGjYBW42s1",
-  "updated_at": "2025-07-08T20:59:15.219855",
+  "updated_at": "2026-10-30T18:35:37.708260",
   "wikipedia_url": "https://en.wikipedia.org/wiki/1962_in_music"
 }

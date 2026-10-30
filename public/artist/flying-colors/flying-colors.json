@@ -119,22 +119,81 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='297256628', url='https://music.apple.com/gb/artist/flying-colors/297256628', name='Flying Colors', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/24/8a/71248a04-b598-4e1b-9c85-6ecd7910dcc7/819873019947.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '297256628', 'type': 'artists', 'href': '/v1/catalog/gb/artists/297256628', 'attributes': {'name': 'Flying Colors', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/24/8a/71248a04-b598-4e1b-9c85-6ecd7910dcc7/819873019947.png/{w}x{h}ac.jpg', 'bgColor': '044467', 'textColor1': 'c0cee1', 'textColor2': '63bae3', 'textColor3': '9ab2c9', 'textColor4': '50a2ca'}, 'url': 'https://music.apple.com/gb/artist/flying-colors/297256628'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/297256628/albums', 'data': [{'id': '1600470882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600470882'}, {'id': '1600463690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600463690'}, {'id': '1600467187', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600467187'}, {'id': '1600454334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600454334'}, {'id': '1600463628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600463628'}, {'id': '1600480298', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600480298'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2692886",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2692886,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/RNdcaKXkVe_c3qUvkZr0dfRXYTMvURLNzpYF_5Bvceo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RNdcaKXkVe_c3qUvkZr0dfRXYTMvURLNzpYF_5Bvceo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/2LPHUZI-LIhCoNXT0YYf74aCvyIDQtwfQ9ALYPqp6pg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JN6h7FTUS8mcuWh4UZvs93y8VrZcp72DRmj4J-wdvWk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JN6h7FTUS8mcuWh4UZvs93y8VrZcp72DRmj4J-wdvWk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ghY3GUnKAeGL2DT-uQ0nVbqjlpA_zINsVhH3P-dpu4o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/uw1onWnMxFVjG69C2u-Xr7zT65r9yN2ZHZIh1JhmUXM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uw1onWnMxFVjG69C2u-Xr7zT65r9yN2ZHZIh1JhmUXM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ys8yWUOA4kxONb8Wp6PWEobppfi_RGY8S0inVhHpD2Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 94844,
+          "name": "Steve Morse",
+          "resource_url": "https://api.discogs.com/artists/94844"
+        },
+        {
+          "active": true,
+          "id": 273937,
+          "name": "Mike Portnoy",
+          "resource_url": "https://api.discogs.com/artists/273937"
+        },
+        {
+          "active": true,
+          "id": 309345,
+          "name": "Neal Morse",
+          "resource_url": "https://api.discogs.com/artists/309345"
+        },
+        {
+          "active": true,
+          "id": 403366,
+          "name": "Dave LaRue",
+          "resource_url": "https://api.discogs.com/artists/403366"
+        },
+        {
+          "active": true,
+          "id": 2692885,
+          "name": "Casey McPherson",
+          "resource_url": "https://api.discogs.com/artists/2692885"
+        }
+      ],
       "name": "Flying Colors",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2692886",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2692886"
-      },
+      "profile": "American prog-rock supergroup, formed in Nashville, Tennessee in January 2011 and composed of [a=Casey McPherson] ([a1788217], [a2791600]), [a=Neal Morse] ([a309345], [a2306050],  [a=Spock's Beard], [a303573]), [a=Steve Morse] ([a=Steve Morse Band], [a=Dixie Dregs], [a=Deep Purple], [a=Kansas]), [a=Dave LaRue] ([a=Dixie Dregs], [a=Steve Morse Band], [a=Joe Satriani], [a=Steve Vai]) and [a=Mike Portnoy] ([a=Dream Theater], [a303573], [a6067124], [a3387919]).",
+      "releases_url": "https://api.discogs.com/artists/2692886/releases",
       "resource_url": "https://api.discogs.com/artists/2692886",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2692886",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2692886-Flying-Colors",
+      "urls": [
+        "http://flyingcolorsmusic.com/",
+        "https://www.AllMusic.com/artist/flying-colors-mn0002863653",
+        "https://www.Deezer.com/fi/artist/1329614",
+        "https://www.facebook.com/flyingcolorsofficial",
+        "http://www.ProgArchives.com/artist.asp?id=7414",
+        "https://open.Spotify.com/artist/7vdTrczuBydSrfUcoruaeX",
+        "https://en.wikipedia.org/wiki/Flying_Colors_(band)",
+        "https://www.youtube.com/channel/UCmnemVMrt74xo3sx-iysJcw"
+      ]
     },
     "identity": {
       "musicbrainz_id": "c9ef4e0c-ac8d-4d99-9356-62a11128f15f",
@@ -215,27 +274,87 @@
         "track": "Mask Machine",
         "uri": "https://www.youtube.com/watch?v=FdnKddL9giw"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='297256628', url='https://music.apple.com/gb/artist/flying-colors/297256628', name='Flying Colors', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/24/8a/71248a04-b598-4e1b-9c85-6ecd7910dcc7/819873019947.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '297256628', 'type': 'artists', 'href': '/v1/catalog/gb/artists/297256628', 'attributes': {'name': 'Flying Colors', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/24/8a/71248a04-b598-4e1b-9c85-6ecd7910dcc7/819873019947.png/{w}x{h}ac.jpg', 'bgColor': '044467', 'textColor1': 'c0cee1', 'textColor2': '63bae3', 'textColor3': '9ab2c9', 'textColor4': '50a2ca'}, 'url': 'https://music.apple.com/gb/artist/flying-colors/297256628'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/297256628/albums', 'data': [{'id': '1600470882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600470882'}, {'id': '1600463690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600463690'}, {'id': '1600467187', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600467187'}, {'id': '1600454334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600454334'}, {'id': '1600463628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600463628'}, {'id': '1600480298', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600480298'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2692886",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2692886,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/RNdcaKXkVe_c3qUvkZr0dfRXYTMvURLNzpYF_5Bvceo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RNdcaKXkVe_c3qUvkZr0dfRXYTMvURLNzpYF_5Bvceo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/2LPHUZI-LIhCoNXT0YYf74aCvyIDQtwfQ9ALYPqp6pg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTYyMTUyNTk3/OC0xODU3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JN6h7FTUS8mcuWh4UZvs93y8VrZcp72DRmj4J-wdvWk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JN6h7FTUS8mcuWh4UZvs93y8VrZcp72DRmj4J-wdvWk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ghY3GUnKAeGL2DT-uQ0nVbqjlpA_zINsVhH3P-dpu4o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA4/MC02MzM2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/uw1onWnMxFVjG69C2u-Xr7zT65r9yN2ZHZIh1JhmUXM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uw1onWnMxFVjG69C2u-Xr7zT65r9yN2ZHZIh1JhmUXM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ys8yWUOA4kxONb8Wp6PWEobppfi_RGY8S0inVhHpD2Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTI4/ODYtMTQ4NzMwMTA5/NC01MTA5LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 94844,
+          "name": "Steve Morse",
+          "resource_url": "https://api.discogs.com/artists/94844"
+        },
+        {
+          "active": true,
+          "id": 273937,
+          "name": "Mike Portnoy",
+          "resource_url": "https://api.discogs.com/artists/273937"
+        },
+        {
+          "active": true,
+          "id": 309345,
+          "name": "Neal Morse",
+          "resource_url": "https://api.discogs.com/artists/309345"
+        },
+        {
+          "active": true,
+          "id": 403366,
+          "name": "Dave LaRue",
+          "resource_url": "https://api.discogs.com/artists/403366"
+        },
+        {
+          "active": true,
+          "id": 2692885,
+          "name": "Casey McPherson",
+          "resource_url": "https://api.discogs.com/artists/2692885"
+        }
+      ],
       "name": "Flying Colors",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2692886",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2692886"
-      },
+      "profile": "American prog-rock supergroup, formed in Nashville, Tennessee in January 2011 and composed of [a=Casey McPherson] ([a1788217], [a2791600]), [a=Neal Morse] ([a309345], [a2306050],  [a=Spock's Beard], [a303573]), [a=Steve Morse] ([a=Steve Morse Band], [a=Dixie Dregs], [a=Deep Purple], [a=Kansas]), [a=Dave LaRue] ([a=Dixie Dregs], [a=Steve Morse Band], [a=Joe Satriani], [a=Steve Vai]) and [a=Mike Portnoy] ([a=Dream Theater], [a303573], [a6067124], [a3387919]).",
+      "releases_url": "https://api.discogs.com/artists/2692886/releases",
       "resource_url": "https://api.discogs.com/artists/2692886",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2692886",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2692886-Flying-Colors",
+      "urls": [
+        "http://flyingcolorsmusic.com/",
+        "https://www.AllMusic.com/artist/flying-colors-mn0002863653",
+        "https://www.Deezer.com/fi/artist/1329614",
+        "https://www.facebook.com/flyingcolorsofficial",
+        "http://www.ProgArchives.com/artist.asp?id=7414",
+        "https://open.Spotify.com/artist/7vdTrczuBydSrfUcoruaeX",
+        "https://en.wikipedia.org/wiki/Flying_Colors_(band)",
+        "https://www.youtube.com/channel/UCmnemVMrt74xo3sx-iysJcw"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Flying Colors', url='https://www.last.fm/music/Flying+Colors', mbid='c9ef4e0c-ac8d-4d99-9356-62a11128f15f', listeners=56886, playcount=1702276, bio_summary='Steve Morse: Lead and Rhythm Guitar\\nCasey McPherson: Vocals, Keyboards, Rhythm Guitar\\nNeal Morse: Keyboard, Vocals\\nDave LaRue: Bass Guitar\\nMike Portnoy: Drums, Percussion, Vocals\\n\\nFormed by members/former members of bands such as Deep Purple, Dream Theater, Dixie Dregs, Transatlantic, Spock\\'s Beard, and Liquid Tension Experiment in 2011, Flying Colors is releasing their debut album on March 27th, 2012.  <a href=\"https://www.last.fm/music/Flying+Colors\">Read more on Last.fm</a>', bio_content='Steve Morse: Lead and Rhythm Guitar\\nCasey McPherson: Vocals, Keyboards, Rhythm Guitar\\nNeal Morse: Keyboard, Vocals\\nDave LaRue: Bass Guitar\\nMike Portnoy: Drums, Percussion, Vocals\\n\\nFormed by members/former members of bands such as Deep Purple, Dream Theater, Dixie Dregs, Transatlantic, Spock\\'s Beard, and Liquid Tension Experiment in 2011, Flying Colors is releasing their debut album on March 27th, 2012.  <a href=\"https://www.last.fm/music/Flying+Colors\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'hard rock', 'rock', 'Supergroup', 'mike portnoy'], similar_artists=[{'name': 'Transatlantic', 'url': 'https://www.last.fm/music/Transatlantic'}, {'name': 'The Neal Morse Band', 'url': 'https://www.last.fm/music/The+Neal+Morse+Band'}, {'name': \"Spock's Beard\", 'url': 'https://www.last.fm/music/Spock%27s+Beard'}, {'name': 'Neal Morse', 'url': 'https://www.last.fm/music/Neal+Morse'}, {'name': 'Big Big Train', 'url': 'https://www.last.fm/music/Big+Big+Train'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Flying Colors', 'mbid': 'c9ef4e0c-ac8d-4d99-9356-62a11128f15f', 'url': 'https://www.last.fm/music/Flying+Colors', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '56886', 'playcount': '1702276'}, 'similar': {'artist': [{'name': 'Transatlantic', 'url': 'https://www.last.fm/music/Transatlantic', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Neal Morse Band', 'url': 'https://www.last.fm/music/The+Neal+Morse+Band', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Spock's Beard\", 'url': 'https://www.last.fm/music/Spock%27s+Beard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Neal Morse', 'url': 'https://www.last.fm/music/Neal+Morse', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Big Big Train', 'url': 'https://www.last.fm/music/Big+Big+Train', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'Supergroup', 'url': 'https://www.last.fm/tag/Supergroup'}, {'name': 'mike portnoy', 'url': 'https://www.last.fm/tag/mike+portnoy'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Flying+Colors/+wiki'}}, 'published': '12 Jan 2012, 05:03', 'summary': 'Steve Morse: Lead and Rhythm Guitar\\nCasey McPherson: Vocals, Keyboards, Rhythm Guitar\\nNeal Morse: Keyboard, Vocals\\nDave LaRue: Bass Guitar\\nMike Portnoy: Drums, Percussion, Vocals\\n\\nFormed by members/former members of bands such as Deep Purple, Dream Theater, Dixie Dregs, Transatlantic, Spock\\'s Beard, and Liquid Tension Experiment in 2011, Flying Colors is releasing their debut album on March 27th, 2012.  <a href=\"https://www.last.fm/music/Flying+Colors\">Read more on Last.fm</a>', 'content': 'Steve Morse: Lead and Rhythm Guitar\\nCasey McPherson: Vocals, Keyboards, Rhythm Guitar\\nNeal Morse: Keyboard, Vocals\\nDave LaRue: Bass Guitar\\nMike Portnoy: Drums, Percussion, Vocals\\n\\nFormed by members/former members of bands such as Deep Purple, Dream Theater, Dixie Dregs, Transatlantic, Spock\\'s Beard, and Liquid Tension Experiment in 2011, Flying Colors is releasing their debut album on March 27th, 2012.  <a href=\"https://www.last.fm/music/Flying+Colors\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7vdTrczuBydSrfUcoruaeX', url='https://open.spotify.com/artist/7vdTrczuBydSrfUcoruaeX', name='Flying Colors', popularity=33, followers=63304, genres=['progressive rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb8d84626fa496337702bcc747', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051748d84626fa496337702bcc747', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1788d84626fa496337702bcc747', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7vdTrczuBydSrfUcoruaeX'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7vdTrczuBydSrfUcoruaeX'}, 'followers': {'href': None, 'total': 63304}, 'genres': ['progressive rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/7vdTrczuBydSrfUcoruaeX', 'id': '7vdTrczuBydSrfUcoruaeX', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb8d84626fa496337702bcc747', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051748d84626fa496337702bcc747', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1788d84626fa496337702bcc747', 'height': 160, 'width': 160}], 'name': 'Flying Colors', 'popularity': 33, 'type': 'artist', 'uri': 'spotify:artist:7vdTrczuBydSrfUcoruaeX'})",
@@ -306,6 +425,6 @@
   },
   "spotify_id": "7vdTrczuBydSrfUcoruaeX",
   "spotify_url": "https://open.spotify.com/artist/7vdTrczuBydSrfUcoruaeX",
-  "updated_at": "2026-10-22T14:06:56.806928",
+  "updated_at": "2026-10-30T18:39:48.848441",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Flying_Colors_(band)"
 }

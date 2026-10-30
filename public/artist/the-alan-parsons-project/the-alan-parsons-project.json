@@ -136,22 +136,134 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='13525', url='https://music.apple.com/gb/artist/the-alan-parsons-project/13525', name='The Alan Parsons Project', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/b6/1f/6a/b61f6a9d-2386-01c4-cf0b-8b7912e77c7a/mzl.obqwgoar.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13525', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13525', 'attributes': {'artwork': {'bgColor': '282824', 'height': 5000, 'textColor1': 'fbfbf5', 'textColor2': 'c8cac1', 'textColor3': 'd1d1cb', 'textColor4': 'a8a9a2', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/b6/1f/6a/b61f6a9d-2386-01c4-cf0b-8b7912e77c7a/mzl.obqwgoar.jpg/{w}x{h}bb.jpg', 'width': 5000}, 'genreNames': ['Rock'], 'name': 'The Alan Parsons Project', 'url': 'https://music.apple.com/gb/artist/the-alan-parsons-project/13525'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13525/albums', 'next': '/v1/catalog/gb/artists/13525/albums?offset=25', 'data': [{'id': '1205670750', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1205670750'}, {'id': '1434894443', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434894443'}, {'id': '1240904821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1240904821'}, {'id': '1280672729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1280672729'}, {'id': '281644070', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281644070'}, {'id': '305368319', 'type': 'albums', 'href': '/v1/catalog/gb/albums/305368319'}, {'id': '216345401', 'type': 'albums', 'href': '/v1/catalog/gb/albums/216345401'}, {'id': '303549361', 'type': 'albums', 'href': '/v1/catalog/gb/albums/303549361'}, {'id': '270219844', 'type': 'albums', 'href': '/v1/catalog/gb/albums/270219844'}, {'id': '291714341', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291714341'}, {'id': '401456228', 'type': 'albums', 'href': '/v1/catalog/gb/albums/401456228'}, {'id': '1457893695', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457893695'}, {'id': '278773962', 'type': 'albums', 'href': '/v1/catalog/gb/albums/278773962'}, {'id': '256348204', 'type': 'albums', 'href': '/v1/catalog/gb/albums/256348204'}, {'id': '254938743', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254938743'}, {'id': '1457894588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457894588'}, {'id': '304706538', 'type': 'albums', 'href': '/v1/catalog/gb/albums/304706538'}, {'id': '271871464', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271871464'}, {'id': '1457968581', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457968581'}, {'id': '594578394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/594578394'}, {'id': '265093082', 'type': 'albums', 'href': '/v1/catalog/gb/albums/265093082'}, {'id': '1718588173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718588173'}, {'id': '1743496738', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1743496738'}, {'id': '1720439215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1720439215'}, {'id': '264529564', 'type': 'albums', 'href': '/v1/catalog/gb/albums/264529564'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "66916",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 66916,
+      "images": [
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/9KI64wMWFiSm4xOmDBZEk0-0okRbrHeRoa7PrBs5ZjE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/9KI64wMWFiSm4xOmDBZEk0-0okRbrHeRoa7PrBs5ZjE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Tgw-wb2Zeyvk5tPSojoH2l61MkgivvM2c7SrS6PGlLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/bLLufvCXW4AVvP2fZu4w7rpe0PLFnli7sL9J7brks5k/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bLLufvCXW4AVvP2fZu4w7rpe0PLFnli7sL9J7brks5k/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jFk63Jk0M5O-0sIxHSHMMPttIccffcTgIH0mxpoxmfI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 305,
+          "resource_url": "https://i.discogs.com/XizOXITWaBsDuJg8ox96_7JD_NhV5GQEUpgZz08j1wM/rs:fit/g:sm/q:90/h:305/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XizOXITWaBsDuJg8ox96_7JD_NhV5GQEUpgZz08j1wM/rs:fit/g:sm/q:90/h:305/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/5ipJzQGwC-nGzsoW2axrlKlZpi5U449fBsUCoP5GBC0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "width": 542
+        },
+        {
+          "height": 227,
+          "resource_url": "https://i.discogs.com/iIUF_KjINXKDFT20OcIxYvWg5RD0r9sdbzk2SMhZ9fc/rs:fit/g:sm/q:90/h:227/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iIUF_KjINXKDFT20OcIxYvWg5RD0r9sdbzk2SMhZ9fc/rs:fit/g:sm/q:90/h:227/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JYJcMesiGM26efvsIpGfvLOsDJvFLU0ZfhiCKA5SthA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "width": 567
+        },
+        {
+          "height": 496,
+          "resource_url": "https://i.discogs.com/lvyiP1Epk8ZZ3A30V1k1SOTJCxS9wq2bc-j-a3Bo2qc/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lvyiP1Epk8ZZ3A30V1k1SOTJCxS9wq2bc-j-a3Bo2qc/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/cgKUSPXMfSmp9_7PEwu9wneJQE0Cm0yCuWao0ZuL-eg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 318,
+          "resource_url": "https://i.discogs.com/phSHJ8cSQ1uRbLyLMrfsGdlGZA6GYyxXOSV5xeujQ3k/rs:fit/g:sm/q:90/h:318/w:473/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/phSHJ8cSQ1uRbLyLMrfsGdlGZA6GYyxXOSV5xeujQ3k/rs:fit/g:sm/q:90/h:318/w:473/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jBoU3hpJHW3mriqF-681jU6VZxtX6Y59Qqo1g5eJ454/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "width": 473
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/sSH1n5-bUY0CiFAKGzeQnvMWnLZrGEi3CUnykAUexX8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sSH1n5-bUY0CiFAKGzeQnvMWnLZrGEi3CUnykAUexX8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Vx4-AC9k88B1hvVO7mAkpK9bsMtjTZrc2CiNsi-bi88/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/q81S7r1J276XaZ0BibgOSmqnHVlTmfVBHMa1kEI2-Cw/rs:fit/g:sm/q:90/h:425/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q81S7r1J276XaZ0BibgOSmqnHVlTmfVBHMa1kEI2-Cw/rs:fit/g:sm/q:90/h:425/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QqJx1p_y7puUhxo-LCw3nGzksN4gG6lQ1IgrP4AiDz8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 157075,
+          "name": "Alan Parsons",
+          "resource_url": "https://api.discogs.com/artists/157075"
+        },
+        {
+          "active": true,
+          "id": 218601,
+          "name": "Eric Woolfson",
+          "resource_url": "https://api.discogs.com/artists/218601"
+        }
+      ],
       "name": "The Alan Parsons Project",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "66916",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/66916"
-      },
+      "namevariations": [
+        "A. Parson",
+        "A. Parsons",
+        "A.P.P.",
+        "A.Parsons",
+        "Alan Arson",
+        "Alan Parson",
+        "Alan Parson Project",
+        "Alan Parson's Project",
+        "Alan Parson's Proyect",
+        "Alan Parsons",
+        "Alan Parsons P.",
+        "Alan Parsons Project",
+        "Allan Parsons Project",
+        "El Proyecto De Alan Parsons",
+        "T.A.P.P.",
+        "The Alan Parson",
+        "The Alan Parson Project",
+        "The Alan Parson's Project",
+        "The Alan Parsons",
+        "The Alan Parsons Projekt",
+        "The Allan Parsons Project",
+        "« The Alan Parsons Project »",
+        "Алан Парсонс Проджект",
+        "アラン・パーソンズ・プロジェクト",
+        "亞倫派森合唱團",
+        "亞倫派森計劃",
+        "알란 파슨스 프로젝트"
+      ],
+      "profile": "British Rock studio project initially formed to record a concept album about Edgar Allan Poe. They became best known for the power ballad \"Eye in the Sky\" and the instrumental \"Sirius\".\r\n\r\n[b]Official band members[/b]\r\n● [a=Alan Parsons] – production, engineering, programming, composition, keyboards, guitar\r\n● [a=Eric Woolfson] – composition, lyrics, piano, keyboards, vocals, executive production\r\n\r\n[b]Notable contributors[/b]\r\n● [a=Andrew Powell] – composition, keyboards, orchestral arrangements (1975-1990)\r\n● [a=Philharmonia Orchestra]\r\n● [a=The English Chorale] – choir (1976, 1977, 1982, 1987)\r\n● [a=Ian Bairnson] – guitar (1975–1990)\r\n● [a=David Pack] – guitar (1976)\r\n● [a=David Paton] – bass, vocals (1975–1985)\r\n● [a=Duncan Mackay] – keyboards (1977–1979)\r\n● [a=Richard Cottle] – keyboards, saxophone (1984–1990)\r\n● [a=Laurence Cottle] – bass (1987-1990)\r\n● [a=Stuart Tosh] – drums, percussion (1975–1976)\r\n● [a=Stuart Elliott] – drums, percussion (1977–1990)\r\n● [a=John Leach] – cimbalom, kantele (1976–1978)\r\n● [a=Colin Blunstone] – vocals (1978–1984)\r\n● [a=Chris Rainbow] – vocals (1979–1990)\r\n● [a=Lenny Zakatek] – vocals (1977–1987)\r\n● [a=John Miles] – vocals (1976, 1978, 1985, 1987)\r\n● [a=Jack Harris] – vocals (1976–1978)\r\n● [a=Dave Townsend] – vocals (1977, 1979)\r\n● [a=Elmer Gantry] a.k.a. [a=Dave Terry (4)] – vocals (1980, 1982)\r\n● [a=Graham Dye] – vocals (1985, 1990)\r\n\r\nNon-recurring vocalists include: [a=Arthur Brown] (1975), [a=Allan Clarke] (1977), [a=Peter Straker] (1977), [a=Jaki Whitren] (1977), [a=Dean Ford] (1978), [a=Clare Torry] (1979), [a=Lesley Duncan] (1979), [a=Gary Brooker] (1985), [a=Geoff Barradale] (1987), [a=Eric Stewart] (1990)\r\n\r\nNotable instruments: Projectron - A device built by Alan Parsons as an analog sample playback device, similar in general concept to a Mellotron. The Projectron consisted of a 24-track tape machine, with each playback channel routed to a voltage controlled amplifier; each VCA was in turn gated by a key of an attached keyboard. The device was used on the albums I Robot, Pyramid, and The Turn of a Friendly Card. But preparing tapes was a cumbersome process and the device was maintenance-intensive, so as soon as a Fairlight CMI became available to Parsons, he switched his sampling activities to that. Parsons scrapped the Projectron sometime after 1980, and no photos of it are known to have survived.",
+      "releases_url": "https://api.discogs.com/artists/66916/releases",
       "resource_url": "https://api.discogs.com/artists/66916",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/66916",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/66916-The-Alan-Parsons-Project",
+      "urls": [
+        "https://alanparsons.com/",
+        "http://amiright.com/artists/alanparsonsproject.shtml",
+        "https://www.facebook.com/TheAlanParsonsProject",
+        "https://www.the-alan-parsons-project.com/",
+        "https://genius.com/artists/The-alan-parsons-project",
+        "https://www.last.fm/music/The+Alan+Parsons+Project",
+        "https://www.progarchives.com/artist.asp?id=286",
+        "https://en.wikipedia.org/wiki/The_Alan_Parsons_Project",
+        "https://www.imdb.com/name/nm1721338/",
+        "https://www.allmusic.com/artist/the-alan-parsons-project-mn0001176481"
+      ]
     },
     "identity": {
       "musicbrainz_id": "f98711e5-06f7-43ed-8239-da0f61a9c460",
@@ -259,27 +371,165 @@
         "track": "Eye in the Sky",
         "uri": "https://www.youtube.com/watch?v=PG4vu8F2AbE"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "Gaudi",
+        "id": "Q107369179",
+        "track": "Too Late",
+        "uri": "https://www.youtube.com/watch?v=vJvEH4En2bY"
+      },
+      {
+        "album": "Eye in the Sky",
+        "id": "Q6129496",
+        "track": "Sirius",
+        "uri": "https://www.youtube.com/watch?v=feoHV5JUbuo"
+      },
+      {
+        "album": "Eye in the Sky",
+        "id": "Q6129496",
+        "track": "Sirius",
+        "uri": "https://www.youtube.com/watch?v=aBQalkIeE7s"
+      },
+      {
+        "album": "The Turn of a Friendly Card",
+        "id": "Q7804889",
+        "track": "Time",
+        "uri": "https://www.youtube.com/watch?v=zhRzORqNa0E"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='13525', url='https://music.apple.com/gb/artist/the-alan-parsons-project/13525', name='The Alan Parsons Project', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/b6/1f/6a/b61f6a9d-2386-01c4-cf0b-8b7912e77c7a/mzl.obqwgoar.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13525', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13525', 'attributes': {'artwork': {'bgColor': '282824', 'height': 5000, 'textColor1': 'fbfbf5', 'textColor2': 'c8cac1', 'textColor3': 'd1d1cb', 'textColor4': 'a8a9a2', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/b6/1f/6a/b61f6a9d-2386-01c4-cf0b-8b7912e77c7a/mzl.obqwgoar.jpg/{w}x{h}bb.jpg', 'width': 5000}, 'genreNames': ['Rock'], 'name': 'The Alan Parsons Project', 'url': 'https://music.apple.com/gb/artist/the-alan-parsons-project/13525'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13525/albums', 'next': '/v1/catalog/gb/artists/13525/albums?offset=25', 'data': [{'id': '1205670750', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1205670750'}, {'id': '1434894443', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434894443'}, {'id': '1240904821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1240904821'}, {'id': '1280672729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1280672729'}, {'id': '281644070', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281644070'}, {'id': '305368319', 'type': 'albums', 'href': '/v1/catalog/gb/albums/305368319'}, {'id': '216345401', 'type': 'albums', 'href': '/v1/catalog/gb/albums/216345401'}, {'id': '303549361', 'type': 'albums', 'href': '/v1/catalog/gb/albums/303549361'}, {'id': '270219844', 'type': 'albums', 'href': '/v1/catalog/gb/albums/270219844'}, {'id': '291714341', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291714341'}, {'id': '401456228', 'type': 'albums', 'href': '/v1/catalog/gb/albums/401456228'}, {'id': '1457893695', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457893695'}, {'id': '278773962', 'type': 'albums', 'href': '/v1/catalog/gb/albums/278773962'}, {'id': '256348204', 'type': 'albums', 'href': '/v1/catalog/gb/albums/256348204'}, {'id': '254938743', 'type': 'albums', 'href': '/v1/catalog/gb/albums/254938743'}, {'id': '1457894588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457894588'}, {'id': '304706538', 'type': 'albums', 'href': '/v1/catalog/gb/albums/304706538'}, {'id': '271871464', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271871464'}, {'id': '1457968581', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457968581'}, {'id': '594578394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/594578394'}, {'id': '265093082', 'type': 'albums', 'href': '/v1/catalog/gb/albums/265093082'}, {'id': '1718588173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718588173'}, {'id': '1743496738', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1743496738'}, {'id': '1720439215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1720439215'}, {'id': '264529564', 'type': 'albums', 'href': '/v1/catalog/gb/albums/264529564'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "66916",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 66916,
+      "images": [
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/9KI64wMWFiSm4xOmDBZEk0-0okRbrHeRoa7PrBs5ZjE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/9KI64wMWFiSm4xOmDBZEk0-0okRbrHeRoa7PrBs5ZjE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Tgw-wb2Zeyvk5tPSojoH2l61MkgivvM2c7SrS6PGlLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MTc2Njk5MDct/NTEyMS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/bLLufvCXW4AVvP2fZu4w7rpe0PLFnli7sL9J7brks5k/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bLLufvCXW4AVvP2fZu4w7rpe0PLFnli7sL9J7brks5k/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jFk63Jk0M5O-0sIxHSHMMPttIccffcTgIH0mxpoxmfI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1ODgt/MTk2Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 305,
+          "resource_url": "https://i.discogs.com/XizOXITWaBsDuJg8ox96_7JD_NhV5GQEUpgZz08j1wM/rs:fit/g:sm/q:90/h:305/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XizOXITWaBsDuJg8ox96_7JD_NhV5GQEUpgZz08j1wM/rs:fit/g:sm/q:90/h:305/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/5ipJzQGwC-nGzsoW2axrlKlZpi5U449fBsUCoP5GBC0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3MzMu/anBlZw.jpeg",
+          "width": 542
+        },
+        {
+          "height": 227,
+          "resource_url": "https://i.discogs.com/iIUF_KjINXKDFT20OcIxYvWg5RD0r9sdbzk2SMhZ9fc/rs:fit/g:sm/q:90/h:227/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iIUF_KjINXKDFT20OcIxYvWg5RD0r9sdbzk2SMhZ9fc/rs:fit/g:sm/q:90/h:227/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JYJcMesiGM26efvsIpGfvLOsDJvFLU0ZfhiCKA5SthA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEyOTA5NDg3NzQu/anBlZw.jpeg",
+          "width": 567
+        },
+        {
+          "height": 496,
+          "resource_url": "https://i.discogs.com/lvyiP1Epk8ZZ3A30V1k1SOTJCxS9wq2bc-j-a3Bo2qc/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lvyiP1Epk8ZZ3A30V1k1SOTJCxS9wq2bc-j-a3Bo2qc/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/cgKUSPXMfSmp9_7PEwu9wneJQE0Cm0yCuWao0ZuL-eg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2NDYt/Njk5Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 318,
+          "resource_url": "https://i.discogs.com/phSHJ8cSQ1uRbLyLMrfsGdlGZA6GYyxXOSV5xeujQ3k/rs:fit/g:sm/q:90/h:318/w:473/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/phSHJ8cSQ1uRbLyLMrfsGdlGZA6GYyxXOSV5xeujQ3k/rs:fit/g:sm/q:90/h:318/w:473/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jBoU3hpJHW3mriqF-681jU6VZxtX6Y59Qqo1g5eJ454/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODM1MTg1OTYt/MzkyNS5qcGVn.jpeg",
+          "width": 473
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/sSH1n5-bUY0CiFAKGzeQnvMWnLZrGEi3CUnykAUexX8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sSH1n5-bUY0CiFAKGzeQnvMWnLZrGEi3CUnykAUexX8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Vx4-AC9k88B1hvVO7mAkpK9bsMtjTZrc2CiNsi-bi88/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTEzODI3Mzk2ODAt/MzQzNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/q81S7r1J276XaZ0BibgOSmqnHVlTmfVBHMa1kEI2-Cw/rs:fit/g:sm/q:90/h:425/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q81S7r1J276XaZ0BibgOSmqnHVlTmfVBHMa1kEI2-Cw/rs:fit/g:sm/q:90/h:425/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QqJx1p_y7puUhxo-LCw3nGzksN4gG6lQ1IgrP4AiDz8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTE2/LTE1MDM5NDcyMzEt/ODkxNC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 157075,
+          "name": "Alan Parsons",
+          "resource_url": "https://api.discogs.com/artists/157075"
+        },
+        {
+          "active": true,
+          "id": 218601,
+          "name": "Eric Woolfson",
+          "resource_url": "https://api.discogs.com/artists/218601"
+        }
+      ],
       "name": "The Alan Parsons Project",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "66916",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/66916"
-      },
+      "namevariations": [
+        "A. Parson",
+        "A. Parsons",
+        "A.P.P.",
+        "A.Parsons",
+        "Alan Arson",
+        "Alan Parson",
+        "Alan Parson Project",
+        "Alan Parson's Project",
+        "Alan Parson's Proyect",
+        "Alan Parsons",
+        "Alan Parsons P.",
+        "Alan Parsons Project",
+        "Allan Parsons Project",
+        "El Proyecto De Alan Parsons",
+        "T.A.P.P.",
+        "The Alan Parson",
+        "The Alan Parson Project",
+        "The Alan Parson's Project",
+        "The Alan Parsons",
+        "The Alan Parsons Projekt",
+        "The Allan Parsons Project",
+        "« The Alan Parsons Project »",
+        "Алан Парсонс Проджект",
+        "アラン・パーソンズ・プロジェクト",
+        "亞倫派森合唱團",
+        "亞倫派森計劃",
+        "알란 파슨스 프로젝트"
+      ],
+      "profile": "British Rock studio project initially formed to record a concept album about Edgar Allan Poe. They became best known for the power ballad \"Eye in the Sky\" and the instrumental \"Sirius\".\r\n\r\n[b]Official band members[/b]\r\n● [a=Alan Parsons] – production, engineering, programming, composition, keyboards, guitar\r\n● [a=Eric Woolfson] – composition, lyrics, piano, keyboards, vocals, executive production\r\n\r\n[b]Notable contributors[/b]\r\n● [a=Andrew Powell] – composition, keyboards, orchestral arrangements (1975-1990)\r\n● [a=Philharmonia Orchestra]\r\n● [a=The English Chorale] – choir (1976, 1977, 1982, 1987)\r\n● [a=Ian Bairnson] – guitar (1975–1990)\r\n● [a=David Pack] – guitar (1976)\r\n● [a=David Paton] – bass, vocals (1975–1985)\r\n● [a=Duncan Mackay] – keyboards (1977–1979)\r\n● [a=Richard Cottle] – keyboards, saxophone (1984–1990)\r\n● [a=Laurence Cottle] – bass (1987-1990)\r\n● [a=Stuart Tosh] – drums, percussion (1975–1976)\r\n● [a=Stuart Elliott] – drums, percussion (1977–1990)\r\n● [a=John Leach] – cimbalom, kantele (1976–1978)\r\n● [a=Colin Blunstone] – vocals (1978–1984)\r\n● [a=Chris Rainbow] – vocals (1979–1990)\r\n● [a=Lenny Zakatek] – vocals (1977–1987)\r\n● [a=John Miles] – vocals (1976, 1978, 1985, 1987)\r\n● [a=Jack Harris] – vocals (1976–1978)\r\n● [a=Dave Townsend] – vocals (1977, 1979)\r\n● [a=Elmer Gantry] a.k.a. [a=Dave Terry (4)] – vocals (1980, 1982)\r\n● [a=Graham Dye] – vocals (1985, 1990)\r\n\r\nNon-recurring vocalists include: [a=Arthur Brown] (1975), [a=Allan Clarke] (1977), [a=Peter Straker] (1977), [a=Jaki Whitren] (1977), [a=Dean Ford] (1978), [a=Clare Torry] (1979), [a=Lesley Duncan] (1979), [a=Gary Brooker] (1985), [a=Geoff Barradale] (1987), [a=Eric Stewart] (1990)\r\n\r\nNotable instruments: Projectron - A device built by Alan Parsons as an analog sample playback device, similar in general concept to a Mellotron. The Projectron consisted of a 24-track tape machine, with each playback channel routed to a voltage controlled amplifier; each VCA was in turn gated by a key of an attached keyboard. The device was used on the albums I Robot, Pyramid, and The Turn of a Friendly Card. But preparing tapes was a cumbersome process and the device was maintenance-intensive, so as soon as a Fairlight CMI became available to Parsons, he switched his sampling activities to that. Parsons scrapped the Projectron sometime after 1980, and no photos of it are known to have survived.",
+      "releases_url": "https://api.discogs.com/artists/66916/releases",
       "resource_url": "https://api.discogs.com/artists/66916",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/66916",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/66916-The-Alan-Parsons-Project",
+      "urls": [
+        "https://alanparsons.com/",
+        "http://amiright.com/artists/alanparsonsproject.shtml",
+        "https://www.facebook.com/TheAlanParsonsProject",
+        "https://www.the-alan-parsons-project.com/",
+        "https://genius.com/artists/The-alan-parsons-project",
+        "https://www.last.fm/music/The+Alan+Parsons+Project",
+        "https://www.progarchives.com/artist.asp?id=286",
+        "https://en.wikipedia.org/wiki/The_Alan_Parsons_Project",
+        "https://www.imdb.com/name/nm1721338/",
+        "https://www.allmusic.com/artist/the-alan-parsons-project-mn0001176481"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Alan Parsons Project', url='https://www.last.fm/music/The+Alan+Parsons+Project', mbid='f98711e5-06f7-43ed-8239-da0f61a9c460', listeners=1124315, playcount=25111993, bio_summary='The Alan Parsons Project was a British rock group active from 1975 until 1990, founded by Alan Parsons and Eric Woolfson both from London, England. The group is based on a number of regular group members such as Stuart Elliot and Ian Bairnson, complemented with varying lead vocals such as Colin Blunstone (the Zombies), Chris Rainbow and Gary Brooker (Procol Harum).  The group is well known for its concept albums, which cover themes such as Edgar Allan Poe, Gaudi, and Freud.  <a href=\"https://www.last.fm/music/The+Alan+Parsons+Project\">Read more on Last.fm</a>', bio_content='The Alan Parsons Project was a British rock group active from 1975 until 1990, founded by Alan Parsons and Eric Woolfson both from London, England. The group is based on a number of regular group members such as Stuart Elliot and Ian Bairnson, complemented with varying lead vocals such as Colin Blunstone (the Zombies), Chris Rainbow and Gary Brooker (Procol Harum).  The group is well known for its concept albums, which cover themes such as Edgar Allan Poe, Gaudi, and Freud. \\n\\nEric Woolfson wrote most of the music and lyrics while Alan Parsons overviewed the production process. Prior to starting his Project, Parsons worked as an engineer with names such as the Beatles (Abbey Road, the Get Back roofttop concert) and Pink Floyd (Dark Side of the Moon, Atom Heart Mother).\\n\\nSince the 1990s Alan Parsons has been performing live shows, touring all over the world, but without Eric Woolfson. <a href=\"https://www.last.fm/music/The+Alan+Parsons+Project\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'classic rock', 'rock', '80s', 'electronic'], similar_artists=[{'name': 'Alan Parsons', 'url': 'https://www.last.fm/music/Alan+Parsons'}, {'name': 'Supertramp', 'url': 'https://www.last.fm/music/Supertramp'}, {'name': 'Genesis', 'url': 'https://www.last.fm/music/Genesis'}, {'name': 'Barclay James Harvest', 'url': 'https://www.last.fm/music/Barclay+James+Harvest'}, {'name': 'Camel', 'url': 'https://www.last.fm/music/Camel'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Alan Parsons Project', 'mbid': 'f98711e5-06f7-43ed-8239-da0f61a9c460', 'url': 'https://www.last.fm/music/The+Alan+Parsons+Project', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1124315', 'playcount': '25111993'}, 'similar': {'artist': [{'name': 'Alan Parsons', 'url': 'https://www.last.fm/music/Alan+Parsons', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Supertramp', 'url': 'https://www.last.fm/music/Supertramp', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Genesis', 'url': 'https://www.last.fm/music/Genesis', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Barclay James Harvest', 'url': 'https://www.last.fm/music/Barclay+James+Harvest', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Camel', 'url': 'https://www.last.fm/music/Camel', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'classic rock', 'url': 'https://www.last.fm/tag/classic+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Alan+Parsons+Project/+wiki'}}, 'published': '01 Apr 2006, 18:13', 'summary': 'The Alan Parsons Project was a British rock group active from 1975 until 1990, founded by Alan Parsons and Eric Woolfson both from London, England. The group is based on a number of regular group members such as Stuart Elliot and Ian Bairnson, complemented with varying lead vocals such as Colin Blunstone (the Zombies), Chris Rainbow and Gary Brooker (Procol Harum).  The group is well known for its concept albums, which cover themes such as Edgar Allan Poe, Gaudi, and Freud.  <a href=\"https://www.last.fm/music/The+Alan+Parsons+Project\">Read more on Last.fm</a>', 'content': 'The Alan Parsons Project was a British rock group active from 1975 until 1990, founded by Alan Parsons and Eric Woolfson both from London, England. The group is based on a number of regular group members such as Stuart Elliot and Ian Bairnson, complemented with varying lead vocals such as Colin Blunstone (the Zombies), Chris Rainbow and Gary Brooker (Procol Harum).  The group is well known for its concept albums, which cover themes such as Edgar Allan Poe, Gaudi, and Freud. \\n\\nEric Woolfson wrote most of the music and lyrics while Alan Parsons overviewed the production process. Prior to starting his Project, Parsons worked as an engineer with names such as the Beatles (Abbey Road, the Get Back roofttop concert) and Pink Floyd (Dark Side of the Moon, Atom Heart Mother).\\n\\nSince the 1990s Alan Parsons has been performing live shows, touring all over the world, but without Eric Woolfson. <a href=\"https://www.last.fm/music/The+Alan+Parsons+Project\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2m62cc253Xvd9qYQ8d2X3d', url='https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d', name='The Alan Parsons Project', popularity=62, followers=1678104, genres=['progressive rock', 'classic rock'], images=[{'url': 'https://i.scdn.co/image/3e90d18b7375a0e78340d23f72822646c4cc3b70', 'height': 1028, 'width': 1000}, {'url': 'https://i.scdn.co/image/112b078d34b51f977720805963334611383ee1c1', 'height': 658, 'width': 640}, {'url': 'https://i.scdn.co/image/63e9f6ec84b77cd5d8631c7d6e9c2f3273693254', 'height': 206, 'width': 200}, {'url': 'https://i.scdn.co/image/50beb6c019cacb758e07f102168add254b0acd18', 'height': 66, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d'}, 'followers': {'href': None, 'total': 1678104}, 'genres': ['progressive rock', 'classic rock'], 'href': 'https://api.spotify.com/v1/artists/2m62cc253Xvd9qYQ8d2X3d', 'id': '2m62cc253Xvd9qYQ8d2X3d', 'images': [{'url': 'https://i.scdn.co/image/3e90d18b7375a0e78340d23f72822646c4cc3b70', 'height': 1028, 'width': 1000}, {'url': 'https://i.scdn.co/image/112b078d34b51f977720805963334611383ee1c1', 'height': 658, 'width': 640}, {'url': 'https://i.scdn.co/image/63e9f6ec84b77cd5d8631c7d6e9c2f3273693254', 'height': 206, 'width': 200}, {'url': 'https://i.scdn.co/image/50beb6c019cacb758e07f102168add254b0acd18', 'height': 66, 'width': 64}], 'name': 'The Alan Parsons Project', 'popularity': 62, 'type': 'artist', 'uri': 'spotify:artist:2m62cc253Xvd9qYQ8d2X3d'})",
@@ -371,6 +621,6 @@
   },
   "spotify_id": "2m62cc253Xvd9qYQ8d2X3d",
   "spotify_url": "https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d",
-  "updated_at": "2026-10-22T14:11:55.290712",
+  "updated_at": "2026-10-30T18:46:01.482159",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Alan_Parsons_Project"
 }

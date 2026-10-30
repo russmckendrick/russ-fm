@@ -112,22 +112,199 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='14596532', url='https://music.apple.com/gb/artist/television/14596532', name='Television', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/34/b2/b8/34b2b849-ddca-374c-7d5e-b4e7985562ec/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '14596532', 'type': 'artists', 'href': '/v1/catalog/gb/artists/14596532', 'attributes': {'name': 'Television', 'genreNames': ['Alternative'], 'artwork': {'width': 1072, 'height': 1072, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/34/b2/b8/34b2b849-ddca-374c-7d5e-b4e7985562ec/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '181110', 'textColor1': 'decebe', 'textColor2': 'ec4730', 'textColor3': 'b6a89b', 'textColor4': 'c23c2a'}, 'url': 'https://music.apple.com/gb/artist/television/14596532'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/14596532/albums', 'data': [{'id': '1049069472', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1049069472'}, {'id': '298683580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298683580'}, {'id': '724086650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724086650'}, {'id': '84867231', 'type': 'albums', 'href': '/v1/catalog/gb/albums/84867231'}, {'id': '203703381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/203703381'}, {'id': '78981447', 'type': 'albums', 'href': '/v1/catalog/gb/albums/78981447'}, {'id': '1363113970', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1363113970'}, {'id': '256302980', 'type': 'albums', 'href': '/v1/catalog/gb/albums/256302980'}, {'id': '1666934680', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666934680'}, {'id': '1755055890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1755055890'}, {'id': '1621729670', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1621729670'}, {'id': '1669838665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1669838665'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "254494",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 254494,
+      "images": [
+        {
+          "height": 378,
+          "resource_url": "https://i.discogs.com/rSkIXsJjwu7MkL3A90st6qeagif978nSb7KCmCLJX2k/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/rSkIXsJjwu7MkL3A90st6qeagif978nSb7KCmCLJX2k/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "uri150": "https://i.discogs.com/mPFvMFBt1jtzqBaybSQltpswCwMnuaT8EA1xP62cu1w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 535,
+          "resource_url": "https://i.discogs.com/5qNqQ-vENq0sY2kC-QbTVQhnFilfDO6FdOYJj2OIEho/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5qNqQ-vENq0sY2kC-QbTVQhnFilfDO6FdOYJj2OIEho/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/erda8E9rEFTiiiqAZmMNnVZUG5lbi5sC2JGZtpw6yD8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/77n9ZKT7PYQe9hfzOsn9XrVf5-1JQ1HKfzUtyR9vGRo/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/77n9ZKT7PYQe9hfzOsn9XrVf5-1JQ1HKfzUtyR9vGRo/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/BmdlK_cHDPy6Hhqr-acJIxQTd0KTit5Uv1YtSlSFicE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/fntM126PjhqCPdC6FBbeo8ewZHjScYXcXl2dnoP1PV0/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fntM126PjhqCPdC6FBbeo8ewZHjScYXcXl2dnoP1PV0/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/J2tgNlKN134mQXA1ayq3Ej7UDA83Bu01kMGdolu6VkE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/QZeI-2hKHrhDEs5_eDu3Uh-Pkep5BNEfqG02QauuFW0/rs:fit/g:sm/q:90/h:390/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QZeI-2hKHrhDEs5_eDu3Uh-Pkep5BNEfqG02QauuFW0/rs:fit/g:sm/q:90/h:390/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Ipe7rtJc5JsHPE1iPybFdykq0ablktHnTiON4RMgyZk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 379,
+          "resource_url": "https://i.discogs.com/2a-DEPp8OupODeRVQ6tiHbRSkMzDRfxls9kJ2sDm0_4/rs:fit/g:sm/q:90/h:379/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2a-DEPp8OupODeRVQ6tiHbRSkMzDRfxls9kJ2sDm0_4/rs:fit/g:sm/q:90/h:379/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w9Co4VyPdK4QRECB8ucwA0dJa4y1NhuFly7WFJjhmVE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "width": 465
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/vRXKlGMpcc4qZnIdLkCNhS8yEoPJdBuG9AHjR5-dcC8/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vRXKlGMpcc4qZnIdLkCNhS8yEoPJdBuG9AHjR5-dcC8/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/brgwU8flWsaAGmCjy8uzSQm1FZoT8106cNPvn0XnfxE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "width": 482
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/j2t1t0BeHaB-8BijxCVSn4g7Wh3tpjeASt-i7FHhwyo/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j2t1t0BeHaB-8BijxCVSn4g7Wh3tpjeASt-i7FHhwyo/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0AvPSvcettkkKSz_pbZQ9gbF7C_2AOk2Osdss1LVnoE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/Nb7IvXecIOEYpsPBQD-W2F-40bfXdTYWcH7mgCSB0is/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nb7IvXecIOEYpsPBQD-W2F-40bfXdTYWcH7mgCSB0is/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8W_CetkGsV5XzezwJhnyBuWZkJYnB-qdx_SXdAJ1xdI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 207,
+          "resource_url": "https://i.discogs.com/5GlcqqoOEHQ2m0ULD4pvJD8KKYMnvk82Z6ph2LQFWZw/rs:fit/g:sm/q:90/h:207/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5GlcqqoOEHQ2m0ULD4pvJD8KKYMnvk82Z6ph2LQFWZw/rs:fit/g:sm/q:90/h:207/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tl2KLsaOsjAl1nFVe2zHJ09SzdyiZGAiZSjgjy06t-Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/Ch71jF6vwtKVtXyu7um26JBEUVlEsza8lggqL0jyw3M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ch71jF6vwtKVtXyu7um26JBEUVlEsza8lggqL0jyw3M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4R5bT4KAOzpxnGSmdeLSK0DhCSTcYglqs_Krt4pnFv0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/bfDEtUHeQ_mePW7rqrA_vMbYlckNSh3yDSaRoktYGCo/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bfDEtUHeQ_mePW7rqrA_vMbYlckNSh3yDSaRoktYGCo/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/vxA3iDIaAyaIjS2Fq58gtpiFsRK2CSCjv6OBRturi1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "width": 597
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/J9tzwcoYqsr9Usy_sChm65Es_y4H4rmep_mOUfu2rV8/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J9tzwcoYqsr9Usy_sChm65Es_y4H4rmep_mOUfu2rV8/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZMrjryEQ6Cn1MLbGxp-trEuG7aSqgU9cIIfxdSiFCpk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/H-4cVLkQn3yEEveAQ8nI_zFEZPEcZhidU4NruP7nc9k/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/H-4cVLkQn3yEEveAQ8nI_zFEZPEcZhidU4NruP7nc9k/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/COZHHR_eR8Bf5oizXVgVjME3y9Dke2POncFv7UvLTv0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/d4K6IF3F1tcCHDaR6rpZnMYTEOsHi6rzqIQxRj6PM8c/rs:fit/g:sm/q:90/h:600/w:543/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/d4K6IF3F1tcCHDaR6rpZnMYTEOsHi6rzqIQxRj6PM8c/rs:fit/g:sm/q:90/h:600/w:543/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Jquitc7iuPdbZosc8m8XrIIzvZocXG8oac8XDsy78hA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "width": 543
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/Vm1-fMk3rYLkuXu7sb8IhVNxAnFzlOc7Yj3Pmw7wNdI/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Vm1-fMk3rYLkuXu7sb8IhVNxAnFzlOc7Yj3Pmw7wNdI/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/5kJYVTsOD9P-iGZHc9NMrw-UjR4OhSKg6rledcyG8Gs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 378,
+          "resource_url": "https://i.discogs.com/aP0pj4-Mlp_OKJnqTo-lnUzH9MgCJ7qOpBR4_ci_Wxc/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aP0pj4-Mlp_OKJnqTo-lnUzH9MgCJ7qOpBR4_ci_Wxc/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "uri150": "https://i.discogs.com/wn6iFD2SVtzWOgrU35aOAU5hMrsft9hybfqhuyQkoBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 258562,
+          "name": "Tom Verlaine",
+          "resource_url": "https://api.discogs.com/artists/258562"
+        },
+        {
+          "active": false,
+          "id": 314735,
+          "name": "Richard Lloyd",
+          "resource_url": "https://api.discogs.com/artists/314735"
+        },
+        {
+          "active": true,
+          "id": 327924,
+          "name": "Billy Ficca",
+          "resource_url": "https://api.discogs.com/artists/327924"
+        },
+        {
+          "active": false,
+          "id": 737288,
+          "name": "Richard Meyers",
+          "resource_url": "https://api.discogs.com/artists/737288"
+        },
+        {
+          "active": true,
+          "id": 936359,
+          "name": "Jimmy Rip",
+          "resource_url": "https://api.discogs.com/artists/936359"
+        },
+        {
+          "active": true,
+          "id": 1550506,
+          "name": "Fred Smith (7)",
+          "resource_url": "https://api.discogs.com/artists/1550506"
+        }
+      ],
       "name": "Television",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "254494",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/254494"
-      },
+      "profile": "American rock band founded in New York City in 1973, by [a=Tom Verlaine] (vocals, guitar), [a=Richard Lloyd] (guitar), [a=Richard Hell] (bass) and [a=Billy Ficca] (drums). In 1975, Hell was replaced by Fred E. Smith.\n\nAfter releasing two albums, they disbanded in 1978. They reunited between 1991 and 1993, releasing a third album. Their second reunion took place in 2001. Lloyd departed in 2007, with Television playing until Verlaine's death in 2023.",
+      "releases_url": "https://api.discogs.com/artists/254494/releases",
       "resource_url": "https://api.discogs.com/artists/254494",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/254494",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/254494-Television",
+      "urls": [
+        "https://thewonder.obbard.com/",
+        "http://en.wikipedia.org/wiki/Television_(band)",
+        "https://www.facebook.com/groups/1674127316134666",
+        "https://www.facebook.com/televisionband/",
+        "https://twitter.com/televisionband",
+        "https://www.imdb.com/name/nm2098433/",
+        "https://genius.com/artists/Television",
+        "https://www.setlist.fm/setlists/television-7bd6ae1c.html"
+      ]
     },
     "identity": {
       "musicbrainz_id": "490bde43-5edb-4a93-b3b3-7a0465fd8909",
@@ -187,27 +364,205 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='14596532', url='https://music.apple.com/gb/artist/television/14596532', name='Television', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/34/b2/b8/34b2b849-ddca-374c-7d5e-b4e7985562ec/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '14596532', 'type': 'artists', 'href': '/v1/catalog/gb/artists/14596532', 'attributes': {'name': 'Television', 'genreNames': ['Alternative'], 'artwork': {'width': 1072, 'height': 1072, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/34/b2/b8/34b2b849-ddca-374c-7d5e-b4e7985562ec/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '181110', 'textColor1': 'decebe', 'textColor2': 'ec4730', 'textColor3': 'b6a89b', 'textColor4': 'c23c2a'}, 'url': 'https://music.apple.com/gb/artist/television/14596532'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/14596532/albums', 'data': [{'id': '1049069472', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1049069472'}, {'id': '298683580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298683580'}, {'id': '724086650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724086650'}, {'id': '84867231', 'type': 'albums', 'href': '/v1/catalog/gb/albums/84867231'}, {'id': '203703381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/203703381'}, {'id': '78981447', 'type': 'albums', 'href': '/v1/catalog/gb/albums/78981447'}, {'id': '1363113970', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1363113970'}, {'id': '256302980', 'type': 'albums', 'href': '/v1/catalog/gb/albums/256302980'}, {'id': '1666934680', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666934680'}, {'id': '1755055890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1755055890'}, {'id': '1621729670', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1621729670'}, {'id': '1669838665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1669838665'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "254494",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 254494,
+      "images": [
+        {
+          "height": 378,
+          "resource_url": "https://i.discogs.com/rSkIXsJjwu7MkL3A90st6qeagif978nSb7KCmCLJX2k/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/rSkIXsJjwu7MkL3A90st6qeagif978nSb7KCmCLJX2k/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "uri150": "https://i.discogs.com/mPFvMFBt1jtzqBaybSQltpswCwMnuaT8EA1xP62cu1w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzgz/LTUzNDIucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 535,
+          "resource_url": "https://i.discogs.com/5qNqQ-vENq0sY2kC-QbTVQhnFilfDO6FdOYJj2OIEho/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5qNqQ-vENq0sY2kC-QbTVQhnFilfDO6FdOYJj2OIEho/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/erda8E9rEFTiiiqAZmMNnVZUG5lbi5sC2JGZtpw6yD8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjUxMjg5NzI5/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/77n9ZKT7PYQe9hfzOsn9XrVf5-1JQ1HKfzUtyR9vGRo/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/77n9ZKT7PYQe9hfzOsn9XrVf5-1JQ1HKfzUtyR9vGRo/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/BmdlK_cHDPy6Hhqr-acJIxQTd0KTit5Uv1YtSlSFicE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE0/LTkxMTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/fntM126PjhqCPdC6FBbeo8ewZHjScYXcXl2dnoP1PV0/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fntM126PjhqCPdC6FBbeo8ewZHjScYXcXl2dnoP1PV0/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/J2tgNlKN134mQXA1ayq3Ej7UDA83Bu01kMGdolu6VkE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzODgw/LTM1ODYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/QZeI-2hKHrhDEs5_eDu3Uh-Pkep5BNEfqG02QauuFW0/rs:fit/g:sm/q:90/h:390/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QZeI-2hKHrhDEs5_eDu3Uh-Pkep5BNEfqG02QauuFW0/rs:fit/g:sm/q:90/h:390/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Ipe7rtJc5JsHPE1iPybFdykq0ablktHnTiON4RMgyZk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNDU0MzEzODMx/LTkyMTAuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 379,
+          "resource_url": "https://i.discogs.com/2a-DEPp8OupODeRVQ6tiHbRSkMzDRfxls9kJ2sDm0_4/rs:fit/g:sm/q:90/h:379/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2a-DEPp8OupODeRVQ6tiHbRSkMzDRfxls9kJ2sDm0_4/rs:fit/g:sm/q:90/h:379/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w9Co4VyPdK4QRECB8ucwA0dJa4y1NhuFly7WFJjhmVE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMjg2MzA4MDMy/LmpwZWc.jpeg",
+          "width": 465
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/vRXKlGMpcc4qZnIdLkCNhS8yEoPJdBuG9AHjR5-dcC8/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vRXKlGMpcc4qZnIdLkCNhS8yEoPJdBuG9AHjR5-dcC8/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/brgwU8flWsaAGmCjy8uzSQm1FZoT8106cNPvn0XnfxE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjMxODc5MjMw/LTIxNjguanBlZw.jpeg",
+          "width": 482
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/j2t1t0BeHaB-8BijxCVSn4g7Wh3tpjeASt-i7FHhwyo/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j2t1t0BeHaB-8BijxCVSn4g7Wh3tpjeASt-i7FHhwyo/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0AvPSvcettkkKSz_pbZQ9gbF7C_2AOk2Osdss1LVnoE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNjI3ODQzOTU3/LTIzOTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/Nb7IvXecIOEYpsPBQD-W2F-40bfXdTYWcH7mgCSB0is/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nb7IvXecIOEYpsPBQD-W2F-40bfXdTYWcH7mgCSB0is/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8W_CetkGsV5XzezwJhnyBuWZkJYnB-qdx_SXdAJ1xdI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMzAwMDE3NDkw/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 207,
+          "resource_url": "https://i.discogs.com/5GlcqqoOEHQ2m0ULD4pvJD8KKYMnvk82Z6ph2LQFWZw/rs:fit/g:sm/q:90/h:207/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5GlcqqoOEHQ2m0ULD4pvJD8KKYMnvk82Z6ph2LQFWZw/rs:fit/g:sm/q:90/h:207/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tl2KLsaOsjAl1nFVe2zHJ09SzdyiZGAiZSjgjy06t-Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xMTQ4NTYwMDAz/LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/Ch71jF6vwtKVtXyu7um26JBEUVlEsza8lggqL0jyw3M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ch71jF6vwtKVtXyu7um26JBEUVlEsza8lggqL0jyw3M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4R5bT4KAOzpxnGSmdeLSK0DhCSTcYglqs_Krt4pnFv0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMDgy/LTkwNjUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/bfDEtUHeQ_mePW7rqrA_vMbYlckNSh3yDSaRoktYGCo/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bfDEtUHeQ_mePW7rqrA_vMbYlckNSh3yDSaRoktYGCo/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/vxA3iDIaAyaIjS2Fq58gtpiFsRK2CSCjv6OBRturi1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjE5/LTIzODYuanBlZw.jpeg",
+          "width": 597
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/J9tzwcoYqsr9Usy_sChm65Es_y4H4rmep_mOUfu2rV8/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J9tzwcoYqsr9Usy_sChm65Es_y4H4rmep_mOUfu2rV8/rs:fit/g:sm/q:90/h:522/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZMrjryEQ6Cn1MLbGxp-trEuG7aSqgU9cIIfxdSiFCpk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjIy/LTM1MjYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/H-4cVLkQn3yEEveAQ8nI_zFEZPEcZhidU4NruP7nc9k/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/H-4cVLkQn3yEEveAQ8nI_zFEZPEcZhidU4NruP7nc9k/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/COZHHR_eR8Bf5oizXVgVjME3y9Dke2POncFv7UvLTv0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI1/LTk4MzIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/d4K6IF3F1tcCHDaR6rpZnMYTEOsHi6rzqIQxRj6PM8c/rs:fit/g:sm/q:90/h:600/w:543/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/d4K6IF3F1tcCHDaR6rpZnMYTEOsHi6rzqIQxRj6PM8c/rs:fit/g:sm/q:90/h:600/w:543/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Jquitc7iuPdbZosc8m8XrIIzvZocXG8oac8XDsy78hA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjI4/LTM0NDAuanBlZw.jpeg",
+          "width": 543
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/Vm1-fMk3rYLkuXu7sb8IhVNxAnFzlOc7Yj3Pmw7wNdI/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Vm1-fMk3rYLkuXu7sb8IhVNxAnFzlOc7Yj3Pmw7wNdI/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/5kJYVTsOD9P-iGZHc9NMrw-UjR4OhSKg6rledcyG8Gs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNTI5MzAyMjM5/LTcxMzguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 378,
+          "resource_url": "https://i.discogs.com/aP0pj4-Mlp_OKJnqTo-lnUzH9MgCJ7qOpBR4_ci_Wxc/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aP0pj4-Mlp_OKJnqTo-lnUzH9MgCJ7qOpBR4_ci_Wxc/rs:fit/g:sm/q:90/h:378/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "uri150": "https://i.discogs.com/wn6iFD2SVtzWOgrU35aOAU5hMrsft9hybfqhuyQkoBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDQ5/NC0xNzU0NzIyMzc1/LTM1NDQucG5n.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 258562,
+          "name": "Tom Verlaine",
+          "resource_url": "https://api.discogs.com/artists/258562"
+        },
+        {
+          "active": false,
+          "id": 314735,
+          "name": "Richard Lloyd",
+          "resource_url": "https://api.discogs.com/artists/314735"
+        },
+        {
+          "active": true,
+          "id": 327924,
+          "name": "Billy Ficca",
+          "resource_url": "https://api.discogs.com/artists/327924"
+        },
+        {
+          "active": false,
+          "id": 737288,
+          "name": "Richard Meyers",
+          "resource_url": "https://api.discogs.com/artists/737288"
+        },
+        {
+          "active": true,
+          "id": 936359,
+          "name": "Jimmy Rip",
+          "resource_url": "https://api.discogs.com/artists/936359"
+        },
+        {
+          "active": true,
+          "id": 1550506,
+          "name": "Fred Smith (7)",
+          "resource_url": "https://api.discogs.com/artists/1550506"
+        }
+      ],
       "name": "Television",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "254494",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/254494"
-      },
+      "profile": "American rock band founded in New York City in 1973, by [a=Tom Verlaine] (vocals, guitar), [a=Richard Lloyd] (guitar), [a=Richard Hell] (bass) and [a=Billy Ficca] (drums). In 1975, Hell was replaced by Fred E. Smith.\n\nAfter releasing two albums, they disbanded in 1978. They reunited between 1991 and 1993, releasing a third album. Their second reunion took place in 2001. Lloyd departed in 2007, with Television playing until Verlaine's death in 2023.",
+      "releases_url": "https://api.discogs.com/artists/254494/releases",
       "resource_url": "https://api.discogs.com/artists/254494",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/254494",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/254494-Television",
+      "urls": [
+        "https://thewonder.obbard.com/",
+        "http://en.wikipedia.org/wiki/Television_(band)",
+        "https://www.facebook.com/groups/1674127316134666",
+        "https://www.facebook.com/televisionband/",
+        "https://twitter.com/televisionband",
+        "https://www.imdb.com/name/nm2098433/",
+        "https://genius.com/artists/Television",
+        "https://www.setlist.fm/setlists/television-7bd6ae1c.html"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Television', url='https://www.last.fm/music/Television', mbid='490bde43-5edb-4a93-b3b3-7a0465fd8909', listeners=820118, playcount=13902335, bio_summary='Television was an American post-punk band formed in New York City in 1973. One of the most creative bands to emerge from New York\\'s CBGB scene of the mid-\\'70s, creating an influential new guitar vocabulary. While guitarists Tom Verlaine and Richard Lloyd liked to jam, they didn\\'t follow the accepted rock structures for improvisation — they removed the blues while retaining the raw energy of garage rock, adding complex, lyrical solo lines that recalled both jazz and rock. <a href=\"https://www.last.fm/music/Television\">Read more on Last.fm</a>', bio_content='Television was an American post-punk band formed in New York City in 1973. One of the most creative bands to emerge from New York\\'s CBGB scene of the mid-\\'70s, creating an influential new guitar vocabulary. While guitarists Tom Verlaine and Richard Lloyd liked to jam, they didn\\'t follow the accepted rock structures for improvisation — they removed the blues while retaining the raw energy of garage rock, adding complex, lyrical solo lines that recalled both jazz and rock. With its angular rhythms and fluid leads, Television\\'s music always went in unconventional directions, laying the groundwork for many of the guitar-based post-punk pop groups of the late \\'70s and \\'80s.\\n\\nIn the early \\'70s, Television began as the Neon Boys, a group featuring guitarist/vocalist Tom Verlaine, drummer Billy Ficca, and bassist Richard Hell. At the end of 1973 in New York City, New York, the group reunited under the name Television, adding rhythm guitarist Richard Lloyd. The following year, the band made its live debut at New York\\'s Townhouse theater and began to build up an underground following. Soon, their fan base was large enough that Verlaine was able to persuade CBGB to begin featuring live bands on a regular basis; the club would become an important venue for punk and new wave bands.  Television was the first punk/new wave bands to play at CBGB. That year, Verlaine played guitar on Patti Smith\\'s first single, \"Hey Joe\"/\"Piss Factory,\" as well as wrote a book of poetry with the singer.\\n\\nTelevision recorded a demo tape for Island Records with Brian Eno in 1975, yet the label decided not to sign the band. Hell left the band after the recording of the demo tape, forming the Heartbreakers with former New York Dolls guitarist Johnny Thunders; the following year, he began a solo career supported by the Voidoids, releasing a debut album, Blank Generation, in 1977. Hell was replaced by ex-Blondie bassist Fred Smith and Television recorded \"Little Johnny Jewel,\" releasing it on their own Ork record label. \"Little Johnny Jewel\" became an underground hit, attracting the attention of major record labels. In 1976, the band released a British EP on Stiff Records, which expanded their reputation. They signed with Elektra Records and began recording their debut album.\\n\\nMarquee Moon, the group\\'s first album, was released in early 1977 to great critical acclaim, yet it failed to attract a wide audience in America; in the U.K., it reached number 28 on the charts, launching the Top 40 single \"Prove It.\" Television supported Blondie on the group\\'s 1977 tour, but the shows didn\\'t increase the group\\'s following significantly.\\n\\nTelevision released their second album, Adventure, in the spring of 1978. While its American sales were better than those of Marquee Moon, the record didn\\'t make the charts; in Britain, it became a Top Ten hit. Months later, the group suddenly broke up, largely due to tensions between the two guitarists. Smith rejoined Blondie, while Verlaine and Lloyd both pursued solo careers; Lloyd also played on John Doe\\'s first solo album, as well as joined Matthew Sweet\\'s supporting band with the 1991 album Girlfriend.\\n\\nNearly 14 years after their breakup, Television re-formed in late 1991, recording a new, self titled album for Capitol Records. The reunited band began its comeback with a performance at England\\'s Glastonbury summer festival in 1992, releasing Television a couple months later. The album received good reviews, as did the tour that followed, yet the reunion was short-lived — the group disbanded again in early 1993. In 2001, Television again reunited for a handful of shows in the U.K., as well as an appearance at the Noise Pop Festival in Chicago. <a href=\"https://www.last.fm/music/Television\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-punk', 'new wave', 'punk', 'proto-punk', 'rock'], similar_artists=[{'name': 'Tom Verlaine', 'url': 'https://www.last.fm/music/Tom+Verlaine'}, {'name': 'Wire', 'url': 'https://www.last.fm/music/Wire'}, {'name': 'Gang of Four', 'url': 'https://www.last.fm/music/Gang+of+Four'}, {'name': 'The Modern Lovers', 'url': 'https://www.last.fm/music/The+Modern+Lovers'}, {'name': 'The Stooges', 'url': 'https://www.last.fm/music/The+Stooges'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Television', 'mbid': '490bde43-5edb-4a93-b3b3-7a0465fd8909', 'url': 'https://www.last.fm/music/Television', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '820118', 'playcount': '13902335'}, 'similar': {'artist': [{'name': 'Tom Verlaine', 'url': 'https://www.last.fm/music/Tom+Verlaine', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wire', 'url': 'https://www.last.fm/music/Wire', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gang of Four', 'url': 'https://www.last.fm/music/Gang+of+Four', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Modern Lovers', 'url': 'https://www.last.fm/music/The+Modern+Lovers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Stooges', 'url': 'https://www.last.fm/music/The+Stooges', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'new wave', 'url': 'https://www.last.fm/tag/new+wave'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'proto-punk', 'url': 'https://www.last.fm/tag/proto-punk'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Television/+wiki'}}, 'published': '13 Feb 2006, 01:43', 'summary': 'Television was an American post-punk band formed in New York City in 1973. One of the most creative bands to emerge from New York\\'s CBGB scene of the mid-\\'70s, creating an influential new guitar vocabulary. While guitarists Tom Verlaine and Richard Lloyd liked to jam, they didn\\'t follow the accepted rock structures for improvisation — they removed the blues while retaining the raw energy of garage rock, adding complex, lyrical solo lines that recalled both jazz and rock. <a href=\"https://www.last.fm/music/Television\">Read more on Last.fm</a>', 'content': 'Television was an American post-punk band formed in New York City in 1973. One of the most creative bands to emerge from New York\\'s CBGB scene of the mid-\\'70s, creating an influential new guitar vocabulary. While guitarists Tom Verlaine and Richard Lloyd liked to jam, they didn\\'t follow the accepted rock structures for improvisation — they removed the blues while retaining the raw energy of garage rock, adding complex, lyrical solo lines that recalled both jazz and rock. With its angular rhythms and fluid leads, Television\\'s music always went in unconventional directions, laying the groundwork for many of the guitar-based post-punk pop groups of the late \\'70s and \\'80s.\\n\\nIn the early \\'70s, Television began as the Neon Boys, a group featuring guitarist/vocalist Tom Verlaine, drummer Billy Ficca, and bassist Richard Hell. At the end of 1973 in New York City, New York, the group reunited under the name Television, adding rhythm guitarist Richard Lloyd. The following year, the band made its live debut at New York\\'s Townhouse theater and began to build up an underground following. Soon, their fan base was large enough that Verlaine was able to persuade CBGB to begin featuring live bands on a regular basis; the club would become an important venue for punk and new wave bands.  Television was the first punk/new wave bands to play at CBGB. That year, Verlaine played guitar on Patti Smith\\'s first single, \"Hey Joe\"/\"Piss Factory,\" as well as wrote a book of poetry with the singer.\\n\\nTelevision recorded a demo tape for Island Records with Brian Eno in 1975, yet the label decided not to sign the band. Hell left the band after the recording of the demo tape, forming the Heartbreakers with former New York Dolls guitarist Johnny Thunders; the following year, he began a solo career supported by the Voidoids, releasing a debut album, Blank Generation, in 1977. Hell was replaced by ex-Blondie bassist Fred Smith and Television recorded \"Little Johnny Jewel,\" releasing it on their own Ork record label. \"Little Johnny Jewel\" became an underground hit, attracting the attention of major record labels. In 1976, the band released a British EP on Stiff Records, which expanded their reputation. They signed with Elektra Records and began recording their debut album.\\n\\nMarquee Moon, the group\\'s first album, was released in early 1977 to great critical acclaim, yet it failed to attract a wide audience in America; in the U.K., it reached number 28 on the charts, launching the Top 40 single \"Prove It.\" Television supported Blondie on the group\\'s 1977 tour, but the shows didn\\'t increase the group\\'s following significantly.\\n\\nTelevision released their second album, Adventure, in the spring of 1978. While its American sales were better than those of Marquee Moon, the record didn\\'t make the charts; in Britain, it became a Top Ten hit. Months later, the group suddenly broke up, largely due to tensions between the two guitarists. Smith rejoined Blondie, while Verlaine and Lloyd both pursued solo careers; Lloyd also played on John Doe\\'s first solo album, as well as joined Matthew Sweet\\'s supporting band with the 1991 album Girlfriend.\\n\\nNearly 14 years after their breakup, Television re-formed in late 1991, recording a new, self titled album for Capitol Records. The reunited band began its comeback with a performance at England\\'s Glastonbury summer festival in 1992, releasing Television a couple months later. The album received good reviews, as did the tour that followed, yet the reunion was short-lived — the group disbanded again in early 1993. In 2001, Television again reunited for a handful of shows in the U.K., as well as an appearance at the Noise Pop Festival in Chicago. <a href=\"https://www.last.fm/music/Television\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0S7Zur2g8YhqlzqtlYStli', url='https://open.spotify.com/artist/0S7Zur2g8YhqlzqtlYStli', name='Television', popularity=46, followers=393042, genres=['proto-punk', 'post-punk', 'art rock', 'new wave'], images=[{'url': 'https://i.scdn.co/image/26da5a74d4273e0e9116ac7cbb4443def62fa3be', 'height': 726, 'width': 1000}, {'url': 'https://i.scdn.co/image/2af44d37ecdcac20872f193186daf6d24901c00f', 'height': 465, 'width': 640}, {'url': 'https://i.scdn.co/image/08b33b7b316f984ee203e7907303a76ce2153333', 'height': 145, 'width': 200}, {'url': 'https://i.scdn.co/image/271e7e7491fa4aa7b2a11e8dc6ebf8eb3f746ce1', 'height': 46, 'width': 63}], external_urls={'spotify': 'https://open.spotify.com/artist/0S7Zur2g8YhqlzqtlYStli'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0S7Zur2g8YhqlzqtlYStli'}, 'followers': {'href': None, 'total': 393042}, 'genres': ['proto-punk', 'post-punk', 'art rock', 'new wave'], 'href': 'https://api.spotify.com/v1/artists/0S7Zur2g8YhqlzqtlYStli', 'id': '0S7Zur2g8YhqlzqtlYStli', 'images': [{'url': 'https://i.scdn.co/image/26da5a74d4273e0e9116ac7cbb4443def62fa3be', 'height': 726, 'width': 1000}, {'url': 'https://i.scdn.co/image/2af44d37ecdcac20872f193186daf6d24901c00f', 'height': 465, 'width': 640}, {'url': 'https://i.scdn.co/image/08b33b7b316f984ee203e7907303a76ce2153333', 'height': 145, 'width': 200}, {'url': 'https://i.scdn.co/image/271e7e7491fa4aa7b2a11e8dc6ebf8eb3f746ce1', 'height': 46, 'width': 63}], 'name': 'Television', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:0S7Zur2g8YhqlzqtlYStli'})",
@@ -264,6 +619,6 @@
   },
   "spotify_id": "0S7Zur2g8YhqlzqtlYStli",
   "spotify_url": "https://open.spotify.com/artist/0S7Zur2g8YhqlzqtlYStli",
-  "updated_at": "2026-10-22T14:11:50.661106",
+  "updated_at": "2026-10-30T18:45:47.655635",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Television_(band)"
 }

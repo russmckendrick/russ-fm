@@ -120,22 +120,111 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='18280238', url='https://music.apple.com/gb/artist/slint/18280238', name='Slint', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/90/c1/c890c1f3-6e1b-dd55-8638-6d82b0f90e52/cover.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '18280238', 'type': 'artists', 'href': '/v1/catalog/gb/artists/18280238', 'attributes': {'name': 'Slint', 'genreNames': ['Alternative'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/90/c1/c890c1f3-6e1b-dd55-8638-6d82b0f90e52/cover.jpg/{w}x{h}ac.jpg', 'bgColor': '0a0c07', 'textColor1': 'e3e3e3', 'textColor2': 'c3c6c4', 'textColor3': 'b8b8b7', 'textColor4': '9ea19e'}, 'url': 'https://music.apple.com/gb/artist/slint/18280238'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/18280238/albums', 'data': [{'id': '1117723921', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1117723921'}, {'id': '1120325818', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120325818'}, {'id': '1120143456', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120143456'}, {'id': '1120165079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120165079'}, {'id': '1766814352', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766814352'}, {'id': '1550001598', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550001598'}, {'id': '1766734662', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766734662'}, {'id': '1764380515', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1764380515'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "56206",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 56206,
+      "images": [
+        {
+          "height": 299,
+          "resource_url": "https://i.discogs.com/2OZ3_slwpfzzF6PrzcJwOUs7KOJYEFE7y4nvHbVZcN0/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/2OZ3_slwpfzzF6PrzcJwOUs7KOJYEFE7y4nvHbVZcN0/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hW4o-FusiLgC0MD_P0PjVr9JjJv5VXoVnllQPRL9Kbo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/mc4utdKC_8mLMTF12W6pjS9te-T-WMqL5zbN_DmbJ3U/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mc4utdKC_8mLMTF12W6pjS9te-T-WMqL5zbN_DmbJ3U/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/lqd_43C_Ldj7-tIxiH5yAfiazfwb2zlaxOC33Eb7mp4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 403,
+          "resource_url": "https://i.discogs.com/3_6NzvMFuOC5xGd7988ldPFq-brRFUYxUJli1iI-JZg/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3_6NzvMFuOC5xGd7988ldPFq-brRFUYxUJli1iI-JZg/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1GwzwpusJy2YcPpTSyL9xfR--EXktz3DHB79zE0wEaE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 348,
+          "resource_url": "https://i.discogs.com/GRlOWcdfCH1IKBGLFKbWnVweLd7POoCUA9Hr3RHVlBk/rs:fit/g:sm/q:90/h:348/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GRlOWcdfCH1IKBGLFKbWnVweLd7POoCUA9Hr3RHVlBk/rs:fit/g:sm/q:90/h:348/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/wEyaayLH-NAiU8vRNb-6fNMBz-D0LMZmBos5j7VXLWA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/hqhbnbWli7MLUTtaWioLr_3Bn3TZviRu74DHfoiksq8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hqhbnbWli7MLUTtaWioLr_3Bn3TZviRu74DHfoiksq8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/__WwhJL2-Gt7c6m1ejDwUfPcCu6SCLm409NtecmdCxA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/ttFlL8VJ8lK6c2iNkwOLRucmaU5TC1UA-U2yXZZd8R8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ttFlL8VJ8lK6c2iNkwOLRucmaU5TC1UA-U2yXZZd8R8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/v8oTrUoFB2KZ0iLzMtyngdtcMf7i4BMORG44HFwFl0w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/fbKLVAFNOf3uwipUtmhAraBx5rlUZOHAat-qWvmsmA8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fbKLVAFNOf3uwipUtmhAraBx5rlUZOHAat-qWvmsmA8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/y56cKHGVoMBwd6NRArSqQk3Ic4OnfV7zti8S3FcPWNw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 135341,
+          "name": "Britt Walford",
+          "resource_url": "https://api.discogs.com/artists/135341"
+        },
+        {
+          "active": true,
+          "id": 254025,
+          "name": "David Pajo",
+          "resource_url": "https://api.discogs.com/artists/254025"
+        },
+        {
+          "active": true,
+          "id": 254075,
+          "name": "Todd Brashear",
+          "resource_url": "https://api.discogs.com/artists/254075"
+        },
+        {
+          "active": true,
+          "id": 254076,
+          "name": "Brian McMahan",
+          "resource_url": "https://api.discogs.com/artists/254076"
+        },
+        {
+          "active": false,
+          "id": 377812,
+          "name": "Ethan Buckler",
+          "resource_url": "https://api.discogs.com/artists/377812"
+        }
+      ],
       "name": "Slint",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "56206",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/56206"
-      },
+      "profile": "Slint was an American rock band formed in Louisville, KY in 1986. They disbanded following the recording of their second full-length album, Spiderland, in 1991. \r\n\r\nIn 2005, 2007 and 2014 the band reunited to play a number of live shows. On the 2007 tour dates, in addition to performing songs from Spiderland and the untitled 10\", they also debuted a new composition called \"King's Approach.\" Their 2014 tour coincided with the release of a box set compiling a remastered version of the Spiderland LP, previously unreleased studio outtakes and demos, and a new documentary film about their origins and the Louisville music scene.",
+      "releases_url": "https://api.discogs.com/artists/56206/releases",
       "resource_url": "https://api.discogs.com/artists/56206",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/56206",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/56206-Slint",
+      "urls": [
+        "https://instagram.com/slintmusic?igshid=YmMyMTA2M2Y=",
+        "http://www.descendo.com/slint",
+        "https://myspace.com/slinteriffic",
+        "http://en.wikipedia.org/wiki/Slint",
+        "https://slint.bandcamp.com/",
+        "https://www.facebook.com/Slint"
+      ]
     },
     "identity": {
       "musicbrainz_id": "2869c510-2679-4a3f-bf15-e5e8b49f2f28",
@@ -209,27 +298,117 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='18280238', url='https://music.apple.com/gb/artist/slint/18280238', name='Slint', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/90/c1/c890c1f3-6e1b-dd55-8638-6d82b0f90e52/cover.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '18280238', 'type': 'artists', 'href': '/v1/catalog/gb/artists/18280238', 'attributes': {'name': 'Slint', 'genreNames': ['Alternative'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/90/c1/c890c1f3-6e1b-dd55-8638-6d82b0f90e52/cover.jpg/{w}x{h}ac.jpg', 'bgColor': '0a0c07', 'textColor1': 'e3e3e3', 'textColor2': 'c3c6c4', 'textColor3': 'b8b8b7', 'textColor4': '9ea19e'}, 'url': 'https://music.apple.com/gb/artist/slint/18280238'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/18280238/albums', 'data': [{'id': '1117723921', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1117723921'}, {'id': '1120325818', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120325818'}, {'id': '1120143456', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120143456'}, {'id': '1120165079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1120165079'}, {'id': '1766814352', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766814352'}, {'id': '1550001598', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550001598'}, {'id': '1766734662', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766734662'}, {'id': '1764380515', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1764380515'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "56206",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 56206,
+      "images": [
+        {
+          "height": 299,
+          "resource_url": "https://i.discogs.com/2OZ3_slwpfzzF6PrzcJwOUs7KOJYEFE7y4nvHbVZcN0/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/2OZ3_slwpfzzF6PrzcJwOUs7KOJYEFE7y4nvHbVZcN0/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hW4o-FusiLgC0MD_P0PjVr9JjJv5VXoVnllQPRL9Kbo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE2NjUzNjQ0Nzkt/OTk2NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/mc4utdKC_8mLMTF12W6pjS9te-T-WMqL5zbN_DmbJ3U/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mc4utdKC_8mLMTF12W6pjS9te-T-WMqL5zbN_DmbJ3U/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/lqd_43C_Ldj7-tIxiH5yAfiazfwb2zlaxOC33Eb7mp4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0ODgt/MTkyMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 403,
+          "resource_url": "https://i.discogs.com/3_6NzvMFuOC5xGd7988ldPFq-brRFUYxUJli1iI-JZg/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3_6NzvMFuOC5xGd7988ldPFq-brRFUYxUJli1iI-JZg/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1GwzwpusJy2YcPpTSyL9xfR--EXktz3DHB79zE0wEaE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE1Mzk2NTI0NDAt/NzE0My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 348,
+          "resource_url": "https://i.discogs.com/GRlOWcdfCH1IKBGLFKbWnVweLd7POoCUA9Hr3RHVlBk/rs:fit/g:sm/q:90/h:348/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GRlOWcdfCH1IKBGLFKbWnVweLd7POoCUA9Hr3RHVlBk/rs:fit/g:sm/q:90/h:348/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/wEyaayLH-NAiU8vRNb-6fNMBz-D0LMZmBos5j7VXLWA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTExMTQ0NjAzMjMu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/hqhbnbWli7MLUTtaWioLr_3Bn3TZviRu74DHfoiksq8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hqhbnbWli7MLUTtaWioLr_3Bn3TZviRu74DHfoiksq8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/__WwhJL2-Gt7c6m1ejDwUfPcCu6SCLm409NtecmdCxA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ1OTkt/NzMyMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/ttFlL8VJ8lK6c2iNkwOLRucmaU5TC1UA-U2yXZZd8R8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ttFlL8VJ8lK6c2iNkwOLRucmaU5TC1UA-U2yXZZd8R8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/v8oTrUoFB2KZ0iLzMtyngdtcMf7i4BMORG44HFwFl0w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2NTYt/NDQ3NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/fbKLVAFNOf3uwipUtmhAraBx5rlUZOHAat-qWvmsmA8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fbKLVAFNOf3uwipUtmhAraBx5rlUZOHAat-qWvmsmA8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/y56cKHGVoMBwd6NRArSqQk3Ic4OnfV7zti8S3FcPWNw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU2MjA2/LTE3MjEwMjQ2ODkt/Njg0MS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 135341,
+          "name": "Britt Walford",
+          "resource_url": "https://api.discogs.com/artists/135341"
+        },
+        {
+          "active": true,
+          "id": 254025,
+          "name": "David Pajo",
+          "resource_url": "https://api.discogs.com/artists/254025"
+        },
+        {
+          "active": true,
+          "id": 254075,
+          "name": "Todd Brashear",
+          "resource_url": "https://api.discogs.com/artists/254075"
+        },
+        {
+          "active": true,
+          "id": 254076,
+          "name": "Brian McMahan",
+          "resource_url": "https://api.discogs.com/artists/254076"
+        },
+        {
+          "active": false,
+          "id": 377812,
+          "name": "Ethan Buckler",
+          "resource_url": "https://api.discogs.com/artists/377812"
+        }
+      ],
       "name": "Slint",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "56206",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/56206"
-      },
+      "profile": "Slint was an American rock band formed in Louisville, KY in 1986. They disbanded following the recording of their second full-length album, Spiderland, in 1991. \r\n\r\nIn 2005, 2007 and 2014 the band reunited to play a number of live shows. On the 2007 tour dates, in addition to performing songs from Spiderland and the untitled 10\", they also debuted a new composition called \"King's Approach.\" Their 2014 tour coincided with the release of a box set compiling a remastered version of the Spiderland LP, previously unreleased studio outtakes and demos, and a new documentary film about their origins and the Louisville music scene.",
+      "releases_url": "https://api.discogs.com/artists/56206/releases",
       "resource_url": "https://api.discogs.com/artists/56206",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/56206",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/56206-Slint",
+      "urls": [
+        "https://instagram.com/slintmusic?igshid=YmMyMTA2M2Y=",
+        "http://www.descendo.com/slint",
+        "https://myspace.com/slinteriffic",
+        "http://en.wikipedia.org/wiki/Slint",
+        "https://slint.bandcamp.com/",
+        "https://www.facebook.com/Slint"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Slint', url='https://www.last.fm/music/Slint', mbid='2869c510-2679-4a3f-bf15-e5e8b49f2f28', listeners=592824, playcount=15441335, bio_summary='Slint was an American post-hardcore band consisting of Brian McMahan (guitar and vocals), David Pajo (guitar), Britt Walford (drums), Todd Brashear (bass on Spiderland) and Ethan Buckler (bass on Tweez). They formed in Louisville, Kentucky, United States in 1986. Though they disbanded circa 1991, they are considered to be a major influence on the post-hardcore, math rock, and post-rock scenes.\\n\\nSlint\\'s first album Tweez was recorded by legendary sound <a href=\"https://www.last.fm/music/Slint\">Read more on Last.fm</a>', bio_content='Slint was an American post-hardcore band consisting of Brian McMahan (guitar and vocals), David Pajo (guitar), Britt Walford (drums), Todd Brashear (bass on Spiderland) and Ethan Buckler (bass on Tweez). They formed in Louisville, Kentucky, United States in 1986. Though they disbanded circa 1991, they are considered to be a major influence on the post-hardcore, math rock, and post-rock scenes.\\n\\nSlint\\'s first album Tweez was recorded by legendary sound engineer Steve Albini in 1987 and released in obscurity on the Jennifer Hartman Records label in 1989. It was followed two years later by the critically acclaimed Spiderland, released on the legendary independent label Touch and Go Records. \\n\\nConsidered a seminal work, Spiderland is an album characterised by its dark, syncopated rhythms, sparse guitar lines, and strange spoken-word esque vocal style. The record\\'s impact was such that, according to some, it helped to usher in a new wave of bands seeking a move away from the unfettered aggression of hardcore punk but not its underlying ethic. The cover of Spiderland is from a series of photos of the band taken by the Louisville singer-musician Will Oldham. Spiderland culminates in the baleful \"Good Morning, Captain\", perhaps their most recognised track (it would later feature on the soundtrack to the Larry Clark film Kids, though not in the film itself). \\n\\nTouch & Go reissued Tweez in 1993. Finally, in 1994 a brief untitled EP was released posthumously. This two song record was actually recorded in 1989 and was originally intended to be released as a 12\" single on Jennifer Hartman Records. Original copies of the Tweez LP included a flyer advertisement for the 12\" as an insert. However, Slint signed to Touch & Go before it was sent to press and the master tapes were shelved.\\n\\nMembers of Slint have since appeared in a number of bands. Former guitarist David Pajo currently performs under the moniker Papa M and also plays bass for the NYC street metal band Early Man. Pajo was also a member of Tortoise, Palace, and the short-lived Billy Corgan-fronted rock band Zwan before their breakup in 2003. Guitarist Brian McMahan formed The For Carnation in 1994 and also played with Palace. Britt Walford played drums in Evergreen, and for The Breeders under the pseudonym Shannon Doughton on the album Pod and as Mike Hunt on the Safari EP. Ethan Buckler plays in King Kong (the original line up of Slint makes up King Kong on the 1989 7\" \"Movie Star\").\\n\\nNearly fifteen years after disbanding, three members of Slint — Brian McMahan, David Pajo, and Britt Walford — reunited to curate the 2005 All Tomorrow\\'s Parties (ATP) music festival in Camber Sands, England. Also in 2005, Slint played a number of shows in the U.S. and in Europe. Though they insisted the reunion was short-term, the band regrouped once again in 2007 to perform Spiderland in its entirety in Barcelona as part of the Primavera Sound Festival, in London as part of the ATP Don\\'t Look Back series of shows, as well as at a handful of dates in Europe, the U.S. (at Chicago\\'s Pitchfork Music Festival, the Showbox in Seattle, and the Henry Fonda Theatre in Hollywood), and Canada in 2007.\\n\\nIn a September 2012 interview conducted with Northern Irish music publication AU Magazine, David Pajo hinted at more activity from the band in the coming months: \"We still communicate regularly and we\\'ve got some surprises for next year that fans will be excited about. I know I am.\"\\n\\nThe band reunited in December 2013 to play as one of the headliners of the final All Tomorrow\\'s Parties holiday camp festival in Camber Sands, England.\\n\\nIn an August 2013 interview with Vish Khanna, former producer Steve Albini revealed that the band was working on remastering their second album Spiderland with producer Bob Weston. The deluxe Spiderland boxset was announced in January 2014.\\n\\nIn 2014, the band also performed at the Primavera Sound music festival in Spain and Portugal and Green Man Festival in Wales, before disbanding again that same year. <a href=\"https://www.last.fm/music/Slint\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-rock', 'math rock', 'indie rock', 'indie', 'experimental'], similar_artists=[{'name': 'Unwound', 'url': 'https://www.last.fm/music/Unwound'}, {'name': 'black midi', 'url': 'https://www.last.fm/music/black+midi'}, {'name': 'Polvo', 'url': 'https://www.last.fm/music/Polvo'}, {'name': 'Rodan', 'url': 'https://www.last.fm/music/Rodan'}, {'name': 'Swans', 'url': 'https://www.last.fm/music/Swans'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Slint', 'mbid': '2869c510-2679-4a3f-bf15-e5e8b49f2f28', 'url': 'https://www.last.fm/music/Slint', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '592824', 'playcount': '15441335'}, 'similar': {'artist': [{'name': 'Unwound', 'url': 'https://www.last.fm/music/Unwound', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'black midi', 'url': 'https://www.last.fm/music/black+midi', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Polvo', 'url': 'https://www.last.fm/music/Polvo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rodan', 'url': 'https://www.last.fm/music/Rodan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Swans', 'url': 'https://www.last.fm/music/Swans', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'math rock', 'url': 'https://www.last.fm/tag/math+rock'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Slint/+wiki'}}, 'published': '08 Mar 2006, 21:32', 'summary': 'Slint was an American post-hardcore band consisting of Brian McMahan (guitar and vocals), David Pajo (guitar), Britt Walford (drums), Todd Brashear (bass on Spiderland) and Ethan Buckler (bass on Tweez). They formed in Louisville, Kentucky, United States in 1986. Though they disbanded circa 1991, they are considered to be a major influence on the post-hardcore, math rock, and post-rock scenes.\\n\\nSlint\\'s first album Tweez was recorded by legendary sound <a href=\"https://www.last.fm/music/Slint\">Read more on Last.fm</a>', 'content': 'Slint was an American post-hardcore band consisting of Brian McMahan (guitar and vocals), David Pajo (guitar), Britt Walford (drums), Todd Brashear (bass on Spiderland) and Ethan Buckler (bass on Tweez). They formed in Louisville, Kentucky, United States in 1986. Though they disbanded circa 1991, they are considered to be a major influence on the post-hardcore, math rock, and post-rock scenes.\\n\\nSlint\\'s first album Tweez was recorded by legendary sound engineer Steve Albini in 1987 and released in obscurity on the Jennifer Hartman Records label in 1989. It was followed two years later by the critically acclaimed Spiderland, released on the legendary independent label Touch and Go Records. \\n\\nConsidered a seminal work, Spiderland is an album characterised by its dark, syncopated rhythms, sparse guitar lines, and strange spoken-word esque vocal style. The record\\'s impact was such that, according to some, it helped to usher in a new wave of bands seeking a move away from the unfettered aggression of hardcore punk but not its underlying ethic. The cover of Spiderland is from a series of photos of the band taken by the Louisville singer-musician Will Oldham. Spiderland culminates in the baleful \"Good Morning, Captain\", perhaps their most recognised track (it would later feature on the soundtrack to the Larry Clark film Kids, though not in the film itself). \\n\\nTouch & Go reissued Tweez in 1993. Finally, in 1994 a brief untitled EP was released posthumously. This two song record was actually recorded in 1989 and was originally intended to be released as a 12\" single on Jennifer Hartman Records. Original copies of the Tweez LP included a flyer advertisement for the 12\" as an insert. However, Slint signed to Touch & Go before it was sent to press and the master tapes were shelved.\\n\\nMembers of Slint have since appeared in a number of bands. Former guitarist David Pajo currently performs under the moniker Papa M and also plays bass for the NYC street metal band Early Man. Pajo was also a member of Tortoise, Palace, and the short-lived Billy Corgan-fronted rock band Zwan before their breakup in 2003. Guitarist Brian McMahan formed The For Carnation in 1994 and also played with Palace. Britt Walford played drums in Evergreen, and for The Breeders under the pseudonym Shannon Doughton on the album Pod and as Mike Hunt on the Safari EP. Ethan Buckler plays in King Kong (the original line up of Slint makes up King Kong on the 1989 7\" \"Movie Star\").\\n\\nNearly fifteen years after disbanding, three members of Slint — Brian McMahan, David Pajo, and Britt Walford — reunited to curate the 2005 All Tomorrow\\'s Parties (ATP) music festival in Camber Sands, England. Also in 2005, Slint played a number of shows in the U.S. and in Europe. Though they insisted the reunion was short-term, the band regrouped once again in 2007 to perform Spiderland in its entirety in Barcelona as part of the Primavera Sound Festival, in London as part of the ATP Don\\'t Look Back series of shows, as well as at a handful of dates in Europe, the U.S. (at Chicago\\'s Pitchfork Music Festival, the Showbox in Seattle, and the Henry Fonda Theatre in Hollywood), and Canada in 2007.\\n\\nIn a September 2012 interview conducted with Northern Irish music publication AU Magazine, David Pajo hinted at more activity from the band in the coming months: \"We still communicate regularly and we\\'ve got some surprises for next year that fans will be excited about. I know I am.\"\\n\\nThe band reunited in December 2013 to play as one of the headliners of the final All Tomorrow\\'s Parties holiday camp festival in Camber Sands, England.\\n\\nIn an August 2013 interview with Vish Khanna, former producer Steve Albini revealed that the band was working on remastering their second album Spiderland with producer Bob Weston. The deluxe Spiderland boxset was announced in January 2014.\\n\\nIn 2014, the band also performed at the Primavera Sound music festival in Spain and Portugal and Green Man Festival in Wales, before disbanding again that same year. <a href=\"https://www.last.fm/music/Slint\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4IwOItqRhsIoRuD5HP4vyC', url='https://open.spotify.com/artist/4IwOItqRhsIoRuD5HP4vyC', name='Slint', popularity=43, followers=235215, genres=['post-rock', 'math rock', 'noise rock', 'slowcore', 'post-hardcore'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebc3105c7919e51ae6d1e6dfff', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174c3105c7919e51ae6d1e6dfff', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178c3105c7919e51ae6d1e6dfff', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4IwOItqRhsIoRuD5HP4vyC'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4IwOItqRhsIoRuD5HP4vyC'}, 'followers': {'href': None, 'total': 235215}, 'genres': ['post-rock', 'math rock', 'noise rock', 'slowcore', 'post-hardcore'], 'href': 'https://api.spotify.com/v1/artists/4IwOItqRhsIoRuD5HP4vyC', 'id': '4IwOItqRhsIoRuD5HP4vyC', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebc3105c7919e51ae6d1e6dfff', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174c3105c7919e51ae6d1e6dfff', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178c3105c7919e51ae6d1e6dfff', 'height': 160, 'width': 160}], 'name': 'Slint', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:4IwOItqRhsIoRuD5HP4vyC'})",
@@ -300,6 +479,6 @@
   },
   "spotify_id": "4IwOItqRhsIoRuD5HP4vyC",
   "spotify_url": "https://open.spotify.com/artist/4IwOItqRhsIoRuD5HP4vyC",
-  "updated_at": "2026-10-22T14:11:16.427135",
+  "updated_at": "2026-10-30T18:45:17.103055",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Slint"
 }

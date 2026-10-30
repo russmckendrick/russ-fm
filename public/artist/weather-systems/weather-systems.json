@@ -93,22 +93,43 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1751752418', url='https://music.apple.com/gb/artist/weather-systems/1751752418', name='Weather Systems', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9e/68/1d/9e681d0f-1e8b-c2cd-9ab7-c50c822a729c/8712725748410.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1751752418', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1751752418', 'attributes': {'name': 'Weather Systems', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9e/68/1d/9e681d0f-1e8b-c2cd-9ab7-c50c822a729c/8712725748410.png/{w}x{h}ac.jpg', 'bgColor': '2b2066', 'textColor1': 'feffff', 'textColor2': '86aae8', 'textColor3': 'd3d2e0', 'textColor4': '748ece'}, 'url': 'https://music.apple.com/gb/artist/weather-systems/1751752418'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1751752418/albums', 'data': [{'id': '1751753784', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751753784'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "15010831",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 15010831,
+      "images": [
+        {
+          "height": 507,
+          "resource_url": "https://i.discogs.com/YECQuF0Bsle0pnUsfEhJwh5KH6D98W1llp7lQXfDG0w/rs:fit/g:sm/q:90/h:507/w:454/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YECQuF0Bsle0pnUsfEhJwh5KH6D98W1llp7lQXfDG0w/rs:fit/g:sm/q:90/h:507/w:454/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kK3yodwD2HRgJkJRZxqXhkUl_JPk-Nk0239zVbQav8w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "width": 454
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 278359,
+          "name": "Danny Cavanagh",
+          "resource_url": "https://api.discogs.com/artists/278359"
+        },
+        {
+          "active": true,
+          "id": 937018,
+          "name": "Daniel Cardoso",
+          "resource_url": "https://api.discogs.com/artists/937018"
+        }
+      ],
       "name": "Weather Systems",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "15010831",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/15010831"
-      },
+      "profile": "English band formed in 2021 by Anathema guitarist Daniel Cavanagh.\r\n\r\nMembers:\r\n[a=Danny Cavanagh] - vocals, guitars, pianos, keyboards\r\n[a=Daniel Cardoso] - drums",
+      "releases_url": "https://api.discogs.com/artists/15010831/releases",
       "resource_url": "https://api.discogs.com/artists/15010831",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/15010831",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/15010831-Weather-Systems",
+      "urls": [
+        "https://www.facebook.com/p/Weather-Systems-61562089611433",
+        "https://www.youtube.com/@WeatherSystemsOfficial",
+        "https://www.instagram.com/weathersystemsband/",
+        "https://weathersystems.bandcamp.com"
+      ]
     },
     "identity": {
       "musicbrainz_id": "96060bde-8df3-4d0b-a8ce-3564eb36661d",
@@ -123,22 +144,43 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1751752418', url='https://music.apple.com/gb/artist/weather-systems/1751752418', name='Weather Systems', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9e/68/1d/9e681d0f-1e8b-c2cd-9ab7-c50c822a729c/8712725748410.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1751752418', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1751752418', 'attributes': {'name': 'Weather Systems', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9e/68/1d/9e681d0f-1e8b-c2cd-9ab7-c50c822a729c/8712725748410.png/{w}x{h}ac.jpg', 'bgColor': '2b2066', 'textColor1': 'feffff', 'textColor2': '86aae8', 'textColor3': 'd3d2e0', 'textColor4': '748ece'}, 'url': 'https://music.apple.com/gb/artist/weather-systems/1751752418'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1751752418/albums', 'data': [{'id': '1751753784', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751753784'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "15010831",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 15010831,
+      "images": [
+        {
+          "height": 507,
+          "resource_url": "https://i.discogs.com/YECQuF0Bsle0pnUsfEhJwh5KH6D98W1llp7lQXfDG0w/rs:fit/g:sm/q:90/h:507/w:454/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YECQuF0Bsle0pnUsfEhJwh5KH6D98W1llp7lQXfDG0w/rs:fit/g:sm/q:90/h:507/w:454/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kK3yodwD2HRgJkJRZxqXhkUl_JPk-Nk0239zVbQav8w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDEw/ODMxLTE3Mjc5Nzg2/MzctNDc3NS5qcGVn.jpeg",
+          "width": 454
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 278359,
+          "name": "Danny Cavanagh",
+          "resource_url": "https://api.discogs.com/artists/278359"
+        },
+        {
+          "active": true,
+          "id": 937018,
+          "name": "Daniel Cardoso",
+          "resource_url": "https://api.discogs.com/artists/937018"
+        }
+      ],
       "name": "Weather Systems",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "15010831",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/15010831"
-      },
+      "profile": "English band formed in 2021 by Anathema guitarist Daniel Cavanagh.\r\n\r\nMembers:\r\n[a=Danny Cavanagh] - vocals, guitars, pianos, keyboards\r\n[a=Daniel Cardoso] - drums",
+      "releases_url": "https://api.discogs.com/artists/15010831/releases",
       "resource_url": "https://api.discogs.com/artists/15010831",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/15010831",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/15010831-Weather-Systems",
+      "urls": [
+        "https://www.facebook.com/p/Weather-Systems-61562089611433",
+        "https://www.youtube.com/@WeatherSystemsOfficial",
+        "https://www.instagram.com/weathersystemsband/",
+        "https://weathersystems.bandcamp.com"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Weather Systems', url='https://www.last.fm/music/Weather+Systems', mbid=None, listeners=8833, playcount=142061, bio_summary='Weather Systems-Featuring Anathema\\'s Daniel Cavanagh (songwriter, multi-instrumentalist, vocalist) and Daniel Cardoso (drummer, producer, live musical director). <a href=\"https://www.last.fm/music/Weather+Systems\">Read more on Last.fm</a>', bio_content='Weather Systems-Featuring Anathema\\'s Daniel Cavanagh (songwriter, multi-instrumentalist, vocalist) and Daniel Cardoso (drummer, producer, live musical director). <a href=\"https://www.last.fm/music/Weather+Systems\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'alternative rock', 'art rock', 'seen live', 'post-rock'], similar_artists=[{'name': 'Anathema', 'url': 'https://www.last.fm/music/Anathema'}, {'name': 'Pure Reason Revolution', 'url': 'https://www.last.fm/music/Pure+Reason+Revolution'}, {'name': 'Meer', 'url': 'https://www.last.fm/music/Meer'}, {'name': 'Kingcrow', 'url': 'https://www.last.fm/music/Kingcrow'}, {'name': 'Riverside', 'url': 'https://www.last.fm/music/Riverside'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Weather Systems', 'url': 'https://www.last.fm/music/Weather+Systems', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '8833', 'playcount': '142061'}, 'similar': {'artist': [{'name': 'Anathema', 'url': 'https://www.last.fm/music/Anathema', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pure Reason Revolution', 'url': 'https://www.last.fm/music/Pure+Reason+Revolution', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Meer', 'url': 'https://www.last.fm/music/Meer', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kingcrow', 'url': 'https://www.last.fm/music/Kingcrow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Riverside', 'url': 'https://www.last.fm/music/Riverside', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'art rock', 'url': 'https://www.last.fm/tag/art+rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Weather+Systems/+wiki'}}, 'published': '16 Oct 2024, 07:55', 'summary': 'Weather Systems-Featuring Anathema\\'s Daniel Cavanagh (songwriter, multi-instrumentalist, vocalist) and Daniel Cardoso (drummer, producer, live musical director). <a href=\"https://www.last.fm/music/Weather+Systems\">Read more on Last.fm</a>', 'content': 'Weather Systems-Featuring Anathema\\'s Daniel Cavanagh (songwriter, multi-instrumentalist, vocalist) and Daniel Cardoso (drummer, producer, live musical director). <a href=\"https://www.last.fm/music/Weather+Systems\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='79pII4A4OPL8CZRfAmAZOq', url='https://open.spotify.com/artist/79pII4A4OPL8CZRfAmAZOq', name='Weather Systems', popularity=34, followers=11658, genres=['progressive rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb109437f02a477a0e5ef2b34f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174109437f02a477a0e5ef2b34f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178109437f02a477a0e5ef2b34f', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/79pII4A4OPL8CZRfAmAZOq'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/79pII4A4OPL8CZRfAmAZOq'}, 'followers': {'href': None, 'total': 11658}, 'genres': ['progressive rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/79pII4A4OPL8CZRfAmAZOq', 'id': '79pII4A4OPL8CZRfAmAZOq', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb109437f02a477a0e5ef2b34f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174109437f02a477a0e5ef2b34f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178109437f02a477a0e5ef2b34f', 'height': 160, 'width': 160}], 'name': 'Weather Systems', 'popularity': 34, 'type': 'artist', 'uri': 'spotify:artist:79pII4A4OPL8CZRfAmAZOq'})",
@@ -146,6 +188,6 @@
   },
   "spotify_id": "79pII4A4OPL8CZRfAmAZOq",
   "spotify_url": "https://open.spotify.com/artist/79pII4A4OPL8CZRfAmAZOq",
-  "updated_at": "2026-10-22T14:13:39.619613",
+  "updated_at": "2026-10-30T18:48:09.888592",
   "wikipedia_url": null
 }

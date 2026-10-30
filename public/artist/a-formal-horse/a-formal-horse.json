@@ -93,22 +93,65 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='991059183', url='https://music.apple.com/gb/artist/a-formal-horse/991059183', name='A Formal Horse', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/bb/71/36bb7158-682e-120f-7d9f-cca30a305999/859734862930_cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '991059183', 'type': 'artists', 'href': '/v1/catalog/gb/artists/991059183', 'attributes': {'name': 'A Formal Horse', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/bb/71/36bb7158-682e-120f-7d9f-cca30a305999/859734862930_cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': '24d6bd', 'textColor2': '00cba2', 'textColor3': '1dab97', 'textColor4': '00a282'}, 'url': 'https://music.apple.com/gb/artist/a-formal-horse/991059183'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/991059183/albums', 'data': [{'id': '1484413225', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1484413225'}, {'id': '1577894995', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1577894995'}, {'id': '1201840067', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201840067'}, {'id': '1349078662', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349078662'}, {'id': '1550271498', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550271498'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "4026900",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 4026900,
+      "images": [
+        {
+          "height": 377,
+          "resource_url": "https://i.discogs.com/PCtFEbG0mDktZVXou039bMUr-apiwJ1T7nQdtaaznCc/rs:fit/g:sm/q:90/h:377/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/PCtFEbG0mDktZVXou039bMUr-apiwJ1T7nQdtaaznCc/rs:fit/g:sm/q:90/h:377/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/VgwA3pUdxzr5x6Z8LSR2irTFQqFZj_fV7Fv0YMrN7zY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4335410,
+          "name": "Benjamin Short",
+          "resource_url": "https://api.discogs.com/artists/4335410"
+        },
+        {
+          "active": true,
+          "id": 4335411,
+          "name": "Mike Stringfellow",
+          "resource_url": "https://api.discogs.com/artists/4335411"
+        },
+        {
+          "active": false,
+          "id": 4335412,
+          "name": "Emily Tulloh",
+          "resource_url": "https://api.discogs.com/artists/4335412"
+        },
+        {
+          "active": true,
+          "id": 4335413,
+          "name": "Russell Mann",
+          "resource_url": "https://api.discogs.com/artists/4335413"
+        },
+        {
+          "active": false,
+          "id": 4335417,
+          "name": "Francesca Lewis",
+          "resource_url": "https://api.discogs.com/artists/4335417"
+        },
+        {
+          "active": true,
+          "id": 5682350,
+          "name": "Hayley McDonnell",
+          "resource_url": "https://api.discogs.com/artists/5682350"
+        }
+      ],
       "name": "A Formal Horse",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "4026900",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/4026900"
-      },
+      "profile": "Prog rock band based in Southampton, UK.",
+      "releases_url": "https://api.discogs.com/artists/4026900/releases",
       "resource_url": "https://api.discogs.com/artists/4026900",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/4026900",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/4026900-A-Formal-Horse",
+      "urls": [
+        "aformalhorse.com",
+        "https://aformalhorse.bandcamp.com/music"
+      ]
     },
     "identity": {
       "musicbrainz_id": "1eda01f5-5994-4c80-ba87-82e30757ea8e",
@@ -123,22 +166,65 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='991059183', url='https://music.apple.com/gb/artist/a-formal-horse/991059183', name='A Formal Horse', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/bb/71/36bb7158-682e-120f-7d9f-cca30a305999/859734862930_cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '991059183', 'type': 'artists', 'href': '/v1/catalog/gb/artists/991059183', 'attributes': {'name': 'A Formal Horse', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/bb/71/36bb7158-682e-120f-7d9f-cca30a305999/859734862930_cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': '24d6bd', 'textColor2': '00cba2', 'textColor3': '1dab97', 'textColor4': '00a282'}, 'url': 'https://music.apple.com/gb/artist/a-formal-horse/991059183'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/991059183/albums', 'data': [{'id': '1484413225', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1484413225'}, {'id': '1577894995', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1577894995'}, {'id': '1201840067', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201840067'}, {'id': '1349078662', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349078662'}, {'id': '1550271498', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550271498'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "4026900",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 4026900,
+      "images": [
+        {
+          "height": 377,
+          "resource_url": "https://i.discogs.com/PCtFEbG0mDktZVXou039bMUr-apiwJ1T7nQdtaaznCc/rs:fit/g:sm/q:90/h:377/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/PCtFEbG0mDktZVXou039bMUr-apiwJ1T7nQdtaaznCc/rs:fit/g:sm/q:90/h:377/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/VgwA3pUdxzr5x6Z8LSR2irTFQqFZj_fV7Fv0YMrN7zY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMjY5/MDAtMTQzMTM3MDE3/OC02NzM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4335410,
+          "name": "Benjamin Short",
+          "resource_url": "https://api.discogs.com/artists/4335410"
+        },
+        {
+          "active": true,
+          "id": 4335411,
+          "name": "Mike Stringfellow",
+          "resource_url": "https://api.discogs.com/artists/4335411"
+        },
+        {
+          "active": false,
+          "id": 4335412,
+          "name": "Emily Tulloh",
+          "resource_url": "https://api.discogs.com/artists/4335412"
+        },
+        {
+          "active": true,
+          "id": 4335413,
+          "name": "Russell Mann",
+          "resource_url": "https://api.discogs.com/artists/4335413"
+        },
+        {
+          "active": false,
+          "id": 4335417,
+          "name": "Francesca Lewis",
+          "resource_url": "https://api.discogs.com/artists/4335417"
+        },
+        {
+          "active": true,
+          "id": 5682350,
+          "name": "Hayley McDonnell",
+          "resource_url": "https://api.discogs.com/artists/5682350"
+        }
+      ],
       "name": "A Formal Horse",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "4026900",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/4026900"
-      },
+      "profile": "Prog rock band based in Southampton, UK.",
+      "releases_url": "https://api.discogs.com/artists/4026900/releases",
       "resource_url": "https://api.discogs.com/artists/4026900",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/4026900",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/4026900-A-Formal-Horse",
+      "urls": [
+        "aformalhorse.com",
+        "https://aformalhorse.bandcamp.com/music"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='A Formal Horse', url='https://www.last.fm/music/A+Formal+Horse', mbid=None, listeners=1941, playcount=62879, bio_summary='A Formal Horse is a new progressive rock quartet based in Southampton. Although the band\\'s sound is difficult to pinpoint, their dense instrumental passages are reminiscent of King Crimson and Mahavishnu Orchestra, whilst Francesca Lewis\\' lead vocals evoke the whimsical surrealism of the 1970s Canterbury scene. However, A Formal Horse go beyond simply regurgitating the music of their predecessors. With influences as diverse as Bartok and Bon Iver <a href=\"https://www.last.fm/music/A+Formal+Horse\">Read more on Last.fm</a>', bio_content='A Formal Horse is a new progressive rock quartet based in Southampton. Although the band\\'s sound is difficult to pinpoint, their dense instrumental passages are reminiscent of King Crimson and Mahavishnu Orchestra, whilst Francesca Lewis\\' lead vocals evoke the whimsical surrealism of the 1970s Canterbury scene. However, A Formal Horse go beyond simply regurgitating the music of their predecessors. With influences as diverse as Bartok and Bon Iver, the band prove that there is still much territory to be explored in the field of British progressive rock.They have recently recorded their debut EP with Rob Aubrey (IQ, Big Big Train). <a href=\"https://www.last.fm/music/A+Formal+Horse\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'female vocalists', 'Avant-Prog', 'math rock', 'UK'], similar_artists=[{'name': 'Thumpermonkey', 'url': 'https://www.last.fm/music/Thumpermonkey'}, {'name': 'The Tea Club', 'url': 'https://www.last.fm/music/The+Tea+Club'}, {'name': 'Regal Worm', 'url': 'https://www.last.fm/music/Regal+Worm'}, {'name': 'The Far Meadow', 'url': 'https://www.last.fm/music/The+Far+Meadow'}, {'name': 'Artificial Silence', 'url': 'https://www.last.fm/music/Artificial+Silence'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'A Formal Horse', 'url': 'https://www.last.fm/music/A+Formal+Horse', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1941', 'playcount': '62879'}, 'similar': {'artist': [{'name': 'Thumpermonkey', 'url': 'https://www.last.fm/music/Thumpermonkey', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Tea Club', 'url': 'https://www.last.fm/music/The+Tea+Club', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Regal Worm', 'url': 'https://www.last.fm/music/Regal+Worm', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Far Meadow', 'url': 'https://www.last.fm/music/The+Far+Meadow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Artificial Silence', 'url': 'https://www.last.fm/music/Artificial+Silence', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'Avant-Prog', 'url': 'https://www.last.fm/tag/Avant-Prog'}, {'name': 'math rock', 'url': 'https://www.last.fm/tag/math+rock'}, {'name': 'UK', 'url': 'https://www.last.fm/tag/UK'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/A+Formal+Horse/+wiki'}}, 'published': '28 Jun 2015, 00:11', 'summary': 'A Formal Horse is a new progressive rock quartet based in Southampton. Although the band\\'s sound is difficult to pinpoint, their dense instrumental passages are reminiscent of King Crimson and Mahavishnu Orchestra, whilst Francesca Lewis\\' lead vocals evoke the whimsical surrealism of the 1970s Canterbury scene. However, A Formal Horse go beyond simply regurgitating the music of their predecessors. With influences as diverse as Bartok and Bon Iver <a href=\"https://www.last.fm/music/A+Formal+Horse\">Read more on Last.fm</a>', 'content': 'A Formal Horse is a new progressive rock quartet based in Southampton. Although the band\\'s sound is difficult to pinpoint, their dense instrumental passages are reminiscent of King Crimson and Mahavishnu Orchestra, whilst Francesca Lewis\\' lead vocals evoke the whimsical surrealism of the 1970s Canterbury scene. However, A Formal Horse go beyond simply regurgitating the music of their predecessors. With influences as diverse as Bartok and Bon Iver, the band prove that there is still much territory to be explored in the field of British progressive rock.They have recently recorded their debut EP with Rob Aubrey (IQ, Big Big Train). <a href=\"https://www.last.fm/music/A+Formal+Horse\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='38EQ4PdxziEDJOpwFHSb5c', url='https://open.spotify.com/artist/38EQ4PdxziEDJOpwFHSb5c', name='A Formal Horse', popularity=5, followers=1273, genres=['progressive rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273087976b0322a4844c2b333bd', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02087976b0322a4844c2b333bd', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851087976b0322a4844c2b333bd', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/38EQ4PdxziEDJOpwFHSb5c'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/38EQ4PdxziEDJOpwFHSb5c'}, 'followers': {'href': None, 'total': 1273}, 'genres': ['progressive rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/38EQ4PdxziEDJOpwFHSb5c', 'id': '38EQ4PdxziEDJOpwFHSb5c', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273087976b0322a4844c2b333bd', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02087976b0322a4844c2b333bd', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851087976b0322a4844c2b333bd', 'height': 64, 'width': 64}], 'name': 'A Formal Horse', 'popularity': 5, 'type': 'artist', 'uri': 'spotify:artist:38EQ4PdxziEDJOpwFHSb5c'})",
@@ -146,6 +232,6 @@
   },
   "spotify_id": "38EQ4PdxziEDJOpwFHSb5c",
   "spotify_url": "https://open.spotify.com/artist/38EQ4PdxziEDJOpwFHSb5c",
-  "updated_at": "2026-10-22T14:04:20.777382",
+  "updated_at": "2026-10-30T18:35:15.413240",
   "wikipedia_url": null
 }

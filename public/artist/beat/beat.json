@@ -76,22 +76,74 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1807481577', url='https://music.apple.com/gb/artist/beat/1807481577', name='BEAT', artwork_url='', genres=[], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1807481577', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1807481577', 'attributes': {'genreNames': [], 'name': 'BEAT', 'url': 'https://music.apple.com/gb/artist/beat/1807481577'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1807481577/albums', 'data': [{'id': '1819759822', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819759822'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "16598648",
-      "images": [],
-      "members": [],
-      "name": "Beat",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "16598648",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/16598648"
-      },
+      "data_quality": "Needs Vote",
+      "id": 16598648,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/eCMYGcDANpsgcUJLJysI60y9MWXY-9BOxhF8UuOuhio/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eCMYGcDANpsgcUJLJysI60y9MWXY-9BOxhF8UuOuhio/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/u8zysqvx4sc3bwxSSHP2pDWtUgkI2ks5CgkxqRj88JQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/zub-HJkcRP4sKqyE1Ayb6tNFYj6ZqytsBCndCLMGl60/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zub-HJkcRP4sKqyE1Ayb6tNFYj6ZqytsBCndCLMGl60/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/SnvUwvLp4GfJPWCbgHsstbzkKtdH0YCBeMGQc7VpL60/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "width": 567
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/CXuhkoJ4LcmK-2Jlj5fLP4bHfVM54f6jOV4KHoZtslU/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CXuhkoJ4LcmK-2Jlj5fLP4bHfVM54f6jOV4KHoZtslU/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RM6xRsQ9faV132mwJH9BcQ0QhoSumj1WI44XFfl3PsE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "width": 567
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 55902,
+          "name": "Adrian Belew",
+          "resource_url": "https://api.discogs.com/artists/55902"
+        },
+        {
+          "active": false,
+          "id": 206290,
+          "name": "Danny Carey",
+          "resource_url": "https://api.discogs.com/artists/206290"
+        },
+        {
+          "active": true,
+          "id": 221183,
+          "name": "Steve Vai",
+          "resource_url": "https://api.discogs.com/artists/221183"
+        },
+        {
+          "active": true,
+          "id": 256187,
+          "name": "Terry Bozzio",
+          "resource_url": "https://api.discogs.com/artists/256187"
+        },
+        {
+          "active": true,
+          "id": 256225,
+          "name": "Tony Levin",
+          "resource_url": "https://api.discogs.com/artists/256225"
+        }
+      ],
+      "name": "Beat (29)",
+      "profile": "Former [a=King Crimson] members [a=Adrian Belew] and [a=Tony Levin] band together with guitarist [a=Steve Vai] and [a=Tool (2)] drummer [a=Danny Carey] for the first time to create Beat, a creative reinterpretation of the three iconic 80s King Crimson albums – Discipline, Beat, and Three Of A Perfect Pair. In 2026 it was announced that [a=Danny Carey] would be replaced by [a=Terry Bozzio] for their last North American tour. ",
+      "releases_url": "https://api.discogs.com/artists/16598648/releases",
       "resource_url": "https://api.discogs.com/artists/16598648",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/16598648",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/16598648-Beat-29",
+      "urls": [
+        "https://beat-tour.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "aff74a2c-de0c-487d-b7fd-24caea74047d",
@@ -101,27 +153,80 @@
     },
     "lastfm": "ArtistLastFmData(name='Beat', url='https://www.last.fm/music/Beat', mbid='7df1d076-1b24-416e-b1c2-0e27e7c104f7', listeners=14153, playcount=188683, bio_summary='There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>', bio_content='There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson.\\npoints. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Eurovision', 'finland', 'Eurovision Song Contest', 'Drum and bass', 'finlandssvensk'], similar_artists=[{'name': 'Sonja Lumme', 'url': 'https://www.last.fm/music/Sonja+Lumme'}, {'name': 'Monica Aspelund', 'url': 'https://www.last.fm/music/Monica+Aspelund'}, {'name': 'Linda Martin', 'url': 'https://www.last.fm/music/Linda+Martin'}, {'name': 'Carita Holmström', 'url': 'https://www.last.fm/music/Carita+Holmstr%C3%B6m'}, {'name': 'Marion Rung', 'url': 'https://www.last.fm/music/Marion+Rung'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Beat', 'mbid': '7df1d076-1b24-416e-b1c2-0e27e7c104f7', 'url': 'https://www.last.fm/music/Beat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '14153', 'playcount': '188683'}, 'similar': {'artist': [{'name': 'Sonja Lumme', 'url': 'https://www.last.fm/music/Sonja+Lumme', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Monica Aspelund', 'url': 'https://www.last.fm/music/Monica+Aspelund', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Linda Martin', 'url': 'https://www.last.fm/music/Linda+Martin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Carita Holmström', 'url': 'https://www.last.fm/music/Carita+Holmstr%C3%B6m', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Marion Rung', 'url': 'https://www.last.fm/music/Marion+Rung', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Eurovision', 'url': 'https://www.last.fm/tag/Eurovision'}, {'name': 'finland', 'url': 'https://www.last.fm/tag/finland'}, {'name': 'Eurovision Song Contest', 'url': 'https://www.last.fm/tag/Eurovision+Song+Contest'}, {'name': 'Drum and bass', 'url': 'https://www.last.fm/tag/Drum+and+bass'}, {'name': 'finlandssvensk', 'url': 'https://www.last.fm/tag/finlandssvensk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Beat/+wiki'}}, 'published': '08 Apr 2009, 07:18', 'summary': 'There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>', 'content': 'There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson.\\npoints. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2JDv04js6dtvkylyVbDLAD', url='https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD', name='Beat', popularity=37, followers=1024, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb129eaa2500fd7e05178a9620', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174129eaa2500fd7e05178a9620', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178129eaa2500fd7e05178a9620', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD'}, 'followers': {'href': None, 'total': 1024}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/2JDv04js6dtvkylyVbDLAD', 'id': '2JDv04js6dtvkylyVbDLAD', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb129eaa2500fd7e05178a9620', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174129eaa2500fd7e05178a9620', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178129eaa2500fd7e05178a9620', 'height': 160, 'width': 160}], 'name': 'Beat', 'popularity': 37, 'type': 'artist', 'uri': 'spotify:artist:2JDv04js6dtvkylyVbDLAD'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1807481577', url='https://music.apple.com/gb/artist/beat/1807481577', name='BEAT', artwork_url='', genres=[], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1807481577', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1807481577', 'attributes': {'genreNames': [], 'name': 'BEAT', 'url': 'https://music.apple.com/gb/artist/beat/1807481577'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1807481577/albums', 'data': [{'id': '1819759822', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819759822'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "16598648",
-      "images": [],
-      "members": [],
-      "name": "Beat",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "16598648",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/16598648"
-      },
+      "data_quality": "Needs Vote",
+      "id": 16598648,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/eCMYGcDANpsgcUJLJysI60y9MWXY-9BOxhF8UuOuhio/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eCMYGcDANpsgcUJLJysI60y9MWXY-9BOxhF8UuOuhio/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/u8zysqvx4sc3bwxSSHP2pDWtUgkI2ks5CgkxqRj88JQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYy/NTQtNTAzOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/zub-HJkcRP4sKqyE1Ayb6tNFYj6ZqytsBCndCLMGl60/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zub-HJkcRP4sKqyE1Ayb6tNFYj6ZqytsBCndCLMGl60/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/SnvUwvLp4GfJPWCbgHsstbzkKtdH0YCBeMGQc7VpL60/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDUtODgzOC5qcGVn.jpeg",
+          "width": 567
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/CXuhkoJ4LcmK-2Jlj5fLP4bHfVM54f6jOV4KHoZtslU/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CXuhkoJ4LcmK-2Jlj5fLP4bHfVM54f6jOV4KHoZtslU/rs:fit/g:sm/q:90/h:600/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RM6xRsQ9faV132mwJH9BcQ0QhoSumj1WI44XFfl3PsE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTk4/NjQ4LTE3NTY4NzYz/NDctMTAyMS5qcGVn.jpeg",
+          "width": 567
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 55902,
+          "name": "Adrian Belew",
+          "resource_url": "https://api.discogs.com/artists/55902"
+        },
+        {
+          "active": false,
+          "id": 206290,
+          "name": "Danny Carey",
+          "resource_url": "https://api.discogs.com/artists/206290"
+        },
+        {
+          "active": true,
+          "id": 221183,
+          "name": "Steve Vai",
+          "resource_url": "https://api.discogs.com/artists/221183"
+        },
+        {
+          "active": true,
+          "id": 256187,
+          "name": "Terry Bozzio",
+          "resource_url": "https://api.discogs.com/artists/256187"
+        },
+        {
+          "active": true,
+          "id": 256225,
+          "name": "Tony Levin",
+          "resource_url": "https://api.discogs.com/artists/256225"
+        }
+      ],
+      "name": "Beat (29)",
+      "profile": "Former [a=King Crimson] members [a=Adrian Belew] and [a=Tony Levin] band together with guitarist [a=Steve Vai] and [a=Tool (2)] drummer [a=Danny Carey] for the first time to create Beat, a creative reinterpretation of the three iconic 80s King Crimson albums – Discipline, Beat, and Three Of A Perfect Pair. In 2026 it was announced that [a=Danny Carey] would be replaced by [a=Terry Bozzio] for their last North American tour. ",
+      "releases_url": "https://api.discogs.com/artists/16598648/releases",
       "resource_url": "https://api.discogs.com/artists/16598648",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/16598648",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/16598648-Beat-29",
+      "urls": [
+        "https://beat-tour.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Beat', url='https://www.last.fm/music/Beat', mbid='7df1d076-1b24-416e-b1c2-0e27e7c104f7', listeners=14153, playcount=188683, bio_summary='There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>', bio_content='There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson.\\npoints. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Eurovision', 'finland', 'Eurovision Song Contest', 'Drum and bass', 'finlandssvensk'], similar_artists=[{'name': 'Sonja Lumme', 'url': 'https://www.last.fm/music/Sonja+Lumme'}, {'name': 'Monica Aspelund', 'url': 'https://www.last.fm/music/Monica+Aspelund'}, {'name': 'Linda Martin', 'url': 'https://www.last.fm/music/Linda+Martin'}, {'name': 'Carita Holmström', 'url': 'https://www.last.fm/music/Carita+Holmstr%C3%B6m'}, {'name': 'Marion Rung', 'url': 'https://www.last.fm/music/Marion+Rung'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Beat', 'mbid': '7df1d076-1b24-416e-b1c2-0e27e7c104f7', 'url': 'https://www.last.fm/music/Beat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '14153', 'playcount': '188683'}, 'similar': {'artist': [{'name': 'Sonja Lumme', 'url': 'https://www.last.fm/music/Sonja+Lumme', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Monica Aspelund', 'url': 'https://www.last.fm/music/Monica+Aspelund', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Linda Martin', 'url': 'https://www.last.fm/music/Linda+Martin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Carita Holmström', 'url': 'https://www.last.fm/music/Carita+Holmstr%C3%B6m', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Marion Rung', 'url': 'https://www.last.fm/music/Marion+Rung', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Eurovision', 'url': 'https://www.last.fm/tag/Eurovision'}, {'name': 'finland', 'url': 'https://www.last.fm/tag/finland'}, {'name': 'Eurovision Song Contest', 'url': 'https://www.last.fm/tag/Eurovision+Song+Contest'}, {'name': 'Drum and bass', 'url': 'https://www.last.fm/tag/Drum+and+bass'}, {'name': 'finlandssvensk', 'url': 'https://www.last.fm/tag/finlandssvensk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Beat/+wiki'}}, 'published': '08 Apr 2009, 07:18', 'summary': 'There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>', 'content': 'There is more than one artist with this name:\\n\\n1. A supergroup led by Adrian Belew, with Tony Levin, Steve Vai, and Danny Carey revisiting the songs of King Crimson.\\n\\n2. For English 2 Tone Ska revival band see The Beat or The English Beat\\n\\n3. Beat were a Finnish band who represented their country in Eurovision Song Contest 1990. The group performed the song Fri? (Free?) in Swedish and finished 21st out of 22 countries, scoring 8 points. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson.\\npoints. The group was composed of members Janne Engblom, Kim Engblom, Tina Krausen and Tina Petersson. <a href=\"https://www.last.fm/music/Beat\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2JDv04js6dtvkylyVbDLAD', url='https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD', name='Beat', popularity=37, followers=1024, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb129eaa2500fd7e05178a9620', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174129eaa2500fd7e05178a9620', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178129eaa2500fd7e05178a9620', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD'}, 'followers': {'href': None, 'total': 1024}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/2JDv04js6dtvkylyVbDLAD', 'id': '2JDv04js6dtvkylyVbDLAD', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb129eaa2500fd7e05178a9620', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174129eaa2500fd7e05178a9620', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178129eaa2500fd7e05178a9620', 'height': 160, 'width': 160}], 'name': 'Beat', 'popularity': 37, 'type': 'artist', 'uri': 'spotify:artist:2JDv04js6dtvkylyVbDLAD'})",
@@ -129,6 +234,6 @@
   },
   "spotify_id": "2JDv04js6dtvkylyVbDLAD",
   "spotify_url": "https://open.spotify.com/artist/2JDv04js6dtvkylyVbDLAD",
-  "updated_at": "2026-10-22T14:05:01.139819",
+  "updated_at": "2026-10-30T18:36:24.935384",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Beat_(American_band)"
 }

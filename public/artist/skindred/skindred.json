@@ -137,22 +137,106 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='5298947', url='https://music.apple.com/gb/artist/skindred/5298947', name='Skindred', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f4/de/f0/f4def008-7605-7d12-6b3e-ee06d5df491d/pr_source.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '5298947', 'type': 'artists', 'href': '/v1/catalog/gb/artists/5298947', 'attributes': {'name': 'Skindred', 'genreNames': ['Hard Rock'], 'artwork': {'width': 608, 'height': 608, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f4/de/f0/f4def008-7605-7d12-6b3e-ee06d5df491d/pr_source.png/{w}x{h}bb.jpg', 'bgColor': 'eff1f0', 'textColor1': '060103', 'textColor2': '1a1d21', 'textColor3': '343132', 'textColor4': '44474b'}, 'url': 'https://music.apple.com/gb/artist/skindred/5298947'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/5298947/albums', 'data': [{'id': '1652113780', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1652113780'}, {'id': '1354482937', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1354482937'}, {'id': '79306132', 'type': 'albums', 'href': '/v1/catalog/gb/albums/79306132'}, {'id': '1183564110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1183564110'}, {'id': '1451028729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1451028729'}, {'id': '303123611', 'type': 'albums', 'href': '/v1/catalog/gb/albums/303123611'}, {'id': '265615201', 'type': 'albums', 'href': '/v1/catalog/gb/albums/265615201'}, {'id': '81225349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/81225349'}, {'id': '418151815', 'type': 'albums', 'href': '/v1/catalog/gb/albums/418151815'}, {'id': '79020317', 'type': 'albums', 'href': '/v1/catalog/gb/albums/79020317'}, {'id': '1337173560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1337173560'}, {'id': '1457962175', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457962175'}, {'id': '1453873756', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1453873756'}, {'id': '1669275383', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1669275383'}, {'id': '339887602', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339887602'}, {'id': '339891349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339891349'}, {'id': '1540364771', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540364771'}, {'id': '80810640', 'type': 'albums', 'href': '/v1/catalog/gb/albums/80810640'}, {'id': '118414626', 'type': 'albums', 'href': '/v1/catalog/gb/albums/118414626'}, {'id': '339898114', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339898114'}, {'id': '339879130', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339879130'}, {'id': '80436297', 'type': 'albums', 'href': '/v1/catalog/gb/albums/80436297'}, {'id': '275966656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/275966656'}, {'id': '1340646140', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1340646140'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "277983",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 277983,
+      "images": [
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/SfGSn2UwzunElnwKgnfdrWxV_BrQkX0ZaktfFc3G_hI/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/SfGSn2UwzunElnwKgnfdrWxV_BrQkX0ZaktfFc3G_hI/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Hg48eaLYBSiHMlnHBOZgtnne3D8-DvSDRUsA-Epky1c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 342,
+          "resource_url": "https://i.discogs.com/PJshYfEXbWlSgxxlf1UsqJlSxpoj92h06ybwhhHtjQ4/rs:fit/g:sm/q:90/h:342/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PJshYfEXbWlSgxxlf1UsqJlSxpoj92h06ybwhhHtjQ4/rs:fit/g:sm/q:90/h:342/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/SylIqRXCmvhzbdRVjFF8b575N4zR1DrlsG5zYYnbNRk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/cChtH6A0JppoOUiIsOZvNaPP_Cg-6sXayORrUlSUeHc/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cChtH6A0JppoOUiIsOZvNaPP_Cg-6sXayORrUlSUeHc/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yvHjGe4stVK6CqFnAsl8K5Pslu48RnDDyUj5S1Br72Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/xy0u0MOoK8anwH1vddbwO6_Ait8Yw3aY3nrmczRMHgE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xy0u0MOoK8anwH1vddbwO6_Ait8Yw3aY3nrmczRMHgE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eghg0bRuKabfmK_P-ARmhxA8hIWcWzvNdKreNn7q7OA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 430,
+          "resource_url": "https://i.discogs.com/TYxRKRAgvaoaQ9UQ1lospi0uYPt-EZSkaZ8arCl8gsI/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TYxRKRAgvaoaQ9UQ1lospi0uYPt-EZSkaZ8arCl8gsI/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/FHaU-7IYCe_ElxoPImnvaKPL2M_YZ2x8_taUnh6p6C0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 416699,
+          "name": "Jeff Rose",
+          "resource_url": "https://api.discogs.com/artists/416699"
+        },
+        {
+          "active": false,
+          "id": 648304,
+          "name": "Martyn Ford (2)",
+          "resource_url": "https://api.discogs.com/artists/648304"
+        },
+        {
+          "active": true,
+          "id": 1875640,
+          "name": "Daniel Pugsley",
+          "resource_url": "https://api.discogs.com/artists/1875640"
+        },
+        {
+          "active": true,
+          "id": 1875641,
+          "name": "Clive Webbe",
+          "resource_url": "https://api.discogs.com/artists/1875641"
+        },
+        {
+          "active": true,
+          "id": 2422130,
+          "name": "Arya Goggin",
+          "resource_url": "https://api.discogs.com/artists/2422130"
+        },
+        {
+          "active": true,
+          "id": 2422131,
+          "name": "Michael Fry (2)",
+          "resource_url": "https://api.discogs.com/artists/2422131"
+        },
+        {
+          "active": false,
+          "id": 4721148,
+          "name": "Dan Sturgess",
+          "resource_url": "https://api.discogs.com/artists/4721148"
+        }
+      ],
       "name": "Skindred",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "277983",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/277983"
-      },
+      "profile": "British ragga/punk/metal band founded in 1998 in Newport, South Wales, United Kingdom.",
+      "releases_url": "https://api.discogs.com/artists/277983/releases",
       "resource_url": "https://api.discogs.com/artists/277983",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/277983",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/277983-Skindred",
+      "urls": [
+        "http://www.skindred.net/",
+        "https://skindred.bandcamp.com/",
+        "https://www.facebook.com/skindredofficial/",
+        "http://www.myspace.com/skindred",
+        "http://en.wikipedia.org/wiki/Skindred"
+      ]
     },
     "identity": {
       "musicbrainz_id": "36e371e9-e76b-4b66-b813-e1d1af6d7128",
@@ -302,27 +386,112 @@
         "track": "Pressure",
         "uri": "https://www.youtube.com/watch?v=P4-732dLRCw"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='5298947', url='https://music.apple.com/gb/artist/skindred/5298947', name='Skindred', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f4/de/f0/f4def008-7605-7d12-6b3e-ee06d5df491d/pr_source.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '5298947', 'type': 'artists', 'href': '/v1/catalog/gb/artists/5298947', 'attributes': {'name': 'Skindred', 'genreNames': ['Hard Rock'], 'artwork': {'width': 608, 'height': 608, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f4/de/f0/f4def008-7605-7d12-6b3e-ee06d5df491d/pr_source.png/{w}x{h}bb.jpg', 'bgColor': 'eff1f0', 'textColor1': '060103', 'textColor2': '1a1d21', 'textColor3': '343132', 'textColor4': '44474b'}, 'url': 'https://music.apple.com/gb/artist/skindred/5298947'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/5298947/albums', 'data': [{'id': '1652113780', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1652113780'}, {'id': '1354482937', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1354482937'}, {'id': '79306132', 'type': 'albums', 'href': '/v1/catalog/gb/albums/79306132'}, {'id': '1183564110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1183564110'}, {'id': '1451028729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1451028729'}, {'id': '303123611', 'type': 'albums', 'href': '/v1/catalog/gb/albums/303123611'}, {'id': '265615201', 'type': 'albums', 'href': '/v1/catalog/gb/albums/265615201'}, {'id': '81225349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/81225349'}, {'id': '418151815', 'type': 'albums', 'href': '/v1/catalog/gb/albums/418151815'}, {'id': '79020317', 'type': 'albums', 'href': '/v1/catalog/gb/albums/79020317'}, {'id': '1337173560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1337173560'}, {'id': '1457962175', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457962175'}, {'id': '1453873756', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1453873756'}, {'id': '1669275383', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1669275383'}, {'id': '339887602', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339887602'}, {'id': '339891349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339891349'}, {'id': '1540364771', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540364771'}, {'id': '80810640', 'type': 'albums', 'href': '/v1/catalog/gb/albums/80810640'}, {'id': '118414626', 'type': 'albums', 'href': '/v1/catalog/gb/albums/118414626'}, {'id': '339898114', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339898114'}, {'id': '339879130', 'type': 'albums', 'href': '/v1/catalog/gb/albums/339879130'}, {'id': '80436297', 'type': 'albums', 'href': '/v1/catalog/gb/albums/80436297'}, {'id': '275966656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/275966656'}, {'id': '1340646140', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1340646140'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "277983",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 277983,
+      "images": [
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/SfGSn2UwzunElnwKgnfdrWxV_BrQkX0ZaktfFc3G_hI/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/SfGSn2UwzunElnwKgnfdrWxV_BrQkX0ZaktfFc3G_hI/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Hg48eaLYBSiHMlnHBOZgtnne3D8-DvSDRUsA-Epky1c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNTcxNTkwNjU3/LTYyMTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 342,
+          "resource_url": "https://i.discogs.com/PJshYfEXbWlSgxxlf1UsqJlSxpoj92h06ybwhhHtjQ4/rs:fit/g:sm/q:90/h:342/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PJshYfEXbWlSgxxlf1UsqJlSxpoj92h06ybwhhHtjQ4/rs:fit/g:sm/q:90/h:342/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/SylIqRXCmvhzbdRVjFF8b575N4zR1DrlsG5zYYnbNRk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xNDE4MDY2ODkx/LTk0MjIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/cChtH6A0JppoOUiIsOZvNaPP_Cg-6sXayORrUlSUeHc/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cChtH6A0JppoOUiIsOZvNaPP_Cg-6sXayORrUlSUeHc/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yvHjGe4stVK6CqFnAsl8K5Pslu48RnDDyUj5S1Br72Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTY2/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/xy0u0MOoK8anwH1vddbwO6_Ait8Yw3aY3nrmczRMHgE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xy0u0MOoK8anwH1vddbwO6_Ait8Yw3aY3nrmczRMHgE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eghg0bRuKabfmK_P-ARmhxA8hIWcWzvNdKreNn7q7OA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMjA0OTU3MTg0/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 430,
+          "resource_url": "https://i.discogs.com/TYxRKRAgvaoaQ9UQ1lospi0uYPt-EZSkaZ8arCl8gsI/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TYxRKRAgvaoaQ9UQ1lospi0uYPt-EZSkaZ8arCl8gsI/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/FHaU-7IYCe_ElxoPImnvaKPL2M_YZ2x8_taUnh6p6C0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Nzk4/My0xMTE2Mzg2MTk1/LmpwZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 416699,
+          "name": "Jeff Rose",
+          "resource_url": "https://api.discogs.com/artists/416699"
+        },
+        {
+          "active": false,
+          "id": 648304,
+          "name": "Martyn Ford (2)",
+          "resource_url": "https://api.discogs.com/artists/648304"
+        },
+        {
+          "active": true,
+          "id": 1875640,
+          "name": "Daniel Pugsley",
+          "resource_url": "https://api.discogs.com/artists/1875640"
+        },
+        {
+          "active": true,
+          "id": 1875641,
+          "name": "Clive Webbe",
+          "resource_url": "https://api.discogs.com/artists/1875641"
+        },
+        {
+          "active": true,
+          "id": 2422130,
+          "name": "Arya Goggin",
+          "resource_url": "https://api.discogs.com/artists/2422130"
+        },
+        {
+          "active": true,
+          "id": 2422131,
+          "name": "Michael Fry (2)",
+          "resource_url": "https://api.discogs.com/artists/2422131"
+        },
+        {
+          "active": false,
+          "id": 4721148,
+          "name": "Dan Sturgess",
+          "resource_url": "https://api.discogs.com/artists/4721148"
+        }
+      ],
       "name": "Skindred",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "277983",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/277983"
-      },
+      "profile": "British ragga/punk/metal band founded in 1998 in Newport, South Wales, United Kingdom.",
+      "releases_url": "https://api.discogs.com/artists/277983/releases",
       "resource_url": "https://api.discogs.com/artists/277983",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/277983",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/277983-Skindred",
+      "urls": [
+        "http://www.skindred.net/",
+        "https://skindred.bandcamp.com/",
+        "https://www.facebook.com/skindredofficial/",
+        "http://www.myspace.com/skindred",
+        "http://en.wikipedia.org/wiki/Skindred"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Skindred', url='https://www.last.fm/music/Skindred', mbid='36e371e9-e76b-4b66-b813-e1d1af6d7128', listeners=559642, playcount=13832422, bio_summary='Skindred is a four-piece \"ragga metal\" band from Newport, Wales. Their genre is an innovative mix of metal, punk, and reggae. The band was formed in 1999 following the disbandment of vocalist Benji Webbe\\'s previous band, Dub War and his one-off side-project Mass Mental? featuring Robert Trujillo (Suicidal Tendencies, Infectious Grooves, Metallica) released the year prior.\\n\\nThe band initially came together with three of the four Dub War veterans with Jeff Rose and Martin Ford returning alongside Webbe, along with new bassist Daniel Pugsley. <a href=\"https://www.last.fm/music/Skindred\">Read more on Last.fm</a>', bio_content='Skindred is a four-piece \"ragga metal\" band from Newport, Wales. Their genre is an innovative mix of metal, punk, and reggae. The band was formed in 1999 following the disbandment of vocalist Benji Webbe\\'s previous band, Dub War and his one-off side-project Mass Mental? featuring Robert Trujillo (Suicidal Tendencies, Infectious Grooves, Metallica) released the year prior.\\n\\nThe band initially came together with three of the four Dub War veterans with Jeff Rose and Martin Ford returning alongside Webbe, along with new bassist Daniel Pugsley. The group released their debut LP Babylon in July 2002, with sporadic success in parts of Europe and the U.S. metal underground. However after suffering years of indifference and waning support from Earache Records with Dub War and now seeing the same lack of label support from RCA for Skindred, Rose and Ford amicably left the band in November of 2002, but would continue to offer their support.\\n\\nSoon Webbe had hooked up with guitarist Mikey Dee, and drummer Dirty Arya and continued on, but it wasn\\'t until a year or so later and Lava Records\\' involvement that the album really took off. Skindred re-released Babylon in August 2004. Lava\\'s version featured different cover art, and included newly recorded material in addition to the original, Howard Benson-helmed songs. Skindred then headed out on a series of tours with acts like Sevendust, Nonpoint, and Papa Roach, and never looked back.\\n\\nDiscography\\n\\nAlbums\\n2002 - Babylon\\n2007 - Roots Rock Riot\\n2009 - Shark Bites And Dog Fights\\n2011 -  Union Black\\n2014 -  Kill The Power\\n2015 -  Volume\\n2018 -  Big Tings\\n2023 - Smile\\n\\nSingles\\n2005 - Nobody\\n2006 - Pressure\\n2007 - RatRace\\n2008 - Trouble\\n2009 - Electric Avenue\\n2009 - Stand For Something\\n2011 - Warning (featuring Jacoby Shaddix of Papa Roach)\\n2011 - Cut Dem\\n2012 - Game Over\\n2013 - Ninja <a href=\"https://www.last.fm/music/Skindred\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['reggae metal', 'metal', 'reggae', 'seen live', 'rapcore'], similar_artists=[{'name': 'Soil', 'url': 'https://www.last.fm/music/Soil'}, {'name': 'Nonpoint', 'url': 'https://www.last.fm/music/Nonpoint'}, {'name': '(həd) p.e.', 'url': 'https://www.last.fm/music/(h%C9%99d)+p.e.'}, {'name': 'Drowning Pool', 'url': 'https://www.last.fm/music/Drowning+Pool'}, {'name': 'Ill Niño', 'url': 'https://www.last.fm/music/Ill+Ni%C3%B1o'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Skindred', 'mbid': '36e371e9-e76b-4b66-b813-e1d1af6d7128', 'url': 'https://www.last.fm/music/Skindred', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '559642', 'playcount': '13832422'}, 'similar': {'artist': [{'name': 'Soil', 'url': 'https://www.last.fm/music/Soil', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Nonpoint', 'url': 'https://www.last.fm/music/Nonpoint', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': '(həd) p.e.', 'url': 'https://www.last.fm/music/(h%C9%99d)+p.e.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Drowning Pool', 'url': 'https://www.last.fm/music/Drowning+Pool', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ill Niño', 'url': 'https://www.last.fm/music/Ill+Ni%C3%B1o', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'reggae metal', 'url': 'https://www.last.fm/tag/reggae+metal'}, {'name': 'metal', 'url': 'https://www.last.fm/tag/metal'}, {'name': 'reggae', 'url': 'https://www.last.fm/tag/reggae'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'rapcore', 'url': 'https://www.last.fm/tag/rapcore'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Skindred/+wiki'}}, 'published': '12 Feb 2006, 20:49', 'summary': 'Skindred is a four-piece \"ragga metal\" band from Newport, Wales. Their genre is an innovative mix of metal, punk, and reggae. The band was formed in 1999 following the disbandment of vocalist Benji Webbe\\'s previous band, Dub War and his one-off side-project Mass Mental? featuring Robert Trujillo (Suicidal Tendencies, Infectious Grooves, Metallica) released the year prior.\\n\\nThe band initially came together with three of the four Dub War veterans with Jeff Rose and Martin Ford returning alongside Webbe, along with new bassist Daniel Pugsley. <a href=\"https://www.last.fm/music/Skindred\">Read more on Last.fm</a>', 'content': 'Skindred is a four-piece \"ragga metal\" band from Newport, Wales. Their genre is an innovative mix of metal, punk, and reggae. The band was formed in 1999 following the disbandment of vocalist Benji Webbe\\'s previous band, Dub War and his one-off side-project Mass Mental? featuring Robert Trujillo (Suicidal Tendencies, Infectious Grooves, Metallica) released the year prior.\\n\\nThe band initially came together with three of the four Dub War veterans with Jeff Rose and Martin Ford returning alongside Webbe, along with new bassist Daniel Pugsley. The group released their debut LP Babylon in July 2002, with sporadic success in parts of Europe and the U.S. metal underground. However after suffering years of indifference and waning support from Earache Records with Dub War and now seeing the same lack of label support from RCA for Skindred, Rose and Ford amicably left the band in November of 2002, but would continue to offer their support.\\n\\nSoon Webbe had hooked up with guitarist Mikey Dee, and drummer Dirty Arya and continued on, but it wasn\\'t until a year or so later and Lava Records\\' involvement that the album really took off. Skindred re-released Babylon in August 2004. Lava\\'s version featured different cover art, and included newly recorded material in addition to the original, Howard Benson-helmed songs. Skindred then headed out on a series of tours with acts like Sevendust, Nonpoint, and Papa Roach, and never looked back.\\n\\nDiscography\\n\\nAlbums\\n2002 - Babylon\\n2007 - Roots Rock Riot\\n2009 - Shark Bites And Dog Fights\\n2011 -  Union Black\\n2014 -  Kill The Power\\n2015 -  Volume\\n2018 -  Big Tings\\n2023 - Smile\\n\\nSingles\\n2005 - Nobody\\n2006 - Pressure\\n2007 - RatRace\\n2008 - Trouble\\n2009 - Electric Avenue\\n2009 - Stand For Something\\n2011 - Warning (featuring Jacoby Shaddix of Papa Roach)\\n2011 - Cut Dem\\n2012 - Game Over\\n2013 - Ninja <a href=\"https://www.last.fm/music/Skindred\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3jTlKw98Ql1jGRPYqhqHap', url='https://open.spotify.com/artist/3jTlKw98Ql1jGRPYqhqHap', name='Skindred', popularity=59, followers=625273, genres=['nu metal', 'rap metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb6b80f0b7f586425528d9eedd', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746b80f0b7f586425528d9eedd', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786b80f0b7f586425528d9eedd', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3jTlKw98Ql1jGRPYqhqHap'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3jTlKw98Ql1jGRPYqhqHap'}, 'followers': {'href': None, 'total': 625273}, 'genres': ['nu metal', 'rap metal'], 'href': 'https://api.spotify.com/v1/artists/3jTlKw98Ql1jGRPYqhqHap', 'id': '3jTlKw98Ql1jGRPYqhqHap', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb6b80f0b7f586425528d9eedd', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746b80f0b7f586425528d9eedd', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786b80f0b7f586425528d9eedd', 'height': 160, 'width': 160}], 'name': 'Skindred', 'popularity': 59, 'type': 'artist', 'uri': 'spotify:artist:3jTlKw98Ql1jGRPYqhqHap'})",
@@ -414,6 +583,6 @@
   },
   "spotify_id": "3jTlKw98Ql1jGRPYqhqHap",
   "spotify_url": "https://open.spotify.com/artist/3jTlKw98Ql1jGRPYqhqHap",
-  "updated_at": "2026-10-22T14:11:13.158143",
+  "updated_at": "2026-10-30T18:45:11.219693",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Skindred"
 }

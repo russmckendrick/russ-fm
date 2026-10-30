@@ -100,7 +100,8 @@ for (const slug of artistSlugs) {
   const d = readJson(path.join(PUB, 'artist', slug, `${slug}.json`));
   if (!d) continue;
   const rd = d.raw_data ?? {};
-  const dg = rd.discogs?.raw_data ?? {};
+  // The Python scrapper wrapped the Discogs artist as discogs.raw_data; the Rust one stores it as discogs itself.
+  const dg = rd.discogs?.raw_data ?? rd.discogs ?? {};
   const tadb = rd.theaudiodb ?? {};
   const img = readJson(path.join(PUB, 'artist', slug, `${slug}-image.json`)) ?? {};
   const videos: [string, string, string][] = [];

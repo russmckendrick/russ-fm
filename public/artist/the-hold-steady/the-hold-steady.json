@@ -134,22 +134,105 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='19552743', url='https://music.apple.com/gb/artist/the-hold-steady/19552743', name='The Hold Steady', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/50/31/36/50313630-b6c5-c4a2-c9b1-12e254bb0917/cc5ab725-a355-41ff-bbf3-cd8962d8e1ed_ami-identity-e88d77aaca15bc0212ff0262894570f6-2023-01-03T21-15-10.905Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '19552743', 'type': 'artists', 'href': '/v1/catalog/gb/artists/19552743', 'attributes': {'name': 'The Hold Steady', 'genreNames': ['Alternative'], 'artwork': {'width': 3797, 'height': 3797, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/50/31/36/50313630-b6c5-c4a2-c9b1-12e254bb0917/cc5ab725-a355-41ff-bbf3-cd8962d8e1ed_ami-identity-e88d77aaca15bc0212ff0262894570f6-2023-01-03T21-15-10.905Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'eeeeee', 'textColor1': '080708', 'textColor2': '101010', 'textColor3': '363536', 'textColor4': '3c3c3c'}, 'url': 'https://music.apple.com/gb/artist/the-hold-steady/19552743'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/19552743/albums', 'next': '/v1/catalog/gb/artists/19552743/albums?offset=25', 'data': [{'id': '1539020630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539020630'}, {'id': '1789648747', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648747'}, {'id': '208395734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/208395734'}, {'id': '1656815606', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1656815606'}, {'id': '1716342434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1716342434'}, {'id': '1789822091', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789822091'}, {'id': '1443218253', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443218253'}, {'id': '1143275281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1143275281'}, {'id': '1789813521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789813521'}, {'id': '250852935', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250852935'}, {'id': '1441152874', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441152874'}, {'id': '1458507552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1458507552'}, {'id': '1789820979', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789820979'}, {'id': '19552775', 'type': 'albums', 'href': '/v1/catalog/gb/albums/19552775'}, {'id': '1789821263', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789821263'}, {'id': '1451968240', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1451968240'}, {'id': '1789648334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648334'}, {'id': '1789648534', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648534'}, {'id': '1736226368', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1736226368'}, {'id': '1789648319', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648319'}, {'id': '1470936202', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1470936202'}, {'id': '201473467', 'type': 'albums', 'href': '/v1/catalog/gb/albums/201473467'}, {'id': '260462604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/260462604'}, {'id': '250813451', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250813451'}, {'id': '202810813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/202810813'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "491197",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 491197,
+      "images": [
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/PxSKx3_mRMpOIE9aIEsPUZDkTGQPy3iGgMNI4xM4inY/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/PxSKx3_mRMpOIE9aIEsPUZDkTGQPy3iGgMNI4xM4inY/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "uri150": "https://i.discogs.com/QIrMcrBPQGni_pj942txDOqsL_XTeOYk_nx44XiVaec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 508,
+          "resource_url": "https://i.discogs.com/_3z5ssgJ7R1gppt3Akse4ovhzLKOcxGUB4GepGAWIJA/rs:fit/g:sm/q:90/h:508/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_3z5ssgJ7R1gppt3Akse4ovhzLKOcxGUB4GepGAWIJA/rs:fit/g:sm/q:90/h:508/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oVseiaoyejf62nZ8bZrclE4X3d9BH0H8t7UZZ1BzS24/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/L751KOxunPeOaAcgS8UgP4s6QNsNBiEM52ggF4wtf4w/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/L751KOxunPeOaAcgS8UgP4s6QNsNBiEM52ggF4wtf4w/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qjA4ShRO1OtzcWe4zD8Vru_BEs52WingWbh8DaAV5vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/JGc-TqzpDcMOe3bG_-qt5EWJNA5g_KtIXz7B0SFzQUE/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JGc-TqzpDcMOe3bG_-qt5EWJNA5g_KtIXz7B0SFzQUE/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TxQZxOtb_IAYSfxuSsVLNuc2PLDnBL6zYQvBizQwSFs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/e52UGuM2akVe_M1VbS_PS999ZKujIMqkJkF9RDyJdoM/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e52UGuM2akVe_M1VbS_PS999ZKujIMqkJkF9RDyJdoM/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UlFMX_DLIQBUFwarqO3TT-5UI0xu78lBM4AH9yvWYuY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 491190,
+          "name": "Tad Kubler",
+          "resource_url": "https://api.discogs.com/artists/491190"
+        },
+        {
+          "active": true,
+          "id": 491191,
+          "name": "Craig Finn",
+          "resource_url": "https://api.discogs.com/artists/491191"
+        },
+        {
+          "active": true,
+          "id": 491192,
+          "name": "Bobby Drake",
+          "resource_url": "https://api.discogs.com/artists/491192"
+        },
+        {
+          "active": true,
+          "id": 491196,
+          "name": "Galen Polivka",
+          "resource_url": "https://api.discogs.com/artists/491196"
+        },
+        {
+          "active": false,
+          "id": 491198,
+          "name": "Judd Counsell",
+          "resource_url": "https://api.discogs.com/artists/491198"
+        },
+        {
+          "active": true,
+          "id": 491199,
+          "name": "Franz Nicolay",
+          "resource_url": "https://api.discogs.com/artists/491199"
+        },
+        {
+          "active": true,
+          "id": 1412929,
+          "name": "Steve Selvidge",
+          "resource_url": "https://api.discogs.com/artists/1412929"
+        }
+      ],
       "name": "The Hold Steady",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "491197",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/491197"
-      },
+      "profile": "American indie rock band formed in 2003 in Minneapolis, Minnesota, now based in Brooklyn, New York. The band consists of Craig Finn (vocals, guitar), Tad Kubler (lead guitar), Galen Polivka (bass), Franz Nicolay (keyboards), Bobby Drake (drums), and Steve Selvidge (guitar).",
+      "releases_url": "https://api.discogs.com/artists/491197/releases",
       "resource_url": "https://api.discogs.com/artists/491197",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/491197",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/491197-The-Hold-Steady",
+      "urls": [
+        "http://www.theholdsteady.net",
+        "https://theholdsteady.bandcamp.com/",
+        "http://www.myspace.com/theholdsteady",
+        "http://en.wikipedia.org/wiki/The_Hold_Steady"
+      ]
     },
     "identity": {
       "musicbrainz_id": "4883523d-fc0e-4d0d-802c-91379e767083",
@@ -244,27 +327,111 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='19552743', url='https://music.apple.com/gb/artist/the-hold-steady/19552743', name='The Hold Steady', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/50/31/36/50313630-b6c5-c4a2-c9b1-12e254bb0917/cc5ab725-a355-41ff-bbf3-cd8962d8e1ed_ami-identity-e88d77aaca15bc0212ff0262894570f6-2023-01-03T21-15-10.905Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '19552743', 'type': 'artists', 'href': '/v1/catalog/gb/artists/19552743', 'attributes': {'name': 'The Hold Steady', 'genreNames': ['Alternative'], 'artwork': {'width': 3797, 'height': 3797, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages123/v4/50/31/36/50313630-b6c5-c4a2-c9b1-12e254bb0917/cc5ab725-a355-41ff-bbf3-cd8962d8e1ed_ami-identity-e88d77aaca15bc0212ff0262894570f6-2023-01-03T21-15-10.905Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'eeeeee', 'textColor1': '080708', 'textColor2': '101010', 'textColor3': '363536', 'textColor4': '3c3c3c'}, 'url': 'https://music.apple.com/gb/artist/the-hold-steady/19552743'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/19552743/albums', 'next': '/v1/catalog/gb/artists/19552743/albums?offset=25', 'data': [{'id': '1539020630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539020630'}, {'id': '1789648747', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648747'}, {'id': '208395734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/208395734'}, {'id': '1656815606', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1656815606'}, {'id': '1716342434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1716342434'}, {'id': '1789822091', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789822091'}, {'id': '1443218253', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443218253'}, {'id': '1143275281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1143275281'}, {'id': '1789813521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789813521'}, {'id': '250852935', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250852935'}, {'id': '1441152874', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441152874'}, {'id': '1458507552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1458507552'}, {'id': '1789820979', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789820979'}, {'id': '19552775', 'type': 'albums', 'href': '/v1/catalog/gb/albums/19552775'}, {'id': '1789821263', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789821263'}, {'id': '1451968240', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1451968240'}, {'id': '1789648334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648334'}, {'id': '1789648534', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648534'}, {'id': '1736226368', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1736226368'}, {'id': '1789648319', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789648319'}, {'id': '1470936202', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1470936202'}, {'id': '201473467', 'type': 'albums', 'href': '/v1/catalog/gb/albums/201473467'}, {'id': '260462604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/260462604'}, {'id': '250813451', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250813451'}, {'id': '202810813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/202810813'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "491197",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 491197,
+      "images": [
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/PxSKx3_mRMpOIE9aIEsPUZDkTGQPy3iGgMNI4xM4inY/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/PxSKx3_mRMpOIE9aIEsPUZDkTGQPy3iGgMNI4xM4inY/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "uri150": "https://i.discogs.com/QIrMcrBPQGni_pj942txDOqsL_XTeOYk_nx44XiVaec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDU2/LTc3MjQucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 508,
+          "resource_url": "https://i.discogs.com/_3z5ssgJ7R1gppt3Akse4ovhzLKOcxGUB4GepGAWIJA/rs:fit/g:sm/q:90/h:508/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_3z5ssgJ7R1gppt3Akse4ovhzLKOcxGUB4GepGAWIJA/rs:fit/g:sm/q:90/h:508/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oVseiaoyejf62nZ8bZrclE4X3d9BH0H8t7UZZ1BzS24/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xMTY3NDYxNjU4/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/L751KOxunPeOaAcgS8UgP4s6QNsNBiEM52ggF4wtf4w/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/L751KOxunPeOaAcgS8UgP4s6QNsNBiEM52ggF4wtf4w/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qjA4ShRO1OtzcWe4zD8Vru_BEs52WingWbh8DaAV5vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDYy/LTM2NTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/JGc-TqzpDcMOe3bG_-qt5EWJNA5g_KtIXz7B0SFzQUE/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JGc-TqzpDcMOe3bG_-qt5EWJNA5g_KtIXz7B0SFzQUE/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TxQZxOtb_IAYSfxuSsVLNuc2PLDnBL6zYQvBizQwSFs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDc0/LTkwNzkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/e52UGuM2akVe_M1VbS_PS999ZKujIMqkJkF9RDyJdoM/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e52UGuM2akVe_M1VbS_PS999ZKujIMqkJkF9RDyJdoM/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UlFMX_DLIQBUFwarqO3TT-5UI0xu78lBM4AH9yvWYuY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5MTE5/Ny0xNTY2MDg5MDg1/LTI1ODAuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 491190,
+          "name": "Tad Kubler",
+          "resource_url": "https://api.discogs.com/artists/491190"
+        },
+        {
+          "active": true,
+          "id": 491191,
+          "name": "Craig Finn",
+          "resource_url": "https://api.discogs.com/artists/491191"
+        },
+        {
+          "active": true,
+          "id": 491192,
+          "name": "Bobby Drake",
+          "resource_url": "https://api.discogs.com/artists/491192"
+        },
+        {
+          "active": true,
+          "id": 491196,
+          "name": "Galen Polivka",
+          "resource_url": "https://api.discogs.com/artists/491196"
+        },
+        {
+          "active": false,
+          "id": 491198,
+          "name": "Judd Counsell",
+          "resource_url": "https://api.discogs.com/artists/491198"
+        },
+        {
+          "active": true,
+          "id": 491199,
+          "name": "Franz Nicolay",
+          "resource_url": "https://api.discogs.com/artists/491199"
+        },
+        {
+          "active": true,
+          "id": 1412929,
+          "name": "Steve Selvidge",
+          "resource_url": "https://api.discogs.com/artists/1412929"
+        }
+      ],
       "name": "The Hold Steady",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "491197",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/491197"
-      },
+      "profile": "American indie rock band formed in 2003 in Minneapolis, Minnesota, now based in Brooklyn, New York. The band consists of Craig Finn (vocals, guitar), Tad Kubler (lead guitar), Galen Polivka (bass), Franz Nicolay (keyboards), Bobby Drake (drums), and Steve Selvidge (guitar).",
+      "releases_url": "https://api.discogs.com/artists/491197/releases",
       "resource_url": "https://api.discogs.com/artists/491197",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/491197",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/491197-The-Hold-Steady",
+      "urls": [
+        "http://www.theholdsteady.net",
+        "https://theholdsteady.bandcamp.com/",
+        "http://www.myspace.com/theholdsteady",
+        "http://en.wikipedia.org/wiki/The_Hold_Steady"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Hold Steady', url='https://www.last.fm/music/The+Hold+Steady', mbid='4883523d-fc0e-4d0d-802c-91379e767083', listeners=488744, playcount=16084403, bio_summary='The Hold Steady is an American rock band based in Brooklyn formed by vocalist/guitarist Craig Finn (ex-Lifter Puller) in 2004. Wanting to capture the sound of bands such as The Replacements and The Grifters, Finn recruited guitarist Tad Kubler (also ex-Lifter Puller), drummer Judd Counsell, and bassist Galen Polivka. In 2005 the band grew to include Franz Nicolay (of The World/Inferno Friendship Society) on keyboards and Bobby Drake took over on drums following Counsell\\'s departure.  <a href=\"https://www.last.fm/music/The+Hold+Steady\">Read more on Last.fm</a>', bio_content='The Hold Steady is an American rock band based in Brooklyn formed by vocalist/guitarist Craig Finn (ex-Lifter Puller) in 2004. Wanting to capture the sound of bands such as The Replacements and The Grifters, Finn recruited guitarist Tad Kubler (also ex-Lifter Puller), drummer Judd Counsell, and bassist Galen Polivka. In 2005 the band grew to include Franz Nicolay (of The World/Inferno Friendship Society) on keyboards and Bobby Drake took over on drums following Counsell\\'s departure. \\n\\nRecording mostly live, the band released its debut, Almost Killed Me, on French Kiss Records in March 2004 and Separation Sunday a year later. In April 2006 the band signed to Vagrant Records and entered the studio on the 1st of May to begin work on their third record, Boys and Girls in America.  Released in October, it was one of the most critically acclaimed records of 2006 and reached a much larger audience than its predecessors.\\n\\nThe band released their fourth album, Stay Positive, recorded again with Boys and Girls in America producer John Agnello. Nicolay left the group and on May 4, 2010 the band released their fifth studio album, Heaven Is Whenever, recorded with producer Dean Baltulonis.\\n\\n\\nOn July 15, 2008, Stay Positive was released. It debuted at #30 on the Billboard 200. It debuted on the UK Album Chart at #15 on July 20, the third-highest new entry. It ranked #1 on the UK Indie Chart. The album was named the best of 2008 by Entertainment Weekly. The song \"Constructive Summer\" was number 56 on Rolling Stone\\'s list of the 100 Best Songs of 2008. \\n\\nTheir seventh album, Thrashing Thru the Passion, was released in 2019.  Among its songs, \"Entitlement Crew\" and \"Confusion in the Marketplace,\" were considered standouts. <a href=\"https://www.last.fm/music/The+Hold+Steady\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'indie rock', 'rock', 'indie', 'alternative'], similar_artists=[{'name': 'Titus Andronicus', 'url': 'https://www.last.fm/music/Titus+Andronicus'}, {'name': 'The Weakerthans', 'url': 'https://www.last.fm/music/The+Weakerthans'}, {'name': 'Superchunk', 'url': 'https://www.last.fm/music/Superchunk'}, {'name': 'Japandroids', 'url': 'https://www.last.fm/music/Japandroids'}, {'name': 'The Gaslight Anthem', 'url': 'https://www.last.fm/music/The+Gaslight+Anthem'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Hold Steady', 'mbid': '4883523d-fc0e-4d0d-802c-91379e767083', 'url': 'https://www.last.fm/music/The+Hold+Steady', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '488744', 'playcount': '16084403'}, 'similar': {'artist': [{'name': 'Titus Andronicus', 'url': 'https://www.last.fm/music/Titus+Andronicus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Weakerthans', 'url': 'https://www.last.fm/music/The+Weakerthans', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Superchunk', 'url': 'https://www.last.fm/music/Superchunk', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Japandroids', 'url': 'https://www.last.fm/music/Japandroids', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Gaslight Anthem', 'url': 'https://www.last.fm/music/The+Gaslight+Anthem', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Hold+Steady/+wiki'}}, 'published': '16 Feb 2006, 20:33', 'summary': 'The Hold Steady is an American rock band based in Brooklyn formed by vocalist/guitarist Craig Finn (ex-Lifter Puller) in 2004. Wanting to capture the sound of bands such as The Replacements and The Grifters, Finn recruited guitarist Tad Kubler (also ex-Lifter Puller), drummer Judd Counsell, and bassist Galen Polivka. In 2005 the band grew to include Franz Nicolay (of The World/Inferno Friendship Society) on keyboards and Bobby Drake took over on drums following Counsell\\'s departure.  <a href=\"https://www.last.fm/music/The+Hold+Steady\">Read more on Last.fm</a>', 'content': 'The Hold Steady is an American rock band based in Brooklyn formed by vocalist/guitarist Craig Finn (ex-Lifter Puller) in 2004. Wanting to capture the sound of bands such as The Replacements and The Grifters, Finn recruited guitarist Tad Kubler (also ex-Lifter Puller), drummer Judd Counsell, and bassist Galen Polivka. In 2005 the band grew to include Franz Nicolay (of The World/Inferno Friendship Society) on keyboards and Bobby Drake took over on drums following Counsell\\'s departure. \\n\\nRecording mostly live, the band released its debut, Almost Killed Me, on French Kiss Records in March 2004 and Separation Sunday a year later. In April 2006 the band signed to Vagrant Records and entered the studio on the 1st of May to begin work on their third record, Boys and Girls in America.  Released in October, it was one of the most critically acclaimed records of 2006 and reached a much larger audience than its predecessors.\\n\\nThe band released their fourth album, Stay Positive, recorded again with Boys and Girls in America producer John Agnello. Nicolay left the group and on May 4, 2010 the band released their fifth studio album, Heaven Is Whenever, recorded with producer Dean Baltulonis.\\n\\n\\nOn July 15, 2008, Stay Positive was released. It debuted at #30 on the Billboard 200. It debuted on the UK Album Chart at #15 on July 20, the third-highest new entry. It ranked #1 on the UK Indie Chart. The album was named the best of 2008 by Entertainment Weekly. The song \"Constructive Summer\" was number 56 on Rolling Stone\\'s list of the 100 Best Songs of 2008. \\n\\nTheir seventh album, Thrashing Thru the Passion, was released in 2019.  Among its songs, \"Entitlement Crew\" and \"Confusion in the Marketplace,\" were considered standouts. <a href=\"https://www.last.fm/music/The+Hold+Steady\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3qkZBMz5JgmRN9u5wwhRC6', url='https://open.spotify.com/artist/3qkZBMz5JgmRN9u5wwhRC6', name='The Hold Steady', popularity=42, followers=87984, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebce36dcfc2b5c47398e1688c1', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174ce36dcfc2b5c47398e1688c1', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178ce36dcfc2b5c47398e1688c1', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3qkZBMz5JgmRN9u5wwhRC6'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3qkZBMz5JgmRN9u5wwhRC6'}, 'followers': {'href': None, 'total': 87984}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/3qkZBMz5JgmRN9u5wwhRC6', 'id': '3qkZBMz5JgmRN9u5wwhRC6', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebce36dcfc2b5c47398e1688c1', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174ce36dcfc2b5c47398e1688c1', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178ce36dcfc2b5c47398e1688c1', 'height': 160, 'width': 160}], 'name': 'The Hold Steady', 'popularity': 42, 'type': 'artist', 'uri': 'spotify:artist:3qkZBMz5JgmRN9u5wwhRC6'})",
@@ -356,6 +523,6 @@
   },
   "spotify_id": "3qkZBMz5JgmRN9u5wwhRC6",
   "spotify_url": "https://open.spotify.com/artist/3qkZBMz5JgmRN9u5wwhRC6",
-  "updated_at": "2026-10-22T14:12:23.590639",
+  "updated_at": "2026-10-30T18:46:32.199012",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Hold_Steady"
 }

@@ -95,22 +95,110 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='23482043', url='https://music.apple.com/gb/artist/consolidated/23482043', name='Consolidated', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/22/7b/85/mzi.trqhwfuq.tif/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '23482043', 'type': 'artists', 'href': '/v1/catalog/gb/artists/23482043', 'attributes': {'artwork': {'bgColor': '9392ad', 'height': 600, 'textColor1': '0b0b0c', 'textColor2': '131213', 'textColor3': '26262c', 'textColor4': '2c2c32', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/22/7b/85/mzi.trqhwfuq.tif/{w}x{h}ac.jpg', 'width': 600}, 'genreNames': ['Alternative'], 'name': 'Consolidated', 'url': 'https://music.apple.com/gb/artist/consolidated/23482043'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/23482043/albums', 'next': '/v1/catalog/gb/artists/23482043/albums?offset=25', 'data': [{'id': '91030609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/91030609'}, {'id': '92101280', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92101280'}, {'id': '92100522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92100522'}, {'id': '1552389884', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552389884'}, {'id': '1443477178', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443477178'}, {'id': '23482090', 'type': 'albums', 'href': '/v1/catalog/gb/albums/23482090'}, {'id': '121178200', 'type': 'albums', 'href': '/v1/catalog/gb/albums/121178200'}, {'id': '441600971', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441600971'}, {'id': '1732977311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1732977311'}, {'id': '1521895270', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521895270'}, {'id': '1515190665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1515190665'}, {'id': '441552758', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441552758'}, {'id': '1520023521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1520023521'}, {'id': '276007498', 'type': 'albums', 'href': '/v1/catalog/gb/albums/276007498'}, {'id': '92262891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92262891'}, {'id': '441535579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441535579'}, {'id': '439322771', 'type': 'albums', 'href': '/v1/catalog/gb/albums/439322771'}, {'id': '441526728', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441526728'}, {'id': '121179077', 'type': 'albums', 'href': '/v1/catalog/gb/albums/121179077'}, {'id': '1843161209', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1843161209'}, {'id': '1517267646', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517267646'}, {'id': '1518506139', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1518506139'}, {'id': '441562885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441562885'}, {'id': '1856607561', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1856607561'}, {'id': '1855931295', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1855931295'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2736",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2736,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lgAqOELJpIm4fVaEEriUHVwIfvnSv-Ygfw_JronBt-s/rs:fit/g:sm/q:90/h:600/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lgAqOELJpIm4fVaEEriUHVwIfvnSv-Ygfw_JronBt-s/rs:fit/g:sm/q:90/h:600/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/8gI4VGn50dJUjwJXyxtMeJ9gESYZovcoxVaMTh8-4R4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "width": 459
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kSmSaVfjhmN16uysFQdgabOOpCBbuzpCTmBCb6w1bKM/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kSmSaVfjhmN16uysFQdgabOOpCBbuzpCTmBCb6w1bKM/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/zdErXJyCvSOpqFx0SMDZ84m-8QPuifZIS46PWp4YbXY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "width": 478
+        },
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/5GcTgPoBVPBBKH54166GTRDYImipkQ3-4c9aa9ZnzL0/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5GcTgPoBVPBBKH54166GTRDYImipkQ3-4c9aa9ZnzL0/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pRSmrhVKM7kDQa3VNP2h8jw3s3me6Ab8-J4RBapTKLg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 550,
+          "resource_url": "https://i.discogs.com/ESxegc2acvZyBiaJHtftGacUb0Sl-Al0nw_QNr2iA4c/rs:fit/g:sm/q:90/h:550/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ESxegc2acvZyBiaJHtftGacUb0Sl-Al0nw_QNr2iA4c/rs:fit/g:sm/q:90/h:550/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Gs6r9M7fHeKQ5xgemHFVAKzgxU3FOayNCjEW7PkDtKE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 323,
+          "resource_url": "https://i.discogs.com/Ov92y-J-KLr3Xo0d9YKIq3-RZ_MxiYIIX-tIS-n0m_o/rs:fit/g:sm/q:90/h:323/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ov92y-J-KLr3Xo0d9YKIq3-RZ_MxiYIIX-tIS-n0m_o/rs:fit/g:sm/q:90/h:323/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/xlH-s77PyTI0zGdnAYT-RRK-SHR6lhT31YthoBNjyBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "width": 480
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 30479,
+          "name": "Mark Pistel",
+          "resource_url": "https://api.discogs.com/artists/30479"
+        },
+        {
+          "active": false,
+          "id": 41445,
+          "name": "Philip Steir",
+          "resource_url": "https://api.discogs.com/artists/41445"
+        },
+        {
+          "active": false,
+          "id": 87672,
+          "name": "Lisa Cash",
+          "resource_url": "https://api.discogs.com/artists/87672"
+        },
+        {
+          "active": false,
+          "id": 535146,
+          "name": "Gilly Ann Hanner",
+          "resource_url": "https://api.discogs.com/artists/535146"
+        },
+        {
+          "active": true,
+          "id": 562325,
+          "name": "Adam Sherburne",
+          "resource_url": "https://api.discogs.com/artists/562325"
+        },
+        {
+          "active": false,
+          "id": 690562,
+          "name": "Michael Dunn",
+          "resource_url": "https://api.discogs.com/artists/690562"
+        },
+        {
+          "active": false,
+          "id": 759293,
+          "name": "James Dickson",
+          "resource_url": "https://api.discogs.com/artists/759293"
+        }
+      ],
       "name": "Consolidated",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2736",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2736"
-      },
+      "namevariations": [
+        "Consolidated Music Group",
+        "Consolodated",
+        "Onsolidated"
+      ],
+      "profile": "Formed: 1988, USA.\r\n\r\nPolitically active band that combined confrontational left-wing politics with self-deprecating humour and a sound that encompassed elements of hip-hop, hard rock, funk, industrial and dance music.\r\n",
+      "releases_url": "https://api.discogs.com/artists/2736/releases",
       "resource_url": "https://api.discogs.com/artists/2736",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2736",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2736-Consolidated",
+      "urls": [
+        "https://www.facebook.com/Consolidated-105778171151699",
+        "http://www.Limbabwe.com/downloads/free-music-stop-america-2",
+        "http://en.wikipedia.org/wiki/Consolidated_(band)",
+        "https://consolidated.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "502d686d-a74c-4a09-ba74-8d919a13b684",
@@ -163,27 +251,116 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='23482043', url='https://music.apple.com/gb/artist/consolidated/23482043', name='Consolidated', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/22/7b/85/mzi.trqhwfuq.tif/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '23482043', 'type': 'artists', 'href': '/v1/catalog/gb/artists/23482043', 'attributes': {'artwork': {'bgColor': '9392ad', 'height': 600, 'textColor1': '0b0b0c', 'textColor2': '131213', 'textColor3': '26262c', 'textColor4': '2c2c32', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/22/7b/85/mzi.trqhwfuq.tif/{w}x{h}ac.jpg', 'width': 600}, 'genreNames': ['Alternative'], 'name': 'Consolidated', 'url': 'https://music.apple.com/gb/artist/consolidated/23482043'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/23482043/albums', 'next': '/v1/catalog/gb/artists/23482043/albums?offset=25', 'data': [{'id': '91030609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/91030609'}, {'id': '92101280', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92101280'}, {'id': '92100522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92100522'}, {'id': '1552389884', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552389884'}, {'id': '1443477178', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443477178'}, {'id': '23482090', 'type': 'albums', 'href': '/v1/catalog/gb/albums/23482090'}, {'id': '121178200', 'type': 'albums', 'href': '/v1/catalog/gb/albums/121178200'}, {'id': '441600971', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441600971'}, {'id': '1732977311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1732977311'}, {'id': '1521895270', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521895270'}, {'id': '1515190665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1515190665'}, {'id': '441552758', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441552758'}, {'id': '1520023521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1520023521'}, {'id': '276007498', 'type': 'albums', 'href': '/v1/catalog/gb/albums/276007498'}, {'id': '92262891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92262891'}, {'id': '441535579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441535579'}, {'id': '439322771', 'type': 'albums', 'href': '/v1/catalog/gb/albums/439322771'}, {'id': '441526728', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441526728'}, {'id': '121179077', 'type': 'albums', 'href': '/v1/catalog/gb/albums/121179077'}, {'id': '1843161209', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1843161209'}, {'id': '1517267646', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517267646'}, {'id': '1518506139', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1518506139'}, {'id': '441562885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/441562885'}, {'id': '1856607561', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1856607561'}, {'id': '1855931295', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1855931295'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2736",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2736,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lgAqOELJpIm4fVaEEriUHVwIfvnSv-Ygfw_JronBt-s/rs:fit/g:sm/q:90/h:600/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lgAqOELJpIm4fVaEEriUHVwIfvnSv-Ygfw_JronBt-s/rs:fit/g:sm/q:90/h:600/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/8gI4VGn50dJUjwJXyxtMeJ9gESYZovcoxVaMTh8-4R4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEyMi5q/cGVn.jpeg",
+          "width": 459
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kSmSaVfjhmN16uysFQdgabOOpCBbuzpCTmBCb6w1bKM/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kSmSaVfjhmN16uysFQdgabOOpCBbuzpCTmBCb6w1bKM/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/zdErXJyCvSOpqFx0SMDZ84m-8QPuifZIS46PWp4YbXY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTI1OTM3MTEwNi5q/cGVn.jpeg",
+          "width": 478
+        },
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/5GcTgPoBVPBBKH54166GTRDYImipkQ3-4c9aa9ZnzL0/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5GcTgPoBVPBBKH54166GTRDYImipkQ3-4c9aa9ZnzL0/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pRSmrhVKM7kDQa3VNP2h8jw3s3me6Ab8-J4RBapTKLg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTUzMzUwMTE1Ni01/NDI1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 550,
+          "resource_url": "https://i.discogs.com/ESxegc2acvZyBiaJHtftGacUb0Sl-Al0nw_QNr2iA4c/rs:fit/g:sm/q:90/h:550/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ESxegc2acvZyBiaJHtftGacUb0Sl-Al0nw_QNr2iA4c/rs:fit/g:sm/q:90/h:550/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Gs6r9M7fHeKQ5xgemHFVAKzgxU3FOayNCjEW7PkDtKE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTQ4NDk1MjAyOC04/NDI5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 323,
+          "resource_url": "https://i.discogs.com/Ov92y-J-KLr3Xo0d9YKIq3-RZ_MxiYIIX-tIS-n0m_o/rs:fit/g:sm/q:90/h:323/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ov92y-J-KLr3Xo0d9YKIq3-RZ_MxiYIIX-tIS-n0m_o/rs:fit/g:sm/q:90/h:323/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/xlH-s77PyTI0zGdnAYT-RRK-SHR6lhT31YthoBNjyBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzYt/MTE0NjczMDI1Ny5q/cGVn.jpeg",
+          "width": 480
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 30479,
+          "name": "Mark Pistel",
+          "resource_url": "https://api.discogs.com/artists/30479"
+        },
+        {
+          "active": false,
+          "id": 41445,
+          "name": "Philip Steir",
+          "resource_url": "https://api.discogs.com/artists/41445"
+        },
+        {
+          "active": false,
+          "id": 87672,
+          "name": "Lisa Cash",
+          "resource_url": "https://api.discogs.com/artists/87672"
+        },
+        {
+          "active": false,
+          "id": 535146,
+          "name": "Gilly Ann Hanner",
+          "resource_url": "https://api.discogs.com/artists/535146"
+        },
+        {
+          "active": true,
+          "id": 562325,
+          "name": "Adam Sherburne",
+          "resource_url": "https://api.discogs.com/artists/562325"
+        },
+        {
+          "active": false,
+          "id": 690562,
+          "name": "Michael Dunn",
+          "resource_url": "https://api.discogs.com/artists/690562"
+        },
+        {
+          "active": false,
+          "id": 759293,
+          "name": "James Dickson",
+          "resource_url": "https://api.discogs.com/artists/759293"
+        }
+      ],
       "name": "Consolidated",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2736",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2736"
-      },
+      "namevariations": [
+        "Consolidated Music Group",
+        "Consolodated",
+        "Onsolidated"
+      ],
+      "profile": "Formed: 1988, USA.\r\n\r\nPolitically active band that combined confrontational left-wing politics with self-deprecating humour and a sound that encompassed elements of hip-hop, hard rock, funk, industrial and dance music.\r\n",
+      "releases_url": "https://api.discogs.com/artists/2736/releases",
       "resource_url": "https://api.discogs.com/artists/2736",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2736",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2736-Consolidated",
+      "urls": [
+        "https://www.facebook.com/Consolidated-105778171151699",
+        "http://www.Limbabwe.com/downloads/free-music-stop-america-2",
+        "http://en.wikipedia.org/wiki/Consolidated_(band)",
+        "https://consolidated.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Consolidated', url='https://www.last.fm/music/Consolidated', mbid='502d686d-a74c-4a09-ba74-8d919a13b684', listeners=29763, playcount=325961, bio_summary='Consolidated are an American radical recording and performing collective, formed in in San Francisco in 1988. They were distinguished by left-leaning political activism and politically radical lyrics, as well as their innovative sonic collages which blended industrial and hip-hop styles. Adam Sherburne and Mark Pistel had been members of synthpop/dance outfit Until December.  Philip Steir had drummed in the funk/rock group Shy Hands. Repudiating those bands\\' sound and politics <a href=\"https://www.last.fm/music/Consolidated\">Read more on Last.fm</a>', bio_content='Consolidated are an American radical recording and performing collective, formed in in San Francisco in 1988. They were distinguished by left-leaning political activism and politically radical lyrics, as well as their innovative sonic collages which blended industrial and hip-hop styles. Adam Sherburne and Mark Pistel had been members of synthpop/dance outfit Until December.  Philip Steir had drummed in the funk/rock group Shy Hands. Repudiating those bands\\' sound and politics, and inspired by Public Enemy\\'s politics and aggressive sound collages, the trio regrouped as Consolidated.  They foregrounded their left-wing politics: pro-environment, pro-labor, pro-choice, anti-corporate, pro-animal rights, anti-drug (at least initially), critical of media exploitation of women, and concerned about rock music\\'s lack of political engagement.\\n\\nThe band released their self-titled debut EP in 1989 (they were on Nettwerk in North America and Zoth Ommog in Europe).  Centered on two mixes of the industrial-rap \"Consolidated!\", the EP is a statement of purpose, a foreshadowing of the bands\\' ideas and politics.  While embracing rap and sampling, its jerky rhythms aren\\'t far from late-period Devo.\\n\\nTheir first full-length record, The Myth of Rock, is also aggressively political, but its complex and intricate instrumental backing--recalling, at once, Tackhead, Public Enemy, late-80s sampledelica, and the brutal industrial of Test Dept.--would impress even the most conservative listeners. Sherburne does more speaking on the record than rapping or singing, but his anger and conviction come through on every track.  Not as heavy-handed as it could be, this is an underrated dance record.\\n\\nFriendly Fascism is more stripped-down and less compelling, relying less on heavy sampling and Bomb-Squad-esque production.  Jack Dangers of Meat Beat Manifesto mixed the album, which does stylistically recall MBM\\'s 99%.  This foregrounds the politics--and Sherborne\\'s gruff vocalizations--a bit more.\\n\\nPlay More Music returns a bit to the sonic aggression of Myth of Rock.  The record, like Friendly Fa$cism, features spoken-work snippets from the group\\'s concerts--the band would end shows by having a dialogue with their audience, which (the records demonstrate) sometimes became contentious.  \"Tool and Die\", an pro-gun control song, is one of the band\\'s most powerful (look for the MBM remix on the CD single), and \"You Suck\"--which strongly resembles Lords of Acid--remains a club favourite.\\n\\nConsolidated signed to a major label, London/Polygram Records, and released Business of Punishment (their tribulations with the record industry are recalled in on of the record\\'s standout tracks, \"Dog & Pony Show\").  The band mostly abandoned their rap and industrial influences in favor of a guitar-oriented, grunge sound, much to the album\\'s detriment.  Only the pro-choice anthem, \"Butyric Acid\", retains the punch and energy of earlier efforts.\\n\\nLondon/Polygram dropped the band, Pistel (who had become an in-demand producer and remixer) left soon afterwards, but Consolidated continued recording.  A recently released compilation, More Music Please: The Best of Consolidated, 1988-1993, contains most of the singles from their Nettwerk years and is an excellent introduction to the group. <a href=\"https://www.last.fm/music/Consolidated\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['industrial', 'Hip-Hop', 'political', 'alternative', 'USA'], similar_artists=[{'name': 'The Disposable Heroes Of Hiphoprisy', 'url': 'https://www.last.fm/music/The+Disposable+Heroes+Of+Hiphoprisy'}, {'name': 'Revolting Cocks', 'url': 'https://www.last.fm/music/Revolting+Cocks'}, {'name': 'Ministry', 'url': 'https://www.last.fm/music/Ministry'}, {'name': 'My Life with the Thrill Kill Kult', 'url': 'https://www.last.fm/music/My+Life+with+the+Thrill+Kill+Kult'}, {'name': 'Bigod 20', 'url': 'https://www.last.fm/music/Bigod+20'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Consolidated', 'mbid': '502d686d-a74c-4a09-ba74-8d919a13b684', 'url': 'https://www.last.fm/music/Consolidated', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '29763', 'playcount': '325961'}, 'similar': {'artist': [{'name': 'The Disposable Heroes Of Hiphoprisy', 'url': 'https://www.last.fm/music/The+Disposable+Heroes+Of+Hiphoprisy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Revolting Cocks', 'url': 'https://www.last.fm/music/Revolting+Cocks', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ministry', 'url': 'https://www.last.fm/music/Ministry', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'My Life with the Thrill Kill Kult', 'url': 'https://www.last.fm/music/My+Life+with+the+Thrill+Kill+Kult', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bigod 20', 'url': 'https://www.last.fm/music/Bigod+20', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'industrial', 'url': 'https://www.last.fm/tag/industrial'}, {'name': 'Hip-Hop', 'url': 'https://www.last.fm/tag/Hip-Hop'}, {'name': 'political', 'url': 'https://www.last.fm/tag/political'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Consolidated/+wiki'}}, 'published': '05 May 2006, 15:22', 'summary': 'Consolidated are an American radical recording and performing collective, formed in in San Francisco in 1988. They were distinguished by left-leaning political activism and politically radical lyrics, as well as their innovative sonic collages which blended industrial and hip-hop styles. Adam Sherburne and Mark Pistel had been members of synthpop/dance outfit Until December.  Philip Steir had drummed in the funk/rock group Shy Hands. Repudiating those bands\\' sound and politics <a href=\"https://www.last.fm/music/Consolidated\">Read more on Last.fm</a>', 'content': 'Consolidated are an American radical recording and performing collective, formed in in San Francisco in 1988. They were distinguished by left-leaning political activism and politically radical lyrics, as well as their innovative sonic collages which blended industrial and hip-hop styles. Adam Sherburne and Mark Pistel had been members of synthpop/dance outfit Until December.  Philip Steir had drummed in the funk/rock group Shy Hands. Repudiating those bands\\' sound and politics, and inspired by Public Enemy\\'s politics and aggressive sound collages, the trio regrouped as Consolidated.  They foregrounded their left-wing politics: pro-environment, pro-labor, pro-choice, anti-corporate, pro-animal rights, anti-drug (at least initially), critical of media exploitation of women, and concerned about rock music\\'s lack of political engagement.\\n\\nThe band released their self-titled debut EP in 1989 (they were on Nettwerk in North America and Zoth Ommog in Europe).  Centered on two mixes of the industrial-rap \"Consolidated!\", the EP is a statement of purpose, a foreshadowing of the bands\\' ideas and politics.  While embracing rap and sampling, its jerky rhythms aren\\'t far from late-period Devo.\\n\\nTheir first full-length record, The Myth of Rock, is also aggressively political, but its complex and intricate instrumental backing--recalling, at once, Tackhead, Public Enemy, late-80s sampledelica, and the brutal industrial of Test Dept.--would impress even the most conservative listeners. Sherburne does more speaking on the record than rapping or singing, but his anger and conviction come through on every track.  Not as heavy-handed as it could be, this is an underrated dance record.\\n\\nFriendly Fascism is more stripped-down and less compelling, relying less on heavy sampling and Bomb-Squad-esque production.  Jack Dangers of Meat Beat Manifesto mixed the album, which does stylistically recall MBM\\'s 99%.  This foregrounds the politics--and Sherborne\\'s gruff vocalizations--a bit more.\\n\\nPlay More Music returns a bit to the sonic aggression of Myth of Rock.  The record, like Friendly Fa$cism, features spoken-work snippets from the group\\'s concerts--the band would end shows by having a dialogue with their audience, which (the records demonstrate) sometimes became contentious.  \"Tool and Die\", an pro-gun control song, is one of the band\\'s most powerful (look for the MBM remix on the CD single), and \"You Suck\"--which strongly resembles Lords of Acid--remains a club favourite.\\n\\nConsolidated signed to a major label, London/Polygram Records, and released Business of Punishment (their tribulations with the record industry are recalled in on of the record\\'s standout tracks, \"Dog & Pony Show\").  The band mostly abandoned their rap and industrial influences in favor of a guitar-oriented, grunge sound, much to the album\\'s detriment.  Only the pro-choice anthem, \"Butyric Acid\", retains the punch and energy of earlier efforts.\\n\\nLondon/Polygram dropped the band, Pistel (who had become an in-demand producer and remixer) left soon afterwards, but Consolidated continued recording.  A recently released compilation, More Music Please: The Best of Consolidated, 1988-1993, contains most of the singles from their Nettwerk years and is an excellent introduction to the group. <a href=\"https://www.last.fm/music/Consolidated\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2GQYazkEEYH4jJnDLpofHL', url='https://open.spotify.com/artist/2GQYazkEEYH4jJnDLpofHL', name='Consolidated', popularity=17, followers=9211, genres=['industrial', 'industrial rock', 'ebm', 'experimental hip hop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebedc21857563978310a05bdcf', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174edc21857563978310a05bdcf', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178edc21857563978310a05bdcf', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2GQYazkEEYH4jJnDLpofHL'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2GQYazkEEYH4jJnDLpofHL'}, 'followers': {'href': None, 'total': 9211}, 'genres': ['industrial', 'industrial rock', 'ebm', 'experimental hip hop'], 'href': 'https://api.spotify.com/v1/artists/2GQYazkEEYH4jJnDLpofHL', 'id': '2GQYazkEEYH4jJnDLpofHL', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebedc21857563978310a05bdcf', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174edc21857563978310a05bdcf', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178edc21857563978310a05bdcf', 'height': 160, 'width': 160}], 'name': 'Consolidated', 'popularity': 17, 'type': 'artist', 'uri': 'spotify:artist:2GQYazkEEYH4jJnDLpofHL'})",
@@ -233,6 +410,6 @@
   },
   "spotify_id": "2GQYazkEEYH4jJnDLpofHL",
   "spotify_url": "https://open.spotify.com/artist/2GQYazkEEYH4jJnDLpofHL",
-  "updated_at": "2026-10-22T14:05:51.867120",
+  "updated_at": "2026-10-30T18:38:08.489469",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Consolidated_(band)"
 }

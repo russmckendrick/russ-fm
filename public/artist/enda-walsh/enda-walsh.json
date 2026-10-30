@@ -30,107 +30,69 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='254336733', url='https://music.apple.com/gb/artist/enda-walsh/254336733', name='Enda Walsh', artwork_url='', genres=['Theatre'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '254336733', 'type': 'artists', 'href': '/v1/catalog/gb/artists/254336733', 'attributes': {'name': 'Enda Walsh', 'url': 'https://music.apple.com/gb/artist/enda-walsh/254336733', 'genreNames': ['Theatre']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/254336733/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "8048592",
-      "images": [],
-      "members": [],
-      "name": "Enda Walsh",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "8048592",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8048592"
-      },
+      "data_quality": "Needs Vote",
+      "id": 8048592,
+      "images": [
+        {
+          "height": 565,
+          "resource_url": "https://i.discogs.com/hQVmAeqYeIEvpSS2WVGZegktQOqf4-7qAWr7rKg4k1s/rs:fit/g:sm/q:90/h:565/w:565/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/hQVmAeqYeIEvpSS2WVGZegktQOqf4-7qAWr7rKg4k1s/rs:fit/g:sm/q:90/h:565/w:565/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sbx9qZ2PG070bhTdbR4lVt49zmutQdE2C0Oxy2T_kfk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "width": 565
+        }
+      ],
+      "name": "Enda Walsh (2)",
+      "profile": "Irish playwright and screenwriter. Born Kilbarrack, Dublin 1967.",
+      "releases_url": "https://api.discogs.com/artists/8048592/releases",
       "resource_url": "https://api.discogs.com/artists/8048592",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8048592",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/8048592-Enda-Walsh-2",
+      "urls": [
+        "https://www.curtisbrown.co.uk/client/enda-walsh#!",
+        "https://en.wikipedia.org/wiki/Enda_Walsh"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:06:45.471604",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Enda Walsh', url='https://www.last.fm/music/Enda+Walsh', mbid=None, listeners=5, playcount=38, bio_summary='<a href=\"https://www.last.fm/music/Enda+Walsh\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Enda Walsh', 'url': 'https://www.last.fm/music/Enda+Walsh', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5', 'playcount': '38'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Enda+Walsh/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Enda+Walsh\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='00OYlRVIPDjrLrt47Yv3OD', url='https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD', name='Enda Walsh', popularity=4, followers=46, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD'}, 'followers': {'href': None, 'total': 46}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/00OYlRVIPDjrLrt47Yv3OD', 'id': '00OYlRVIPDjrLrt47Yv3OD', 'images': [], 'name': 'Enda Walsh', 'popularity': 4, 'type': 'artist', 'uri': 'spotify:artist:00OYlRVIPDjrLrt47Yv3OD'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "",
-      "editorial_notes": null,
-      "genres": [
-        "Theatre"
-      ],
-      "id": "254336733",
-      "name": "Enda Walsh",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/enda-walsh/254336733"
-    },
+    "apple_music": "ArtistAppleMusicData(id='254336733', url='https://music.apple.com/gb/artist/enda-walsh/254336733', name='Enda Walsh', artwork_url='', genres=['Theatre'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '254336733', 'type': 'artists', 'href': '/v1/catalog/gb/artists/254336733', 'attributes': {'name': 'Enda Walsh', 'url': 'https://music.apple.com/gb/artist/enda-walsh/254336733', 'genreNames': ['Theatre']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/254336733/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "8048592",
-      "images": [],
-      "members": [],
-      "name": "Enda Walsh",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "8048592",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8048592"
-      },
-      "resource_url": "https://api.discogs.com/artists/8048592",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8048592",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Enda+Walsh\">Read more on Last.fm</a>",
+      "data_quality": "Needs Vote",
+      "id": 8048592,
       "images": [
         {
-          "size": "small",
-          "url": ""
-        },
-        {
-          "size": "medium",
-          "url": ""
-        },
-        {
-          "size": "large",
-          "url": ""
-        },
-        {
-          "size": "extralarge",
-          "url": ""
-        },
-        {
-          "size": "mega",
-          "url": ""
-        },
-        {
-          "size": "",
-          "url": ""
+          "height": 565,
+          "resource_url": "https://i.discogs.com/hQVmAeqYeIEvpSS2WVGZegktQOqf4-7qAWr7rKg4k1s/rs:fit/g:sm/q:90/h:565/w:565/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/hQVmAeqYeIEvpSS2WVGZegktQOqf4-7qAWr7rKg4k1s/rs:fit/g:sm/q:90/h:565/w:565/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sbx9qZ2PG070bhTdbR4lVt49zmutQdE2C0Oxy2T_kfk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNDg1/OTItMTU5NjEzNzc4/NS0xNzMxLmpwZWc.jpeg",
+          "width": 565
         }
       ],
-      "listeners": 5,
-      "mbid": null,
-      "name": "Enda Walsh",
-      "playcount": 38,
-      "similar_artists": [],
-      "tags": [],
-      "url": "https://www.last.fm/music/Enda+Walsh"
+      "name": "Enda Walsh (2)",
+      "profile": "Irish playwright and screenwriter. Born Kilbarrack, Dublin 1967.",
+      "releases_url": "https://api.discogs.com/artists/8048592/releases",
+      "resource_url": "https://api.discogs.com/artists/8048592",
+      "uri": "https://www.discogs.com/artist/8048592-Enda-Walsh-2",
+      "urls": [
+        "https://www.curtisbrown.co.uk/client/enda-walsh#!",
+        "https://en.wikipedia.org/wiki/Enda_Walsh"
+      ]
     },
-    "spotify": {
-      "followers": 46,
-      "genres": [],
-      "id": "00OYlRVIPDjrLrt47Yv3OD",
-      "images": [],
-      "name": "Enda Walsh",
-      "popularity": 4,
-      "url": "https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD"
-    },
+    "lastfm": "ArtistLastFmData(name='Enda Walsh', url='https://www.last.fm/music/Enda+Walsh', mbid=None, listeners=5, playcount=38, bio_summary='<a href=\"https://www.last.fm/music/Enda+Walsh\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Enda Walsh', 'url': 'https://www.last.fm/music/Enda+Walsh', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5', 'playcount': '38'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Enda+Walsh/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Enda+Walsh\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='00OYlRVIPDjrLrt47Yv3OD', url='https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD', name='Enda Walsh', popularity=4, followers=46, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD'}, 'followers': {'href': None, 'total': 46}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/00OYlRVIPDjrLrt47Yv3OD', 'id': '00OYlRVIPDjrLrt47Yv3OD', 'images': [], 'name': 'Enda Walsh', 'popularity': 4, 'type': 'artist', 'uri': 'spotify:artist:00OYlRVIPDjrLrt47Yv3OD'})",
     "theaudiodb": {}
   },
   "spotify_id": "00OYlRVIPDjrLrt47Yv3OD",
   "spotify_url": "https://open.spotify.com/artist/00OYlRVIPDjrLrt47Yv3OD",
-  "updated_at": "2025-07-13T13:38:18.550422",
+  "updated_at": "2026-10-30T18:39:18.427382",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Cillian_Murphy"
 }

@@ -77,134 +77,89 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1710027811', url='https://music.apple.com/gb/artist/sam-morton/1710027811', name='SAM MORTON', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/39/c7/7439c745-b123-e8fc-ada5-ecdb941b3393/191404150269.png/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1710027811', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1710027811', 'attributes': {'name': 'SAM MORTON', 'genreNames': ['Alternative'], 'artwork': {'width': 4000, 'height': 4000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/39/c7/7439c745-b123-e8fc-ada5-ecdb941b3393/191404150269.png/{w}x{h}ac.jpg', 'bgColor': '040205', 'textColor1': '05ffff', 'textColor2': '3eda86', 'textColor3': '04cccc', 'textColor4': '33af6c'}, 'url': 'https://music.apple.com/gb/artist/sam-morton/1710027811'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1710027811/albums', 'data': [{'id': '1734380827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1734380827'}, {'id': '1726577588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726577588'}, {'id': '1773775212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773775212'}, {'id': '1738478687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738478687'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "14999248",
-      "images": [],
-      "members": [],
-      "name": "Sam Morton",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "14999248",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/14999248"
-      },
+      "data_quality": "Needs Vote",
+      "id": 14999248,
+      "images": [
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/AvsXAXph3a8Q5nDP0OjGcWF7Dj9w_LbaDE9YODgrCcs/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/AvsXAXph3a8Q5nDP0OjGcWF7Dj9w_LbaDE9YODgrCcs/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HJnAhQZdAdcg_RBf1iBC1vAZlMFSfQEwra60D67mqwM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 65387,
+          "name": "Richard Russell",
+          "resource_url": "https://api.discogs.com/artists/65387"
+        },
+        {
+          "active": true,
+          "id": 3781117,
+          "name": "Samantha Morton",
+          "resource_url": "https://api.discogs.com/artists/3781117"
+        }
+      ],
+      "name": "Sam Morton (6)",
+      "profile": "Sam Morton – the musical duo comprising singer, songwriter and acclaimed actor and director Samantha Morton, and music producer and artist Richard Russell.",
+      "releases_url": "https://api.discogs.com/artists/14999248/releases",
       "resource_url": "https://api.discogs.com/artists/14999248",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/14999248",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/14999248-Sam-Morton-6"
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:11:00.126813",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Sam Morton', url='https://www.last.fm/music/Sam+Morton', mbid=None, listeners=8750, playcount=37756, bio_summary='Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>', bio_content='Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'trip-hop', 'seen live', 'alternative rock', 'downtempo'], similar_artists=[{'name': 'Mike Lindsay', 'url': 'https://www.last.fm/music/Mike+Lindsay'}, {'name': 'Jane Weaver', 'url': 'https://www.last.fm/music/Jane+Weaver'}, {'name': 'Daudi Matsiko', 'url': 'https://www.last.fm/music/Daudi+Matsiko'}, {'name': 'Wu-Lu', 'url': 'https://www.last.fm/music/Wu-Lu'}, {'name': 'Bolis Pupul', 'url': 'https://www.last.fm/music/Bolis+Pupul'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Sam Morton', 'url': 'https://www.last.fm/music/Sam+Morton', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '8750', 'playcount': '37756'}, 'similar': {'artist': [{'name': 'Mike Lindsay', 'url': 'https://www.last.fm/music/Mike+Lindsay', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jane Weaver', 'url': 'https://www.last.fm/music/Jane+Weaver', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Daudi Matsiko', 'url': 'https://www.last.fm/music/Daudi+Matsiko', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wu-Lu', 'url': 'https://www.last.fm/music/Wu-Lu', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bolis Pupul', 'url': 'https://www.last.fm/music/Bolis+Pupul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'trip-hop', 'url': 'https://www.last.fm/tag/trip-hop'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'downtempo', 'url': 'https://www.last.fm/tag/downtempo'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Sam+Morton/+wiki'}}, 'published': '04 Sep 2024, 13:30', 'summary': 'Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>', 'content': 'Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1hv1Llle9AgqFoTitKDJLT', url='https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT', name='Sam Morton', popularity=0, followers=17, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT'}, 'followers': {'href': None, 'total': 17}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/1hv1Llle9AgqFoTitKDJLT', 'id': '1hv1Llle9AgqFoTitKDJLT', 'images': [], 'name': 'Sam Morton', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:1hv1Llle9AgqFoTitKDJLT'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/39/c7/7439c745-b123-e8fc-ada5-ecdb941b3393/191404150269.png/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Alternative"
-      ],
-      "id": "1710027811",
-      "name": "SAM MORTON",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/sam-morton/1710027811"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1710027811', url='https://music.apple.com/gb/artist/sam-morton/1710027811', name='SAM MORTON', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/39/c7/7439c745-b123-e8fc-ada5-ecdb941b3393/191404150269.png/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1710027811', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1710027811', 'attributes': {'name': 'SAM MORTON', 'genreNames': ['Alternative'], 'artwork': {'width': 4000, 'height': 4000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/39/c7/7439c745-b123-e8fc-ada5-ecdb941b3393/191404150269.png/{w}x{h}ac.jpg', 'bgColor': '040205', 'textColor1': '05ffff', 'textColor2': '3eda86', 'textColor3': '04cccc', 'textColor4': '33af6c'}, 'url': 'https://music.apple.com/gb/artist/sam-morton/1710027811'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1710027811/albums', 'data': [{'id': '1734380827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1734380827'}, {'id': '1726577588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726577588'}, {'id': '1773775212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773775212'}, {'id': '1738478687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738478687'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "14999248",
-      "images": [],
-      "members": [],
-      "name": "Sam Morton",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "14999248",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/14999248"
-      },
-      "resource_url": "https://api.discogs.com/artists/14999248",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/14999248",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>",
+      "data_quality": "Needs Vote",
+      "id": 14999248,
       "images": [
         {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          "height": 398,
+          "resource_url": "https://i.discogs.com/AvsXAXph3a8Q5nDP0OjGcWF7Dj9w_LbaDE9YODgrCcs/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/AvsXAXph3a8Q5nDP0OjGcWF7Dj9w_LbaDE9YODgrCcs/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HJnAhQZdAdcg_RBf1iBC1vAZlMFSfQEwra60D67mqwM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTk5/MjQ4LTE3MjQ2OTQx/MjgtNDM1Mi5qcGVn.jpeg",
+          "width": 600
         }
       ],
-      "listeners": 8750,
-      "mbid": null,
-      "name": "Sam Morton",
-      "playcount": 37756,
-      "similar_artists": [
+      "members": [
         {
-          "name": "Mike Lindsay",
-          "url": "https://www.last.fm/music/Mike+Lindsay"
+          "active": true,
+          "id": 65387,
+          "name": "Richard Russell",
+          "resource_url": "https://api.discogs.com/artists/65387"
         },
         {
-          "name": "Jane Weaver",
-          "url": "https://www.last.fm/music/Jane+Weaver"
-        },
-        {
-          "name": "Daudi Matsiko",
-          "url": "https://www.last.fm/music/Daudi+Matsiko"
-        },
-        {
-          "name": "Wu-Lu",
-          "url": "https://www.last.fm/music/Wu-Lu"
-        },
-        {
-          "name": "Bolis Pupul",
-          "url": "https://www.last.fm/music/Bolis+Pupul"
+          "active": true,
+          "id": 3781117,
+          "name": "Samantha Morton",
+          "resource_url": "https://api.discogs.com/artists/3781117"
         }
       ],
-      "tags": [
-        "electronic",
-        "trip-hop",
-        "seen live",
-        "alternative rock",
-        "downtempo"
-      ],
-      "url": "https://www.last.fm/music/Sam+Morton"
+      "name": "Sam Morton (6)",
+      "profile": "Sam Morton – the musical duo comprising singer, songwriter and acclaimed actor and director Samantha Morton, and music producer and artist Richard Russell.",
+      "releases_url": "https://api.discogs.com/artists/14999248/releases",
+      "resource_url": "https://api.discogs.com/artists/14999248",
+      "uri": "https://www.discogs.com/artist/14999248-Sam-Morton-6"
     },
-    "spotify": {
-      "followers": 17,
-      "genres": [],
-      "id": "1hv1Llle9AgqFoTitKDJLT",
-      "images": [],
-      "name": "Sam Morton",
-      "popularity": 0,
-      "url": "https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT"
-    },
+    "lastfm": "ArtistLastFmData(name='Sam Morton', url='https://www.last.fm/music/Sam+Morton', mbid=None, listeners=8750, playcount=37756, bio_summary='Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>', bio_content='Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'trip-hop', 'seen live', 'alternative rock', 'downtempo'], similar_artists=[{'name': 'Mike Lindsay', 'url': 'https://www.last.fm/music/Mike+Lindsay'}, {'name': 'Jane Weaver', 'url': 'https://www.last.fm/music/Jane+Weaver'}, {'name': 'Daudi Matsiko', 'url': 'https://www.last.fm/music/Daudi+Matsiko'}, {'name': 'Wu-Lu', 'url': 'https://www.last.fm/music/Wu-Lu'}, {'name': 'Bolis Pupul', 'url': 'https://www.last.fm/music/Bolis+Pupul'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Sam Morton', 'url': 'https://www.last.fm/music/Sam+Morton', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '8750', 'playcount': '37756'}, 'similar': {'artist': [{'name': 'Mike Lindsay', 'url': 'https://www.last.fm/music/Mike+Lindsay', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jane Weaver', 'url': 'https://www.last.fm/music/Jane+Weaver', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Daudi Matsiko', 'url': 'https://www.last.fm/music/Daudi+Matsiko', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wu-Lu', 'url': 'https://www.last.fm/music/Wu-Lu', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bolis Pupul', 'url': 'https://www.last.fm/music/Bolis+Pupul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'trip-hop', 'url': 'https://www.last.fm/tag/trip-hop'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'downtempo', 'url': 'https://www.last.fm/tag/downtempo'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Sam+Morton/+wiki'}}, 'published': '04 Sep 2024, 13:30', 'summary': 'Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>', 'content': 'Sam Morton is British duo Samantha Morton (twice-Oscar-nominated actor, director and writer) and Richard Russell (record producer and the owner of record label XL Recordings). <a href=\"https://www.last.fm/music/Sam+Morton\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='1hv1Llle9AgqFoTitKDJLT', url='https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT', name='Sam Morton', popularity=0, followers=17, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT'}, 'followers': {'href': None, 'total': 17}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/1hv1Llle9AgqFoTitKDJLT', 'id': '1hv1Llle9AgqFoTitKDJLT', 'images': [], 'name': 'Sam Morton', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:1hv1Llle9AgqFoTitKDJLT'})",
     "theaudiodb": {}
   },
   "spotify_id": "1hv1Llle9AgqFoTitKDJLT",
   "spotify_url": "https://open.spotify.com/artist/1hv1Llle9AgqFoTitKDJLT",
-  "updated_at": "2025-07-13T20:11:10.793121",
+  "updated_at": "2026-10-30T18:44:57.278698",
   "wikipedia_url": null
 }

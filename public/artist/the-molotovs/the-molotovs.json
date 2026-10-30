@@ -109,22 +109,77 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1796370853', url='https://music.apple.com/gb/artist/the-molotovs/1796370853', name='The Molotovs', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/e7/4f/2ee74f25-bc0d-f31a-1751-740c04074f7a/8721215407539.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1796370853', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1796370853', 'attributes': {'artwork': {'bgColor': '11171d', 'height': 3000, 'textColor1': 'e2c4c6', 'textColor2': 'c8a9a4', 'textColor3': 'b8a1a4', 'textColor4': 'a38b89', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/e7/4f/2ee74f25-bc0d-f31a-1751-740c04074f7a/8721215407539.png/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Rock'], 'name': 'The Molotovs', 'url': 'https://music.apple.com/gb/artist/the-molotovs/1796370853'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1796370853/albums', 'data': [{'id': '1820893277', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1820893277'}, {'id': '1796371003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1796371003'}, {'id': '1813467656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1813467656'}, {'id': '1843056914', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1843056914'}, {'id': '1842100362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1842100362'}, {'id': '1877893500', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1877893500'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "15892562",
-      "images": [],
-      "members": [],
-      "name": "The Molotovs",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "15892562",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/15892562"
-      },
+      "data_quality": "Needs Vote",
+      "id": 15892562,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Uye_uUNzR2YaytY7aR4OA_sFYcSQ81xPV4ZxAQQTdQg/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Uye_uUNzR2YaytY7aR4OA_sFYcSQ81xPV4ZxAQQTdQg/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/-l4R6s_GjDeMOspi7-DUrSKg2956eZmMSuk2D4Arm20/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/ES8gtkUQGT1iK4htmmHtnYC9Cdhj8-BvfkboGzYNO64/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ES8gtkUQGT1iK4htmmHtnYC9Cdhj8-BvfkboGzYNO64/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/-tpz96jGZiJIX3QylasMC-ZvmDwNhXzb5B0YaMJ3fZc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/c0inzetPUkZtG4Wm9ryRFT-uzF2N4kPUUmrn6qyEQac/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c0inzetPUkZtG4Wm9ryRFT-uzF2N4kPUUmrn6qyEQac/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/nTXbd0mNsy1TNcv8CEMbf02IoAlelK2QizFzF9e7LDo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/1q18JHucS7CfVgN0fAn5_cXqsumakMqwiV8P5pm42j0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1q18JHucS7CfVgN0fAn5_cXqsumakMqwiV8P5pm42j0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/D-qv5na1-5cwtC_IT2lu83qq-Yp9-zypIOQ6HVllxr0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/AbtbAaQ1jyNRuGNMcJael-6x1LykHcE9mWphR5FG8SE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AbtbAaQ1jyNRuGNMcJael-6x1LykHcE9mWphR5FG8SE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/WTsoYWDnFfcjg_Qfx1iWeOMNlDZ2TRmL1EBbdugLM-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/1LWextqo0a_s0jcMmCzfFC2JI6J5pnMWeWyUZdjYGMc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1LWextqo0a_s0jcMmCzfFC2JI6J5pnMWeWyUZdjYGMc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wZZg-qg2r0w8bZlSyRO-FqWVc00hstAe-joTxUCOrp4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 15396684,
+          "name": "Issey Cartlidge",
+          "resource_url": "https://api.discogs.com/artists/15396684"
+        },
+        {
+          "active": true,
+          "id": 15892568,
+          "name": "Mathew Cartlidge",
+          "resource_url": "https://api.discogs.com/artists/15892568"
+        }
+      ],
+      "name": "The Molotovs (2)",
+      "profile": "The Molotovs are a mod-punk duo from London, England, comprising siblings Mathew and Issey Cartlidge. They have had a number of different drummers but by 2025 [a16856518] had become their regular sticksman, although he is not generally credited as a part of the band.\n\nFormed during lockdown the band began by busking on the streets of London and incessant gigging around the capital. They began to generate a solid following and soon translated that to full tours and prominent support slots with the likes of [a16655], [a85010] and [a31753].\n\nAfter much anticipation The Molotovs released their debut single in March 2025 and debut album in January 2026.",
+      "releases_url": "https://api.discogs.com/artists/15892562/releases",
       "resource_url": "https://api.discogs.com/artists/15892562",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/15892562",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/15892562-The-Molotovs-2"
     },
     "identity": {
       "musicbrainz_id": "b9c0b7eb-4738-4deb-a657-0feee83816ff",
@@ -198,27 +253,83 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1796370853', url='https://music.apple.com/gb/artist/the-molotovs/1796370853', name='The Molotovs', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/e7/4f/2ee74f25-bc0d-f31a-1751-740c04074f7a/8721215407539.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1796370853', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1796370853', 'attributes': {'artwork': {'bgColor': '11171d', 'height': 3000, 'textColor1': 'e2c4c6', 'textColor2': 'c8a9a4', 'textColor3': 'b8a1a4', 'textColor4': 'a38b89', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/e7/4f/2ee74f25-bc0d-f31a-1751-740c04074f7a/8721215407539.png/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Rock'], 'name': 'The Molotovs', 'url': 'https://music.apple.com/gb/artist/the-molotovs/1796370853'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1796370853/albums', 'data': [{'id': '1820893277', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1820893277'}, {'id': '1796371003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1796371003'}, {'id': '1813467656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1813467656'}, {'id': '1843056914', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1843056914'}, {'id': '1842100362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1842100362'}, {'id': '1877893500', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1877893500'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "15892562",
-      "images": [],
-      "members": [],
-      "name": "The Molotovs",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "15892562",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/15892562"
-      },
+      "data_quality": "Needs Vote",
+      "id": 15892562,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Uye_uUNzR2YaytY7aR4OA_sFYcSQ81xPV4ZxAQQTdQg/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Uye_uUNzR2YaytY7aR4OA_sFYcSQ81xPV4ZxAQQTdQg/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/-l4R6s_GjDeMOspi7-DUrSKg2956eZmMSuk2D4Arm20/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NzA1NjEy/MTQtNDk5MS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/ES8gtkUQGT1iK4htmmHtnYC9Cdhj8-BvfkboGzYNO64/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ES8gtkUQGT1iK4htmmHtnYC9Cdhj8-BvfkboGzYNO64/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/-tpz96jGZiJIX3QylasMC-ZvmDwNhXzb5B0YaMJ3fZc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NDI2NDU2/OTMtNTI1MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/c0inzetPUkZtG4Wm9ryRFT-uzF2N4kPUUmrn6qyEQac/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c0inzetPUkZtG4Wm9ryRFT-uzF2N4kPUUmrn6qyEQac/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/nTXbd0mNsy1TNcv8CEMbf02IoAlelK2QizFzF9e7LDo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcx/NjYtMTQ4NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/1q18JHucS7CfVgN0fAn5_cXqsumakMqwiV8P5pm42j0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1q18JHucS7CfVgN0fAn5_cXqsumakMqwiV8P5pm42j0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/D-qv5na1-5cwtC_IT2lu83qq-Yp9-zypIOQ6HVllxr0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcy/NzQtOTk0MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/AbtbAaQ1jyNRuGNMcJael-6x1LykHcE9mWphR5FG8SE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AbtbAaQ1jyNRuGNMcJael-6x1LykHcE9mWphR5FG8SE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/WTsoYWDnFfcjg_Qfx1iWeOMNlDZ2TRmL1EBbdugLM-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTcz/ODktNDg4MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/1LWextqo0a_s0jcMmCzfFC2JI6J5pnMWeWyUZdjYGMc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1LWextqo0a_s0jcMmCzfFC2JI6J5pnMWeWyUZdjYGMc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wZZg-qg2r0w8bZlSyRO-FqWVc00hstAe-joTxUCOrp4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODky/NTYyLTE3NjM4OTc0/MjgtMzg4My5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 15396684,
+          "name": "Issey Cartlidge",
+          "resource_url": "https://api.discogs.com/artists/15396684"
+        },
+        {
+          "active": true,
+          "id": 15892568,
+          "name": "Mathew Cartlidge",
+          "resource_url": "https://api.discogs.com/artists/15892568"
+        }
+      ],
+      "name": "The Molotovs (2)",
+      "profile": "The Molotovs are a mod-punk duo from London, England, comprising siblings Mathew and Issey Cartlidge. They have had a number of different drummers but by 2025 [a16856518] had become their regular sticksman, although he is not generally credited as a part of the band.\n\nFormed during lockdown the band began by busking on the streets of London and incessant gigging around the capital. They began to generate a solid following and soon translated that to full tours and prominent support slots with the likes of [a16655], [a85010] and [a31753].\n\nAfter much anticipation The Molotovs released their debut single in March 2025 and debut album in January 2026.",
+      "releases_url": "https://api.discogs.com/artists/15892562/releases",
       "resource_url": "https://api.discogs.com/artists/15892562",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/15892562",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/15892562-The-Molotovs-2"
     },
     "lastfm": "ArtistLastFmData(name='The Molotovs', url='https://www.last.fm/music/The+Molotovs', mbid='9f5d6559-fc3f-4401-9f11-f135a554369f', listeners=13629, playcount=94909, bio_summary='Brother and sister duo, The Molotovs, have been grinding on the live circuit, garnering attention from both fans and press alike for their explosive performances. Still in their teens and having played over 600 gigs, they have already shared stages with the likes of the Sex Pistols and The Libertines. They’ve also received shout-outs from punk legends Green Day and been highlighted by The Telegraph as one of the rising stars who could share the stage with Oasis.  <a href=\"https://www.last.fm/music/The+Molotovs\">Read more on Last.fm</a>', bio_content='Brother and sister duo, The Molotovs, have been grinding on the live circuit, garnering attention from both fans and press alike for their explosive performances. Still in their teens and having played over 600 gigs, they have already shared stages with the likes of the Sex Pistols and The Libertines. They’ve also received shout-outs from punk legends Green Day and been highlighted by The Telegraph as one of the rising stars who could share the stage with Oasis. \\n\\nTheir debut album, Wasted On Youth, was release on January 30th 2026, poised to become a modern classic that blends rock history with contemporary relevance and a rock-and-roll attitude.\\n\\nProduced by Jason Perry (Don Broco, Trash Boat) at The Marshall Studio and mixed/mastered by Blair Crichton of Dead Pony, Wasted On Youth is a vibrant explosion of new wave punk, indie, and garage-laden rock songs that marks The Molotovs as one of Britain’s most vital bands.\\n\\nThe album addresses self-empowerment and determination, as well as the right to have a good time. Scattered with themes of social and political awareness, and conveying a sense of being personally overwhelmed, connected yet internally fragmented, it is brimming with hope and youthful energy, yet grounded in the reality of everyday challenges and modern life. \\n\\nMembers:\\nMathew Cartlidge - Guitar/lead vocals\\nIssey Cartlidge - Bass guitar/backing vocals\\n\\nhttps://themolotovs.os.fan/\\nhttps://www.instagram.com/themolotovs/\\nhttps://www.facebook.com/TheMolotovsLondon/\\nhttps://www.marshall.com/us/en/marshall-records/artists/the-molotovs\\n\\nThere is other band with the same name:\\n\\n2) The five members of The Molotovs follow the eloquent home grown pop lineage that runs from The Kinks to the Mystery Jets and combine it with their own love of poetry and fable, carving a sound that is jittery and yet oddly atmospheric. They write songs, which are both rousing and melancholic.\\n\\nThe Molotovs consist of Will Daunt (vocals/guitar), Henry Walton (Guitar), Dom Millard (keyboards/guitar), Iain Lock  (bass) and Guy Henderson (Drums) <a href=\"https://www.last.fm/music/The+Molotovs\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'indie rock', 'rock', 'pop', 'Garage Rock'], similar_artists=[{'name': 'The Sophs', 'url': 'https://www.last.fm/music/The+Sophs'}, {'name': 'Miles Kane', 'url': 'https://www.last.fm/music/Miles+Kane'}, {'name': \"The K's\", 'url': 'https://www.last.fm/music/The+K%27s'}, {'name': 'The Enemy', 'url': 'https://www.last.fm/music/The+Enemy'}, {'name': 'The Rifles', 'url': 'https://www.last.fm/music/The+Rifles'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Molotovs', 'mbid': '9f5d6559-fc3f-4401-9f11-f135a554369f', 'url': 'https://www.last.fm/music/The+Molotovs', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '13629', 'playcount': '94909'}, 'similar': {'artist': [{'name': 'The Sophs', 'url': 'https://www.last.fm/music/The+Sophs', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Miles Kane', 'url': 'https://www.last.fm/music/Miles+Kane', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"The K's\", 'url': 'https://www.last.fm/music/The+K%27s', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Enemy', 'url': 'https://www.last.fm/music/The+Enemy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Rifles', 'url': 'https://www.last.fm/music/The+Rifles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'Garage Rock', 'url': 'https://www.last.fm/tag/Garage+Rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Molotovs/+wiki'}}, 'published': '07 Aug 2009, 08:37', 'summary': 'Brother and sister duo, The Molotovs, have been grinding on the live circuit, garnering attention from both fans and press alike for their explosive performances. Still in their teens and having played over 600 gigs, they have already shared stages with the likes of the Sex Pistols and The Libertines. They’ve also received shout-outs from punk legends Green Day and been highlighted by The Telegraph as one of the rising stars who could share the stage with Oasis.  <a href=\"https://www.last.fm/music/The+Molotovs\">Read more on Last.fm</a>', 'content': 'Brother and sister duo, The Molotovs, have been grinding on the live circuit, garnering attention from both fans and press alike for their explosive performances. Still in their teens and having played over 600 gigs, they have already shared stages with the likes of the Sex Pistols and The Libertines. They’ve also received shout-outs from punk legends Green Day and been highlighted by The Telegraph as one of the rising stars who could share the stage with Oasis. \\n\\nTheir debut album, Wasted On Youth, was release on January 30th 2026, poised to become a modern classic that blends rock history with contemporary relevance and a rock-and-roll attitude.\\n\\nProduced by Jason Perry (Don Broco, Trash Boat) at The Marshall Studio and mixed/mastered by Blair Crichton of Dead Pony, Wasted On Youth is a vibrant explosion of new wave punk, indie, and garage-laden rock songs that marks The Molotovs as one of Britain’s most vital bands.\\n\\nThe album addresses self-empowerment and determination, as well as the right to have a good time. Scattered with themes of social and political awareness, and conveying a sense of being personally overwhelmed, connected yet internally fragmented, it is brimming with hope and youthful energy, yet grounded in the reality of everyday challenges and modern life. \\n\\nMembers:\\nMathew Cartlidge - Guitar/lead vocals\\nIssey Cartlidge - Bass guitar/backing vocals\\n\\nhttps://themolotovs.os.fan/\\nhttps://www.instagram.com/themolotovs/\\nhttps://www.facebook.com/TheMolotovsLondon/\\nhttps://www.marshall.com/us/en/marshall-records/artists/the-molotovs\\n\\nThere is other band with the same name:\\n\\n2) The five members of The Molotovs follow the eloquent home grown pop lineage that runs from The Kinks to the Mystery Jets and combine it with their own love of poetry and fable, carving a sound that is jittery and yet oddly atmospheric. They write songs, which are both rousing and melancholic.\\n\\nThe Molotovs consist of Will Daunt (vocals/guitar), Henry Walton (Guitar), Dom Millard (keyboards/guitar), Iain Lock  (bass) and Guy Henderson (Drums) <a href=\"https://www.last.fm/music/The+Molotovs\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3DL0niCT8vzd0DQ0AXaLly', url='https://open.spotify.com/artist/3DL0niCT8vzd0DQ0AXaLly', name='The Molotovs', popularity=40, followers=18284, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb6096923268839d4a6aeb6f7a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746096923268839d4a6aeb6f7a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786096923268839d4a6aeb6f7a', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3DL0niCT8vzd0DQ0AXaLly'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3DL0niCT8vzd0DQ0AXaLly'}, 'followers': {'href': None, 'total': 18284}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/3DL0niCT8vzd0DQ0AXaLly', 'id': '3DL0niCT8vzd0DQ0AXaLly', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb6096923268839d4a6aeb6f7a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746096923268839d4a6aeb6f7a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786096923268839d4a6aeb6f7a', 'height': 160, 'width': 160}], 'name': 'The Molotovs', 'popularity': 40, 'type': 'artist', 'uri': 'spotify:artist:3DL0niCT8vzd0DQ0AXaLly'})",
@@ -289,6 +400,6 @@
   },
   "spotify_id": "3DL0niCT8vzd0DQ0AXaLly",
   "spotify_url": "https://open.spotify.com/artist/3DL0niCT8vzd0DQ0AXaLly",
-  "updated_at": "2026-10-22T14:12:35.786647",
+  "updated_at": "2026-10-30T18:47:02.718183",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Molotovs"
 }

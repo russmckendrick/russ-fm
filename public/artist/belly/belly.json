@@ -117,22 +117,119 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='191443', url='https://music.apple.com/gb/artist/belly/191443', name='Belly', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/3f/a4/10/3fa41063-2021-5103-e863-6d22e4625ae7/mzl.oinuhnoi.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '191443', 'type': 'artists', 'href': '/v1/catalog/gb/artists/191443', 'attributes': {'name': 'Belly', 'genreNames': ['Alternative'], 'artwork': {'width': 5000, 'height': 5000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/3f/a4/10/3fa41063-2021-5103-e863-6d22e4625ae7/mzl.oinuhnoi.jpg/{w}x{h}bb.jpg', 'bgColor': '010101', 'textColor1': 'e0e0e0', 'textColor2': 'c8c8c8', 'textColor3': 'b4b4b4', 'textColor4': 'a0a0a0'}, 'url': 'https://music.apple.com/gb/artist/belly/191443'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/191443/albums', 'data': [{'id': '1450116246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450116246'}, {'id': '1343422246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1343422246'}, {'id': '1450116600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450116600'}, {'id': '1450131484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450131484'}, {'id': '1797184096', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1797184096'}, {'id': '1569255970', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1569255970'}, {'id': '291383338', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291383338'}, {'id': '291379580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291379580'}, {'id': '1540670780', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540670780'}, {'id': '291381784', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291381784'}, {'id': '291376663', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291376663'}, {'id': '1811777062', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811777062'}, {'id': '291380728', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291380728'}, {'id': '1540670656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540670656'}, {'id': '291381291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291381291'}, {'id': '1594369688', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594369688'}, {'id': '1594369688', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594369688'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "92582",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 92582,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2Pp8XHRWDp8CiareH2pVFkP4yD30wLlf8do3RemB8L4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/2Pp8XHRWDp8CiareH2pVFkP4yD30wLlf8do3RemB8L4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bGQSaJFx_X7BlGLoSbEPJlI8Jdg1LuW8GHdqV0k5PN8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/NkxJ_f6Vhs6qGmA5k6jWQWa5pQYN0KzDJW0TfcCOXf8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NkxJ_f6Vhs6qGmA5k6jWQWa5pQYN0KzDJW0TfcCOXf8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/A2Edvo77PG9Z2WB9Yf5n4bcMW7jI7u6U6wwPKXDJmrU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 484,
+          "resource_url": "https://i.discogs.com/Rv13ZwTXTjWSklI0HMn8BP_a6qkF_pFmPSxDgM9OwNQ/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Rv13ZwTXTjWSklI0HMn8BP_a6qkF_pFmPSxDgM9OwNQ/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/y6uHUwfQEjBK3tzB5MCCY0VIvlQs_AFPZMGUjBKLz1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lhnKm4MEO_4r1DpbPyFUj2737SV2_9ehNgjYarg9WpA/rs:fit/g:sm/q:90/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lhnKm4MEO_4r1DpbPyFUj2737SV2_9ehNgjYarg9WpA/rs:fit/g:sm/q:90/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g0wj8Vt7AzewQBniu-Mk884zmCXEzbbWHya89FxpLJo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "width": 470
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/mBDBflxjOoii3sTobRck9JOkQIzmhaRSFDjfqNBhjXI/rs:fit/g:sm/q:90/h:600/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mBDBflxjOoii3sTobRck9JOkQIzmhaRSFDjfqNBhjXI/rs:fit/g:sm/q:90/h:600/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/aQ2oVamcpBXaDNjcKzXUJ90M0b8E-mVeke2mu5XJ0Ko/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "width": 410
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/kKbJN8gngVrZEHOU-318NAEdR8wv96SvGVDBFiY2EGU/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kKbJN8gngVrZEHOU-318NAEdR8wv96SvGVDBFiY2EGU/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/i-PMe4xymJ_W0YDytCRUeuQYG_COBJJtDAUNRLH9C2I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Jf6-s_a7I4gaDZ9rd6sJ9K_UY1z1URBLWJwVg3ztxzM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Jf6-s_a7I4gaDZ9rd6sJ9K_UY1z1URBLWJwVg3ztxzM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aDTK9LL-wvFfXx3VnPTO5LsWxImi9_QtHnwaWs0ze0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/dq0Pk1w37xyP_7G5UndiVMUABBuigBbxdR030oh09dg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dq0Pk1w37xyP_7G5UndiVMUABBuigBbxdR030oh09dg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PDi2_OJZ0YoGobFXQI2tGnZJkalSFtYNxE9BYZ651rA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 141754,
+          "name": "Tanya Donelly",
+          "resource_url": "https://api.discogs.com/artists/141754"
+        },
+        {
+          "active": true,
+          "id": 423492,
+          "name": "Gail Greenwood",
+          "resource_url": "https://api.discogs.com/artists/423492"
+        },
+        {
+          "active": true,
+          "id": 423499,
+          "name": "Thomas Gorman",
+          "resource_url": "https://api.discogs.com/artists/423499"
+        },
+        {
+          "active": true,
+          "id": 423500,
+          "name": "Chris Gorman",
+          "resource_url": "https://api.discogs.com/artists/423500"
+        },
+        {
+          "active": false,
+          "id": 499408,
+          "name": "Fred Abong",
+          "resource_url": "https://api.discogs.com/artists/499408"
+        }
+      ],
       "name": "Belly",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "92582",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/92582"
-      },
+      "profile": "Hard-edged US pop band founded by former [a=Throwing Muses] member Tanya Donelly, following her short stint with [a=The Breeders]. Formed in 1991 by Tanya with fellow ex-Muse Fred Abong and brothers Chris and Tom Gorman, they achieved strong initial success in both the UK and US indie/alternative scenes.\r\n\r\nTwice Grammy-nominated in the early 1990s. \r\n\r\nAbong left the band during the recording of their debut, [i]Star[/i], and was replaced by Gail Greenwood on bass. The subsequent tour boosted their popularity, however, their second album, [i]King[/i], which was expected to build on the success of its predecessor, wasn't as well received.\r\n\r\nDonelly disbanded Belly in 1996 and released her first solo material at the end of the year. \r\n\r\nIn February 2016, Belly announced their reunion for live shows, as well as plans to record new material. The band launched a PledgeMusic campaign, and released their third album, [i]Dove[/i], on 3 May 2018. ",
+      "releases_url": "https://api.discogs.com/artists/92582/releases",
       "resource_url": "https://api.discogs.com/artists/92582",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/92582",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/92582-Belly",
+      "urls": [
+        "http://bellyofficial.com/",
+        "https://bellyofficial.bandcamp.com",
+        "https://www.facebook.com/bellytheband/",
+        "https://twitter.com/bellytheband",
+        "https://www.instagram.com/bellytheband/",
+        "http://en.wikipedia.org/wiki/Belly_%28band%29"
+      ]
     },
     "identity": {
       "musicbrainz_id": "c118bc97-11a7-41dc-a55e-48c3bcf22ac2",
@@ -206,27 +303,132 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q5441199",
+        "track": "Feed the Tree",
+        "uri": "https://www.youtube.com/watch?v=RQJjUbMrt8w"
+      }
+    ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='191443', url='https://music.apple.com/gb/artist/belly/191443', name='Belly', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/3f/a4/10/3fa41063-2021-5103-e863-6d22e4625ae7/mzl.oinuhnoi.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '191443', 'type': 'artists', 'href': '/v1/catalog/gb/artists/191443', 'attributes': {'name': 'Belly', 'genreNames': ['Alternative'], 'artwork': {'width': 5000, 'height': 5000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/3f/a4/10/3fa41063-2021-5103-e863-6d22e4625ae7/mzl.oinuhnoi.jpg/{w}x{h}bb.jpg', 'bgColor': '010101', 'textColor1': 'e0e0e0', 'textColor2': 'c8c8c8', 'textColor3': 'b4b4b4', 'textColor4': 'a0a0a0'}, 'url': 'https://music.apple.com/gb/artist/belly/191443'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/191443/albums', 'data': [{'id': '1450116246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450116246'}, {'id': '1343422246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1343422246'}, {'id': '1450116600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450116600'}, {'id': '1450131484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450131484'}, {'id': '1797184096', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1797184096'}, {'id': '1569255970', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1569255970'}, {'id': '291383338', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291383338'}, {'id': '291379580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291379580'}, {'id': '1540670780', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540670780'}, {'id': '291381784', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291381784'}, {'id': '291376663', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291376663'}, {'id': '1811777062', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811777062'}, {'id': '291380728', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291380728'}, {'id': '1540670656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540670656'}, {'id': '291381291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291381291'}, {'id': '1594369688', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594369688'}, {'id': '1594369688', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594369688'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "92582",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 92582,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2Pp8XHRWDp8CiareH2pVFkP4yD30wLlf8do3RemB8L4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/2Pp8XHRWDp8CiareH2pVFkP4yD30wLlf8do3RemB8L4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bGQSaJFx_X7BlGLoSbEPJlI8Jdg1LuW8GHdqV0k5PN8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTc5ODQu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/NkxJ_f6Vhs6qGmA5k6jWQWa5pQYN0KzDJW0TfcCOXf8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NkxJ_f6Vhs6qGmA5k6jWQWa5pQYN0KzDJW0TfcCOXf8/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/A2Edvo77PG9Z2WB9Yf5n4bcMW7jI7u6U6wwPKXDJmrU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMDEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 484,
+          "resource_url": "https://i.discogs.com/Rv13ZwTXTjWSklI0HMn8BP_a6qkF_pFmPSxDgM9OwNQ/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Rv13ZwTXTjWSklI0HMn8BP_a6qkF_pFmPSxDgM9OwNQ/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/y6uHUwfQEjBK3tzB5MCCY0VIvlQs_AFPZMGUjBKLz1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMTku/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lhnKm4MEO_4r1DpbPyFUj2737SV2_9ehNgjYarg9WpA/rs:fit/g:sm/q:90/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lhnKm4MEO_4r1DpbPyFUj2737SV2_9ehNgjYarg9WpA/rs:fit/g:sm/q:90/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g0wj8Vt7AzewQBniu-Mk884zmCXEzbbWHya89FxpLJo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTExODg3Nzg5OTUu/anBlZw.jpeg",
+          "width": 470
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/mBDBflxjOoii3sTobRck9JOkQIzmhaRSFDjfqNBhjXI/rs:fit/g:sm/q:90/h:600/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mBDBflxjOoii3sTobRck9JOkQIzmhaRSFDjfqNBhjXI/rs:fit/g:sm/q:90/h:600/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/aQ2oVamcpBXaDNjcKzXUJ90M0b8E-mVeke2mu5XJ0Ko/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTEyMjk4OTgwMzUu/anBlZw.jpeg",
+          "width": 410
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/kKbJN8gngVrZEHOU-318NAEdR8wv96SvGVDBFiY2EGU/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kKbJN8gngVrZEHOU-318NAEdR8wv96SvGVDBFiY2EGU/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/i-PMe4xymJ_W0YDytCRUeuQYG_COBJJtDAUNRLH9C2I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE0NjM3MDg2NjMt/MzY1OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Jf6-s_a7I4gaDZ9rd6sJ9K_UY1z1URBLWJwVg3ztxzM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Jf6-s_a7I4gaDZ9rd6sJ9K_UY1z1URBLWJwVg3ztxzM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aDTK9LL-wvFfXx3VnPTO5LsWxImi9_QtHnwaWs0ze0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjkzMzMt/NTg3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/dq0Pk1w37xyP_7G5UndiVMUABBuigBbxdR030oh09dg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dq0Pk1w37xyP_7G5UndiVMUABBuigBbxdR030oh09dg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PDi2_OJZ0YoGobFXQI2tGnZJkalSFtYNxE9BYZ651rA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTgy/LTE2MDAzNjk0MTQt/MjM2Ni5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 141754,
+          "name": "Tanya Donelly",
+          "resource_url": "https://api.discogs.com/artists/141754"
+        },
+        {
+          "active": true,
+          "id": 423492,
+          "name": "Gail Greenwood",
+          "resource_url": "https://api.discogs.com/artists/423492"
+        },
+        {
+          "active": true,
+          "id": 423499,
+          "name": "Thomas Gorman",
+          "resource_url": "https://api.discogs.com/artists/423499"
+        },
+        {
+          "active": true,
+          "id": 423500,
+          "name": "Chris Gorman",
+          "resource_url": "https://api.discogs.com/artists/423500"
+        },
+        {
+          "active": false,
+          "id": 499408,
+          "name": "Fred Abong",
+          "resource_url": "https://api.discogs.com/artists/499408"
+        }
+      ],
       "name": "Belly",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "92582",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/92582"
-      },
+      "profile": "Hard-edged US pop band founded by former [a=Throwing Muses] member Tanya Donelly, following her short stint with [a=The Breeders]. Formed in 1991 by Tanya with fellow ex-Muse Fred Abong and brothers Chris and Tom Gorman, they achieved strong initial success in both the UK and US indie/alternative scenes.\r\n\r\nTwice Grammy-nominated in the early 1990s. \r\n\r\nAbong left the band during the recording of their debut, [i]Star[/i], and was replaced by Gail Greenwood on bass. The subsequent tour boosted their popularity, however, their second album, [i]King[/i], which was expected to build on the success of its predecessor, wasn't as well received.\r\n\r\nDonelly disbanded Belly in 1996 and released her first solo material at the end of the year. \r\n\r\nIn February 2016, Belly announced their reunion for live shows, as well as plans to record new material. The band launched a PledgeMusic campaign, and released their third album, [i]Dove[/i], on 3 May 2018. ",
+      "releases_url": "https://api.discogs.com/artists/92582/releases",
       "resource_url": "https://api.discogs.com/artists/92582",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/92582",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/92582-Belly",
+      "urls": [
+        "http://bellyofficial.com/",
+        "https://bellyofficial.bandcamp.com",
+        "https://www.facebook.com/bellytheband/",
+        "https://twitter.com/bellytheband",
+        "https://www.instagram.com/bellytheband/",
+        "http://en.wikipedia.org/wiki/Belly_%28band%29"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Belly', url='https://www.last.fm/music/Belly', mbid='c118bc97-11a7-41dc-a55e-48c3bcf22ac2', listeners=647855, playcount=7940907, bio_summary='There are two artists on last.fm with this name:\\n(1) Belly, an alternative rock band from Rhode Island which formed in 1991,\\n(2) Belly/Rebellyus, a rapper from Ottawa, Canada.\\n\\n(1) An alternative rock band active from 1991 to 1996 which reunited in 2016. Belly was formed in 1991 by former Throwing Muses members Tanya Donelly (also in The Breeders with Kim Deal) and Fred Abong. Based in Boston, Massachusetts (although all of the members were from Newport <a href=\"https://www.last.fm/music/Belly\">Read more on Last.fm</a>', bio_content='There are two artists on last.fm with this name:\\n(1) Belly, an alternative rock band from Rhode Island which formed in 1991,\\n(2) Belly/Rebellyus, a rapper from Ottawa, Canada.\\n\\n(1) An alternative rock band active from 1991 to 1996 which reunited in 2016. Belly was formed in 1991 by former Throwing Muses members Tanya Donelly (also in The Breeders with Kim Deal) and Fred Abong. Based in Boston, Massachusetts (although all of the members were from Newport, Rhode Island), the band consisted of Donelly on lead vocals, Abong on bass, Tom Gorman on guitar, and Chris Gorman on drums.\\n\\nIn 1993, they scored an alternative hit with the single “Feed the Tree”. Their debut album, Star, reached #2 on the UK albums chart, with its 1995 follow-up, King, reaching #6. Their third album, Dove, was released in 2018.\\n\\n(2) Belly (Rebellyus) is a rapper and hip-hop artist from Ottawa, Ontario, Canada, with origins in Palestine. He is a practicing Muslim. Born in Jenin, Palestine, his musical career has been based in the Ottawa, Ontario. In addition to a Juno, he has won two MuchMusic Video Awards and has twice attained a top chart position in the national Much Music Countdown. His stage name of Belly/Rebellyus was derived from the term “rebellious”.\\n\\nHe first appeared on Massari’s third single “Rush the Floor”. His first solo single “Pressure” (featuring Ginuwine) and his debut album, The Revolution, were released in 2007. The double disc album was divided into two sections: “The People” and “The System”. “The People” contained more in-depth songs, such as “History of Violence” (produced by Whosane?), “Follow Me”, and “Revolutionary”, where he challenges his listeners to discover the facts regarding the Middle-East situation. Other songs on this disc include “People Change” (produced by Whosane?), “Leave me Alone”, where he talks about his longtime friends and the memories that he kept from them. “The System” contained his hit singles “Don’t Be Shy”, “Ridin’”, and “Pressure”. <a href=\"https://www.last.fm/music/Belly\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['alternative', 'female vocalists', 'indie', '4ad', '90s'], similar_artists=[{'name': 'Throwing Muses', 'url': 'https://www.last.fm/music/Throwing+Muses'}, {'name': 'Tanya Donelly', 'url': 'https://www.last.fm/music/Tanya+Donelly'}, {'name': 'Kristin Hersh', 'url': 'https://www.last.fm/music/Kristin+Hersh'}, {'name': 'The Juliana Hatfield Three', 'url': 'https://www.last.fm/music/The+Juliana+Hatfield+Three'}, {'name': 'Juliana Hatfield', 'url': 'https://www.last.fm/music/Juliana+Hatfield'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Belly', 'mbid': 'c118bc97-11a7-41dc-a55e-48c3bcf22ac2', 'url': 'https://www.last.fm/music/Belly', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '647855', 'playcount': '7940907'}, 'similar': {'artist': [{'name': 'Throwing Muses', 'url': 'https://www.last.fm/music/Throwing+Muses', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tanya Donelly', 'url': 'https://www.last.fm/music/Tanya+Donelly', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kristin Hersh', 'url': 'https://www.last.fm/music/Kristin+Hersh', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Juliana Hatfield Three', 'url': 'https://www.last.fm/music/The+Juliana+Hatfield+Three', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Juliana Hatfield', 'url': 'https://www.last.fm/music/Juliana+Hatfield', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': '4ad', 'url': 'https://www.last.fm/tag/4ad'}, {'name': '90s', 'url': 'https://www.last.fm/tag/90s'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Belly/+wiki'}}, 'published': '21 Apr 2006, 00:03', 'summary': 'There are two artists on last.fm with this name:\\n(1) Belly, an alternative rock band from Rhode Island which formed in 1991,\\n(2) Belly/Rebellyus, a rapper from Ottawa, Canada.\\n\\n(1) An alternative rock band active from 1991 to 1996 which reunited in 2016. Belly was formed in 1991 by former Throwing Muses members Tanya Donelly (also in The Breeders with Kim Deal) and Fred Abong. Based in Boston, Massachusetts (although all of the members were from Newport <a href=\"https://www.last.fm/music/Belly\">Read more on Last.fm</a>', 'content': 'There are two artists on last.fm with this name:\\n(1) Belly, an alternative rock band from Rhode Island which formed in 1991,\\n(2) Belly/Rebellyus, a rapper from Ottawa, Canada.\\n\\n(1) An alternative rock band active from 1991 to 1996 which reunited in 2016. Belly was formed in 1991 by former Throwing Muses members Tanya Donelly (also in The Breeders with Kim Deal) and Fred Abong. Based in Boston, Massachusetts (although all of the members were from Newport, Rhode Island), the band consisted of Donelly on lead vocals, Abong on bass, Tom Gorman on guitar, and Chris Gorman on drums.\\n\\nIn 1993, they scored an alternative hit with the single “Feed the Tree”. Their debut album, Star, reached #2 on the UK albums chart, with its 1995 follow-up, King, reaching #6. Their third album, Dove, was released in 2018.\\n\\n(2) Belly (Rebellyus) is a rapper and hip-hop artist from Ottawa, Ontario, Canada, with origins in Palestine. He is a practicing Muslim. Born in Jenin, Palestine, his musical career has been based in the Ottawa, Ontario. In addition to a Juno, he has won two MuchMusic Video Awards and has twice attained a top chart position in the national Much Music Countdown. His stage name of Belly/Rebellyus was derived from the term “rebellious”.\\n\\nHe first appeared on Massari’s third single “Rush the Floor”. His first solo single “Pressure” (featuring Ginuwine) and his debut album, The Revolution, were released in 2007. The double disc album was divided into two sections: “The People” and “The System”. “The People” contained more in-depth songs, such as “History of Violence” (produced by Whosane?), “Follow Me”, and “Revolutionary”, where he challenges his listeners to discover the facts regarding the Middle-East situation. Other songs on this disc include “People Change” (produced by Whosane?), “Leave me Alone”, where he talks about his longtime friends and the memories that he kept from them. “The System” contained his hit singles “Don’t Be Shy”, “Ridin’”, and “Pressure”. <a href=\"https://www.last.fm/music/Belly\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0FOWNUFHPnMy0vOw1siGqi', url='https://open.spotify.com/artist/0FOWNUFHPnMy0vOw1siGqi', name='Belly', popularity=58, followers=257035, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebbff23b49045aa4099d7264ed', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174bff23b49045aa4099d7264ed', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178bff23b49045aa4099d7264ed', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0FOWNUFHPnMy0vOw1siGqi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0FOWNUFHPnMy0vOw1siGqi'}, 'followers': {'href': None, 'total': 257035}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0FOWNUFHPnMy0vOw1siGqi', 'id': '0FOWNUFHPnMy0vOw1siGqi', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebbff23b49045aa4099d7264ed', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174bff23b49045aa4099d7264ed', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178bff23b49045aa4099d7264ed', 'height': 160, 'width': 160}], 'name': 'Belly', 'popularity': 58, 'type': 'artist', 'uri': 'spotify:artist:0FOWNUFHPnMy0vOw1siGqi'})",
@@ -297,6 +499,6 @@
   },
   "spotify_id": "0FOWNUFHPnMy0vOw1siGqi",
   "spotify_url": "https://open.spotify.com/artist/0FOWNUFHPnMy0vOw1siGqi",
-  "updated_at": "2026-10-22T14:05:03.047788",
+  "updated_at": "2026-10-30T18:36:30.408486",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Belly_(band)"
 }

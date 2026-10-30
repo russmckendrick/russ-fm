@@ -132,22 +132,197 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='762893', url='https://music.apple.com/gb/artist/kyuss/762893', name='Kyuss', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/bb/c2/bd/bbc2bd90-2e14-bcfe-40d7-9e5af12245d8/pr_source.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '762893', 'type': 'artists', 'href': '/v1/catalog/gb/artists/762893', 'attributes': {'name': 'Kyuss', 'genreNames': ['Hard Rock'], 'artwork': {'width': 875, 'height': 875, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/bb/c2/bd/bbc2bd90-2e14-bcfe-40d7-9e5af12245d8/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '2e2e2e', 'textColor1': 'ffffff', 'textColor2': 'e3e3e3', 'textColor3': 'd5d5d5', 'textColor4': 'bebebe'}, 'url': 'https://music.apple.com/gb/artist/kyuss/762893'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/762893/albums', 'data': [{'id': '213508542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/213508542'}, {'id': '207973376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207973376'}, {'id': '207914986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207914986'}, {'id': '207946744', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207946744'}, {'id': '1375523899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1375523899'}, {'id': '207923421', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207923421'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "105732",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1430371,
+          "name": "Sons Of Kyuss",
+          "resource_url": "https://api.discogs.com/artists/1430371"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 105732,
+      "images": [
+        {
+          "height": 438,
+          "resource_url": "https://i.discogs.com/UJ4T8sWjaiIGN8PWJAFRp_V_TBoHO0ZzLNLRnMvRjDE/rs:fit/g:sm/q:90/h:438/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/UJ4T8sWjaiIGN8PWJAFRp_V_TBoHO0ZzLNLRnMvRjDE/rs:fit/g:sm/q:90/h:438/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/oz2QPescBVqK-cq-VmqA3Zr2nAVU724vxol9LMWSVSU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/d-yPYeN1eDI1g3Ll-xLy_lkEWSUk-TYDQE46AG5FH9M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/d-yPYeN1eDI1g3Ll-xLy_lkEWSUk-TYDQE46AG5FH9M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/letR6-nJ_Rql-qyIvO_LcaKHbm45wh8u2I8Wjw51WQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/6VfCrRFEDfr2UUE8SoxQdNrJ55z_Oq6Nb5KxMME1JYs/rs:fit/g:sm/q:90/h:390/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6VfCrRFEDfr2UUE8SoxQdNrJ55z_Oq6Nb5KxMME1JYs/rs:fit/g:sm/q:90/h:390/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/8eEzVDcxl3qX_hvv51aE7S-MpX9lOCt2VOK4idqrpLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "width": 580
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/N0VCS8bDGkhKHvDh5c-9oYaqlo7mDYtjX0KZpbOMlfw/rs:fit/g:sm/q:90/h:460/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N0VCS8bDGkhKHvDh5c-9oYaqlo7mDYtjX0KZpbOMlfw/rs:fit/g:sm/q:90/h:460/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yxGSxPxeP91z4BqmrIwM6dJIU2mGrrzMkQHI-rWJY08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 566,
+          "resource_url": "https://i.discogs.com/Ov7bBowB7jBcS79GzCVSg9kF74Xen8in7HywoW665Ds/rs:fit/g:sm/q:90/h:566/w:532/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ov7bBowB7jBcS79GzCVSg9kF74Xen8in7HywoW665Ds/rs:fit/g:sm/q:90/h:566/w:532/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jzWgHTPNVyX7qqTZsRu2UG1pGmn7bv6svss5SPI9D0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "width": 532
+        },
+        {
+          "height": 237,
+          "resource_url": "https://i.discogs.com/6LFRfqR6bZEV4MtmdGoh7LUDtxRN9NJCahLvadFnm1Y/rs:fit/g:sm/q:90/h:237/w:356/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6LFRfqR6bZEV4MtmdGoh7LUDtxRN9NJCahLvadFnm1Y/rs:fit/g:sm/q:90/h:237/w:356/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4e4FcwuVhwVUm427en0Uynoqan7f2uTTX0c-7_ScEjg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "width": 356
+        },
+        {
+          "height": 271,
+          "resource_url": "https://i.discogs.com/uwbW4udF7Z-aTE0uefouLo2cy3-d-nYqwacCqqXQyrQ/rs:fit/g:sm/q:90/h:271/w:365/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uwbW4udF7Z-aTE0uefouLo2cy3-d-nYqwacCqqXQyrQ/rs:fit/g:sm/q:90/h:271/w:365/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Qh0dQHBIt626NbM6hAqpmOBrQSaevHx1O8oARgNp1cY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "width": 365
+        },
+        {
+          "height": 433,
+          "resource_url": "https://i.discogs.com/yUB2UcIRI60kjWzlbTjRZdo5a6-Ite2foyS4pXWXMpY/rs:fit/g:sm/q:90/h:433/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUB2UcIRI60kjWzlbTjRZdo5a6-Ite2foyS4pXWXMpY/rs:fit/g:sm/q:90/h:433/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iF5q30VRlrWQmtzTvu3Vv7sts2zZ2o_ib5Ntw6uI8r0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "width": 576
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/srT1vxbEzLm6uYs5gj59jpR4YyxsNPwnDDLvRpT1qpU/rs:fit/g:sm/q:90/h:600/w:423/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/srT1vxbEzLm6uYs5gj59jpR4YyxsNPwnDDLvRpT1qpU/rs:fit/g:sm/q:90/h:600/w:423/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HH-2CRh3Tl2yGW5HSPxhn9aMVOHXsgBT2ieKqFBnd-Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "width": 423
+        },
+        {
+          "height": 311,
+          "resource_url": "https://i.discogs.com/6upqape19jXNTIOg9hD-HCJ-4EeBMY1ERoEENfrkOV8/rs:fit/g:sm/q:90/h:311/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6upqape19jXNTIOg9hD-HCJ-4EeBMY1ERoEENfrkOV8/rs:fit/g:sm/q:90/h:311/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/5ZqjN0R36NEx2mqEjd6tC047PS8Hze0wCOoGtLM1BOo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/RURXj78bsJPBMtf9Jzj8X3v-0SIZJ_iSjpeIZIOo0xM/rs:fit/g:sm/q:90/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RURXj78bsJPBMtf9Jzj8X3v-0SIZJ_iSjpeIZIOo0xM/rs:fit/g:sm/q:90/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/P7lNAjzI_MBhNGtjt-MS018KEUM7Av28US9bjzPkLQA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "width": 350
+        },
+        {
+          "height": 371,
+          "resource_url": "https://i.discogs.com/ziklIptE0AiEfVAo-noxHUQfl6ip1tlMeMFlFx1IGYM/rs:fit/g:sm/q:90/h:371/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ziklIptE0AiEfVAo-noxHUQfl6ip1tlMeMFlFx1IGYM/rs:fit/g:sm/q:90/h:371/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_CVzNfpJlb2dvlDB7SyGLEcg4QGDxYoRDfygagP-Vg0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 386,
+          "resource_url": "https://i.discogs.com/zhIjgIf0WkPRYhF4c7Fiis3UbpE0I-ibhONWa3WWMnE/rs:fit/g:sm/q:90/h:386/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zhIjgIf0WkPRYhF4c7Fiis3UbpE0I-ibhONWa3WWMnE/rs:fit/g:sm/q:90/h:386/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/d-gHle8U-4_LccHs_hKR_PGmzJoTlspk91geFQmAnBM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "width": 564
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/9orOrb6LsKBM-alqHr9FpY3WLx3vBWPubbJYin3vsdc/rs:fit/g:sm/q:90/h:320/w:243/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9orOrb6LsKBM-alqHr9FpY3WLx3vBWPubbJYin3vsdc/rs:fit/g:sm/q:90/h:320/w:243/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RtSlKvtoTl0W0NHbbWd6aySclRjtNIeqa4mi51t1F9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "width": 243
+        },
+        {
+          "height": 282,
+          "resource_url": "https://i.discogs.com/vp8l6Amu9F8iHlcmOB201aKmYqnNDoQCnPmDHJ6CkoE/rs:fit/g:sm/q:90/h:282/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vp8l6Amu9F8iHlcmOB201aKmYqnNDoQCnPmDHJ6CkoE/rs:fit/g:sm/q:90/h:282/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vRVUB7Ti43xoZ5NkbTvDfL2Pr7zDcJO_BukRQ3H6ZNo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "width": 426
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/BHDn7qnsZsgpgFiTyVaYLYzS9RqWTUEXfhj10OCz72E/rs:fit/g:sm/q:90/h:401/w:582/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BHDn7qnsZsgpgFiTyVaYLYzS9RqWTUEXfhj10OCz72E/rs:fit/g:sm/q:90/h:401/w:582/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MJ0JatcIfTNDQS1J6ILGeWmRP07NZWbSR1f3mZY5dMc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "width": 582
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 171115,
+          "name": "John Garcia (2)",
+          "resource_url": "https://api.discogs.com/artists/171115"
+        },
+        {
+          "active": false,
+          "id": 241002,
+          "name": "Josh Homme",
+          "resource_url": "https://api.discogs.com/artists/241002"
+        },
+        {
+          "active": false,
+          "id": 252691,
+          "name": "Brant Bjork",
+          "resource_url": "https://api.discogs.com/artists/252691"
+        },
+        {
+          "active": false,
+          "id": 252692,
+          "name": "Nick Oliveri",
+          "resource_url": "https://api.discogs.com/artists/252692"
+        },
+        {
+          "active": false,
+          "id": 311948,
+          "name": "Scott Reeder",
+          "resource_url": "https://api.discogs.com/artists/311948"
+        },
+        {
+          "active": true,
+          "id": 425841,
+          "name": "Alfredo Hernandez",
+          "resource_url": "https://api.discogs.com/artists/425841"
+        },
+        {
+          "active": false,
+          "id": 1426764,
+          "name": "Chris Cockrell",
+          "resource_url": "https://api.discogs.com/artists/1426764"
+        }
+      ],
       "name": "Kyuss",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "105732",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/105732"
-      },
+      "profile": "Stoner Rock band formed in 1988 in Palm Desert, California as 'Katzenjammer'. They changed their name to [a1430371] in 1989 and released a self-titled EP in the following year. In 1991 the band shortened its name to 'Kyuss'.\r\nThey released 4 full-length albums (1991-1995).\r\nDisbanded in 1995.\r\n\r\n1988: Formed as 'Katzenjammer' by Joshua Homme (Lead Guitar), Nick Oliveri (Rhythm Guitar), Chris Cockrell (Bass), Brant Bjork (Drums) and John Garcia (Vocals).\r\n1989-1991: Nick Oliveri leaves 'Katzenjammer' and the band changes their name to [a1430371]. Together, they recorded a self-titled EP [r1737819].\r\n1991-1992: Chris Cockrell leaves [a1430371] and Nick Oliveri returned as a bassist. The band eventually changes their name to 'Kyuss' and records two albums. Nick Oliveri then left again and was replaced by Scott Reeder from [a=The Obsessed].\r\n1992-1994: Brant Bjork leaves and later joins [a=Fu Manchu] in 1996. Alfredo Hernandez joins the band. \r\n1994-1996: The band breaks up. John Garcia forms [a=Slo Burn]. Joshua Homme forms [a=Gamma Ray (2)].\r\n1996: John Garcia and Scott Reeder formed [a=Unida].\r\n1997: Nick Oliveri forms the [a=Mondo Generator].\r\n1998-1999: Joshua Homme, Nick Oliveri and Alfredo Hernandez form [a=Queens Of The Stone Age].\r\nNov 2010: John Garcia, Nick Oliveri, and Brant Bjork confirmed that they reunited and will tour in the spring of 2011 under the name 'Kyuss Lives!'.\r\n2011: Josh Homme and Scott Reeder sued.\r\n2012: A judge ruled that the name 'Kyuss Lives!' could be used to play live shows but not record.",
+      "releases_url": "https://api.discogs.com/artists/105732/releases",
       "resource_url": "https://api.discogs.com/artists/105732",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/105732",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/105732-Kyuss",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Kyuss"
+      ]
     },
     "identity": {
       "musicbrainz_id": "ea0f2a37-7007-4217-a812-396227f5013a",
@@ -247,27 +422,203 @@
         "track": "Whitewater / Lick Doo",
         "uri": "https://www.youtube.com/watch?v=lUDoFb83pPs"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='762893', url='https://music.apple.com/gb/artist/kyuss/762893', name='Kyuss', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/bb/c2/bd/bbc2bd90-2e14-bcfe-40d7-9e5af12245d8/pr_source.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '762893', 'type': 'artists', 'href': '/v1/catalog/gb/artists/762893', 'attributes': {'name': 'Kyuss', 'genreNames': ['Hard Rock'], 'artwork': {'width': 875, 'height': 875, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/bb/c2/bd/bbc2bd90-2e14-bcfe-40d7-9e5af12245d8/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '2e2e2e', 'textColor1': 'ffffff', 'textColor2': 'e3e3e3', 'textColor3': 'd5d5d5', 'textColor4': 'bebebe'}, 'url': 'https://music.apple.com/gb/artist/kyuss/762893'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/762893/albums', 'data': [{'id': '213508542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/213508542'}, {'id': '207973376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207973376'}, {'id': '207914986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207914986'}, {'id': '207946744', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207946744'}, {'id': '1375523899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1375523899'}, {'id': '207923421', 'type': 'albums', 'href': '/v1/catalog/gb/albums/207923421'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "105732",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1430371,
+          "name": "Sons Of Kyuss",
+          "resource_url": "https://api.discogs.com/artists/1430371"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 105732,
+      "images": [
+        {
+          "height": 438,
+          "resource_url": "https://i.discogs.com/UJ4T8sWjaiIGN8PWJAFRp_V_TBoHO0ZzLNLRnMvRjDE/rs:fit/g:sm/q:90/h:438/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/UJ4T8sWjaiIGN8PWJAFRp_V_TBoHO0ZzLNLRnMvRjDE/rs:fit/g:sm/q:90/h:438/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/oz2QPescBVqK-cq-VmqA3Zr2nAVU724vxol9LMWSVSU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDA3/LmpwZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/d-yPYeN1eDI1g3Ll-xLy_lkEWSUk-TYDQE46AG5FH9M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/d-yPYeN1eDI1g3Ll-xLy_lkEWSUk-TYDQE46AG5FH9M/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/letR6-nJ_Rql-qyIvO_LcaKHbm45wh8u2I8Wjw51WQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNzg0MTczNjc4/LTU2NTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/6VfCrRFEDfr2UUE8SoxQdNrJ55z_Oq6Nb5KxMME1JYs/rs:fit/g:sm/q:90/h:390/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6VfCrRFEDfr2UUE8SoxQdNrJ55z_Oq6Nb5KxMME1JYs/rs:fit/g:sm/q:90/h:390/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/8eEzVDcxl3qX_hvv51aE7S-MpX9lOCt2VOK4idqrpLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMTA1OTU5MDQw/LmpwZw.jpeg",
+          "width": 580
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/N0VCS8bDGkhKHvDh5c-9oYaqlo7mDYtjX0KZpbOMlfw/rs:fit/g:sm/q:90/h:460/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N0VCS8bDGkhKHvDh5c-9oYaqlo7mDYtjX0KZpbOMlfw/rs:fit/g:sm/q:90/h:460/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yxGSxPxeP91z4BqmrIwM6dJIU2mGrrzMkQHI-rWJY08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDg2/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 566,
+          "resource_url": "https://i.discogs.com/Ov7bBowB7jBcS79GzCVSg9kF74Xen8in7HywoW665Ds/rs:fit/g:sm/q:90/h:566/w:532/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ov7bBowB7jBcS79GzCVSg9kF74Xen8in7HywoW665Ds/rs:fit/g:sm/q:90/h:566/w:532/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jzWgHTPNVyX7qqTZsRu2UG1pGmn7bv6svss5SPI9D0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzc5/LmpwZWc.jpeg",
+          "width": 532
+        },
+        {
+          "height": 237,
+          "resource_url": "https://i.discogs.com/6LFRfqR6bZEV4MtmdGoh7LUDtxRN9NJCahLvadFnm1Y/rs:fit/g:sm/q:90/h:237/w:356/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6LFRfqR6bZEV4MtmdGoh7LUDtxRN9NJCahLvadFnm1Y/rs:fit/g:sm/q:90/h:237/w:356/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4e4FcwuVhwVUm427en0Uynoqan7f2uTTX0c-7_ScEjg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDU0/LmpwZWc.jpeg",
+          "width": 356
+        },
+        {
+          "height": 271,
+          "resource_url": "https://i.discogs.com/uwbW4udF7Z-aTE0uefouLo2cy3-d-nYqwacCqqXQyrQ/rs:fit/g:sm/q:90/h:271/w:365/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uwbW4udF7Z-aTE0uefouLo2cy3-d-nYqwacCqqXQyrQ/rs:fit/g:sm/q:90/h:271/w:365/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Qh0dQHBIt626NbM6hAqpmOBrQSaevHx1O8oARgNp1cY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDcz/LmpwZWc.jpeg",
+          "width": 365
+        },
+        {
+          "height": 433,
+          "resource_url": "https://i.discogs.com/yUB2UcIRI60kjWzlbTjRZdo5a6-Ite2foyS4pXWXMpY/rs:fit/g:sm/q:90/h:433/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUB2UcIRI60kjWzlbTjRZdo5a6-Ite2foyS4pXWXMpY/rs:fit/g:sm/q:90/h:433/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iF5q30VRlrWQmtzTvu3Vv7sts2zZ2o_ib5Ntw6uI8r0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzk2/LmpwZWc.jpeg",
+          "width": 576
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/srT1vxbEzLm6uYs5gj59jpR4YyxsNPwnDDLvRpT1qpU/rs:fit/g:sm/q:90/h:600/w:423/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/srT1vxbEzLm6uYs5gj59jpR4YyxsNPwnDDLvRpT1qpU/rs:fit/g:sm/q:90/h:600/w:423/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HH-2CRh3Tl2yGW5HSPxhn9aMVOHXsgBT2ieKqFBnd-Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTY3/LmpwZWc.jpeg",
+          "width": 423
+        },
+        {
+          "height": 311,
+          "resource_url": "https://i.discogs.com/6upqape19jXNTIOg9hD-HCJ-4EeBMY1ERoEENfrkOV8/rs:fit/g:sm/q:90/h:311/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6upqape19jXNTIOg9hD-HCJ-4EeBMY1ERoEENfrkOV8/rs:fit/g:sm/q:90/h:311/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/5ZqjN0R36NEx2mqEjd6tC047PS8Hze0wCOoGtLM1BOo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTMw/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/RURXj78bsJPBMtf9Jzj8X3v-0SIZJ_iSjpeIZIOo0xM/rs:fit/g:sm/q:90/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RURXj78bsJPBMtf9Jzj8X3v-0SIZJ_iSjpeIZIOo0xM/rs:fit/g:sm/q:90/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/P7lNAjzI_MBhNGtjt-MS018KEUM7Av28US9bjzPkLQA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTA2/LmpwZWc.jpeg",
+          "width": 350
+        },
+        {
+          "height": 371,
+          "resource_url": "https://i.discogs.com/ziklIptE0AiEfVAo-noxHUQfl6ip1tlMeMFlFx1IGYM/rs:fit/g:sm/q:90/h:371/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ziklIptE0AiEfVAo-noxHUQfl6ip1tlMeMFlFx1IGYM/rs:fit/g:sm/q:90/h:371/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_CVzNfpJlb2dvlDB7SyGLEcg4QGDxYoRDfygagP-Vg0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDk3/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 386,
+          "resource_url": "https://i.discogs.com/zhIjgIf0WkPRYhF4c7Fiis3UbpE0I-ibhONWa3WWMnE/rs:fit/g:sm/q:90/h:386/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zhIjgIf0WkPRYhF4c7Fiis3UbpE0I-ibhONWa3WWMnE/rs:fit/g:sm/q:90/h:386/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/d-gHle8U-4_LccHs_hKR_PGmzJoTlspk91geFQmAnBM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNzcw/LmpwZWc.jpeg",
+          "width": 564
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/9orOrb6LsKBM-alqHr9FpY3WLx3vBWPubbJYin3vsdc/rs:fit/g:sm/q:90/h:320/w:243/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9orOrb6LsKBM-alqHr9FpY3WLx3vBWPubbJYin3vsdc/rs:fit/g:sm/q:90/h:320/w:243/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RtSlKvtoTl0W0NHbbWd6aySclRjtNIeqa4mi51t1F9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNTc0/LmpwZWc.jpeg",
+          "width": 243
+        },
+        {
+          "height": 282,
+          "resource_url": "https://i.discogs.com/vp8l6Amu9F8iHlcmOB201aKmYqnNDoQCnPmDHJ6CkoE/rs:fit/g:sm/q:90/h:282/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vp8l6Amu9F8iHlcmOB201aKmYqnNDoQCnPmDHJ6CkoE/rs:fit/g:sm/q:90/h:282/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vRVUB7Ti43xoZ5NkbTvDfL2Pr7zDcJO_BukRQ3H6ZNo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xMjg5NTIwNDQ2/LmpwZWc.jpeg",
+          "width": 426
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/BHDn7qnsZsgpgFiTyVaYLYzS9RqWTUEXfhj10OCz72E/rs:fit/g:sm/q:90/h:401/w:582/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BHDn7qnsZsgpgFiTyVaYLYzS9RqWTUEXfhj10OCz72E/rs:fit/g:sm/q:90/h:401/w:582/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MJ0JatcIfTNDQS1J6ILGeWmRP07NZWbSR1f3mZY5dMc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTcz/Mi0xNDcwMjM2NTY4/LTE2NTYuanBlZw.jpeg",
+          "width": 582
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 171115,
+          "name": "John Garcia (2)",
+          "resource_url": "https://api.discogs.com/artists/171115"
+        },
+        {
+          "active": false,
+          "id": 241002,
+          "name": "Josh Homme",
+          "resource_url": "https://api.discogs.com/artists/241002"
+        },
+        {
+          "active": false,
+          "id": 252691,
+          "name": "Brant Bjork",
+          "resource_url": "https://api.discogs.com/artists/252691"
+        },
+        {
+          "active": false,
+          "id": 252692,
+          "name": "Nick Oliveri",
+          "resource_url": "https://api.discogs.com/artists/252692"
+        },
+        {
+          "active": false,
+          "id": 311948,
+          "name": "Scott Reeder",
+          "resource_url": "https://api.discogs.com/artists/311948"
+        },
+        {
+          "active": true,
+          "id": 425841,
+          "name": "Alfredo Hernandez",
+          "resource_url": "https://api.discogs.com/artists/425841"
+        },
+        {
+          "active": false,
+          "id": 1426764,
+          "name": "Chris Cockrell",
+          "resource_url": "https://api.discogs.com/artists/1426764"
+        }
+      ],
       "name": "Kyuss",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "105732",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/105732"
-      },
+      "profile": "Stoner Rock band formed in 1988 in Palm Desert, California as 'Katzenjammer'. They changed their name to [a1430371] in 1989 and released a self-titled EP in the following year. In 1991 the band shortened its name to 'Kyuss'.\r\nThey released 4 full-length albums (1991-1995).\r\nDisbanded in 1995.\r\n\r\n1988: Formed as 'Katzenjammer' by Joshua Homme (Lead Guitar), Nick Oliveri (Rhythm Guitar), Chris Cockrell (Bass), Brant Bjork (Drums) and John Garcia (Vocals).\r\n1989-1991: Nick Oliveri leaves 'Katzenjammer' and the band changes their name to [a1430371]. Together, they recorded a self-titled EP [r1737819].\r\n1991-1992: Chris Cockrell leaves [a1430371] and Nick Oliveri returned as a bassist. The band eventually changes their name to 'Kyuss' and records two albums. Nick Oliveri then left again and was replaced by Scott Reeder from [a=The Obsessed].\r\n1992-1994: Brant Bjork leaves and later joins [a=Fu Manchu] in 1996. Alfredo Hernandez joins the band. \r\n1994-1996: The band breaks up. John Garcia forms [a=Slo Burn]. Joshua Homme forms [a=Gamma Ray (2)].\r\n1996: John Garcia and Scott Reeder formed [a=Unida].\r\n1997: Nick Oliveri forms the [a=Mondo Generator].\r\n1998-1999: Joshua Homme, Nick Oliveri and Alfredo Hernandez form [a=Queens Of The Stone Age].\r\nNov 2010: John Garcia, Nick Oliveri, and Brant Bjork confirmed that they reunited and will tour in the spring of 2011 under the name 'Kyuss Lives!'.\r\n2011: Josh Homme and Scott Reeder sued.\r\n2012: A judge ruled that the name 'Kyuss Lives!' could be used to play live shows but not record.",
+      "releases_url": "https://api.discogs.com/artists/105732/releases",
       "resource_url": "https://api.discogs.com/artists/105732",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/105732",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/105732-Kyuss",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Kyuss"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Kyuss', url='https://www.last.fm/music/Kyuss', mbid='ea0f2a37-7007-4217-a812-396227f5013a', listeners=699479, playcount=32588061, bio_summary='Kyuss  (pronounced /ˈkaɪ.əs/ KYE-əs) are the corner stone of what is known as stoner rock or desert rock. Although deriving influence from 60s-70s hard rock, Kyuss churned out a unique sound. This was primarily because guitarist Josh Homme often tuned to a low C, a major third below standard pitch, but also singer John Garcia\\'s paint stripping vocals.\\n\\nThe band was originally formed in 1989 in Palm Desert, California under the name \"Sons of Kyuss\". <a href=\"https://www.last.fm/music/Kyuss\">Read more on Last.fm</a>', bio_content='Kyuss  (pronounced /ˈkaɪ.əs/ KYE-əs) are the corner stone of what is known as stoner rock or desert rock. Although deriving influence from 60s-70s hard rock, Kyuss churned out a unique sound. This was primarily because guitarist Josh Homme often tuned to a low C, a major third below standard pitch, but also singer John Garcia\\'s paint stripping vocals.\\n\\nThe band was originally formed in 1989 in Palm Desert, California under the name \"Sons of Kyuss\". They took the name from a monster in Dungeons and Dragons. Shortly after the release of their self-titled EP, the name was shortened to just Kyuss.\\n  \\nThe quartet gained popularity around the desert due to their famous generator parties. These were parties fueled by gas generators in the canyons and isolated desert surrounding the small valley towns.\\n\\nThe group disbanded in 1997. They felt that they were in a decline and felt it best to call it quits before it escalated into something that could not be fixed. The line up had shifted dramatically between 1989 and 1997. Josh Homme, John Garcia, Brant Bjork, and Chris Cockrell were the original members. Chris was replaced by Nick Oliveri during high school. That line up recorded Wretch (released in 1991) and Blues for the Red Sun (released in 1992), after which Nick soon left. The eighteen year older, but very able Scott Reeder from The Obsessed was brought in. This line up recorded the famous self-titled album Kyuss (released in 1994; due to the album front cover often referred to as \"Welcome to Sky Valley\", a small town outside of Palm Desert — wrongly labelled by many). Brank Bjork left after this due to personal reasons. Alfredo Hernandez was brought in.  The final line-up recorded ...And the Circus Leaves Town (released in 1995). The band toured and soon disbanded. With the compilation Muchas Gracias: The best of Kyuss, one final greatest hits CD was released in 2000.\\n\\nAll band members still influence the genre they helped to create. The most notable is Queens of the Stone Age. Josh Homme, Nick Oliveri, and Alfredo Hernandez started this up after Josh had experimented with his famous Desert Sessions.\\n\\nJohn Garcia took a path geared more towards traditional rock. He opened with Slo Burn. It was a harder Kyuss, and still played in drop C. That project did not last for over a year, although one EP was released. Following Slo Burn came Unida. This band was steered toward rock n\\' roll and away from the stoner rock genre. John has most recently been involved with the band Hermano. Many consider this the greatest post-Kyuss project. In 2010 a Garcia Plays Kyuss gig at Roadburn Festival (Netherlands), to be followed by a proper European tour, was announced. The line-up of this band includes (former) members of Agua de Annique, Celestial Season, Kong and Arsenal.\\n\\nNick Oliveri also has created waves in the music world. Apart from playing for years in Queens of the Stone Age he has played on and off in The Dwarves. He is most known for his side project, which has become his full-time band, Mondo Generator.\\n\\nScott Reeder pursued a career of producing mainly (most notably Orange Goblin\\'s Coup de Grace). In 2006, he released a solo album called Tunnelvision Brilliance. He also played in Unida for a little bit.\\n\\nBrant Bjork has the most stable musical career of them all. He turned down playing with Queens of the Stone Age to pursue a journey with his surfing buddies, Fu Manchu. He left after making numerous records with them to focus on his already blossoming solo career, playing the guitar instead of drums. He has worked with many people since, releasing records with Ché, touring as Brant Bjork and the Bros, and occasionally playing drums as well. Brant Bjork also played on some Desert Sessions.\\n\\nLos Angeles based drummer Gene Trautmann played for a brief period between Brant Bjork and Alfredo Hernandez.\\n\\nAlfredo Hernandez has guest starred on too many CDs and bands to count including Yawning Man, Orquestra Del Desierto, Fatso Jetson, and many others. He also played in a local band located in Palm Desert and is the drummer of Brant Bjork and the Bros.\\n\\nA big influence on the sound of Kyuss was Chris Goss (frontman of Masters of Reality), who produced Blues for the Red Sun, and everything that followed.\\n\\nAlthough Queens of the Stone Age has been, and continues to be, a great deal more popular than Kyuss or any of its offshoots for many Kyuss is considered far superior than anything the disbanded members created afterward.\\n\\nA lot of bands have been inspired by Kyuss, including Electric Wizard, Monster Magnet, Orange Goblin, Beaver, Dozer, Los Natas, Truckfighters, Acid King, Fu Manchu, Clutch, Pelican, Torche.\\n\\nFor 2011 touring line-up, see Kyuss Lives!. <a href=\"https://www.last.fm/music/Kyuss\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Stoner Rock', 'desert rock', 'stoner', 'stoner metal', 'rock'], similar_artists=[{'name': 'Queens of the Stone Age', 'url': 'https://www.last.fm/music/Queens+of+the+Stone+Age'}, {'name': 'Fu Manchu', 'url': 'https://www.last.fm/music/Fu+Manchu'}, {'name': 'Slo Burn', 'url': 'https://www.last.fm/music/Slo+Burn'}, {'name': 'Desert Sessions', 'url': 'https://www.last.fm/music/Desert+Sessions'}, {'name': 'Vista Chino', 'url': 'https://www.last.fm/music/Vista+Chino'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Kyuss', 'mbid': 'ea0f2a37-7007-4217-a812-396227f5013a', 'url': 'https://www.last.fm/music/Kyuss', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '699479', 'playcount': '32588061'}, 'similar': {'artist': [{'name': 'Queens of the Stone Age', 'url': 'https://www.last.fm/music/Queens+of+the+Stone+Age', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Fu Manchu', 'url': 'https://www.last.fm/music/Fu+Manchu', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Slo Burn', 'url': 'https://www.last.fm/music/Slo+Burn', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Desert Sessions', 'url': 'https://www.last.fm/music/Desert+Sessions', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Vista Chino', 'url': 'https://www.last.fm/music/Vista+Chino', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Stoner Rock', 'url': 'https://www.last.fm/tag/Stoner+Rock'}, {'name': 'desert rock', 'url': 'https://www.last.fm/tag/desert+rock'}, {'name': 'stoner', 'url': 'https://www.last.fm/tag/stoner'}, {'name': 'stoner metal', 'url': 'https://www.last.fm/tag/stoner+metal'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Kyuss/+wiki'}}, 'published': '10 Feb 2006, 20:12', 'summary': 'Kyuss  (pronounced /ˈkaɪ.əs/ KYE-əs) are the corner stone of what is known as stoner rock or desert rock. Although deriving influence from 60s-70s hard rock, Kyuss churned out a unique sound. This was primarily because guitarist Josh Homme often tuned to a low C, a major third below standard pitch, but also singer John Garcia\\'s paint stripping vocals.\\n\\nThe band was originally formed in 1989 in Palm Desert, California under the name \"Sons of Kyuss\". <a href=\"https://www.last.fm/music/Kyuss\">Read more on Last.fm</a>', 'content': 'Kyuss  (pronounced /ˈkaɪ.əs/ KYE-əs) are the corner stone of what is known as stoner rock or desert rock. Although deriving influence from 60s-70s hard rock, Kyuss churned out a unique sound. This was primarily because guitarist Josh Homme often tuned to a low C, a major third below standard pitch, but also singer John Garcia\\'s paint stripping vocals.\\n\\nThe band was originally formed in 1989 in Palm Desert, California under the name \"Sons of Kyuss\". They took the name from a monster in Dungeons and Dragons. Shortly after the release of their self-titled EP, the name was shortened to just Kyuss.\\n  \\nThe quartet gained popularity around the desert due to their famous generator parties. These were parties fueled by gas generators in the canyons and isolated desert surrounding the small valley towns.\\n\\nThe group disbanded in 1997. They felt that they were in a decline and felt it best to call it quits before it escalated into something that could not be fixed. The line up had shifted dramatically between 1989 and 1997. Josh Homme, John Garcia, Brant Bjork, and Chris Cockrell were the original members. Chris was replaced by Nick Oliveri during high school. That line up recorded Wretch (released in 1991) and Blues for the Red Sun (released in 1992), after which Nick soon left. The eighteen year older, but very able Scott Reeder from The Obsessed was brought in. This line up recorded the famous self-titled album Kyuss (released in 1994; due to the album front cover often referred to as \"Welcome to Sky Valley\", a small town outside of Palm Desert — wrongly labelled by many). Brank Bjork left after this due to personal reasons. Alfredo Hernandez was brought in.  The final line-up recorded ...And the Circus Leaves Town (released in 1995). The band toured and soon disbanded. With the compilation Muchas Gracias: The best of Kyuss, one final greatest hits CD was released in 2000.\\n\\nAll band members still influence the genre they helped to create. The most notable is Queens of the Stone Age. Josh Homme, Nick Oliveri, and Alfredo Hernandez started this up after Josh had experimented with his famous Desert Sessions.\\n\\nJohn Garcia took a path geared more towards traditional rock. He opened with Slo Burn. It was a harder Kyuss, and still played in drop C. That project did not last for over a year, although one EP was released. Following Slo Burn came Unida. This band was steered toward rock n\\' roll and away from the stoner rock genre. John has most recently been involved with the band Hermano. Many consider this the greatest post-Kyuss project. In 2010 a Garcia Plays Kyuss gig at Roadburn Festival (Netherlands), to be followed by a proper European tour, was announced. The line-up of this band includes (former) members of Agua de Annique, Celestial Season, Kong and Arsenal.\\n\\nNick Oliveri also has created waves in the music world. Apart from playing for years in Queens of the Stone Age he has played on and off in The Dwarves. He is most known for his side project, which has become his full-time band, Mondo Generator.\\n\\nScott Reeder pursued a career of producing mainly (most notably Orange Goblin\\'s Coup de Grace). In 2006, he released a solo album called Tunnelvision Brilliance. He also played in Unida for a little bit.\\n\\nBrant Bjork has the most stable musical career of them all. He turned down playing with Queens of the Stone Age to pursue a journey with his surfing buddies, Fu Manchu. He left after making numerous records with them to focus on his already blossoming solo career, playing the guitar instead of drums. He has worked with many people since, releasing records with Ché, touring as Brant Bjork and the Bros, and occasionally playing drums as well. Brant Bjork also played on some Desert Sessions.\\n\\nLos Angeles based drummer Gene Trautmann played for a brief period between Brant Bjork and Alfredo Hernandez.\\n\\nAlfredo Hernandez has guest starred on too many CDs and bands to count including Yawning Man, Orquestra Del Desierto, Fatso Jetson, and many others. He also played in a local band located in Palm Desert and is the drummer of Brant Bjork and the Bros.\\n\\nA big influence on the sound of Kyuss was Chris Goss (frontman of Masters of Reality), who produced Blues for the Red Sun, and everything that followed.\\n\\nAlthough Queens of the Stone Age has been, and continues to be, a great deal more popular than Kyuss or any of its offshoots for many Kyuss is considered far superior than anything the disbanded members created afterward.\\n\\nA lot of bands have been inspired by Kyuss, including Electric Wizard, Monster Magnet, Orange Goblin, Beaver, Dozer, Los Natas, Truckfighters, Acid King, Fu Manchu, Clutch, Pelican, Torche.\\n\\nFor 2011 touring line-up, see Kyuss Lives!. <a href=\"https://www.last.fm/music/Kyuss\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3HCpwNmFp2rvjkdjTs4uxs', url='https://open.spotify.com/artist/3HCpwNmFp2rvjkdjTs4uxs', name='Kyuss', popularity=54, followers=522768, genres=['stoner rock', 'stoner metal', 'sludge metal', 'doom metal', 'space rock'], images=[{'url': 'https://i.scdn.co/image/2622eb2ecb8e4681e873ebcb7b113cedbe2da8d0', 'height': 810, 'width': 1000}, {'url': 'https://i.scdn.co/image/51c11e89904ae527e726560fc37bdecd64720b98', 'height': 518, 'width': 639}, {'url': 'https://i.scdn.co/image/b692f562e9cece3557989bcf161593c878822355', 'height': 162, 'width': 200}, {'url': 'https://i.scdn.co/image/26e1fb1492c1997a9847c4530f59ea2940bdb8ce', 'height': 52, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/3HCpwNmFp2rvjkdjTs4uxs'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3HCpwNmFp2rvjkdjTs4uxs'}, 'followers': {'href': None, 'total': 522768}, 'genres': ['stoner rock', 'stoner metal', 'sludge metal', 'doom metal', 'space rock'], 'href': 'https://api.spotify.com/v1/artists/3HCpwNmFp2rvjkdjTs4uxs', 'id': '3HCpwNmFp2rvjkdjTs4uxs', 'images': [{'url': 'https://i.scdn.co/image/2622eb2ecb8e4681e873ebcb7b113cedbe2da8d0', 'height': 810, 'width': 1000}, {'url': 'https://i.scdn.co/image/51c11e89904ae527e726560fc37bdecd64720b98', 'height': 518, 'width': 639}, {'url': 'https://i.scdn.co/image/b692f562e9cece3557989bcf161593c878822355', 'height': 162, 'width': 200}, {'url': 'https://i.scdn.co/image/26e1fb1492c1997a9847c4530f59ea2940bdb8ce', 'height': 52, 'width': 64}], 'name': 'Kyuss', 'popularity': 54, 'type': 'artist', 'uri': 'spotify:artist:3HCpwNmFp2rvjkdjTs4uxs'})",
@@ -345,6 +696,6 @@
   },
   "spotify_id": "3HCpwNmFp2rvjkdjTs4uxs",
   "spotify_url": "https://open.spotify.com/artist/3HCpwNmFp2rvjkdjTs4uxs",
-  "updated_at": "2026-10-22T14:08:34.496063",
+  "updated_at": "2026-10-30T18:41:43.739177",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Kyuss"
 }

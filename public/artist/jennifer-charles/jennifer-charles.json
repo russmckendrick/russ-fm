@@ -56,22 +56,98 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1635977228', url='https://music.apple.com/gb/artist/jenifer-charles/1635977228', name='Jenifer Charles', artwork_url='', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1635977228', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1635977228', 'attributes': {'name': 'Jenifer Charles', 'url': 'https://music.apple.com/gb/artist/jenifer-charles/1635977228', 'genreNames': ['Hip-Hop/Rap']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1635977228/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "59463",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 48891,
+          "name": "Lovage",
+          "resource_url": "https://api.discogs.com/artists/48891"
+        },
+        {
+          "active": true,
+          "id": 120887,
+          "name": "Elysian Fields",
+          "resource_url": "https://api.discogs.com/artists/120887"
+        },
+        {
+          "active": true,
+          "id": 1568333,
+          "name": "La Mar Enfortuna",
+          "resource_url": "https://api.discogs.com/artists/1568333"
+        },
+        {
+          "active": true,
+          "id": 8314344,
+          "name": "Parthenope",
+          "resource_url": "https://api.discogs.com/artists/8314344"
+        }
+      ],
+      "id": 59463,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QkX4naOFyR1Q9CVu2vQ6MEFPMoMaaTzTDuhPayhiAMI/rs:fit/g:sm/q:90/h:600/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QkX4naOFyR1Q9CVu2vQ6MEFPMoMaaTzTDuhPayhiAMI/rs:fit/g:sm/q:90/h:600/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/OfCt9uwfagsDrwQDF3EK3rcYNw1IY6W_WxZtzmviLAc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "width": 475
+        },
+        {
+          "height": 207,
+          "resource_url": "https://i.discogs.com/i69ZbGyzNDKfEXgwyn1z_eWHuSHDvSrN-tyaw8stu8U/rs:fit/g:sm/q:90/h:207/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/i69ZbGyzNDKfEXgwyn1z_eWHuSHDvSrN-tyaw8stu8U/rs:fit/g:sm/q:90/h:207/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/vojoXlKVq8cqA8N-hCsokx8yDwHvmdh9Sur2nGr1dQk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "width": 250
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/GtJ4yuhwo2zkM1bqy4Clh9wG4j8iRzrgVn5ET9KkeeI/rs:fit/g:sm/q:90/h:334/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GtJ4yuhwo2zkM1bqy4Clh9wG4j8iRzrgVn5ET9KkeeI/rs:fit/g:sm/q:90/h:334/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/YqHHZkDUn0O9E1tacYNxli2278Fv5L1cnLeAdjN0yO4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/7JJunI0D4TE8CyFPrrX7sEg_v4s2AgxRzS9wX2ng-_c/rs:fit/g:sm/q:90/h:400/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7JJunI0D4TE8CyFPrrX7sEg_v4s2AgxRzS9wX2ng-_c/rs:fit/g:sm/q:90/h:400/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/KsZTF43rFOVvcvP6f9EHQfQlhOALZu-gX7pldllWuew/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "width": 323
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/ijIaiE9n3D1qFNx71tZ2qG_-I7XHJLf8CWUV87nA1T8/rs:fit/g:sm/q:90/h:200/w:136/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ijIaiE9n3D1qFNx71tZ2qG_-I7XHJLf8CWUV87nA1T8/rs:fit/g:sm/q:90/h:200/w:136/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/MzcZ5h_LGpSOzGO6_hCCl0BhtnExmqf7Whn5OXLT46w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "width": 136
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NCbyPtopMHdpArTWcQPUQTDkfv93fE2OLXDae_YjyMo/rs:fit/g:sm/q:90/h:600/w:484/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NCbyPtopMHdpArTWcQPUQTDkfv93fE2OLXDae_YjyMo/rs:fit/g:sm/q:90/h:600/w:484/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/qxsYa2FQ4svD2m3cwL1NEqfzwfV_d5tlJku-vqEzUi4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "width": 484
+        }
+      ],
       "name": "Jennifer Charles",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "59463",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/59463"
-      },
+      "namevariations": [
+        "Charles",
+        "J. Charles",
+        "J.C.",
+        "JC",
+        "Jennifer",
+        "Jennifer C."
+      ],
+      "profile": "Jennifer Charles (born November 15, 1968, Washington D.C.) is an American singer, musician and songwriter.\r\nAlong with [a=Oren Bloedow], she co-founded the New York band [a=Elysian Fields].",
+      "realname": "Jennifer Asher Charles",
+      "releases_url": "https://api.discogs.com/artists/59463/releases",
       "resource_url": "https://api.discogs.com/artists/59463",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/59463",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/59463-Jennifer-Charles"
     },
     "identity": {
       "musicbrainz_id": "9d2e17d5-f7ef-46b0-bc85-52fa3980858f",
@@ -81,27 +157,104 @@
     },
     "lastfm": {},
     "spotify": "ArtistSpotifyData(id='33Y0z7Kdhmj2OInuJHwsDQ', url='https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ', name='Jennifer Charles', popularity=43, followers=5684, genres=['trip hop', 'industrial rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, 'followers': {'href': None, 'total': 5684}, 'genres': ['trip hop', 'industrial rock'], 'href': 'https://api.spotify.com/v1/artists/33Y0z7Kdhmj2OInuJHwsDQ', 'id': '33Y0z7Kdhmj2OInuJHwsDQ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], 'name': 'Jennifer Charles', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:33Y0z7Kdhmj2OInuJHwsDQ'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1635977228', url='https://music.apple.com/gb/artist/jenifer-charles/1635977228', name='Jenifer Charles', artwork_url='', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1635977228', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1635977228', 'attributes': {'name': 'Jenifer Charles', 'url': 'https://music.apple.com/gb/artist/jenifer-charles/1635977228', 'genreNames': ['Hip-Hop/Rap']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1635977228/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "59463",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 48891,
+          "name": "Lovage",
+          "resource_url": "https://api.discogs.com/artists/48891"
+        },
+        {
+          "active": true,
+          "id": 120887,
+          "name": "Elysian Fields",
+          "resource_url": "https://api.discogs.com/artists/120887"
+        },
+        {
+          "active": true,
+          "id": 1568333,
+          "name": "La Mar Enfortuna",
+          "resource_url": "https://api.discogs.com/artists/1568333"
+        },
+        {
+          "active": true,
+          "id": 8314344,
+          "name": "Parthenope",
+          "resource_url": "https://api.discogs.com/artists/8314344"
+        }
+      ],
+      "id": 59463,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QkX4naOFyR1Q9CVu2vQ6MEFPMoMaaTzTDuhPayhiAMI/rs:fit/g:sm/q:90/h:600/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QkX4naOFyR1Q9CVu2vQ6MEFPMoMaaTzTDuhPayhiAMI/rs:fit/g:sm/q:90/h:600/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/OfCt9uwfagsDrwQDF3EK3rcYNw1IY6W_WxZtzmviLAc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzNDMt/NjUwMS5qcGVn.jpeg",
+          "width": 475
+        },
+        {
+          "height": 207,
+          "resource_url": "https://i.discogs.com/i69ZbGyzNDKfEXgwyn1z_eWHuSHDvSrN-tyaw8stu8U/rs:fit/g:sm/q:90/h:207/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/i69ZbGyzNDKfEXgwyn1z_eWHuSHDvSrN-tyaw8stu8U/rs:fit/g:sm/q:90/h:207/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/vojoXlKVq8cqA8N-hCsokx8yDwHvmdh9Sur2nGr1dQk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2MDcu/anBn.jpeg",
+          "width": 250
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/GtJ4yuhwo2zkM1bqy4Clh9wG4j8iRzrgVn5ET9KkeeI/rs:fit/g:sm/q:90/h:334/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GtJ4yuhwo2zkM1bqy4Clh9wG4j8iRzrgVn5ET9KkeeI/rs:fit/g:sm/q:90/h:334/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/YqHHZkDUn0O9E1tacYNxli2278Fv5L1cnLeAdjN0yO4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2NTUu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/7JJunI0D4TE8CyFPrrX7sEg_v4s2AgxRzS9wX2ng-_c/rs:fit/g:sm/q:90/h:400/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7JJunI0D4TE8CyFPrrX7sEg_v4s2AgxRzS9wX2ng-_c/rs:fit/g:sm/q:90/h:400/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/KsZTF43rFOVvcvP6f9EHQfQlhOALZu-gX7pldllWuew/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTExMTcyMDc2ODEu/Z2lm.jpeg",
+          "width": 323
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/ijIaiE9n3D1qFNx71tZ2qG_-I7XHJLf8CWUV87nA1T8/rs:fit/g:sm/q:90/h:200/w:136/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ijIaiE9n3D1qFNx71tZ2qG_-I7XHJLf8CWUV87nA1T8/rs:fit/g:sm/q:90/h:200/w:136/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/MzcZ5h_LGpSOzGO6_hCCl0BhtnExmqf7Whn5OXLT46w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTEwOTgwNDU5NjAu/anBn.jpeg",
+          "width": 136
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NCbyPtopMHdpArTWcQPUQTDkfv93fE2OLXDae_YjyMo/rs:fit/g:sm/q:90/h:600/w:484/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NCbyPtopMHdpArTWcQPUQTDkfv93fE2OLXDae_YjyMo/rs:fit/g:sm/q:90/h:600/w:484/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/qxsYa2FQ4svD2m3cwL1NEqfzwfV_d5tlJku-vqEzUi4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/LTE1NTgxMTgzMzkt/NDk5NS5qcGVn.jpeg",
+          "width": 484
+        }
+      ],
       "name": "Jennifer Charles",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "59463",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/59463"
-      },
+      "namevariations": [
+        "Charles",
+        "J. Charles",
+        "J.C.",
+        "JC",
+        "Jennifer",
+        "Jennifer C."
+      ],
+      "profile": "Jennifer Charles (born November 15, 1968, Washington D.C.) is an American singer, musician and songwriter.\r\nAlong with [a=Oren Bloedow], she co-founded the New York band [a=Elysian Fields].",
+      "realname": "Jennifer Asher Charles",
+      "releases_url": "https://api.discogs.com/artists/59463/releases",
       "resource_url": "https://api.discogs.com/artists/59463",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/59463",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/59463-Jennifer-Charles"
     },
     "lastfm": {},
     "spotify": "ArtistSpotifyData(id='33Y0z7Kdhmj2OInuJHwsDQ', url='https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ', name='Jennifer Charles', popularity=43, followers=5684, genres=['trip hop', 'industrial rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ'}, 'followers': {'href': None, 'total': 5684}, 'genres': ['trip hop', 'industrial rock'], 'href': 'https://api.spotify.com/v1/artists/33Y0z7Kdhmj2OInuJHwsDQ', 'id': '33Y0z7Kdhmj2OInuJHwsDQ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2738f11984a117de61895c5220a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028f11984a117de61895c5220a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851306a5cd25f4f1ccec2be8784', 'height': 64, 'width': 64}], 'name': 'Jennifer Charles', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:33Y0z7Kdhmj2OInuJHwsDQ'})",
@@ -109,6 +262,6 @@
   },
   "spotify_id": "33Y0z7Kdhmj2OInuJHwsDQ",
   "spotify_url": "https://open.spotify.com/artist/33Y0z7Kdhmj2OInuJHwsDQ",
-  "updated_at": "2026-10-22T14:08:00.104255",
+  "updated_at": "2026-10-30T18:41:21.415513",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Jennifer_Charles"
 }

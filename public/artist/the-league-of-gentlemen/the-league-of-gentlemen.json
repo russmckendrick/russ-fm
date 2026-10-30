@@ -98,22 +98,77 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='422761230', url='https://music.apple.com/gb/artist/the-league-of-gentlemen/422761230', name='The League Of Gentlemen', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a2/d1/59/a2d1599c-d835-b8b9-06e5-87567259d1b4/195497511488_Cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '422761230', 'type': 'artists', 'href': '/v1/catalog/gb/artists/422761230', 'attributes': {'name': 'The League Of Gentlemen', 'genreNames': ['Rock'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a2/d1/59/a2d1599c-d835-b8b9-06e5-87567259d1b4/195497511488_Cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'f4f4f4', 'textColor2': 'c8c8c8', 'textColor3': 'c3c3c3', 'textColor4': 'a0a0a0'}, 'url': 'https://music.apple.com/gb/artist/the-league-of-gentlemen/422761230'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/422761230/albums', 'data': [{'id': '1457934944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457934944'}, {'id': '1543098066', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543098066'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "545719",
-      "images": [],
-      "members": [],
-      "name": "The League Of Gentlemen",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "545719",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/545719"
-      },
+      "data_quality": "Correct",
+      "id": 545719,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/LS8eDTEsCZ3todw2ulW6LgKwPuNflvRkt4BYEzdtMyM/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/LS8eDTEsCZ3todw2ulW6LgKwPuNflvRkt4BYEzdtMyM/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/E1R7tuK4HEwwMv2lpW1EjjNKEwV8gvfj8XkBcHiKlHA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/neb_vHM6ewkBqtvHr2vjxv_7a4pdQ4qHPn-lv9J4Sp4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/neb_vHM6ewkBqtvHr2vjxv_7a4pdQ4qHPn-lv9J4Sp4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g7a8AarrAqP-Ui4qyNum3Bq2dzVNt_iT87ZfK3O9mNw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/xbupF75yMZTTxDi1uVIwZbMGXza0IGZzzWluqViPefA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xbupF75yMZTTxDi1uVIwZbMGXza0IGZzzWluqViPefA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/A0wyaNe03nDJaIdvrKWQJ0X2wb0Rg5jhvMRqhb0qSdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/C_DRlX8g-YSzGzrDkkqRAGp5h5WXDqWBDUvjvcBJfdo/rs:fit/g:sm/q:90/h:425/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C_DRlX8g-YSzGzrDkkqRAGp5h5WXDqWBDUvjvcBJfdo/rs:fit/g:sm/q:90/h:425/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MVmr-FdKSiIaJMUbyM81VBWsuvgOaQ6knYmMlt2bozs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 545720,
+          "name": "Reece Shearsmith",
+          "resource_url": "https://api.discogs.com/artists/545720"
+        },
+        {
+          "active": true,
+          "id": 545722,
+          "name": "Steve Pemberton",
+          "resource_url": "https://api.discogs.com/artists/545722"
+        },
+        {
+          "active": true,
+          "id": 1818712,
+          "name": "Mark Gatiss",
+          "resource_url": "https://api.discogs.com/artists/1818712"
+        },
+        {
+          "active": true,
+          "id": 2051356,
+          "name": "Jeremy Dyson",
+          "resource_url": "https://api.discogs.com/artists/2051356"
+        }
+      ],
+      "name": "The League Of Gentlemen (3)",
+      "profile": "British quartet of dark comedy writer–performers, formed in 1995.",
+      "releases_url": "https://api.discogs.com/artists/545719/releases",
       "resource_url": "https://api.discogs.com/artists/545719",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/545719",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/545719-The-League-Of-Gentlemen-3",
+      "urls": [
+        "http://www.leagueofgentlemen.co.uk/",
+        "http://en.wikipedia.org/wiki/The_League_of_Gentlemen"
+      ]
     },
     "identity": {
       "musicbrainz_id": "98d01605-2475-4884-95a5-96091c8d61a6",
@@ -122,33 +177,89 @@
       "wikipedia_title": "The League of Gentlemen"
     },
     "lastfm": "ArtistLastFmData(name='The League of Gentlemen', url='https://www.last.fm/music/The+League+of+Gentlemen', mbid='e2cd9278-7bd1-4fbf-b507-e8c68c5fb21a', listeners=3366, playcount=61665, bio_summary='There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>', bio_content='There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. Other members included bass guitarist Sara Lee (who later joined Gang Of Four), keyboardist Barry Andrews (formerly of XTC; later of Shriekback) and drummer Johnny Toobad. Toobad was replaced with a substitute drummer, Kevin Wilkinson, for the bulk of the band\\'s only studio album, released by EG/Polydor in 1981. \\n\\nIn 1996, Fripp\\'s independent label Discipline Global Mobile released an \"official bootleg\" live album of the League Of Gentlemen, Thrang Thrang Gozinbulx. The album features several tracks that were never recorded in the studio by the band. Many of the band\\'s full concerts are available as digital downloads through DGMLive.com or as part of the \"Exposures\" box set. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'post-punk', 'comedy', 'Progressive', 'rock'], similar_artists=[{'name': 'Ten Seconds', 'url': 'https://www.last.fm/music/Ten+Seconds'}, {'name': 'Robert Fripp & the League of Crafty Guitarists', 'url': 'https://www.last.fm/music/Robert+Fripp+&+the+League+of+Crafty+Guitarists'}, {'name': 'ProjeKct Two', 'url': 'https://www.last.fm/music/ProjeKct+Two'}, {'name': 'ProjeKct Three', 'url': 'https://www.last.fm/music/ProjeKct+Three'}, {'name': 'ProjeKct Four', 'url': 'https://www.last.fm/music/ProjeKct+Four'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The League of Gentlemen', 'mbid': 'e2cd9278-7bd1-4fbf-b507-e8c68c5fb21a', 'url': 'https://www.last.fm/music/The+League+of+Gentlemen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3366', 'playcount': '61665'}, 'similar': {'artist': [{'name': 'Ten Seconds', 'url': 'https://www.last.fm/music/Ten+Seconds', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Robert Fripp & the League of Crafty Guitarists', 'url': 'https://www.last.fm/music/Robert+Fripp+&+the+League+of+Crafty+Guitarists', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Two', 'url': 'https://www.last.fm/music/ProjeKct+Two', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Three', 'url': 'https://www.last.fm/music/ProjeKct+Three', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Four', 'url': 'https://www.last.fm/music/ProjeKct+Four', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'comedy', 'url': 'https://www.last.fm/tag/comedy'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+League+of+Gentlemen/+wiki'}}, 'published': '20 Mar 2007, 11:37', 'summary': 'There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>', 'content': 'There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. Other members included bass guitarist Sara Lee (who later joined Gang Of Four), keyboardist Barry Andrews (formerly of XTC; later of Shriekback) and drummer Johnny Toobad. Toobad was replaced with a substitute drummer, Kevin Wilkinson, for the bulk of the band\\'s only studio album, released by EG/Polydor in 1981. \\n\\nIn 1996, Fripp\\'s independent label Discipline Global Mobile released an \"official bootleg\" live album of the League Of Gentlemen, Thrang Thrang Gozinbulx. The album features several tracks that were never recorded in the studio by the band. Many of the band\\'s full concerts are available as digital downloads through DGMLive.com or as part of the \"Exposures\" box set. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
-    "spotify": "ArtistSpotifyData(id='1K1BdAgBv0p7n13NjaQUoK', url='https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK', name='The League of Gentlemen', popularity=6, followers=1397, genres=['comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, 'followers': {'href': None, 'total': 1397}, 'genres': ['comedy'], 'href': 'https://api.spotify.com/v1/artists/1K1BdAgBv0p7n13NjaQUoK', 'id': '1K1BdAgBv0p7n13NjaQUoK', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], 'name': 'The League of Gentlemen', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:1K1BdAgBv0p7n13NjaQUoK'})"
+    "spotify": "ArtistSpotifyData(id='1K1BdAgBv0p7n13NjaQUoK', url='https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK', name='The League of Gentlemen', popularity=6, followers=1397, genres=['comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, 'followers': {'href': None, 'total': 1397}, 'genres': ['comedy'], 'href': 'https://api.spotify.com/v1/artists/1K1BdAgBv0p7n13NjaQUoK', 'id': '1K1BdAgBv0p7n13NjaQUoK', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], 'name': 'The League of Gentlemen', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:1K1BdAgBv0p7n13NjaQUoK'})",
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='422761230', url='https://music.apple.com/gb/artist/the-league-of-gentlemen/422761230', name='The League Of Gentlemen', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a2/d1/59/a2d1599c-d835-b8b9-06e5-87567259d1b4/195497511488_Cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '422761230', 'type': 'artists', 'href': '/v1/catalog/gb/artists/422761230', 'attributes': {'name': 'The League Of Gentlemen', 'genreNames': ['Rock'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a2/d1/59/a2d1599c-d835-b8b9-06e5-87567259d1b4/195497511488_Cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'f4f4f4', 'textColor2': 'c8c8c8', 'textColor3': 'c3c3c3', 'textColor4': 'a0a0a0'}, 'url': 'https://music.apple.com/gb/artist/the-league-of-gentlemen/422761230'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/422761230/albums', 'data': [{'id': '1457934944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457934944'}, {'id': '1543098066', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1543098066'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "545719",
-      "images": [],
-      "members": [],
-      "name": "The League Of Gentlemen",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "545719",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/545719"
-      },
+      "data_quality": "Correct",
+      "id": 545719,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/LS8eDTEsCZ3todw2ulW6LgKwPuNflvRkt4BYEzdtMyM/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/LS8eDTEsCZ3todw2ulW6LgKwPuNflvRkt4BYEzdtMyM/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/E1R7tuK4HEwwMv2lpW1EjjNKEwV8gvfj8XkBcHiKlHA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTg5ODkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/neb_vHM6ewkBqtvHr2vjxv_7a4pdQ4qHPn-lv9J4Sp4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/neb_vHM6ewkBqtvHr2vjxv_7a4pdQ4qHPn-lv9J4Sp4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g7a8AarrAqP-Ui4qyNum3Bq2dzVNt_iT87ZfK3O9mNw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNTEzODc1NDI1/LTE5MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/xbupF75yMZTTxDi1uVIwZbMGXza0IGZzzWluqViPefA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xbupF75yMZTTxDi1uVIwZbMGXza0IGZzzWluqViPefA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/A0wyaNe03nDJaIdvrKWQJ0X2wb0Rg5jhvMRqhb0qSdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xNjA1MTk3ODMz/LTU0NTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/C_DRlX8g-YSzGzrDkkqRAGp5h5WXDqWBDUvjvcBJfdo/rs:fit/g:sm/q:90/h:425/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C_DRlX8g-YSzGzrDkkqRAGp5h5WXDqWBDUvjvcBJfdo/rs:fit/g:sm/q:90/h:425/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MVmr-FdKSiIaJMUbyM81VBWsuvgOaQ6knYmMlt2bozs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTcx/OS0xMTU0NzE4MTY2/LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 545720,
+          "name": "Reece Shearsmith",
+          "resource_url": "https://api.discogs.com/artists/545720"
+        },
+        {
+          "active": true,
+          "id": 545722,
+          "name": "Steve Pemberton",
+          "resource_url": "https://api.discogs.com/artists/545722"
+        },
+        {
+          "active": true,
+          "id": 1818712,
+          "name": "Mark Gatiss",
+          "resource_url": "https://api.discogs.com/artists/1818712"
+        },
+        {
+          "active": true,
+          "id": 2051356,
+          "name": "Jeremy Dyson",
+          "resource_url": "https://api.discogs.com/artists/2051356"
+        }
+      ],
+      "name": "The League Of Gentlemen (3)",
+      "profile": "British quartet of dark comedy writer–performers, formed in 1995.",
+      "releases_url": "https://api.discogs.com/artists/545719/releases",
       "resource_url": "https://api.discogs.com/artists/545719",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/545719",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/545719-The-League-Of-Gentlemen-3",
+      "urls": [
+        "http://www.leagueofgentlemen.co.uk/",
+        "http://en.wikipedia.org/wiki/The_League_of_Gentlemen"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The League of Gentlemen', url='https://www.last.fm/music/The+League+of+Gentlemen', mbid='e2cd9278-7bd1-4fbf-b507-e8c68c5fb21a', listeners=3366, playcount=61665, bio_summary='There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>', bio_content='There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. Other members included bass guitarist Sara Lee (who later joined Gang Of Four), keyboardist Barry Andrews (formerly of XTC; later of Shriekback) and drummer Johnny Toobad. Toobad was replaced with a substitute drummer, Kevin Wilkinson, for the bulk of the band\\'s only studio album, released by EG/Polydor in 1981. \\n\\nIn 1996, Fripp\\'s independent label Discipline Global Mobile released an \"official bootleg\" live album of the League Of Gentlemen, Thrang Thrang Gozinbulx. The album features several tracks that were never recorded in the studio by the band. Many of the band\\'s full concerts are available as digital downloads through DGMLive.com or as part of the \"Exposures\" box set. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'post-punk', 'comedy', 'Progressive', 'rock'], similar_artists=[{'name': 'Ten Seconds', 'url': 'https://www.last.fm/music/Ten+Seconds'}, {'name': 'Robert Fripp & the League of Crafty Guitarists', 'url': 'https://www.last.fm/music/Robert+Fripp+&+the+League+of+Crafty+Guitarists'}, {'name': 'ProjeKct Two', 'url': 'https://www.last.fm/music/ProjeKct+Two'}, {'name': 'ProjeKct Three', 'url': 'https://www.last.fm/music/ProjeKct+Three'}, {'name': 'ProjeKct Four', 'url': 'https://www.last.fm/music/ProjeKct+Four'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The League of Gentlemen', 'mbid': 'e2cd9278-7bd1-4fbf-b507-e8c68c5fb21a', 'url': 'https://www.last.fm/music/The+League+of+Gentlemen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3366', 'playcount': '61665'}, 'similar': {'artist': [{'name': 'Ten Seconds', 'url': 'https://www.last.fm/music/Ten+Seconds', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Robert Fripp & the League of Crafty Guitarists', 'url': 'https://www.last.fm/music/Robert+Fripp+&+the+League+of+Crafty+Guitarists', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Two', 'url': 'https://www.last.fm/music/ProjeKct+Two', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Three', 'url': 'https://www.last.fm/music/ProjeKct+Three', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'ProjeKct Four', 'url': 'https://www.last.fm/music/ProjeKct+Four', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'comedy', 'url': 'https://www.last.fm/tag/comedy'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+League+of+Gentlemen/+wiki'}}, 'published': '20 Mar 2007, 11:37', 'summary': 'There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>', 'content': 'There are two artistic groups called the League of Gentlemen.\\n\\n1. A band active during March-December 1980 that featured guitarist Robert Fripp of King Crimson fame.\\n\\n2. A quartet of British comedy writer/performers, formed in 1995 by Jeremy Dyson, Mark Gatiss, Steve Pemberton and Reece Shearsmith. They are most famous for their Radio, Stage and TV show titled \"The League of Gentlemen\". \\n\\nBand Bio:\\n\\nThe League Of Gentlemen was a late-1970s band featuring guitarist Robert Fripp of King Crimson. Other members included bass guitarist Sara Lee (who later joined Gang Of Four), keyboardist Barry Andrews (formerly of XTC; later of Shriekback) and drummer Johnny Toobad. Toobad was replaced with a substitute drummer, Kevin Wilkinson, for the bulk of the band\\'s only studio album, released by EG/Polydor in 1981. \\n\\nIn 1996, Fripp\\'s independent label Discipline Global Mobile released an \"official bootleg\" live album of the League Of Gentlemen, Thrang Thrang Gozinbulx. The album features several tracks that were never recorded in the studio by the band. Many of the band\\'s full concerts are available as digital downloads through DGMLive.com or as part of the \"Exposures\" box set. <a href=\"https://www.last.fm/music/The+League+of+Gentlemen\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1K1BdAgBv0p7n13NjaQUoK', url='https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK', name='The League of Gentlemen', popularity=6, followers=1397, genres=['comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK'}, 'followers': {'href': None, 'total': 1397}, 'genres': ['comedy'], 'href': 'https://api.spotify.com/v1/artists/1K1BdAgBv0p7n13NjaQUoK', 'id': '1K1BdAgBv0p7n13NjaQUoK', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebdc6c87167789415af62c99fa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174dc6c87167789415af62c99fa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178dc6c87167789415af62c99fa', 'height': 160, 'width': 160}], 'name': 'The League of Gentlemen', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:1K1BdAgBv0p7n13NjaQUoK'})"
   },
   "spotify_id": "1K1BdAgBv0p7n13NjaQUoK",
   "spotify_url": "https://open.spotify.com/artist/1K1BdAgBv0p7n13NjaQUoK",
-  "updated_at": "2026-10-22T14:12:29.701772",
+  "updated_at": "2026-10-30T18:46:37.671117",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_League_of_Gentlemen"
 }

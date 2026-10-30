@@ -135,22 +135,514 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='298172653', url='https://music.apple.com/gb/artist/fever-ray/298172653', name='Fever Ray', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/00/9a/0f/009a0f27-2874-a125-2b3e-fed156ebf13a/ami-identity-e344b2d18526f051867a656e86d65196-2025-06-10T15-37-04.880Z_cropped.png/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '298172653', 'type': 'artists', 'href': '/v1/catalog/gb/artists/298172653', 'attributes': {'name': 'Fever Ray', 'genreNames': ['Electronic'], 'artwork': {'width': 894, 'height': 894, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/00/9a/0f/009a0f27-2874-a125-2b3e-fed156ebf13a/ami-identity-e344b2d18526f051867a656e86d65196-2025-06-10T15-37-04.880Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '1d200f', 'textColor1': 'f89e97', 'textColor2': 'f9515c', 'textColor3': 'cc857c', 'textColor4': 'cd474d'}, 'url': 'https://music.apple.com/gb/artist/fever-ray/298172653'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/298172653/albums', 'next': '/v1/catalog/gb/artists/298172653/albums?offset=25', 'data': [{'id': '923360560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/923360560'}, {'id': '671901496', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671901496'}, {'id': '1651484377', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1651484377'}, {'id': '1298376912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1298376912'}, {'id': '671890813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671890813'}, {'id': '671795798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671795798'}, {'id': '1646434549', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1646434549'}, {'id': '1811337616', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811337616'}, {'id': '1815488197', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815488197'}, {'id': '1473832471', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1473832471'}, {'id': '1296069591', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1296069591'}, {'id': '1478286215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478286215'}, {'id': '1816088264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816088264'}, {'id': '1472207845', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1472207845'}, {'id': '1786622917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786622917'}, {'id': '672048648', 'type': 'albums', 'href': '/v1/catalog/gb/albums/672048648'}, {'id': '1477751790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1477751790'}, {'id': '1738243637', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738243637'}, {'id': '1395649539', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1395649539'}, {'id': '1404412247', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1404412247'}, {'id': '672050633', 'type': 'albums', 'href': '/v1/catalog/gb/albums/672050633'}, {'id': '1799217212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1799217212'}, {'id': '1476183426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1476183426'}, {'id': '927872813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/927872813'}, {'id': '1693683377', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1693683377'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1307274",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 325359,
+          "name": "Karin Dreijer",
+          "resource_url": "https://api.discogs.com/artists/325359"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 1307274,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/gzgbxoFM67a-5Xz0GLChhgeWk9__5f3m2egcHjavMS0/rs:fit/g:sm/q:90/h:600/w:518/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gzgbxoFM67a-5Xz0GLChhgeWk9__5f3m2egcHjavMS0/rs:fit/g:sm/q:90/h:600/w:518/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GPiQLGm6ZVIhH0kGMnESrM5pmx6uTozgpXAEi3qz4b8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "width": 518
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/s4qSDMwUCgXNqdAREFTdop8yiIOC60yQiH7Ha8qCtBc/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s4qSDMwUCgXNqdAREFTdop8yiIOC60yQiH7Ha8qCtBc/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XRz4x0qZzsvxrSbvp4Yf5l-xRTS4CytgxUPFllaHRJ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/WHmCVVBk2yJkMOje0Yr3UWY0gRekwXN6yhh6uai1ZCU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WHmCVVBk2yJkMOje0Yr3UWY0gRekwXN6yhh6uai1ZCU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gfoHLBorfyw9WCo1iKDsTZb0DJAWZvdRYxUk0BQjcGw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/HcFDioXoA1iAe6hQ1oHRd8nsrK2oMMVBTXexf5lenhI/rs:fit/g:sm/q:90/h:522/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HcFDioXoA1iAe6hQ1oHRd8nsrK2oMMVBTXexf5lenhI/rs:fit/g:sm/q:90/h:522/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/FILtRX5MNHLDsZmD9tTcubITz2yRRW8H7GQt4MnetnI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "width": 542
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/K12a8yhS6ucMI7XROIRCj-NZdUm3jouKTcLYc8ImaP8/rs:fit/g:sm/q:90/h:600/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/K12a8yhS6ucMI7XROIRCj-NZdUm3jouKTcLYc8ImaP8/rs:fit/g:sm/q:90/h:600/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/KFVP99_xFMthtgP74ACwgLVUqr7OxAcK8y3HCGS9zkY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "width": 430
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/J2WMlNSrK0aPa6HfytUQkqecQD89Kp6rUGD6WOtrsVU/rs:fit/g:sm/q:90/h:419/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J2WMlNSrK0aPa6HfytUQkqecQD89Kp6rUGD6WOtrsVU/rs:fit/g:sm/q:90/h:419/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jj3NOVPDz_sm83URNL7L6Jt0LlvSBqhct_78qtKuuGM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 393,
+          "resource_url": "https://i.discogs.com/ZGVSeHXPWAddjJhycTWmv0fFj7e18Fdn5j-F8nHtdzA/rs:fit/g:sm/q:90/h:393/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZGVSeHXPWAddjJhycTWmv0fFj7e18Fdn5j-F8nHtdzA/rs:fit/g:sm/q:90/h:393/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/v9mANkzlZh2fGClVxEw7SoeEPRog0rBgfua7dyaxTZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "width": 320
+        },
+        {
+          "height": 540,
+          "resource_url": "https://i.discogs.com/jDFnSmjjaeTXGMVHvqs2uQZxDoYMRlSLiisz1t_FJa8/rs:fit/g:sm/q:90/h:540/w:479/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jDFnSmjjaeTXGMVHvqs2uQZxDoYMRlSLiisz1t_FJa8/rs:fit/g:sm/q:90/h:540/w:479/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/M1YUQysQytl3eXVKIaAB28FA1KVmQr_i8G0nfpEgBs0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "width": 479
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/unsb3NsfQ2ic6BpsSoyrxWtu7a2cu5drtj0Yz0We67M/rs:fit/g:sm/q:90/h:390/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/unsb3NsfQ2ic6BpsSoyrxWtu7a2cu5drtj0Yz0We67M/rs:fit/g:sm/q:90/h:390/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/KE5FmfZoVMKt-Hh8hlz7QUg7QGupr65Aq7Pu8AaI8iQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "width": 326
+        },
+        {
+          "height": 558,
+          "resource_url": "https://i.discogs.com/aGPa1x4cfyS1_GgiirJIu-vyU7DOn56vStOB4VsBDGE/rs:fit/g:sm/q:90/h:558/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aGPa1x4cfyS1_GgiirJIu-vyU7DOn56vStOB4VsBDGE/rs:fit/g:sm/q:90/h:558/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Tq4uSDkg2CQd9xc3eyCgSMdWXgxgVNHW8avugFg1IIg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/3jFHkYmTP33dNTegbK6iaP6rLJHdHVGvqOMybYurKR8/rs:fit/g:sm/q:90/h:399/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3jFHkYmTP33dNTegbK6iaP6rLJHdHVGvqOMybYurKR8/rs:fit/g:sm/q:90/h:399/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wPysBjGkcTLJ0UtLajbRJSma2d-iUi-zeP2hei6_PzI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/B6niOp1qI2bAE_Hmnw6jE8aCjidbqL0YaZcFJUEJAwE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/B6niOp1qI2bAE_Hmnw6jE8aCjidbqL0YaZcFJUEJAwE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1icn2fUwMEXE-xbsmvZkcOOHJoDoefg_t7j6Ci5wtUI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/Xr-dBuCPfPxDz0-HR0X21tSYblKK0LeBVtARWyDyDbQ/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Xr-dBuCPfPxDz0-HR0X21tSYblKK0LeBVtARWyDyDbQ/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tbxX9eK8rpy-ZpHwz03hEdSXngiyVmordyplZivQZQM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/kEs1GWvf0LISY40WXnwBxi1hQ8Y-tW0LS4bbxQD64nI/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kEs1GWvf0LISY40WXnwBxi1hQ8Y-tW0LS4bbxQD64nI/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cvmLM5QI25s_7p7-ptUWFYDbL8rR26CD5NC-HTiNmDE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3XJqfDSv92mMs62csSebPO9XSOTMJ9iAs-9jjg5y6eE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3XJqfDSv92mMs62csSebPO9XSOTMJ9iAs-9jjg5y6eE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BZnLvBYmXwgAtGpWz_HGacg7Bqdn7wc85Jj-nHZCGWI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Fever Ray",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1307274",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1307274"
-      },
+      "profile": "The solo project of Karin Dreijer formerly from [a=The Knife]. ",
+      "realname": "Karin Elisabeth Dreijer Andersson",
+      "releases_url": "https://api.discogs.com/artists/1307274/releases",
       "resource_url": "https://api.discogs.com/artists/1307274",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1307274",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1307274-Fever-Ray",
+      "urls": [
+        "http://feverray.com/",
+        "http://www.facebook.com/FeverRay",
+        "http://twitter.com/feverray",
+        "https://feverray.bandcamp.com/",
+        "http://feverray.sandbag.uk.com/",
+        "http://www.windishagency.com/artists/fever_ray",
+        "http://primarytalent.com/fever-ray/",
+        "http://en.wikipedia.org/wiki/Fever_Ray",
+        "http://soundcloud.com/fever-ray",
+        "http://www.youtube.com/user/FeverRayMusic",
+        "http://vimeo.com/feverrayvimeo",
+        "http://www.dailymotion.com/FeverRay-vevo",
+        "https://www.instagram.com/feverray"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": "f7df5df4-4dfa-459d-972b-1ba051c15ddc",
+      "resolved_at": "2026-10-22T14:06:52.746241",
+      "wikidata_id": "Q55662676",
+      "wikipedia_title": null
+    },
+    "lastfm": "ArtistLastFmData(name='Fever Ray', url='https://www.last.fm/music/Fever+Ray', mbid='f7df5df4-4dfa-459d-972b-1ba051c15ddc', listeners=1044703, playcount=31640026, bio_summary='Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>', bio_content='Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. In 1994, they formed the indie rock band Honey Is Cool, where they served as the lead vocalist and guitarist. Together with their brother Olof Dreijer, they formed an electronic music duo The Knife in 1999, and have spanned a series of successful and critically acclaimed albums.\\n\\nWhat would you do if one decade into your career you suddenly saw one of your songs turned into a worldwide hit, won six Grammis in your native Sweden and your latest release was declared album of the year by one of the world’s most influential music websites? If you’re Karin Dreijer, the answer is to take a couple of years off and return as a solo artist under a new name: Fever Ray.\\n\\nIn Dreijer\\'s\\'s own words:  “I had so many songs to record that I just had to make an album. I thought I was going to have a longer break but I guess it will never happen. I can\\'t stop working.  My aim was to finish the album and, now that it\\'s done, I\\'m a bit restless (good that The Knife has an opera to write then).  During the last years, I discovered that I like to sing too, so I hope that my newly found live band Fever Ray will make it to the stages next year. We are rehearsing and building something beautiful and brilliant.\" <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'ambient', 'swedish', 'female vocalists', 'experimental'], similar_artists=[{'name': 'The Knife', 'url': 'https://www.last.fm/music/The+Knife'}, {'name': 'Austra', 'url': 'https://www.last.fm/music/Austra'}, {'name': 'Zola Jesus', 'url': 'https://www.last.fm/music/Zola+Jesus'}, {'name': 'iamamiwhoami', 'url': 'https://www.last.fm/music/iamamiwhoami'}, {'name': 'Róisín Murphy', 'url': 'https://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Fever Ray', 'mbid': 'f7df5df4-4dfa-459d-972b-1ba051c15ddc', 'url': 'https://www.last.fm/music/Fever+Ray', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1044703', 'playcount': '31640026'}, 'similar': {'artist': [{'name': 'The Knife', 'url': 'https://www.last.fm/music/The+Knife', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Austra', 'url': 'https://www.last.fm/music/Austra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Zola Jesus', 'url': 'https://www.last.fm/music/Zola+Jesus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'iamamiwhoami', 'url': 'https://www.last.fm/music/iamamiwhoami', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Róisín Murphy', 'url': 'https://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'swedish', 'url': 'https://www.last.fm/tag/swedish'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Fever+Ray/+wiki'}}, 'published': '09 Dec 2008, 11:45', 'summary': 'Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>', 'content': 'Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. In 1994, they formed the indie rock band Honey Is Cool, where they served as the lead vocalist and guitarist. Together with their brother Olof Dreijer, they formed an electronic music duo The Knife in 1999, and have spanned a series of successful and critically acclaimed albums.\\n\\nWhat would you do if one decade into your career you suddenly saw one of your songs turned into a worldwide hit, won six Grammis in your native Sweden and your latest release was declared album of the year by one of the world’s most influential music websites? If you’re Karin Dreijer, the answer is to take a couple of years off and return as a solo artist under a new name: Fever Ray.\\n\\nIn Dreijer\\'s\\'s own words:  “I had so many songs to record that I just had to make an album. I thought I was going to have a longer break but I guess it will never happen. I can\\'t stop working.  My aim was to finish the album and, now that it\\'s done, I\\'m a bit restless (good that The Knife has an opera to write then).  During the last years, I discovered that I like to sing too, so I hope that my newly found live band Fever Ray will make it to the stages next year. We are rehearsing and building something beautiful and brilliant.\" <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='5hE6NCoobhyEu6TRSbjOJY', url='https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY', name='Fever Ray', popularity=53, followers=486071, genres=['art pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb9049f4ac7a92e23ccb2fdf4a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749049f4ac7a92e23ccb2fdf4a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789049f4ac7a92e23ccb2fdf4a', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY'}, 'followers': {'href': None, 'total': 486071}, 'genres': ['art pop'], 'href': 'https://api.spotify.com/v1/artists/5hE6NCoobhyEu6TRSbjOJY', 'id': '5hE6NCoobhyEu6TRSbjOJY', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb9049f4ac7a92e23ccb2fdf4a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749049f4ac7a92e23ccb2fdf4a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789049f4ac7a92e23ccb2fdf4a', 'height': 160, 'width': 160}], 'name': 'Fever Ray', 'popularity': 53, 'type': 'artist', 'uri': 'spotify:artist:5hE6NCoobhyEu6TRSbjOJY'})",
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "",
+      "biography_de": null,
+      "biography_en": "Karin Elisabeth Dreijer Andersson (born 7 April 1975 in Nacka, Sweden), also known by her stage name Fever Ray, is the lead vocalist of the electronic duo The Knife, formed with her brother Olof Dreijer. Andersson was previously the vocalist and guitarist of the alternative rock band Honey Is Cool. Andersson released her debut solo album under the name Fever Ray in 2009. Her vocal style is notable for both shrill and deep tones, and also the use of multitracked vocals, with different uses of pitch-shifting technology on each track, creating an intricate, mysterious effect. Many listeners mistake the deep vocals on songs by The Knife for those of her brother. Visually, Dreijer Andersson employs the use of masks, face and body paint, intricate costumes, and other theatrical elements in photo shoots, videos and live performances, during which she often performs behind a gauze screen that partially obscures her from view.",
+      "biography_es": null,
+      "biography_fr": "Karin Elisabeth Dreijer (précédemment connue comme Karin Dreijer Andersson), née le 7 avril 1975 à Nacka, est une auteure-compositrice-interprète suédoise.\nElle est principalement connue en tant que chanteuse du duo de musique électronique The Knife, formé avec son frère Olof Dreijer (en).\n\nSous le pseudonyme de Fever Ray, elle sort également en 2009 un album solo homonyme. Son style vocal est à la fois perçant et grave, caractérisé par son accent et l'utilisation de correcteur de pitch. Sur scène, elle est connue pour porter des masques et son utilisation de rayons laser.",
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "1975",
+      "country": "Gothenburg, Sweden",
+      "country_code": "SE",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": "",
+      "formed_year": "1994",
+      "gender": "Female",
+      "genre": "Trip Hop",
+      "id": "111772",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/wpvsvr1366660961.jpg",
+          "width": 1000
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/vywxwu1391437149.jpg",
+          "width": 1920
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/txrvrv1391437277.jpg",
+          "width": 1920
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/aqqabk1639171681.jpg",
+          "width": 1920
+        },
+        {
+          "height": 185,
+          "resource_url": null,
+          "type": "banner",
+          "url": "https://www.theaudiodb.com/images/media/artist/banner/fever-ray-503bad84ad58a.jpg",
+          "width": 1000
+        },
+        {
+          "height": 155,
+          "resource_url": null,
+          "type": "logo",
+          "url": "https://www.theaudiodb.com/images/media/artist/logo/vuqyru1366660954.png",
+          "width": 400
+        },
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "clearart",
+          "url": "https://www.theaudiodb.com/images/media/artist/clearart/bsrq0d1639172494.png",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": "http://www.last.fm/music/Fever Ray/+charts?rangetype=6month",
+      "members": "1",
+      "mood": "",
+      "music_videos": null,
+      "musicbrainz_id": "f7df5df4-4dfa-459d-972b-1ba051c15ddc",
+      "name": "Fever Ray",
+      "raw_data": {},
+      "style": "Electronic",
+      "twitter": "1",
+      "website": ""
+    },
+    "theaudiodb_videos": [
+      {
+        "album": "Plunge",
+        "id": "34879080",
+        "track": "Mustn't Hurry",
+        "uri": "https://www.youtube.com/watch?v=0dGVCqQRnyE"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777830",
+        "track": "When I Grow Up",
+        "uri": "https://www.youtube.com/watch?v=4F-CpE73o2M"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777831",
+        "track": "Dry and Dusty",
+        "uri": "https://www.youtube.com/watch?v=8aQcoXK2egw"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777832",
+        "track": "Seven",
+        "uri": "https://www.youtube.com/watch?v=aX07gCjT7dA"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777829",
+        "track": "If I Had a Heart",
+        "uri": "https://www.youtube.com/watch?v=EBAzlNJonO8"
+      },
+      {
+        "album": "Plunge",
+        "id": "34879086",
+        "track": "To the Moon and Back",
+        "uri": "https://www.youtube.com/watch?v=fJjGZkPl9Tw"
+      },
+      {
+        "album": "Stranger Than Kindness / Here Before",
+        "id": "34879093",
+        "track": "Here Before",
+        "uri": "https://www.youtube.com/watch?v=GoGjFmUmvHM"
+      },
+      {
+        "album": "Plunge",
+        "id": "34879081",
+        "track": "A Part of Us",
+        "uri": "https://www.youtube.com/watch?v=GWAoCsfNdGE"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777837",
+        "track": "Keep the Streets Empty for Me",
+        "uri": "https://www.youtube.com/watch?v=jWFb5z3kUSQ"
+      },
+      {
+        "album": "Fever Ray",
+        "id": "32777833",
+        "track": "Triangle Walks",
+        "uri": "https://www.youtube.com/watch?v=oNs_69HkyDE"
+      },
+      {
+        "album": "Radical Romantics",
+        "id": "36067212",
+        "track": "North",
+        "uri": "https://www.youtube.com/watch?v=uIRjtexI3f8"
+      },
+      {
+        "album": "Stranger Than Kindness / Here Before",
+        "id": "34879092",
+        "track": "Stranger Than Kindness",
+        "uri": "https://www.youtube.com/watch?v=X_50c8QZZyQ"
+      }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q7840093",
+        "track": "Triangle Walks",
+        "uri": "https://www.youtube.com/watch?v=oNs_69HkyDE"
+      },
+      {
+        "album": null,
+        "id": "Q16967323",
+        "track": "When I Grow Up",
+        "uri": "https://www.youtube.com/watch?v=4F-CpE73o2M"
+      },
+      {
+        "album": null,
+        "id": "Q48792196",
+        "track": "To the Moon and Back",
+        "uri": "https://www.youtube.com/watch?v=fJjGZkPl9Tw"
+      },
+      {
+        "album": null,
+        "id": "Q55517250",
+        "track": "IDK About You",
+        "uri": "https://www.youtube.com/watch?v=zOYhiWjrZeA"
+      },
+      {
+        "album": null,
+        "id": "Q7457156",
+        "track": "Seven",
+        "uri": "https://www.youtube.com/watch?v=aX07gCjT7dA"
+      }
+    ]
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='298172653', url='https://music.apple.com/gb/artist/fever-ray/298172653', name='Fever Ray', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/00/9a/0f/009a0f27-2874-a125-2b3e-fed156ebf13a/ami-identity-e344b2d18526f051867a656e86d65196-2025-06-10T15-37-04.880Z_cropped.png/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '298172653', 'type': 'artists', 'href': '/v1/catalog/gb/artists/298172653', 'attributes': {'name': 'Fever Ray', 'genreNames': ['Electronic'], 'artwork': {'width': 894, 'height': 894, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/00/9a/0f/009a0f27-2874-a125-2b3e-fed156ebf13a/ami-identity-e344b2d18526f051867a656e86d65196-2025-06-10T15-37-04.880Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '1d200f', 'textColor1': 'f89e97', 'textColor2': 'f9515c', 'textColor3': 'cc857c', 'textColor4': 'cd474d'}, 'url': 'https://music.apple.com/gb/artist/fever-ray/298172653'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/298172653/albums', 'next': '/v1/catalog/gb/artists/298172653/albums?offset=25', 'data': [{'id': '923360560', 'type': 'albums', 'href': '/v1/catalog/gb/albums/923360560'}, {'id': '671901496', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671901496'}, {'id': '1651484377', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1651484377'}, {'id': '1298376912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1298376912'}, {'id': '671890813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671890813'}, {'id': '671795798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/671795798'}, {'id': '1646434549', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1646434549'}, {'id': '1811337616', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811337616'}, {'id': '1815488197', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815488197'}, {'id': '1473832471', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1473832471'}, {'id': '1296069591', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1296069591'}, {'id': '1478286215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478286215'}, {'id': '1816088264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816088264'}, {'id': '1472207845', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1472207845'}, {'id': '1786622917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786622917'}, {'id': '672048648', 'type': 'albums', 'href': '/v1/catalog/gb/albums/672048648'}, {'id': '1477751790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1477751790'}, {'id': '1738243637', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738243637'}, {'id': '1395649539', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1395649539'}, {'id': '1404412247', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1404412247'}, {'id': '672050633', 'type': 'albums', 'href': '/v1/catalog/gb/albums/672050633'}, {'id': '1799217212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1799217212'}, {'id': '1476183426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1476183426'}, {'id': '927872813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/927872813'}, {'id': '1693683377', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1693683377'}]}}})",
+    "discogs": {
+      "aliases": [
+        {
+          "id": 325359,
+          "name": "Karin Dreijer",
+          "resource_url": "https://api.discogs.com/artists/325359"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 1307274,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/gzgbxoFM67a-5Xz0GLChhgeWk9__5f3m2egcHjavMS0/rs:fit/g:sm/q:90/h:600/w:518/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gzgbxoFM67a-5Xz0GLChhgeWk9__5f3m2egcHjavMS0/rs:fit/g:sm/q:90/h:600/w:518/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GPiQLGm6ZVIhH0kGMnESrM5pmx6uTozgpXAEi3qz4b8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUzOTY5Nzk4/Mi01MDA1LmpwZWc.jpeg",
+          "width": 518
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/s4qSDMwUCgXNqdAREFTdop8yiIOC60yQiH7Ha8qCtBc/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s4qSDMwUCgXNqdAREFTdop8yiIOC60yQiH7Ha8qCtBc/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XRz4x0qZzsvxrSbvp4Yf5l-xRTS4CytgxUPFllaHRJ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyNTk2NjE2/MC01MDg1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/WHmCVVBk2yJkMOje0Yr3UWY0gRekwXN6yhh6uai1ZCU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WHmCVVBk2yJkMOje0Yr3UWY0gRekwXN6yhh6uai1ZCU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gfoHLBorfyw9WCo1iKDsTZb0DJAWZvdRYxUk0BQjcGw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYx/Ny5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 522,
+          "resource_url": "https://i.discogs.com/HcFDioXoA1iAe6hQ1oHRd8nsrK2oMMVBTXexf5lenhI/rs:fit/g:sm/q:90/h:522/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HcFDioXoA1iAe6hQ1oHRd8nsrK2oMMVBTXexf5lenhI/rs:fit/g:sm/q:90/h:522/w:542/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/FILtRX5MNHLDsZmD9tTcubITz2yRRW8H7GQt4MnetnI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTQzMjY1NTE3/OC0yODQ4LmpwZWc.jpeg",
+          "width": 542
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/K12a8yhS6ucMI7XROIRCj-NZdUm3jouKTcLYc8ImaP8/rs:fit/g:sm/q:90/h:600/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/K12a8yhS6ucMI7XROIRCj-NZdUm3jouKTcLYc8ImaP8/rs:fit/g:sm/q:90/h:600/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/KFVP99_xFMthtgP74ACwgLVUqr7OxAcK8y3HCGS9zkY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzQxMTY5/Ny5qcGVn.jpeg",
+          "width": 430
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/J2WMlNSrK0aPa6HfytUQkqecQD89Kp6rUGD6WOtrsVU/rs:fit/g:sm/q:90/h:419/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J2WMlNSrK0aPa6HfytUQkqecQD89Kp6rUGD6WOtrsVU/rs:fit/g:sm/q:90/h:419/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jj3NOVPDz_sm83URNL7L6Jt0LlvSBqhct_78qtKuuGM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzMzM5Mzkw/Ny5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 393,
+          "resource_url": "https://i.discogs.com/ZGVSeHXPWAddjJhycTWmv0fFj7e18Fdn5j-F8nHtdzA/rs:fit/g:sm/q:90/h:393/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZGVSeHXPWAddjJhycTWmv0fFj7e18Fdn5j-F8nHtdzA/rs:fit/g:sm/q:90/h:393/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/v9mANkzlZh2fGClVxEw7SoeEPRog0rBgfua7dyaxTZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTIzNjI3NDQ5/NC5qcGVn.jpeg",
+          "width": 320
+        },
+        {
+          "height": 540,
+          "resource_url": "https://i.discogs.com/jDFnSmjjaeTXGMVHvqs2uQZxDoYMRlSLiisz1t_FJa8/rs:fit/g:sm/q:90/h:540/w:479/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jDFnSmjjaeTXGMVHvqs2uQZxDoYMRlSLiisz1t_FJa8/rs:fit/g:sm/q:90/h:540/w:479/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/M1YUQysQytl3eXVKIaAB28FA1KVmQr_i8G0nfpEgBs0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjYw/Ny5qcGVn.jpeg",
+          "width": 479
+        },
+        {
+          "height": 390,
+          "resource_url": "https://i.discogs.com/unsb3NsfQ2ic6BpsSoyrxWtu7a2cu5drtj0Yz0We67M/rs:fit/g:sm/q:90/h:390/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/unsb3NsfQ2ic6BpsSoyrxWtu7a2cu5drtj0Yz0We67M/rs:fit/g:sm/q:90/h:390/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/KE5FmfZoVMKt-Hh8hlz7QUg7QGupr65Aq7Pu8AaI8iQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3Mjcw/NC5wbmc.jpeg",
+          "width": 326
+        },
+        {
+          "height": 558,
+          "resource_url": "https://i.discogs.com/aGPa1x4cfyS1_GgiirJIu-vyU7DOn56vStOB4VsBDGE/rs:fit/g:sm/q:90/h:558/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aGPa1x4cfyS1_GgiirJIu-vyU7DOn56vStOB4VsBDGE/rs:fit/g:sm/q:90/h:558/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Tq4uSDkg2CQd9xc3eyCgSMdWXgxgVNHW8avugFg1IIg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjUz/My5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/3jFHkYmTP33dNTegbK6iaP6rLJHdHVGvqOMybYurKR8/rs:fit/g:sm/q:90/h:399/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3jFHkYmTP33dNTegbK6iaP6rLJHdHVGvqOMybYurKR8/rs:fit/g:sm/q:90/h:399/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wPysBjGkcTLJ0UtLajbRJSma2d-iUi-zeP2hei6_PzI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI2ODAwNjU0/Ni5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/B6niOp1qI2bAE_Hmnw6jE8aCjidbqL0YaZcFJUEJAwE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/B6niOp1qI2bAE_Hmnw6jE8aCjidbqL0YaZcFJUEJAwE/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1icn2fUwMEXE-xbsmvZkcOOHJoDoefg_t7j6Ci5wtUI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY4/NC5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/Xr-dBuCPfPxDz0-HR0X21tSYblKK0LeBVtARWyDyDbQ/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Xr-dBuCPfPxDz0-HR0X21tSYblKK0LeBVtARWyDyDbQ/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tbxX9eK8rpy-ZpHwz03hEdSXngiyVmordyplZivQZQM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTI5NjY3MjY5/NC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/kEs1GWvf0LISY40WXnwBxi1hQ8Y-tW0LS4bbxQD64nI/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kEs1GWvf0LISY40WXnwBxi1hQ8Y-tW0LS4bbxQD64nI/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cvmLM5QI25s_7p7-ptUWFYDbL8rR26CD5NC-HTiNmDE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTUyMDI4OTI4/OS01MzM4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3XJqfDSv92mMs62csSebPO9XSOTMJ9iAs-9jjg5y6eE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3XJqfDSv92mMs62csSebPO9XSOTMJ9iAs-9jjg5y6eE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BZnLvBYmXwgAtGpWz_HGacg7Bqdn7wc85Jj-nHZCGWI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDcy/NzQtMTY3ODk0OTIw/My01MjU2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "name": "Fever Ray",
+      "profile": "The solo project of Karin Dreijer formerly from [a=The Knife]. ",
+      "realname": "Karin Elisabeth Dreijer Andersson",
+      "releases_url": "https://api.discogs.com/artists/1307274/releases",
+      "resource_url": "https://api.discogs.com/artists/1307274",
+      "uri": "https://www.discogs.com/artist/1307274-Fever-Ray",
+      "urls": [
+        "http://feverray.com/",
+        "http://www.facebook.com/FeverRay",
+        "http://twitter.com/feverray",
+        "https://feverray.bandcamp.com/",
+        "http://feverray.sandbag.uk.com/",
+        "http://www.windishagency.com/artists/fever_ray",
+        "http://primarytalent.com/fever-ray/",
+        "http://en.wikipedia.org/wiki/Fever_Ray",
+        "http://soundcloud.com/fever-ray",
+        "http://www.youtube.com/user/FeverRayMusic",
+        "http://vimeo.com/feverrayvimeo",
+        "http://www.dailymotion.com/FeverRay-vevo",
+        "https://www.instagram.com/feverray"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Fever Ray', url='https://www.last.fm/music/Fever+Ray', mbid='f7df5df4-4dfa-459d-972b-1ba051c15ddc', listeners=1044703, playcount=31640026, bio_summary='Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>', bio_content='Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. In 1994, they formed the indie rock band Honey Is Cool, where they served as the lead vocalist and guitarist. Together with their brother Olof Dreijer, they formed an electronic music duo The Knife in 1999, and have spanned a series of successful and critically acclaimed albums.\\n\\nWhat would you do if one decade into your career you suddenly saw one of your songs turned into a worldwide hit, won six Grammis in your native Sweden and your latest release was declared album of the year by one of the world’s most influential music websites? If you’re Karin Dreijer, the answer is to take a couple of years off and return as a solo artist under a new name: Fever Ray.\\n\\nIn Dreijer\\'s\\'s own words:  “I had so many songs to record that I just had to make an album. I thought I was going to have a longer break but I guess it will never happen. I can\\'t stop working.  My aim was to finish the album and, now that it\\'s done, I\\'m a bit restless (good that The Knife has an opera to write then).  During the last years, I discovered that I like to sing too, so I hope that my newly found live band Fever Ray will make it to the stages next year. We are rehearsing and building something beautiful and brilliant.\" <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'ambient', 'swedish', 'female vocalists', 'experimental'], similar_artists=[{'name': 'The Knife', 'url': 'https://www.last.fm/music/The+Knife'}, {'name': 'Austra', 'url': 'https://www.last.fm/music/Austra'}, {'name': 'Zola Jesus', 'url': 'https://www.last.fm/music/Zola+Jesus'}, {'name': 'iamamiwhoami', 'url': 'https://www.last.fm/music/iamamiwhoami'}, {'name': 'Róisín Murphy', 'url': 'https://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Fever Ray', 'mbid': 'f7df5df4-4dfa-459d-972b-1ba051c15ddc', 'url': 'https://www.last.fm/music/Fever+Ray', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1044703', 'playcount': '31640026'}, 'similar': {'artist': [{'name': 'The Knife', 'url': 'https://www.last.fm/music/The+Knife', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Austra', 'url': 'https://www.last.fm/music/Austra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Zola Jesus', 'url': 'https://www.last.fm/music/Zola+Jesus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'iamamiwhoami', 'url': 'https://www.last.fm/music/iamamiwhoami', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Róisín Murphy', 'url': 'https://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'swedish', 'url': 'https://www.last.fm/tag/swedish'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Fever+Ray/+wiki'}}, 'published': '09 Dec 2008, 11:45', 'summary': 'Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>', 'content': 'Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\\n\\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. In 1994, they formed the indie rock band Honey Is Cool, where they served as the lead vocalist and guitarist. Together with their brother Olof Dreijer, they formed an electronic music duo The Knife in 1999, and have spanned a series of successful and critically acclaimed albums.\\n\\nWhat would you do if one decade into your career you suddenly saw one of your songs turned into a worldwide hit, won six Grammis in your native Sweden and your latest release was declared album of the year by one of the world’s most influential music websites? If you’re Karin Dreijer, the answer is to take a couple of years off and return as a solo artist under a new name: Fever Ray.\\n\\nIn Dreijer\\'s\\'s own words:  “I had so many songs to record that I just had to make an album. I thought I was going to have a longer break but I guess it will never happen. I can\\'t stop working.  My aim was to finish the album and, now that it\\'s done, I\\'m a bit restless (good that The Knife has an opera to write then).  During the last years, I discovered that I like to sing too, so I hope that my newly found live band Fever Ray will make it to the stages next year. We are rehearsing and building something beautiful and brilliant.\" <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5hE6NCoobhyEu6TRSbjOJY', url='https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY', name='Fever Ray', popularity=53, followers=486071, genres=['art pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb9049f4ac7a92e23ccb2fdf4a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749049f4ac7a92e23ccb2fdf4a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789049f4ac7a92e23ccb2fdf4a', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY'}, 'followers': {'href': None, 'total': 486071}, 'genres': ['art pop'], 'href': 'https://api.spotify.com/v1/artists/5hE6NCoobhyEu6TRSbjOJY', 'id': '5hE6NCoobhyEu6TRSbjOJY', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb9049f4ac7a92e23ccb2fdf4a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749049f4ac7a92e23ccb2fdf4a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789049f4ac7a92e23ccb2fdf4a', 'height': 160, 'width': 160}], 'name': 'Fever Ray', 'popularity': 53, 'type': 'artist', 'uri': 'spotify:artist:5hE6NCoobhyEu6TRSbjOJY'})",
@@ -240,215 +732,8 @@
       "website": ""
     }
   },
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/00/9a/0f/009a0f27-2874-a125-2b3e-fed156ebf13a/ami-identity-e344b2d18526f051867a656e86d65196-2025-06-10T15-37-04.880Z_cropped.png/2000x2000bb.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Electronic"
-      ],
-      "id": "298172653",
-      "name": "Fever Ray",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/fever-ray/298172653"
-    },
-    "discogs": {
-      "cover_image": "",
-      "id": "1307274",
-      "images": [],
-      "members": [],
-      "name": "Fever Ray",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1307274",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1307274"
-      },
-      "resource_url": "https://api.discogs.com/artists/1307274",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1307274",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\n\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. In 1994, they formed the indie rock band Honey Is Cool, where they served as the lead vocalist and guitarist. Together with their brother Olof Dreijer, they formed an electronic music duo The Knife in 1999, and have spanned a series of successful and critically acclaimed albums.\n\nWhat would you do if one decade into your career you suddenly saw one of your songs turned into a worldwide hit, won six Grammis in your native Sweden and your latest release was declared album of the year by one of the world’s most influential music websites? If you’re Karin Dreijer, the answer is to take a couple of years off and return as a solo artist under a new name: Fever Ray.\n\nIn Dreijer's's own words:  “I had so many songs to record that I just had to make an album. I thought I was going to have a longer break but I guess it will never happen. I can't stop working.  My aim was to finish the album and, now that it's done, I'm a bit restless (good that The Knife has an opera to write then).  During the last years, I discovered that I like to sing too, so I hope that my newly found live band Fever Ray will make it to the stages next year. We are rehearsing and building something beautiful and brilliant.\" <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Fever Ray is an alias of Swedish musician Karin Dreijer, formerly of The Knife. They debuted with the single \"If I Had A Heart\" (15 Dec 2008) under the alias, followed by the self-titled album Fever Ray (2009). Their second album, Plunge was released in October 2017 without prior announcement. Their vocal style is highly distinct - shrill and piercing, with a heavy Swedish accent and frequent use of pitch-shifting technology.\n\nDreijer was born on 7 April 1975 in Gothenburg, Sweden. <a href=\"https://www.last.fm/music/Fever+Ray\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 1044703,
-      "mbid": "f7df5df4-4dfa-459d-972b-1ba051c15ddc",
-      "name": "Fever Ray",
-      "playcount": 31640026,
-      "similar_artists": [
-        {
-          "name": "The Knife",
-          "url": "https://www.last.fm/music/The+Knife"
-        },
-        {
-          "name": "Austra",
-          "url": "https://www.last.fm/music/Austra"
-        },
-        {
-          "name": "Zola Jesus",
-          "url": "https://www.last.fm/music/Zola+Jesus"
-        },
-        {
-          "name": "iamamiwhoami",
-          "url": "https://www.last.fm/music/iamamiwhoami"
-        },
-        {
-          "name": "Róisín Murphy",
-          "url": "https://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy"
-        }
-      ],
-      "tags": [
-        "electronic",
-        "ambient",
-        "swedish",
-        "female vocalists",
-        "experimental"
-      ],
-      "url": "https://www.last.fm/music/Fever+Ray"
-    },
-    "spotify": {
-      "followers": 486071,
-      "genres": [
-        "art pop"
-      ],
-      "id": "5hE6NCoobhyEu6TRSbjOJY",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb9049f4ac7a92e23ccb2fdf4a",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab676161000051749049f4ac7a92e23ccb2fdf4a",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f1789049f4ac7a92e23ccb2fdf4a",
-          "width": 160
-        }
-      ],
-      "name": "Fever Ray",
-      "popularity": 53,
-      "url": "https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY"
-    },
-    "theaudiodb": {
-      "albums": null,
-      "alternate_names": "",
-      "biography_de": null,
-      "biography_en": "Karin Elisabeth Dreijer Andersson (born 7 April 1975 in Nacka, Sweden), also known by her stage name Fever Ray, is the lead vocalist of the electronic duo The Knife, formed with her brother Olof Dreijer. Andersson was previously the vocalist and guitarist of the alternative rock band Honey Is Cool. Andersson released her debut solo album under the name Fever Ray in 2009. Her vocal style is notable for both shrill and deep tones, and also the use of multitracked vocals, with different uses of pitch-shifting technology on each track, creating an intricate, mysterious effect. Many listeners mistake the deep vocals on songs by The Knife for those of her brother. Visually, Dreijer Andersson employs the use of masks, face and body paint, intricate costumes, and other theatrical elements in photo shoots, videos and live performances, during which she often performs behind a gauze screen that partially obscures her from view.",
-      "biography_es": null,
-      "biography_fr": "Karin Elisabeth Dreijer (précédemment connue comme Karin Dreijer Andersson), née le 7 avril 1975 à Nacka, est une auteure-compositrice-interprète suédoise.\nElle est principalement connue en tant que chanteuse du duo de musique électronique The Knife, formé avec son frère Olof Dreijer (en).\n\nSous le pseudonyme de Fever Ray, elle sort également en 2009 un album solo homonyme. Son style vocal est à la fois perçant et grave, caractérisé par son accent et l'utilisation de correcteur de pitch. Sur scène, elle est connue pour porter des masques et son utilisation de rayons laser.",
-      "biography_it": null,
-      "biography_jp": null,
-      "biography_nl": null,
-      "biography_pt": null,
-      "biography_ru": null,
-      "biography_se": null,
-      "born_year": "1975",
-      "country": "Gothenburg, Sweden",
-      "country_code": "SE",
-      "died_year": null,
-      "disbanded": false,
-      "facebook": "",
-      "formed_year": "1994",
-      "gender": "Female",
-      "genre": "Trip Hop",
-      "id": "111772",
-      "images": [
-        {
-          "height": 1000,
-          "resource_url": null,
-          "type": "artist",
-          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/wpvsvr1366660961.jpg",
-          "width": 1000
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/vywxwu1391437149.jpg",
-          "width": 1920
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/txrvrv1391437277.jpg",
-          "width": 1920
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/aqqabk1639171681.jpg",
-          "width": 1920
-        },
-        {
-          "height": 185,
-          "resource_url": null,
-          "type": "banner",
-          "url": "https://www.theaudiodb.com/images/media/artist/banner/fever-ray-503bad84ad58a.jpg",
-          "width": 1000
-        },
-        {
-          "height": 155,
-          "resource_url": null,
-          "type": "logo",
-          "url": "https://www.theaudiodb.com/images/media/artist/logo/vuqyru1366660954.png",
-          "width": 400
-        },
-        {
-          "height": 1000,
-          "resource_url": null,
-          "type": "clearart",
-          "url": "https://www.theaudiodb.com/images/media/artist/clearart/bsrq0d1639172494.png",
-          "width": 1000
-        }
-      ],
-      "last_fm_chart": "http://www.last.fm/music/Fever Ray/+charts?rangetype=6month",
-      "members": "1",
-      "mood": "",
-      "music_videos": null,
-      "musicbrainz_id": "f7df5df4-4dfa-459d-972b-1ba051c15ddc",
-      "name": "Fever Ray",
-      "raw_data": {},
-      "style": "Electronic",
-      "twitter": "1",
-      "website": ""
-    }
-  },
   "spotify_id": "5hE6NCoobhyEu6TRSbjOJY",
   "spotify_url": "https://open.spotify.com/artist/5hE6NCoobhyEu6TRSbjOJY",
-  "updated_at": "2025-07-08T20:48:27.066911",
+  "updated_at": "2026-10-30T18:39:34.587774",
   "wikipedia_url": null
 }

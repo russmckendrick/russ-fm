@@ -138,22 +138,143 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='60726978', url='https://music.apple.com/gb/artist/riverside/60726978', name='Riverside', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a7/f9/1e/a7f91e40-7d01-e33f-43e7-25758ab08360/511fddf1-6f55-4aa7-98a2-94da343c1465_ami-identity-d4adc73ee7910dde201edff348d0eba4-2024-09-14T21-07-16.174Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '60726978', 'type': 'artists', 'href': '/v1/catalog/gb/artists/60726978', 'attributes': {'name': 'Riverside', 'genreNames': ['Rock'], 'artwork': {'width': 3992, 'height': 3992, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a7/f9/1e/a7f91e40-7d01-e33f-43e7-25758ab08360/511fddf1-6f55-4aa7-98a2-94da343c1465_ami-identity-d4adc73ee7910dde201edff348d0eba4-2024-09-14T21-07-16.174Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231b18', 'textColor1': 'efb291', 'textColor2': 'e0a98a', 'textColor3': 'c69479', 'textColor4': 'ba8d73'}, 'url': 'https://music.apple.com/gb/artist/riverside/60726978'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/60726978/albums', 'data': [{'id': '1416948034', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1416948034'}, {'id': '1647627440', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647627440'}, {'id': '1030437353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1030437353'}, {'id': '1045596629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045596629'}, {'id': '1148788808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1148788808'}, {'id': '1536003559', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536003559'}, {'id': '1045704264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045704264'}, {'id': '1152468690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1152468690'}, {'id': '1045553656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045553656'}, {'id': '1589808511', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589808511'}, {'id': '1647619910', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647619910'}, {'id': '1045664739', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045664739'}, {'id': '1536429897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536429897'}, {'id': '1487988125', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1487988125'}, {'id': '1778514983', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1778514983'}, {'id': '1479860797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1479860797'}, {'id': '1045605310', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045605310'}, {'id': '1434704899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434704899'}, {'id': '1589807026', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589807026'}, {'id': '1506629367', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1506629367'}, {'id': '1589806463', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589806463'}, {'id': '1158141419', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1158141419'}, {'id': '1060453647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1060453647'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "248970",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 248970,
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/YT_3Vbgl32C7F7_MVIZ_ZyPTI6SLJBh38BsGp_kFZtg/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YT_3Vbgl32C7F7_MVIZ_ZyPTI6SLJBh38BsGp_kFZtg/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/F02ZNqMWXKk4lrb3a2RI8rMv97j2u-qy2UxY4_PIB2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/jJHd7paV-hSTyDiXALe0mCElqzBeCVordyzWEWPNEss/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jJHd7paV-hSTyDiXALe0mCElqzBeCVordyzWEWPNEss/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9ZSYK1N4gHzwaLRIB5b7GxG6nZKq13W3P4ANwxnCjWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 389,
+          "resource_url": "https://i.discogs.com/ojwABxI4KlwViNw46p-cCXsF2idRMZGY3U-7PJ7w9ag/rs:fit/g:sm/q:90/h:389/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ojwABxI4KlwViNw46p-cCXsF2idRMZGY3U-7PJ7w9ag/rs:fit/g:sm/q:90/h:389/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6DVo3YHgfu2iizth84Ftvi5tORlgTMOkSHNAMfXvAvg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "width": 584
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/KYKhPv7ri6OrRe-UH9rZsx28aTxdrxI9pkENpFRVI9M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KYKhPv7ri6OrRe-UH9rZsx28aTxdrxI9pkENpFRVI9M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/28UL7hQ_5VQBKXhg-BxR8bQWI7kQavkqdPigSG8ZuQE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VcsPJKpxn4i_JIeZRRZ4v_mBoSRiS7xygHA1CL4Siog/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VcsPJKpxn4i_JIeZRRZ4v_mBoSRiS7xygHA1CL4Siog/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7gBJJWBg6Zl5n96g2ca3ZZYghgaN7Jswmhd3uF0c4zs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/nFktZF4d5k79zYwb8WFiUFrRnpkT0EF-wkNnn9P-v58/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nFktZF4d5k79zYwb8WFiUFrRnpkT0EF-wkNnn9P-v58/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_VLC3hzT1FYwCzMVo4WJc_9zW0v-K-wfxRpeiVSUdY0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/6NBJaDe4iRmKpw38415ZtHrLf8G7tg7pQhEKQF5yMzA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6NBJaDe4iRmKpw38415ZtHrLf8G7tg7pQhEKQF5yMzA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/folvatgNXdp2WvRfghFKqPlImWTTwjmu-mav8XpK3Tk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/DlD25UoFWKsLAYcOqdaZyQEfZmb9uyIR1d4YQvADzUw/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DlD25UoFWKsLAYcOqdaZyQEfZmb9uyIR1d4YQvADzUw/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NNKe-GKliP7zLySqvMzFguywntfsu85dB0akKCimiZo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 426,
+          "resource_url": "https://i.discogs.com/6AaKD9hfla9lT0bDmHT3ap11rZVJ4nyjVQ3DPOOJEWc/rs:fit/g:sm/q:90/h:426/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6AaKD9hfla9lT0bDmHT3ap11rZVJ4nyjVQ3DPOOJEWc/rs:fit/g:sm/q:90/h:426/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "uri150": "https://i.discogs.com/C2G__842iExi1RqFzFWoVW0HVHfiB6MmMv2cEt37UYk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "width": 600
+        },
+        {
+          "height": 429,
+          "resource_url": "https://i.discogs.com/ROP-W3hhu8oH5cNVbR55CRlEK5m5W0HaiQXUmN06AcA/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ROP-W3hhu8oH5cNVbR55CRlEK5m5W0HaiQXUmN06AcA/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cRWtku3mlh928nUcv1AEODsK056KTkhKsODdYYsFZh0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 468336,
+          "name": "Jacek Melnicki",
+          "resource_url": "https://api.discogs.com/artists/468336"
+        },
+        {
+          "active": false,
+          "id": 572762,
+          "name": "Mariusz Duda",
+          "resource_url": "https://api.discogs.com/artists/572762"
+        },
+        {
+          "active": true,
+          "id": 576472,
+          "name": "Piotr Kozieradzki",
+          "resource_url": "https://api.discogs.com/artists/576472"
+        },
+        {
+          "active": false,
+          "id": 576474,
+          "name": "Piotr Grudziński",
+          "resource_url": "https://api.discogs.com/artists/576474"
+        },
+        {
+          "active": true,
+          "id": 577172,
+          "name": "Michał Łapaj",
+          "resource_url": "https://api.discogs.com/artists/577172"
+        },
+        {
+          "active": false,
+          "id": 1327800,
+          "name": "Maciek Meller",
+          "resource_url": "https://api.discogs.com/artists/1327800"
+        }
+      ],
       "name": "Riverside",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "248970",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/248970"
-      },
+      "profile": "Polish progressive metal rock band from Warsaw founded in 2001 by friends [a=Piotr Grudziński] and [a=Piotr Kozieradzki], who were joined later by [a=Jacek Melnicki] and [a=Mariusz Duda]. Melnicki left the band shortly before the release of their debut, and was replaced by [a=Michał Łapaj]. Grudziński died in 2016, leading the band to continue as a trio in studio but joined by guitarist [a=Maciek Meller] for live performances. Meller later became an official member in 2020. In 2026 both Duda and Meller left Riverside due to internal conflict within the band.",
+      "releases_url": "https://api.discogs.com/artists/248970/releases",
       "resource_url": "https://api.discogs.com/artists/248970",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/248970",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/248970-Riverside",
+      "urls": [
+        "https://riversideband.pl/",
+        "https://www.facebook.com/Riversidepl",
+        "https://www.instagram.com/riversideband.pl",
+        "https://www.progarchives.com/artist.asp?id=1287",
+        "https://twitter.com/riversidepl",
+        "https://pl.wikipedia.org/wiki/Riverside_(zesp%C3%B3%C5%82_muzyczny)",
+        "https://en.wikipedia.org/wiki/Riverside_(band)",
+        "https://www.youtube.com/user/riversidepl"
+      ]
     },
     "identity": {
       "musicbrainz_id": "985c5cc9-2dc1-49ac-8806-5b66586a2d58",
@@ -261,27 +382,216 @@
         "track": "Celebrity Touch",
         "uri": "http://www.youtube.com/watch?v=HAqU-RDnYyY"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q17626389",
+        "track": "02 Panic Room",
+        "uri": "https://www.youtube.com/watch?v=9JBOZGsg6ms"
+      },
+      {
+        "album": null,
+        "id": "Q55973305",
+        "track": "Vale of Tears",
+        "uri": "https://www.youtube.com/watch?v=001IMO53JwY"
+      },
+      {
+        "album": null,
+        "id": "Q56681949",
+        "track": "Lament",
+        "uri": "https://www.youtube.com/watch?v=4Wqlts7QWA8"
+      },
+      {
+        "album": null,
+        "id": "Q57586263",
+        "track": "River Down Below",
+        "uri": "https://www.youtube.com/watch?v=ZS1crIkpnwc"
+      },
+      {
+        "album": null,
+        "id": "Q104368583",
+        "track": "Shine/Time Travellers",
+        "uri": "https://www.youtube.com/watch?v=eNigGgBIQ74"
+      },
+      {
+        "album": null,
+        "id": "Q104368583",
+        "track": "Shine/Time Travellers",
+        "uri": "https://www.youtube.com/watch?v=poAk9XgK7Cs"
+      },
+      {
+        "album": null,
+        "id": "Q114701019",
+        "track": "Story of My Dream",
+        "uri": "https://www.youtube.com/watch?v=-s7fedFOP88"
+      },
+      {
+        "album": null,
+        "id": "Q114806243",
+        "track": "I'm Done with You",
+        "uri": "https://www.youtube.com/watch?v=3q6XJfKxKb4"
+      },
+      {
+        "album": null,
+        "id": "Q115507876",
+        "track": "Self-Aware",
+        "uri": "https://www.youtube.com/watch?v=Weuo4hgVHyY"
+      },
+      {
+        "album": null,
+        "id": "Q116160820",
+        "track": "Friend or Foe?",
+        "uri": "https://www.youtube.com/watch?v=EWQQFjyHtro"
+      },
+      {
+        "album": null,
+        "id": "Q9185645",
+        "track": "Celebrity Touch",
+        "uri": "https://www.youtube.com/watch?v=HAqU-RDnYyY"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='60726978', url='https://music.apple.com/gb/artist/riverside/60726978', name='Riverside', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a7/f9/1e/a7f91e40-7d01-e33f-43e7-25758ab08360/511fddf1-6f55-4aa7-98a2-94da343c1465_ami-identity-d4adc73ee7910dde201edff348d0eba4-2024-09-14T21-07-16.174Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '60726978', 'type': 'artists', 'href': '/v1/catalog/gb/artists/60726978', 'attributes': {'name': 'Riverside', 'genreNames': ['Rock'], 'artwork': {'width': 3992, 'height': 3992, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a7/f9/1e/a7f91e40-7d01-e33f-43e7-25758ab08360/511fddf1-6f55-4aa7-98a2-94da343c1465_ami-identity-d4adc73ee7910dde201edff348d0eba4-2024-09-14T21-07-16.174Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231b18', 'textColor1': 'efb291', 'textColor2': 'e0a98a', 'textColor3': 'c69479', 'textColor4': 'ba8d73'}, 'url': 'https://music.apple.com/gb/artist/riverside/60726978'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/60726978/albums', 'data': [{'id': '1416948034', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1416948034'}, {'id': '1647627440', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647627440'}, {'id': '1030437353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1030437353'}, {'id': '1045596629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045596629'}, {'id': '1148788808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1148788808'}, {'id': '1536003559', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536003559'}, {'id': '1045704264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045704264'}, {'id': '1152468690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1152468690'}, {'id': '1045553656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045553656'}, {'id': '1589808511', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589808511'}, {'id': '1647619910', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1647619910'}, {'id': '1045664739', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045664739'}, {'id': '1536429897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536429897'}, {'id': '1487988125', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1487988125'}, {'id': '1778514983', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1778514983'}, {'id': '1479860797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1479860797'}, {'id': '1045605310', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045605310'}, {'id': '1434704899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1434704899'}, {'id': '1589807026', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589807026'}, {'id': '1506629367', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1506629367'}, {'id': '1589806463', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589806463'}, {'id': '1158141419', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1158141419'}, {'id': '1060453647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1060453647'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "248970",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 248970,
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/YT_3Vbgl32C7F7_MVIZ_ZyPTI6SLJBh38BsGp_kFZtg/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YT_3Vbgl32C7F7_MVIZ_ZyPTI6SLJBh38BsGp_kFZtg/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/F02ZNqMWXKk4lrb3a2RI8rMv97j2u-qy2UxY4_PIB2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNzAzOTM5MjIw/LTk5MDEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/jJHd7paV-hSTyDiXALe0mCElqzBeCVordyzWEWPNEss/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jJHd7paV-hSTyDiXALe0mCElqzBeCVordyzWEWPNEss/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9ZSYK1N4gHzwaLRIB5b7GxG6nZKq13W3P4ANwxnCjWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjEwMjEyOTE2/LTUzMjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 389,
+          "resource_url": "https://i.discogs.com/ojwABxI4KlwViNw46p-cCXsF2idRMZGY3U-7PJ7w9ag/rs:fit/g:sm/q:90/h:389/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ojwABxI4KlwViNw46p-cCXsF2idRMZGY3U-7PJ7w9ag/rs:fit/g:sm/q:90/h:389/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6DVo3YHgfu2iizth84Ftvi5tORlgTMOkSHNAMfXvAvg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTE4MjYuanBlZw.jpeg",
+          "width": 584
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/KYKhPv7ri6OrRe-UH9rZsx28aTxdrxI9pkENpFRVI9M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KYKhPv7ri6OrRe-UH9rZsx28aTxdrxI9pkENpFRVI9M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/28UL7hQ_5VQBKXhg-BxR8bQWI7kQavkqdPigSG8ZuQE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNjc3/LTYxMDUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VcsPJKpxn4i_JIeZRRZ4v_mBoSRiS7xygHA1CL4Siog/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VcsPJKpxn4i_JIeZRRZ4v_mBoSRiS7xygHA1CL4Siog/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7gBJJWBg6Zl5n96g2ca3ZZYghgaN7Jswmhd3uF0c4zs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ5/LTIyNjUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/nFktZF4d5k79zYwb8WFiUFrRnpkT0EF-wkNnn9P-v58/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nFktZF4d5k79zYwb8WFiUFrRnpkT0EF-wkNnn9P-v58/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_VLC3hzT1FYwCzMVo4WJc_9zW0v-K-wfxRpeiVSUdY0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTcyNTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/6NBJaDe4iRmKpw38415ZtHrLf8G7tg7pQhEKQF5yMzA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6NBJaDe4iRmKpw38415ZtHrLf8G7tg7pQhEKQF5yMzA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/folvatgNXdp2WvRfghFKqPlImWTTwjmu-mav8XpK3Tk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNDgwMDc3NjQ0/LTMwMDYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/DlD25UoFWKsLAYcOqdaZyQEfZmb9uyIR1d4YQvADzUw/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DlD25UoFWKsLAYcOqdaZyQEfZmb9uyIR1d4YQvADzUw/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NNKe-GKliP7zLySqvMzFguywntfsu85dB0akKCimiZo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNjAxNDEyMTQ4/LTQ3NDQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 426,
+          "resource_url": "https://i.discogs.com/6AaKD9hfla9lT0bDmHT3ap11rZVJ4nyjVQ3DPOOJEWc/rs:fit/g:sm/q:90/h:426/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6AaKD9hfla9lT0bDmHT3ap11rZVJ4nyjVQ3DPOOJEWc/rs:fit/g:sm/q:90/h:426/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "uri150": "https://i.discogs.com/C2G__842iExi1RqFzFWoVW0HVHfiB6MmMv2cEt37UYk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xNTkyMDcyNzY0/LTIwOTMud2VicA.jpeg",
+          "width": 600
+        },
+        {
+          "height": 429,
+          "resource_url": "https://i.discogs.com/ROP-W3hhu8oH5cNVbR55CRlEK5m5W0HaiQXUmN06AcA/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ROP-W3hhu8oH5cNVbR55CRlEK5m5W0HaiQXUmN06AcA/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cRWtku3mlh928nUcv1AEODsK056KTkhKsODdYYsFZh0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODk3/MC0xMTU0OTgxNjk1/LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 468336,
+          "name": "Jacek Melnicki",
+          "resource_url": "https://api.discogs.com/artists/468336"
+        },
+        {
+          "active": false,
+          "id": 572762,
+          "name": "Mariusz Duda",
+          "resource_url": "https://api.discogs.com/artists/572762"
+        },
+        {
+          "active": true,
+          "id": 576472,
+          "name": "Piotr Kozieradzki",
+          "resource_url": "https://api.discogs.com/artists/576472"
+        },
+        {
+          "active": false,
+          "id": 576474,
+          "name": "Piotr Grudziński",
+          "resource_url": "https://api.discogs.com/artists/576474"
+        },
+        {
+          "active": true,
+          "id": 577172,
+          "name": "Michał Łapaj",
+          "resource_url": "https://api.discogs.com/artists/577172"
+        },
+        {
+          "active": false,
+          "id": 1327800,
+          "name": "Maciek Meller",
+          "resource_url": "https://api.discogs.com/artists/1327800"
+        }
+      ],
       "name": "Riverside",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "248970",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/248970"
-      },
+      "profile": "Polish progressive metal rock band from Warsaw founded in 2001 by friends [a=Piotr Grudziński] and [a=Piotr Kozieradzki], who were joined later by [a=Jacek Melnicki] and [a=Mariusz Duda]. Melnicki left the band shortly before the release of their debut, and was replaced by [a=Michał Łapaj]. Grudziński died in 2016, leading the band to continue as a trio in studio but joined by guitarist [a=Maciek Meller] for live performances. Meller later became an official member in 2020. In 2026 both Duda and Meller left Riverside due to internal conflict within the band.",
+      "releases_url": "https://api.discogs.com/artists/248970/releases",
       "resource_url": "https://api.discogs.com/artists/248970",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/248970",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/248970-Riverside",
+      "urls": [
+        "https://riversideband.pl/",
+        "https://www.facebook.com/Riversidepl",
+        "https://www.instagram.com/riversideband.pl",
+        "https://www.progarchives.com/artist.asp?id=1287",
+        "https://twitter.com/riversidepl",
+        "https://pl.wikipedia.org/wiki/Riverside_(zesp%C3%B3%C5%82_muzyczny)",
+        "https://en.wikipedia.org/wiki/Riverside_(band)",
+        "https://www.youtube.com/user/riversidepl"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Riverside', url='https://www.last.fm/music/Riverside', mbid='f554c686-ead0-42ef-9deb-3a42f7199196', listeners=429009, playcount=25564785, bio_summary='There are three bands who share the name Riverside. 1) Riverside is a progressive rock band from Warsaw, Poland, founded in 2001 by Mariusz Duda (bass guitar, vocal), the late Piotr Grudziński (electric guitar) and Piotr Kozieradzki (drums), who shared a love for progressive rock and heavy metal. Up to 2003 Jacek Mielnicki was playing keyboard in the band, but some conflicts led him to leave the band, and in the same year the new keyboardist Michał Łapaj joined. <a href=\"https://www.last.fm/music/Riverside\">Read more on Last.fm</a>', bio_content='There are three bands who share the name Riverside. 1) Riverside is a progressive rock band from Warsaw, Poland, founded in 2001 by Mariusz Duda (bass guitar, vocal), the late Piotr Grudziński (electric guitar) and Piotr Kozieradzki (drums), who shared a love for progressive rock and heavy metal. Up to 2003 Jacek Mielnicki was playing keyboard in the band, but some conflicts led him to leave the band, and in the same year the new keyboardist Michał Łapaj joined. Following their 2003 debut Out of Myself, the band were signed by major prog label InsideOut, releasing Second Life Syndrome in 2005. Riverside\\'s music has been described as a mix between, Pink Floyd, Anathema, Opeth, and Dream Theater, containing long, ethereal keyboard-laden passages and heavy, crunchy metal riffs. Rapid Eye Movement was leaked on the internet in August 2007, and was released in the end of September in Europe, October 09 in the US. In the summer of 2007 Riverside supported Dream Theater in the European leg of their tour.\\n\\nIn 2009 they released their album  Anno Domini High Definition. Mariusz Duda had the following to say about the album on January 27, 2009: \"We have gone from Warsaw, we have changed the studio and the producer. We care deeply about creating a coherent record and that is why most probably there are only going to be five songs on it. The material will be energetic, multifarious, and - I hope so - very good for live performances. It will be a story about liquid modernity, life in a constant hurry, stress and anxiety about the future. A picture of our times in 1920 x 1080 definition.\"\\nIn 2011 they  released a mini album (only available at the 10th anniversary tour gigs), entitled Memories in My Head, and contains 3 new songs.\\n\\nIn January 2013, Riverside released their fifth full-length album, Shrine of New Generation Slaves, which was followed by Love, Fear and the Time Machine in 2015, Wasteland in 2018, ID.Entity in 2023. \\n\\nOfficial site\\n\\n2) Riverside is a Canadian Alternative Pop Punk band from London, Ontario. The band released two full length albums, and were signed to Bullion Records in Japan.\\n\\n3) Riverside is a Jangle Pop band from Philadelphia, USA. Riverside consisted of: Keith Kochanowicz (vocals, guitar, organ), Kenneth Jackson (guitar), Glenn Kochanowicz (bass, vocals), Jonathan Liney (drums) and Geoff Verne (drums)\\nThey released two albums, One in 1992 and Taste in 1994. <a href=\"https://www.last.fm/music/Riverside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'Progressive metal', 'polish', 'Progressive', 'rock'], similar_artists=[{'name': 'Lunatic Soul', 'url': 'https://www.last.fm/music/Lunatic+Soul'}, {'name': 'The Pineapple Thief', 'url': 'https://www.last.fm/music/The+Pineapple+Thief'}, {'name': 'Porcupine Tree', 'url': 'https://www.last.fm/music/Porcupine+Tree'}, {'name': 'Steven Wilson', 'url': 'https://www.last.fm/music/Steven+Wilson'}, {'name': 'Soen', 'url': 'https://www.last.fm/music/Soen'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Riverside', 'mbid': 'f554c686-ead0-42ef-9deb-3a42f7199196', 'url': 'https://www.last.fm/music/Riverside', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '429009', 'playcount': '25564785'}, 'similar': {'artist': [{'name': 'Lunatic Soul', 'url': 'https://www.last.fm/music/Lunatic+Soul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Pineapple Thief', 'url': 'https://www.last.fm/music/The+Pineapple+Thief', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Porcupine Tree', 'url': 'https://www.last.fm/music/Porcupine+Tree', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Steven Wilson', 'url': 'https://www.last.fm/music/Steven+Wilson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Soen', 'url': 'https://www.last.fm/music/Soen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Progressive metal', 'url': 'https://www.last.fm/tag/Progressive+metal'}, {'name': 'polish', 'url': 'https://www.last.fm/tag/polish'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Riverside/+wiki'}}, 'published': '10 Feb 2006, 13:21', 'summary': 'There are three bands who share the name Riverside. 1) Riverside is a progressive rock band from Warsaw, Poland, founded in 2001 by Mariusz Duda (bass guitar, vocal), the late Piotr Grudziński (electric guitar) and Piotr Kozieradzki (drums), who shared a love for progressive rock and heavy metal. Up to 2003 Jacek Mielnicki was playing keyboard in the band, but some conflicts led him to leave the band, and in the same year the new keyboardist Michał Łapaj joined. <a href=\"https://www.last.fm/music/Riverside\">Read more on Last.fm</a>', 'content': 'There are three bands who share the name Riverside. 1) Riverside is a progressive rock band from Warsaw, Poland, founded in 2001 by Mariusz Duda (bass guitar, vocal), the late Piotr Grudziński (electric guitar) and Piotr Kozieradzki (drums), who shared a love for progressive rock and heavy metal. Up to 2003 Jacek Mielnicki was playing keyboard in the band, but some conflicts led him to leave the band, and in the same year the new keyboardist Michał Łapaj joined. Following their 2003 debut Out of Myself, the band were signed by major prog label InsideOut, releasing Second Life Syndrome in 2005. Riverside\\'s music has been described as a mix between, Pink Floyd, Anathema, Opeth, and Dream Theater, containing long, ethereal keyboard-laden passages and heavy, crunchy metal riffs. Rapid Eye Movement was leaked on the internet in August 2007, and was released in the end of September in Europe, October 09 in the US. In the summer of 2007 Riverside supported Dream Theater in the European leg of their tour.\\n\\nIn 2009 they released their album  Anno Domini High Definition. Mariusz Duda had the following to say about the album on January 27, 2009: \"We have gone from Warsaw, we have changed the studio and the producer. We care deeply about creating a coherent record and that is why most probably there are only going to be five songs on it. The material will be energetic, multifarious, and - I hope so - very good for live performances. It will be a story about liquid modernity, life in a constant hurry, stress and anxiety about the future. A picture of our times in 1920 x 1080 definition.\"\\nIn 2011 they  released a mini album (only available at the 10th anniversary tour gigs), entitled Memories in My Head, and contains 3 new songs.\\n\\nIn January 2013, Riverside released their fifth full-length album, Shrine of New Generation Slaves, which was followed by Love, Fear and the Time Machine in 2015, Wasteland in 2018, ID.Entity in 2023. \\n\\nOfficial site\\n\\n2) Riverside is a Canadian Alternative Pop Punk band from London, Ontario. The band released two full length albums, and were signed to Bullion Records in Japan.\\n\\n3) Riverside is a Jangle Pop band from Philadelphia, USA. Riverside consisted of: Keith Kochanowicz (vocals, guitar, organ), Kenneth Jackson (guitar), Glenn Kochanowicz (bass, vocals), Jonathan Liney (drums) and Geoff Verne (drums)\\nThey released two albums, One in 1992 and Taste in 1994. <a href=\"https://www.last.fm/music/Riverside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5yjbUO1Jocui7RKE30zfLT', url='https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT', name='Riverside', popularity=45, followers=229617, genres=['progressive rock', 'progressive metal', 'art rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb4095e0f487f93541ab8ab7f5', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744095e0f487f93541ab8ab7f5', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784095e0f487f93541ab8ab7f5', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT'}, 'followers': {'href': None, 'total': 229617}, 'genres': ['progressive rock', 'progressive metal', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/5yjbUO1Jocui7RKE30zfLT', 'id': '5yjbUO1Jocui7RKE30zfLT', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb4095e0f487f93541ab8ab7f5', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744095e0f487f93541ab8ab7f5', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784095e0f487f93541ab8ab7f5', 'height': 160, 'width': 160}], 'name': 'Riverside', 'popularity': 45, 'type': 'artist', 'uri': 'spotify:artist:5yjbUO1Jocui7RKE30zfLT'})",
@@ -373,6 +683,6 @@
   },
   "spotify_id": "5yjbUO1Jocui7RKE30zfLT",
   "spotify_url": "https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT",
-  "updated_at": "2026-10-22T14:10:47.422975",
+  "updated_at": "2026-10-30T18:44:51.662612",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Riverside_(band)"
 }

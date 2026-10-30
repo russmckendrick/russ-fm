@@ -42,22 +42,49 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1765206789', url='https://music.apple.com/gb/artist/baron/1765206789', name='Baron', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/2000x2000ac.jpg', genres=['Prog-Rock/Art Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1765206789', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1765206789', 'attributes': {'name': 'Baron', 'genreNames': ['Prog-Rock/Art Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/{w}x{h}ac.jpg', 'bgColor': 'cacaca', 'textColor1': '020203', 'textColor2': '282828', 'textColor3': '2a2a2b', 'textColor4': '484848'}, 'url': 'https://music.apple.com/gb/artist/baron/1765206789'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1765206789/albums', 'data': [{'id': '1494198864', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1494198864'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2449754",
-      "images": [],
-      "members": [],
-      "name": "Baron",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2449754",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2449754"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2449754,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lVUXIDipEfxsmALubXyC9KVisNNfVBEOhzj2Lkw-WHk/rs:fit/g:sm/q:90/h:600/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lVUXIDipEfxsmALubXyC9KVisNNfVBEOhzj2Lkw-WHk/rs:fit/g:sm/q:90/h:600/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/n60Us6fkOOCm363bL4QAtFApxU78sGUdnfARvqs_v3I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "width": 424
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 984263,
+          "name": "Joe Hollick",
+          "resource_url": "https://api.discogs.com/artists/984263"
+        },
+        {
+          "active": true,
+          "id": 2449491,
+          "name": "Luke Foster",
+          "resource_url": "https://api.discogs.com/artists/2449491"
+        },
+        {
+          "active": true,
+          "id": 2449495,
+          "name": "Alex Crispin",
+          "resource_url": "https://api.discogs.com/artists/2449495"
+        },
+        {
+          "active": true,
+          "id": 3110945,
+          "name": "Peter Evans (12)",
+          "resource_url": "https://api.discogs.com/artists/3110945"
+        }
+      ],
+      "name": "Baron (14)",
+      "profile": "UK psych band BARON was formed in 2008 by Diagonal members Alex Crispin and Luke Foster, later joined by Peter Evans and Blue Firth. They released their debut album in 2010.",
+      "releases_url": "https://api.discogs.com/artists/2449754/releases",
       "resource_url": "https://api.discogs.com/artists/2449754",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2449754",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2449754-Baron-14"
     },
     "identity": {
       "musicbrainz_id": "92b89a27-554b-40dd-9c6f-a94c5f827909",
@@ -72,22 +99,49 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1765206789', url='https://music.apple.com/gb/artist/baron/1765206789', name='Baron', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/2000x2000ac.jpg', genres=['Prog-Rock/Art Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1765206789', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1765206789', 'attributes': {'name': 'Baron', 'genreNames': ['Prog-Rock/Art Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/ac/05/24ac053c-35bb-3ee5-d0b0-494aed6f3039/6430050665074.jpg/{w}x{h}ac.jpg', 'bgColor': 'cacaca', 'textColor1': '020203', 'textColor2': '282828', 'textColor3': '2a2a2b', 'textColor4': '484848'}, 'url': 'https://music.apple.com/gb/artist/baron/1765206789'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1765206789/albums', 'data': [{'id': '1494198864', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1494198864'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2449754",
-      "images": [],
-      "members": [],
-      "name": "Baron",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2449754",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2449754"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2449754,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lVUXIDipEfxsmALubXyC9KVisNNfVBEOhzj2Lkw-WHk/rs:fit/g:sm/q:90/h:600/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lVUXIDipEfxsmALubXyC9KVisNNfVBEOhzj2Lkw-WHk/rs:fit/g:sm/q:90/h:600/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/n60Us6fkOOCm363bL4QAtFApxU78sGUdnfARvqs_v3I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NDk3/NTQtMTMxODQxNzY1/NC5qcGVn.jpeg",
+          "width": 424
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 984263,
+          "name": "Joe Hollick",
+          "resource_url": "https://api.discogs.com/artists/984263"
+        },
+        {
+          "active": true,
+          "id": 2449491,
+          "name": "Luke Foster",
+          "resource_url": "https://api.discogs.com/artists/2449491"
+        },
+        {
+          "active": true,
+          "id": 2449495,
+          "name": "Alex Crispin",
+          "resource_url": "https://api.discogs.com/artists/2449495"
+        },
+        {
+          "active": true,
+          "id": 3110945,
+          "name": "Peter Evans (12)",
+          "resource_url": "https://api.discogs.com/artists/3110945"
+        }
+      ],
+      "name": "Baron (14)",
+      "profile": "UK psych band BARON was formed in 2008 by Diagonal members Alex Crispin and Luke Foster, later joined by Peter Evans and Blue Firth. They released their debut album in 2010.",
+      "releases_url": "https://api.discogs.com/artists/2449754/releases",
       "resource_url": "https://api.discogs.com/artists/2449754",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2449754",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2449754-Baron-14"
     },
     "lastfm": {},
     "spotify": {},
@@ -95,6 +149,6 @@
   },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2026-10-22T14:04:58.157651",
+  "updated_at": "2026-10-30T18:36:16.687736",
   "wikipedia_url": null
 }

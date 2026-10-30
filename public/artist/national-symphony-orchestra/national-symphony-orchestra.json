@@ -99,22 +99,733 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1438159645', url='https://music.apple.com/gb/artist/national-symphony-orchestra/1438159645', name='National Symphony Orchestra', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dc/8e/2f/dc8e2f95-b54c-0347-94f9-3de506e40d09/25UMGIM55624.rgb.jpg/2000x2000ac.jpg', genres=['Classical'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1438159645', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1438159645', 'attributes': {'name': 'National Symphony Orchestra', 'genreNames': ['Classical'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dc/8e/2f/dc8e2f95-b54c-0347-94f9-3de506e40d09/25UMGIM55624.rgb.jpg/{w}x{h}ac.jpg', 'bgColor': '00467f', 'textColor1': 'c2d6fa', 'textColor2': 'adcdf9', 'textColor3': '9bb9e1', 'textColor4': '8ab2e0'}, 'url': 'https://music.apple.com/gb/artist/national-symphony-orchestra/1438159645'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1438159645/albums', 'data': [{'id': '1805156628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1805156628'}, {'id': '1801248804', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1801248804'}, {'id': '1797171811', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1797171811'}, {'id': '1798505000', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1798505000'}, {'id': '1703530917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1703530917'}, {'id': '1819687282', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819687282'}, {'id': '1819679340', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819679340'}, {'id': '1819682324', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819682324'}, {'id': '1819680230', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819680230'}, {'id': '1372126108', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1372126108'}, {'id': '1348555215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348555215'}, {'id': '1320448986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1320448986'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "915941",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 2890059,
+          "name": "Globe Symphony Orchestra",
+          "resource_url": "https://api.discogs.com/artists/2890059"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 915941,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/gI2qHic60kPN5zs0-H8AcvVCigmQXqfbNI-guswGwBI/rs:fit/g:sm/q:90/h:301/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gI2qHic60kPN5zs0-H8AcvVCigmQXqfbNI-guswGwBI/rs:fit/g:sm/q:90/h:301/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NqUUuJk19Ps9o8BOSvYEz0JfzE9_tB_l6MzWf4WiCc8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 337958,
+          "name": "Harvey Wolfe",
+          "resource_url": "https://api.discogs.com/artists/337958"
+        },
+        {
+          "active": true,
+          "id": 394289,
+          "name": "Carole Evans",
+          "resource_url": "https://api.discogs.com/artists/394289"
+        },
+        {
+          "active": false,
+          "id": 464105,
+          "name": "Raymond Kobler",
+          "resource_url": "https://api.discogs.com/artists/464105"
+        },
+        {
+          "active": false,
+          "id": 550341,
+          "name": "Leonard Slatkin",
+          "resource_url": "https://api.discogs.com/artists/550341"
+        },
+        {
+          "active": false,
+          "id": 839412,
+          "name": "Christoph Eschenbach",
+          "resource_url": "https://api.discogs.com/artists/839412"
+        },
+        {
+          "active": false,
+          "id": 839505,
+          "name": "William Steck",
+          "resource_url": "https://api.discogs.com/artists/839505"
+        },
+        {
+          "active": false,
+          "id": 841582,
+          "name": "Robert Marcellus",
+          "resource_url": "https://api.discogs.com/artists/841582"
+        },
+        {
+          "active": false,
+          "id": 895108,
+          "name": "Ann Hobson",
+          "resource_url": "https://api.discogs.com/artists/895108"
+        },
+        {
+          "active": false,
+          "id": 938317,
+          "name": "Jay Wadenpfuhl",
+          "resource_url": "https://api.discogs.com/artists/938317"
+        },
+        {
+          "active": true,
+          "id": 942019,
+          "name": "Lambert Orkis",
+          "resource_url": "https://api.discogs.com/artists/942019"
+        },
+        {
+          "active": true,
+          "id": 943006,
+          "name": "David Teie",
+          "resource_url": "https://api.discogs.com/artists/943006"
+        },
+        {
+          "active": false,
+          "id": 997520,
+          "name": "Lei Hou",
+          "resource_url": "https://api.discogs.com/artists/997520"
+        },
+        {
+          "active": true,
+          "id": 1021575,
+          "name": "Elizabeth Blakeslee",
+          "resource_url": "https://api.discogs.com/artists/1021575"
+        },
+        {
+          "active": true,
+          "id": 1025162,
+          "name": "Mahoko Eguchi",
+          "resource_url": "https://api.discogs.com/artists/1025162"
+        },
+        {
+          "active": true,
+          "id": 1043795,
+          "name": "David Hardy",
+          "resource_url": "https://api.discogs.com/artists/1043795"
+        },
+        {
+          "active": false,
+          "id": 1056950,
+          "name": "Doriot Anthony Dwyer",
+          "resource_url": "https://api.discogs.com/artists/1056950"
+        },
+        {
+          "active": false,
+          "id": 1063195,
+          "name": "David Premo",
+          "resource_url": "https://api.discogs.com/artists/1063195"
+        },
+        {
+          "active": true,
+          "id": 1113567,
+          "name": "Loren Kitt",
+          "resource_url": "https://api.discogs.com/artists/1113567"
+        },
+        {
+          "active": true,
+          "id": 1113573,
+          "name": "Glenn Garlick",
+          "resource_url": "https://api.discogs.com/artists/1113573"
+        },
+        {
+          "active": true,
+          "id": 1127480,
+          "name": "Joel Fuller",
+          "resource_url": "https://api.discogs.com/artists/1127480"
+        },
+        {
+          "active": true,
+          "id": 1312283,
+          "name": "Ruth Wicker",
+          "resource_url": "https://api.discogs.com/artists/1312283"
+        },
+        {
+          "active": false,
+          "id": 1366612,
+          "name": "Viola Smith",
+          "resource_url": "https://api.discogs.com/artists/1366612"
+        },
+        {
+          "active": false,
+          "id": 1406386,
+          "name": "Robert Marsteller",
+          "resource_url": "https://api.discogs.com/artists/1406386"
+        },
+        {
+          "active": false,
+          "id": 1413766,
+          "name": "Max Hobart",
+          "resource_url": "https://api.discogs.com/artists/1413766"
+        },
+        {
+          "active": true,
+          "id": 1422599,
+          "name": "Loewi Lin",
+          "resource_url": "https://api.discogs.com/artists/1422599"
+        },
+        {
+          "active": false,
+          "id": 1541662,
+          "name": "Luis Biava",
+          "resource_url": "https://api.discogs.com/artists/1541662"
+        },
+        {
+          "active": false,
+          "id": 1580901,
+          "name": "Leo Panasevich",
+          "resource_url": "https://api.discogs.com/artists/1580901"
+        },
+        {
+          "active": false,
+          "id": 1687849,
+          "name": "Leonard Sharrow",
+          "resource_url": "https://api.discogs.com/artists/1687849"
+        },
+        {
+          "active": false,
+          "id": 1691191,
+          "name": "Hector De Leon",
+          "resource_url": "https://api.discogs.com/artists/1691191"
+        },
+        {
+          "active": false,
+          "id": 1719785,
+          "name": "Bernard Robbins",
+          "resource_url": "https://api.discogs.com/artists/1719785"
+        },
+        {
+          "active": true,
+          "id": 1756469,
+          "name": "Nurit Bar-Josef",
+          "resource_url": "https://api.discogs.com/artists/1756469"
+        },
+        {
+          "active": false,
+          "id": 1773940,
+          "name": "Harry Brabec",
+          "resource_url": "https://api.discogs.com/artists/1773940"
+        },
+        {
+          "active": false,
+          "id": 1957722,
+          "name": "Frank Sinatra (2)",
+          "resource_url": "https://api.discogs.com/artists/1957722"
+        },
+        {
+          "active": false,
+          "id": 1957724,
+          "name": "Neil Courtney",
+          "resource_url": "https://api.discogs.com/artists/1957724"
+        },
+        {
+          "active": false,
+          "id": 1957729,
+          "name": "Vernon Kirkpatrick",
+          "resource_url": "https://api.discogs.com/artists/1957729"
+        },
+        {
+          "active": false,
+          "id": 1957732,
+          "name": "Sylvia Meyer",
+          "resource_url": "https://api.discogs.com/artists/1957732"
+        },
+        {
+          "active": false,
+          "id": 1957738,
+          "name": "John Martin (21)",
+          "resource_url": "https://api.discogs.com/artists/1957738"
+        },
+        {
+          "active": false,
+          "id": 1958977,
+          "name": "John Mack (2)",
+          "resource_url": "https://api.discogs.com/artists/1958977"
+        },
+        {
+          "active": false,
+          "id": 1970425,
+          "name": "Abe Torchinsky",
+          "resource_url": "https://api.discogs.com/artists/1970425"
+        },
+        {
+          "active": true,
+          "id": 1998852,
+          "name": "Lewis Lipnick",
+          "resource_url": "https://api.discogs.com/artists/1998852"
+        },
+        {
+          "active": true,
+          "id": 2080871,
+          "name": "William Neil",
+          "resource_url": "https://api.discogs.com/artists/2080871"
+        },
+        {
+          "active": false,
+          "id": 2199623,
+          "name": "Gabriel Bartold",
+          "resource_url": "https://api.discogs.com/artists/2199623"
+        },
+        {
+          "active": true,
+          "id": 2243511,
+          "name": "David Murray (7)",
+          "resource_url": "https://api.discogs.com/artists/2243511"
+        },
+        {
+          "active": true,
+          "id": 2281311,
+          "name": "Susan Heineman",
+          "resource_url": "https://api.discogs.com/artists/2281311"
+        },
+        {
+          "active": true,
+          "id": 2315428,
+          "name": "Kenneth Harbison",
+          "resource_url": "https://api.discogs.com/artists/2315428"
+        },
+        {
+          "active": false,
+          "id": 2328549,
+          "name": "Luis Leguia",
+          "resource_url": "https://api.discogs.com/artists/2328549"
+        },
+        {
+          "active": false,
+          "id": 2328576,
+          "name": "Geralyn Coticone",
+          "resource_url": "https://api.discogs.com/artists/2328576"
+        },
+        {
+          "active": false,
+          "id": 2328590,
+          "name": "Dennis Roy",
+          "resource_url": "https://api.discogs.com/artists/2328590"
+        },
+        {
+          "active": false,
+          "id": 2328608,
+          "name": "Roland Small",
+          "resource_url": "https://api.discogs.com/artists/2328608"
+        },
+        {
+          "active": true,
+          "id": 2351491,
+          "name": "Craig Mulcahy (2)",
+          "resource_url": "https://api.discogs.com/artists/2351491"
+        },
+        {
+          "active": true,
+          "id": 2511179,
+          "name": "Leah Arsenault",
+          "resource_url": "https://api.discogs.com/artists/2511179"
+        },
+        {
+          "active": false,
+          "id": 2828076,
+          "name": "Larrie Howard",
+          "resource_url": "https://api.discogs.com/artists/2828076"
+        },
+        {
+          "active": false,
+          "id": 2962586,
+          "name": "Samuel Krauss",
+          "resource_url": "https://api.discogs.com/artists/2962586"
+        },
+        {
+          "active": false,
+          "id": 3009667,
+          "name": "Sidney Curtiss",
+          "resource_url": "https://api.discogs.com/artists/3009667"
+        },
+        {
+          "active": false,
+          "id": 3079757,
+          "name": "Attilio De Palma",
+          "resource_url": "https://api.discogs.com/artists/3079757"
+        },
+        {
+          "active": true,
+          "id": 3410010,
+          "name": "Wanzhen Li",
+          "resource_url": "https://api.discogs.com/artists/3410010"
+        },
+        {
+          "active": false,
+          "id": 3455141,
+          "name": "Elisabeth Adkins",
+          "resource_url": "https://api.discogs.com/artists/3455141"
+        },
+        {
+          "active": false,
+          "id": 3464177,
+          "name": "Catharina Meints",
+          "resource_url": "https://api.discogs.com/artists/3464177"
+        },
+        {
+          "active": false,
+          "id": 3508320,
+          "name": "Donald E. McComas",
+          "resource_url": "https://api.discogs.com/artists/3508320"
+        },
+        {
+          "active": false,
+          "id": 3508321,
+          "name": "Stevens Hewitt",
+          "resource_url": "https://api.discogs.com/artists/3508321"
+        },
+        {
+          "active": true,
+          "id": 3544995,
+          "name": "Lisa Emenheiser",
+          "resource_url": "https://api.discogs.com/artists/3544995"
+        },
+        {
+          "active": false,
+          "id": 3622221,
+          "name": "Marc Lifschey",
+          "resource_url": "https://api.discogs.com/artists/3622221"
+        },
+        {
+          "active": false,
+          "id": 3689743,
+          "name": "Albert Tipton",
+          "resource_url": "https://api.discogs.com/artists/3689743"
+        },
+        {
+          "active": true,
+          "id": 3754759,
+          "name": "Matthew Guilford",
+          "resource_url": "https://api.discogs.com/artists/3754759"
+        },
+        {
+          "active": true,
+          "id": 3779125,
+          "name": "James Nickel",
+          "resource_url": "https://api.discogs.com/artists/3779125"
+        },
+        {
+          "active": false,
+          "id": 4000438,
+          "name": "Margaret Gutierrez",
+          "resource_url": "https://api.discogs.com/artists/4000438"
+        },
+        {
+          "active": false,
+          "id": 4066122,
+          "name": "Stanley Hoffman",
+          "resource_url": "https://api.discogs.com/artists/4066122"
+        },
+        {
+          "active": false,
+          "id": 4120268,
+          "name": "Gil Breines",
+          "resource_url": "https://api.discogs.com/artists/4120268"
+        },
+        {
+          "active": true,
+          "id": 4145897,
+          "name": "Marissa Regni",
+          "resource_url": "https://api.discogs.com/artists/4145897"
+        },
+        {
+          "active": false,
+          "id": 4220429,
+          "name": "John Krell",
+          "resource_url": "https://api.discogs.com/artists/4220429"
+        },
+        {
+          "active": false,
+          "id": 4244838,
+          "name": "Franz Vlashek",
+          "resource_url": "https://api.discogs.com/artists/4244838"
+        },
+        {
+          "active": true,
+          "id": 4285496,
+          "name": "Jeffrey Weisner",
+          "resource_url": "https://api.discogs.com/artists/4285496"
+        },
+        {
+          "active": true,
+          "id": 4289727,
+          "name": "Steven Hendrickson",
+          "resource_url": "https://api.discogs.com/artists/4289727"
+        },
+        {
+          "active": true,
+          "id": 4355166,
+          "name": "Charles Wilkinson",
+          "resource_url": "https://api.discogs.com/artists/4355166"
+        },
+        {
+          "active": true,
+          "id": 4386026,
+          "name": "Abel Pereira",
+          "resource_url": "https://api.discogs.com/artists/4386026"
+        },
+        {
+          "active": true,
+          "id": 4397370,
+          "name": "Tsuna Sakamoto",
+          "resource_url": "https://api.discogs.com/artists/4397370"
+        },
+        {
+          "active": true,
+          "id": 4397375,
+          "name": "Steven Honigberg",
+          "resource_url": "https://api.discogs.com/artists/4397375"
+        },
+        {
+          "active": false,
+          "id": 4625561,
+          "name": "John Hood (4)",
+          "resource_url": "https://api.discogs.com/artists/4625561"
+        },
+        {
+          "active": false,
+          "id": 4625582,
+          "name": "Harold Robinson (6)",
+          "resource_url": "https://api.discogs.com/artists/4625582"
+        },
+        {
+          "active": false,
+          "id": 4625599,
+          "name": "Lisa-Beth Lambert",
+          "resource_url": "https://api.discogs.com/artists/4625599"
+        },
+        {
+          "active": true,
+          "id": 5048300,
+          "name": "Adriana Horne",
+          "resource_url": "https://api.discogs.com/artists/5048300"
+        },
+        {
+          "active": true,
+          "id": 5048303,
+          "name": "Alexander Jacobsen",
+          "resource_url": "https://api.discogs.com/artists/5048303"
+        },
+        {
+          "active": false,
+          "id": 5542767,
+          "name": "Marjorie Neal",
+          "resource_url": "https://api.discogs.com/artists/5542767"
+        },
+        {
+          "active": true,
+          "id": 6039916,
+          "name": "Nancy Bittner",
+          "resource_url": "https://api.discogs.com/artists/6039916"
+        },
+        {
+          "active": true,
+          "id": 6040741,
+          "name": "Glenn Donnellan",
+          "resource_url": "https://api.discogs.com/artists/6040741"
+        },
+        {
+          "active": true,
+          "id": 6131344,
+          "name": "Robert Oppelt",
+          "resource_url": "https://api.discogs.com/artists/6131344"
+        },
+        {
+          "active": true,
+          "id": 6241167,
+          "name": "Steve Dumaine",
+          "resource_url": "https://api.discogs.com/artists/6241167"
+        },
+        {
+          "active": false,
+          "id": 6663848,
+          "name": "Jeremy Buckler",
+          "resource_url": "https://api.discogs.com/artists/6663848"
+        },
+        {
+          "active": true,
+          "id": 6778076,
+          "name": "Jauvon Gilliam",
+          "resource_url": "https://api.discogs.com/artists/6778076"
+        },
+        {
+          "active": true,
+          "id": 7333947,
+          "name": "Heather LeDoux Green",
+          "resource_url": "https://api.discogs.com/artists/7333947"
+        },
+        {
+          "active": false,
+          "id": 7431012,
+          "name": "Steven Gross",
+          "resource_url": "https://api.discogs.com/artists/7431012"
+        },
+        {
+          "active": true,
+          "id": 7576671,
+          "name": "Woodwinds Section Of The National Symphony Orchestra",
+          "resource_url": "https://api.discogs.com/artists/7576671"
+        },
+        {
+          "active": true,
+          "id": 7648518,
+          "name": "Kathryn Meany",
+          "resource_url": "https://api.discogs.com/artists/7648518"
+        },
+        {
+          "active": true,
+          "id": 7719301,
+          "name": "Jane Bowyer-Stewart",
+          "resource_url": "https://api.discogs.com/artists/7719301"
+        },
+        {
+          "active": true,
+          "id": 7833114,
+          "name": "Eugena Chang",
+          "resource_url": "https://api.discogs.com/artists/7833114"
+        },
+        {
+          "active": true,
+          "id": 8592696,
+          "name": "Laurel Bennert Ohlson",
+          "resource_url": "https://api.discogs.com/artists/8592696"
+        },
+        {
+          "active": true,
+          "id": 8592699,
+          "name": "Steven Wilson (16)",
+          "resource_url": "https://api.discogs.com/artists/8592699"
+        },
+        {
+          "active": true,
+          "id": 8592702,
+          "name": "Paul Cigan",
+          "resource_url": "https://api.discogs.com/artists/8592702"
+        },
+        {
+          "active": true,
+          "id": 8592705,
+          "name": "Aaron Goldman (3)",
+          "resource_url": "https://api.discogs.com/artists/8592705"
+        },
+        {
+          "active": true,
+          "id": 8592708,
+          "name": "Carole Bean",
+          "resource_url": "https://api.discogs.com/artists/8592708"
+        },
+        {
+          "active": true,
+          "id": 8592711,
+          "name": "Nicholas Stovall",
+          "resource_url": "https://api.discogs.com/artists/8592711"
+        },
+        {
+          "active": true,
+          "id": 8844622,
+          "name": "Harrison Linsey",
+          "resource_url": "https://api.discogs.com/artists/8844622"
+        },
+        {
+          "active": true,
+          "id": 10873006,
+          "name": "Dayna Hepler",
+          "resource_url": "https://api.discogs.com/artists/10873006"
+        },
+        {
+          "active": true,
+          "id": 11106179,
+          "name": "Britton Riley",
+          "resource_url": "https://api.discogs.com/artists/11106179"
+        },
+        {
+          "active": true,
+          "id": 14289829,
+          "name": "Glen Howard (2)",
+          "resource_url": "https://api.discogs.com/artists/14289829"
+        },
+        {
+          "active": true,
+          "id": 17007562,
+          "name": "Jamie Roberts (15)",
+          "resource_url": "https://api.discogs.com/artists/17007562"
+        }
+      ],
       "name": "National Symphony Orchestra",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "915941",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/915941"
-      },
+      "namevariations": [
+        "Members of the National Symphony Orchestra",
+        "Nacionalnim Simfonijskim Orkestrom",
+        "Nat. Symph. Orch.",
+        "National Symphonic Orchestra Of Washington, D.C.",
+        "National Symphonie-Orchester",
+        "National Symphony",
+        "National Symphony Orchestra & Chorus",
+        "National Symphony Orchestra & Chorus Washington D.C.",
+        "National Symphony Orchestra (Washington, D. C.)",
+        "National Symphony Orchestra (Washington, D.C.)",
+        "National Symphony Orchestra De Washington",
+        "National Symphony Orchestra Ensemble",
+        "National Symphony Orchestra Of America",
+        "National Symphony Orchestra Of Washingron",
+        "National Symphony Orchestra Of Washington",
+        "National Symphony Orchestra Of Washington D. C.",
+        "National Symphony Orchestra Of Washington D.C.",
+        "National Symphony Orchestra Of Washington DC",
+        "National Symphony Orchestra Of Washington, D. C.",
+        "National Symphony Orchestra Of Washington, D.C",
+        "National Symphony Orchestra Of Washington, D.C.",
+        "National Symphony Orchestra Washington",
+        "National Symphony Orchestra of Washington",
+        "National Symphony Orchestra of Washington D.C.",
+        "National Symphony Orchestra of Washington, D.C.",
+        "National Symphony Orchestra, New York",
+        "National Symphony Orchestra, Washington",
+        "National Symphony Orchestra, Washington D. C.",
+        "National Symphony Orchestra, Washington D.C.",
+        "National Symphony Orchestra, Washington DC",
+        "National Symphony Orchestra, Washington, D.C.",
+        "National Symphony Orchestra, Washinton",
+        "National Symphony Washington",
+        "National Symphony, Washington, D.C.",
+        "Nemzeti Filharmonikus",
+        "Nemzeti Szimfonikus Zenekar",
+        "Orchestre Symphonique De Washington",
+        "Orchestre Symphonique National De Washington",
+        "Orquesta Sinfónica Nacional De Washington",
+        "Orquesta Sinfónica Nacional De Washington, D. C.",
+        "Orquesta Sinfónica Nacional de Washington D.C.",
+        "Orquestra Simfónica de Nemzeti",
+        "Orquestra Sinfônica Nacional De Washington, D.C.",
+        "Th National Symphony Orchestra",
+        "The National Orchestra",
+        "The National Symphony",
+        "The National Symphony Orchestra",
+        "The National Symphony Orchestra (Washington, D. C.)",
+        "The National Symphony Orchestra (Washington, D.C.)",
+        "The National Symphony Orchestra Of Washington, D.C.",
+        "Washington National Symphony",
+        "Washington National Symphony Orchestra",
+        "Εθνική Συμφωνική Ορχήστρα",
+        "Национальный Оркестр США",
+        "ナショナル交響楽団",
+        "ワシントン・ナショナル交響楽団",
+        "ワシントン･ナショナル交響楽団"
+      ],
+      "profile": "National Symphony Orchestra of Washington, D.C.\r\nNOTE: This is the US based orchestra. For the UK based one, see [a1486049].\r\n\r\nFounded in 1931. In 1986, the National Symphony became an artistic affiliate of the John F. Kennedy Center for the Performing Arts, where it has performed a full season of subscription concerts since the Center opened in 1971. The 96-member NSO participates in televised appearances for Capitol Concerts, and local radio broadcasts on Classical WETA 90.9FM.\r\n\r\nThe NSO performs approximately 150 concerts each year, including classical and popular concerts at the Kennedy Center, at Wolf Trap in the summer, and on the lawn of the U.S. Capitol. Members give chamber music performances in the Kennedy Center's Terrace Theater and on its Millennium Stage, and at theaters around Washington, D.C. The Orchestra also has a history of touring, both internationally and nationally, in addition to its American Residencies program, which ran from 1992 to 2011.\r\n\r\nThe NSO has collaborated with artists as Boyz II Men, Common, Ben Folds, Kendrick Lamar, Nas, Mason Bates, and Bryce Dessner; tabla virtuoso Zakir Hussain; Broadway stars Megan Hilty, Audra MacDonald, Laura Osnes, and Santino Fontana; rock stars the Indigo Girls and Melissa Etheridge, country singer LeAnn Rimes; and jazz pianist Jason Moran.\r\n\r\nThrough its Hechinger Commissioning Fund, the NSO has commissioned and premiered more than 60 new works by American composers since the fund's creation in 1983. Since 1934, the NSO has been bringing U.S. and world premieres to Washington, D.C. audiences.",
+      "releases_url": "https://api.discogs.com/artists/915941/releases",
       "resource_url": "https://api.discogs.com/artists/915941",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/915941",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/915941-National-Symphony-Orchestra",
+      "urls": [
+        "https://en.wikipedia.org/w/index.php?title=National_Symphony_Orchestra&oldid=128213680",
+        "https://www.kennedy-center.org/nso/home/",
+        "https://www.facebook.com/National.Symphony/",
+        "https://adp.library.ucsb.edu/index.php/mastertalent/detail/104306/National_Symphony_Orchestra_Washington_D.C"
+      ]
     },
     "identity": {
       "musicbrainz_id": "1a027fee-9e96-4d07-b424-b6bc7ca65c0a",
@@ -123,33 +834,745 @@
       "wikipedia_title": "National Symphony Orchestra"
     },
     "lastfm": "ArtistLastFmData(name='National Symphony Orchestra', url='https://www.last.fm/music/National+Symphony+Orchestra', mbid='0ac37373-df8a-4dd8-a0e9-9324f1a066d7', listeners=3733, playcount=24983, bio_summary='The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>', bio_content='The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'orchestral', 'contemporary classical'], similar_artists=[{'name': 'Kim Criswell', 'url': 'https://www.last.fm/music/Kim+Criswell'}, {'name': 'Brian Greene', 'url': 'https://www.last.fm/music/Brian+Greene'}, {'name': 'Graham Bickley', 'url': 'https://www.last.fm/music/Graham+Bickley'}, {'name': 'Maria Friedman', 'url': 'https://www.last.fm/music/Maria+Friedman'}, {'name': 'Ron Raines', 'url': 'https://www.last.fm/music/Ron+Raines'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'National Symphony Orchestra', 'mbid': '0ac37373-df8a-4dd8-a0e9-9324f1a066d7', 'url': 'https://www.last.fm/music/National+Symphony+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3733', 'playcount': '24983'}, 'similar': {'artist': [{'name': 'Kim Criswell', 'url': 'https://www.last.fm/music/Kim+Criswell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Brian Greene', 'url': 'https://www.last.fm/music/Brian+Greene', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Graham Bickley', 'url': 'https://www.last.fm/music/Graham+Bickley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Maria Friedman', 'url': 'https://www.last.fm/music/Maria+Friedman', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ron Raines', 'url': 'https://www.last.fm/music/Ron+Raines', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'orchestral', 'url': 'https://www.last.fm/tag/orchestral'}, {'name': 'contemporary classical', 'url': 'https://www.last.fm/tag/contemporary+classical'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/National+Symphony+Orchestra/+wiki'}}, 'published': '21 Mar 2023, 13:55', 'summary': 'The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>', 'content': 'The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
-    "spotify": "ArtistSpotifyData(id='58n1bNWH1HPQmx5R9uJ7Gi', url='https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi', name='National Symphony Orchestra', popularity=31, followers=1727, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, 'followers': {'href': None, 'total': 1727}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/58n1bNWH1HPQmx5R9uJ7Gi', 'id': '58n1bNWH1HPQmx5R9uJ7Gi', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], 'name': 'National Symphony Orchestra', 'popularity': 31, 'type': 'artist', 'uri': 'spotify:artist:58n1bNWH1HPQmx5R9uJ7Gi'})"
+    "spotify": "ArtistSpotifyData(id='58n1bNWH1HPQmx5R9uJ7Gi', url='https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi', name='National Symphony Orchestra', popularity=31, followers=1727, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, 'followers': {'href': None, 'total': 1727}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/58n1bNWH1HPQmx5R9uJ7Gi', 'id': '58n1bNWH1HPQmx5R9uJ7Gi', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], 'name': 'National Symphony Orchestra', 'popularity': 31, 'type': 'artist', 'uri': 'spotify:artist:58n1bNWH1HPQmx5R9uJ7Gi'})",
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1438159645', url='https://music.apple.com/gb/artist/national-symphony-orchestra/1438159645', name='National Symphony Orchestra', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dc/8e/2f/dc8e2f95-b54c-0347-94f9-3de506e40d09/25UMGIM55624.rgb.jpg/2000x2000ac.jpg', genres=['Classical'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1438159645', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1438159645', 'attributes': {'name': 'National Symphony Orchestra', 'genreNames': ['Classical'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dc/8e/2f/dc8e2f95-b54c-0347-94f9-3de506e40d09/25UMGIM55624.rgb.jpg/{w}x{h}ac.jpg', 'bgColor': '00467f', 'textColor1': 'c2d6fa', 'textColor2': 'adcdf9', 'textColor3': '9bb9e1', 'textColor4': '8ab2e0'}, 'url': 'https://music.apple.com/gb/artist/national-symphony-orchestra/1438159645'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1438159645/albums', 'data': [{'id': '1805156628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1805156628'}, {'id': '1801248804', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1801248804'}, {'id': '1797171811', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1797171811'}, {'id': '1798505000', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1798505000'}, {'id': '1703530917', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1703530917'}, {'id': '1819687282', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819687282'}, {'id': '1819679340', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819679340'}, {'id': '1819682324', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819682324'}, {'id': '1819680230', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1819680230'}, {'id': '1372126108', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1372126108'}, {'id': '1348555215', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348555215'}, {'id': '1320448986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1320448986'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "915941",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 2890059,
+          "name": "Globe Symphony Orchestra",
+          "resource_url": "https://api.discogs.com/artists/2890059"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 915941,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/gI2qHic60kPN5zs0-H8AcvVCigmQXqfbNI-guswGwBI/rs:fit/g:sm/q:90/h:301/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gI2qHic60kPN5zs0-H8AcvVCigmQXqfbNI-guswGwBI/rs:fit/g:sm/q:90/h:301/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NqUUuJk19Ps9o8BOSvYEz0JfzE9_tB_l6MzWf4WiCc8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNTk0/MS0xNDU1MjAwMzcz/LTEyMjIuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 337958,
+          "name": "Harvey Wolfe",
+          "resource_url": "https://api.discogs.com/artists/337958"
+        },
+        {
+          "active": true,
+          "id": 394289,
+          "name": "Carole Evans",
+          "resource_url": "https://api.discogs.com/artists/394289"
+        },
+        {
+          "active": false,
+          "id": 464105,
+          "name": "Raymond Kobler",
+          "resource_url": "https://api.discogs.com/artists/464105"
+        },
+        {
+          "active": false,
+          "id": 550341,
+          "name": "Leonard Slatkin",
+          "resource_url": "https://api.discogs.com/artists/550341"
+        },
+        {
+          "active": false,
+          "id": 839412,
+          "name": "Christoph Eschenbach",
+          "resource_url": "https://api.discogs.com/artists/839412"
+        },
+        {
+          "active": false,
+          "id": 839505,
+          "name": "William Steck",
+          "resource_url": "https://api.discogs.com/artists/839505"
+        },
+        {
+          "active": false,
+          "id": 841582,
+          "name": "Robert Marcellus",
+          "resource_url": "https://api.discogs.com/artists/841582"
+        },
+        {
+          "active": false,
+          "id": 895108,
+          "name": "Ann Hobson",
+          "resource_url": "https://api.discogs.com/artists/895108"
+        },
+        {
+          "active": false,
+          "id": 938317,
+          "name": "Jay Wadenpfuhl",
+          "resource_url": "https://api.discogs.com/artists/938317"
+        },
+        {
+          "active": true,
+          "id": 942019,
+          "name": "Lambert Orkis",
+          "resource_url": "https://api.discogs.com/artists/942019"
+        },
+        {
+          "active": true,
+          "id": 943006,
+          "name": "David Teie",
+          "resource_url": "https://api.discogs.com/artists/943006"
+        },
+        {
+          "active": false,
+          "id": 997520,
+          "name": "Lei Hou",
+          "resource_url": "https://api.discogs.com/artists/997520"
+        },
+        {
+          "active": true,
+          "id": 1021575,
+          "name": "Elizabeth Blakeslee",
+          "resource_url": "https://api.discogs.com/artists/1021575"
+        },
+        {
+          "active": true,
+          "id": 1025162,
+          "name": "Mahoko Eguchi",
+          "resource_url": "https://api.discogs.com/artists/1025162"
+        },
+        {
+          "active": true,
+          "id": 1043795,
+          "name": "David Hardy",
+          "resource_url": "https://api.discogs.com/artists/1043795"
+        },
+        {
+          "active": false,
+          "id": 1056950,
+          "name": "Doriot Anthony Dwyer",
+          "resource_url": "https://api.discogs.com/artists/1056950"
+        },
+        {
+          "active": false,
+          "id": 1063195,
+          "name": "David Premo",
+          "resource_url": "https://api.discogs.com/artists/1063195"
+        },
+        {
+          "active": true,
+          "id": 1113567,
+          "name": "Loren Kitt",
+          "resource_url": "https://api.discogs.com/artists/1113567"
+        },
+        {
+          "active": true,
+          "id": 1113573,
+          "name": "Glenn Garlick",
+          "resource_url": "https://api.discogs.com/artists/1113573"
+        },
+        {
+          "active": true,
+          "id": 1127480,
+          "name": "Joel Fuller",
+          "resource_url": "https://api.discogs.com/artists/1127480"
+        },
+        {
+          "active": true,
+          "id": 1312283,
+          "name": "Ruth Wicker",
+          "resource_url": "https://api.discogs.com/artists/1312283"
+        },
+        {
+          "active": false,
+          "id": 1366612,
+          "name": "Viola Smith",
+          "resource_url": "https://api.discogs.com/artists/1366612"
+        },
+        {
+          "active": false,
+          "id": 1406386,
+          "name": "Robert Marsteller",
+          "resource_url": "https://api.discogs.com/artists/1406386"
+        },
+        {
+          "active": false,
+          "id": 1413766,
+          "name": "Max Hobart",
+          "resource_url": "https://api.discogs.com/artists/1413766"
+        },
+        {
+          "active": true,
+          "id": 1422599,
+          "name": "Loewi Lin",
+          "resource_url": "https://api.discogs.com/artists/1422599"
+        },
+        {
+          "active": false,
+          "id": 1541662,
+          "name": "Luis Biava",
+          "resource_url": "https://api.discogs.com/artists/1541662"
+        },
+        {
+          "active": false,
+          "id": 1580901,
+          "name": "Leo Panasevich",
+          "resource_url": "https://api.discogs.com/artists/1580901"
+        },
+        {
+          "active": false,
+          "id": 1687849,
+          "name": "Leonard Sharrow",
+          "resource_url": "https://api.discogs.com/artists/1687849"
+        },
+        {
+          "active": false,
+          "id": 1691191,
+          "name": "Hector De Leon",
+          "resource_url": "https://api.discogs.com/artists/1691191"
+        },
+        {
+          "active": false,
+          "id": 1719785,
+          "name": "Bernard Robbins",
+          "resource_url": "https://api.discogs.com/artists/1719785"
+        },
+        {
+          "active": true,
+          "id": 1756469,
+          "name": "Nurit Bar-Josef",
+          "resource_url": "https://api.discogs.com/artists/1756469"
+        },
+        {
+          "active": false,
+          "id": 1773940,
+          "name": "Harry Brabec",
+          "resource_url": "https://api.discogs.com/artists/1773940"
+        },
+        {
+          "active": false,
+          "id": 1957722,
+          "name": "Frank Sinatra (2)",
+          "resource_url": "https://api.discogs.com/artists/1957722"
+        },
+        {
+          "active": false,
+          "id": 1957724,
+          "name": "Neil Courtney",
+          "resource_url": "https://api.discogs.com/artists/1957724"
+        },
+        {
+          "active": false,
+          "id": 1957729,
+          "name": "Vernon Kirkpatrick",
+          "resource_url": "https://api.discogs.com/artists/1957729"
+        },
+        {
+          "active": false,
+          "id": 1957732,
+          "name": "Sylvia Meyer",
+          "resource_url": "https://api.discogs.com/artists/1957732"
+        },
+        {
+          "active": false,
+          "id": 1957738,
+          "name": "John Martin (21)",
+          "resource_url": "https://api.discogs.com/artists/1957738"
+        },
+        {
+          "active": false,
+          "id": 1958977,
+          "name": "John Mack (2)",
+          "resource_url": "https://api.discogs.com/artists/1958977"
+        },
+        {
+          "active": false,
+          "id": 1970425,
+          "name": "Abe Torchinsky",
+          "resource_url": "https://api.discogs.com/artists/1970425"
+        },
+        {
+          "active": true,
+          "id": 1998852,
+          "name": "Lewis Lipnick",
+          "resource_url": "https://api.discogs.com/artists/1998852"
+        },
+        {
+          "active": true,
+          "id": 2080871,
+          "name": "William Neil",
+          "resource_url": "https://api.discogs.com/artists/2080871"
+        },
+        {
+          "active": false,
+          "id": 2199623,
+          "name": "Gabriel Bartold",
+          "resource_url": "https://api.discogs.com/artists/2199623"
+        },
+        {
+          "active": true,
+          "id": 2243511,
+          "name": "David Murray (7)",
+          "resource_url": "https://api.discogs.com/artists/2243511"
+        },
+        {
+          "active": true,
+          "id": 2281311,
+          "name": "Susan Heineman",
+          "resource_url": "https://api.discogs.com/artists/2281311"
+        },
+        {
+          "active": true,
+          "id": 2315428,
+          "name": "Kenneth Harbison",
+          "resource_url": "https://api.discogs.com/artists/2315428"
+        },
+        {
+          "active": false,
+          "id": 2328549,
+          "name": "Luis Leguia",
+          "resource_url": "https://api.discogs.com/artists/2328549"
+        },
+        {
+          "active": false,
+          "id": 2328576,
+          "name": "Geralyn Coticone",
+          "resource_url": "https://api.discogs.com/artists/2328576"
+        },
+        {
+          "active": false,
+          "id": 2328590,
+          "name": "Dennis Roy",
+          "resource_url": "https://api.discogs.com/artists/2328590"
+        },
+        {
+          "active": false,
+          "id": 2328608,
+          "name": "Roland Small",
+          "resource_url": "https://api.discogs.com/artists/2328608"
+        },
+        {
+          "active": true,
+          "id": 2351491,
+          "name": "Craig Mulcahy (2)",
+          "resource_url": "https://api.discogs.com/artists/2351491"
+        },
+        {
+          "active": true,
+          "id": 2511179,
+          "name": "Leah Arsenault",
+          "resource_url": "https://api.discogs.com/artists/2511179"
+        },
+        {
+          "active": false,
+          "id": 2828076,
+          "name": "Larrie Howard",
+          "resource_url": "https://api.discogs.com/artists/2828076"
+        },
+        {
+          "active": false,
+          "id": 2962586,
+          "name": "Samuel Krauss",
+          "resource_url": "https://api.discogs.com/artists/2962586"
+        },
+        {
+          "active": false,
+          "id": 3009667,
+          "name": "Sidney Curtiss",
+          "resource_url": "https://api.discogs.com/artists/3009667"
+        },
+        {
+          "active": false,
+          "id": 3079757,
+          "name": "Attilio De Palma",
+          "resource_url": "https://api.discogs.com/artists/3079757"
+        },
+        {
+          "active": true,
+          "id": 3410010,
+          "name": "Wanzhen Li",
+          "resource_url": "https://api.discogs.com/artists/3410010"
+        },
+        {
+          "active": false,
+          "id": 3455141,
+          "name": "Elisabeth Adkins",
+          "resource_url": "https://api.discogs.com/artists/3455141"
+        },
+        {
+          "active": false,
+          "id": 3464177,
+          "name": "Catharina Meints",
+          "resource_url": "https://api.discogs.com/artists/3464177"
+        },
+        {
+          "active": false,
+          "id": 3508320,
+          "name": "Donald E. McComas",
+          "resource_url": "https://api.discogs.com/artists/3508320"
+        },
+        {
+          "active": false,
+          "id": 3508321,
+          "name": "Stevens Hewitt",
+          "resource_url": "https://api.discogs.com/artists/3508321"
+        },
+        {
+          "active": true,
+          "id": 3544995,
+          "name": "Lisa Emenheiser",
+          "resource_url": "https://api.discogs.com/artists/3544995"
+        },
+        {
+          "active": false,
+          "id": 3622221,
+          "name": "Marc Lifschey",
+          "resource_url": "https://api.discogs.com/artists/3622221"
+        },
+        {
+          "active": false,
+          "id": 3689743,
+          "name": "Albert Tipton",
+          "resource_url": "https://api.discogs.com/artists/3689743"
+        },
+        {
+          "active": true,
+          "id": 3754759,
+          "name": "Matthew Guilford",
+          "resource_url": "https://api.discogs.com/artists/3754759"
+        },
+        {
+          "active": true,
+          "id": 3779125,
+          "name": "James Nickel",
+          "resource_url": "https://api.discogs.com/artists/3779125"
+        },
+        {
+          "active": false,
+          "id": 4000438,
+          "name": "Margaret Gutierrez",
+          "resource_url": "https://api.discogs.com/artists/4000438"
+        },
+        {
+          "active": false,
+          "id": 4066122,
+          "name": "Stanley Hoffman",
+          "resource_url": "https://api.discogs.com/artists/4066122"
+        },
+        {
+          "active": false,
+          "id": 4120268,
+          "name": "Gil Breines",
+          "resource_url": "https://api.discogs.com/artists/4120268"
+        },
+        {
+          "active": true,
+          "id": 4145897,
+          "name": "Marissa Regni",
+          "resource_url": "https://api.discogs.com/artists/4145897"
+        },
+        {
+          "active": false,
+          "id": 4220429,
+          "name": "John Krell",
+          "resource_url": "https://api.discogs.com/artists/4220429"
+        },
+        {
+          "active": false,
+          "id": 4244838,
+          "name": "Franz Vlashek",
+          "resource_url": "https://api.discogs.com/artists/4244838"
+        },
+        {
+          "active": true,
+          "id": 4285496,
+          "name": "Jeffrey Weisner",
+          "resource_url": "https://api.discogs.com/artists/4285496"
+        },
+        {
+          "active": true,
+          "id": 4289727,
+          "name": "Steven Hendrickson",
+          "resource_url": "https://api.discogs.com/artists/4289727"
+        },
+        {
+          "active": true,
+          "id": 4355166,
+          "name": "Charles Wilkinson",
+          "resource_url": "https://api.discogs.com/artists/4355166"
+        },
+        {
+          "active": true,
+          "id": 4386026,
+          "name": "Abel Pereira",
+          "resource_url": "https://api.discogs.com/artists/4386026"
+        },
+        {
+          "active": true,
+          "id": 4397370,
+          "name": "Tsuna Sakamoto",
+          "resource_url": "https://api.discogs.com/artists/4397370"
+        },
+        {
+          "active": true,
+          "id": 4397375,
+          "name": "Steven Honigberg",
+          "resource_url": "https://api.discogs.com/artists/4397375"
+        },
+        {
+          "active": false,
+          "id": 4625561,
+          "name": "John Hood (4)",
+          "resource_url": "https://api.discogs.com/artists/4625561"
+        },
+        {
+          "active": false,
+          "id": 4625582,
+          "name": "Harold Robinson (6)",
+          "resource_url": "https://api.discogs.com/artists/4625582"
+        },
+        {
+          "active": false,
+          "id": 4625599,
+          "name": "Lisa-Beth Lambert",
+          "resource_url": "https://api.discogs.com/artists/4625599"
+        },
+        {
+          "active": true,
+          "id": 5048300,
+          "name": "Adriana Horne",
+          "resource_url": "https://api.discogs.com/artists/5048300"
+        },
+        {
+          "active": true,
+          "id": 5048303,
+          "name": "Alexander Jacobsen",
+          "resource_url": "https://api.discogs.com/artists/5048303"
+        },
+        {
+          "active": false,
+          "id": 5542767,
+          "name": "Marjorie Neal",
+          "resource_url": "https://api.discogs.com/artists/5542767"
+        },
+        {
+          "active": true,
+          "id": 6039916,
+          "name": "Nancy Bittner",
+          "resource_url": "https://api.discogs.com/artists/6039916"
+        },
+        {
+          "active": true,
+          "id": 6040741,
+          "name": "Glenn Donnellan",
+          "resource_url": "https://api.discogs.com/artists/6040741"
+        },
+        {
+          "active": true,
+          "id": 6131344,
+          "name": "Robert Oppelt",
+          "resource_url": "https://api.discogs.com/artists/6131344"
+        },
+        {
+          "active": true,
+          "id": 6241167,
+          "name": "Steve Dumaine",
+          "resource_url": "https://api.discogs.com/artists/6241167"
+        },
+        {
+          "active": false,
+          "id": 6663848,
+          "name": "Jeremy Buckler",
+          "resource_url": "https://api.discogs.com/artists/6663848"
+        },
+        {
+          "active": true,
+          "id": 6778076,
+          "name": "Jauvon Gilliam",
+          "resource_url": "https://api.discogs.com/artists/6778076"
+        },
+        {
+          "active": true,
+          "id": 7333947,
+          "name": "Heather LeDoux Green",
+          "resource_url": "https://api.discogs.com/artists/7333947"
+        },
+        {
+          "active": false,
+          "id": 7431012,
+          "name": "Steven Gross",
+          "resource_url": "https://api.discogs.com/artists/7431012"
+        },
+        {
+          "active": true,
+          "id": 7576671,
+          "name": "Woodwinds Section Of The National Symphony Orchestra",
+          "resource_url": "https://api.discogs.com/artists/7576671"
+        },
+        {
+          "active": true,
+          "id": 7648518,
+          "name": "Kathryn Meany",
+          "resource_url": "https://api.discogs.com/artists/7648518"
+        },
+        {
+          "active": true,
+          "id": 7719301,
+          "name": "Jane Bowyer-Stewart",
+          "resource_url": "https://api.discogs.com/artists/7719301"
+        },
+        {
+          "active": true,
+          "id": 7833114,
+          "name": "Eugena Chang",
+          "resource_url": "https://api.discogs.com/artists/7833114"
+        },
+        {
+          "active": true,
+          "id": 8592696,
+          "name": "Laurel Bennert Ohlson",
+          "resource_url": "https://api.discogs.com/artists/8592696"
+        },
+        {
+          "active": true,
+          "id": 8592699,
+          "name": "Steven Wilson (16)",
+          "resource_url": "https://api.discogs.com/artists/8592699"
+        },
+        {
+          "active": true,
+          "id": 8592702,
+          "name": "Paul Cigan",
+          "resource_url": "https://api.discogs.com/artists/8592702"
+        },
+        {
+          "active": true,
+          "id": 8592705,
+          "name": "Aaron Goldman (3)",
+          "resource_url": "https://api.discogs.com/artists/8592705"
+        },
+        {
+          "active": true,
+          "id": 8592708,
+          "name": "Carole Bean",
+          "resource_url": "https://api.discogs.com/artists/8592708"
+        },
+        {
+          "active": true,
+          "id": 8592711,
+          "name": "Nicholas Stovall",
+          "resource_url": "https://api.discogs.com/artists/8592711"
+        },
+        {
+          "active": true,
+          "id": 8844622,
+          "name": "Harrison Linsey",
+          "resource_url": "https://api.discogs.com/artists/8844622"
+        },
+        {
+          "active": true,
+          "id": 10873006,
+          "name": "Dayna Hepler",
+          "resource_url": "https://api.discogs.com/artists/10873006"
+        },
+        {
+          "active": true,
+          "id": 11106179,
+          "name": "Britton Riley",
+          "resource_url": "https://api.discogs.com/artists/11106179"
+        },
+        {
+          "active": true,
+          "id": 14289829,
+          "name": "Glen Howard (2)",
+          "resource_url": "https://api.discogs.com/artists/14289829"
+        },
+        {
+          "active": true,
+          "id": 17007562,
+          "name": "Jamie Roberts (15)",
+          "resource_url": "https://api.discogs.com/artists/17007562"
+        }
+      ],
       "name": "National Symphony Orchestra",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "915941",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/915941"
-      },
+      "namevariations": [
+        "Members of the National Symphony Orchestra",
+        "Nacionalnim Simfonijskim Orkestrom",
+        "Nat. Symph. Orch.",
+        "National Symphonic Orchestra Of Washington, D.C.",
+        "National Symphonie-Orchester",
+        "National Symphony",
+        "National Symphony Orchestra & Chorus",
+        "National Symphony Orchestra & Chorus Washington D.C.",
+        "National Symphony Orchestra (Washington, D. C.)",
+        "National Symphony Orchestra (Washington, D.C.)",
+        "National Symphony Orchestra De Washington",
+        "National Symphony Orchestra Ensemble",
+        "National Symphony Orchestra Of America",
+        "National Symphony Orchestra Of Washingron",
+        "National Symphony Orchestra Of Washington",
+        "National Symphony Orchestra Of Washington D. C.",
+        "National Symphony Orchestra Of Washington D.C.",
+        "National Symphony Orchestra Of Washington DC",
+        "National Symphony Orchestra Of Washington, D. C.",
+        "National Symphony Orchestra Of Washington, D.C",
+        "National Symphony Orchestra Of Washington, D.C.",
+        "National Symphony Orchestra Washington",
+        "National Symphony Orchestra of Washington",
+        "National Symphony Orchestra of Washington D.C.",
+        "National Symphony Orchestra of Washington, D.C.",
+        "National Symphony Orchestra, New York",
+        "National Symphony Orchestra, Washington",
+        "National Symphony Orchestra, Washington D. C.",
+        "National Symphony Orchestra, Washington D.C.",
+        "National Symphony Orchestra, Washington DC",
+        "National Symphony Orchestra, Washington, D.C.",
+        "National Symphony Orchestra, Washinton",
+        "National Symphony Washington",
+        "National Symphony, Washington, D.C.",
+        "Nemzeti Filharmonikus",
+        "Nemzeti Szimfonikus Zenekar",
+        "Orchestre Symphonique De Washington",
+        "Orchestre Symphonique National De Washington",
+        "Orquesta Sinfónica Nacional De Washington",
+        "Orquesta Sinfónica Nacional De Washington, D. C.",
+        "Orquesta Sinfónica Nacional de Washington D.C.",
+        "Orquestra Simfónica de Nemzeti",
+        "Orquestra Sinfônica Nacional De Washington, D.C.",
+        "Th National Symphony Orchestra",
+        "The National Orchestra",
+        "The National Symphony",
+        "The National Symphony Orchestra",
+        "The National Symphony Orchestra (Washington, D. C.)",
+        "The National Symphony Orchestra (Washington, D.C.)",
+        "The National Symphony Orchestra Of Washington, D.C.",
+        "Washington National Symphony",
+        "Washington National Symphony Orchestra",
+        "Εθνική Συμφωνική Ορχήστρα",
+        "Национальный Оркестр США",
+        "ナショナル交響楽団",
+        "ワシントン・ナショナル交響楽団",
+        "ワシントン･ナショナル交響楽団"
+      ],
+      "profile": "National Symphony Orchestra of Washington, D.C.\r\nNOTE: This is the US based orchestra. For the UK based one, see [a1486049].\r\n\r\nFounded in 1931. In 1986, the National Symphony became an artistic affiliate of the John F. Kennedy Center for the Performing Arts, where it has performed a full season of subscription concerts since the Center opened in 1971. The 96-member NSO participates in televised appearances for Capitol Concerts, and local radio broadcasts on Classical WETA 90.9FM.\r\n\r\nThe NSO performs approximately 150 concerts each year, including classical and popular concerts at the Kennedy Center, at Wolf Trap in the summer, and on the lawn of the U.S. Capitol. Members give chamber music performances in the Kennedy Center's Terrace Theater and on its Millennium Stage, and at theaters around Washington, D.C. The Orchestra also has a history of touring, both internationally and nationally, in addition to its American Residencies program, which ran from 1992 to 2011.\r\n\r\nThe NSO has collaborated with artists as Boyz II Men, Common, Ben Folds, Kendrick Lamar, Nas, Mason Bates, and Bryce Dessner; tabla virtuoso Zakir Hussain; Broadway stars Megan Hilty, Audra MacDonald, Laura Osnes, and Santino Fontana; rock stars the Indigo Girls and Melissa Etheridge, country singer LeAnn Rimes; and jazz pianist Jason Moran.\r\n\r\nThrough its Hechinger Commissioning Fund, the NSO has commissioned and premiered more than 60 new works by American composers since the fund's creation in 1983. Since 1934, the NSO has been bringing U.S. and world premieres to Washington, D.C. audiences.",
+      "releases_url": "https://api.discogs.com/artists/915941/releases",
       "resource_url": "https://api.discogs.com/artists/915941",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/915941",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/915941-National-Symphony-Orchestra",
+      "urls": [
+        "https://en.wikipedia.org/w/index.php?title=National_Symphony_Orchestra&oldid=128213680",
+        "https://www.kennedy-center.org/nso/home/",
+        "https://www.facebook.com/National.Symphony/",
+        "https://adp.library.ucsb.edu/index.php/mastertalent/detail/104306/National_Symphony_Orchestra_Washington_D.C"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='National Symphony Orchestra', url='https://www.last.fm/music/National+Symphony+Orchestra', mbid='0ac37373-df8a-4dd8-a0e9-9324f1a066d7', listeners=3733, playcount=24983, bio_summary='The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>', bio_content='The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'orchestral', 'contemporary classical'], similar_artists=[{'name': 'Kim Criswell', 'url': 'https://www.last.fm/music/Kim+Criswell'}, {'name': 'Brian Greene', 'url': 'https://www.last.fm/music/Brian+Greene'}, {'name': 'Graham Bickley', 'url': 'https://www.last.fm/music/Graham+Bickley'}, {'name': 'Maria Friedman', 'url': 'https://www.last.fm/music/Maria+Friedman'}, {'name': 'Ron Raines', 'url': 'https://www.last.fm/music/Ron+Raines'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'National Symphony Orchestra', 'mbid': '0ac37373-df8a-4dd8-a0e9-9324f1a066d7', 'url': 'https://www.last.fm/music/National+Symphony+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3733', 'playcount': '24983'}, 'similar': {'artist': [{'name': 'Kim Criswell', 'url': 'https://www.last.fm/music/Kim+Criswell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Brian Greene', 'url': 'https://www.last.fm/music/Brian+Greene', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Graham Bickley', 'url': 'https://www.last.fm/music/Graham+Bickley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Maria Friedman', 'url': 'https://www.last.fm/music/Maria+Friedman', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ron Raines', 'url': 'https://www.last.fm/music/Ron+Raines', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'orchestral', 'url': 'https://www.last.fm/tag/orchestral'}, {'name': 'contemporary classical', 'url': 'https://www.last.fm/tag/contemporary+classical'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/National+Symphony+Orchestra/+wiki'}}, 'published': '21 Mar 2023, 13:55', 'summary': 'The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>', 'content': 'The National Symphony Orchestra is an American symphony orchestra based in Washington, D.C. Founded in 1930 by cellist Hans Kindler, its principal performing venue is the John F. Kennedy Center for the Performing Arts. <a href=\"https://www.last.fm/music/National+Symphony+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='58n1bNWH1HPQmx5R9uJ7Gi', url='https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi', name='National Symphony Orchestra', popularity=31, followers=1727, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi'}, 'followers': {'href': None, 'total': 1727}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/58n1bNWH1HPQmx5R9uJ7Gi', 'id': '58n1bNWH1HPQmx5R9uJ7Gi', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273eabe4cf2bff93151cabb7c59', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02eabe4cf2bff93151cabb7c59', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851eabe4cf2bff93151cabb7c59', 'height': 64, 'width': 64}], 'name': 'National Symphony Orchestra', 'popularity': 31, 'type': 'artist', 'uri': 'spotify:artist:58n1bNWH1HPQmx5R9uJ7Gi'})"
   },
   "spotify_id": "58n1bNWH1HPQmx5R9uJ7Gi",
   "spotify_url": "https://open.spotify.com/artist/58n1bNWH1HPQmx5R9uJ7Gi",
-  "updated_at": "2026-10-22T14:09:33.513823",
+  "updated_at": "2026-10-30T18:42:54.192498",
   "wikipedia_url": "https://en.wikipedia.org/wiki/National_Symphony_Orchestra"
 }

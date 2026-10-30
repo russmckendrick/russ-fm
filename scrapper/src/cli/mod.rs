@@ -106,6 +106,10 @@ pub enum Command {
     /// ID, then fix TheAudioDB matches, Wikipedia links and biographies a name lookup got wrong.
     /// Resumable; artists with a stored identity aren't looked up again (unless `--force`).
     BackfillIdentities(BackfillIdentitiesArgs),
+    /// Re-fetch the Discogs artist (members, groups, aliases, profile) by its stored Discogs ID
+    /// for artists holding only a placeholder: the old scrapper's failed-fetch stub or the
+    /// release credit a new artist row is seeded with. Resumable; real payloads are skipped.
+    BackfillArtistDiscogs(BackfillArtistDiscogsArgs),
     /// Download each artist's TheAudioDB fanart (wide background photos) next to its hi-res
     /// photo as `{slug}-fanart01.jpg`, `-fanart02.jpg`, … from the URLs already stored; no API
     /// calls. Resumable; artists with every fanart file on disk are skipped (unless `--force`).
@@ -399,6 +403,22 @@ pub struct BackfillIdentitiesArgs {
 }
 
 #[derive(Debug, Args)]
+pub struct BackfillArtistDiscogsArgs {
+    /// Only fetch this many artists (by name).
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Only this artist (exact name, any case).
+    #[arg(short, long)]
+    pub artist: Option<String>,
+    /// List the artists that would be fetched, without calling Discogs or writing anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Fetch every artist again, including ones with a real Discogs payload.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+}
+
+#[derive(Debug, Args)]
 pub struct BackfillFanartArgs {
     /// Only download for this many artists (by name).
     #[arg(short, long)]
@@ -600,6 +620,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::BackfillTracklists(a) => ops::tracklists::run(&cfg, a).await,
         Command::BackfillCredits(a) => ops::credits::run(&cfg, a).await,
         Command::BackfillIdentities(a) => ops::identity::run(&cfg, a).await,
+        Command::BackfillArtistDiscogs(a) => ops::artist_discogs::run(&cfg, a).await,
         Command::BackfillFanart(a) => ops::fanart::run(&cfg, a).await,
         Command::Upscale(a) => ops::upscale::run(&cfg, a).await,
     }

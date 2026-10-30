@@ -117,22 +117,68 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='547192558', url='https://music.apple.com/gb/artist/atoms-for-peace/547192558', name='Atoms for Peace', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e5/b2/66/e5b26668-4433-6855-1897-a07442d10180/mzl.rkkbkged.jpg/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '547192558', 'type': 'artists', 'href': '/v1/catalog/gb/artists/547192558', 'attributes': {'name': 'Atoms for Peace', 'genreNames': ['Electronic'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e5/b2/66/e5b26668-4433-6855-1897-a07442d10180/mzl.rkkbkged.jpg/{w}x{h}bb.jpg', 'bgColor': '1c0a08', 'textColor1': 'e1e1b8', 'textColor2': 'd7d5a3', 'textColor3': 'b9b695', 'textColor4': 'b2ac84'}, 'url': 'https://music.apple.com/gb/artist/atoms-for-peace/547192558'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/547192558/albums', 'data': [{'id': '1545337159', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1545337159'}, {'id': '1675649772', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675649772'}, {'id': '1491536003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1491536003'}, {'id': '1490524719', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1490524719'}, {'id': '1490524925', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1490524925'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1879701",
-      "images": [],
-      "members": [],
-      "name": "Atoms For Peace",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1879701",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1879701"
-      },
+      "data_quality": "Needs Vote",
+      "id": 1879701,
+      "images": [
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/bgn2cF8voI0fJMEabSS7tCbJ9eohN-acI_jTqC_Lw8U/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/bgn2cF8voI0fJMEabSS7tCbJ9eohN-acI_jTqC_Lw8U/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MNM4zoQ5ntie9WDOb5lCiO_a5iEHAhI1wxFZ2TagdjU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/2sjTUgGB_i2wm-PnYoE5XlpENUE190G8_bKP9BrB4rQ/rs:fit/g:sm/q:90/h:350/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2sjTUgGB_i2wm-PnYoE5XlpENUE190G8_bKP9BrB4rQ/rs:fit/g:sm/q:90/h:350/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/51ABbyohc2sucCrzH4ExbGQpjNBwVRexBsiPnvI2veU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "width": 452
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4854,
+          "name": "Thom Yorke",
+          "resource_url": "https://api.discogs.com/artists/4854"
+        },
+        {
+          "active": true,
+          "id": 169094,
+          "name": "Nigel Godrich",
+          "resource_url": "https://api.discogs.com/artists/169094"
+        },
+        {
+          "active": true,
+          "id": 287868,
+          "name": "Mauro Refosco",
+          "resource_url": "https://api.discogs.com/artists/287868"
+        },
+        {
+          "active": true,
+          "id": 293887,
+          "name": "Joey Waronker",
+          "resource_url": "https://api.discogs.com/artists/293887"
+        },
+        {
+          "active": true,
+          "id": 700584,
+          "name": "Michael Balzary",
+          "resource_url": "https://api.discogs.com/artists/700584"
+        }
+      ],
+      "name": "Atoms For Peace (2)",
+      "profile": "English-American rock supergroup comprising the Radiohead songwriter Thom Yorke (vocals, guitar, piano), the Red Hot Chili Peppers bassist Flea, the Radiohead producer Nigel Godrich (keyboards, synthesisers, guitars), the Beck and R.E.M. drummer Joey Waronker, and the Forro in the Dark percussionist Mauro Refosco.",
+      "releases_url": "https://api.discogs.com/artists/1879701/releases",
       "resource_url": "https://api.discogs.com/artists/1879701",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1879701",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1879701-Atoms-For-Peace-2",
+      "urls": [
+        "https://www.facebook.com/atomsforpeace",
+        "https://www.youtube.com/user/atomsforpeacetv",
+        "https://en.wikipedia.org/wiki/Atoms_for_Peace_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "9e299bee-d7e2-49f3-8cd7-d6b28ab204d1",
@@ -225,27 +271,87 @@
         "track": "Before Your Very Eyes",
         "uri": "https://www.youtube.com/watch?v=ZWrUEsVrdSU"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q5251084",
+        "track": "Default",
+        "uri": "https://www.youtube.com/watch?v=yxWBd840E9g"
+      },
+      {
+        "album": null,
+        "id": "Q6302446",
+        "track": "Judge, Jury and Executioner",
+        "uri": "https://www.youtube.com/watch?v=r4tW3mhp9io"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='547192558', url='https://music.apple.com/gb/artist/atoms-for-peace/547192558', name='Atoms for Peace', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e5/b2/66/e5b26668-4433-6855-1897-a07442d10180/mzl.rkkbkged.jpg/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '547192558', 'type': 'artists', 'href': '/v1/catalog/gb/artists/547192558', 'attributes': {'name': 'Atoms for Peace', 'genreNames': ['Electronic'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e5/b2/66/e5b26668-4433-6855-1897-a07442d10180/mzl.rkkbkged.jpg/{w}x{h}bb.jpg', 'bgColor': '1c0a08', 'textColor1': 'e1e1b8', 'textColor2': 'd7d5a3', 'textColor3': 'b9b695', 'textColor4': 'b2ac84'}, 'url': 'https://music.apple.com/gb/artist/atoms-for-peace/547192558'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/547192558/albums', 'data': [{'id': '1545337159', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1545337159'}, {'id': '1675649772', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675649772'}, {'id': '1491536003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1491536003'}, {'id': '1490524719', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1490524719'}, {'id': '1490524925', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1490524925'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1879701",
-      "images": [],
-      "members": [],
-      "name": "Atoms For Peace",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "1879701",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1879701"
-      },
+      "data_quality": "Needs Vote",
+      "id": 1879701,
+      "images": [
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/bgn2cF8voI0fJMEabSS7tCbJ9eohN-acI_jTqC_Lw8U/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/bgn2cF8voI0fJMEabSS7tCbJ9eohN-acI_jTqC_Lw8U/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MNM4zoQ5ntie9WDOb5lCiO_a5iEHAhI1wxFZ2TagdjU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTUxNTUxODc5/Ny00NDk3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/2sjTUgGB_i2wm-PnYoE5XlpENUE190G8_bKP9BrB4rQ/rs:fit/g:sm/q:90/h:350/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2sjTUgGB_i2wm-PnYoE5XlpENUE190G8_bKP9BrB4rQ/rs:fit/g:sm/q:90/h:350/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/51ABbyohc2sucCrzH4ExbGQpjNBwVRexBsiPnvI2veU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4Nzk3/MDEtMTMyMzgwMTM0/NS5qcGVn.jpeg",
+          "width": 452
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4854,
+          "name": "Thom Yorke",
+          "resource_url": "https://api.discogs.com/artists/4854"
+        },
+        {
+          "active": true,
+          "id": 169094,
+          "name": "Nigel Godrich",
+          "resource_url": "https://api.discogs.com/artists/169094"
+        },
+        {
+          "active": true,
+          "id": 287868,
+          "name": "Mauro Refosco",
+          "resource_url": "https://api.discogs.com/artists/287868"
+        },
+        {
+          "active": true,
+          "id": 293887,
+          "name": "Joey Waronker",
+          "resource_url": "https://api.discogs.com/artists/293887"
+        },
+        {
+          "active": true,
+          "id": 700584,
+          "name": "Michael Balzary",
+          "resource_url": "https://api.discogs.com/artists/700584"
+        }
+      ],
+      "name": "Atoms For Peace (2)",
+      "profile": "English-American rock supergroup comprising the Radiohead songwriter Thom Yorke (vocals, guitar, piano), the Red Hot Chili Peppers bassist Flea, the Radiohead producer Nigel Godrich (keyboards, synthesisers, guitars), the Beck and R.E.M. drummer Joey Waronker, and the Forro in the Dark percussionist Mauro Refosco.",
+      "releases_url": "https://api.discogs.com/artists/1879701/releases",
       "resource_url": "https://api.discogs.com/artists/1879701",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1879701",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1879701-Atoms-For-Peace-2",
+      "urls": [
+        "https://www.facebook.com/atomsforpeace",
+        "https://www.youtube.com/user/atomsforpeacetv",
+        "https://en.wikipedia.org/wiki/Atoms_for_Peace_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Atoms for Peace', url='https://www.last.fm/music/Atoms+for+Peace', mbid='9e299bee-d7e2-49f3-8cd7-d6b28ab204d1', listeners=363102, playcount=8978877, bio_summary='Atoms for Peace are an experimental rock and electronic group formed in late 2009 in Los Angeles, California, United States. The group consists of Radiohead lead singer Thom Yorke (vocals, guitars, and piano), Red Hot Chili Peppers bassist Flea (bass guitar), longtime Radiohead producer Nigel Godrich (keyboards, synths), Joey Waronker of Beck and R.E.M. (drums), and Brazilian instrumentalist Mauro Refosco (percussion). Their debut album, Amok, became available for streaming on February 18, 2013, and was released on February 25, 2013. <a href=\"https://www.last.fm/music/Atoms+for+Peace\">Read more on Last.fm</a>', bio_content='Atoms for Peace are an experimental rock and electronic group formed in late 2009 in Los Angeles, California, United States. The group consists of Radiohead lead singer Thom Yorke (vocals, guitars, and piano), Red Hot Chili Peppers bassist Flea (bass guitar), longtime Radiohead producer Nigel Godrich (keyboards, synths), Joey Waronker of Beck and R.E.M. (drums), and Brazilian instrumentalist Mauro Refosco (percussion). Their debut album, Amok, became available for streaming on February 18, 2013, and was released on February 25, 2013.\\n\\nThe band shares a name with both the 1953 speech by American president Dwight D. Eisenhower and a song from Yorke\\'s debut solo album The Eraser. On their website, under their name, is the phrase \"Nerth Nuclerek? Na Vynnav\" which is in the Cornish language and can be translated as Nuclear Power? No Thanks. This is the text from the Smiling Sun anti nuclear power logo, which has been translated into at least 49 languages, including Cornish.\\n\\nThom Yorke has stated that the members of Atoms for Peace bonded over a shared love of the music of afrobeat, and said in an interview that the debut album was \"the product of getting together, getting wasted and listening to Fela Kuti.\"\\n\\nhttp://www.atomsforpeace.info <a href=\"https://www.last.fm/music/Atoms+for+Peace\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'experimental', 'alternative', 'indie rock', 'Supergroup'], similar_artists=[{'name': 'Thom Yorke', 'url': 'https://www.last.fm/music/Thom+Yorke'}, {'name': 'Radiohead', 'url': 'https://www.last.fm/music/Radiohead'}, {'name': 'EOB', 'url': 'https://www.last.fm/music/EOB'}, {'name': 'Jonny Greenwood', 'url': 'https://www.last.fm/music/Jonny+Greenwood'}, {'name': 'Ataxia', 'url': 'https://www.last.fm/music/Ataxia'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Atoms for Peace', 'mbid': '9e299bee-d7e2-49f3-8cd7-d6b28ab204d1', 'url': 'https://www.last.fm/music/Atoms+for+Peace', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '363102', 'playcount': '8978877'}, 'similar': {'artist': [{'name': 'Thom Yorke', 'url': 'https://www.last.fm/music/Thom+Yorke', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Radiohead', 'url': 'https://www.last.fm/music/Radiohead', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'EOB', 'url': 'https://www.last.fm/music/EOB', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jonny Greenwood', 'url': 'https://www.last.fm/music/Jonny+Greenwood', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ataxia', 'url': 'https://www.last.fm/music/Ataxia', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'Supergroup', 'url': 'https://www.last.fm/tag/Supergroup'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Atoms+for+Peace/+wiki'}}, 'published': '15 Jan 2007, 03:40', 'summary': 'Atoms for Peace are an experimental rock and electronic group formed in late 2009 in Los Angeles, California, United States. The group consists of Radiohead lead singer Thom Yorke (vocals, guitars, and piano), Red Hot Chili Peppers bassist Flea (bass guitar), longtime Radiohead producer Nigel Godrich (keyboards, synths), Joey Waronker of Beck and R.E.M. (drums), and Brazilian instrumentalist Mauro Refosco (percussion). Their debut album, Amok, became available for streaming on February 18, 2013, and was released on February 25, 2013. <a href=\"https://www.last.fm/music/Atoms+for+Peace\">Read more on Last.fm</a>', 'content': 'Atoms for Peace are an experimental rock and electronic group formed in late 2009 in Los Angeles, California, United States. The group consists of Radiohead lead singer Thom Yorke (vocals, guitars, and piano), Red Hot Chili Peppers bassist Flea (bass guitar), longtime Radiohead producer Nigel Godrich (keyboards, synths), Joey Waronker of Beck and R.E.M. (drums), and Brazilian instrumentalist Mauro Refosco (percussion). Their debut album, Amok, became available for streaming on February 18, 2013, and was released on February 25, 2013.\\n\\nThe band shares a name with both the 1953 speech by American president Dwight D. Eisenhower and a song from Yorke\\'s debut solo album The Eraser. On their website, under their name, is the phrase \"Nerth Nuclerek? Na Vynnav\" which is in the Cornish language and can be translated as Nuclear Power? No Thanks. This is the text from the Smiling Sun anti nuclear power logo, which has been translated into at least 49 languages, including Cornish.\\n\\nThom Yorke has stated that the members of Atoms for Peace bonded over a shared love of the music of afrobeat, and said in an interview that the debut album was \"the product of getting together, getting wasted and listening to Fela Kuti.\"\\n\\nhttp://www.atomsforpeace.info <a href=\"https://www.last.fm/music/Atoms+for+Peace\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7tA9Eeeb68kkiG9Nrvuzmi', url='https://open.spotify.com/artist/7tA9Eeeb68kkiG9Nrvuzmi', name='Atoms For Peace', popularity=40, followers=245156, genres=[], images=[{'url': 'https://i.scdn.co/image/9b1ffc6a92b4c3e384b28e636acd6019de3854ca', 'height': 290, 'width': 290}, {'url': 'https://i.scdn.co/image/4b03730b3e5230e17810599514704dcbd4973851', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/c114117429a29885c8bbf51b1879d382adbcc01b', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7tA9Eeeb68kkiG9Nrvuzmi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7tA9Eeeb68kkiG9Nrvuzmi'}, 'followers': {'href': None, 'total': 245156}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7tA9Eeeb68kkiG9Nrvuzmi', 'id': '7tA9Eeeb68kkiG9Nrvuzmi', 'images': [{'url': 'https://i.scdn.co/image/9b1ffc6a92b4c3e384b28e636acd6019de3854ca', 'height': 290, 'width': 290}, {'url': 'https://i.scdn.co/image/4b03730b3e5230e17810599514704dcbd4973851', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/c114117429a29885c8bbf51b1879d382adbcc01b', 'height': 64, 'width': 64}], 'name': 'Atoms For Peace', 'popularity': 40, 'type': 'artist', 'uri': 'spotify:artist:7tA9Eeeb68kkiG9Nrvuzmi'})",
@@ -316,6 +422,6 @@
   },
   "spotify_id": "7tA9Eeeb68kkiG9Nrvuzmi",
   "spotify_url": "https://open.spotify.com/artist/7tA9Eeeb68kkiG9Nrvuzmi",
-  "updated_at": "2026-10-22T14:04:50.617130",
+  "updated_at": "2026-10-30T18:36:08.451543",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Atoms_for_Peace_(band)"
 }

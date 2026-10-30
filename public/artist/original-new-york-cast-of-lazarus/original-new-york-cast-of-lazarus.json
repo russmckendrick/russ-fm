@@ -90,128 +90,205 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1153807871', url='https://music.apple.com/gb/artist/original-new-york-cast-of-lazarus/1153807871', name='Original New York Cast of Lazarus', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/af/33/7faf33aa-36be-fd5a-a3ae-f4f0cc8d68c1/5021732281258.jpg/2000x2000ac.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1153807871', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1153807871', 'attributes': {'name': 'Original New York Cast of Lazarus', 'genreNames': ['Soundtrack'], 'artwork': {'width': 1425, 'height': 1425, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/af/33/7faf33aa-36be-fd5a-a3ae-f4f0cc8d68c1/5021732281258.jpg/{w}x{h}ac.jpg', 'bgColor': '241b2e', 'textColor1': 'd5becb', 'textColor2': 'd9b1ab', 'textColor3': 'b19eac', 'textColor4': 'b49392'}, 'url': 'https://music.apple.com/gb/artist/original-new-york-cast-of-lazarus/1153807871'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1153807871/albums', 'data': [{'id': '1742980993', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1742980993'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5328868",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 5328868,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/M6EJ47awNbzVM73e9t0pkcHOlyY_6Wp8kmAXt7xgseI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/M6EJ47awNbzVM73e9t0pkcHOlyY_6Wp8kmAXt7xgseI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jw0fUxZZy6coM_5-831gKrGMQRxo9O5lnZXYWuvtMyQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1926707,
+          "name": "Michael C. Hall",
+          "resource_url": "https://api.discogs.com/artists/1926707"
+        },
+        {
+          "active": true,
+          "id": 3797844,
+          "name": "Cristin Milioti",
+          "resource_url": "https://api.discogs.com/artists/3797844"
+        },
+        {
+          "active": true,
+          "id": 4632041,
+          "name": "Lynn Craig",
+          "resource_url": "https://api.discogs.com/artists/4632041"
+        },
+        {
+          "active": true,
+          "id": 5328865,
+          "name": "Nicholas Christopher",
+          "resource_url": "https://api.discogs.com/artists/5328865"
+        },
+        {
+          "active": true,
+          "id": 5328866,
+          "name": "Krystina Alabado",
+          "resource_url": "https://api.discogs.com/artists/5328866"
+        },
+        {
+          "active": true,
+          "id": 5328867,
+          "name": "Michael Esper",
+          "resource_url": "https://api.discogs.com/artists/5328867"
+        },
+        {
+          "active": true,
+          "id": 5344014,
+          "name": "Sophia Anne Caruso",
+          "resource_url": "https://api.discogs.com/artists/5344014"
+        },
+        {
+          "active": true,
+          "id": 5344072,
+          "name": "Bobby Moreno",
+          "resource_url": "https://api.discogs.com/artists/5344072"
+        },
+        {
+          "active": true,
+          "id": 5344073,
+          "name": "Krista Pioppi",
+          "resource_url": "https://api.discogs.com/artists/5344073"
+        },
+        {
+          "active": true,
+          "id": 5344074,
+          "name": "Charlie Pollock",
+          "resource_url": "https://api.discogs.com/artists/5344074"
+        },
+        {
+          "active": true,
+          "id": 5344076,
+          "name": "Brynn Williams",
+          "resource_url": "https://api.discogs.com/artists/5344076"
+        }
+      ],
       "name": "Original New York Cast Of Lazarus",
-      "namevariations": [],
+      "namevariations": [
+        "Original New York Cast",
+        "The Original New York Cast Of Lazarus"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "5328868",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5328868"
-      },
+      "releases_url": "https://api.discogs.com/artists/5328868/releases",
       "resource_url": "https://api.discogs.com/artists/5328868",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5328868",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5328868-Original-New-York-Cast-Of-Lazarus"
+    },
+    "identity": {
+      "musicbrainz_id": null,
+      "resolved_at": "2026-10-22T14:09:57.907784",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Original New York Cast Of Lazarus', url='https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus', mbid=None, listeners=33, playcount=371, bio_summary='<a href=\"https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus\">Read more on Last.fm</a>', bio_content=None, tags=['rock', 'musical', 'Broadway', 'rock glam'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Original New York Cast Of Lazarus', 'url': 'https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '33', 'playcount': '371'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'musical', 'url': 'https://www.last.fm/tag/musical'}, {'name': 'Broadway', 'url': 'https://www.last.fm/tag/Broadway'}, {'name': 'rock glam', 'url': 'https://www.last.fm/tag/rock+glam'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Original+New+York+Cast+Of+Lazarus/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='7fZlFuOck9dKaLMSOXUvGf', url='https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf', name='Original New York Cast of Lazarus', popularity=20, followers=104, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273cbf545a71b98d7d2e2f52c73', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02cbf545a71b98d7d2e2f52c73', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851cbf545a71b98d7d2e2f52c73', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf'}, 'followers': {'href': None, 'total': 104}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7fZlFuOck9dKaLMSOXUvGf', 'id': '7fZlFuOck9dKaLMSOXUvGf', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273cbf545a71b98d7d2e2f52c73', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02cbf545a71b98d7d2e2f52c73', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851cbf545a71b98d7d2e2f52c73', 'height': 64, 'width': 64}], 'name': 'Original New York Cast of Lazarus', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:7fZlFuOck9dKaLMSOXUvGf'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/af/33/7faf33aa-36be-fd5a-a3ae-f4f0cc8d68c1/5021732281258.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Soundtrack"
-      ],
-      "id": "1153807871",
-      "name": "Original New York Cast of Lazarus",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/original-new-york-cast-of-lazarus/1153807871"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1153807871', url='https://music.apple.com/gb/artist/original-new-york-cast-of-lazarus/1153807871', name='Original New York Cast of Lazarus', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/af/33/7faf33aa-36be-fd5a-a3ae-f4f0cc8d68c1/5021732281258.jpg/2000x2000ac.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1153807871', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1153807871', 'attributes': {'name': 'Original New York Cast of Lazarus', 'genreNames': ['Soundtrack'], 'artwork': {'width': 1425, 'height': 1425, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/af/33/7faf33aa-36be-fd5a-a3ae-f4f0cc8d68c1/5021732281258.jpg/{w}x{h}ac.jpg', 'bgColor': '241b2e', 'textColor1': 'd5becb', 'textColor2': 'd9b1ab', 'textColor3': 'b19eac', 'textColor4': 'b49392'}, 'url': 'https://music.apple.com/gb/artist/original-new-york-cast-of-lazarus/1153807871'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1153807871/albums', 'data': [{'id': '1742980993', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1742980993'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5328868",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Major Changes",
+      "id": 5328868,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/M6EJ47awNbzVM73e9t0pkcHOlyY_6Wp8kmAXt7xgseI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/M6EJ47awNbzVM73e9t0pkcHOlyY_6Wp8kmAXt7xgseI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jw0fUxZZy6coM_5-831gKrGMQRxo9O5lnZXYWuvtMyQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjg4/NjgtMTQ3NzA4OTcz/Ni03ODM1LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1926707,
+          "name": "Michael C. Hall",
+          "resource_url": "https://api.discogs.com/artists/1926707"
+        },
+        {
+          "active": true,
+          "id": 3797844,
+          "name": "Cristin Milioti",
+          "resource_url": "https://api.discogs.com/artists/3797844"
+        },
+        {
+          "active": true,
+          "id": 4632041,
+          "name": "Lynn Craig",
+          "resource_url": "https://api.discogs.com/artists/4632041"
+        },
+        {
+          "active": true,
+          "id": 5328865,
+          "name": "Nicholas Christopher",
+          "resource_url": "https://api.discogs.com/artists/5328865"
+        },
+        {
+          "active": true,
+          "id": 5328866,
+          "name": "Krystina Alabado",
+          "resource_url": "https://api.discogs.com/artists/5328866"
+        },
+        {
+          "active": true,
+          "id": 5328867,
+          "name": "Michael Esper",
+          "resource_url": "https://api.discogs.com/artists/5328867"
+        },
+        {
+          "active": true,
+          "id": 5344014,
+          "name": "Sophia Anne Caruso",
+          "resource_url": "https://api.discogs.com/artists/5344014"
+        },
+        {
+          "active": true,
+          "id": 5344072,
+          "name": "Bobby Moreno",
+          "resource_url": "https://api.discogs.com/artists/5344072"
+        },
+        {
+          "active": true,
+          "id": 5344073,
+          "name": "Krista Pioppi",
+          "resource_url": "https://api.discogs.com/artists/5344073"
+        },
+        {
+          "active": true,
+          "id": 5344074,
+          "name": "Charlie Pollock",
+          "resource_url": "https://api.discogs.com/artists/5344074"
+        },
+        {
+          "active": true,
+          "id": 5344076,
+          "name": "Brynn Williams",
+          "resource_url": "https://api.discogs.com/artists/5344076"
+        }
+      ],
       "name": "Original New York Cast Of Lazarus",
-      "namevariations": [],
+      "namevariations": [
+        "Original New York Cast",
+        "The Original New York Cast Of Lazarus"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "5328868",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5328868"
-      },
+      "releases_url": "https://api.discogs.com/artists/5328868/releases",
       "resource_url": "https://api.discogs.com/artists/5328868",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5328868",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5328868-Original-New-York-Cast-Of-Lazarus"
     },
-    "lastfm": {
-      "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 33,
-      "mbid": null,
-      "name": "Original New York Cast Of Lazarus",
-      "playcount": 371,
-      "similar_artists": [],
-      "tags": [
-        "rock",
-        "musical",
-        "Broadway",
-        "rock glam"
-      ],
-      "url": "https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus"
-    },
-    "spotify": {
-      "followers": 104,
-      "genres": [],
-      "id": "7fZlFuOck9dKaLMSOXUvGf",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273cbf545a71b98d7d2e2f52c73",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02cbf545a71b98d7d2e2f52c73",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851cbf545a71b98d7d2e2f52c73",
-          "width": 64
-        }
-      ],
-      "name": "Original New York Cast of Lazarus",
-      "popularity": 20,
-      "url": "https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf"
-    },
+    "lastfm": "ArtistLastFmData(name='Original New York Cast Of Lazarus', url='https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus', mbid=None, listeners=33, playcount=371, bio_summary='<a href=\"https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus\">Read more on Last.fm</a>', bio_content=None, tags=['rock', 'musical', 'Broadway', 'rock glam'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Original New York Cast Of Lazarus', 'url': 'https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '33', 'playcount': '371'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'musical', 'url': 'https://www.last.fm/tag/musical'}, {'name': 'Broadway', 'url': 'https://www.last.fm/tag/Broadway'}, {'name': 'rock glam', 'url': 'https://www.last.fm/tag/rock+glam'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Original+New+York+Cast+Of+Lazarus/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Original+New+York+Cast+Of+Lazarus\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='7fZlFuOck9dKaLMSOXUvGf', url='https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf', name='Original New York Cast of Lazarus', popularity=20, followers=104, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273cbf545a71b98d7d2e2f52c73', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02cbf545a71b98d7d2e2f52c73', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851cbf545a71b98d7d2e2f52c73', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf'}, 'followers': {'href': None, 'total': 104}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7fZlFuOck9dKaLMSOXUvGf', 'id': '7fZlFuOck9dKaLMSOXUvGf', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273cbf545a71b98d7d2e2f52c73', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02cbf545a71b98d7d2e2f52c73', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851cbf545a71b98d7d2e2f52c73', 'height': 64, 'width': 64}], 'name': 'Original New York Cast of Lazarus', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:7fZlFuOck9dKaLMSOXUvGf'})",
     "theaudiodb": {}
   },
   "spotify_id": "7fZlFuOck9dKaLMSOXUvGf",
   "spotify_url": "https://open.spotify.com/artist/7fZlFuOck9dKaLMSOXUvGf",
-  "updated_at": "2025-07-08T20:57:11.568286",
+  "updated_at": "2026-10-30T18:43:27.689133",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Lazarus_(musical)"
 }

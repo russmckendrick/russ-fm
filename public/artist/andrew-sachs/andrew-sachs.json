@@ -37,22 +37,65 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='3413144', url='https://music.apple.com/gb/artist/andrew-sachs/3413144', name='Andrew Sachs', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/22/44/2f/22442f9c-7b0f-6b5e-4e41-e8a6e911373e/842108077054.jpg/2000x2000ac.jpg', genres=['Biography'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3413144', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3413144', 'attributes': {'name': 'Andrew Sachs', 'genreNames': ['Biography'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/22/44/2f/22442f9c-7b0f-6b5e-4e41-e8a6e911373e/842108077054.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'c7cde7', 'textColor2': 'a6b3d4', 'textColor3': '9fa4b8', 'textColor4': '858faa'}, 'url': 'https://music.apple.com/gb/artist/andrew-sachs/3413144'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3413144/albums', 'data': [{'id': '418162799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/418162799'}, {'id': '422971682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422971682'}, {'id': '422787806', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422787806'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "434401",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 645068,
+          "name": "Manuel (10)",
+          "resource_url": "https://api.discogs.com/artists/645068"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        }
+      ],
+      "id": 434401,
+      "images": [
+        {
+          "height": 221,
+          "resource_url": "https://i.discogs.com/8WWbKxXOzWb3E01RQrYR2cHiub08PMjpgK7xQBJu5DM/rs:fit/g:sm/q:90/h:221/w:191/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/8WWbKxXOzWb3E01RQrYR2cHiub08PMjpgK7xQBJu5DM/rs:fit/g:sm/q:90/h:221/w:191/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/-sxNYqdwBwe03pm1XtcktUj0mwrX_r0BAA3FLrRuLIc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "width": 191
+        },
+        {
+          "height": 240,
+          "resource_url": "https://i.discogs.com/n2nsqjcPdnNCw5xbVpIzm_YmcjgxVXnKltGL91J1eVM/rs:fit/g:sm/q:90/h:240/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n2nsqjcPdnNCw5xbVpIzm_YmcjgxVXnKltGL91J1eVM/rs:fit/g:sm/q:90/h:240/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vF3Zt76W3e0cnH5tg-rX8VehI-njV-2od7D_2ATQbBs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "width": 350
+        },
+        {
+          "height": 261,
+          "resource_url": "https://i.discogs.com/s00z7Y3utTQFZ4dMCjVXaUzm30qol7rVTzokBeK4zLk/rs:fit/g:sm/q:90/h:261/w:171/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s00z7Y3utTQFZ4dMCjVXaUzm30qol7rVTzokBeK4zLk/rs:fit/g:sm/q:90/h:261/w:171/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xvfPq2XNFa_HoCS9rGjBRqgHKYFfbPKtFMf4XClAkgQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "width": 171
+        }
+      ],
       "name": "Andrew Sachs",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "434401",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/434401"
-      },
+      "namevariations": [
+        "A. Sachs",
+        "Manuel",
+        "Manuel (Andrew Sachs)",
+        "Sachs"
+      ],
+      "profile": "Andrew Sachs (born 7 April 1930, Berlin, Germany - died 23 November 2016, Northwood, London, England) was a German-born British actor and narrator. He is perhaps best known for his role as the Spanish waiter \"Manuel\" in the UK television comedy [i]Fawlty Towers[/i] (1975-79). Grandfather of [a1607463].",
+      "realname": "Andreas Siegfried Sachs",
+      "releases_url": "https://api.discogs.com/artists/434401/releases",
       "resource_url": "https://api.discogs.com/artists/434401",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/434401",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/434401-Andrew-Sachs",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Andrew_Sachs",
+        "http://www.imdb.com/name/nm0755133/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "831dd6fb-0330-4a6e-9a14-d1abba457d13",
@@ -62,27 +105,71 @@
     },
     "lastfm": "ArtistLastFmData(name='Andrew Sachs', url='https://www.last.fm/music/Andrew+Sachs', mbid=None, listeners=405, playcount=6018, bio_summary='<a href=\"https://www.last.fm/music/Andrew+Sachs\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[{'name': 'Tim Piggott Smith', 'url': 'https://www.last.fm/music/Tim+Piggott+Smith'}, {'name': 'Alex Jennings', 'url': 'https://www.last.fm/music/Alex+Jennings'}, {'name': 'Roald Dahl', 'url': 'https://www.last.fm/music/Roald+Dahl'}, {'name': 'Peter Egan', 'url': 'https://www.last.fm/music/Peter+Egan'}, {'name': 'Bob Sessions', 'url': 'https://www.last.fm/music/Bob+Sessions'}], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Andrew Sachs', 'url': 'https://www.last.fm/music/Andrew+Sachs', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '405', 'playcount': '6018'}, 'similar': {'artist': [{'name': 'Tim Piggott Smith', 'url': 'https://www.last.fm/music/Tim+Piggott+Smith', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Alex Jennings', 'url': 'https://www.last.fm/music/Alex+Jennings', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Roald Dahl', 'url': 'https://www.last.fm/music/Roald+Dahl', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Peter Egan', 'url': 'https://www.last.fm/music/Peter+Egan', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Bob Sessions', 'url': 'https://www.last.fm/music/Bob+Sessions', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}]}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Andrew+Sachs/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Andrew+Sachs\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": {},
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='3413144', url='https://music.apple.com/gb/artist/andrew-sachs/3413144', name='Andrew Sachs', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/22/44/2f/22442f9c-7b0f-6b5e-4e41-e8a6e911373e/842108077054.jpg/2000x2000ac.jpg', genres=['Biography'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3413144', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3413144', 'attributes': {'name': 'Andrew Sachs', 'genreNames': ['Biography'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/22/44/2f/22442f9c-7b0f-6b5e-4e41-e8a6e911373e/842108077054.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'c7cde7', 'textColor2': 'a6b3d4', 'textColor3': '9fa4b8', 'textColor4': '858faa'}, 'url': 'https://music.apple.com/gb/artist/andrew-sachs/3413144'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3413144/albums', 'data': [{'id': '418162799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/418162799'}, {'id': '422971682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422971682'}, {'id': '422787806', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422787806'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "434401",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 645068,
+          "name": "Manuel (10)",
+          "resource_url": "https://api.discogs.com/artists/645068"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        }
+      ],
+      "id": 434401,
+      "images": [
+        {
+          "height": 221,
+          "resource_url": "https://i.discogs.com/8WWbKxXOzWb3E01RQrYR2cHiub08PMjpgK7xQBJu5DM/rs:fit/g:sm/q:90/h:221/w:191/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/8WWbKxXOzWb3E01RQrYR2cHiub08PMjpgK7xQBJu5DM/rs:fit/g:sm/q:90/h:221/w:191/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/-sxNYqdwBwe03pm1XtcktUj0mwrX_r0BAA3FLrRuLIc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTQ4/LmpwZWc.jpeg",
+          "width": 191
+        },
+        {
+          "height": 240,
+          "resource_url": "https://i.discogs.com/n2nsqjcPdnNCw5xbVpIzm_YmcjgxVXnKltGL91J1eVM/rs:fit/g:sm/q:90/h:240/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n2nsqjcPdnNCw5xbVpIzm_YmcjgxVXnKltGL91J1eVM/rs:fit/g:sm/q:90/h:240/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vF3Zt76W3e0cnH5tg-rX8VehI-njV-2od7D_2ATQbBs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xMTkzMDc0MTMx/LmpwZWc.jpeg",
+          "width": 350
+        },
+        {
+          "height": 261,
+          "resource_url": "https://i.discogs.com/s00z7Y3utTQFZ4dMCjVXaUzm30qol7rVTzokBeK4zLk/rs:fit/g:sm/q:90/h:261/w:171/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s00z7Y3utTQFZ4dMCjVXaUzm30qol7rVTzokBeK4zLk/rs:fit/g:sm/q:90/h:261/w:171/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xvfPq2XNFa_HoCS9rGjBRqgHKYFfbPKtFMf4XClAkgQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQw/MS0xNjc2MTM5MDk3/LTg4NzIuanBlZw.jpeg",
+          "width": 171
+        }
+      ],
       "name": "Andrew Sachs",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "434401",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/434401"
-      },
+      "namevariations": [
+        "A. Sachs",
+        "Manuel",
+        "Manuel (Andrew Sachs)",
+        "Sachs"
+      ],
+      "profile": "Andrew Sachs (born 7 April 1930, Berlin, Germany - died 23 November 2016, Northwood, London, England) was a German-born British actor and narrator. He is perhaps best known for his role as the Spanish waiter \"Manuel\" in the UK television comedy [i]Fawlty Towers[/i] (1975-79). Grandfather of [a1607463].",
+      "realname": "Andreas Siegfried Sachs",
+      "releases_url": "https://api.discogs.com/artists/434401/releases",
       "resource_url": "https://api.discogs.com/artists/434401",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/434401",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/434401-Andrew-Sachs",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Andrew_Sachs",
+        "http://www.imdb.com/name/nm0755133/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Andrew Sachs', url='https://www.last.fm/music/Andrew+Sachs', mbid=None, listeners=405, playcount=6018, bio_summary='<a href=\"https://www.last.fm/music/Andrew+Sachs\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[{'name': 'Tim Piggott Smith', 'url': 'https://www.last.fm/music/Tim+Piggott+Smith'}, {'name': 'Alex Jennings', 'url': 'https://www.last.fm/music/Alex+Jennings'}, {'name': 'Roald Dahl', 'url': 'https://www.last.fm/music/Roald+Dahl'}, {'name': 'Peter Egan', 'url': 'https://www.last.fm/music/Peter+Egan'}, {'name': 'Bob Sessions', 'url': 'https://www.last.fm/music/Bob+Sessions'}], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Andrew Sachs', 'url': 'https://www.last.fm/music/Andrew+Sachs', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '405', 'playcount': '6018'}, 'similar': {'artist': [{'name': 'Tim Piggott Smith', 'url': 'https://www.last.fm/music/Tim+Piggott+Smith', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Alex Jennings', 'url': 'https://www.last.fm/music/Alex+Jennings', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Roald Dahl', 'url': 'https://www.last.fm/music/Roald+Dahl', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Peter Egan', 'url': 'https://www.last.fm/music/Peter+Egan', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Bob Sessions', 'url': 'https://www.last.fm/music/Bob+Sessions', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}]}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Andrew+Sachs/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Andrew+Sachs\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": {},
@@ -90,6 +177,6 @@
   },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2026-10-22T14:04:39.734004",
+  "updated_at": "2026-10-30T18:35:57.457393",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Andrew_Sachs"
 }

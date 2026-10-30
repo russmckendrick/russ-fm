@@ -13,7 +13,7 @@ authoritative flag list of any subcommand.
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
 `backfill-videos`, `backfill-original-years`, `backfill-formats`, `backfill-tracklists`,
-`backfill-credits`, `backfill-identities`, `backfill-fanart`, `upscale`,
+`backfill-credits`, `backfill-identities`, `backfill-artist-discogs`, `backfill-fanart`, `upscale`,
 `maintenance`.
 
 ## Bare invocation
@@ -581,6 +581,56 @@ scrapper backfill-identities
   match changed.
 - New artists resolve their identity in `process_artist`, and `process_release` finds the primary
   artist's Wikipedia article the same way, so this is only needed for artists stored before.
+
+---
+
+## backfill-artist-discogs
+
+Re-fetch the Discogs artist (members, groups, aliases, profile, urls) for artist rows that only
+hold a placeholder where it belongs, so /explore can draw their band links.
+
+```bash
+scrapper backfill-artist-discogs [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only fetch this many artists (by name) |
+| `--artist` | `-a` | TEXT | all | Only this artist (exact name, any case) |
+| `--dry-run` | | FLAG | `false` | List the artists that would be fetched, without calling Discogs or writing anything |
+| `--force` | `-f` | FLAG | `false` | Fetch every artist again, including ones with a real Discogs payload |
+
+### Examples
+
+```bash
+# Who is on a placeholder?
+scrapper backfill-artist-discogs --dry-run
+
+# One artist
+scrapper backfill-artist-discogs --artist Sleep
+
+# Everything (resumable), then rebuild the graph
+scrapper backfill-artist-discogs && pnpm run generate-explore
+```
+
+### Behavior
+
+- Two placeholders count as "no Discogs artist": the Python scrapper's failed-fetch stub
+  (`raw_data.discogs.raw_data = {id, note: "Failed to fetch data automatically", resource_url}`)
+  and the `{id, original_name, role}` release credit a new artist row is seeded with. Neither has
+  a `name`, which every real payload does (`ops::artist_discogs::has_discogs_detail`).
+- Fetches `/artists/{id}` by the stored Discogs ID (the column, else the placeholder's `id`).
+  There is no name search, so no wrong match. Artists with no Discogs ID are listed at the end.
+- Replaces `raw_data.discogs` with the payload (the Rust shape, not the Python
+  `discogs.raw_data` wrapper), keeps a seeded `original_name`, fills a missing `discogs_url`,
+  and persists the artist. That rewrites the artist JSON and the album JSONs that embed it (only
+  their `processed_at` changes). Nothing else on the row is touched.
+- A new release does this for its own artists after `save_release`
+  (`refresh_release_artists`), so new records don't need the backfill.
+- The web UI's Data health page flags these artists ("No Discogs artist detail") with a per-artist
+  and a batch fix.
 
 ---
 

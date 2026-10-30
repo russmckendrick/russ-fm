@@ -124,22 +124,90 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='301599804', url='https://music.apple.com/gb/artist/jason-isbell-and-the-400-unit/301599804', name='Jason Isbell and the 400 Unit', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/4b/f7/d8/4bf7d807-fb4e-6670-5dfb-131e44bf2b09/pr_source.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '301599804', 'type': 'artists', 'href': '/v1/catalog/gb/artists/301599804', 'attributes': {'name': 'Jason Isbell and the 400 Unit', 'genreNames': ['Rock'], 'artwork': {'width': 3919, 'height': 3919, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/4b/f7/d8/4bf7d807-fb4e-6670-5dfb-131e44bf2b09/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '131313', 'textColor1': 'f1f1f1', 'textColor2': 'd5d5d5', 'textColor3': 'c4c4c4', 'textColor4': 'aeaeae'}, 'url': 'https://music.apple.com/gb/artist/jason-isbell-and-the-400-unit/301599804'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/301599804/albums', 'data': [{'id': '1216344634', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1216344634'}, {'id': '1496052578', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1496052578'}, {'id': '1668182705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668182705'}, {'id': '1480315157', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1480315157'}, {'id': '1414572899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1414572899'}, {'id': '1414572899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1414572899'}, {'id': '573355639', 'type': 'albums', 'href': '/v1/catalog/gb/albums/573355639'}, {'id': '573355639', 'type': 'albums', 'href': '/v1/catalog/gb/albums/573355639'}, {'id': '1580629266', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1580629266'}, {'id': '1756613984', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1756613984'}, {'id': '1480316430', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1480316430'}, {'id': '1718897208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718897208'}, {'id': '1679637484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1679637484'}, {'id': '1438552860', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438552860'}, {'id': '1438552860', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438552860'}, {'id': '1436917659', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436917659'}, {'id': '1582665356', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1582665356'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3328885",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3328885,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/udIJrnoHgHi13liQoDp1HIoh_JQkLhVJQDBGHB0I4jE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/udIJrnoHgHi13liQoDp1HIoh_JQkLhVJQDBGHB0I4jE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/R2rbjgtcGl6miylaSt83hYsOxtY4eql1tcZ3A7BoCEk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/y4jccwb9PFuVhvvOiNovrfDOWSS_IcqNnx-iIh8uiUc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/y4jccwb9PFuVhvvOiNovrfDOWSS_IcqNnx-iIh8uiUc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w0mTs_hS-3vF8d49f9nB1CEa750t8bhOsgmAye8kDUU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/-gvoYrc3JpyBUFKdj8HDSoq14sG6cl9u2IUYtdjnCPI/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-gvoYrc3JpyBUFKdj8HDSoq14sG6cl9u2IUYtdjnCPI/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oO6XKjIaZPtKguihADBB6O10nbWyRCn3UdBSaA2YOMA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 929782,
+          "name": "Jason Isbell",
+          "resource_url": "https://api.discogs.com/artists/929782"
+        },
+        {
+          "active": false,
+          "id": 1104134,
+          "name": "Amanda Shires",
+          "resource_url": "https://api.discogs.com/artists/1104134"
+        },
+        {
+          "active": false,
+          "id": 1609962,
+          "name": "Jimbo Hart",
+          "resource_url": "https://api.discogs.com/artists/1609962"
+        },
+        {
+          "active": true,
+          "id": 1609963,
+          "name": "Derry deBorja",
+          "resource_url": "https://api.discogs.com/artists/1609963"
+        },
+        {
+          "active": false,
+          "id": 1609964,
+          "name": "Browan Lollar",
+          "resource_url": "https://api.discogs.com/artists/1609964"
+        },
+        {
+          "active": true,
+          "id": 2216263,
+          "name": "Chad Gamble",
+          "resource_url": "https://api.discogs.com/artists/2216263"
+        },
+        {
+          "active": true,
+          "id": 2974563,
+          "name": "Sadler Vaden",
+          "resource_url": "https://api.discogs.com/artists/2974563"
+        }
+      ],
       "name": "Jason Isbell And The 400 Unit",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3328885",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3328885"
-      },
+      "namevariations": [
+        "Jason Isbell & The 400 Unit",
+        "The 400 Unit"
+      ],
+      "profile": "The band's name comes from the 400 Unit, a colloquial name for the psychiatric ward of Eliza Coffee Memorial Hospital in Florence, Alabama.",
+      "releases_url": "https://api.discogs.com/artists/3328885/releases",
       "resource_url": "https://api.discogs.com/artists/3328885",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3328885",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3328885-Jason-Isbell-And-The-400-Unit",
+      "urls": [
+        "https://www.allmusic.com/artist/jason-isbell-the-400-unit-mn0000673192"
+      ]
     },
     "identity": {
       "musicbrainz_id": "857c2983-0a33-466f-8607-28504ba8a6c0",
@@ -204,27 +272,96 @@
       "strTwitter": "1",
       "strWebsite": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='301599804', url='https://music.apple.com/gb/artist/jason-isbell-and-the-400-unit/301599804', name='Jason Isbell and the 400 Unit', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/4b/f7/d8/4bf7d807-fb4e-6670-5dfb-131e44bf2b09/pr_source.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '301599804', 'type': 'artists', 'href': '/v1/catalog/gb/artists/301599804', 'attributes': {'name': 'Jason Isbell and the 400 Unit', 'genreNames': ['Rock'], 'artwork': {'width': 3919, 'height': 3919, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/4b/f7/d8/4bf7d807-fb4e-6670-5dfb-131e44bf2b09/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '131313', 'textColor1': 'f1f1f1', 'textColor2': 'd5d5d5', 'textColor3': 'c4c4c4', 'textColor4': 'aeaeae'}, 'url': 'https://music.apple.com/gb/artist/jason-isbell-and-the-400-unit/301599804'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/301599804/albums', 'data': [{'id': '1216344634', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1216344634'}, {'id': '1496052578', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1496052578'}, {'id': '1668182705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668182705'}, {'id': '1480315157', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1480315157'}, {'id': '1414572899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1414572899'}, {'id': '1414572899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1414572899'}, {'id': '573355639', 'type': 'albums', 'href': '/v1/catalog/gb/albums/573355639'}, {'id': '573355639', 'type': 'albums', 'href': '/v1/catalog/gb/albums/573355639'}, {'id': '1580629266', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1580629266'}, {'id': '1756613984', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1756613984'}, {'id': '1480316430', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1480316430'}, {'id': '1718897208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718897208'}, {'id': '1679637484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1679637484'}, {'id': '1438552860', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438552860'}, {'id': '1438552860', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1438552860'}, {'id': '1436917659', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436917659'}, {'id': '1582665356', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1582665356'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3328885",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3328885,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/udIJrnoHgHi13liQoDp1HIoh_JQkLhVJQDBGHB0I4jE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/udIJrnoHgHi13liQoDp1HIoh_JQkLhVJQDBGHB0I4jE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/R2rbjgtcGl6miylaSt83hYsOxtY4eql1tcZ3A7BoCEk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTc2MTMyMzgx/Mi05NDkzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/y4jccwb9PFuVhvvOiNovrfDOWSS_IcqNnx-iIh8uiUc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/y4jccwb9PFuVhvvOiNovrfDOWSS_IcqNnx-iIh8uiUc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w0mTs_hS-3vF8d49f9nB1CEa750t8bhOsgmAye8kDUU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTUwMDIzNDUx/MS01NTI1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/-gvoYrc3JpyBUFKdj8HDSoq14sG6cl9u2IUYtdjnCPI/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-gvoYrc3JpyBUFKdj8HDSoq14sG6cl9u2IUYtdjnCPI/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oO6XKjIaZPtKguihADBB6O10nbWyRCn3UdBSaA2YOMA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjg4/ODUtMTQ3MjEzNTY2/OS0zNzYzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 929782,
+          "name": "Jason Isbell",
+          "resource_url": "https://api.discogs.com/artists/929782"
+        },
+        {
+          "active": false,
+          "id": 1104134,
+          "name": "Amanda Shires",
+          "resource_url": "https://api.discogs.com/artists/1104134"
+        },
+        {
+          "active": false,
+          "id": 1609962,
+          "name": "Jimbo Hart",
+          "resource_url": "https://api.discogs.com/artists/1609962"
+        },
+        {
+          "active": true,
+          "id": 1609963,
+          "name": "Derry deBorja",
+          "resource_url": "https://api.discogs.com/artists/1609963"
+        },
+        {
+          "active": false,
+          "id": 1609964,
+          "name": "Browan Lollar",
+          "resource_url": "https://api.discogs.com/artists/1609964"
+        },
+        {
+          "active": true,
+          "id": 2216263,
+          "name": "Chad Gamble",
+          "resource_url": "https://api.discogs.com/artists/2216263"
+        },
+        {
+          "active": true,
+          "id": 2974563,
+          "name": "Sadler Vaden",
+          "resource_url": "https://api.discogs.com/artists/2974563"
+        }
+      ],
       "name": "Jason Isbell And The 400 Unit",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3328885",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3328885"
-      },
+      "namevariations": [
+        "Jason Isbell & The 400 Unit",
+        "The 400 Unit"
+      ],
+      "profile": "The band's name comes from the 400 Unit, a colloquial name for the psychiatric ward of Eliza Coffee Memorial Hospital in Florence, Alabama.",
+      "releases_url": "https://api.discogs.com/artists/3328885/releases",
       "resource_url": "https://api.discogs.com/artists/3328885",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3328885",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3328885-Jason-Isbell-And-The-400-Unit",
+      "urls": [
+        "https://www.allmusic.com/artist/jason-isbell-the-400-unit-mn0000673192"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Jason Isbell and The 400 Unit', url='https://www.last.fm/music/Jason+Isbell+and+The+400+Unit', mbid='4c501a41-5f23-41c9-a36a-5b86e894e08d', listeners=269575, playcount=6308003, bio_summary='Jason Isbell and the 400 Unit is an Americana / Southern rock band originating largely from the Muscle Shoals area of Alabama, and led by former Drive-by Truckers singer / guitarist Jason Isbell.\\n\\nThe band consists of Isbell (vocals, guitar); Sadler Vaden (guitar); Jimbo Hart (bass); Derry DeBorja (keys, accordion); Chad Gamble (drums).\\n\\nFiddle player and singer Amanda Shires features regularly as a session player and occasional touring member.\\n\\nThe <a href=\"https://www.last.fm/music/Jason+Isbell+and+The+400+Unit\">Read more on Last.fm</a>', bio_content='Jason Isbell and the 400 Unit is an Americana / Southern rock band originating largely from the Muscle Shoals area of Alabama, and led by former Drive-by Truckers singer / guitarist Jason Isbell.\\n\\nThe band consists of Isbell (vocals, guitar); Sadler Vaden (guitar); Jimbo Hart (bass); Derry DeBorja (keys, accordion); Chad Gamble (drums).\\n\\nFiddle player and singer Amanda Shires features regularly as a session player and occasional touring member.\\n\\nThe band is named for the colloquial name of the psychiatric ward of Eliza Coffee Memorial Hospital in Florence, Alabama.\\n\\nThe band are credited as such on five of Isbell\\'s eight studio full-lengths, Jason Isbell and the 400 Unit (2009); Here We Rest (2011); The Nashville Sound (2017); Reunions (2020); Weathervanes (2023). Though some or all of the members feature on Jason\\'s three \"solo\" albums, 2007\\'s Sirens of the Ditch, his 2013 breakthrough Southeastern, and 2015\\'s Something More Than Free.\\n\\nThe band tour regularly in the United States and internationally, including and annual week of shows at Nashville\\'s legendary Ryman Auditorium supported by Shires and a variety of up and coming country, folk, and soul artists. <a href=\"https://www.last.fm/music/Jason+Isbell+and+The+400+Unit\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Alt-country', 'americana', 'Southern Rock', 'seen live', 'rock'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Jason Isbell and The 400 Unit', 'mbid': '4c501a41-5f23-41c9-a36a-5b86e894e08d', 'url': 'https://www.last.fm/music/Jason+Isbell+and+The+400+Unit', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '269575', 'playcount': '6308003'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'Alt-country', 'url': 'https://www.last.fm/tag/Alt-country'}, {'name': 'americana', 'url': 'https://www.last.fm/tag/americana'}, {'name': 'Southern Rock', 'url': 'https://www.last.fm/tag/Southern+Rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Jason+Isbell+and+The+400+Unit/+wiki'}}, 'published': '28 Jan 2009, 17:51', 'summary': 'Jason Isbell and the 400 Unit is an Americana / Southern rock band originating largely from the Muscle Shoals area of Alabama, and led by former Drive-by Truckers singer / guitarist Jason Isbell.\\n\\nThe band consists of Isbell (vocals, guitar); Sadler Vaden (guitar); Jimbo Hart (bass); Derry DeBorja (keys, accordion); Chad Gamble (drums).\\n\\nFiddle player and singer Amanda Shires features regularly as a session player and occasional touring member.\\n\\nThe <a href=\"https://www.last.fm/music/Jason+Isbell+and+The+400+Unit\">Read more on Last.fm</a>', 'content': 'Jason Isbell and the 400 Unit is an Americana / Southern rock band originating largely from the Muscle Shoals area of Alabama, and led by former Drive-by Truckers singer / guitarist Jason Isbell.\\n\\nThe band consists of Isbell (vocals, guitar); Sadler Vaden (guitar); Jimbo Hart (bass); Derry DeBorja (keys, accordion); Chad Gamble (drums).\\n\\nFiddle player and singer Amanda Shires features regularly as a session player and occasional touring member.\\n\\nThe band is named for the colloquial name of the psychiatric ward of Eliza Coffee Memorial Hospital in Florence, Alabama.\\n\\nThe band are credited as such on five of Isbell\\'s eight studio full-lengths, Jason Isbell and the 400 Unit (2009); Here We Rest (2011); The Nashville Sound (2017); Reunions (2020); Weathervanes (2023). Though some or all of the members feature on Jason\\'s three \"solo\" albums, 2007\\'s Sirens of the Ditch, his 2013 breakthrough Southeastern, and 2015\\'s Something More Than Free.\\n\\nThe band tour regularly in the United States and internationally, including and annual week of shows at Nashville\\'s legendary Ryman Auditorium supported by Shires and a variety of up and coming country, folk, and soul artists. <a href=\"https://www.last.fm/music/Jason+Isbell+and+The+400+Unit\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='3Lg3FGwBxOGuefqekQzRUf', url='https://open.spotify.com/artist/3Lg3FGwBxOGuefqekQzRUf', name='Jason Isbell and the 400 Unit', popularity=56, followers=271318, genres=['alt country', 'americana'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebbd5ffed84abc55085599e2b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174bd5ffed84abc55085599e2b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178bd5ffed84abc55085599e2b3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/3Lg3FGwBxOGuefqekQzRUf'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3Lg3FGwBxOGuefqekQzRUf'}, 'followers': {'href': None, 'total': 271318}, 'genres': ['alt country', 'americana'], 'href': 'https://api.spotify.com/v1/artists/3Lg3FGwBxOGuefqekQzRUf', 'id': '3Lg3FGwBxOGuefqekQzRUf', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebbd5ffed84abc55085599e2b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174bd5ffed84abc55085599e2b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178bd5ffed84abc55085599e2b3', 'height': 160, 'width': 160}], 'name': 'Jason Isbell and the 400 Unit', 'popularity': 56, 'type': 'artist', 'uri': 'spotify:artist:3Lg3FGwBxOGuefqekQzRUf'})",
@@ -286,6 +423,6 @@
   },
   "spotify_id": "3Lg3FGwBxOGuefqekQzRUf",
   "spotify_url": "https://open.spotify.com/artist/3Lg3FGwBxOGuefqekQzRUf",
-  "updated_at": "2026-10-22T14:07:57.183271",
+  "updated_at": "2026-10-30T18:41:15.679937",
   "wikipedia_url": null
 }

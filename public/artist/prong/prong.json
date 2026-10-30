@@ -136,22 +136,243 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='484949', url='https://music.apple.com/gb/artist/prong/484949', name='Prong', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/13/b0/85/13b0853c-868e-3437-36d4-c41ab0ca5011/mzl.ebgynyqv.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '484949', 'type': 'artists', 'href': '/v1/catalog/gb/artists/484949', 'attributes': {'name': 'Prong', 'genreNames': ['Metal'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/13/b0/85/13b0853c-868e-3437-36d4-c41ab0ca5011/mzl.ebgynyqv.png/{w}x{h}bb.jpg', 'bgColor': '0a1127', 'textColor1': 'eaeff5', 'textColor2': 'e7bf9f', 'textColor3': 'bdc3cc', 'textColor4': 'bb9c87'}, 'url': 'https://music.apple.com/gb/artist/prong/484949'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/484949/albums', 'next': '/v1/catalog/gb/artists/484949/albums?offset=25', 'data': [{'id': '158332411', 'type': 'albums', 'href': '/v1/catalog/gb/albums/158332411'}, {'id': '307620123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/307620123'}, {'id': '1699181696', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699181696'}, {'id': '217118423', 'type': 'albums', 'href': '/v1/catalog/gb/albums/217118423'}, {'id': '1348809179', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348809179'}, {'id': '1349306033', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349306033'}, {'id': '1479702588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1479702588'}, {'id': '358724783', 'type': 'albums', 'href': '/v1/catalog/gb/albums/358724783'}, {'id': '1658786779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1658786779'}, {'id': '1732273957', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1732273957'}, {'id': '1349024487', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349024487'}, {'id': '1675499878', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675499878'}, {'id': '425617094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/425617094'}, {'id': '1349814246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349814246'}, {'id': '1349346247', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349346247'}, {'id': '1477103413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1477103413'}, {'id': '594528604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/594528604'}, {'id': '1348938367', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348938367'}, {'id': '1675501819', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675501819'}, {'id': '1310009897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1310009897'}, {'id': '1333260930', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1333260930'}, {'id': '1264730715', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1264730715'}, {'id': '1264732502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1264732502'}, {'id': '1349802668', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349802668'}, {'id': '1333259086', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1333259086'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "68599",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 68599,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/RDPdgy6CML9Q140h6io5pmM0HfY3-4LvgsHpJlpZgZ0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RDPdgy6CML9Q140h6io5pmM0HfY3-4LvgsHpJlpZgZ0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/E2WX0ygnstvU3HBthMl0iw-mqV2m0pClPjlkLFkCVTw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/CbLJsbwbCyG-kF_ubLWSetGfRCNzgRTYyPxiwTrDyPg/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CbLJsbwbCyG-kF_ubLWSetGfRCNzgRTYyPxiwTrDyPg/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/vsW1JM51XhiA5rhoESmGx_Tg7ie9X3xfwf2j-TfBbVs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/HLD408o9RyxlscX8chYq4Jsy1qy--i-soQTKDRYoERE/rs:fit/g:sm/q:90/h:600/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HLD408o9RyxlscX8chYq4Jsy1qy--i-soQTKDRYoERE/rs:fit/g:sm/q:90/h:600/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NnGBCs-EsGPvOMJE1agEIxK19OzJKEkaQS8XiGTtHpo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "width": 511
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/Z8rFhUncRYdpR2ANrZlzlks2QoeC01Z76zwRuRLv0Lw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Z8rFhUncRYdpR2ANrZlzlks2QoeC01Z76zwRuRLv0Lw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/f19dTl7U0-iw8kbOACnDxZF_9LuuZFfQ74MVtkYZiTk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/14UfmQzw6Vd-mAnyMZEVs58f7u4WudfmOhat4AltXtY/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/14UfmQzw6Vd-mAnyMZEVs58f7u4WudfmOhat4AltXtY/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6q5Swkjh_KWbjisX4NxgVwFNQUpIsJSNfPIJGC7toS8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Odvoqg24_z4p4cm7k7IEX-9j87G2dFvlUlGfffzKmSA/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Odvoqg24_z4p4cm7k7IEX-9j87G2dFvlUlGfffzKmSA/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/eqN-fMhYs3V5P5dxUz1KVWONqrq8jxXuAXuzl3fcAGc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "width": 483
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/q53tVND7fFuaqBfKwSi6sX2ApaAERsAd32C2HMPTebY/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q53tVND7fFuaqBfKwSi6sX2ApaAERsAd32C2HMPTebY/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/w8SGBZIjCj2VVcyQJV-DCidGR7JmvcLR6o-g4uHi9q4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 331,
+          "resource_url": "https://i.discogs.com/P0m0-kkCBAF2tM_vMOccI4xD8-2Lazcx_B0H0R-33-k/rs:fit/g:sm/q:90/h:331/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/P0m0-kkCBAF2tM_vMOccI4xD8-2Lazcx_B0H0R-33-k/rs:fit/g:sm/q:90/h:331/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/hEixvktjvBUmvk3nXXuLumL7ZjdN4RdG3l1-NFtANBg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "width": 344
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/yUfLemayxK5611T2enzYwcIyGhOuXMZnLrwucurtM-A/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUfLemayxK5611T2enzYwcIyGhOuXMZnLrwucurtM-A/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/S4ZXLdKcrKoZZp7FB_Ga2jtOHgSJBDZoEpQq22y86GE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/S92XujE8NT7mwobzhZdKNVwQpcdMGiESUdett_rGuus/rs:fit/g:sm/q:90/h:600/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S92XujE8NT7mwobzhZdKNVwQpcdMGiESUdett_rGuus/rs:fit/g:sm/q:90/h:600/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/W8DAZeuUpzjBbjucYbj6hb-PmuSJi-1Fb7IC79aNGs0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "width": 530
+        },
+        {
+          "height": 317,
+          "resource_url": "https://i.discogs.com/BqRUYkFxvdZUrbzlrT1Oh_3zNX6WYipm16Z9Jntn77M/rs:fit/g:sm/q:90/h:317/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BqRUYkFxvdZUrbzlrT1Oh_3zNX6WYipm16Z9Jntn77M/rs:fit/g:sm/q:90/h:317/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/kCORMkptaQ-mSyXuU4Jm8zll7MhzE1MJQ2NHRh0H9Dc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/uNnW4IIKft6B1W3XBB8qDESdIG1rtB1Q0__hquN6NyM/rs:fit/g:sm/q:90/h:225/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uNnW4IIKft6B1W3XBB8qDESdIG1rtB1Q0__hquN6NyM/rs:fit/g:sm/q:90/h:225/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "uri150": "https://i.discogs.com/2kx7CNJQ1mpEbUoFVPsBdla75yKUWyclDsqcKSakyI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "width": 550
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 22534,
+          "name": "Paul Raven",
+          "resource_url": "https://api.discogs.com/artists/22534"
+        },
+        {
+          "active": false,
+          "id": 65679,
+          "name": "Ted Parsons",
+          "resource_url": "https://api.discogs.com/artists/65679"
+        },
+        {
+          "active": true,
+          "id": 185073,
+          "name": "Tommy Victor",
+          "resource_url": "https://api.discogs.com/artists/185073"
+        },
+        {
+          "active": false,
+          "id": 371783,
+          "name": "John Bechdel",
+          "resource_url": "https://api.discogs.com/artists/371783"
+        },
+        {
+          "active": false,
+          "id": 387481,
+          "name": "Monte Pittman",
+          "resource_url": "https://api.discogs.com/artists/387481"
+        },
+        {
+          "active": false,
+          "id": 424849,
+          "name": "John Tempesta",
+          "resource_url": "https://api.discogs.com/artists/424849"
+        },
+        {
+          "active": false,
+          "id": 436813,
+          "name": "Mike Kirkland",
+          "resource_url": "https://api.discogs.com/artists/436813"
+        },
+        {
+          "active": false,
+          "id": 488493,
+          "name": "Troy Gregory",
+          "resource_url": "https://api.discogs.com/artists/488493"
+        },
+        {
+          "active": false,
+          "id": 501553,
+          "name": "Dan Laudo",
+          "resource_url": "https://api.discogs.com/artists/501553"
+        },
+        {
+          "active": false,
+          "id": 514478,
+          "name": "Tony Campos",
+          "resource_url": "https://api.discogs.com/artists/514478"
+        },
+        {
+          "active": false,
+          "id": 638676,
+          "name": "Rob Nicholson",
+          "resource_url": "https://api.discogs.com/artists/638676"
+        },
+        {
+          "active": false,
+          "id": 665246,
+          "name": "Frank Cavanagh",
+          "resource_url": "https://api.discogs.com/artists/665246"
+        },
+        {
+          "active": false,
+          "id": 1021076,
+          "name": "Aaron Rossi (2)",
+          "resource_url": "https://api.discogs.com/artists/1021076"
+        },
+        {
+          "active": false,
+          "id": 1066780,
+          "name": "Mike Robinson (5)",
+          "resource_url": "https://api.discogs.com/artists/1066780"
+        },
+        {
+          "active": false,
+          "id": 1201558,
+          "name": "Alexei D. Rodriguez",
+          "resource_url": "https://api.discogs.com/artists/1201558"
+        },
+        {
+          "active": false,
+          "id": 2217189,
+          "name": "Art Cruz",
+          "resource_url": "https://api.discogs.com/artists/2217189"
+        },
+        {
+          "active": false,
+          "id": 2717064,
+          "name": "Mike Longworth",
+          "resource_url": "https://api.discogs.com/artists/2717064"
+        },
+        {
+          "active": true,
+          "id": 3299200,
+          "name": "Jason Christopher",
+          "resource_url": "https://api.discogs.com/artists/3299200"
+        },
+        {
+          "active": false,
+          "id": 10029940,
+          "name": "Griffin McCarthy",
+          "resource_url": "https://api.discogs.com/artists/10029940"
+        }
+      ],
       "name": "Prong",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "68599",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/68599"
-      },
+      "namevariations": [
+        "The Prong"
+      ],
+      "profile": "Prong is a hardcore/industrial/groove/alternative metal band from New York, New York, USA, that was formed in 1986 by Tommy Victor. During its career the band switched from a crossover thrash sound in the 80s to a more groove metal oriented sound in the 90s.\r\n\r\nIn 1996 Prong disbanded for the first time, and Victor started playing in other bands like Ministry and Danzig. He reformed the band with a different lineup in 1997, but Prong disbanded again after a US tour. In 2002 Prong was reformed again by Victor. He's been the only consistent member of the band.\r\n\r\nFan club: [a6777741]",
+      "releases_url": "https://api.discogs.com/artists/68599/releases",
       "resource_url": "https://api.discogs.com/artists/68599",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/68599",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/68599-Prong",
+      "urls": [
+        "http://www.prongmusic.com",
+        "https://prongband.bandcamp.com",
+        "",
+        "",
+        "https://www.instagram.com/prongtheband?igsh=MWZuYnhpY2lyOHplbQ==",
+        "",
+        "https://www.facebook.com/prongmusic",
+        "http://www.myspace.com/prong",
+        "http://en.wikipedia.org/wiki/Prong_(band)",
+        "https://www.imdb.com/name/nm3051839/",
+        "http://twitter.com/prongmusic"
+      ]
     },
     "identity": {
       "musicbrainz_id": "366b86a0-74b2-4fcb-ba79-637258299dbb",
@@ -271,27 +492,249 @@
         "track": "Broken Peace",
         "uri": "http://www.youtube.com/watch?v=TbTJIHqNmc8"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='484949', url='https://music.apple.com/gb/artist/prong/484949', name='Prong', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/13/b0/85/13b0853c-868e-3437-36d4-c41ab0ca5011/mzl.ebgynyqv.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '484949', 'type': 'artists', 'href': '/v1/catalog/gb/artists/484949', 'attributes': {'name': 'Prong', 'genreNames': ['Metal'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/13/b0/85/13b0853c-868e-3437-36d4-c41ab0ca5011/mzl.ebgynyqv.png/{w}x{h}bb.jpg', 'bgColor': '0a1127', 'textColor1': 'eaeff5', 'textColor2': 'e7bf9f', 'textColor3': 'bdc3cc', 'textColor4': 'bb9c87'}, 'url': 'https://music.apple.com/gb/artist/prong/484949'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/484949/albums', 'next': '/v1/catalog/gb/artists/484949/albums?offset=25', 'data': [{'id': '158332411', 'type': 'albums', 'href': '/v1/catalog/gb/albums/158332411'}, {'id': '307620123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/307620123'}, {'id': '1699181696', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1699181696'}, {'id': '217118423', 'type': 'albums', 'href': '/v1/catalog/gb/albums/217118423'}, {'id': '1348809179', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348809179'}, {'id': '1349306033', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349306033'}, {'id': '1479702588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1479702588'}, {'id': '358724783', 'type': 'albums', 'href': '/v1/catalog/gb/albums/358724783'}, {'id': '1658786779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1658786779'}, {'id': '1732273957', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1732273957'}, {'id': '1349024487', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349024487'}, {'id': '1675499878', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675499878'}, {'id': '425617094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/425617094'}, {'id': '1349814246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349814246'}, {'id': '1349346247', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349346247'}, {'id': '1477103413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1477103413'}, {'id': '594528604', 'type': 'albums', 'href': '/v1/catalog/gb/albums/594528604'}, {'id': '1348938367', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348938367'}, {'id': '1675501819', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1675501819'}, {'id': '1310009897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1310009897'}, {'id': '1333260930', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1333260930'}, {'id': '1264730715', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1264730715'}, {'id': '1264732502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1264732502'}, {'id': '1349802668', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1349802668'}, {'id': '1333259086', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1333259086'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "68599",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 68599,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/RDPdgy6CML9Q140h6io5pmM0HfY3-4LvgsHpJlpZgZ0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RDPdgy6CML9Q140h6io5pmM0HfY3-4LvgsHpJlpZgZ0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/E2WX0ygnstvU3HBthMl0iw-mqV2m0pClPjlkLFkCVTw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE3OTE4NjA5MTgt/MTYyNS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/CbLJsbwbCyG-kF_ubLWSetGfRCNzgRTYyPxiwTrDyPg/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CbLJsbwbCyG-kF_ubLWSetGfRCNzgRTYyPxiwTrDyPg/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/vsW1JM51XhiA5rhoESmGx_Tg7ie9X3xfwf2j-TfBbVs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1ODE1OTIyNTMt/NDkxMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/HLD408o9RyxlscX8chYq4Jsy1qy--i-soQTKDRYoERE/rs:fit/g:sm/q:90/h:600/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HLD408o9RyxlscX8chYq4Jsy1qy--i-soQTKDRYoERE/rs:fit/g:sm/q:90/h:600/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NnGBCs-EsGPvOMJE1agEIxK19OzJKEkaQS8XiGTtHpo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MDEwNzg1Mjgt/NjY5NC5qcGVn.jpeg",
+          "width": 511
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/Z8rFhUncRYdpR2ANrZlzlks2QoeC01Z76zwRuRLv0Lw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Z8rFhUncRYdpR2ANrZlzlks2QoeC01Z76zwRuRLv0Lw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/f19dTl7U0-iw8kbOACnDxZF_9LuuZFfQ74MVtkYZiTk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEzOTcyMTE0NDEt/OTU4Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/14UfmQzw6Vd-mAnyMZEVs58f7u4WudfmOhat4AltXtY/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/14UfmQzw6Vd-mAnyMZEVs58f7u4WudfmOhat4AltXtY/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6q5Swkjh_KWbjisX4NxgVwFNQUpIsJSNfPIJGC7toS8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExOTA5NzY4MTEu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Odvoqg24_z4p4cm7k7IEX-9j87G2dFvlUlGfffzKmSA/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Odvoqg24_z4p4cm7k7IEX-9j87G2dFvlUlGfffzKmSA/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/eqN-fMhYs3V5P5dxUz1KVWONqrq8jxXuAXuzl3fcAGc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE0OTA0NDc5MzEt/NjMyNy5qcGVn.jpeg",
+          "width": 483
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/q53tVND7fFuaqBfKwSi6sX2ApaAERsAd32C2HMPTebY/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q53tVND7fFuaqBfKwSi6sX2ApaAERsAd32C2HMPTebY/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/w8SGBZIjCj2VVcyQJV-DCidGR7JmvcLR6o-g4uHi9q4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MzQwNzYzODMt/MjkzMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 331,
+          "resource_url": "https://i.discogs.com/P0m0-kkCBAF2tM_vMOccI4xD8-2Lazcx_B0H0R-33-k/rs:fit/g:sm/q:90/h:331/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/P0m0-kkCBAF2tM_vMOccI4xD8-2Lazcx_B0H0R-33-k/rs:fit/g:sm/q:90/h:331/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/hEixvktjvBUmvk3nXXuLumL7ZjdN4RdG3l1-NFtANBg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMDQ0ODc2NDMu/anBn.jpeg",
+          "width": 344
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/yUfLemayxK5611T2enzYwcIyGhOuXMZnLrwucurtM-A/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUfLemayxK5611T2enzYwcIyGhOuXMZnLrwucurtM-A/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/S4ZXLdKcrKoZZp7FB_Ga2jtOHgSJBDZoEpQq22y86GE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMjI3MzEwNzAu/anBn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/S92XujE8NT7mwobzhZdKNVwQpcdMGiESUdett_rGuus/rs:fit/g:sm/q:90/h:600/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S92XujE8NT7mwobzhZdKNVwQpcdMGiESUdett_rGuus/rs:fit/g:sm/q:90/h:600/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/W8DAZeuUpzjBbjucYbj6hb-PmuSJi-1Fb7IC79aNGs0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTE1MTU3NzQxNTIt/MTUwMC5qcGVn.jpeg",
+          "width": 530
+        },
+        {
+          "height": 317,
+          "resource_url": "https://i.discogs.com/BqRUYkFxvdZUrbzlrT1Oh_3zNX6WYipm16Z9Jntn77M/rs:fit/g:sm/q:90/h:317/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BqRUYkFxvdZUrbzlrT1Oh_3zNX6WYipm16Z9Jntn77M/rs:fit/g:sm/q:90/h:317/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/kCORMkptaQ-mSyXuU4Jm8zll7MhzE1MJQ2NHRh0H9Dc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTExMTgwNzg4ODMu/anBn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/uNnW4IIKft6B1W3XBB8qDESdIG1rtB1Q0__hquN6NyM/rs:fit/g:sm/q:90/h:225/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uNnW4IIKft6B1W3XBB8qDESdIG1rtB1Q0__hquN6NyM/rs:fit/g:sm/q:90/h:225/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "uri150": "https://i.discogs.com/2kx7CNJQ1mpEbUoFVPsBdla75yKUWyclDsqcKSakyI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTk5/LTEyOTc0OTMyNjYu/cG5n.jpeg",
+          "width": 550
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 22534,
+          "name": "Paul Raven",
+          "resource_url": "https://api.discogs.com/artists/22534"
+        },
+        {
+          "active": false,
+          "id": 65679,
+          "name": "Ted Parsons",
+          "resource_url": "https://api.discogs.com/artists/65679"
+        },
+        {
+          "active": true,
+          "id": 185073,
+          "name": "Tommy Victor",
+          "resource_url": "https://api.discogs.com/artists/185073"
+        },
+        {
+          "active": false,
+          "id": 371783,
+          "name": "John Bechdel",
+          "resource_url": "https://api.discogs.com/artists/371783"
+        },
+        {
+          "active": false,
+          "id": 387481,
+          "name": "Monte Pittman",
+          "resource_url": "https://api.discogs.com/artists/387481"
+        },
+        {
+          "active": false,
+          "id": 424849,
+          "name": "John Tempesta",
+          "resource_url": "https://api.discogs.com/artists/424849"
+        },
+        {
+          "active": false,
+          "id": 436813,
+          "name": "Mike Kirkland",
+          "resource_url": "https://api.discogs.com/artists/436813"
+        },
+        {
+          "active": false,
+          "id": 488493,
+          "name": "Troy Gregory",
+          "resource_url": "https://api.discogs.com/artists/488493"
+        },
+        {
+          "active": false,
+          "id": 501553,
+          "name": "Dan Laudo",
+          "resource_url": "https://api.discogs.com/artists/501553"
+        },
+        {
+          "active": false,
+          "id": 514478,
+          "name": "Tony Campos",
+          "resource_url": "https://api.discogs.com/artists/514478"
+        },
+        {
+          "active": false,
+          "id": 638676,
+          "name": "Rob Nicholson",
+          "resource_url": "https://api.discogs.com/artists/638676"
+        },
+        {
+          "active": false,
+          "id": 665246,
+          "name": "Frank Cavanagh",
+          "resource_url": "https://api.discogs.com/artists/665246"
+        },
+        {
+          "active": false,
+          "id": 1021076,
+          "name": "Aaron Rossi (2)",
+          "resource_url": "https://api.discogs.com/artists/1021076"
+        },
+        {
+          "active": false,
+          "id": 1066780,
+          "name": "Mike Robinson (5)",
+          "resource_url": "https://api.discogs.com/artists/1066780"
+        },
+        {
+          "active": false,
+          "id": 1201558,
+          "name": "Alexei D. Rodriguez",
+          "resource_url": "https://api.discogs.com/artists/1201558"
+        },
+        {
+          "active": false,
+          "id": 2217189,
+          "name": "Art Cruz",
+          "resource_url": "https://api.discogs.com/artists/2217189"
+        },
+        {
+          "active": false,
+          "id": 2717064,
+          "name": "Mike Longworth",
+          "resource_url": "https://api.discogs.com/artists/2717064"
+        },
+        {
+          "active": true,
+          "id": 3299200,
+          "name": "Jason Christopher",
+          "resource_url": "https://api.discogs.com/artists/3299200"
+        },
+        {
+          "active": false,
+          "id": 10029940,
+          "name": "Griffin McCarthy",
+          "resource_url": "https://api.discogs.com/artists/10029940"
+        }
+      ],
       "name": "Prong",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "68599",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/68599"
-      },
+      "namevariations": [
+        "The Prong"
+      ],
+      "profile": "Prong is a hardcore/industrial/groove/alternative metal band from New York, New York, USA, that was formed in 1986 by Tommy Victor. During its career the band switched from a crossover thrash sound in the 80s to a more groove metal oriented sound in the 90s.\r\n\r\nIn 1996 Prong disbanded for the first time, and Victor started playing in other bands like Ministry and Danzig. He reformed the band with a different lineup in 1997, but Prong disbanded again after a US tour. In 2002 Prong was reformed again by Victor. He's been the only consistent member of the band.\r\n\r\nFan club: [a6777741]",
+      "releases_url": "https://api.discogs.com/artists/68599/releases",
       "resource_url": "https://api.discogs.com/artists/68599",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/68599",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/68599-Prong",
+      "urls": [
+        "http://www.prongmusic.com",
+        "https://prongband.bandcamp.com",
+        "",
+        "",
+        "https://www.instagram.com/prongtheband?igsh=MWZuYnhpY2lyOHplbQ==",
+        "",
+        "https://www.facebook.com/prongmusic",
+        "http://www.myspace.com/prong",
+        "http://en.wikipedia.org/wiki/Prong_(band)",
+        "https://www.imdb.com/name/nm3051839/",
+        "http://twitter.com/prongmusic"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Prong', url='https://www.last.fm/music/Prong', mbid='366b86a0-74b2-4fcb-ba79-637258299dbb', listeners=223169, playcount=3507865, bio_summary='Prong is a metal band from New York City, New York, US, formed in 1986. Prong had two independent releases, Primitive Origins and Force Fed. The albums attracted the attention of Epic Records, which signed the trio in 1989. The group disbanded in 1997 after the Rude Awakening tour, but re-formed in 2003. A pioneer of the urban  scene, Prong is fronted by Tommy Victor.\\nProng was founded in 1986 by singer/guitarist Tommy Victor (then a soundman at New York City\\'s renowned CBGB\\'s). <a href=\"https://www.last.fm/music/Prong\">Read more on Last.fm</a>', bio_content='Prong is a metal band from New York City, New York, US, formed in 1986. Prong had two independent releases, Primitive Origins and Force Fed. The albums attracted the attention of Epic Records, which signed the trio in 1989. The group disbanded in 1997 after the Rude Awakening tour, but re-formed in 2003. A pioneer of the urban  scene, Prong is fronted by Tommy Victor.\\nProng was founded in 1986 by singer/guitarist Tommy Victor (then a soundman at New York City\\'s renowned CBGB\\'s). With bassist Mike Kirkland (formely of NYHC band Damage and doorman at CBGB’s) and ex-Swans drummer Ted Parsons, Prong released two independent CDs that were noted for their brutal hardcore sound.\\n\\nEpic Records saw the band\\'s potential and signed them in 1989. Prong\\'s major label debut album Beg to Differ, was released in 1990.\\n\\nIn the following year, Kirkland left the band and was replaced by Ex-Flotsam and Jetsam bassist Troy Gregory. Prong issued their fourth release Prove You Wrong which saw the band experiment with programming and electronic samples while still retaining an aggressive yet melodic sensibility.\\n\\nBy 1994, Troy Gregory was out of the band and was replaced by Paul Raven (bassist) and John Bechdel (keyboard), both from Killing Joke and Murder, Inc. The new line up released Cleansing (Prong’s 5th major release). With a strong industrial sound that still managed to be hard and heavy, Cleansing contained songs that are still considered Prong classics (\"Broken Peace\" and \"Snap Your Fingers, Snap Your Neck\") and is Prong’s most successful release to date. The videos for these two songs became staples of MTV’s legendary Headbangers Ball.\\n\\nProng\\'s sixth album Rude Awakening was released in 1996. The album was not as successful as the last three albums. Shortly thereafter Parsons left the band to join Godflesh. Tommy Victor left New York and moved to Los Angeles. As the band Prong sat idle, Tommy Victor worked with legends of the rock world, including Rob Zombie, Marilyn Manson, celldweller and Glenn Danzig.\\n\\nIn 2002, Victor re-formed Prong with bassist Brian Perry, drummer Dan Laudo and guitarist Monte Pittman (Madonna). In 2002, after a 42-show American tour that was recorded for a live CD (100% Live, Locomotive Music) Prong entered the studio and recorded a new CD titled Scorpio Rising which was received with mixed responses.\\n\\nVictor played on and off again with Glen Danzig from 1998 -2005 in between time with Prong. His final goal of playing and writing on a Danzig record was met with Circle of Snakes in 2004.\\n\\nProng released a live 2-disc DVD in 2005 entitled \"The Vault\" which features performances from the Hulstsfred and With Full Force festivals and a full show in Amsterdam. This disc has Mike Longworth on bass as well, who later replaced Perry. As a result of the drum performance on Scorpio Rising , band members Tommy Victor and Monte Pittman decided a change needed to be made. This resulted in the firing of Dan Laudo and the enlistment Aaron Rossi, who used to be in the bands Strife (Victory Records), Shelter (Century Media Records), John 5 (Shrapnel Records), and Ankla (Bieler Bros. Records)\\n\\nVictor and Raven joined Ministry in 2005 to write and tour in support of their album Rio Grande Blood (2006). They were nominated for a Grammy in 2007 for the song Senior Peligro in the \"Best Metal Performance\" category. The two also appear on Ministry\\'s follow up album The Last Sucker (2007), although in a more limited capacity.\\n\\nOn June 4th, 2007, Prong posted a MySpace bulletin stating that they were recording in El Paso, Texas. The band left Locomotive Music, and were signed to Al Jourgensen\\'s 13th Planet Records, who released their latest album Power of the Damager on October 2, 2007.\\n\\nThe band embarked on the \"Slicing Across America\" and \"Slicing Across Europe\" tours supporting Power of the Damager in 2007 and early 2008. Joining Tommy Victor in the current live membership of the band is bassist Monte Pittman and drummer Aaron Rossi.\\n\\nPaul Raven died of an apparent heart attack in his sleep on October 20, 2007 at the age of 46. He was recording with French recording artists Treponem Pal on their new album with Ted Parsons at the time of his death.\\n\\nAaron Rossi was joining Ministry as their new drummer on the \"C U LaTour\" which started in March 2008.\\n\\nIn February 2008, Headbanger\\'s Ball premiered the video \"Power Of The Damager\".\\n\\n\\n <a href=\"https://www.last.fm/music/Prong\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['thrash metal', 'industrial metal', 'metal', 'alternative metal', 'crossover'], similar_artists=[{'name': 'Fear Factory', 'url': 'https://www.last.fm/music/Fear+Factory'}, {'name': 'Helmet', 'url': 'https://www.last.fm/music/Helmet'}, {'name': 'Sacred Reich', 'url': 'https://www.last.fm/music/Sacred+Reich'}, {'name': 'Anthrax', 'url': 'https://www.last.fm/music/Anthrax'}, {'name': 'Exhorder', 'url': 'https://www.last.fm/music/Exhorder'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Prong', 'mbid': '366b86a0-74b2-4fcb-ba79-637258299dbb', 'url': 'https://www.last.fm/music/Prong', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '223169', 'playcount': '3507865'}, 'similar': {'artist': [{'name': 'Fear Factory', 'url': 'https://www.last.fm/music/Fear+Factory', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Helmet', 'url': 'https://www.last.fm/music/Helmet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sacred Reich', 'url': 'https://www.last.fm/music/Sacred+Reich', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Anthrax', 'url': 'https://www.last.fm/music/Anthrax', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Exhorder', 'url': 'https://www.last.fm/music/Exhorder', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'thrash metal', 'url': 'https://www.last.fm/tag/thrash+metal'}, {'name': 'industrial metal', 'url': 'https://www.last.fm/tag/industrial+metal'}, {'name': 'metal', 'url': 'https://www.last.fm/tag/metal'}, {'name': 'alternative metal', 'url': 'https://www.last.fm/tag/alternative+metal'}, {'name': 'crossover', 'url': 'https://www.last.fm/tag/crossover'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Prong/+wiki'}}, 'published': '07 Jun 2006, 22:01', 'summary': 'Prong is a metal band from New York City, New York, US, formed in 1986. Prong had two independent releases, Primitive Origins and Force Fed. The albums attracted the attention of Epic Records, which signed the trio in 1989. The group disbanded in 1997 after the Rude Awakening tour, but re-formed in 2003. A pioneer of the urban  scene, Prong is fronted by Tommy Victor.\\nProng was founded in 1986 by singer/guitarist Tommy Victor (then a soundman at New York City\\'s renowned CBGB\\'s). <a href=\"https://www.last.fm/music/Prong\">Read more on Last.fm</a>', 'content': 'Prong is a metal band from New York City, New York, US, formed in 1986. Prong had two independent releases, Primitive Origins and Force Fed. The albums attracted the attention of Epic Records, which signed the trio in 1989. The group disbanded in 1997 after the Rude Awakening tour, but re-formed in 2003. A pioneer of the urban  scene, Prong is fronted by Tommy Victor.\\nProng was founded in 1986 by singer/guitarist Tommy Victor (then a soundman at New York City\\'s renowned CBGB\\'s). With bassist Mike Kirkland (formely of NYHC band Damage and doorman at CBGB’s) and ex-Swans drummer Ted Parsons, Prong released two independent CDs that were noted for their brutal hardcore sound.\\n\\nEpic Records saw the band\\'s potential and signed them in 1989. Prong\\'s major label debut album Beg to Differ, was released in 1990.\\n\\nIn the following year, Kirkland left the band and was replaced by Ex-Flotsam and Jetsam bassist Troy Gregory. Prong issued their fourth release Prove You Wrong which saw the band experiment with programming and electronic samples while still retaining an aggressive yet melodic sensibility.\\n\\nBy 1994, Troy Gregory was out of the band and was replaced by Paul Raven (bassist) and John Bechdel (keyboard), both from Killing Joke and Murder, Inc. The new line up released Cleansing (Prong’s 5th major release). With a strong industrial sound that still managed to be hard and heavy, Cleansing contained songs that are still considered Prong classics (\"Broken Peace\" and \"Snap Your Fingers, Snap Your Neck\") and is Prong’s most successful release to date. The videos for these two songs became staples of MTV’s legendary Headbangers Ball.\\n\\nProng\\'s sixth album Rude Awakening was released in 1996. The album was not as successful as the last three albums. Shortly thereafter Parsons left the band to join Godflesh. Tommy Victor left New York and moved to Los Angeles. As the band Prong sat idle, Tommy Victor worked with legends of the rock world, including Rob Zombie, Marilyn Manson, celldweller and Glenn Danzig.\\n\\nIn 2002, Victor re-formed Prong with bassist Brian Perry, drummer Dan Laudo and guitarist Monte Pittman (Madonna). In 2002, after a 42-show American tour that was recorded for a live CD (100% Live, Locomotive Music) Prong entered the studio and recorded a new CD titled Scorpio Rising which was received with mixed responses.\\n\\nVictor played on and off again with Glen Danzig from 1998 -2005 in between time with Prong. His final goal of playing and writing on a Danzig record was met with Circle of Snakes in 2004.\\n\\nProng released a live 2-disc DVD in 2005 entitled \"The Vault\" which features performances from the Hulstsfred and With Full Force festivals and a full show in Amsterdam. This disc has Mike Longworth on bass as well, who later replaced Perry. As a result of the drum performance on Scorpio Rising , band members Tommy Victor and Monte Pittman decided a change needed to be made. This resulted in the firing of Dan Laudo and the enlistment Aaron Rossi, who used to be in the bands Strife (Victory Records), Shelter (Century Media Records), John 5 (Shrapnel Records), and Ankla (Bieler Bros. Records)\\n\\nVictor and Raven joined Ministry in 2005 to write and tour in support of their album Rio Grande Blood (2006). They were nominated for a Grammy in 2007 for the song Senior Peligro in the \"Best Metal Performance\" category. The two also appear on Ministry\\'s follow up album The Last Sucker (2007), although in a more limited capacity.\\n\\nOn June 4th, 2007, Prong posted a MySpace bulletin stating that they were recording in El Paso, Texas. The band left Locomotive Music, and were signed to Al Jourgensen\\'s 13th Planet Records, who released their latest album Power of the Damager on October 2, 2007.\\n\\nThe band embarked on the \"Slicing Across America\" and \"Slicing Across Europe\" tours supporting Power of the Damager in 2007 and early 2008. Joining Tommy Victor in the current live membership of the band is bassist Monte Pittman and drummer Aaron Rossi.\\n\\nPaul Raven died of an apparent heart attack in his sleep on October 20, 2007 at the age of 46. He was recording with French recording artists Treponem Pal on their new album with Ted Parsons at the time of his death.\\n\\nAaron Rossi was joining Ministry as their new drummer on the \"C U LaTour\" which started in March 2008.\\n\\nIn February 2008, Headbanger\\'s Ball premiered the video \"Power Of The Damager\".\\n\\n\\n <a href=\"https://www.last.fm/music/Prong\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='6SER9tY2pDIDVWVf5Ql97B', url='https://open.spotify.com/artist/6SER9tY2pDIDVWVf5Ql97B', name='Prong', popularity=44, followers=191765, genres=['groove metal', 'industrial metal', 'thrash metal', 'alternative metal', 'industrial rock', 'metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebd7a0b9a7a4102611a0a649ab', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d7a0b9a7a4102611a0a649ab', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d7a0b9a7a4102611a0a649ab', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/6SER9tY2pDIDVWVf5Ql97B'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/6SER9tY2pDIDVWVf5Ql97B'}, 'followers': {'href': None, 'total': 191765}, 'genres': ['groove metal', 'industrial metal', 'thrash metal', 'alternative metal', 'industrial rock', 'metal'], 'href': 'https://api.spotify.com/v1/artists/6SER9tY2pDIDVWVf5Ql97B', 'id': '6SER9tY2pDIDVWVf5Ql97B', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebd7a0b9a7a4102611a0a649ab', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d7a0b9a7a4102611a0a649ab', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d7a0b9a7a4102611a0a649ab', 'height': 160, 'width': 160}], 'name': 'Prong', 'popularity': 44, 'type': 'artist', 'uri': 'spotify:artist:6SER9tY2pDIDVWVf5Ql97B'})",
@@ -383,6 +826,6 @@
   },
   "spotify_id": "6SER9tY2pDIDVWVf5Ql97B",
   "spotify_url": "https://open.spotify.com/artist/6SER9tY2pDIDVWVf5Ql97B",
-  "updated_at": "2026-10-22T14:10:25.358720",
+  "updated_at": "2026-10-30T18:44:14.983576",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Prong_(band)"
 }

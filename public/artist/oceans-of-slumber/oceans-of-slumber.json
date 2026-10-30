@@ -136,22 +136,127 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='598002228', url='https://music.apple.com/gb/artist/oceans-of-slumber/598002228', name='Oceans of Slumber', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/06/31/65/06316547-08d7-e541-1e50-99b41b6bd754/pr_source.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '598002228', 'type': 'artists', 'href': '/v1/catalog/gb/artists/598002228', 'attributes': {'name': 'Oceans of Slumber', 'genreNames': ['Metal'], 'artwork': {'width': 858, 'height': 858, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/06/31/65/06316547-08d7-e541-1e50-99b41b6bd754/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '2f2f2f', 'textColor1': 'f4f4f4', 'textColor2': 'e2e2e2', 'textColor3': 'cdcdcd', 'textColor4': 'bebebe'}, 'url': 'https://music.apple.com/gb/artist/oceans-of-slumber/598002228'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/598002228/albums', 'data': [{'id': '1514239121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514239121'}, {'id': '1620416300', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1620416300'}, {'id': '1068112932', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1068112932'}, {'id': '1317877150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1317877150'}, {'id': '1739132295', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739132295'}, {'id': '1783360807', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783360807'}, {'id': '1025213135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1025213135'}, {'id': '1607401986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1607401986'}, {'id': '1541916132', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1541916132'}, {'id': '1509317347', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1509317347'}, {'id': '1719004796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1719004796'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3428013",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3428013,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/uzzHnvjQY_smMVrEEwy-mehxUKN1Fnb0plpNZ-hk93I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/uzzHnvjQY_smMVrEEwy-mehxUKN1Fnb0plpNZ-hk93I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jLUix6lL1nIabNgQGQr_ybV8oPras6bh4TdJJEiZ1Vk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/WpjpefDJs5b56tnJQ86xmUpkFrEuTFn8elglFwvoUlM/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WpjpefDJs5b56tnJQ86xmUpkFrEuTFn8elglFwvoUlM/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/xf-wuOkFuCpKEmBysGDnJQnEdvWQsjw7WlJ8x9eNgMQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3ipYRR_zxLCAecfBAOy_fxL1SNPw6hY2E9xn0joz_8c/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3ipYRR_zxLCAecfBAOy_fxL1SNPw6hY2E9xn0joz_8c/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/n7SFhGMjTFEHAP4xVoRzvMA4yYvGvKioch9dr_ZQTts/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "width": 599
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 981143,
+          "name": "Dobber",
+          "resource_url": "https://api.discogs.com/artists/981143"
+        },
+        {
+          "active": false,
+          "id": 1792719,
+          "name": "Beau Beasley",
+          "resource_url": "https://api.discogs.com/artists/1792719"
+        },
+        {
+          "active": false,
+          "id": 3391112,
+          "name": "Sean Gary",
+          "resource_url": "https://api.discogs.com/artists/3391112"
+        },
+        {
+          "active": false,
+          "id": 3391115,
+          "name": "Keegan Kelly",
+          "resource_url": "https://api.discogs.com/artists/3391115"
+        },
+        {
+          "active": false,
+          "id": 3391116,
+          "name": "Anthony Contreras",
+          "resource_url": "https://api.discogs.com/artists/3391116"
+        },
+        {
+          "active": true,
+          "id": 4994299,
+          "name": "Cammie Gilbert",
+          "resource_url": "https://api.discogs.com/artists/4994299"
+        },
+        {
+          "active": false,
+          "id": 5388331,
+          "name": "Ronnie Allen (5)",
+          "resource_url": "https://api.discogs.com/artists/5388331"
+        },
+        {
+          "active": true,
+          "id": 6706999,
+          "name": "Chris Kritikos",
+          "resource_url": "https://api.discogs.com/artists/6706999"
+        },
+        {
+          "active": false,
+          "id": 7036396,
+          "name": "Mat Aleman",
+          "resource_url": "https://api.discogs.com/artists/7036396"
+        },
+        {
+          "active": true,
+          "id": 8123448,
+          "name": "Semir Ozerkan",
+          "resource_url": "https://api.discogs.com/artists/8123448"
+        },
+        {
+          "active": false,
+          "id": 8123449,
+          "name": "Alexander Fernandez (2)",
+          "resource_url": "https://api.discogs.com/artists/8123449"
+        },
+        {
+          "active": false,
+          "id": 8123450,
+          "name": "Jessie Santos",
+          "resource_url": "https://api.discogs.com/artists/8123450"
+        },
+        {
+          "active": true,
+          "id": 15242505,
+          "name": "Alex Davis (9)",
+          "resource_url": "https://api.discogs.com/artists/15242505"
+        }
+      ],
       "name": "Oceans Of Slumber",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3428013",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3428013"
-      },
+      "profile": "Progressive metal band from Houston, Texas, USA.\r\nFormed in 2011.",
+      "releases_url": "https://api.discogs.com/artists/3428013/releases",
       "resource_url": "https://api.discogs.com/artists/3428013",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3428013",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3428013-Oceans-Of-Slumber",
+      "urls": [
+        "http://oceansofslumber.com",
+        "https://oceansofslumber.bandcamp.com",
+        "https://twitter.com/OceansofSlumber",
+        "https://www.youtube.com/user/oceansofslumber",
+        "https://www.facebook.com/oceansofslumber",
+        "https://www.instagram.com/oceansofslumber"
+      ]
     },
     "identity": {
       "musicbrainz_id": "47c5f847-e38a-4d14-a1cf-73b23e8167a1",
@@ -265,27 +370,133 @@
         "track": "Turpentine",
         "uri": "https://www.youtube.com/watch?v=XXKUSynBbAI"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='598002228', url='https://music.apple.com/gb/artist/oceans-of-slumber/598002228', name='Oceans of Slumber', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/06/31/65/06316547-08d7-e541-1e50-99b41b6bd754/pr_source.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '598002228', 'type': 'artists', 'href': '/v1/catalog/gb/artists/598002228', 'attributes': {'name': 'Oceans of Slumber', 'genreNames': ['Metal'], 'artwork': {'width': 858, 'height': 858, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/06/31/65/06316547-08d7-e541-1e50-99b41b6bd754/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '2f2f2f', 'textColor1': 'f4f4f4', 'textColor2': 'e2e2e2', 'textColor3': 'cdcdcd', 'textColor4': 'bebebe'}, 'url': 'https://music.apple.com/gb/artist/oceans-of-slumber/598002228'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/598002228/albums', 'data': [{'id': '1514239121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514239121'}, {'id': '1620416300', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1620416300'}, {'id': '1068112932', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1068112932'}, {'id': '1317877150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1317877150'}, {'id': '1739132295', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739132295'}, {'id': '1783360807', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783360807'}, {'id': '1025213135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1025213135'}, {'id': '1607401986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1607401986'}, {'id': '1541916132', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1541916132'}, {'id': '1509317347', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1509317347'}, {'id': '1719004796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1719004796'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3428013",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3428013,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/uzzHnvjQY_smMVrEEwy-mehxUKN1Fnb0plpNZ-hk93I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/uzzHnvjQY_smMVrEEwy-mehxUKN1Fnb0plpNZ-hk93I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jLUix6lL1nIabNgQGQr_ybV8oPras6bh4TdJJEiZ1Vk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTQ2MDA4MTk3/Ni00NzU4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 412,
+          "resource_url": "https://i.discogs.com/WpjpefDJs5b56tnJQ86xmUpkFrEuTFn8elglFwvoUlM/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WpjpefDJs5b56tnJQ86xmUpkFrEuTFn8elglFwvoUlM/rs:fit/g:sm/q:90/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/xf-wuOkFuCpKEmBysGDnJQnEdvWQsjw7WlJ8x9eNgMQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04OTgxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3ipYRR_zxLCAecfBAOy_fxL1SNPw6hY2E9xn0joz_8c/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3ipYRR_zxLCAecfBAOy_fxL1SNPw6hY2E9xn0joz_8c/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/n7SFhGMjTFEHAP4xVoRzvMA4yYvGvKioch9dr_ZQTts/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0Mjgw/MTMtMTYyMDQ3NzE1/MS04NDQxLmpwZWc.jpeg",
+          "width": 599
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 981143,
+          "name": "Dobber",
+          "resource_url": "https://api.discogs.com/artists/981143"
+        },
+        {
+          "active": false,
+          "id": 1792719,
+          "name": "Beau Beasley",
+          "resource_url": "https://api.discogs.com/artists/1792719"
+        },
+        {
+          "active": false,
+          "id": 3391112,
+          "name": "Sean Gary",
+          "resource_url": "https://api.discogs.com/artists/3391112"
+        },
+        {
+          "active": false,
+          "id": 3391115,
+          "name": "Keegan Kelly",
+          "resource_url": "https://api.discogs.com/artists/3391115"
+        },
+        {
+          "active": false,
+          "id": 3391116,
+          "name": "Anthony Contreras",
+          "resource_url": "https://api.discogs.com/artists/3391116"
+        },
+        {
+          "active": true,
+          "id": 4994299,
+          "name": "Cammie Gilbert",
+          "resource_url": "https://api.discogs.com/artists/4994299"
+        },
+        {
+          "active": false,
+          "id": 5388331,
+          "name": "Ronnie Allen (5)",
+          "resource_url": "https://api.discogs.com/artists/5388331"
+        },
+        {
+          "active": true,
+          "id": 6706999,
+          "name": "Chris Kritikos",
+          "resource_url": "https://api.discogs.com/artists/6706999"
+        },
+        {
+          "active": false,
+          "id": 7036396,
+          "name": "Mat Aleman",
+          "resource_url": "https://api.discogs.com/artists/7036396"
+        },
+        {
+          "active": true,
+          "id": 8123448,
+          "name": "Semir Ozerkan",
+          "resource_url": "https://api.discogs.com/artists/8123448"
+        },
+        {
+          "active": false,
+          "id": 8123449,
+          "name": "Alexander Fernandez (2)",
+          "resource_url": "https://api.discogs.com/artists/8123449"
+        },
+        {
+          "active": false,
+          "id": 8123450,
+          "name": "Jessie Santos",
+          "resource_url": "https://api.discogs.com/artists/8123450"
+        },
+        {
+          "active": true,
+          "id": 15242505,
+          "name": "Alex Davis (9)",
+          "resource_url": "https://api.discogs.com/artists/15242505"
+        }
+      ],
       "name": "Oceans Of Slumber",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3428013",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3428013"
-      },
+      "profile": "Progressive metal band from Houston, Texas, USA.\r\nFormed in 2011.",
+      "releases_url": "https://api.discogs.com/artists/3428013/releases",
       "resource_url": "https://api.discogs.com/artists/3428013",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3428013",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3428013-Oceans-Of-Slumber",
+      "urls": [
+        "http://oceansofslumber.com",
+        "https://oceansofslumber.bandcamp.com",
+        "https://twitter.com/OceansofSlumber",
+        "https://www.youtube.com/user/oceansofslumber",
+        "https://www.facebook.com/oceansofslumber",
+        "https://www.instagram.com/oceansofslumber"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Oceans of Slumber', url='https://www.last.fm/music/Oceans+of+Slumber', mbid='47c5f847-e38a-4d14-a1cf-73b23e8167a1', listeners=57729, playcount=1391615, bio_summary='Oceans of Slumber is a progressive metal band from Houston, Texas, USA. The band features the drummer of Insect Warfare  (among many others), a degreed Jazz guitarist, and other all-around skilled musicians with a broad cross-section of influences. Musical classification is of no interest to the band. <a href=\"https://www.last.fm/music/Oceans+of+Slumber\">Read more on Last.fm</a>', bio_content='Oceans of Slumber is a progressive metal band from Houston, Texas, USA. The band features the drummer of Insect Warfare  (among many others), a degreed Jazz guitarist, and other all-around skilled musicians with a broad cross-section of influences. Musical classification is of no interest to the band. <a href=\"https://www.last.fm/music/Oceans+of+Slumber\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive metal', 'progressive death metal', 'doom metal', 'death metal', 'Female fronted metal'], similar_artists=[{'name': 'Iotunn', 'url': 'https://www.last.fm/music/Iotunn'}, {'name': 'Kingcrow', 'url': 'https://www.last.fm/music/Kingcrow'}, {'name': 'Anciients', 'url': 'https://www.last.fm/music/Anciients'}, {'name': 'Avatarium', 'url': 'https://www.last.fm/music/Avatarium'}, {'name': 'Swallow the Sun', 'url': 'https://www.last.fm/music/Swallow+the+Sun'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Oceans of Slumber', 'mbid': '47c5f847-e38a-4d14-a1cf-73b23e8167a1', 'url': 'https://www.last.fm/music/Oceans+of+Slumber', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '57729', 'playcount': '1391615'}, 'similar': {'artist': [{'name': 'Iotunn', 'url': 'https://www.last.fm/music/Iotunn', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kingcrow', 'url': 'https://www.last.fm/music/Kingcrow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Anciients', 'url': 'https://www.last.fm/music/Anciients', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Avatarium', 'url': 'https://www.last.fm/music/Avatarium', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Swallow the Sun', 'url': 'https://www.last.fm/music/Swallow+the+Sun', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive metal', 'url': 'https://www.last.fm/tag/Progressive+metal'}, {'name': 'progressive death metal', 'url': 'https://www.last.fm/tag/progressive+death+metal'}, {'name': 'doom metal', 'url': 'https://www.last.fm/tag/doom+metal'}, {'name': 'death metal', 'url': 'https://www.last.fm/tag/death+metal'}, {'name': 'Female fronted metal', 'url': 'https://www.last.fm/tag/Female+fronted+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Oceans+of+Slumber/+wiki'}}, 'published': '04 Apr 2013, 01:18', 'summary': 'Oceans of Slumber is a progressive metal band from Houston, Texas, USA. The band features the drummer of Insect Warfare  (among many others), a degreed Jazz guitarist, and other all-around skilled musicians with a broad cross-section of influences. Musical classification is of no interest to the band. <a href=\"https://www.last.fm/music/Oceans+of+Slumber\">Read more on Last.fm</a>', 'content': 'Oceans of Slumber is a progressive metal band from Houston, Texas, USA. The band features the drummer of Insect Warfare  (among many others), a degreed Jazz guitarist, and other all-around skilled musicians with a broad cross-section of influences. Musical classification is of no interest to the band. <a href=\"https://www.last.fm/music/Oceans+of+Slumber\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2JSza6IRxLr1Ez3wqKd0SY', url='https://open.spotify.com/artist/2JSza6IRxLr1Ez3wqKd0SY', name='Oceans of Slumber', popularity=31, followers=53677, genres=['progressive metal', 'gothic metal', 'doom metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb329d5db1efb4e1fe5fb19fc2', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174329d5db1efb4e1fe5fb19fc2', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178329d5db1efb4e1fe5fb19fc2', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2JSza6IRxLr1Ez3wqKd0SY'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2JSza6IRxLr1Ez3wqKd0SY'}, 'followers': {'href': None, 'total': 53677}, 'genres': ['progressive metal', 'gothic metal', 'doom metal'], 'href': 'https://api.spotify.com/v1/artists/2JSza6IRxLr1Ez3wqKd0SY', 'id': '2JSza6IRxLr1Ez3wqKd0SY', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb329d5db1efb4e1fe5fb19fc2', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174329d5db1efb4e1fe5fb19fc2', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178329d5db1efb4e1fe5fb19fc2', 'height': 160, 'width': 160}], 'name': 'Oceans of Slumber', 'popularity': 31, 'type': 'artist', 'uri': 'spotify:artist:2JSza6IRxLr1Ez3wqKd0SY'})",
@@ -377,6 +588,6 @@
   },
   "spotify_id": "2JSza6IRxLr1Ez3wqKd0SY",
   "spotify_url": "https://open.spotify.com/artist/2JSza6IRxLr1Ez3wqKd0SY",
-  "updated_at": "2026-10-22T14:09:54.069423",
+  "updated_at": "2026-10-30T18:43:22.113743",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Oceans_of_Slumber"
 }

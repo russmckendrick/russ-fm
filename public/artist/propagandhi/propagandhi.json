@@ -121,22 +121,118 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='6576408', url='https://music.apple.com/gb/artist/propagandhi/6576408', name='Propagandhi', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/2e/b9/21/2eb92127-b2e0-42f5-bd6a-7c1de3964fde/b9ef68c7-6766-41fd-851b-cd631201fc0c_ami-identity-04ac150ade39fbc27755c3d0c64e471c-2024-02-12T22-21-53.834Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '6576408', 'type': 'artists', 'href': '/v1/catalog/gb/artists/6576408', 'attributes': {'artwork': {'bgColor': '1d1d1d', 'height': 4000, 'textColor1': 'cdbeb4', 'textColor2': 'd1927a', 'textColor3': 'aa9e96', 'textColor4': 'ad7b67', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/2e/b9/21/2eb92127-b2e0-42f5-bd6a-7c1de3964fde/b9ef68c7-6766-41fd-851b-cd631201fc0c_ami-identity-04ac150ade39fbc27755c3d0c64e471c-2024-02-12T22-21-53.834Z_cropped.png/{w}x{h}bb.jpg', 'width': 4000}, 'genreNames': ['Alternative'], 'name': 'Propagandhi', 'url': 'https://music.apple.com/gb/artist/propagandhi/6576408'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/6576408/albums', 'data': [{'id': '1485069879', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485069879'}, {'id': '985477544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/985477544'}, {'id': '1796224621', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1796224621'}, {'id': '663575880', 'type': 'albums', 'href': '/v1/catalog/gb/albums/663575880'}, {'id': '1485056345', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485056345'}, {'id': '291792344', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291792344'}, {'id': '1585415072', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585415072'}, {'id': '291777235', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291777235'}, {'id': '291771479', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291771479'}, {'id': '1028527764', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1028527764'}, {'id': '1485074223', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485074223'}, {'id': '1465786465', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1465786465'}, {'id': '991232695', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991232695'}, {'id': '1602260390', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1602260390'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "259022",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 259022,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/jTyg4PqKWluPrCqDK95oP8dD4d2zetzeRUGE0GeFeHs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/jTyg4PqKWluPrCqDK95oP8dD4d2zetzeRUGE0GeFeHs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yUFzo6f2LDJZc0e51ad9oVtwY_pz0Yf169T4TQUuDWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/_NOiuZUC8qCHlG38QcnuoOtPRWPHSH5_GfybpRgF7fU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_NOiuZUC8qCHlG38QcnuoOtPRWPHSH5_GfybpRgF7fU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/N0zYoZ281K6tB1dkdOQLNIToDVmu4_2Se6OFTPbbAxg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/LLuc6APKXZv217i9OL1aP47UzsKmqxDz5wmYC_d5YRk/rs:fit/g:sm/q:90/h:250/w:347/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LLuc6APKXZv217i9OL1aP47UzsKmqxDz5wmYC_d5YRk/rs:fit/g:sm/q:90/h:250/w:347/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/Fii1TEZi3fJIkVLw_MOKGVNnFTk7l3XmBzEiz2vBl-c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "width": 347
+        },
+        {
+          "height": 388,
+          "resource_url": "https://i.discogs.com/O_MdQ-wrP6AvMy-SCvjkybtwyKE2-qjQV3UWjR17dfs/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O_MdQ-wrP6AvMy-SCvjkybtwyKE2-qjQV3UWjR17dfs/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jx4rfXrCzaq3espms9ldkl1JoPduSWihU9JI9fzbiPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 304,
+          "resource_url": "https://i.discogs.com/e0cvfLOycYEky4cOrKLBQi6ZuYVOwGBdXwJ6ndz0ojk/rs:fit/g:sm/q:90/h:304/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e0cvfLOycYEky4cOrKLBQi6ZuYVOwGBdXwJ6ndz0ojk/rs:fit/g:sm/q:90/h:304/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/uKAM4hEMzAyQySx2Ed3uQXhGVsop3Rrz46ACI6P_UgE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "width": 440
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 482543,
+          "name": "John K. Samson",
+          "resource_url": "https://api.discogs.com/artists/482543"
+        },
+        {
+          "active": true,
+          "id": 788647,
+          "name": "Chris Hannah",
+          "resource_url": "https://api.discogs.com/artists/788647"
+        },
+        {
+          "active": true,
+          "id": 1071881,
+          "name": "Jordy Samolesky",
+          "resource_url": "https://api.discogs.com/artists/1071881"
+        },
+        {
+          "active": false,
+          "id": 1417092,
+          "name": "David Guillas",
+          "resource_url": "https://api.discogs.com/artists/1417092"
+        },
+        {
+          "active": true,
+          "id": 1417093,
+          "name": "Todd Kowalski",
+          "resource_url": "https://api.discogs.com/artists/1417093"
+        },
+        {
+          "active": false,
+          "id": 1722091,
+          "name": "Stinky Mike Braumeister",
+          "resource_url": "https://api.discogs.com/artists/1722091"
+        },
+        {
+          "active": false,
+          "id": 1722094,
+          "name": "Hopper's Wife",
+          "resource_url": "https://api.discogs.com/artists/1722094"
+        },
+        {
+          "active": true,
+          "id": 2505894,
+          "name": "Sulynn Hago",
+          "resource_url": "https://api.discogs.com/artists/2505894"
+        }
+      ],
       "name": "Propagandhi",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "259022",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/259022"
-      },
+      "namevariations": [
+        "Propa Gandhi",
+        "Propaghandi",
+        "The Propaghandi Ouija Board Choir"
+      ],
+      "profile": "Canadian punk band founded in Portage la Prairie (near Winnipeg), Manitoba, in 1989. One of the first bands to sign to [l=Fat Wreck Chords]. Singer / songwriter / bassist [a=John K. Samson] left the group in 1997 to pursue other interests and eventually start another band, [a283746].  Founding members [a=Chris Hannah] and [a=Jord Samolesky] continued to work on Propagandhi as well as starting their own label, [url=http://www.discogs.com/label/G7+Welcoming+Committee+Records]G7 Welcoming Committee[/url].\r\n\r\n[b]Current members:[/b]\r\n[a=Chris Hannah] – guitar, lead and backing vocals (1986–present)\r\n[a=Jord Samolesky] – drums, backing vocals (1986–present)\r\n[a=Todd Kowalski] – bass, lead and backing vocals (1997–present)\r\n[a=Sulynn Hago] – guitar, backing vocals (2015–present)\r\n\r\n[b]Former members:[/b]\r\nScott Hopper – bass, backing vocals (1986–1989)\r\n[a=Stinky Mike Braumeister] – bass (1989–1991)\r\n[a=John K. Samson] – bass, lead and backing vocals (1991–1997)\r\n[a=David Guillas] – guitar (2006–2015)",
+      "releases_url": "https://api.discogs.com/artists/259022/releases",
       "resource_url": "https://api.discogs.com/artists/259022",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/259022",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/259022-Propagandhi",
+      "urls": [
+        "http://www.propagandhi.com/",
+        "https://www.instagram.com/propagandhi_official?igsh=MXA4MTkyanVsZ2o5Yg==",
+        "http://www.myspace.com/propagandhi",
+        "http://www.facebook.com/propagandhi",
+        "http://en.wikipedia.org/wiki/Propagandhi",
+        "https://propagandhi.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "cc546218-cc08-4ae9-9592-ac1596c1470d",
@@ -217,27 +313,124 @@
       "twitter": "1",
       "website": "propagandhi.com"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='6576408', url='https://music.apple.com/gb/artist/propagandhi/6576408', name='Propagandhi', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/2e/b9/21/2eb92127-b2e0-42f5-bd6a-7c1de3964fde/b9ef68c7-6766-41fd-851b-cd631201fc0c_ami-identity-04ac150ade39fbc27755c3d0c64e471c-2024-02-12T22-21-53.834Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '6576408', 'type': 'artists', 'href': '/v1/catalog/gb/artists/6576408', 'attributes': {'artwork': {'bgColor': '1d1d1d', 'height': 4000, 'textColor1': 'cdbeb4', 'textColor2': 'd1927a', 'textColor3': 'aa9e96', 'textColor4': 'ad7b67', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/2e/b9/21/2eb92127-b2e0-42f5-bd6a-7c1de3964fde/b9ef68c7-6766-41fd-851b-cd631201fc0c_ami-identity-04ac150ade39fbc27755c3d0c64e471c-2024-02-12T22-21-53.834Z_cropped.png/{w}x{h}bb.jpg', 'width': 4000}, 'genreNames': ['Alternative'], 'name': 'Propagandhi', 'url': 'https://music.apple.com/gb/artist/propagandhi/6576408'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/6576408/albums', 'data': [{'id': '1485069879', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485069879'}, {'id': '985477544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/985477544'}, {'id': '1796224621', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1796224621'}, {'id': '663575880', 'type': 'albums', 'href': '/v1/catalog/gb/albums/663575880'}, {'id': '1485056345', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485056345'}, {'id': '291792344', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291792344'}, {'id': '1585415072', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585415072'}, {'id': '291777235', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291777235'}, {'id': '291771479', 'type': 'albums', 'href': '/v1/catalog/gb/albums/291771479'}, {'id': '1028527764', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1028527764'}, {'id': '1485074223', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485074223'}, {'id': '1465786465', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1465786465'}, {'id': '991232695', 'type': 'albums', 'href': '/v1/catalog/gb/albums/991232695'}, {'id': '1602260390', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1602260390'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "259022",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 259022,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/jTyg4PqKWluPrCqDK95oP8dD4d2zetzeRUGE0GeFeHs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/jTyg4PqKWluPrCqDK95oP8dD4d2zetzeRUGE0GeFeHs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yUFzo6f2LDJZc0e51ad9oVtwY_pz0Yf169T4TQUuDWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xNDk2MTYzMTU0/LTgyNTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/_NOiuZUC8qCHlG38QcnuoOtPRWPHSH5_GfybpRgF7fU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_NOiuZUC8qCHlG38QcnuoOtPRWPHSH5_GfybpRgF7fU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/N0zYoZ281K6tB1dkdOQLNIToDVmu4_2Se6OFTPbbAxg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMjk2ODA0OTE0/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 250,
+          "resource_url": "https://i.discogs.com/LLuc6APKXZv217i9OL1aP47UzsKmqxDz5wmYC_d5YRk/rs:fit/g:sm/q:90/h:250/w:347/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LLuc6APKXZv217i9OL1aP47UzsKmqxDz5wmYC_d5YRk/rs:fit/g:sm/q:90/h:250/w:347/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/Fii1TEZi3fJIkVLw_MOKGVNnFTk7l3XmBzEiz2vBl-c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTA2NDMyNTgw/LmpwZw.jpeg",
+          "width": 347
+        },
+        {
+          "height": 388,
+          "resource_url": "https://i.discogs.com/O_MdQ-wrP6AvMy-SCvjkybtwyKE2-qjQV3UWjR17dfs/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O_MdQ-wrP6AvMy-SCvjkybtwyKE2-qjQV3UWjR17dfs/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jx4rfXrCzaq3espms9ldkl1JoPduSWihU9JI9fzbiPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMDQ3OTYy/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 304,
+          "resource_url": "https://i.discogs.com/e0cvfLOycYEky4cOrKLBQi6ZuYVOwGBdXwJ6ndz0ojk/rs:fit/g:sm/q:90/h:304/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e0cvfLOycYEky4cOrKLBQi6ZuYVOwGBdXwJ6ndz0ojk/rs:fit/g:sm/q:90/h:304/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/uKAM4hEMzAyQySx2Ed3uQXhGVsop3Rrz46ACI6P_UgE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTAy/Mi0xMTYxMTMxNDcz/LmpwZWc.jpeg",
+          "width": 440
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 482543,
+          "name": "John K. Samson",
+          "resource_url": "https://api.discogs.com/artists/482543"
+        },
+        {
+          "active": true,
+          "id": 788647,
+          "name": "Chris Hannah",
+          "resource_url": "https://api.discogs.com/artists/788647"
+        },
+        {
+          "active": true,
+          "id": 1071881,
+          "name": "Jordy Samolesky",
+          "resource_url": "https://api.discogs.com/artists/1071881"
+        },
+        {
+          "active": false,
+          "id": 1417092,
+          "name": "David Guillas",
+          "resource_url": "https://api.discogs.com/artists/1417092"
+        },
+        {
+          "active": true,
+          "id": 1417093,
+          "name": "Todd Kowalski",
+          "resource_url": "https://api.discogs.com/artists/1417093"
+        },
+        {
+          "active": false,
+          "id": 1722091,
+          "name": "Stinky Mike Braumeister",
+          "resource_url": "https://api.discogs.com/artists/1722091"
+        },
+        {
+          "active": false,
+          "id": 1722094,
+          "name": "Hopper's Wife",
+          "resource_url": "https://api.discogs.com/artists/1722094"
+        },
+        {
+          "active": true,
+          "id": 2505894,
+          "name": "Sulynn Hago",
+          "resource_url": "https://api.discogs.com/artists/2505894"
+        }
+      ],
       "name": "Propagandhi",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "259022",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/259022"
-      },
+      "namevariations": [
+        "Propa Gandhi",
+        "Propaghandi",
+        "The Propaghandi Ouija Board Choir"
+      ],
+      "profile": "Canadian punk band founded in Portage la Prairie (near Winnipeg), Manitoba, in 1989. One of the first bands to sign to [l=Fat Wreck Chords]. Singer / songwriter / bassist [a=John K. Samson] left the group in 1997 to pursue other interests and eventually start another band, [a283746].  Founding members [a=Chris Hannah] and [a=Jord Samolesky] continued to work on Propagandhi as well as starting their own label, [url=http://www.discogs.com/label/G7+Welcoming+Committee+Records]G7 Welcoming Committee[/url].\r\n\r\n[b]Current members:[/b]\r\n[a=Chris Hannah] – guitar, lead and backing vocals (1986–present)\r\n[a=Jord Samolesky] – drums, backing vocals (1986–present)\r\n[a=Todd Kowalski] – bass, lead and backing vocals (1997–present)\r\n[a=Sulynn Hago] – guitar, backing vocals (2015–present)\r\n\r\n[b]Former members:[/b]\r\nScott Hopper – bass, backing vocals (1986–1989)\r\n[a=Stinky Mike Braumeister] – bass (1989–1991)\r\n[a=John K. Samson] – bass, lead and backing vocals (1991–1997)\r\n[a=David Guillas] – guitar (2006–2015)",
+      "releases_url": "https://api.discogs.com/artists/259022/releases",
       "resource_url": "https://api.discogs.com/artists/259022",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/259022",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/259022-Propagandhi",
+      "urls": [
+        "http://www.propagandhi.com/",
+        "https://www.instagram.com/propagandhi_official?igsh=MXA4MTkyanVsZ2o5Yg==",
+        "http://www.myspace.com/propagandhi",
+        "http://www.facebook.com/propagandhi",
+        "http://en.wikipedia.org/wiki/Propagandhi",
+        "https://propagandhi.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Propagandhi', url='https://www.last.fm/music/Propagandhi', mbid='cc546218-cc08-4ae9-9592-ac1596c1470d', listeners=380781, playcount=16378108, bio_summary='Propagandhi is a punk rock band based in Winnipeg, Manitoba, Canada, formed in 1986. Both in their lyrics and activism, the band\\'s members champion various left-wing causes and veganism; their music takes a vocal stance against human rights violations, sexism, racism, nationalism, homophobia, capitalism and religion.\\n\\nCurrent members:\\nChris Hannah – vocals, guitar (1986–present)\\nJord Samolesky – drums (1986–present)\\nTodd Kowalski – bass, vocals (1997–present) <a href=\"https://www.last.fm/music/Propagandhi\">Read more on Last.fm</a>', bio_content='Propagandhi is a punk rock band based in Winnipeg, Manitoba, Canada, formed in 1986. Both in their lyrics and activism, the band\\'s members champion various left-wing causes and veganism; their music takes a vocal stance against human rights violations, sexism, racism, nationalism, homophobia, capitalism and religion.\\n\\nCurrent members:\\nChris Hannah – vocals, guitar (1986–present)\\nJord Samolesky – drums (1986–present)\\nTodd Kowalski – bass, vocals (1997–present)\\nSulynn Hago – guitar, vocals (2015–present)\\n\\nFormer members\\nScott Hopper – bass, vocals (1986–89)\\nMike Braumeister – bass (1989–91)\\nJohn K. Samson – bass, vocals (1991–97)\\nDavid Guillas – guitar, vocals (2006–2015)\\n\\n1993 - How to Clean Everything\\n1996 - Less Talk, More Rock \\n2001 - Today\\'s Empires, Tomorrow\\'s Ashes\\n2005 - Potemkin City Limits\\n2009 - Supporting Caste\\n2012 - Failed States\\n2017 - Victory Lap <a href=\"https://www.last.fm/music/Propagandhi\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['punk', 'punk rock', 'hardcore punk', 'political', 'hardcore'], similar_artists=[{'name': 'Good Riddance', 'url': 'https://www.last.fm/music/Good+Riddance'}, {'name': 'Lagwagon', 'url': 'https://www.last.fm/music/Lagwagon'}, {'name': 'Strung Out', 'url': 'https://www.last.fm/music/Strung+Out'}, {'name': 'NOFX', 'url': 'https://www.last.fm/music/NOFX'}, {'name': 'A Wilhelm Scream', 'url': 'https://www.last.fm/music/A+Wilhelm+Scream'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Propagandhi', 'mbid': 'cc546218-cc08-4ae9-9592-ac1596c1470d', 'url': 'https://www.last.fm/music/Propagandhi', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '380781', 'playcount': '16378108'}, 'similar': {'artist': [{'name': 'Good Riddance', 'url': 'https://www.last.fm/music/Good+Riddance', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lagwagon', 'url': 'https://www.last.fm/music/Lagwagon', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Strung Out', 'url': 'https://www.last.fm/music/Strung+Out', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'NOFX', 'url': 'https://www.last.fm/music/NOFX', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'A Wilhelm Scream', 'url': 'https://www.last.fm/music/A+Wilhelm+Scream', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'punk rock', 'url': 'https://www.last.fm/tag/punk+rock'}, {'name': 'hardcore punk', 'url': 'https://www.last.fm/tag/hardcore+punk'}, {'name': 'political', 'url': 'https://www.last.fm/tag/political'}, {'name': 'hardcore', 'url': 'https://www.last.fm/tag/hardcore'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Propagandhi/+wiki'}}, 'published': '21 Feb 2006, 12:29', 'summary': 'Propagandhi is a punk rock band based in Winnipeg, Manitoba, Canada, formed in 1986. Both in their lyrics and activism, the band\\'s members champion various left-wing causes and veganism; their music takes a vocal stance against human rights violations, sexism, racism, nationalism, homophobia, capitalism and religion.\\n\\nCurrent members:\\nChris Hannah – vocals, guitar (1986–present)\\nJord Samolesky – drums (1986–present)\\nTodd Kowalski – bass, vocals (1997–present) <a href=\"https://www.last.fm/music/Propagandhi\">Read more on Last.fm</a>', 'content': 'Propagandhi is a punk rock band based in Winnipeg, Manitoba, Canada, formed in 1986. Both in their lyrics and activism, the band\\'s members champion various left-wing causes and veganism; their music takes a vocal stance against human rights violations, sexism, racism, nationalism, homophobia, capitalism and religion.\\n\\nCurrent members:\\nChris Hannah – vocals, guitar (1986–present)\\nJord Samolesky – drums (1986–present)\\nTodd Kowalski – bass, vocals (1997–present)\\nSulynn Hago – guitar, vocals (2015–present)\\n\\nFormer members\\nScott Hopper – bass, vocals (1986–89)\\nMike Braumeister – bass (1989–91)\\nJohn K. Samson – bass, vocals (1991–97)\\nDavid Guillas – guitar, vocals (2006–2015)\\n\\n1993 - How to Clean Everything\\n1996 - Less Talk, More Rock \\n2001 - Today\\'s Empires, Tomorrow\\'s Ashes\\n2005 - Potemkin City Limits\\n2009 - Supporting Caste\\n2012 - Failed States\\n2017 - Victory Lap <a href=\"https://www.last.fm/music/Propagandhi\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7qpy5KY3DVrezixTl6mziA', url='https://open.spotify.com/artist/7qpy5KY3DVrezixTl6mziA', name='Propagandhi', popularity=46, followers=214938, genres=['skate punk', 'punk', 'melodic hardcore', 'ska punk', 'hardcore punk'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb552f29448f81e5e94cd1739e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174552f29448f81e5e94cd1739e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178552f29448f81e5e94cd1739e', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7qpy5KY3DVrezixTl6mziA'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7qpy5KY3DVrezixTl6mziA'}, 'followers': {'href': None, 'total': 214938}, 'genres': ['skate punk', 'punk', 'melodic hardcore', 'ska punk', 'hardcore punk'], 'href': 'https://api.spotify.com/v1/artists/7qpy5KY3DVrezixTl6mziA', 'id': '7qpy5KY3DVrezixTl6mziA', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb552f29448f81e5e94cd1739e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174552f29448f81e5e94cd1739e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178552f29448f81e5e94cd1739e', 'height': 160, 'width': 160}], 'name': 'Propagandhi', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:7qpy5KY3DVrezixTl6mziA'})",
@@ -315,6 +508,6 @@
   },
   "spotify_id": "7qpy5KY3DVrezixTl6mziA",
   "spotify_url": "https://open.spotify.com/artist/7qpy5KY3DVrezixTl6mziA",
-  "updated_at": "2026-10-22T14:10:26.325915",
+  "updated_at": "2026-10-30T18:44:20.616156",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Propagandhi"
 }

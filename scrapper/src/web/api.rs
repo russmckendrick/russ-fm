@@ -562,7 +562,7 @@ pub async fn backups(State(s): Shared) -> ApiResult {
 
 #[derive(Deserialize)]
 pub struct SiteScriptBody {
-    /// `generate-colors` or `generate-artist-images`.
+    /// `generate-colors`, `generate-artist-images` or `generate-explore`.
     script: String,
     /// One album (colours) or artist (images) folder to redo.
     only: Option<String>,
@@ -571,26 +571,29 @@ pub struct SiteScriptBody {
     all: bool,
 }
 
-/// `pnpm run generate-colors` / `generate-artist-images` in the repo root, as a job. The site's
-/// own asset scripts: they read what the scrapper wrote into public/ and write beside it.
+/// `pnpm run generate-colors` / `generate-artist-images` / `generate-explore` in the repo root,
+/// as a job. The site's own asset scripts: they read what the scrapper wrote into public/ and
+/// write beside it. generate-explore always rebuilds the whole graph (no `--only` or redo-all).
 pub async fn site_script(State(s): Shared, Json(body): Json<SiteScriptBody>) -> ApiResult {
     let redo_all = match body.script.as_str() {
-        "generate-colors" => "--force",
-        "generate-artist-images" => "--full",
+        "generate-colors" => Some("--force"),
+        "generate-artist-images" => Some("--full"),
+        "generate-explore" => None,
         other => return Err(ApiError::bad_request(format!("unknown script {other:?}"))),
     };
     let mut args = vec!["run".to_string(), body.script.clone()];
     let mut title = format!("pnpm {}", body.script);
-    if let Some(slug) = body.only.as_deref().map(str::trim).filter(|s| !s.is_empty()) {
+    let only = body.only.as_deref().map(str::trim).filter(|s| !s.is_empty() && redo_all.is_some());
+    if let Some(slug) = only {
         check_slug(slug)?;
         if slug.starts_with('-') {
             return Err(ApiError::bad_request("invalid slug"));
         }
         args.extend(["--only".to_string(), slug.to_string()]);
         title = format!("{title} --only {slug}");
-    } else if body.all {
-        args.push(redo_all.to_string());
-        title = format!("{title} {redo_all}");
+    } else if let Some(flag) = redo_all.filter(|_| body.all) {
+        args.push(flag.to_string());
+        title = format!("{title} {flag}");
     }
     // The repo root is the data directory's parent (public/ → repo).
     let data_dir = absolute(s.cfg.data_dir());

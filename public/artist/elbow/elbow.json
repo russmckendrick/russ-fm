@@ -129,22 +129,124 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='3240611', url='https://music.apple.com/gb/artist/elbow/3240611', name='Elbow', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/1d/46/53/1d46532e-c217-b75e-73be-fb6221d6d3e7/2665f2c4-d258-4438-a00e-7a13b28d7bea_ami-identity-019aac170f706f7d4e3b61d761812ce6-2024-01-29T22-32-52.132Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3240611', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3240611', 'attributes': {'name': 'Elbow', 'genreNames': ['Alternative'], 'artwork': {'width': 1836, 'height': 1836, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/1d/46/53/1d46532e-c217-b75e-73be-fb6221d6d3e7/2665f2c4-d258-4438-a00e-7a13b28d7bea_ami-identity-019aac170f706f7d4e3b61d761812ce6-2024-01-29T22-32-52.132Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '323841', 'textColor1': 'fae3b9', 'textColor2': 'e4bb98', 'textColor3': 'd2c1a1', 'textColor4': 'c0a187'}, 'url': 'https://music.apple.com/gb/artist/elbow/3240611'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3240611/albums', 'next': '/v1/catalog/gb/artists/3240611/albums?offset=25', 'data': [{'id': '1443066830', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443066830'}, {'id': '1440883135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440883135'}, {'id': '1474373426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474373426'}, {'id': '1440767202', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767202'}, {'id': '1445872326', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445872326'}, {'id': '1440761104', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440761104'}, {'id': '1724323660', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1724323660'}, {'id': '1445181111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445181111'}, {'id': '1583948376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583948376'}, {'id': '1364507052', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1364507052'}, {'id': '1519010891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1519010891'}, {'id': '1442255942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442255942'}, {'id': '1440948754', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440948754'}, {'id': '1440952035', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440952035'}, {'id': '1442364904', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442364904'}, {'id': '1440768509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440768509'}, {'id': '1444050176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444050176'}, {'id': '1452851482', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1452851482'}, {'id': '1452857857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1452857857'}, {'id': '1444886399', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444886399'}, {'id': '1362350335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1362350335'}, {'id': '1565337077', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1565337077'}, {'id': '1737271898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1737271898'}, {'id': '1811402740', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811402740'}, {'id': '1776912962', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1776912962'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "41658",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 17435674,
+          "name": "Soft (20)",
+          "resource_url": "https://api.discogs.com/artists/17435674"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 41658,
+      "images": [
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/BPv2spXb5AzPxP-mxxx6gv38o3TORn60QTacoOndo4U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/BPv2spXb5AzPxP-mxxx6gv38o3TORn60QTacoOndo4U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/R8oAdyFGY4wDTS_vhN4ckB7cH8R-Z5RrnkOpj8bTYHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/_C7UJtFGcgS9t1cMD8oab02qBUcm8RpdjQMTI6OnGWc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_C7UJtFGcgS9t1cMD8oab02qBUcm8RpdjQMTI6OnGWc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/EBQzzbvsvl1s6eYc-u0GKZKPK_v92DWh3OWgmwaHc3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 585,
+          "resource_url": "https://i.discogs.com/Jgcg2jRXMXV8Fmtt8edIS_RSH9R7L06FQhLLxDObKBw/rs:fit/g:sm/q:90/h:585/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Jgcg2jRXMXV8Fmtt8edIS_RSH9R7L06FQhLLxDObKBw/rs:fit/g:sm/q:90/h:585/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NQF7TaMEEkchNu-ySW3H4osDaEoDeHL5RzWnsclZEkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "width": 470
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/-w1L41_uT0ofKk5yIibFjT6M9pjalq_H7zW41QUOzfA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-w1L41_uT0ofKk5yIibFjT6M9pjalq_H7zW41QUOzfA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rANioxTbH7gdVGfHUysJnJqDibh-SSMEs890Uv-Rm2E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Fz3XVlnOix9AXmd2Pk9fgnng-UUCU1PwKMbiXs05Wb8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Fz3XVlnOix9AXmd2Pk9fgnng-UUCU1PwKMbiXs05Wb8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tXf1QL_99i3zAh7ZduvJpp1XwIoKaOX2EO54NV8sjPU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DrKj-a5rvXbL4sUVgM5r1-cQ8xOkZfyFWP_kxClOUQs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DrKj-a5rvXbL4sUVgM5r1-cQ8xOkZfyFWP_kxClOUQs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4tESxhZoJrPHLyFVIlpQGirZFJLg0l2myBnpzZ1ov-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 385,
+          "resource_url": "https://i.discogs.com/D0aAI9V33ceH8XQGi0kzukMxOVrQIt6gAUFfrEogUXw/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D0aAI9V33ceH8XQGi0kzukMxOVrQIt6gAUFfrEogUXw/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NRLGMeLwWSAz5ng-B1D2Xn9OKRB5guS2wDcPOA1kfxY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 52967,
+          "name": "Guy Garvey",
+          "resource_url": "https://api.discogs.com/artists/52967"
+        },
+        {
+          "active": true,
+          "id": 371488,
+          "name": "Craig Potter",
+          "resource_url": "https://api.discogs.com/artists/371488"
+        },
+        {
+          "active": true,
+          "id": 420136,
+          "name": "Mark Potter",
+          "resource_url": "https://api.discogs.com/artists/420136"
+        },
+        {
+          "active": true,
+          "id": 420137,
+          "name": "Pete Turner",
+          "resource_url": "https://api.discogs.com/artists/420137"
+        },
+        {
+          "active": true,
+          "id": 444241,
+          "name": "Alex Reeves",
+          "resource_url": "https://api.discogs.com/artists/444241"
+        },
+        {
+          "active": false,
+          "id": 705096,
+          "name": "Richard Jupp",
+          "resource_url": "https://api.discogs.com/artists/705096"
+        }
+      ],
       "name": "Elbow",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "41658",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/41658"
-      },
+      "profile": "elbow (official capitalization) is an alternative rock band from, Bury, Greater Manchester, England. Formed in 1990, originally called Mr. Soft (later shortened to Soft) and comprised of guitarist and back up vocalist Mark Potter, bassist Pete Turner and drummer Richard Jupp.  Vocalist, guitarist and lyricist Guy Garvey was asked by Mark to join the band when they met at college (both were 16 at the time). Mark's brother keyboardist and back up vocalist Craig Potter joined soon afterwards.\r\n\r\nThey changed their name to \"elbow\" in 1997 after Guy heard a character from a BBC TV Drama \"The Singing Detective\" say that the word \"elbow\" is the most sensual word in the English language, not for its definition, but for how it feels to say and how it looks on the page.\r\n\r\nThey were also signed by [a=Island Records] in 1997, but due to a takeover and indie band jettison-attitude by [l=Universal] in 1998, their [a=Steve Osborne] produced debut album was scrapped.  Only a self-issued (now) ultra rare E.P. and a compilation appearance of one of the songs document this period.\r\n\r\nIn 2000 they put out their first release proper, an E.P. on a small indie label [l=Ugly Man Records] before they were eventually signed to Richard Branson's [l=V2] in 2001.\r\n\r\nWinner of the 2008 Mercury Prize (for best British album) for [i]The Seldom Seen Kid[/i].\r\n\r\nDrummer Richard Jupp left the band of his own choice to pursue drum tutoring in 2016.",
+      "releases_url": "https://api.discogs.com/artists/41658/releases",
       "resource_url": "https://api.discogs.com/artists/41658",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/41658",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/41658-Elbow",
+      "urls": [
+        "http://www.elbow.co.uk",
+        "https://www.facebook.com/Elbow",
+        "https://www.instagram.com/elbowofficial",
+        "https://www.youtube.com/user/elbowmusicuk",
+        "https://twitter.com/elbow",
+        "https://en.wikipedia.org/wiki/Elbow_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "3cb3928a-526c-4a3d-93c5-53315fa9bde0",
@@ -359,27 +461,137 @@
         "track": "Real Life (Angel)",
         "uri": "https://www.youtube.com/watch?v=ZAQeq0XIu6g"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "Dreamchaser",
+        "id": "Q7092564",
+        "track": "One Day Like This",
+        "uri": "https://www.youtube.com/watch?v=8IPRu42wscA"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='3240611', url='https://music.apple.com/gb/artist/elbow/3240611', name='Elbow', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/1d/46/53/1d46532e-c217-b75e-73be-fb6221d6d3e7/2665f2c4-d258-4438-a00e-7a13b28d7bea_ami-identity-019aac170f706f7d4e3b61d761812ce6-2024-01-29T22-32-52.132Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3240611', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3240611', 'attributes': {'name': 'Elbow', 'genreNames': ['Alternative'], 'artwork': {'width': 1836, 'height': 1836, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/1d/46/53/1d46532e-c217-b75e-73be-fb6221d6d3e7/2665f2c4-d258-4438-a00e-7a13b28d7bea_ami-identity-019aac170f706f7d4e3b61d761812ce6-2024-01-29T22-32-52.132Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '323841', 'textColor1': 'fae3b9', 'textColor2': 'e4bb98', 'textColor3': 'd2c1a1', 'textColor4': 'c0a187'}, 'url': 'https://music.apple.com/gb/artist/elbow/3240611'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3240611/albums', 'next': '/v1/catalog/gb/artists/3240611/albums?offset=25', 'data': [{'id': '1443066830', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443066830'}, {'id': '1440883135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440883135'}, {'id': '1474373426', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474373426'}, {'id': '1440767202', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767202'}, {'id': '1445872326', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445872326'}, {'id': '1440761104', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440761104'}, {'id': '1724323660', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1724323660'}, {'id': '1445181111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445181111'}, {'id': '1583948376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583948376'}, {'id': '1364507052', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1364507052'}, {'id': '1519010891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1519010891'}, {'id': '1442255942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442255942'}, {'id': '1440948754', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440948754'}, {'id': '1440952035', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440952035'}, {'id': '1442364904', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442364904'}, {'id': '1440768509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440768509'}, {'id': '1444050176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444050176'}, {'id': '1452851482', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1452851482'}, {'id': '1452857857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1452857857'}, {'id': '1444886399', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444886399'}, {'id': '1362350335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1362350335'}, {'id': '1565337077', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1565337077'}, {'id': '1737271898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1737271898'}, {'id': '1811402740', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1811402740'}, {'id': '1776912962', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1776912962'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "41658",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 17435674,
+          "name": "Soft (20)",
+          "resource_url": "https://api.discogs.com/artists/17435674"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 41658,
+      "images": [
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/BPv2spXb5AzPxP-mxxx6gv38o3TORn60QTacoOndo4U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/BPv2spXb5AzPxP-mxxx6gv38o3TORn60QTacoOndo4U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/R8oAdyFGY4wDTS_vhN4ckB7cH8R-Z5RrnkOpj8bTYHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE0ODg0OTg0NjUt/NDUxOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/_C7UJtFGcgS9t1cMD8oab02qBUcm8RpdjQMTI6OnGWc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_C7UJtFGcgS9t1cMD8oab02qBUcm8RpdjQMTI6OnGWc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/EBQzzbvsvl1s6eYc-u0GKZKPK_v92DWh3OWgmwaHc3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNzEt/MzkzOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 585,
+          "resource_url": "https://i.discogs.com/Jgcg2jRXMXV8Fmtt8edIS_RSH9R7L06FQhLLxDObKBw/rs:fit/g:sm/q:90/h:585/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Jgcg2jRXMXV8Fmtt8edIS_RSH9R7L06FQhLLxDObKBw/rs:fit/g:sm/q:90/h:585/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NQF7TaMEEkchNu-ySW3H4osDaEoDeHL5RzWnsclZEkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/OTU3Ni5qcGVn.jpeg",
+          "width": 470
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/-w1L41_uT0ofKk5yIibFjT6M9pjalq_H7zW41QUOzfA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-w1L41_uT0ofKk5yIibFjT6M9pjalq_H7zW41QUOzfA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rANioxTbH7gdVGfHUysJnJqDibh-SSMEs890Uv-Rm2E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNDct/MzkwNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Fz3XVlnOix9AXmd2Pk9fgnng-UUCU1PwKMbiXs05Wb8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Fz3XVlnOix9AXmd2Pk9fgnng-UUCU1PwKMbiXs05Wb8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tXf1QL_99i3zAh7ZduvJpp1XwIoKaOX2EO54NV8sjPU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNTQt/Mzg3MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DrKj-a5rvXbL4sUVgM5r1-cQ8xOkZfyFWP_kxClOUQs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DrKj-a5rvXbL4sUVgM5r1-cQ8xOkZfyFWP_kxClOUQs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4tESxhZoJrPHLyFVIlpQGirZFJLg0l2myBnpzZ1ov-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2MTEwNjYxNjEt/MzMyNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 385,
+          "resource_url": "https://i.discogs.com/D0aAI9V33ceH8XQGi0kzukMxOVrQIt6gAUFfrEogUXw/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D0aAI9V33ceH8XQGi0kzukMxOVrQIt6gAUFfrEogUXw/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NRLGMeLwWSAz5ng-B1D2Xn9OKRB5guS2wDcPOA1kfxY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNjU4/LTE2NjIxOTkzNjYt/NjM4OC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 52967,
+          "name": "Guy Garvey",
+          "resource_url": "https://api.discogs.com/artists/52967"
+        },
+        {
+          "active": true,
+          "id": 371488,
+          "name": "Craig Potter",
+          "resource_url": "https://api.discogs.com/artists/371488"
+        },
+        {
+          "active": true,
+          "id": 420136,
+          "name": "Mark Potter",
+          "resource_url": "https://api.discogs.com/artists/420136"
+        },
+        {
+          "active": true,
+          "id": 420137,
+          "name": "Pete Turner",
+          "resource_url": "https://api.discogs.com/artists/420137"
+        },
+        {
+          "active": true,
+          "id": 444241,
+          "name": "Alex Reeves",
+          "resource_url": "https://api.discogs.com/artists/444241"
+        },
+        {
+          "active": false,
+          "id": 705096,
+          "name": "Richard Jupp",
+          "resource_url": "https://api.discogs.com/artists/705096"
+        }
+      ],
       "name": "Elbow",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "41658",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/41658"
-      },
+      "profile": "elbow (official capitalization) is an alternative rock band from, Bury, Greater Manchester, England. Formed in 1990, originally called Mr. Soft (later shortened to Soft) and comprised of guitarist and back up vocalist Mark Potter, bassist Pete Turner and drummer Richard Jupp.  Vocalist, guitarist and lyricist Guy Garvey was asked by Mark to join the band when they met at college (both were 16 at the time). Mark's brother keyboardist and back up vocalist Craig Potter joined soon afterwards.\r\n\r\nThey changed their name to \"elbow\" in 1997 after Guy heard a character from a BBC TV Drama \"The Singing Detective\" say that the word \"elbow\" is the most sensual word in the English language, not for its definition, but for how it feels to say and how it looks on the page.\r\n\r\nThey were also signed by [a=Island Records] in 1997, but due to a takeover and indie band jettison-attitude by [l=Universal] in 1998, their [a=Steve Osborne] produced debut album was scrapped.  Only a self-issued (now) ultra rare E.P. and a compilation appearance of one of the songs document this period.\r\n\r\nIn 2000 they put out their first release proper, an E.P. on a small indie label [l=Ugly Man Records] before they were eventually signed to Richard Branson's [l=V2] in 2001.\r\n\r\nWinner of the 2008 Mercury Prize (for best British album) for [i]The Seldom Seen Kid[/i].\r\n\r\nDrummer Richard Jupp left the band of his own choice to pursue drum tutoring in 2016.",
+      "releases_url": "https://api.discogs.com/artists/41658/releases",
       "resource_url": "https://api.discogs.com/artists/41658",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/41658",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/41658-Elbow",
+      "urls": [
+        "http://www.elbow.co.uk",
+        "https://www.facebook.com/Elbow",
+        "https://www.instagram.com/elbowofficial",
+        "https://www.youtube.com/user/elbowmusicuk",
+        "https://twitter.com/elbow",
+        "https://en.wikipedia.org/wiki/Elbow_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Elbow', url='https://www.last.fm/music/Elbow', mbid='3cb3928a-526c-4a3d-93c5-53315fa9bde0', listeners=1194358, playcount=33460617, bio_summary='Elbow is an alternative rock band that got started in Bury, Greater Manchester, United Kingdom in 1990. Formed when its members were in sixth-form college, the group consists of Guy Garvey (vocals, guitar), Mark Potter (guitar, vocals), Pete Turner (bass), Craig Potter (keyboards) and Richard Jupp (drums). Over the band\\'s twenty plus year career, it has released eight studio albums and four EPs while also having over five top 40 singles in the U.K. alone. <a href=\"https://www.last.fm/music/Elbow\">Read more on Last.fm</a>', bio_content='Elbow is an alternative rock band that got started in Bury, Greater Manchester, United Kingdom in 1990. Formed when its members were in sixth-form college, the group consists of Guy Garvey (vocals, guitar), Mark Potter (guitar, vocals), Pete Turner (bass), Craig Potter (keyboards) and Richard Jupp (drums). Over the band\\'s twenty plus year career, it has released eight studio albums and four EPs while also having over five top 40 singles in the U.K. alone.\\n\\nThe band is named after a line in the BBC TV mini-series \\'The Singing Detective\\', in which a character says that the word \"elbow\" is the most sensuous word in the English language (not due to its definition per se but due to how it feels to say it). Though the group came about in 1990, intially going by names such as \\'Soft\\' and \\'Mr. Soft\\', it wasn\\'t until \\'The Noisebox EP\\' came out on 1 January 1998 that they had a real release. Elbow started out specializing in \"chilled funk\", but the guys changed the direction of their music after unanimously deciding that they were \"shit.\"\\n\\nTheir new songs picked up notice from both Island Records, but the band got dropped due to business shenanigans before anything actually came out post-singing. Elbow then released two critically acclaimed EP\\'s on the independent Ugly Man Record label, starting with the aformentioned \\'Noisebox EP\\'. Luckily, their work caught the attention of V2 Records. \\n\\nV2 released Elbow\\'s debut album: \"Asleep In The Back.\" The album was a surprisingly moderate success, gaining substantial critical acclaim and, ultimately, a nomination for the Mercury Music Prize in 2001. The single \"Newborn\" received attention after being banned by Radio 1 for the lyric, \"I\\'ll be the corpse in your bathtub.\"\\n\\nIts 2003 album, \"Cast Of Thousands,\" entered the UK Charts at #7 to critical acclaim.  The lead single, \"Fallen Angel,\" charted at #19. \\n\\nElbow released its third album in 2005: \"Leaders Of The Free World.\" Despite a continued lack of commercial notice, \"Leaders Of The Free World\" charted at #12, with its lead single, \"Forget Myself\" achieving #22 in the charts.  That autumn, Elbow headlined the first of two sell-out tours.\\n\\nMarch 17, 2008, saw the release of Elbow\\'s fourth album, entitled \"The Seldom Seen Kid.\" Released through Fiction, it entered the UK album chart at #5, and went on to win the 2008 Mercury Music Award. \"The Fix,\" features guest vocals and lead guitar by Richard Hawley. April 2009 saw the release of The Seldom Seen Kid Live At Abbey Road, recorded with The BBC Concert Orchestra and Chantage. This album, recorded in Studio One of the world famous Abbey Road Studios on Saturday, January 17, 2008, is a complete run-through of the Mercury winning album. It features the band, a 52-piece orchestra, and a 20-member choir.\\n\\nThe band\\'s fifth album Build A Rocket Boys! was released in the UK on March 14, 2011.\\n\\nIn July 2015, Elbow released the Lost Worker Bee EP, which was soon followed by Guy Garvey\\'s first solo album \\'Courting the Squall\\' (Oct 2015).\\n\\nTheir seventh studio album, \\'Little Fictions\\' was released on 3 February 2017, with Elbow\\'s eighth studio album, \\'Giants of All Sizes\\', released 2 years later on 11 October 2019. <a href=\"https://www.last.fm/music/Elbow\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'seen live', 'alternative', 'indie rock', 'britpop'], similar_artists=[{'name': 'Guy Garvey', 'url': 'https://www.last.fm/music/Guy+Garvey'}, {'name': 'Doves', 'url': 'https://www.last.fm/music/Doves'}, {'name': 'Turin Brakes', 'url': 'https://www.last.fm/music/Turin+Brakes'}, {'name': 'I Am Kloot', 'url': 'https://www.last.fm/music/I+Am+Kloot'}, {'name': 'Badly Drawn Boy', 'url': 'https://www.last.fm/music/Badly+Drawn+Boy'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Elbow', 'mbid': '3cb3928a-526c-4a3d-93c5-53315fa9bde0', 'url': 'https://www.last.fm/music/Elbow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '1194358', 'playcount': '33460617'}, 'similar': {'artist': [{'name': 'Guy Garvey', 'url': 'https://www.last.fm/music/Guy+Garvey', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Doves', 'url': 'https://www.last.fm/music/Doves', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Turin Brakes', 'url': 'https://www.last.fm/music/Turin+Brakes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'I Am Kloot', 'url': 'https://www.last.fm/music/I+Am+Kloot', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Badly Drawn Boy', 'url': 'https://www.last.fm/music/Badly+Drawn+Boy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'britpop', 'url': 'https://www.last.fm/tag/britpop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Elbow/+wiki'}}, 'published': '10 Feb 2006, 13:16', 'summary': 'Elbow is an alternative rock band that got started in Bury, Greater Manchester, United Kingdom in 1990. Formed when its members were in sixth-form college, the group consists of Guy Garvey (vocals, guitar), Mark Potter (guitar, vocals), Pete Turner (bass), Craig Potter (keyboards) and Richard Jupp (drums). Over the band\\'s twenty plus year career, it has released eight studio albums and four EPs while also having over five top 40 singles in the U.K. alone. <a href=\"https://www.last.fm/music/Elbow\">Read more on Last.fm</a>', 'content': 'Elbow is an alternative rock band that got started in Bury, Greater Manchester, United Kingdom in 1990. Formed when its members were in sixth-form college, the group consists of Guy Garvey (vocals, guitar), Mark Potter (guitar, vocals), Pete Turner (bass), Craig Potter (keyboards) and Richard Jupp (drums). Over the band\\'s twenty plus year career, it has released eight studio albums and four EPs while also having over five top 40 singles in the U.K. alone.\\n\\nThe band is named after a line in the BBC TV mini-series \\'The Singing Detective\\', in which a character says that the word \"elbow\" is the most sensuous word in the English language (not due to its definition per se but due to how it feels to say it). Though the group came about in 1990, intially going by names such as \\'Soft\\' and \\'Mr. Soft\\', it wasn\\'t until \\'The Noisebox EP\\' came out on 1 January 1998 that they had a real release. Elbow started out specializing in \"chilled funk\", but the guys changed the direction of their music after unanimously deciding that they were \"shit.\"\\n\\nTheir new songs picked up notice from both Island Records, but the band got dropped due to business shenanigans before anything actually came out post-singing. Elbow then released two critically acclaimed EP\\'s on the independent Ugly Man Record label, starting with the aformentioned \\'Noisebox EP\\'. Luckily, their work caught the attention of V2 Records. \\n\\nV2 released Elbow\\'s debut album: \"Asleep In The Back.\" The album was a surprisingly moderate success, gaining substantial critical acclaim and, ultimately, a nomination for the Mercury Music Prize in 2001. The single \"Newborn\" received attention after being banned by Radio 1 for the lyric, \"I\\'ll be the corpse in your bathtub.\"\\n\\nIts 2003 album, \"Cast Of Thousands,\" entered the UK Charts at #7 to critical acclaim.  The lead single, \"Fallen Angel,\" charted at #19. \\n\\nElbow released its third album in 2005: \"Leaders Of The Free World.\" Despite a continued lack of commercial notice, \"Leaders Of The Free World\" charted at #12, with its lead single, \"Forget Myself\" achieving #22 in the charts.  That autumn, Elbow headlined the first of two sell-out tours.\\n\\nMarch 17, 2008, saw the release of Elbow\\'s fourth album, entitled \"The Seldom Seen Kid.\" Released through Fiction, it entered the UK album chart at #5, and went on to win the 2008 Mercury Music Award. \"The Fix,\" features guest vocals and lead guitar by Richard Hawley. April 2009 saw the release of The Seldom Seen Kid Live At Abbey Road, recorded with The BBC Concert Orchestra and Chantage. This album, recorded in Studio One of the world famous Abbey Road Studios on Saturday, January 17, 2008, is a complete run-through of the Mercury winning album. It features the band, a 52-piece orchestra, and a 20-member choir.\\n\\nThe band\\'s fifth album Build A Rocket Boys! was released in the UK on March 14, 2011.\\n\\nIn July 2015, Elbow released the Lost Worker Bee EP, which was soon followed by Guy Garvey\\'s first solo album \\'Courting the Squall\\' (Oct 2015).\\n\\nTheir seventh studio album, \\'Little Fictions\\' was released on 3 February 2017, with Elbow\\'s eighth studio album, \\'Giants of All Sizes\\', released 2 years later on 11 October 2019. <a href=\"https://www.last.fm/music/Elbow\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0TJB3EE2efClsYIDQ8V2Jk', url='https://open.spotify.com/artist/0TJB3EE2efClsYIDQ8V2Jk', name='Elbow', popularity=58, followers=556329, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb2dee92c802411c160b1bb6d9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051742dee92c802411c160b1bb6d9', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1782dee92c802411c160b1bb6d9', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0TJB3EE2efClsYIDQ8V2Jk'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0TJB3EE2efClsYIDQ8V2Jk'}, 'followers': {'href': None, 'total': 556329}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0TJB3EE2efClsYIDQ8V2Jk', 'id': '0TJB3EE2efClsYIDQ8V2Jk', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb2dee92c802411c160b1bb6d9', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051742dee92c802411c160b1bb6d9', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1782dee92c802411c160b1bb6d9', 'height': 160, 'width': 160}], 'name': 'Elbow', 'popularity': 58, 'type': 'artist', 'uri': 'spotify:artist:0TJB3EE2efClsYIDQ8V2Jk'})",
@@ -464,6 +676,6 @@
   },
   "spotify_id": "0TJB3EE2efClsYIDQ8V2Jk",
   "spotify_url": "https://open.spotify.com/artist/0TJB3EE2efClsYIDQ8V2Jk",
-  "updated_at": "2026-10-22T14:06:38.507734",
+  "updated_at": "2026-10-30T18:39:12.674579",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Elbow_(band)"
 }

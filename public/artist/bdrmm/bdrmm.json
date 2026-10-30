@@ -98,22 +98,103 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1464987541', url='https://music.apple.com/gb/artist/bdrmm/1464987541', name='bdrmm', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/40/bc/c4/40bcc476-4254-a24e-5fa5-f4fdc6e62966/ami-identity-914482a72ba89b4919544a611b966742-2024-11-28T12-51-06.395Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1464987541', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1464987541', 'attributes': {'name': 'bdrmm', 'genreNames': ['Alternative'], 'artwork': {'width': 4160, 'height': 4160, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/40/bc/c4/40bcc476-4254-a24e-5fa5-f4fdc6e62966/ami-identity-914482a72ba89b4919544a611b966742-2024-11-28T12-51-06.395Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '00141f', 'textColor1': 'c8e5f1', 'textColor2': 'a8d3e8', 'textColor3': 'a0bbc7', 'textColor4': '86adc0'}, 'url': 'https://music.apple.com/gb/artist/bdrmm/1464987541'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1464987541/albums', 'data': [{'id': '1701098303', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098303'}, {'id': '1666711040', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666711040'}, {'id': '1774290482', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774290482'}, {'id': '1701098764', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098764'}, {'id': '1701098502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098502'}, {'id': '1725871328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725871328'}, {'id': '1707885612', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1707885612'}, {'id': '1710267876', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710267876'}, {'id': '1701127311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701127311'}, {'id': '1701101413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701101413'}, {'id': '1505592488', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1505592488'}, {'id': '1358271645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1358271645'}, {'id': '1664258020', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1664258020'}, {'id': '1725873301', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725873301'}, {'id': '1701097335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701097335'}, {'id': '1382491991', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1382491991'}, {'id': '1774288586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774288586'}, {'id': '1701099413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701099413'}, {'id': '1505593198', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1505593198'}, {'id': '1687260020', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1687260020'}, {'id': '1785879590', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1785879590'}, {'id': '1701101161', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701101161'}, {'id': '1701100680', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701100680'}, {'id': '1663408806', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1663408806'}, {'id': '1786403122', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786403122'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "7255372",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 7255372,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_sY_WvY0g3rsiFQUQOPP9y3Nx0K1Q7BfEGThHYhTDMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_sY_WvY0g3rsiFQUQOPP9y3Nx0K1Q7BfEGThHYhTDMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/c9W25gVvqJbk0zJXB_eDgF7nhlALwyAQiJIIiEFPEjM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 507,
+          "resource_url": "https://i.discogs.com/ntY76jXSlzGlaywTaXPRJBX3pvjqPOxRHIWcOLbRFPQ/rs:fit/g:sm/q:90/h:507/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ntY76jXSlzGlaywTaXPRJBX3pvjqPOxRHIWcOLbRFPQ/rs:fit/g:sm/q:90/h:507/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Qs9wVqRJBt1vO8jacRwvTZDbbfJSrRPNoddpvspRKoM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 534,
+          "resource_url": "https://i.discogs.com/xyH1ep0_zNuqI94ObrpnGF8EBuzBaID5sG5JtwbFXVs/rs:fit/g:sm/q:90/h:534/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xyH1ep0_zNuqI94ObrpnGF8EBuzBaID5sG5JtwbFXVs/rs:fit/g:sm/q:90/h:534/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/D-vi-WGU7_kKAs-wED5F0xA8dVq1iuGnIz2qXmKuiGA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "width": 550
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uvxHUr4dgDgMrLgytQObUR_XKv6XsNVx_eG4ADX1kYA/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uvxHUr4dgDgMrLgytQObUR_XKv6XsNVx_eG4ADX1kYA/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BYjumhHHjcBuv3cPnMDkd6tBiqAJDJpaQ8zUZJjSjt0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "width": 599
+        },
+        {
+          "height": 373,
+          "resource_url": "https://i.discogs.com/vCsaw0Hu4SHB6_7-3ZEPlbASXHzlOos_NHrWuTbnI0k/rs:fit/g:sm/q:90/h:373/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vCsaw0Hu4SHB6_7-3ZEPlbASXHzlOos_NHrWuTbnI0k/rs:fit/g:sm/q:90/h:373/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KGxmZqn8YynghF8KLwx0VEreOmuwujNWD8TYHk98w6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/X7jEbeV2lKVl5kTMiwu9VnMrT3LqZbOH2ml2mZVeE3w/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X7jEbeV2lKVl5kTMiwu9VnMrT3LqZbOH2ml2mZVeE3w/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kabVRXvKzGPOqHMUskxwCZXBdg0c1Wo6D4GG5ivTBC8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 275998,
+          "name": "Conor Murray",
+          "resource_url": "https://api.discogs.com/artists/275998"
+        },
+        {
+          "active": false,
+          "id": 7960805,
+          "name": "Danny Hull (2)",
+          "resource_url": "https://api.discogs.com/artists/7960805"
+        },
+        {
+          "active": true,
+          "id": 7960806,
+          "name": "Joe Vickers (5)",
+          "resource_url": "https://api.discogs.com/artists/7960806"
+        },
+        {
+          "active": true,
+          "id": 7960807,
+          "name": "Jordan Smith (14)",
+          "resource_url": "https://api.discogs.com/artists/7960807"
+        },
+        {
+          "active": true,
+          "id": 7960809,
+          "name": "Ryan Smith (46)",
+          "resource_url": "https://api.discogs.com/artists/7960809"
+        }
+      ],
       "name": "bdrmm",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "7255372",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/7255372"
-      },
+      "profile": "Dreampop / shoegaze band from Hull, UK, founded 2016.\r\nPronounced ‘bedroom’.",
+      "releases_url": "https://api.discogs.com/artists/7255372/releases",
       "resource_url": "https://api.discogs.com/artists/7255372",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/7255372",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/7255372-bdrmm",
+      "urls": [
+        "https://www.facebook.com/smellybdrmm/",
+        "https://bdrmm.bandcamp.com/",
+        "https://twitter.com/smellybdrmm",
+        "https://www.instagram.com/smellybdrmm",
+        "https://soundcloud.com/bdrmm",
+        "https://en.wikipedia.org/wiki/Bdrmm"
+      ]
     },
     "identity": {
       "musicbrainz_id": "0892e729-9af9-4746-8534-73cd0586347a",
@@ -171,22 +252,103 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1464987541', url='https://music.apple.com/gb/artist/bdrmm/1464987541', name='bdrmm', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/40/bc/c4/40bcc476-4254-a24e-5fa5-f4fdc6e62966/ami-identity-914482a72ba89b4919544a611b966742-2024-11-28T12-51-06.395Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1464987541', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1464987541', 'attributes': {'name': 'bdrmm', 'genreNames': ['Alternative'], 'artwork': {'width': 4160, 'height': 4160, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/40/bc/c4/40bcc476-4254-a24e-5fa5-f4fdc6e62966/ami-identity-914482a72ba89b4919544a611b966742-2024-11-28T12-51-06.395Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '00141f', 'textColor1': 'c8e5f1', 'textColor2': 'a8d3e8', 'textColor3': 'a0bbc7', 'textColor4': '86adc0'}, 'url': 'https://music.apple.com/gb/artist/bdrmm/1464987541'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1464987541/albums', 'data': [{'id': '1701098303', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098303'}, {'id': '1666711040', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666711040'}, {'id': '1774290482', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774290482'}, {'id': '1701098764', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098764'}, {'id': '1701098502', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701098502'}, {'id': '1725871328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725871328'}, {'id': '1707885612', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1707885612'}, {'id': '1710267876', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710267876'}, {'id': '1701127311', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701127311'}, {'id': '1701101413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701101413'}, {'id': '1505592488', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1505592488'}, {'id': '1358271645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1358271645'}, {'id': '1664258020', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1664258020'}, {'id': '1725873301', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1725873301'}, {'id': '1701097335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701097335'}, {'id': '1382491991', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1382491991'}, {'id': '1774288586', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774288586'}, {'id': '1701099413', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701099413'}, {'id': '1505593198', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1505593198'}, {'id': '1687260020', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1687260020'}, {'id': '1785879590', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1785879590'}, {'id': '1701101161', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701101161'}, {'id': '1701100680', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701100680'}, {'id': '1663408806', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1663408806'}, {'id': '1786403122', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786403122'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "7255372",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 7255372,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_sY_WvY0g3rsiFQUQOPP9y3Nx0K1Q7BfEGThHYhTDMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_sY_WvY0g3rsiFQUQOPP9y3Nx0K1Q7BfEGThHYhTDMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/c9W25gVvqJbk0zJXB_eDgF7nhlALwyAQiJIIiEFPEjM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTc0NjExODA4/MC00NDg4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 507,
+          "resource_url": "https://i.discogs.com/ntY76jXSlzGlaywTaXPRJBX3pvjqPOxRHIWcOLbRFPQ/rs:fit/g:sm/q:90/h:507/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ntY76jXSlzGlaywTaXPRJBX3pvjqPOxRHIWcOLbRFPQ/rs:fit/g:sm/q:90/h:507/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Qs9wVqRJBt1vO8jacRwvTZDbbfJSrRPNoddpvspRKoM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzk0/MC0xODc3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 534,
+          "resource_url": "https://i.discogs.com/xyH1ep0_zNuqI94ObrpnGF8EBuzBaID5sG5JtwbFXVs/rs:fit/g:sm/q:90/h:534/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xyH1ep0_zNuqI94ObrpnGF8EBuzBaID5sG5JtwbFXVs/rs:fit/g:sm/q:90/h:534/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/D-vi-WGU7_kKAs-wED5F0xA8dVq1iuGnIz2qXmKuiGA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTY2Njk2Nzkz/Ny00OTA5LmpwZWc.jpeg",
+          "width": 550
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uvxHUr4dgDgMrLgytQObUR_XKv6XsNVx_eG4ADX1kYA/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uvxHUr4dgDgMrLgytQObUR_XKv6XsNVx_eG4ADX1kYA/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BYjumhHHjcBuv3cPnMDkd6tBiqAJDJpaQ8zUZJjSjt0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NTA0MTM4/OC02NDU1LmpwZWc.jpeg",
+          "width": 599
+        },
+        {
+          "height": 373,
+          "resource_url": "https://i.discogs.com/vCsaw0Hu4SHB6_7-3ZEPlbASXHzlOos_NHrWuTbnI0k/rs:fit/g:sm/q:90/h:373/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vCsaw0Hu4SHB6_7-3ZEPlbASXHzlOos_NHrWuTbnI0k/rs:fit/g:sm/q:90/h:373/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KGxmZqn8YynghF8KLwx0VEreOmuwujNWD8TYHk98w6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU4NjM0MTQ1/MC05NDU0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/X7jEbeV2lKVl5kTMiwu9VnMrT3LqZbOH2ml2mZVeE3w/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X7jEbeV2lKVl5kTMiwu9VnMrT3LqZbOH2ml2mZVeE3w/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kabVRXvKzGPOqHMUskxwCZXBdg0c1Wo6D4GG5ivTBC8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNTUz/NzItMTU5Mzc1OTY3/OS0xODYxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 275998,
+          "name": "Conor Murray",
+          "resource_url": "https://api.discogs.com/artists/275998"
+        },
+        {
+          "active": false,
+          "id": 7960805,
+          "name": "Danny Hull (2)",
+          "resource_url": "https://api.discogs.com/artists/7960805"
+        },
+        {
+          "active": true,
+          "id": 7960806,
+          "name": "Joe Vickers (5)",
+          "resource_url": "https://api.discogs.com/artists/7960806"
+        },
+        {
+          "active": true,
+          "id": 7960807,
+          "name": "Jordan Smith (14)",
+          "resource_url": "https://api.discogs.com/artists/7960807"
+        },
+        {
+          "active": true,
+          "id": 7960809,
+          "name": "Ryan Smith (46)",
+          "resource_url": "https://api.discogs.com/artists/7960809"
+        }
+      ],
       "name": "bdrmm",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "7255372",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/7255372"
-      },
+      "profile": "Dreampop / shoegaze band from Hull, UK, founded 2016.\r\nPronounced ‘bedroom’.",
+      "releases_url": "https://api.discogs.com/artists/7255372/releases",
       "resource_url": "https://api.discogs.com/artists/7255372",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/7255372",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/7255372-bdrmm",
+      "urls": [
+        "https://www.facebook.com/smellybdrmm/",
+        "https://bdrmm.bandcamp.com/",
+        "https://twitter.com/smellybdrmm",
+        "https://www.instagram.com/smellybdrmm",
+        "https://soundcloud.com/bdrmm",
+        "https://en.wikipedia.org/wiki/Bdrmm"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='BDRMM', url='https://www.last.fm/music/BDRMM', mbid=None, listeners=201674, playcount=2406752, bio_summary='The freshest act to come out of Hull – well, ever – Ryan Smith aka BDRMM has spent the year since debut Crike expanding his outfit from hazy solo project to a full-blown professional band. Between carving out a growing reputation on the Northern circuit via Tramlines and Humber Street Sesh, Smith’s been writing.\\n\\nSix tracks of pure hazy magnificence, Yucky channels all the wavey vibes you could ever desire. Dreamy vocals? Check. Sick as fuck artwork? You bet. <a href=\"https://www.last.fm/music/BDRMM\">Read more on Last.fm</a>', bio_content='The freshest act to come out of Hull – well, ever – Ryan Smith aka BDRMM has spent the year since debut Crike expanding his outfit from hazy solo project to a full-blown professional band. Between carving out a growing reputation on the Northern circuit via Tramlines and Humber Street Sesh, Smith’s been writing.\\n\\nSix tracks of pure hazy magnificence, Yucky channels all the wavey vibes you could ever desire. Dreamy vocals? Check. Sick as fuck artwork? You bet. The soaring instrumental opener of ‘GCSE Bitesize’ is beautifully reverb-laden, conveying pure tranquility from the get-go. ‘D.a.d’ showcases Smith’s softer side with flawless melodies and idyllic chords; ‘Aw (inter lube)’ is similarly mellow, calling to mind Homeshake with its distorted vocal samples. ‘Paft, dunk’ is the 80’s tune of your dreams with its nostalgic synth and catalytic build – but it’s ‘Happy’ that’s Yucky’s ultimate banger, a Jaws inspired number that catapults you into a whole other universe where ethereal guitars shimmer and effortless vocals build. Melting into the infectious ‘Call (U!) Up’, the EP ends all its magical glory on a resounding high.\\n\\nYucky is more than a simple collection of feel-good summer tunes; it debuts a unique slice of chillwave aesthetic that sets Smith apart from other industry copycats. With a sound this refined only two EP’s in, there’s only one direction that BDRMM’s going – and that’s up. <a href=\"https://www.last.fm/music/BDRMM\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['dream pop', 'shoegaze', 'post-punk', 'indie rock', 'indie pop'], similar_artists=[{'name': 'Pale Blue Eyes', 'url': 'https://www.last.fm/music/Pale+Blue+Eyes'}, {'name': 'Flyying Colours', 'url': 'https://www.last.fm/music/Flyying+Colours'}, {'name': 'deary', 'url': 'https://www.last.fm/music/deary'}, {'name': 'DIIV', 'url': 'https://www.last.fm/music/DIIV'}, {'name': 'Whitelands', 'url': 'https://www.last.fm/music/Whitelands'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'BDRMM', 'url': 'https://www.last.fm/music/BDRMM', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '201674', 'playcount': '2406752'}, 'similar': {'artist': [{'name': 'Pale Blue Eyes', 'url': 'https://www.last.fm/music/Pale+Blue+Eyes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Flyying Colours', 'url': 'https://www.last.fm/music/Flyying+Colours', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'deary', 'url': 'https://www.last.fm/music/deary', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'DIIV', 'url': 'https://www.last.fm/music/DIIV', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Whitelands', 'url': 'https://www.last.fm/music/Whitelands', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'dream pop', 'url': 'https://www.last.fm/tag/dream+pop'}, {'name': 'shoegaze', 'url': 'https://www.last.fm/tag/shoegaze'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'indie pop', 'url': 'https://www.last.fm/tag/indie+pop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/BDRMM/+wiki'}}, 'published': '20 Sep 2017, 23:57', 'summary': 'The freshest act to come out of Hull – well, ever – Ryan Smith aka BDRMM has spent the year since debut Crike expanding his outfit from hazy solo project to a full-blown professional band. Between carving out a growing reputation on the Northern circuit via Tramlines and Humber Street Sesh, Smith’s been writing.\\n\\nSix tracks of pure hazy magnificence, Yucky channels all the wavey vibes you could ever desire. Dreamy vocals? Check. Sick as fuck artwork? You bet. <a href=\"https://www.last.fm/music/BDRMM\">Read more on Last.fm</a>', 'content': 'The freshest act to come out of Hull – well, ever – Ryan Smith aka BDRMM has spent the year since debut Crike expanding his outfit from hazy solo project to a full-blown professional band. Between carving out a growing reputation on the Northern circuit via Tramlines and Humber Street Sesh, Smith’s been writing.\\n\\nSix tracks of pure hazy magnificence, Yucky channels all the wavey vibes you could ever desire. Dreamy vocals? Check. Sick as fuck artwork? You bet. The soaring instrumental opener of ‘GCSE Bitesize’ is beautifully reverb-laden, conveying pure tranquility from the get-go. ‘D.a.d’ showcases Smith’s softer side with flawless melodies and idyllic chords; ‘Aw (inter lube)’ is similarly mellow, calling to mind Homeshake with its distorted vocal samples. ‘Paft, dunk’ is the 80’s tune of your dreams with its nostalgic synth and catalytic build – but it’s ‘Happy’ that’s Yucky’s ultimate banger, a Jaws inspired number that catapults you into a whole other universe where ethereal guitars shimmer and effortless vocals build. Melting into the infectious ‘Call (U!) Up’, the EP ends all its magical glory on a resounding high.\\n\\nYucky is more than a simple collection of feel-good summer tunes; it debuts a unique slice of chillwave aesthetic that sets Smith apart from other industry copycats. With a sound this refined only two EP’s in, there’s only one direction that BDRMM’s going – and that’s up. <a href=\"https://www.last.fm/music/BDRMM\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4Cx5LnF4WNJIn9SSqyeq9C', url='https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C', name='bdrmm', popularity=39, followers=66000, genres=['shoegaze', 'lo-fi indie', 'dream pop', 'post-punk'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb857146bfcb6e23d118c7762c', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174857146bfcb6e23d118c7762c', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178857146bfcb6e23d118c7762c', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C'}, 'followers': {'href': None, 'total': 66000}, 'genres': ['shoegaze', 'lo-fi indie', 'dream pop', 'post-punk'], 'href': 'https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C', 'id': '4Cx5LnF4WNJIn9SSqyeq9C', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb857146bfcb6e23d118c7762c', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174857146bfcb6e23d118c7762c', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178857146bfcb6e23d118c7762c', 'height': 160, 'width': 160}], 'name': 'bdrmm', 'popularity': 39, 'type': 'artist', 'uri': 'spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C'})",
@@ -236,6 +398,6 @@
   },
   "spotify_id": "4Cx5LnF4WNJIn9SSqyeq9C",
   "spotify_url": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C",
-  "updated_at": "2026-10-22T14:13:55.195629",
+  "updated_at": "2026-10-30T18:48:29.652760",
   "wikipedia_url": null
 }

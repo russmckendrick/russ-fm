@@ -105,22 +105,49 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1063253440', url='https://music.apple.com/gb/artist/the-mute-gods/1063253440', name='The Mute Gods', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/c3/c9/f3c3c99f-47ac-68b9-86d2-0601af2514ae/886446247892.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1063253440', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1063253440', 'attributes': {'name': 'The Mute Gods', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/c3/c9/f3c3c99f-47ac-68b9-86d2-0601af2514ae/886446247892.jpg/{w}x{h}ac.jpg', 'bgColor': '111310', 'textColor1': 'ffffff', 'textColor2': 'd8dbc1', 'textColor3': 'cfcfcf', 'textColor4': 'b0b39d'}, 'url': 'https://music.apple.com/gb/artist/the-mute-gods/1063253440'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1063253440/albums', 'data': [{'id': '1063253368', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1063253368'}, {'id': '1187309663', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1187309663'}, {'id': '1450020888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450020888'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "4841346",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 4841346,
+      "images": [
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/_DRCGMdL57B0Gqx9chvVb0qDohL68_Xt9dnXqIBIbBM/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_DRCGMdL57B0Gqx9chvVb0qDohL68_Xt9dnXqIBIbBM/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cdejOkqQYOcDrEzIKH_VRr2_4NAuoCwpq-dBS8nVlMU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 203701,
+          "name": "Roger King",
+          "resource_url": "https://api.discogs.com/artists/203701"
+        },
+        {
+          "active": true,
+          "id": 406138,
+          "name": "Nick Beggs",
+          "resource_url": "https://api.discogs.com/artists/406138"
+        },
+        {
+          "active": true,
+          "id": 550724,
+          "name": "Marco Minnemann",
+          "resource_url": "https://api.discogs.com/artists/550724"
+        }
+      ],
       "name": "The Mute Gods",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "4841346",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/4841346"
-      },
+      "releases_url": "https://api.discogs.com/artists/4841346/releases",
       "resource_url": "https://api.discogs.com/artists/4841346",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/4841346",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/4841346-The-Mute-Gods",
+      "urls": [
+        "http://themutegods.com/tmg/",
+        "https://www.facebook.com/themutegods",
+        "https://twitter.com/themutegods",
+        "https://en.wikipedia.org/wiki/The_Mute_Gods"
+      ]
     },
     "identity": {
       "musicbrainz_id": "445db9b2-31a9-428c-91e9-f1c275ffdd77",
@@ -180,27 +207,55 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1063253440', url='https://music.apple.com/gb/artist/the-mute-gods/1063253440', name='The Mute Gods', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/c3/c9/f3c3c99f-47ac-68b9-86d2-0601af2514ae/886446247892.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1063253440', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1063253440', 'attributes': {'name': 'The Mute Gods', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/c3/c9/f3c3c99f-47ac-68b9-86d2-0601af2514ae/886446247892.jpg/{w}x{h}ac.jpg', 'bgColor': '111310', 'textColor1': 'ffffff', 'textColor2': 'd8dbc1', 'textColor3': 'cfcfcf', 'textColor4': 'b0b39d'}, 'url': 'https://music.apple.com/gb/artist/the-mute-gods/1063253440'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1063253440/albums', 'data': [{'id': '1063253368', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1063253368'}, {'id': '1187309663', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1187309663'}, {'id': '1450020888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1450020888'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "4841346",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 4841346,
+      "images": [
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/_DRCGMdL57B0Gqx9chvVb0qDohL68_Xt9dnXqIBIbBM/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_DRCGMdL57B0Gqx9chvVb0qDohL68_Xt9dnXqIBIbBM/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cdejOkqQYOcDrEzIKH_VRr2_4NAuoCwpq-dBS8nVlMU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEz/NDYtMTQ1MzY1ODEw/OC0xMTMyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 203701,
+          "name": "Roger King",
+          "resource_url": "https://api.discogs.com/artists/203701"
+        },
+        {
+          "active": true,
+          "id": 406138,
+          "name": "Nick Beggs",
+          "resource_url": "https://api.discogs.com/artists/406138"
+        },
+        {
+          "active": true,
+          "id": 550724,
+          "name": "Marco Minnemann",
+          "resource_url": "https://api.discogs.com/artists/550724"
+        }
+      ],
       "name": "The Mute Gods",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "4841346",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/4841346"
-      },
+      "releases_url": "https://api.discogs.com/artists/4841346/releases",
       "resource_url": "https://api.discogs.com/artists/4841346",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/4841346",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/4841346-The-Mute-Gods",
+      "urls": [
+        "http://themutegods.com/tmg/",
+        "https://www.facebook.com/themutegods",
+        "https://twitter.com/themutegods",
+        "https://en.wikipedia.org/wiki/The_Mute_Gods"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Mute Gods', url='https://www.last.fm/music/The+Mute+Gods', mbid=None, listeners=8119, playcount=122679, bio_summary='The Mute Gods are a German and English band uniting Nick Beggs, Marco Minnemann and Roger King.  \\nBeggs approached King — with whom he had worked as part of Steve Hackett\\'s band — about a collaboration in 2014, and Minnemann was chosen as the drummer after Beggs had toured with him as part of Steven Wilson\\'s band.\\n\\nTheir first album, Do Nothing till You Hear from Me is planned for release on 22 January 2016. Beggs wrote the majority of the album on tour in 2014 <a href=\"https://www.last.fm/music/The+Mute+Gods\">Read more on Last.fm</a>', bio_content='The Mute Gods are a German and English band uniting Nick Beggs, Marco Minnemann and Roger King.  \\nBeggs approached King — with whom he had worked as part of Steve Hackett\\'s band — about a collaboration in 2014, and Minnemann was chosen as the drummer after Beggs had toured with him as part of Steven Wilson\\'s band.\\n\\nTheir first album, Do Nothing till You Hear from Me is planned for release on 22 January 2016. Beggs wrote the majority of the album on tour in 2014, and has described it as \"a rather disgruntled rant at the dystopia we\\'ve created for ourselves and our children\". In addition to Minnemann, the album features some guest drummers, including Nick D\\'Virgilio and Gary O\\'Toole. In November 2015, the band released two videos — one of which being a 360 degree video — for the album\\'s title track. According to Nick Beggs, \"Do Nothing till You Hear from Me\" was inspired by Dwight D. Eisenhower\\'s warning about the potential rise of the military–industrial complex, as well as the geologist Phil Schneider, who made several claims regarding UFOs, before dying under mysterious circumstances.\\n\\nBand members:\\n\\n    Nick Beggs – bass guitars, Chapman Stick, guitars, vocals\\n    Roger King – keyboards, production\\n    Marco Minnemann – drums, guitars, sound modelling\\n <a href=\"https://www.last.fm/music/The+Mute+Gods\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'art rock', 'rock', 'UK', 'germany'], similar_artists=[{'name': 'Anderson/Stolt', 'url': 'https://www.last.fm/music/Anderson%2FStolt'}, {'name': \"Rikard Sjöblom's Gungfly\", 'url': 'https://www.last.fm/music/Rikard+Sj%C3%B6blom%27s+Gungfly'}, {'name': 'Sound of Contact', 'url': 'https://www.last.fm/music/Sound+of+Contact'}, {'name': 'Dave Kerzner', 'url': 'https://www.last.fm/music/Dave+Kerzner'}, {'name': 'Perfect Beings', 'url': 'https://www.last.fm/music/Perfect+Beings'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Mute Gods', 'url': 'https://www.last.fm/music/The+Mute+Gods', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '8119', 'playcount': '122679'}, 'similar': {'artist': [{'name': 'Anderson/Stolt', 'url': 'https://www.last.fm/music/Anderson%2FStolt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Rikard Sjöblom's Gungfly\", 'url': 'https://www.last.fm/music/Rikard+Sj%C3%B6blom%27s+Gungfly', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sound of Contact', 'url': 'https://www.last.fm/music/Sound+of+Contact', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dave Kerzner', 'url': 'https://www.last.fm/music/Dave+Kerzner', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Perfect Beings', 'url': 'https://www.last.fm/music/Perfect+Beings', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'art rock', 'url': 'https://www.last.fm/tag/art+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'UK', 'url': 'https://www.last.fm/tag/UK'}, {'name': 'germany', 'url': 'https://www.last.fm/tag/germany'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Mute+Gods/+wiki'}}, 'published': '16 Jan 2016, 09:55', 'summary': 'The Mute Gods are a German and English band uniting Nick Beggs, Marco Minnemann and Roger King.  \\nBeggs approached King — with whom he had worked as part of Steve Hackett\\'s band — about a collaboration in 2014, and Minnemann was chosen as the drummer after Beggs had toured with him as part of Steven Wilson\\'s band.\\n\\nTheir first album, Do Nothing till You Hear from Me is planned for release on 22 January 2016. Beggs wrote the majority of the album on tour in 2014 <a href=\"https://www.last.fm/music/The+Mute+Gods\">Read more on Last.fm</a>', 'content': 'The Mute Gods are a German and English band uniting Nick Beggs, Marco Minnemann and Roger King.  \\nBeggs approached King — with whom he had worked as part of Steve Hackett\\'s band — about a collaboration in 2014, and Minnemann was chosen as the drummer after Beggs had toured with him as part of Steven Wilson\\'s band.\\n\\nTheir first album, Do Nothing till You Hear from Me is planned for release on 22 January 2016. Beggs wrote the majority of the album on tour in 2014, and has described it as \"a rather disgruntled rant at the dystopia we\\'ve created for ourselves and our children\". In addition to Minnemann, the album features some guest drummers, including Nick D\\'Virgilio and Gary O\\'Toole. In November 2015, the band released two videos — one of which being a 360 degree video — for the album\\'s title track. According to Nick Beggs, \"Do Nothing till You Hear from Me\" was inspired by Dwight D. Eisenhower\\'s warning about the potential rise of the military–industrial complex, as well as the geologist Phil Schneider, who made several claims regarding UFOs, before dying under mysterious circumstances.\\n\\nBand members:\\n\\n    Nick Beggs – bass guitars, Chapman Stick, guitars, vocals\\n    Roger King – keyboards, production\\n    Marco Minnemann – drums, guitars, sound modelling\\n <a href=\"https://www.last.fm/music/The+Mute+Gods\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='6wmmcEvvXFJLMFnEfAvwKq', url='https://open.spotify.com/artist/6wmmcEvvXFJLMFnEfAvwKq', name='The Mute Gods', popularity=9, followers=6702, genres=['progressive rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf0e057e70c8bb92801ad4b84', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f0e057e70c8bb92801ad4b84', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f0e057e70c8bb92801ad4b84', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/6wmmcEvvXFJLMFnEfAvwKq'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/6wmmcEvvXFJLMFnEfAvwKq'}, 'followers': {'href': None, 'total': 6702}, 'genres': ['progressive rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/6wmmcEvvXFJLMFnEfAvwKq', 'id': '6wmmcEvvXFJLMFnEfAvwKq', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf0e057e70c8bb92801ad4b84', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f0e057e70c8bb92801ad4b84', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f0e057e70c8bb92801ad4b84', 'height': 160, 'width': 160}], 'name': 'The Mute Gods', 'popularity': 9, 'type': 'artist', 'uri': 'spotify:artist:6wmmcEvvXFJLMFnEfAvwKq'})",
@@ -257,6 +312,6 @@
   },
   "spotify_id": "6wmmcEvvXFJLMFnEfAvwKq",
   "spotify_url": "https://open.spotify.com/artist/6wmmcEvvXFJLMFnEfAvwKq",
-  "updated_at": "2026-10-22T14:12:37.247449",
+  "updated_at": "2026-10-30T18:47:05.481458",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Mute_Gods"
 }

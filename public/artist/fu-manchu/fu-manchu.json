@@ -139,22 +139,178 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='3295575', url='https://music.apple.com/gb/artist/fu-manchu/3295575', name='Fu Manchu', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages112/v4/c0/82/42/c08242de-4245-7770-ff0f-7c4ca5ffee2d/40ea88fd-a945-4c18-b30b-83de19ca5830_ami-identity-e995bc2744d0c3a6622e29fab746ae51-2024-03-27T15-03-44.676Z_cropped.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3295575', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3295575', 'attributes': {'name': 'Fu Manchu', 'genreNames': ['Hard Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages112/v4/c0/82/42/c08242de-4245-7770-ff0f-7c4ca5ffee2d/40ea88fd-a945-4c18-b30b-83de19ca5830_ami-identity-e995bc2744d0c3a6622e29fab746ae51-2024-03-27T15-03-44.676Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'edf1f2', 'textColor1': '150c06', 'textColor2': '222124', 'textColor3': '403a35', 'textColor4': '4b4a4d'}, 'url': 'https://music.apple.com/gb/artist/fu-manchu/3295575'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3295575/albums', 'next': '/v1/catalog/gb/artists/3295575/albums?offset=25', 'data': [{'id': '1443506328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443506328'}, {'id': '387905734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/387905734'}, {'id': '1442453438', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442453438'}, {'id': '1325141667', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1325141667'}, {'id': '868547942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/868547942'}, {'id': '1443634068', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443634068'}, {'id': '984320334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/984320334'}, {'id': '1735951544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1735951544'}, {'id': '451270630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/451270630'}, {'id': '1461488095', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1461488095'}, {'id': '1469546898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1469546898'}, {'id': '784852901', 'type': 'albums', 'href': '/v1/catalog/gb/albums/784852901'}, {'id': '1483378739', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1483378739'}, {'id': '1045212275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045212275'}, {'id': '1500126227', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1500126227'}, {'id': '454199649', 'type': 'albums', 'href': '/v1/catalog/gb/albums/454199649'}, {'id': '1260083069', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1260083069'}, {'id': '1146167682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146167682'}, {'id': '1045218328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045218328'}, {'id': '1735319273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1735319273'}, {'id': '1585397470', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585397470'}, {'id': '1611632871', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611632871'}, {'id': '1146187779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146187779'}, {'id': '1660456039', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1660456039'}, {'id': '171945600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/171945600'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "64758",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 64758,
+      "images": [
+        {
+          "height": 330,
+          "resource_url": "https://i.discogs.com/XBBgSv3GIR8ZKhoVreuy-5gY2dtdHbT0U20qlakKfuc/rs:fit/g:sm/q:90/h:330/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/XBBgSv3GIR8ZKhoVreuy-5gY2dtdHbT0U20qlakKfuc/rs:fit/g:sm/q:90/h:330/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/lVnX4zByHfosdNeE34VCkHdPr2lzGem_ucfcvcUBntk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/hbr8_8uV4Oz71FUI1RBtBjFp8EEKvGc5en3-GjQ0bio/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hbr8_8uV4Oz71FUI1RBtBjFp8EEKvGc5en3-GjQ0bio/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/C8c9CblJL349wt2BUZJF0Nw6ubq-hNPJT1IQaPmuFsk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/rPAyRcfdq4-OpcLNhQVwodAAbBbtCdnBqUt1WwGddLM/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rPAyRcfdq4-OpcLNhQVwodAAbBbtCdnBqUt1WwGddLM/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QRut_bum3EHZXq-ckSkoa1H59-OcpqBVIIWXc5x9ZJk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 442,
+          "resource_url": "https://i.discogs.com/W3Qvsj0HNZ8mfcaE3bzUQkic-dRNrxWqRIzNZbXcGAU/rs:fit/g:sm/q:90/h:442/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/W3Qvsj0HNZ8mfcaE3bzUQkic-dRNrxWqRIzNZbXcGAU/rs:fit/g:sm/q:90/h:442/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Hd_UggnyNY9WNlP1voVgS6YjFVVpLnGbuHNUyuvqKxc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 545,
+          "resource_url": "https://i.discogs.com/bxcyd1OA2azKxAETTpZLofFDYSFTKVkRzmDEbfXimTo/rs:fit/g:sm/q:90/h:545/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bxcyd1OA2azKxAETTpZLofFDYSFTKVkRzmDEbfXimTo/rs:fit/g:sm/q:90/h:545/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zHtQtELq4fMqpJiXMsURYfAjBwj1wewO4L6eT0RS8BU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/BFc8v86ti3l4oyvcy5foPMNmQB5hCg-IY5aUXHXd2Ts/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BFc8v86ti3l4oyvcy5foPMNmQB5hCg-IY5aUXHXd2Ts/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HKHYLtd4MCqBpA79OGQ5NDlMUo8uMluPAAFGoOz6rYY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/iMAnjcs6iTeK-3VQloYa2WnBodfaq00gWHHwLSeAvDQ/rs:fit/g:sm/q:90/h:600/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iMAnjcs6iTeK-3VQloYa2WnBodfaq00gWHHwLSeAvDQ/rs:fit/g:sm/q:90/h:600/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/0slrnQAu1Pt9MjdD-kHmycTbgP13Sa59JFhzU2UTFFQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "width": 448
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/XRm887bAmTA4HD1g4lwh8LjvksanlIOtzWwv20JNvBQ/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XRm887bAmTA4HD1g4lwh8LjvksanlIOtzWwv20JNvBQ/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jcJmIhMFjMgVBcor7qQ9pe1fglwJeAvyt_NMVTm1Wjw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 392,
+          "resource_url": "https://i.discogs.com/4oBaO1x56vqtwX9WiVlPpeyCBAJHPrND17zXTa0BZCA/rs:fit/g:sm/q:90/h:392/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4oBaO1x56vqtwX9WiVlPpeyCBAJHPrND17zXTa0BZCA/rs:fit/g:sm/q:90/h:392/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/HHbkbnJnHepae_TNLSKzB9IP7OTwZ0BPZTRKApgj9nY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 261,
+          "resource_url": "https://i.discogs.com/v6awoGsvnlde0ivU3wF2-kHwU5Dd2Tith-etdNMlc3U/rs:fit/g:sm/q:90/h:261/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v6awoGsvnlde0ivU3wF2-kHwU5Dd2Tith-etdNMlc3U/rs:fit/g:sm/q:90/h:261/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/1GMCQfVR1jqwlphb_XBdDyYoMDjsL_577WmJFuwnNzs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "width": 448
+        },
+        {
+          "height": 537,
+          "resource_url": "https://i.discogs.com/-s26FnYUWDJ1zIio-VltN4jrgqdk9EFHvQXdXHSfLo4/rs:fit/g:sm/q:90/h:537/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-s26FnYUWDJ1zIio-VltN4jrgqdk9EFHvQXdXHSfLo4/rs:fit/g:sm/q:90/h:537/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_HoPnj7xJ8imlwfsg-NLE4lr-NKaWiLMv_UHuyOMwZU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 252691,
+          "name": "Brant Bjork",
+          "resource_url": "https://api.discogs.com/artists/252691"
+        },
+        {
+          "active": false,
+          "id": 309211,
+          "name": "Mark Abshire",
+          "resource_url": "https://api.discogs.com/artists/309211"
+        },
+        {
+          "active": false,
+          "id": 309212,
+          "name": "Ruben Romano",
+          "resource_url": "https://api.discogs.com/artists/309212"
+        },
+        {
+          "active": false,
+          "id": 309213,
+          "name": "Eddie Glass",
+          "resource_url": "https://api.discogs.com/artists/309213"
+        },
+        {
+          "active": true,
+          "id": 760721,
+          "name": "Scott Hill (2)",
+          "resource_url": "https://api.discogs.com/artists/760721"
+        },
+        {
+          "active": true,
+          "id": 760722,
+          "name": "Brad Davis (3)",
+          "resource_url": "https://api.discogs.com/artists/760722"
+        },
+        {
+          "active": true,
+          "id": 760723,
+          "name": "Bob Balch",
+          "resource_url": "https://api.discogs.com/artists/760723"
+        },
+        {
+          "active": true,
+          "id": 1181916,
+          "name": "Scott Reeder (2)",
+          "resource_url": "https://api.discogs.com/artists/1181916"
+        },
+        {
+          "active": false,
+          "id": 1509394,
+          "name": "Scott Votaw",
+          "resource_url": "https://api.discogs.com/artists/1509394"
+        },
+        {
+          "active": false,
+          "id": 1708173,
+          "name": "Greg McCaughey",
+          "resource_url": "https://api.discogs.com/artists/1708173"
+        },
+        {
+          "active": false,
+          "id": 2943073,
+          "name": "Glenn Chivens",
+          "resource_url": "https://api.discogs.com/artists/2943073"
+        }
+      ],
       "name": "Fu Manchu",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "64758",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/64758"
-      },
+      "profile": "American stoner-rock band from Orange County, CA.\n\nMembers of hardcore band [a=Virulence] formed Fu Manchu in 1990 after the departure of vocalist Ken Pucci.",
+      "releases_url": "https://api.discogs.com/artists/64758/releases",
       "resource_url": "https://api.discogs.com/artists/64758",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/64758",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/64758-Fu-Manchu",
+      "urls": [
+        "http://www.fu-manchu.com/",
+        "https://www.instagram.com/fumanchuband",
+        "http://www.facebook.com/FuManchuBand",
+        "http://fumanchuband.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Fu_Manchu_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "f96de591-5dae-41da-855b-eb387d88d7d4",
@@ -249,27 +405,184 @@
       "twitter": "1",
       "website": "www.fu-manchu.com"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='3295575', url='https://music.apple.com/gb/artist/fu-manchu/3295575', name='Fu Manchu', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages112/v4/c0/82/42/c08242de-4245-7770-ff0f-7c4ca5ffee2d/40ea88fd-a945-4c18-b30b-83de19ca5830_ami-identity-e995bc2744d0c3a6622e29fab746ae51-2024-03-27T15-03-44.676Z_cropped.png/2000x2000bb.jpg', genres=['Hard Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3295575', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3295575', 'attributes': {'name': 'Fu Manchu', 'genreNames': ['Hard Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages112/v4/c0/82/42/c08242de-4245-7770-ff0f-7c4ca5ffee2d/40ea88fd-a945-4c18-b30b-83de19ca5830_ami-identity-e995bc2744d0c3a6622e29fab746ae51-2024-03-27T15-03-44.676Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'edf1f2', 'textColor1': '150c06', 'textColor2': '222124', 'textColor3': '403a35', 'textColor4': '4b4a4d'}, 'url': 'https://music.apple.com/gb/artist/fu-manchu/3295575'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3295575/albums', 'next': '/v1/catalog/gb/artists/3295575/albums?offset=25', 'data': [{'id': '1443506328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443506328'}, {'id': '387905734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/387905734'}, {'id': '1442453438', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442453438'}, {'id': '1325141667', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1325141667'}, {'id': '868547942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/868547942'}, {'id': '1443634068', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443634068'}, {'id': '984320334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/984320334'}, {'id': '1735951544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1735951544'}, {'id': '451270630', 'type': 'albums', 'href': '/v1/catalog/gb/albums/451270630'}, {'id': '1461488095', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1461488095'}, {'id': '1469546898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1469546898'}, {'id': '784852901', 'type': 'albums', 'href': '/v1/catalog/gb/albums/784852901'}, {'id': '1483378739', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1483378739'}, {'id': '1045212275', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045212275'}, {'id': '1500126227', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1500126227'}, {'id': '454199649', 'type': 'albums', 'href': '/v1/catalog/gb/albums/454199649'}, {'id': '1260083069', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1260083069'}, {'id': '1146167682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146167682'}, {'id': '1045218328', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1045218328'}, {'id': '1735319273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1735319273'}, {'id': '1585397470', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585397470'}, {'id': '1611632871', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611632871'}, {'id': '1146187779', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146187779'}, {'id': '1660456039', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1660456039'}, {'id': '171945600', 'type': 'albums', 'href': '/v1/catalog/gb/albums/171945600'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "64758",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 64758,
+      "images": [
+        {
+          "height": 330,
+          "resource_url": "https://i.discogs.com/XBBgSv3GIR8ZKhoVreuy-5gY2dtdHbT0U20qlakKfuc/rs:fit/g:sm/q:90/h:330/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/XBBgSv3GIR8ZKhoVreuy-5gY2dtdHbT0U20qlakKfuc/rs:fit/g:sm/q:90/h:330/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/lVnX4zByHfosdNeE34VCkHdPr2lzGem_ucfcvcUBntk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3Njgt/NTQ5OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/hbr8_8uV4Oz71FUI1RBtBjFp8EEKvGc5en3-GjQ0bio/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hbr8_8uV4Oz71FUI1RBtBjFp8EEKvGc5en3-GjQ0bio/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/C8c9CblJL349wt2BUZJF0Nw6ubq-hNPJT1IQaPmuFsk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4MDkt/NTM0OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/rPAyRcfdq4-OpcLNhQVwodAAbBbtCdnBqUt1WwGddLM/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rPAyRcfdq4-OpcLNhQVwodAAbBbtCdnBqUt1WwGddLM/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QRut_bum3EHZXq-ckSkoa1H59-OcpqBVIIWXc5x9ZJk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE0MzA4NTM4ODQt/NjU4NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 442,
+          "resource_url": "https://i.discogs.com/W3Qvsj0HNZ8mfcaE3bzUQkic-dRNrxWqRIzNZbXcGAU/rs:fit/g:sm/q:90/h:442/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/W3Qvsj0HNZ8mfcaE3bzUQkic-dRNrxWqRIzNZbXcGAU/rs:fit/g:sm/q:90/h:442/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Hd_UggnyNY9WNlP1voVgS6YjFVVpLnGbuHNUyuvqKxc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE3NTAzODc3NTMt/NzkxOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 545,
+          "resource_url": "https://i.discogs.com/bxcyd1OA2azKxAETTpZLofFDYSFTKVkRzmDEbfXimTo/rs:fit/g:sm/q:90/h:545/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bxcyd1OA2azKxAETTpZLofFDYSFTKVkRzmDEbfXimTo/rs:fit/g:sm/q:90/h:545/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zHtQtELq4fMqpJiXMsURYfAjBwj1wewO4L6eT0RS8BU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/OTY1NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/BFc8v86ti3l4oyvcy5foPMNmQB5hCg-IY5aUXHXd2Ts/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BFc8v86ti3l4oyvcy5foPMNmQB5hCg-IY5aUXHXd2Ts/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HKHYLtd4MCqBpA79OGQ5NDlMUo8uMluPAAFGoOz6rYY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDkt/NTk2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/iMAnjcs6iTeK-3VQloYa2WnBodfaq00gWHHwLSeAvDQ/rs:fit/g:sm/q:90/h:600/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iMAnjcs6iTeK-3VQloYa2WnBodfaq00gWHHwLSeAvDQ/rs:fit/g:sm/q:90/h:600/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/0slrnQAu1Pt9MjdD-kHmycTbgP13Sa59JFhzU2UTFFQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NDI4Ni5qcGVn.jpeg",
+          "width": 448
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/XRm887bAmTA4HD1g4lwh8LjvksanlIOtzWwv20JNvBQ/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XRm887bAmTA4HD1g4lwh8LjvksanlIOtzWwv20JNvBQ/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jcJmIhMFjMgVBcor7qQ9pe1fglwJeAvyt_NMVTm1Wjw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE2NjIzMjE1NDgt/NTcyNy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 392,
+          "resource_url": "https://i.discogs.com/4oBaO1x56vqtwX9WiVlPpeyCBAJHPrND17zXTa0BZCA/rs:fit/g:sm/q:90/h:392/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4oBaO1x56vqtwX9WiVlPpeyCBAJHPrND17zXTa0BZCA/rs:fit/g:sm/q:90/h:392/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/HHbkbnJnHepae_TNLSKzB9IP7OTwZ0BPZTRKApgj9nY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU2NDAt/Mjg3OS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 261,
+          "resource_url": "https://i.discogs.com/v6awoGsvnlde0ivU3wF2-kHwU5Dd2Tith-etdNMlc3U/rs:fit/g:sm/q:90/h:261/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v6awoGsvnlde0ivU3wF2-kHwU5Dd2Tith-etdNMlc3U/rs:fit/g:sm/q:90/h:261/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/1GMCQfVR1jqwlphb_XBdDyYoMDjsL_577WmJFuwnNzs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTExMTY3MDEyODIu/anBn.jpeg",
+          "width": 448
+        },
+        {
+          "height": 537,
+          "resource_url": "https://i.discogs.com/-s26FnYUWDJ1zIio-VltN4jrgqdk9EFHvQXdXHSfLo4/rs:fit/g:sm/q:90/h:537/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-s26FnYUWDJ1zIio-VltN4jrgqdk9EFHvQXdXHSfLo4/rs:fit/g:sm/q:90/h:537/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_HoPnj7xJ8imlwfsg-NLE4lr-NKaWiLMv_UHuyOMwZU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzU4/LTE1Njk0ODU3NjIt/NTMwMS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 252691,
+          "name": "Brant Bjork",
+          "resource_url": "https://api.discogs.com/artists/252691"
+        },
+        {
+          "active": false,
+          "id": 309211,
+          "name": "Mark Abshire",
+          "resource_url": "https://api.discogs.com/artists/309211"
+        },
+        {
+          "active": false,
+          "id": 309212,
+          "name": "Ruben Romano",
+          "resource_url": "https://api.discogs.com/artists/309212"
+        },
+        {
+          "active": false,
+          "id": 309213,
+          "name": "Eddie Glass",
+          "resource_url": "https://api.discogs.com/artists/309213"
+        },
+        {
+          "active": true,
+          "id": 760721,
+          "name": "Scott Hill (2)",
+          "resource_url": "https://api.discogs.com/artists/760721"
+        },
+        {
+          "active": true,
+          "id": 760722,
+          "name": "Brad Davis (3)",
+          "resource_url": "https://api.discogs.com/artists/760722"
+        },
+        {
+          "active": true,
+          "id": 760723,
+          "name": "Bob Balch",
+          "resource_url": "https://api.discogs.com/artists/760723"
+        },
+        {
+          "active": true,
+          "id": 1181916,
+          "name": "Scott Reeder (2)",
+          "resource_url": "https://api.discogs.com/artists/1181916"
+        },
+        {
+          "active": false,
+          "id": 1509394,
+          "name": "Scott Votaw",
+          "resource_url": "https://api.discogs.com/artists/1509394"
+        },
+        {
+          "active": false,
+          "id": 1708173,
+          "name": "Greg McCaughey",
+          "resource_url": "https://api.discogs.com/artists/1708173"
+        },
+        {
+          "active": false,
+          "id": 2943073,
+          "name": "Glenn Chivens",
+          "resource_url": "https://api.discogs.com/artists/2943073"
+        }
+      ],
       "name": "Fu Manchu",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "64758",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/64758"
-      },
+      "profile": "American stoner-rock band from Orange County, CA.\n\nMembers of hardcore band [a=Virulence] formed Fu Manchu in 1990 after the departure of vocalist Ken Pucci.",
+      "releases_url": "https://api.discogs.com/artists/64758/releases",
       "resource_url": "https://api.discogs.com/artists/64758",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/64758",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/64758-Fu-Manchu",
+      "urls": [
+        "http://www.fu-manchu.com/",
+        "https://www.instagram.com/fumanchuband",
+        "http://www.facebook.com/FuManchuBand",
+        "http://fumanchuband.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Fu_Manchu_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Fu Manchu', url='https://www.last.fm/music/Fu+Manchu', mbid='f96de591-5dae-41da-855b-eb387d88d7d4', listeners=395919, playcount=10295952, bio_summary='Fu Manchu is an American stoner rock band, formed in Southern California in 1985, and long-associated with the Palm Desert Scene. They originally formed in 1985 as a hardcore punk band called Virulence. The lineup was vocalist Ken Pucci, guitarist Scott Hill, bassist Mark Abshire, and drummer Ruben Romano. In 1987, Abshire left the band and was replaced by Greg McCaughey. They recorded their debut LP If This Isn\\'t a Dream... in 1988, which was released on Alchemy Records (1989). <a href=\"https://www.last.fm/music/Fu+Manchu\">Read more on Last.fm</a>', bio_content='Fu Manchu is an American stoner rock band, formed in Southern California in 1985, and long-associated with the Palm Desert Scene. They originally formed in 1985 as a hardcore punk band called Virulence. The lineup was vocalist Ken Pucci, guitarist Scott Hill, bassist Mark Abshire, and drummer Ruben Romano. In 1987, Abshire left the band and was replaced by Greg McCaughey. They recorded their debut LP If This Isn\\'t a Dream... in 1988, which was released on Alchemy Records (1989). In 1990, Pucci left the band and was replaced by vocalist Glenn Chivens, and they changed their name to Fu Manchu. Soon after, they released the \"Kept Between Trees\" 7 inch single on Slap-a-Ham Records. McCaughey was replaced by Mark Abshire. Chivens also left the band around this time for unknown reasons. Rather than search for a new vocalist, Scott Hill added lead vocalist to his guitar duties. To compensate, Scott Votaw was recruited as lead guitarist. In 1992, Fu Manchu released three 7 inch singles: \"Senioritis\", \"Pick Up Summer\", and \"Don\\'t Bother Knockin\\' (If This Vans Rockin\\')\". In 1993, Votaw left the band and was replaced by lead guitarist Eddie Glass, who had previously played drums in the band Olivelawn.\\n\\nFu Manchu\\'s first album, No One Rides for Free (1994), was released by Bong Load Custom Records, an independent label. No One Rides for Free marked the beginning of the band\\'s heavy focus on muscle cars and drag racing, common themes in the stoner rock genre.\\n\\nAbshire left Fu Manchu before they recorded their second album, Daredevil, in 1995. He was replaced by Brad Davis. The band promoted Daredevil with extensive touring throughout the US and Canada, and reached a wider audience thanks to an opening slot with Monster Magnet, who at the time were the commercial darlings of the stoner rock genre.\\n\\nRomano and Glass left shortly after the release of Fu Manchu\\'s third album, In Search Of... (1996), citing personal and musical differences with Hill. They were replaced by Brant Bjork and Bob Balch, respectively. Glass, Romano and Abshire soon regrouped to form Nebula, a power trio that took the jam-influenced side of Fu Manchu and expanded on it. Members of Nebula have commented that \"we\\'re all family\" to fans wearing Fu Manchu shirts at their concerts.\\n\\nFu Manchu went on to release several successful albums and reinforce their reputation as a powerful live act. The band had gained this reputation over the years due to their performance when touring with notable bands such as Kyuss, Monster Magnet, Marilyn Manson, Clutch, Corrosion of Conformity, White Zombie, Sevendust, and P.O.D., among others.\\n\\nIn 2001, the band released an album, California Crossing. Brant Bjork left the band soon after to pursue a solo career and was replaced by former Sunshine and Smile drummer Scott Reeder (often confused with bassist Scott Reeder, of Kyuss, Unida, and Goatsnake fame). In 2004, Fu Manchu released their eighth album, Start the Machine.\\n\\nFu Manchu\\'s ninth album is called We Must Obey which was released on February 19, 2007. The band spent most of 2007 and 2008 on tour, playing several shows in North America and Europe.\\n\\nIn February 2008, the track \"Mongoose\" (from the California Crossing album) was featured in a Super Bowl ad for the Toyota Sequoia.\\n\\nTheir tenth album Signs of Infinite Power was released on October 19, 2009, in Europe and October 20 in North America.\\n\\nOn March 10, 2010, it was announced that Scott Reeder would play drums for Social Distortion for the South American tour dates in April. In June 2012, the band stated they had begun writing for a new record. In 2014, the band released its eleventh album, Gigantoid.\\n\\nIn December 2017, they announced their twelfth album, Clone of the Universe, which released on February 9, 2018.\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Fu_Manchu_(band)\\n\\nStudio albums\\nNo One Rides for Free (1994)\\nDaredevil (1995)\\nIn Search Of... (1996)\\nThe Action Is Go (1997)\\nGodzilla\\'s/Eatin\\' Dust (1999)\\nKing of the Road (2000)\\nCalifornia Crossing (2001)\\nStart the Machine (2004)\\nWe Must Obey (2007)\\nSigns of Infinite Power (2009)\\nGigantoid (2014)\\nClone of the Universe (2018) <a href=\"https://www.last.fm/music/Fu+Manchu\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Stoner Rock', 'stoner', 'desert rock', 'rock', 'hard rock'], similar_artists=[{'name': 'Brant Bjork', 'url': 'https://www.last.fm/music/Brant+Bjork'}, {'name': 'Kyuss', 'url': 'https://www.last.fm/music/Kyuss'}, {'name': 'Nebula', 'url': 'https://www.last.fm/music/Nebula'}, {'name': 'Hermano', 'url': 'https://www.last.fm/music/Hermano'}, {'name': 'Orange Goblin', 'url': 'https://www.last.fm/music/Orange+Goblin'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Fu Manchu', 'mbid': 'f96de591-5dae-41da-855b-eb387d88d7d4', 'url': 'https://www.last.fm/music/Fu+Manchu', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '395919', 'playcount': '10295952'}, 'similar': {'artist': [{'name': 'Brant Bjork', 'url': 'https://www.last.fm/music/Brant+Bjork', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kyuss', 'url': 'https://www.last.fm/music/Kyuss', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Nebula', 'url': 'https://www.last.fm/music/Nebula', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Hermano', 'url': 'https://www.last.fm/music/Hermano', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Orange Goblin', 'url': 'https://www.last.fm/music/Orange+Goblin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Stoner Rock', 'url': 'https://www.last.fm/tag/Stoner+Rock'}, {'name': 'stoner', 'url': 'https://www.last.fm/tag/stoner'}, {'name': 'desert rock', 'url': 'https://www.last.fm/tag/desert+rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Fu+Manchu/+wiki'}}, 'published': '15 Mar 2006, 22:58', 'summary': 'Fu Manchu is an American stoner rock band, formed in Southern California in 1985, and long-associated with the Palm Desert Scene. They originally formed in 1985 as a hardcore punk band called Virulence. The lineup was vocalist Ken Pucci, guitarist Scott Hill, bassist Mark Abshire, and drummer Ruben Romano. In 1987, Abshire left the band and was replaced by Greg McCaughey. They recorded their debut LP If This Isn\\'t a Dream... in 1988, which was released on Alchemy Records (1989). <a href=\"https://www.last.fm/music/Fu+Manchu\">Read more on Last.fm</a>', 'content': 'Fu Manchu is an American stoner rock band, formed in Southern California in 1985, and long-associated with the Palm Desert Scene. They originally formed in 1985 as a hardcore punk band called Virulence. The lineup was vocalist Ken Pucci, guitarist Scott Hill, bassist Mark Abshire, and drummer Ruben Romano. In 1987, Abshire left the band and was replaced by Greg McCaughey. They recorded their debut LP If This Isn\\'t a Dream... in 1988, which was released on Alchemy Records (1989). In 1990, Pucci left the band and was replaced by vocalist Glenn Chivens, and they changed their name to Fu Manchu. Soon after, they released the \"Kept Between Trees\" 7 inch single on Slap-a-Ham Records. McCaughey was replaced by Mark Abshire. Chivens also left the band around this time for unknown reasons. Rather than search for a new vocalist, Scott Hill added lead vocalist to his guitar duties. To compensate, Scott Votaw was recruited as lead guitarist. In 1992, Fu Manchu released three 7 inch singles: \"Senioritis\", \"Pick Up Summer\", and \"Don\\'t Bother Knockin\\' (If This Vans Rockin\\')\". In 1993, Votaw left the band and was replaced by lead guitarist Eddie Glass, who had previously played drums in the band Olivelawn.\\n\\nFu Manchu\\'s first album, No One Rides for Free (1994), was released by Bong Load Custom Records, an independent label. No One Rides for Free marked the beginning of the band\\'s heavy focus on muscle cars and drag racing, common themes in the stoner rock genre.\\n\\nAbshire left Fu Manchu before they recorded their second album, Daredevil, in 1995. He was replaced by Brad Davis. The band promoted Daredevil with extensive touring throughout the US and Canada, and reached a wider audience thanks to an opening slot with Monster Magnet, who at the time were the commercial darlings of the stoner rock genre.\\n\\nRomano and Glass left shortly after the release of Fu Manchu\\'s third album, In Search Of... (1996), citing personal and musical differences with Hill. They were replaced by Brant Bjork and Bob Balch, respectively. Glass, Romano and Abshire soon regrouped to form Nebula, a power trio that took the jam-influenced side of Fu Manchu and expanded on it. Members of Nebula have commented that \"we\\'re all family\" to fans wearing Fu Manchu shirts at their concerts.\\n\\nFu Manchu went on to release several successful albums and reinforce their reputation as a powerful live act. The band had gained this reputation over the years due to their performance when touring with notable bands such as Kyuss, Monster Magnet, Marilyn Manson, Clutch, Corrosion of Conformity, White Zombie, Sevendust, and P.O.D., among others.\\n\\nIn 2001, the band released an album, California Crossing. Brant Bjork left the band soon after to pursue a solo career and was replaced by former Sunshine and Smile drummer Scott Reeder (often confused with bassist Scott Reeder, of Kyuss, Unida, and Goatsnake fame). In 2004, Fu Manchu released their eighth album, Start the Machine.\\n\\nFu Manchu\\'s ninth album is called We Must Obey which was released on February 19, 2007. The band spent most of 2007 and 2008 on tour, playing several shows in North America and Europe.\\n\\nIn February 2008, the track \"Mongoose\" (from the California Crossing album) was featured in a Super Bowl ad for the Toyota Sequoia.\\n\\nTheir tenth album Signs of Infinite Power was released on October 19, 2009, in Europe and October 20 in North America.\\n\\nOn March 10, 2010, it was announced that Scott Reeder would play drums for Social Distortion for the South American tour dates in April. In June 2012, the band stated they had begun writing for a new record. In 2014, the band released its eleventh album, Gigantoid.\\n\\nIn December 2017, they announced their twelfth album, Clone of the Universe, which released on February 9, 2018.\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Fu_Manchu_(band)\\n\\nStudio albums\\nNo One Rides for Free (1994)\\nDaredevil (1995)\\nIn Search Of... (1996)\\nThe Action Is Go (1997)\\nGodzilla\\'s/Eatin\\' Dust (1999)\\nKing of the Road (2000)\\nCalifornia Crossing (2001)\\nStart the Machine (2004)\\nWe Must Obey (2007)\\nSigns of Infinite Power (2009)\\nGigantoid (2014)\\nClone of the Universe (2018) <a href=\"https://www.last.fm/music/Fu+Manchu\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1TKaUU8ooBgSW9TlyKsw6k', url='https://open.spotify.com/artist/1TKaUU8ooBgSW9TlyKsw6k', name='Fu Manchu', popularity=47, followers=246025, genres=['stoner rock', 'stoner metal', 'sludge metal', 'doom metal', 'space rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebbaef176e4f3dd1d34c29e86b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174baef176e4f3dd1d34c29e86b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178baef176e4f3dd1d34c29e86b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1TKaUU8ooBgSW9TlyKsw6k'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1TKaUU8ooBgSW9TlyKsw6k'}, 'followers': {'href': None, 'total': 246025}, 'genres': ['stoner rock', 'stoner metal', 'sludge metal', 'doom metal', 'space rock'], 'href': 'https://api.spotify.com/v1/artists/1TKaUU8ooBgSW9TlyKsw6k', 'id': '1TKaUU8ooBgSW9TlyKsw6k', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebbaef176e4f3dd1d34c29e86b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174baef176e4f3dd1d34c29e86b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178baef176e4f3dd1d34c29e86b', 'height': 160, 'width': 160}], 'name': 'Fu Manchu', 'popularity': 47, 'type': 'artist', 'uri': 'spotify:artist:1TKaUU8ooBgSW9TlyKsw6k'})",
@@ -361,6 +674,6 @@
   },
   "spotify_id": "1TKaUU8ooBgSW9TlyKsw6k",
   "spotify_url": "https://open.spotify.com/artist/1TKaUU8ooBgSW9TlyKsw6k",
-  "updated_at": "2026-10-22T14:07:05.463234",
+  "updated_at": "2026-10-30T18:39:59.928217",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Fu_Manchu_(band)"
 }

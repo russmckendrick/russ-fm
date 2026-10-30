@@ -109,22 +109,89 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='51048898', url='https://music.apple.com/gb/artist/the-soft-boys/51048898', name='The Soft Boys', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features128/v4/35/48/94/354894e3-1276-0453-c714-9a9319a0b083/mzl.younjsei.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '51048898', 'type': 'artists', 'href': '/v1/catalog/gb/artists/51048898', 'attributes': {'artwork': {'bgColor': '363634', 'height': 2400, 'textColor1': 'f6eeec', 'textColor2': 'd4cfc3', 'textColor3': 'cfc9c7', 'textColor4': 'b4b0a6', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features128/v4/35/48/94/354894e3-1276-0453-c714-9a9319a0b083/mzl.younjsei.jpg/{w}x{h}bb.jpg', 'width': 2400}, 'genreNames': ['Rock'], 'name': 'The Soft Boys', 'url': 'https://music.apple.com/gb/artist/the-soft-boys/51048898'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/51048898/albums', 'data': [{'id': '390659172', 'type': 'albums', 'href': '/v1/catalog/gb/albums/390659172'}, {'id': '390653249', 'type': 'albums', 'href': '/v1/catalog/gb/albums/390653249'}, {'id': '1823090068', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1823090068'}, {'id': '1742003904', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1742003904'}, {'id': '1715333972', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1715333972'}, {'id': '1498107163', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1498107163'}, {'id': '1498528360', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1498528360'}, {'id': '1709539687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1709539687'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "263829",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3401263,
+          "name": "The Crabs (6)",
+          "resource_url": "https://api.discogs.com/artists/3401263"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 263829,
+      "images": [
+        {
+          "height": 319,
+          "resource_url": "https://i.discogs.com/3is3-X5Hv7DOooBV0pRVTtkbayc_KnPkZoqO5HRKymY/rs:fit/g:sm/q:90/h:319/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3is3-X5Hv7DOooBV0pRVTtkbayc_KnPkZoqO5HRKymY/rs:fit/g:sm/q:90/h:319/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/LS5QDaRG9jQmp5zodiIfzl8ShF1izBe7Hxikyegqpek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "width": 425
+        },
+        {
+          "height": 283,
+          "resource_url": "https://i.discogs.com/qacGMLxsl-3h4KrajqnS6nPrlHmYRB0DsVo5yJGNru4/rs:fit/g:sm/q:90/h:283/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qacGMLxsl-3h4KrajqnS6nPrlHmYRB0DsVo5yJGNru4/rs:fit/g:sm/q:90/h:283/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/4DXEfDeCIBpDSR2aGTym5QSX2zSAjbMytA00lrZ86yA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "width": 425
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 157444,
+          "name": "Matthew Seligman",
+          "resource_url": "https://api.discogs.com/artists/157444"
+        },
+        {
+          "active": true,
+          "id": 269402,
+          "name": "Robyn Hitchcock",
+          "resource_url": "https://api.discogs.com/artists/269402"
+        },
+        {
+          "active": false,
+          "id": 329545,
+          "name": "Alan Davies",
+          "resource_url": "https://api.discogs.com/artists/329545"
+        },
+        {
+          "active": false,
+          "id": 391377,
+          "name": "Andy Metcalfe",
+          "resource_url": "https://api.discogs.com/artists/391377"
+        },
+        {
+          "active": true,
+          "id": 394606,
+          "name": "Morris Windsor",
+          "resource_url": "https://api.discogs.com/artists/394606"
+        },
+        {
+          "active": true,
+          "id": 519614,
+          "name": "Kimberley Rew",
+          "resource_url": "https://api.discogs.com/artists/519614"
+        },
+        {
+          "active": false,
+          "id": 519616,
+          "name": "Jim Melton",
+          "resource_url": "https://api.discogs.com/artists/519616"
+        }
+      ],
       "name": "The Soft Boys",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "263829",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/263829"
-      },
+      "namevariations": [
+        "Soft Boys"
+      ],
+      "profile": "Psychedelic power pop band from Cambridge, UK, originally called Maureen and the Meatpackers. Formed 1976, disbanded 1981 and reformed in 2001 (without Metcalfe) on the occasion of the 20th anniversary of Underwater Moonlight, which led to them recording & releasing Nextdoorland (2002) in the process, then breaking up again in 2003. Vocalist [a=Robyn Hitchcock] went on to considerable solo success.",
+      "releases_url": "https://api.discogs.com/artists/263829/releases",
       "resource_url": "https://api.discogs.com/artists/263829",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/263829",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/263829-The-Soft-Boys",
+      "urls": [
+        "https://en.wikipedia.org/wiki/The_Soft_Boys",
+        "https://archive.org/details/SoftBoys?tab=about"
+      ]
     },
     "identity": {
       "musicbrainz_id": "ae362950-090f-4686-82da-9d22a5f88f2e",
@@ -184,27 +251,95 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='51048898', url='https://music.apple.com/gb/artist/the-soft-boys/51048898', name='The Soft Boys', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features128/v4/35/48/94/354894e3-1276-0453-c714-9a9319a0b083/mzl.younjsei.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '51048898', 'type': 'artists', 'href': '/v1/catalog/gb/artists/51048898', 'attributes': {'artwork': {'bgColor': '363634', 'height': 2400, 'textColor1': 'f6eeec', 'textColor2': 'd4cfc3', 'textColor3': 'cfc9c7', 'textColor4': 'b4b0a6', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features128/v4/35/48/94/354894e3-1276-0453-c714-9a9319a0b083/mzl.younjsei.jpg/{w}x{h}bb.jpg', 'width': 2400}, 'genreNames': ['Rock'], 'name': 'The Soft Boys', 'url': 'https://music.apple.com/gb/artist/the-soft-boys/51048898'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/51048898/albums', 'data': [{'id': '390659172', 'type': 'albums', 'href': '/v1/catalog/gb/albums/390659172'}, {'id': '390653249', 'type': 'albums', 'href': '/v1/catalog/gb/albums/390653249'}, {'id': '1823090068', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1823090068'}, {'id': '1742003904', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1742003904'}, {'id': '1715333972', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1715333972'}, {'id': '1498107163', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1498107163'}, {'id': '1498528360', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1498528360'}, {'id': '1709539687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1709539687'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "263829",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3401263,
+          "name": "The Crabs (6)",
+          "resource_url": "https://api.discogs.com/artists/3401263"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 263829,
+      "images": [
+        {
+          "height": 319,
+          "resource_url": "https://i.discogs.com/3is3-X5Hv7DOooBV0pRVTtkbayc_KnPkZoqO5HRKymY/rs:fit/g:sm/q:90/h:319/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3is3-X5Hv7DOooBV0pRVTtkbayc_KnPkZoqO5HRKymY/rs:fit/g:sm/q:90/h:319/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/LS5QDaRG9jQmp5zodiIfzl8ShF1izBe7Hxikyegqpek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEyNzM3Mzcx/LmpwZw.jpeg",
+          "width": 425
+        },
+        {
+          "height": 283,
+          "resource_url": "https://i.discogs.com/qacGMLxsl-3h4KrajqnS6nPrlHmYRB0DsVo5yJGNru4/rs:fit/g:sm/q:90/h:283/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qacGMLxsl-3h4KrajqnS6nPrlHmYRB0DsVo5yJGNru4/rs:fit/g:sm/q:90/h:283/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/4DXEfDeCIBpDSR2aGTym5QSX2zSAjbMytA00lrZ86yA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mzgy/OS0xMTEzMjEwOTgz/LmpwZw.jpeg",
+          "width": 425
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 157444,
+          "name": "Matthew Seligman",
+          "resource_url": "https://api.discogs.com/artists/157444"
+        },
+        {
+          "active": true,
+          "id": 269402,
+          "name": "Robyn Hitchcock",
+          "resource_url": "https://api.discogs.com/artists/269402"
+        },
+        {
+          "active": false,
+          "id": 329545,
+          "name": "Alan Davies",
+          "resource_url": "https://api.discogs.com/artists/329545"
+        },
+        {
+          "active": false,
+          "id": 391377,
+          "name": "Andy Metcalfe",
+          "resource_url": "https://api.discogs.com/artists/391377"
+        },
+        {
+          "active": true,
+          "id": 394606,
+          "name": "Morris Windsor",
+          "resource_url": "https://api.discogs.com/artists/394606"
+        },
+        {
+          "active": true,
+          "id": 519614,
+          "name": "Kimberley Rew",
+          "resource_url": "https://api.discogs.com/artists/519614"
+        },
+        {
+          "active": false,
+          "id": 519616,
+          "name": "Jim Melton",
+          "resource_url": "https://api.discogs.com/artists/519616"
+        }
+      ],
       "name": "The Soft Boys",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "263829",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/263829"
-      },
+      "namevariations": [
+        "Soft Boys"
+      ],
+      "profile": "Psychedelic power pop band from Cambridge, UK, originally called Maureen and the Meatpackers. Formed 1976, disbanded 1981 and reformed in 2001 (without Metcalfe) on the occasion of the 20th anniversary of Underwater Moonlight, which led to them recording & releasing Nextdoorland (2002) in the process, then breaking up again in 2003. Vocalist [a=Robyn Hitchcock] went on to considerable solo success.",
+      "releases_url": "https://api.discogs.com/artists/263829/releases",
       "resource_url": "https://api.discogs.com/artists/263829",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/263829",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/263829-The-Soft-Boys",
+      "urls": [
+        "https://en.wikipedia.org/wiki/The_Soft_Boys",
+        "https://archive.org/details/SoftBoys?tab=about"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Soft Boys', url='https://www.last.fm/music/The+Soft+Boys', mbid='ae362950-090f-4686-82da-9d22a5f88f2e', listeners=144951, playcount=1970075, bio_summary='The Soft Boys was a post-punk/neo-psychedelic band which formed in 1976 in Cambridge, England. The band\\'s best known lineup consisted of Robyn Hitchcock (vocals, guitar), Kimberley Rew (guitar), Matthew Seligman (bass) and Morris Windsor (drums). Seligman replaced original bassist Andy Metcalfe in 1979, and two guitarists (Rob Lamb and Alan Davies) briefly preceded Rew. \\n\\nThe band issued two albums, A Can of Bees (1979) and Underwater Moonlight (1980), before splitting in 1980. <a href=\"https://www.last.fm/music/The+Soft+Boys\">Read more on Last.fm</a>', bio_content='The Soft Boys was a post-punk/neo-psychedelic band which formed in 1976 in Cambridge, England. The band\\'s best known lineup consisted of Robyn Hitchcock (vocals, guitar), Kimberley Rew (guitar), Matthew Seligman (bass) and Morris Windsor (drums). Seligman replaced original bassist Andy Metcalfe in 1979, and two guitarists (Rob Lamb and Alan Davies) briefly preceded Rew. \\n\\nThe band issued two albums, A Can of Bees (1979) and Underwater Moonlight (1980), before splitting in 1980. After band\\'s split, Hitchcock began a solo career, and Rew formed the successful pop group Katrina and the Waves. The band has reunited on two occasions since: once for a tour in 1994, and again between 2001 and 2003. During the latter reunion, the group recorded its third album, Nextdoorland in 2002. <a href=\"https://www.last.fm/music/The+Soft+Boys\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-punk', 'new wave', 'jangle pop', 'psychedelic', 'Neo-Psychedelia'], similar_artists=[{'name': 'The Feelies', 'url': 'https://www.last.fm/music/The+Feelies'}, {'name': \"The dB's\", 'url': 'https://www.last.fm/music/The+dB%27s'}, {'name': 'The Dream Syndicate', 'url': 'https://www.last.fm/music/The+Dream+Syndicate'}, {'name': 'Magazine', 'url': 'https://www.last.fm/music/Magazine'}, {'name': 'Orange Juice', 'url': 'https://www.last.fm/music/Orange+Juice'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Soft Boys', 'mbid': 'ae362950-090f-4686-82da-9d22a5f88f2e', 'url': 'https://www.last.fm/music/The+Soft+Boys', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '144951', 'playcount': '1970075'}, 'similar': {'artist': [{'name': 'The Feelies', 'url': 'https://www.last.fm/music/The+Feelies', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"The dB's\", 'url': 'https://www.last.fm/music/The+dB%27s', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Dream Syndicate', 'url': 'https://www.last.fm/music/The+Dream+Syndicate', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Magazine', 'url': 'https://www.last.fm/music/Magazine', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Orange Juice', 'url': 'https://www.last.fm/music/Orange+Juice', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'new wave', 'url': 'https://www.last.fm/tag/new+wave'}, {'name': 'jangle pop', 'url': 'https://www.last.fm/tag/jangle+pop'}, {'name': 'psychedelic', 'url': 'https://www.last.fm/tag/psychedelic'}, {'name': 'Neo-Psychedelia', 'url': 'https://www.last.fm/tag/Neo-Psychedelia'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Soft+Boys/+wiki'}}, 'published': '28 Feb 2006, 03:40', 'summary': 'The Soft Boys was a post-punk/neo-psychedelic band which formed in 1976 in Cambridge, England. The band\\'s best known lineup consisted of Robyn Hitchcock (vocals, guitar), Kimberley Rew (guitar), Matthew Seligman (bass) and Morris Windsor (drums). Seligman replaced original bassist Andy Metcalfe in 1979, and two guitarists (Rob Lamb and Alan Davies) briefly preceded Rew. \\n\\nThe band issued two albums, A Can of Bees (1979) and Underwater Moonlight (1980), before splitting in 1980. <a href=\"https://www.last.fm/music/The+Soft+Boys\">Read more on Last.fm</a>', 'content': 'The Soft Boys was a post-punk/neo-psychedelic band which formed in 1976 in Cambridge, England. The band\\'s best known lineup consisted of Robyn Hitchcock (vocals, guitar), Kimberley Rew (guitar), Matthew Seligman (bass) and Morris Windsor (drums). Seligman replaced original bassist Andy Metcalfe in 1979, and two guitarists (Rob Lamb and Alan Davies) briefly preceded Rew. \\n\\nThe band issued two albums, A Can of Bees (1979) and Underwater Moonlight (1980), before splitting in 1980. After band\\'s split, Hitchcock began a solo career, and Rew formed the successful pop group Katrina and the Waves. The band has reunited on two occasions since: once for a tour in 1994, and again between 2001 and 2003. During the latter reunion, the group recorded its third album, Nextdoorland in 2002. <a href=\"https://www.last.fm/music/The+Soft+Boys\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='046wtejcUX9rhlzw2nlveT', url='https://open.spotify.com/artist/046wtejcUX9rhlzw2nlveT', name='The Soft Boys', popularity=30, followers=42726, genres=['jangle pop', 'neo-psychedelic', 'post-punk', 'power pop', 'proto-punk', 'new wave'], images=[{'url': 'https://i.scdn.co/image/12aebbd0dfe0024aecc8aa866271dfbcd228fca8', 'height': 571, 'width': 999}, {'url': 'https://i.scdn.co/image/5f7cfc47ccd442a629804bc829a1b103b52d6722', 'height': 366, 'width': 640}, {'url': 'https://i.scdn.co/image/58ecec0726d90f41eaf9fcef6babf750a41222bc', 'height': 114, 'width': 200}, {'url': 'https://i.scdn.co/image/ec344d61704a82966af257ef917586ae87c52877', 'height': 37, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/046wtejcUX9rhlzw2nlveT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/046wtejcUX9rhlzw2nlveT'}, 'followers': {'href': None, 'total': 42726}, 'genres': ['jangle pop', 'neo-psychedelic', 'post-punk', 'power pop', 'proto-punk', 'new wave'], 'href': 'https://api.spotify.com/v1/artists/046wtejcUX9rhlzw2nlveT', 'id': '046wtejcUX9rhlzw2nlveT', 'images': [{'url': 'https://i.scdn.co/image/12aebbd0dfe0024aecc8aa866271dfbcd228fca8', 'height': 571, 'width': 999}, {'url': 'https://i.scdn.co/image/5f7cfc47ccd442a629804bc829a1b103b52d6722', 'height': 366, 'width': 640}, {'url': 'https://i.scdn.co/image/58ecec0726d90f41eaf9fcef6babf750a41222bc', 'height': 114, 'width': 200}, {'url': 'https://i.scdn.co/image/ec344d61704a82966af257ef917586ae87c52877', 'height': 37, 'width': 64}], 'name': 'The Soft Boys', 'popularity': 30, 'type': 'artist', 'uri': 'spotify:artist:046wtejcUX9rhlzw2nlveT'})",
@@ -261,6 +396,6 @@
   },
   "spotify_id": "046wtejcUX9rhlzw2nlveT",
   "spotify_url": "https://open.spotify.com/artist/046wtejcUX9rhlzw2nlveT",
-  "updated_at": "2026-10-22T14:12:52.509427",
+  "updated_at": "2026-10-30T18:47:22.022101",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Soft_Boys"
 }

@@ -86,153 +86,101 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1831737167', url='https://music.apple.com/gb/artist/paul-weir/1831737167', name='Paul Weir', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/66/47/65/66476543-0dd7-a6c5-39c6-af11353ff126/8721215782605.png/2000x2000ac.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1831737167', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1831737167', 'attributes': {'artwork': {'bgColor': '323232', 'height': 3000, 'textColor1': 'bed3e9', 'textColor2': 'bed3e9', 'textColor3': 'a2b3c4', 'textColor4': 'a2b3c4', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/66/47/65/66476543-0dd7-a6c5-39c6-af11353ff126/8721215782605.png/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Soundtrack'], 'name': 'Paul Weir', 'url': 'https://music.apple.com/gb/artist/paul-weir/1831737167'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1831737167/albums', 'data': [{'id': '1831738365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831738365'}, {'id': '1831737105', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831737105'}, {'id': '1831737105', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831737105'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3130740",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3130740,
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/eb6hDHEzmq-7oIwDbNxz-qRuyD8WN_5BDsQWjWpNrKU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eb6hDHEzmq-7oIwDbNxz-qRuyD8WN_5BDsQWjWpNrKU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XAuQjkl1guv0mhZc9LAbHrX2BuYc4XXmjwgheLe13XU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 560,
+          "resource_url": "https://i.discogs.com/UxlWWj4Qg7B8vWA_3LxyfjZQ_ftqZbnHwClxEgqZZg8/rs:fit/g:sm/q:90/h:560/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UxlWWj4Qg7B8vWA_3LxyfjZQ_ftqZbnHwClxEgqZZg8/rs:fit/g:sm/q:90/h:560/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V_9UTAuOPKcfciv9wT25Bk-dTYy4i9Hv-TQlZ_oooU8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 471,
+          "resource_url": "https://i.discogs.com/YqnkCI6JWLjGPl1FHvlI626nUDdspPwhvQn7v06mIz0/rs:fit/g:sm/q:90/h:471/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YqnkCI6JWLjGPl1FHvlI626nUDdspPwhvQn7v06mIz0/rs:fit/g:sm/q:90/h:471/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/57vVcqBdKkZnKyLym-K-OLCplbBGTgln8NgxM-raq2E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Paul Weir",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3130740",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3130740"
-      },
+      "profile": "Long-established composer and sound designer who has worked on over 40 games.",
+      "releases_url": "https://api.discogs.com/artists/3130740/releases",
       "resource_url": "https://api.discogs.com/artists/3130740",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3130740",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3130740-Paul-Weir",
+      "urls": [
+        "https://www.earcomaudio.com/",
+        "https://soundcloud.com/earcom"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": "e19449f2-dcdb-43b3-b14e-0e2a358584de",
+      "resolved_at": "2026-10-22T14:10:07.575227",
+      "wikidata_id": null,
+      "wikipedia_title": null
     },
     "lastfm": "ArtistLastFmData(name='Paul Weir', url='https://www.last.fm/music/Paul+Weir', mbid='e19449f2-dcdb-43b3-b14e-0e2a358584de', listeners=4019, playcount=70400, bio_summary='Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>', bio_content='Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n\\nWeir runs the sound design company Earcom (www.earcom.net) and the radio production company Perfectly Normal Productions (www.perfectlynormal.net).\\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Soundtrack', 'jazz', 'blues', 'video game music', 'Game Music'], similar_artists=[{'name': 'Oleksandr Dudko', 'url': 'https://www.last.fm/music/Oleksandr+Dudko'}, {'name': 'Peter McConnell', 'url': 'https://www.last.fm/music/Peter+McConnell'}, {'name': 'Aperture Science Psychoacoustics Laboratory', 'url': 'https://www.last.fm/music/Aperture+Science+Psychoacoustics+Laboratory'}, {'name': 'Clint Mansell', 'url': 'https://www.last.fm/music/Clint+Mansell'}, {'name': 'Jeff Russo', 'url': 'https://www.last.fm/music/Jeff+Russo'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Paul Weir', 'mbid': 'e19449f2-dcdb-43b3-b14e-0e2a358584de', 'url': 'https://www.last.fm/music/Paul+Weir', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4019', 'playcount': '70400'}, 'similar': {'artist': [{'name': 'Oleksandr Dudko', 'url': 'https://www.last.fm/music/Oleksandr+Dudko', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Peter McConnell', 'url': 'https://www.last.fm/music/Peter+McConnell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Aperture Science Psychoacoustics Laboratory', 'url': 'https://www.last.fm/music/Aperture+Science+Psychoacoustics+Laboratory', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Clint Mansell', 'url': 'https://www.last.fm/music/Clint+Mansell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jeff Russo', 'url': 'https://www.last.fm/music/Jeff+Russo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Soundtrack', 'url': 'https://www.last.fm/tag/Soundtrack'}, {'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'blues', 'url': 'https://www.last.fm/tag/blues'}, {'name': 'video game music', 'url': 'https://www.last.fm/tag/video+game+music'}, {'name': 'Game Music', 'url': 'https://www.last.fm/tag/Game+Music'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Paul+Weir/+wiki'}}, 'published': '01 Jun 2008, 18:01', 'summary': 'Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>', 'content': 'Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n\\nWeir runs the sound design company Earcom (www.earcom.net) and the radio production company Perfectly Normal Productions (www.perfectlynormal.net).\\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7jw2YyapcCq5bf8GTnhjLH', url='https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH', name='Paul Weir', popularity=22, followers=336, genres=['space music', 'post-rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2739f83e7625bbc539bcb411647', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e029f83e7625bbc539bcb411647', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048519f83e7625bbc539bcb411647', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH'}, 'followers': {'href': None, 'total': 336}, 'genres': ['space music', 'post-rock'], 'href': 'https://api.spotify.com/v1/artists/7jw2YyapcCq5bf8GTnhjLH', 'id': '7jw2YyapcCq5bf8GTnhjLH', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2739f83e7625bbc539bcb411647', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e029f83e7625bbc539bcb411647', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048519f83e7625bbc539bcb411647', 'height': 64, 'width': 64}], 'name': 'Paul Weir', 'popularity': 22, 'type': 'artist', 'uri': 'spotify:artist:7jw2YyapcCq5bf8GTnhjLH'})",
     "theaudiodb": {}
   },
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/66/47/65/66476543-0dd7-a6c5-39c6-af11353ff126/8721215782605.png/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Soundtrack"
-      ],
-      "id": "1831737167",
-      "name": "Paul Weir",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/paul-weir/1831737167"
-    },
+    "apple_music": "ArtistAppleMusicData(id='1831737167', url='https://music.apple.com/gb/artist/paul-weir/1831737167', name='Paul Weir', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/66/47/65/66476543-0dd7-a6c5-39c6-af11353ff126/8721215782605.png/2000x2000ac.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1831737167', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1831737167', 'attributes': {'artwork': {'bgColor': '323232', 'height': 3000, 'textColor1': 'bed3e9', 'textColor2': 'bed3e9', 'textColor3': 'a2b3c4', 'textColor4': 'a2b3c4', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/66/47/65/66476543-0dd7-a6c5-39c6-af11353ff126/8721215782605.png/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Soundtrack'], 'name': 'Paul Weir', 'url': 'https://music.apple.com/gb/artist/paul-weir/1831737167'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1831737167/albums', 'data': [{'id': '1831738365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831738365'}, {'id': '1831737105', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831737105'}, {'id': '1831737105', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831737105'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3130740",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3130740,
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/eb6hDHEzmq-7oIwDbNxz-qRuyD8WN_5BDsQWjWpNrKU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eb6hDHEzmq-7oIwDbNxz-qRuyD8WN_5BDsQWjWpNrKU/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XAuQjkl1guv0mhZc9LAbHrX2BuYc4XXmjwgheLe13XU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/MC00MjA3LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 560,
+          "resource_url": "https://i.discogs.com/UxlWWj4Qg7B8vWA_3LxyfjZQ_ftqZbnHwClxEgqZZg8/rs:fit/g:sm/q:90/h:560/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UxlWWj4Qg7B8vWA_3LxyfjZQ_ftqZbnHwClxEgqZZg8/rs:fit/g:sm/q:90/h:560/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V_9UTAuOPKcfciv9wT25Bk-dTYy4i9Hv-TQlZ_oooU8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTU4NjQ0Mjc3/NS03NDI5LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 471,
+          "resource_url": "https://i.discogs.com/YqnkCI6JWLjGPl1FHvlI626nUDdspPwhvQn7v06mIz0/rs:fit/g:sm/q:90/h:471/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YqnkCI6JWLjGPl1FHvlI626nUDdspPwhvQn7v06mIz0/rs:fit/g:sm/q:90/h:471/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/57vVcqBdKkZnKyLym-K-OLCplbBGTgln8NgxM-raq2E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzA3/NDAtMTc0MTc3NzA2/MS03MDgzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Paul Weir",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3130740",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3130740"
-      },
+      "profile": "Long-established composer and sound designer who has worked on over 40 games.",
+      "releases_url": "https://api.discogs.com/artists/3130740/releases",
       "resource_url": "https://api.discogs.com/artists/3130740",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3130740",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3130740-Paul-Weir",
+      "urls": [
+        "https://www.earcomaudio.com/",
+        "https://soundcloud.com/earcom"
+      ]
     },
-    "lastfm": {
-      "bio_content": "Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\n\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He's also an expert in generative music and has worked on many commercial generative installations. \n\nWeir runs the sound design company Earcom (www.earcom.net) and the radio production company Perfectly Normal Productions (www.perfectlynormal.net).\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\n\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He's also an expert in generative music and has worked on many commercial generative installations. \n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 4019,
-      "mbid": "e19449f2-dcdb-43b3-b14e-0e2a358584de",
-      "name": "Paul Weir",
-      "playcount": 70400,
-      "similar_artists": [
-        {
-          "name": "Oleksandr Dudko",
-          "url": "https://www.last.fm/music/Oleksandr+Dudko"
-        },
-        {
-          "name": "Peter McConnell",
-          "url": "https://www.last.fm/music/Peter+McConnell"
-        },
-        {
-          "name": "Aperture Science Psychoacoustics Laboratory",
-          "url": "https://www.last.fm/music/Aperture+Science+Psychoacoustics+Laboratory"
-        },
-        {
-          "name": "Clint Mansell",
-          "url": "https://www.last.fm/music/Clint+Mansell"
-        },
-        {
-          "name": "Jeff Russo",
-          "url": "https://www.last.fm/music/Jeff+Russo"
-        }
-      ],
-      "tags": [
-        "Soundtrack",
-        "jazz",
-        "blues",
-        "video game music",
-        "Game Music"
-      ],
-      "url": "https://www.last.fm/music/Paul+Weir"
-    },
-    "spotify": {
-      "followers": 336,
-      "genres": [
-        "space music",
-        "post-rock"
-      ],
-      "id": "7jw2YyapcCq5bf8GTnhjLH",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2739f83e7625bbc539bcb411647",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e029f83e7625bbc539bcb411647",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048519f83e7625bbc539bcb411647",
-          "width": 64
-        }
-      ],
-      "name": "Paul Weir",
-      "popularity": 22,
-      "url": "https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH"
-    },
+    "lastfm": "ArtistLastFmData(name='Paul Weir', url='https://www.last.fm/music/Paul+Weir', mbid='e19449f2-dcdb-43b3-b14e-0e2a358584de', listeners=4019, playcount=70400, bio_summary='Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>', bio_content='Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n\\nWeir runs the sound design company Earcom (www.earcom.net) and the radio production company Perfectly Normal Productions (www.perfectlynormal.net).\\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Soundtrack', 'jazz', 'blues', 'video game music', 'Game Music'], similar_artists=[{'name': 'Oleksandr Dudko', 'url': 'https://www.last.fm/music/Oleksandr+Dudko'}, {'name': 'Peter McConnell', 'url': 'https://www.last.fm/music/Peter+McConnell'}, {'name': 'Aperture Science Psychoacoustics Laboratory', 'url': 'https://www.last.fm/music/Aperture+Science+Psychoacoustics+Laboratory'}, {'name': 'Clint Mansell', 'url': 'https://www.last.fm/music/Clint+Mansell'}, {'name': 'Jeff Russo', 'url': 'https://www.last.fm/music/Jeff+Russo'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Paul Weir', 'mbid': 'e19449f2-dcdb-43b3-b14e-0e2a358584de', 'url': 'https://www.last.fm/music/Paul+Weir', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4019', 'playcount': '70400'}, 'similar': {'artist': [{'name': 'Oleksandr Dudko', 'url': 'https://www.last.fm/music/Oleksandr+Dudko', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Peter McConnell', 'url': 'https://www.last.fm/music/Peter+McConnell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Aperture Science Psychoacoustics Laboratory', 'url': 'https://www.last.fm/music/Aperture+Science+Psychoacoustics+Laboratory', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Clint Mansell', 'url': 'https://www.last.fm/music/Clint+Mansell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jeff Russo', 'url': 'https://www.last.fm/music/Jeff+Russo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Soundtrack', 'url': 'https://www.last.fm/tag/Soundtrack'}, {'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'blues', 'url': 'https://www.last.fm/tag/blues'}, {'name': 'video game music', 'url': 'https://www.last.fm/tag/video+game+music'}, {'name': 'Game Music', 'url': 'https://www.last.fm/tag/Game+Music'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Paul+Weir/+wiki'}}, 'published': '01 Jun 2008, 18:01', 'summary': 'Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>', 'content': 'Paul Weir is a British composer, sound designer and director working in games, film and radio. Recent game projects include Pure and Guinness World Records with previous games including Crime Life, Warrior Kings, Ghost Master and Discworld Noir.\\n\\nIn August 2009, his music can be heard in the BBC Radio comedy drama, The Adventures of Sexton Blake. He\\'s also an expert in generative music and has worked on many commercial generative installations. \\n\\nWeir runs the sound design company Earcom (www.earcom.net) and the radio production company Perfectly Normal Productions (www.perfectlynormal.net).\\n <a href=\"https://www.last.fm/music/Paul+Weir\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='7jw2YyapcCq5bf8GTnhjLH', url='https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH', name='Paul Weir', popularity=22, followers=336, genres=['space music', 'post-rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2739f83e7625bbc539bcb411647', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e029f83e7625bbc539bcb411647', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048519f83e7625bbc539bcb411647', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH'}, 'followers': {'href': None, 'total': 336}, 'genres': ['space music', 'post-rock'], 'href': 'https://api.spotify.com/v1/artists/7jw2YyapcCq5bf8GTnhjLH', 'id': '7jw2YyapcCq5bf8GTnhjLH', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2739f83e7625bbc539bcb411647', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e029f83e7625bbc539bcb411647', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048519f83e7625bbc539bcb411647', 'height': 64, 'width': 64}], 'name': 'Paul Weir', 'popularity': 22, 'type': 'artist', 'uri': 'spotify:artist:7jw2YyapcCq5bf8GTnhjLH'})",
     "theaudiodb": {}
   },
   "spotify_id": "7jw2YyapcCq5bf8GTnhjLH",
   "spotify_url": "https://open.spotify.com/artist/7jw2YyapcCq5bf8GTnhjLH",
-  "updated_at": "2026-02-08T17:57:13.998416",
+  "updated_at": "2026-10-30T18:43:49.875900",
   "wikipedia_url": null
 }

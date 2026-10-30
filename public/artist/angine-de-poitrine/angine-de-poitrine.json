@@ -99,22 +99,66 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1750092191', url='https://music.apple.com/gb/artist/angine-de-poitrine/1750092191', name='Angine de Poitrine', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a5/43/81/a5438154-b1eb-59c5-0993-9a972d14ec59/ami-identity-98a36afcbfe546930be76822cc59f879-2026-03-09T19-43-42.604Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1750092191', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1750092191', 'attributes': {'artwork': {'bgColor': 'ffffff', 'height': 1333, 'textColor1': '08090a', 'textColor2': '232323', 'textColor3': '393a3b', 'textColor4': '4f4f4f', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a5/43/81/a5438154-b1eb-59c5-0993-9a972d14ec59/ami-identity-98a36afcbfe546930be76822cc59f879-2026-03-09T19-43-42.604Z_cropped.png/{w}x{h}bb.jpg', 'width': 1333}, 'genreNames': ['Rock'], 'name': 'Angine de Poitrine', 'url': 'https://music.apple.com/gb/artist/angine-de-poitrine/1750092191'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1750092191/albums', 'data': [{'id': '1876355936', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1876355936'}, {'id': '1750092185', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1750092185'}, {'id': '1869739021', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1869739021'}, {'id': '1851482292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1851482292'}, {'id': '1750937737', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1750937737'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "14721643",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 14721643,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/RKNrqnG0Zuuph1RBtx8PvLRHYlMieo_YdTDTNLANBKQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RKNrqnG0Zuuph1RBtx8PvLRHYlMieo_YdTDTNLANBKQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/xDp1yT7zWnQiSKM8PvvmeJ28B0QN98ZPiefXRSI5P9I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/JenXF17fkmCMEdDGOHbuLYmvg5MEHgbeTy6EIc7vr5w/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JenXF17fkmCMEdDGOHbuLYmvg5MEHgbeTy6EIc7vr5w/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Z0A0jEQwpxj5OkedOcZLwEEjCETxJVlZ-rOBMjIO-no/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/_L-f93WmeniDdXK0jJ3kDrYE74_lvhQkESEithZcYd8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_L-f93WmeniDdXK0jJ3kDrYE74_lvhQkESEithZcYd8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VFeIe1vMx3TUe9gSrbxMJMwpew6oMxQ5nPXEb9IwBZM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 17279266,
+          "name": "Khn De Poitrine",
+          "resource_url": "https://api.discogs.com/artists/17279266"
+        },
+        {
+          "active": true,
+          "id": 17279269,
+          "name": "Klek De Poitrine",
+          "resource_url": "https://api.discogs.com/artists/17279269"
+        }
+      ],
       "name": "Angine De Poitrine",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "14721643",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/14721643"
-      },
+      "namevariations": [
+        "Angine"
+      ],
+      "profile": "Angine de Poitrine is a Québécois microtonal, psychedelic groove rock duo based in Saguenay, Quebec, Canada. The group is comprised of [a=Khn de Poitrine], who plays luthier-made, custom double-necked basses and guitars, plus drummer / percussionist [a=Klek de Poitrine]. The two members wear black and white polka-dotted costumes and elaborate, large papier-mâché masks. \n\nThe group is named after the medical condition \"angina pectoris\" (\"angine de poitrine\" in French).\n\nAngine de Poitrine formed in the Chicoutimi borough of Saguenay, Quebec, in 2019. The duo members have been musical collaborators for two decades, having performed together in various projects since the age of 13.\n\nThe project began as a gag after the pair were booked to perform twice in one week in 2019 with their then main project at the same local Saguenay venue; concerned that audiences would not attend the second show, they decided to play the latter set as anonymous, costumed performers under a different name. To complete what the duo later likened to an \"Andy Kaufman-esque joke\", they constructed oversized papier-mâché masks with giant noses and full-body black-and-white polka-dotted costumes. After that one-off performance, duo continued to play with their main band. During the COVID-19 pandemic, with live opportunities limited, the members took up construction jobs.\n\nAngine de Poitrine re-surfaced again in 2023, beginning to perform regularly.",
+      "releases_url": "https://api.discogs.com/artists/14721643/releases",
       "resource_url": "https://api.discogs.com/artists/14721643",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/14721643",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/14721643-Angine-De-Poitrine",
+      "urls": [
+        "https://anginedepoitrine.com",
+        "https://www.facebook.com/angine.poitrine",
+        "https://www.instagram.com/anginedepoitrine",
+        "https://anginedepoitrine.bandcamp.com",
+        "https://youtube.com/@anginepoitrine",
+        "https://linktr.ee/anginedepoitrine",
+        "https://en.wikipedia.org/wiki/Angine_de_Poitrine",
+        "https://soundcloud.com/anginedepoitrine"
+      ]
     },
     "identity": {
       "musicbrainz_id": "5fd29907-c3c5-4b1d-a799-7cf9bbd288fc",
@@ -174,27 +218,91 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q138937271",
+        "track": "Sherpa",
+        "uri": "https://www.youtube.com/watch?v=2lUC8Gimxz8"
+      },
+      {
+        "album": null,
+        "id": "Q138951079",
+        "track": "Mata Zyklek",
+        "uri": "https://www.youtube.com/watch?v=61YMOxurWGU"
+      },
+      {
+        "album": null,
+        "id": "Q138965211",
+        "track": "Fabienk",
+        "uri": "https://www.youtube.com/watch?v=7OdBQrs0Sng"
+      }
+    ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1750092191', url='https://music.apple.com/gb/artist/angine-de-poitrine/1750092191', name='Angine de Poitrine', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a5/43/81/a5438154-b1eb-59c5-0993-9a972d14ec59/ami-identity-98a36afcbfe546930be76822cc59f879-2026-03-09T19-43-42.604Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1750092191', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1750092191', 'attributes': {'artwork': {'bgColor': 'ffffff', 'height': 1333, 'textColor1': '08090a', 'textColor2': '232323', 'textColor3': '393a3b', 'textColor4': '4f4f4f', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a5/43/81/a5438154-b1eb-59c5-0993-9a972d14ec59/ami-identity-98a36afcbfe546930be76822cc59f879-2026-03-09T19-43-42.604Z_cropped.png/{w}x{h}bb.jpg', 'width': 1333}, 'genreNames': ['Rock'], 'name': 'Angine de Poitrine', 'url': 'https://music.apple.com/gb/artist/angine-de-poitrine/1750092191'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1750092191/albums', 'data': [{'id': '1876355936', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1876355936'}, {'id': '1750092185', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1750092185'}, {'id': '1869739021', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1869739021'}, {'id': '1851482292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1851482292'}, {'id': '1750937737', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1750937737'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "14721643",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 14721643,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/RKNrqnG0Zuuph1RBtx8PvLRHYlMieo_YdTDTNLANBKQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RKNrqnG0Zuuph1RBtx8PvLRHYlMieo_YdTDTNLANBKQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/xDp1yT7zWnQiSKM8PvvmeJ28B0QN98ZPiefXRSI5P9I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NTk1MTgz/ODUtODk1MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/JenXF17fkmCMEdDGOHbuLYmvg5MEHgbeTy6EIc7vr5w/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JenXF17fkmCMEdDGOHbuLYmvg5MEHgbeTy6EIc7vr5w/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Z0A0jEQwpxj5OkedOcZLwEEjCETxJVlZ-rOBMjIO-no/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU0/MTItMTczOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/_L-f93WmeniDdXK0jJ3kDrYE74_lvhQkESEithZcYd8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_L-f93WmeniDdXK0jJ3kDrYE74_lvhQkESEithZcYd8/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VFeIe1vMx3TUe9gSrbxMJMwpew6oMxQ5nPXEb9IwBZM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzIx/NjQzLTE3NzM2MDU1/MzUtODU4MC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 17279266,
+          "name": "Khn De Poitrine",
+          "resource_url": "https://api.discogs.com/artists/17279266"
+        },
+        {
+          "active": true,
+          "id": 17279269,
+          "name": "Klek De Poitrine",
+          "resource_url": "https://api.discogs.com/artists/17279269"
+        }
+      ],
       "name": "Angine De Poitrine",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "14721643",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/14721643"
-      },
+      "namevariations": [
+        "Angine"
+      ],
+      "profile": "Angine de Poitrine is a Québécois microtonal, psychedelic groove rock duo based in Saguenay, Quebec, Canada. The group is comprised of [a=Khn de Poitrine], who plays luthier-made, custom double-necked basses and guitars, plus drummer / percussionist [a=Klek de Poitrine]. The two members wear black and white polka-dotted costumes and elaborate, large papier-mâché masks. \n\nThe group is named after the medical condition \"angina pectoris\" (\"angine de poitrine\" in French).\n\nAngine de Poitrine formed in the Chicoutimi borough of Saguenay, Quebec, in 2019. The duo members have been musical collaborators for two decades, having performed together in various projects since the age of 13.\n\nThe project began as a gag after the pair were booked to perform twice in one week in 2019 with their then main project at the same local Saguenay venue; concerned that audiences would not attend the second show, they decided to play the latter set as anonymous, costumed performers under a different name. To complete what the duo later likened to an \"Andy Kaufman-esque joke\", they constructed oversized papier-mâché masks with giant noses and full-body black-and-white polka-dotted costumes. After that one-off performance, duo continued to play with their main band. During the COVID-19 pandemic, with live opportunities limited, the members took up construction jobs.\n\nAngine de Poitrine re-surfaced again in 2023, beginning to perform regularly.",
+      "releases_url": "https://api.discogs.com/artists/14721643/releases",
       "resource_url": "https://api.discogs.com/artists/14721643",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/14721643",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/14721643-Angine-De-Poitrine",
+      "urls": [
+        "https://anginedepoitrine.com",
+        "https://www.facebook.com/angine.poitrine",
+        "https://www.instagram.com/anginedepoitrine",
+        "https://anginedepoitrine.bandcamp.com",
+        "https://youtube.com/@anginepoitrine",
+        "https://linktr.ee/anginedepoitrine",
+        "https://en.wikipedia.org/wiki/Angine_de_Poitrine",
+        "https://soundcloud.com/anginedepoitrine"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Angine de Poitrine', url='https://www.last.fm/music/Angine+de+Poitrine', mbid=None, listeners=164680, playcount=2633152, bio_summary='Angine de Poitrine (French for \"angina pectoris\") is an experimental rock duo from Saguenay, Quebec, Canada. Formed in 2019, the group consists of two members performing under the pseudonyms Khn de Poitrine (guitar, bass, and microtonal instruments) and Klek de Poitrine (drums).\\n\\nThe two musicians have performed together since their teenage years. They first appeared as Angine de Poitrine in 2019, although they did not begin performing regularly under this name until 2023. <a href=\"https://www.last.fm/music/Angine+de+Poitrine\">Read more on Last.fm</a>', bio_content='Angine de Poitrine (French for \"angina pectoris\") is an experimental rock duo from Saguenay, Quebec, Canada. Formed in 2019, the group consists of two members performing under the pseudonyms Khn de Poitrine (guitar, bass, and microtonal instruments) and Klek de Poitrine (drums).\\n\\nThe two musicians have performed together since their teenage years. They first appeared as Angine de Poitrine in 2019, although they did not begin performing regularly under this name until 2023. Their use of costumes and stage personas originated as a humorous concept, and the band name references the medical condition angina pectoris. At one point, after being told they could not perform at the same venue in consecutive weeks, they appeared once under their usual identities and once in costume. The members have remained anonymous as the project developed.\\n\\nThe duo initially gained attention through independent online releases and festival performances in Canada. Their debut album, \"Vol. 1\", was released in 2024. In February 2026, a recorded live session for the radio station KEXP circulated widely online, contributing to increased international recognition. Critical reception has highlighted their originality, technical proficiency, and distinctive visual presentation. Their releases include the album \"Vol. 1\" (2024) and the singles \"Mata Zyklek\" (2025) and \"Fabienk\" (2026), issued in advance of their second album, \"Vol. II\", scheduled for release on 3 April 2026. The group is also scheduled to perform its first concerts in the United States in September 2026.\\n\\nAngine de Poitrine performs experimental rock and math rock, incorporating microtonality, complex rhythms, and predominantly instrumental compositions combined with elements of performance art. Their live performances feature oversized papier-mâché masks, stylised costumes, and theatrical staging. Khn de Poitrine performs on a custom-built double-necked instrument combining a microtonal guitar and bass. <a href=\"https://www.last.fm/music/Angine+de+Poitrine\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['math rock', 'Progressive rock', 'experimental', 'Psychedelic Rock', 'instrumental'], similar_artists=[{'name': 'LA POEXE', 'url': 'https://www.last.fm/music/LA+POEXE'}, {'name': 'King Gizzard & The Lizard Wizard', 'url': 'https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard'}, {'name': 'The Claypool Lennon Delirium', 'url': 'https://www.last.fm/music/The+Claypool+Lennon+Delirium'}, {'name': 'Battles', 'url': 'https://www.last.fm/music/Battles'}, {'name': 'Yin Yin', 'url': 'https://www.last.fm/music/Yin+Yin'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Angine de Poitrine', 'url': 'https://www.last.fm/music/Angine+de+Poitrine', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '164680', 'playcount': '2633152'}, 'similar': {'artist': [{'name': 'LA POEXE', 'url': 'https://www.last.fm/music/LA+POEXE', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'King Gizzard & The Lizard Wizard', 'url': 'https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Claypool Lennon Delirium', 'url': 'https://www.last.fm/music/The+Claypool+Lennon+Delirium', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Battles', 'url': 'https://www.last.fm/music/Battles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Yin Yin', 'url': 'https://www.last.fm/music/Yin+Yin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'math rock', 'url': 'https://www.last.fm/tag/math+rock'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'instrumental', 'url': 'https://www.last.fm/tag/instrumental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Angine+de+Poitrine/+wiki'}}, 'published': '21 Jan 2026, 18:20', 'summary': 'Angine de Poitrine (French for \"angina pectoris\") is an experimental rock duo from Saguenay, Quebec, Canada. Formed in 2019, the group consists of two members performing under the pseudonyms Khn de Poitrine (guitar, bass, and microtonal instruments) and Klek de Poitrine (drums).\\n\\nThe two musicians have performed together since their teenage years. They first appeared as Angine de Poitrine in 2019, although they did not begin performing regularly under this name until 2023. <a href=\"https://www.last.fm/music/Angine+de+Poitrine\">Read more on Last.fm</a>', 'content': 'Angine de Poitrine (French for \"angina pectoris\") is an experimental rock duo from Saguenay, Quebec, Canada. Formed in 2019, the group consists of two members performing under the pseudonyms Khn de Poitrine (guitar, bass, and microtonal instruments) and Klek de Poitrine (drums).\\n\\nThe two musicians have performed together since their teenage years. They first appeared as Angine de Poitrine in 2019, although they did not begin performing regularly under this name until 2023. Their use of costumes and stage personas originated as a humorous concept, and the band name references the medical condition angina pectoris. At one point, after being told they could not perform at the same venue in consecutive weeks, they appeared once under their usual identities and once in costume. The members have remained anonymous as the project developed.\\n\\nThe duo initially gained attention through independent online releases and festival performances in Canada. Their debut album, \"Vol. 1\", was released in 2024. In February 2026, a recorded live session for the radio station KEXP circulated widely online, contributing to increased international recognition. Critical reception has highlighted their originality, technical proficiency, and distinctive visual presentation. Their releases include the album \"Vol. 1\" (2024) and the singles \"Mata Zyklek\" (2025) and \"Fabienk\" (2026), issued in advance of their second album, \"Vol. II\", scheduled for release on 3 April 2026. The group is also scheduled to perform its first concerts in the United States in September 2026.\\n\\nAngine de Poitrine performs experimental rock and math rock, incorporating microtonality, complex rhythms, and predominantly instrumental compositions combined with elements of performance art. Their live performances feature oversized papier-mâché masks, stylised costumes, and theatrical staging. Khn de Poitrine performs on a custom-built double-necked instrument combining a microtonal guitar and bass. <a href=\"https://www.last.fm/music/Angine+de+Poitrine\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='13NmOYYfvONNZ9mn2qn8P2', url='https://open.spotify.com/artist/13NmOYYfvONNZ9mn2qn8P2', name='Angine de Poitrine', popularity=62, followers=605749, genres=['math rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebc2c1d5a64ecc62ab882a62f2', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174c2c1d5a64ecc62ab882a62f2', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178c2c1d5a64ecc62ab882a62f2', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/13NmOYYfvONNZ9mn2qn8P2'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/13NmOYYfvONNZ9mn2qn8P2'}, 'followers': {'href': None, 'total': 605749}, 'genres': ['math rock'], 'href': 'https://api.spotify.com/v1/artists/13NmOYYfvONNZ9mn2qn8P2', 'id': '13NmOYYfvONNZ9mn2qn8P2', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebc2c1d5a64ecc62ab882a62f2', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174c2c1d5a64ecc62ab882a62f2', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178c2c1d5a64ecc62ab882a62f2', 'height': 160, 'width': 160}], 'name': 'Angine de Poitrine', 'popularity': 62, 'type': 'artist', 'uri': 'spotify:artist:13NmOYYfvONNZ9mn2qn8P2'})",
@@ -251,6 +359,6 @@
   },
   "spotify_id": "13NmOYYfvONNZ9mn2qn8P2",
   "spotify_url": "https://open.spotify.com/artist/13NmOYYfvONNZ9mn2qn8P2",
-  "updated_at": "2026-10-22T14:04:42.117001",
+  "updated_at": "2026-10-30T18:36:00.194298",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Angine_de_Poitrine"
 }

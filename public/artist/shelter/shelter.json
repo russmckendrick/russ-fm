@@ -102,22 +102,255 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='91717738', url='https://music.apple.com/gb/artist/shelter/91717738', name='Shelter', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/af/4b/c4/af4bc45d-c09a-cd93-a37d-a7e87e359ff8/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '91717738', 'type': 'artists', 'href': '/v1/catalog/gb/artists/91717738', 'attributes': {'artwork': {'bgColor': 'd4d4d4', 'height': 1038, 'textColor1': '151515', 'textColor2': '303030', 'textColor3': '3b3b3b', 'textColor4': '505050', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/af/4b/c4/af4bc45d-c09a-cd93-a37d-a7e87e359ff8/pr_source.png/{w}x{h}bb.jpg', 'width': 1038}, 'genreNames': ['Alternative'], 'name': 'Shelter', 'url': 'https://music.apple.com/gb/artist/shelter/91717738'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/91717738/albums', 'data': [{'id': '365020171', 'type': 'albums', 'href': '/v1/catalog/gb/albums/365020171'}, {'id': '1542982843', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542982843'}, {'id': '91718135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/91718135'}, {'id': '105198134', 'type': 'albums', 'href': '/v1/catalog/gb/albums/105198134'}, {'id': '1289507956', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1289507956'}, {'id': '1641235884', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1641235884'}, {'id': '1592655516', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592655516'}, {'id': '1542977422', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542977422'}, {'id': '1712470665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1712470665'}, {'id': '1558587679', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1558587679'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "260020",
-      "images": [],
-      "members": [],
-      "name": "Shelter",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "260020",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/260020"
-      },
+      "data_quality": "Needs Vote",
+      "id": 260020,
+      "images": [
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/dbBLeu4i0gyWWg6K2lN59q72Wxi4GpxMSoBVb2P3REw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dbBLeu4i0gyWWg6K2lN59q72Wxi4GpxMSoBVb2P3REw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/C_ss5tD75g8feYZh6L5T9ecI-hWYYj0u4AfjAJrO8oQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 577,
+          "resource_url": "https://i.discogs.com/v1emNrdJIhcfg_mZ_s3WsFCQPyHXJZTPLGUBafJZq_k/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v1emNrdJIhcfg_mZ_s3WsFCQPyHXJZTPLGUBafJZq_k/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tO8RF3RlwLmXIFxQAkWKb241V0lqbHKLZcfZdnzpdqg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 322,
+          "resource_url": "https://i.discogs.com/KqKz82PcNOAxLuyRtMo2hTDJU3vD_gbhzwSjBbXeoSY/rs:fit/g:sm/q:90/h:322/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KqKz82PcNOAxLuyRtMo2hTDJU3vD_gbhzwSjBbXeoSY/rs:fit/g:sm/q:90/h:322/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/oPIpRuroWvLuXn2BtjGTulVr_eln_9VHUK4N-KCgIXE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 253,
+          "resource_url": "https://i.discogs.com/1mRZqASbuiGFnAV7R7JE3iNl-H-MR5F0BMEZHFkkCwc/rs:fit/g:sm/q:90/h:253/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1mRZqASbuiGFnAV7R7JE3iNl-H-MR5F0BMEZHFkkCwc/rs:fit/g:sm/q:90/h:253/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1afC4-92MQ5hWFclLd5mcjFi-d509zyq-aw5CDmmLjE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 284,
+          "resource_url": "https://i.discogs.com/yYNm02W7ae7GO83muGv7M7r08ip_1_gaJiSpbMrLXSs/rs:fit/g:sm/q:90/h:284/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yYNm02W7ae7GO83muGv7M7r08ip_1_gaJiSpbMrLXSs/rs:fit/g:sm/q:90/h:284/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IN-ICabSWTtHL2x_I_UIgCvOFnAxzfE6eleJHaVvS5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "width": 424
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JCSfwJJ1lSgyGFAAt2YSDWuxNcIjJJGpO7hKOvev3NU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JCSfwJJ1lSgyGFAAt2YSDWuxNcIjJJGpO7hKOvev3NU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DEuV8KEgpPejIDPBiRTxMS_lLiBAc3KV2msPB3ul188/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/-tZkCszBDe_kFYff0lFmfAv0X5EcRizxFQCfngYlguk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-tZkCszBDe_kFYff0lFmfAv0X5EcRizxFQCfngYlguk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Jra7kEs4Zt8TSQ8z2NKFWaCgtsZ3iKMPKKMTdjCem14/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/Cz-F8rqQRcegV7A6YFTNPvaVXPnt1TugODzN1jffEXw/rs:fit/g:sm/q:90/h:300/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Cz-F8rqQRcegV7A6YFTNPvaVXPnt1TugODzN1jffEXw/rs:fit/g:sm/q:90/h:300/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/OluLH0lAPPtVmIgyp8207M1IOOgzaXOMK4EGWAbbNI8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "width": 250
+        },
+        {
+          "height": 44,
+          "resource_url": "https://i.discogs.com/kmd66jX57DbziA5IVJz0OTH8KS8b2cxNYDp8sxD2jKU/rs:fit/g:sm/q:90/h:44/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kmd66jX57DbziA5IVJz0OTH8KS8b2cxNYDp8sxD2jKU/rs:fit/g:sm/q:90/h:44/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Yx444agepLQIEA0Oy_SagGhu8Hp5eaGrFirgl9pDekM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "width": 200
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 257712,
+          "name": "Roy Mayorga",
+          "resource_url": "https://api.discogs.com/artists/257712"
+        },
+        {
+          "active": false,
+          "id": 263292,
+          "name": "Ken Olden",
+          "resource_url": "https://api.discogs.com/artists/263292"
+        },
+        {
+          "active": true,
+          "id": 264935,
+          "name": "John Porcell",
+          "resource_url": "https://api.discogs.com/artists/264935"
+        },
+        {
+          "active": false,
+          "id": 289755,
+          "name": "Graham Land",
+          "resource_url": "https://api.discogs.com/artists/289755"
+        },
+        {
+          "active": true,
+          "id": 327580,
+          "name": "Ray Cappo",
+          "resource_url": "https://api.discogs.com/artists/327580"
+        },
+        {
+          "active": false,
+          "id": 401086,
+          "name": "Daniel Larsson",
+          "resource_url": "https://api.discogs.com/artists/401086"
+        },
+        {
+          "active": false,
+          "id": 435215,
+          "name": "Mackie Jayson",
+          "resource_url": "https://api.discogs.com/artists/435215"
+        },
+        {
+          "active": false,
+          "id": 476889,
+          "name": "Tom Capone (2)",
+          "resource_url": "https://api.discogs.com/artists/476889"
+        },
+        {
+          "active": false,
+          "id": 498229,
+          "name": "Dave Dicenso",
+          "resource_url": "https://api.discogs.com/artists/498229"
+        },
+        {
+          "active": false,
+          "id": 537134,
+          "name": "Trey Files",
+          "resource_url": "https://api.discogs.com/artists/537134"
+        },
+        {
+          "active": false,
+          "id": 609840,
+          "name": "Sri Kesava",
+          "resource_url": "https://api.discogs.com/artists/609840"
+        },
+        {
+          "active": false,
+          "id": 622306,
+          "name": "Supergrass (2)",
+          "resource_url": "https://api.discogs.com/artists/622306"
+        },
+        {
+          "active": true,
+          "id": 642394,
+          "name": "Chris Interrante",
+          "resource_url": "https://api.discogs.com/artists/642394"
+        },
+        {
+          "active": false,
+          "id": 643101,
+          "name": "Eric Dailey",
+          "resource_url": "https://api.discogs.com/artists/643101"
+        },
+        {
+          "active": false,
+          "id": 643102,
+          "name": "Vic DiCara",
+          "resource_url": "https://api.discogs.com/artists/643102"
+        },
+        {
+          "active": true,
+          "id": 671392,
+          "name": "Sammy Siegler",
+          "resource_url": "https://api.discogs.com/artists/671392"
+        },
+        {
+          "active": false,
+          "id": 722140,
+          "name": "Tim Brooks",
+          "resource_url": "https://api.discogs.com/artists/722140"
+        },
+        {
+          "active": false,
+          "id": 739685,
+          "name": "Sean Sellers",
+          "resource_url": "https://api.discogs.com/artists/739685"
+        },
+        {
+          "active": false,
+          "id": 787141,
+          "name": "Dave Ware",
+          "resource_url": "https://api.discogs.com/artists/787141"
+        },
+        {
+          "active": false,
+          "id": 787142,
+          "name": "Todd Knapp",
+          "resource_url": "https://api.discogs.com/artists/787142"
+        },
+        {
+          "active": false,
+          "id": 949176,
+          "name": "Franklin Rhi",
+          "resource_url": "https://api.discogs.com/artists/949176"
+        },
+        {
+          "active": false,
+          "id": 951378,
+          "name": "Adam Blake (3)",
+          "resource_url": "https://api.discogs.com/artists/951378"
+        },
+        {
+          "active": false,
+          "id": 1021076,
+          "name": "Aaron Rossi (2)",
+          "resource_url": "https://api.discogs.com/artists/1021076"
+        },
+        {
+          "active": false,
+          "id": 2131046,
+          "name": "Bryan K. Christner",
+          "resource_url": "https://api.discogs.com/artists/2131046"
+        },
+        {
+          "active": false,
+          "id": 3429315,
+          "name": "Norman Brannon",
+          "resource_url": "https://api.discogs.com/artists/3429315"
+        },
+        {
+          "active": false,
+          "id": 4043912,
+          "name": "Vinny Panza",
+          "resource_url": "https://api.discogs.com/artists/4043912"
+        }
+      ],
+      "name": "Shelter (2)",
+      "namevariations": [
+        "Shelter Posse",
+        "The Shelter Posse"
+      ],
+      "profile": "Shelter is an American Rock / Hardcore band known for its devotion to Krishna Consciousness, formed by Ray Cappo in 1989 (who has been the only consistent member of the band since its formation).",
+      "releases_url": "https://api.discogs.com/artists/260020/releases",
       "resource_url": "https://api.discogs.com/artists/260020",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/260020",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/260020-Shelter-2",
+      "urls": [
+        "http://www.facebook.com/shelterofficial/",
+        "http://www.myspace.com/eternalshelter",
+        "http://en.wikipedia.org/wiki/Shelter_(band)",
+        "https://instagram.com/shelter_band_official?igshid=YmMyMTA2M2Y="
+      ]
     },
     "identity": {
       "musicbrainz_id": "d5157104-76b1-4b8b-90c2-9ff994f940db",
@@ -189,27 +422,261 @@
         "track": "In the Van Again",
         "uri": "http://www.youtube.com/watch?v=QGxX_KBX19c"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='91717738', url='https://music.apple.com/gb/artist/shelter/91717738', name='Shelter', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/af/4b/c4/af4bc45d-c09a-cd93-a37d-a7e87e359ff8/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '91717738', 'type': 'artists', 'href': '/v1/catalog/gb/artists/91717738', 'attributes': {'artwork': {'bgColor': 'd4d4d4', 'height': 1038, 'textColor1': '151515', 'textColor2': '303030', 'textColor3': '3b3b3b', 'textColor4': '505050', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/af/4b/c4/af4bc45d-c09a-cd93-a37d-a7e87e359ff8/pr_source.png/{w}x{h}bb.jpg', 'width': 1038}, 'genreNames': ['Alternative'], 'name': 'Shelter', 'url': 'https://music.apple.com/gb/artist/shelter/91717738'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/91717738/albums', 'data': [{'id': '365020171', 'type': 'albums', 'href': '/v1/catalog/gb/albums/365020171'}, {'id': '1542982843', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542982843'}, {'id': '91718135', 'type': 'albums', 'href': '/v1/catalog/gb/albums/91718135'}, {'id': '105198134', 'type': 'albums', 'href': '/v1/catalog/gb/albums/105198134'}, {'id': '1289507956', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1289507956'}, {'id': '1641235884', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1641235884'}, {'id': '1592655516', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592655516'}, {'id': '1542977422', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542977422'}, {'id': '1712470665', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1712470665'}, {'id': '1558587679', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1558587679'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "260020",
-      "images": [],
-      "members": [],
-      "name": "Shelter",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "260020",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/260020"
-      },
+      "data_quality": "Needs Vote",
+      "id": 260020,
+      "images": [
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/dbBLeu4i0gyWWg6K2lN59q72Wxi4GpxMSoBVb2P3REw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dbBLeu4i0gyWWg6K2lN59q72Wxi4GpxMSoBVb2P3REw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/C_ss5tD75g8feYZh6L5T9ecI-hWYYj0u4AfjAJrO8oQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTMzMjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 577,
+          "resource_url": "https://i.discogs.com/v1emNrdJIhcfg_mZ_s3WsFCQPyHXJZTPLGUBafJZq_k/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/v1emNrdJIhcfg_mZ_s3WsFCQPyHXJZTPLGUBafJZq_k/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tO8RF3RlwLmXIFxQAkWKb241V0lqbHKLZcfZdnzpdqg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNjYz/LTQ4MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 322,
+          "resource_url": "https://i.discogs.com/KqKz82PcNOAxLuyRtMo2hTDJU3vD_gbhzwSjBbXeoSY/rs:fit/g:sm/q:90/h:322/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KqKz82PcNOAxLuyRtMo2hTDJU3vD_gbhzwSjBbXeoSY/rs:fit/g:sm/q:90/h:322/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/oPIpRuroWvLuXn2BtjGTulVr_eln_9VHUK4N-KCgIXE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTM2MjQuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 253,
+          "resource_url": "https://i.discogs.com/1mRZqASbuiGFnAV7R7JE3iNl-H-MR5F0BMEZHFkkCwc/rs:fit/g:sm/q:90/h:253/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1mRZqASbuiGFnAV7R7JE3iNl-H-MR5F0BMEZHFkkCwc/rs:fit/g:sm/q:90/h:253/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1afC4-92MQ5hWFclLd5mcjFi-d509zyq-aw5CDmmLjE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMjAzNzc4OTk5/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 284,
+          "resource_url": "https://i.discogs.com/yYNm02W7ae7GO83muGv7M7r08ip_1_gaJiSpbMrLXSs/rs:fit/g:sm/q:90/h:284/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yYNm02W7ae7GO83muGv7M7r08ip_1_gaJiSpbMrLXSs/rs:fit/g:sm/q:90/h:284/w:424/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IN-ICabSWTtHL2x_I_UIgCvOFnAxzfE6eleJHaVvS5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTQ2MTQ5OTI5/LmpwZWc.jpeg",
+          "width": 424
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JCSfwJJ1lSgyGFAAt2YSDWuxNcIjJJGpO7hKOvev3NU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JCSfwJJ1lSgyGFAAt2YSDWuxNcIjJJGpO7hKOvev3NU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DEuV8KEgpPejIDPBiRTxMS_lLiBAc3KV2msPB3ul188/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNzU0OTExNzQw/LTE4MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/-tZkCszBDe_kFYff0lFmfAv0X5EcRizxFQCfngYlguk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-tZkCszBDe_kFYff0lFmfAv0X5EcRizxFQCfngYlguk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Jra7kEs4Zt8TSQ8z2NKFWaCgtsZ3iKMPKKMTdjCem14/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjEyMDIyMzIy/LTYzMDUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/Cz-F8rqQRcegV7A6YFTNPvaVXPnt1TugODzN1jffEXw/rs:fit/g:sm/q:90/h:300/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Cz-F8rqQRcegV7A6YFTNPvaVXPnt1TugODzN1jffEXw/rs:fit/g:sm/q:90/h:300/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/OluLH0lAPPtVmIgyp8207M1IOOgzaXOMK4EGWAbbNI8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xNjY5MDEwMTc3/LTIyNDcucG5n.jpeg",
+          "width": 250
+        },
+        {
+          "height": 44,
+          "resource_url": "https://i.discogs.com/kmd66jX57DbziA5IVJz0OTH8KS8b2cxNYDp8sxD2jKU/rs:fit/g:sm/q:90/h:44/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kmd66jX57DbziA5IVJz0OTH8KS8b2cxNYDp8sxD2jKU/rs:fit/g:sm/q:90/h:44/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Yx444agepLQIEA0Oy_SagGhu8Hp5eaGrFirgl9pDekM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDAy/MC0xMTczNjk0NTYx/LmpwZWc.jpeg",
+          "width": 200
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 257712,
+          "name": "Roy Mayorga",
+          "resource_url": "https://api.discogs.com/artists/257712"
+        },
+        {
+          "active": false,
+          "id": 263292,
+          "name": "Ken Olden",
+          "resource_url": "https://api.discogs.com/artists/263292"
+        },
+        {
+          "active": true,
+          "id": 264935,
+          "name": "John Porcell",
+          "resource_url": "https://api.discogs.com/artists/264935"
+        },
+        {
+          "active": false,
+          "id": 289755,
+          "name": "Graham Land",
+          "resource_url": "https://api.discogs.com/artists/289755"
+        },
+        {
+          "active": true,
+          "id": 327580,
+          "name": "Ray Cappo",
+          "resource_url": "https://api.discogs.com/artists/327580"
+        },
+        {
+          "active": false,
+          "id": 401086,
+          "name": "Daniel Larsson",
+          "resource_url": "https://api.discogs.com/artists/401086"
+        },
+        {
+          "active": false,
+          "id": 435215,
+          "name": "Mackie Jayson",
+          "resource_url": "https://api.discogs.com/artists/435215"
+        },
+        {
+          "active": false,
+          "id": 476889,
+          "name": "Tom Capone (2)",
+          "resource_url": "https://api.discogs.com/artists/476889"
+        },
+        {
+          "active": false,
+          "id": 498229,
+          "name": "Dave Dicenso",
+          "resource_url": "https://api.discogs.com/artists/498229"
+        },
+        {
+          "active": false,
+          "id": 537134,
+          "name": "Trey Files",
+          "resource_url": "https://api.discogs.com/artists/537134"
+        },
+        {
+          "active": false,
+          "id": 609840,
+          "name": "Sri Kesava",
+          "resource_url": "https://api.discogs.com/artists/609840"
+        },
+        {
+          "active": false,
+          "id": 622306,
+          "name": "Supergrass (2)",
+          "resource_url": "https://api.discogs.com/artists/622306"
+        },
+        {
+          "active": true,
+          "id": 642394,
+          "name": "Chris Interrante",
+          "resource_url": "https://api.discogs.com/artists/642394"
+        },
+        {
+          "active": false,
+          "id": 643101,
+          "name": "Eric Dailey",
+          "resource_url": "https://api.discogs.com/artists/643101"
+        },
+        {
+          "active": false,
+          "id": 643102,
+          "name": "Vic DiCara",
+          "resource_url": "https://api.discogs.com/artists/643102"
+        },
+        {
+          "active": true,
+          "id": 671392,
+          "name": "Sammy Siegler",
+          "resource_url": "https://api.discogs.com/artists/671392"
+        },
+        {
+          "active": false,
+          "id": 722140,
+          "name": "Tim Brooks",
+          "resource_url": "https://api.discogs.com/artists/722140"
+        },
+        {
+          "active": false,
+          "id": 739685,
+          "name": "Sean Sellers",
+          "resource_url": "https://api.discogs.com/artists/739685"
+        },
+        {
+          "active": false,
+          "id": 787141,
+          "name": "Dave Ware",
+          "resource_url": "https://api.discogs.com/artists/787141"
+        },
+        {
+          "active": false,
+          "id": 787142,
+          "name": "Todd Knapp",
+          "resource_url": "https://api.discogs.com/artists/787142"
+        },
+        {
+          "active": false,
+          "id": 949176,
+          "name": "Franklin Rhi",
+          "resource_url": "https://api.discogs.com/artists/949176"
+        },
+        {
+          "active": false,
+          "id": 951378,
+          "name": "Adam Blake (3)",
+          "resource_url": "https://api.discogs.com/artists/951378"
+        },
+        {
+          "active": false,
+          "id": 1021076,
+          "name": "Aaron Rossi (2)",
+          "resource_url": "https://api.discogs.com/artists/1021076"
+        },
+        {
+          "active": false,
+          "id": 2131046,
+          "name": "Bryan K. Christner",
+          "resource_url": "https://api.discogs.com/artists/2131046"
+        },
+        {
+          "active": false,
+          "id": 3429315,
+          "name": "Norman Brannon",
+          "resource_url": "https://api.discogs.com/artists/3429315"
+        },
+        {
+          "active": false,
+          "id": 4043912,
+          "name": "Vinny Panza",
+          "resource_url": "https://api.discogs.com/artists/4043912"
+        }
+      ],
+      "name": "Shelter (2)",
+      "namevariations": [
+        "Shelter Posse",
+        "The Shelter Posse"
+      ],
+      "profile": "Shelter is an American Rock / Hardcore band known for its devotion to Krishna Consciousness, formed by Ray Cappo in 1989 (who has been the only consistent member of the band since its formation).",
+      "releases_url": "https://api.discogs.com/artists/260020/releases",
       "resource_url": "https://api.discogs.com/artists/260020",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/260020",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/260020-Shelter-2",
+      "urls": [
+        "http://www.facebook.com/shelterofficial/",
+        "http://www.myspace.com/eternalshelter",
+        "http://en.wikipedia.org/wiki/Shelter_(band)",
+        "https://instagram.com/shelter_band_official?igshid=YmMyMTA2M2Y="
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Shelter', url='https://www.last.fm/music/Shelter', mbid='d5157104-76b1-4b8b-90c2-9ff994f940db', listeners=70098, playcount=1679200, bio_summary='There are multiple artists, bands and projects sharing the moniker Shelter;\\n\\n1) A Hare Krishna hardcore punk band.\\n2) A dungeon synth project from Chicago, Illinois described as \"warm nostalgia\".\\n3) A pop songwriting / production duo Mark R. Bebb and Rob Bradley.\\n4) An alias of Alan Briand.\\n5) A funk / rock / jazz / prog fusion band from Lyon, France.\\n6) A free jazz quartet.\\n7) An artist that appears on Cycles 6 Compilation.\\n\\n1) Shelter is a Hare Krishna hardcore punk band, formed by Youth of Today vocalist Ray Cappo in 1991. <a href=\"https://www.last.fm/music/Shelter\">Read more on Last.fm</a>', bio_content='There are multiple artists, bands and projects sharing the moniker Shelter;\\n\\n1) A Hare Krishna hardcore punk band.\\n2) A dungeon synth project from Chicago, Illinois described as \"warm nostalgia\".\\n3) A pop songwriting / production duo Mark R. Bebb and Rob Bradley.\\n4) An alias of Alan Briand.\\n5) A funk / rock / jazz / prog fusion band from Lyon, France.\\n6) A free jazz quartet.\\n7) An artist that appears on Cycles 6 Compilation.\\n\\n1) Shelter is a Hare Krishna hardcore punk band, formed by Youth of Today vocalist Ray Cappo in 1991. Because of the religious Hindu-oriented messages in its lyrics, Shelter\\'s subgenre has been dubbed by some as \"krishnacore.\"\\n\\nDiscography: \\nPerfection of Desire (Revelation, 1990)\\nQuest For Certainty (Equal Vision, 1992)\\nAttaining The Supreme (Equal Vision, 1993)\\nMantra (Roadrunner, 1995)\\nBeyond Planet Earth (Roadrunner, 1997)\\nWhen 20 Summers Pass (Victory, 2000)\\nThe Purpose, The Passion (Supersoul, 2001)\\nEternal (Good Life Recordings, 2006)\\n\\n2) Dungeon Synth project: https://shelter-ds.bandcamp.com/music <a href=\"https://www.last.fm/music/Shelter\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['hardcore', 'krishnacore', 'Straight Edge', 'melodic hardcore', 'punk'], similar_artists=[{'name': 'Youth of Today', 'url': 'https://www.last.fm/music/Youth+of+Today'}, {'name': '108', 'url': 'https://www.last.fm/music/108'}, {'name': 'Gorilla Biscuits', 'url': 'https://www.last.fm/music/Gorilla+Biscuits'}, {'name': 'Judge', 'url': 'https://www.last.fm/music/Judge'}, {'name': 'Sick of It All', 'url': 'https://www.last.fm/music/Sick+of+It+All'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Shelter', 'mbid': 'd5157104-76b1-4b8b-90c2-9ff994f940db', 'url': 'https://www.last.fm/music/Shelter', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '70098', 'playcount': '1679200'}, 'similar': {'artist': [{'name': 'Youth of Today', 'url': 'https://www.last.fm/music/Youth+of+Today', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': '108', 'url': 'https://www.last.fm/music/108', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gorilla Biscuits', 'url': 'https://www.last.fm/music/Gorilla+Biscuits', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Judge', 'url': 'https://www.last.fm/music/Judge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sick of It All', 'url': 'https://www.last.fm/music/Sick+of+It+All', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'hardcore', 'url': 'https://www.last.fm/tag/hardcore'}, {'name': 'krishnacore', 'url': 'https://www.last.fm/tag/krishnacore'}, {'name': 'Straight Edge', 'url': 'https://www.last.fm/tag/Straight+Edge'}, {'name': 'melodic hardcore', 'url': 'https://www.last.fm/tag/melodic+hardcore'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Shelter/+wiki'}}, 'published': '28 Aug 2006, 18:11', 'summary': 'There are multiple artists, bands and projects sharing the moniker Shelter;\\n\\n1) A Hare Krishna hardcore punk band.\\n2) A dungeon synth project from Chicago, Illinois described as \"warm nostalgia\".\\n3) A pop songwriting / production duo Mark R. Bebb and Rob Bradley.\\n4) An alias of Alan Briand.\\n5) A funk / rock / jazz / prog fusion band from Lyon, France.\\n6) A free jazz quartet.\\n7) An artist that appears on Cycles 6 Compilation.\\n\\n1) Shelter is a Hare Krishna hardcore punk band, formed by Youth of Today vocalist Ray Cappo in 1991. <a href=\"https://www.last.fm/music/Shelter\">Read more on Last.fm</a>', 'content': 'There are multiple artists, bands and projects sharing the moniker Shelter;\\n\\n1) A Hare Krishna hardcore punk band.\\n2) A dungeon synth project from Chicago, Illinois described as \"warm nostalgia\".\\n3) A pop songwriting / production duo Mark R. Bebb and Rob Bradley.\\n4) An alias of Alan Briand.\\n5) A funk / rock / jazz / prog fusion band from Lyon, France.\\n6) A free jazz quartet.\\n7) An artist that appears on Cycles 6 Compilation.\\n\\n1) Shelter is a Hare Krishna hardcore punk band, formed by Youth of Today vocalist Ray Cappo in 1991. Because of the religious Hindu-oriented messages in its lyrics, Shelter\\'s subgenre has been dubbed by some as \"krishnacore.\"\\n\\nDiscography: \\nPerfection of Desire (Revelation, 1990)\\nQuest For Certainty (Equal Vision, 1992)\\nAttaining The Supreme (Equal Vision, 1993)\\nMantra (Roadrunner, 1995)\\nBeyond Planet Earth (Roadrunner, 1997)\\nWhen 20 Summers Pass (Victory, 2000)\\nThe Purpose, The Passion (Supersoul, 2001)\\nEternal (Good Life Recordings, 2006)\\n\\n2) Dungeon Synth project: https://shelter-ds.bandcamp.com/music <a href=\"https://www.last.fm/music/Shelter\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4vTTRvwORrfvMOUb3OOUTy', url='https://open.spotify.com/artist/4vTTRvwORrfvMOUb3OOUTy', name='Shelter', popularity=33, followers=41883, genres=['hardcore punk', 'melodic hardcore', 'hardcore', 'skate punk', 'punk'], images=[{'url': 'https://i.scdn.co/image/a494eb2844b97969873c265e7cf89fcc9f78b61c', 'height': 762, 'width': 792}, {'url': 'https://i.scdn.co/image/331ad1856dd6c731adc90f1e5432069c7ac23f13', 'height': 616, 'width': 640}, {'url': 'https://i.scdn.co/image/1d2cc6f627ac390b809678803a71e9a39bb2086d', 'height': 192, 'width': 200}, {'url': 'https://i.scdn.co/image/33f2e5e78fc33bd48dc47d17d14a3f43c43d9b28', 'height': 62, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4vTTRvwORrfvMOUb3OOUTy'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4vTTRvwORrfvMOUb3OOUTy'}, 'followers': {'href': None, 'total': 41883}, 'genres': ['hardcore punk', 'melodic hardcore', 'hardcore', 'skate punk', 'punk'], 'href': 'https://api.spotify.com/v1/artists/4vTTRvwORrfvMOUb3OOUTy', 'id': '4vTTRvwORrfvMOUb3OOUTy', 'images': [{'url': 'https://i.scdn.co/image/a494eb2844b97969873c265e7cf89fcc9f78b61c', 'height': 762, 'width': 792}, {'url': 'https://i.scdn.co/image/331ad1856dd6c731adc90f1e5432069c7ac23f13', 'height': 616, 'width': 640}, {'url': 'https://i.scdn.co/image/1d2cc6f627ac390b809678803a71e9a39bb2086d', 'height': 192, 'width': 200}, {'url': 'https://i.scdn.co/image/33f2e5e78fc33bd48dc47d17d14a3f43c43d9b28', 'height': 62, 'width': 64}], 'name': 'Shelter', 'popularity': 33, 'type': 'artist', 'uri': 'spotify:artist:4vTTRvwORrfvMOUb3OOUTy'})",
@@ -259,6 +726,6 @@
   },
   "spotify_id": "4vTTRvwORrfvMOUb3OOUTy",
   "spotify_url": "https://open.spotify.com/artist/4vTTRvwORrfvMOUb3OOUTy",
-  "updated_at": "2026-10-22T14:11:08.903917",
+  "updated_at": "2026-10-30T18:45:08.473162",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Shelter_(band)"
 }

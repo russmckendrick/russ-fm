@@ -91,22 +91,72 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='445279400', url='https://music.apple.com/gb/artist/pajama-club/445279400', name='Pajama Club', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/f8/52/9f/f8529fce-2491-e6f4-be31-4e343a4ca211/5099968022853_1500x1500_300dpi.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '445279400', 'type': 'artists', 'href': '/v1/catalog/gb/artists/445279400', 'attributes': {'name': 'Pajama Club', 'genreNames': ['Pop'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/f8/52/9f/f8529fce-2491-e6f4-be31-4e343a4ca211/5099968022853_1500x1500_300dpi.jpg/{w}x{h}ac.jpg', 'bgColor': '050508', 'textColor1': 'ffffff', 'textColor2': 'c7cac9', 'textColor3': 'cccdcd', 'textColor4': 'a0a3a2'}, 'url': 'https://music.apple.com/gb/artist/pajama-club/445279400'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/445279400/albums', 'data': [{'id': '693719180', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693719180'}, {'id': '692154956', 'type': 'albums', 'href': '/v1/catalog/gb/albums/692154956'}, {'id': '688706107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/688706107'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2456808",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1642570,
+          "name": "The Pyjama Party",
+          "resource_url": "https://api.discogs.com/artists/1642570"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 2456808,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/MJRfHCWH0DqkKjVd0oq7U-ONtcJCYlSe5pRwogVekFo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/MJRfHCWH0DqkKjVd0oq7U-ONtcJCYlSe5pRwogVekFo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/DZzpshGR9kuSBWIJEj3lN_e-TDJTDDdwx6RHU4fZnUA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/yUc-JUwtVho25ZBIzWcgAPWKyTH8Pe5KlYO9_dsZELc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUc-JUwtVho25ZBIzWcgAPWKyTH8Pe5KlYO9_dsZELc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/7k6C9fpV23RD-VXY3ZjP0DUCKV_gfLbgn6cY0CucpSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/ImqMlGPRyClhEhYNbKvSsk-YlAiZQE5YM4od0WtwchY/rs:fit/g:sm/q:90/h:340/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ImqMlGPRyClhEhYNbKvSsk-YlAiZQE5YM4od0WtwchY/rs:fit/g:sm/q:90/h:340/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/bf8chids7Cz3Ai9S4HclEwuNHRBY1CwH5gE0poK8xNk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "width": 340
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 102974,
+          "name": "Neil Finn",
+          "resource_url": "https://api.discogs.com/artists/102974"
+        },
+        {
+          "active": true,
+          "id": 842516,
+          "name": "Sharon Finn",
+          "resource_url": "https://api.discogs.com/artists/842516"
+        },
+        {
+          "active": true,
+          "id": 866385,
+          "name": "Alana Skyring",
+          "resource_url": "https://api.discogs.com/artists/866385"
+        },
+        {
+          "active": true,
+          "id": 990943,
+          "name": "Sean James Donnelly",
+          "resource_url": "https://api.discogs.com/artists/990943"
+        }
+      ],
       "name": "Pajama Club",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "2456808",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2456808"
-      },
+      "releases_url": "https://api.discogs.com/artists/2456808/releases",
       "resource_url": "https://api.discogs.com/artists/2456808",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2456808",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2456808-Pajama-Club"
     },
     "identity": {
       "musicbrainz_id": "3934946e-9a2e-4f32-994f-c3c4cc16e04c",
@@ -116,27 +166,78 @@
     },
     "lastfm": "ArtistLastFmData(name='Pajama Club', url='https://www.last.fm/music/Pajama+Club', mbid='3934946e-9a2e-4f32-994f-c3c4cc16e04c', listeners=5629, playcount=84400, bio_summary='Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>', bio_content='Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas, having their first jam, making a racket in the grand tradition of enthusiastic amateurs.\\n\\nFor Neil, after a career of writing songs and strumming guitars, it was liberating to be behind a drumkit, no chords or melody to navigate, just keeping time and making it swing. For Sharon, after raising 2 fine boys and coping with Neil it was just 3 notes, pure feel on the bass guitar.\\n\\nIt’s no wonder they both listened back to this music and felt like something exciting and fresh had been revealed. For the next few weeks it became a nightly ritual, a few wines and into the music room, pick up instruments and push record.\\n\\nAnd so inspired, Sharon and Neil were compelled to take it further. They invited respected Auckland songwriter and musician Sean Donnelly to lend a hand. The three of them went to work and steadily those jams became songs, a body of work more diverse and dynamic than any of them had imagined.\\n\\nWith the album now complete and due for release mid year the Pajama Club are delighted to be joining Wilco at their Solid Sound festival for their North American debut. More dates will follow.\\n\\nThe Pajama Club on stage are:\\nSharon Finn - bass and vocals\\nNeil Finn - guitar, keys, occasional drums and vocals\\nSean Donnelly - keyboards, guitar and harmonies\\nAlana Skyring - drums <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['rock', 'New Zealand', 'Garage Rock', 'alternative', 'alternative rock'], similar_artists=[{'name': 'Betchadupa', 'url': 'https://www.last.fm/music/Betchadupa'}, {'name': 'Liam Finn + Eliza Jane', 'url': 'https://www.last.fm/music/Liam+Finn+%252B+Eliza+Jane'}, {'name': 'Barb', 'url': 'https://www.last.fm/music/Barb'}, {'name': 'Don McGlashan', 'url': 'https://www.last.fm/music/Don+McGlashan'}, {'name': 'Neil Finn', 'url': 'https://www.last.fm/music/Neil+Finn'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Pajama Club', 'mbid': '3934946e-9a2e-4f32-994f-c3c4cc16e04c', 'url': 'https://www.last.fm/music/Pajama+Club', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5629', 'playcount': '84400'}, 'similar': {'artist': [{'name': 'Betchadupa', 'url': 'https://www.last.fm/music/Betchadupa', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Liam Finn + Eliza Jane', 'url': 'https://www.last.fm/music/Liam+Finn+%252B+Eliza+Jane', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Barb', 'url': 'https://www.last.fm/music/Barb', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Don McGlashan', 'url': 'https://www.last.fm/music/Don+McGlashan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Neil Finn', 'url': 'https://www.last.fm/music/Neil+Finn', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'New Zealand', 'url': 'https://www.last.fm/tag/New+Zealand'}, {'name': 'Garage Rock', 'url': 'https://www.last.fm/tag/Garage+Rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Pajama+Club/+wiki'}}, 'published': '06 Jul 2011, 13:42', 'summary': 'Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>', 'content': 'Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas, having their first jam, making a racket in the grand tradition of enthusiastic amateurs.\\n\\nFor Neil, after a career of writing songs and strumming guitars, it was liberating to be behind a drumkit, no chords or melody to navigate, just keeping time and making it swing. For Sharon, after raising 2 fine boys and coping with Neil it was just 3 notes, pure feel on the bass guitar.\\n\\nIt’s no wonder they both listened back to this music and felt like something exciting and fresh had been revealed. For the next few weeks it became a nightly ritual, a few wines and into the music room, pick up instruments and push record.\\n\\nAnd so inspired, Sharon and Neil were compelled to take it further. They invited respected Auckland songwriter and musician Sean Donnelly to lend a hand. The three of them went to work and steadily those jams became songs, a body of work more diverse and dynamic than any of them had imagined.\\n\\nWith the album now complete and due for release mid year the Pajama Club are delighted to be joining Wilco at their Solid Sound festival for their North American debut. More dates will follow.\\n\\nThe Pajama Club on stage are:\\nSharon Finn - bass and vocals\\nNeil Finn - guitar, keys, occasional drums and vocals\\nSean Donnelly - keyboards, guitar and harmonies\\nAlana Skyring - drums <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1VaizNLTTwSmSStmrpCwaZ', url='https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ', name='Pajama Club', popularity=3, followers=1411, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273f27b96e97190845c62c72a36', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02f27b96e97190845c62c72a36', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851f27b96e97190845c62c72a36', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ'}, 'followers': {'href': None, 'total': 1411}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/1VaizNLTTwSmSStmrpCwaZ', 'id': '1VaizNLTTwSmSStmrpCwaZ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273f27b96e97190845c62c72a36', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02f27b96e97190845c62c72a36', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851f27b96e97190845c62c72a36', 'height': 64, 'width': 64}], 'name': 'Pajama Club', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:1VaizNLTTwSmSStmrpCwaZ'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='445279400', url='https://music.apple.com/gb/artist/pajama-club/445279400', name='Pajama Club', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/f8/52/9f/f8529fce-2491-e6f4-be31-4e343a4ca211/5099968022853_1500x1500_300dpi.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '445279400', 'type': 'artists', 'href': '/v1/catalog/gb/artists/445279400', 'attributes': {'name': 'Pajama Club', 'genreNames': ['Pop'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/f8/52/9f/f8529fce-2491-e6f4-be31-4e343a4ca211/5099968022853_1500x1500_300dpi.jpg/{w}x{h}ac.jpg', 'bgColor': '050508', 'textColor1': 'ffffff', 'textColor2': 'c7cac9', 'textColor3': 'cccdcd', 'textColor4': 'a0a3a2'}, 'url': 'https://music.apple.com/gb/artist/pajama-club/445279400'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/445279400/albums', 'data': [{'id': '693719180', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693719180'}, {'id': '692154956', 'type': 'albums', 'href': '/v1/catalog/gb/albums/692154956'}, {'id': '688706107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/688706107'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2456808",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1642570,
+          "name": "The Pyjama Party",
+          "resource_url": "https://api.discogs.com/artists/1642570"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 2456808,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/MJRfHCWH0DqkKjVd0oq7U-ONtcJCYlSe5pRwogVekFo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/MJRfHCWH0DqkKjVd0oq7U-ONtcJCYlSe5pRwogVekFo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/DZzpshGR9kuSBWIJEj3lN_e-TDJTDDdwx6RHU4fZnUA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OS0xOTA3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/yUc-JUwtVho25ZBIzWcgAPWKyTH8Pe5KlYO9_dsZELc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yUc-JUwtVho25ZBIzWcgAPWKyTH8Pe5KlYO9_dsZELc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/7k6C9fpV23RD-VXY3ZjP0DUCKV_gfLbgn6cY0CucpSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMy/OC05ODg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/ImqMlGPRyClhEhYNbKvSsk-YlAiZQE5YM4od0WtwchY/rs:fit/g:sm/q:90/h:340/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ImqMlGPRyClhEhYNbKvSsk-YlAiZQE5YM4od0WtwchY/rs:fit/g:sm/q:90/h:340/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/bf8chids7Cz3Ai9S4HclEwuNHRBY1CwH5gE0poK8xNk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NTY4/MDgtMTUyOTQyNDMz/My0xNDkxLmpwZWc.jpeg",
+          "width": 340
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 102974,
+          "name": "Neil Finn",
+          "resource_url": "https://api.discogs.com/artists/102974"
+        },
+        {
+          "active": true,
+          "id": 842516,
+          "name": "Sharon Finn",
+          "resource_url": "https://api.discogs.com/artists/842516"
+        },
+        {
+          "active": true,
+          "id": 866385,
+          "name": "Alana Skyring",
+          "resource_url": "https://api.discogs.com/artists/866385"
+        },
+        {
+          "active": true,
+          "id": 990943,
+          "name": "Sean James Donnelly",
+          "resource_url": "https://api.discogs.com/artists/990943"
+        }
+      ],
       "name": "Pajama Club",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "2456808",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2456808"
-      },
+      "releases_url": "https://api.discogs.com/artists/2456808/releases",
       "resource_url": "https://api.discogs.com/artists/2456808",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2456808",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2456808-Pajama-Club"
     },
     "lastfm": "ArtistLastFmData(name='Pajama Club', url='https://www.last.fm/music/Pajama+Club', mbid='3934946e-9a2e-4f32-994f-c3c4cc16e04c', listeners=5629, playcount=84400, bio_summary='Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>', bio_content='Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas, having their first jam, making a racket in the grand tradition of enthusiastic amateurs.\\n\\nFor Neil, after a career of writing songs and strumming guitars, it was liberating to be behind a drumkit, no chords or melody to navigate, just keeping time and making it swing. For Sharon, after raising 2 fine boys and coping with Neil it was just 3 notes, pure feel on the bass guitar.\\n\\nIt’s no wonder they both listened back to this music and felt like something exciting and fresh had been revealed. For the next few weeks it became a nightly ritual, a few wines and into the music room, pick up instruments and push record.\\n\\nAnd so inspired, Sharon and Neil were compelled to take it further. They invited respected Auckland songwriter and musician Sean Donnelly to lend a hand. The three of them went to work and steadily those jams became songs, a body of work more diverse and dynamic than any of them had imagined.\\n\\nWith the album now complete and due for release mid year the Pajama Club are delighted to be joining Wilco at their Solid Sound festival for their North American debut. More dates will follow.\\n\\nThe Pajama Club on stage are:\\nSharon Finn - bass and vocals\\nNeil Finn - guitar, keys, occasional drums and vocals\\nSean Donnelly - keyboards, guitar and harmonies\\nAlana Skyring - drums <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['rock', 'New Zealand', 'Garage Rock', 'alternative', 'alternative rock'], similar_artists=[{'name': 'Betchadupa', 'url': 'https://www.last.fm/music/Betchadupa'}, {'name': 'Liam Finn + Eliza Jane', 'url': 'https://www.last.fm/music/Liam+Finn+%252B+Eliza+Jane'}, {'name': 'Barb', 'url': 'https://www.last.fm/music/Barb'}, {'name': 'Don McGlashan', 'url': 'https://www.last.fm/music/Don+McGlashan'}, {'name': 'Neil Finn', 'url': 'https://www.last.fm/music/Neil+Finn'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Pajama Club', 'mbid': '3934946e-9a2e-4f32-994f-c3c4cc16e04c', 'url': 'https://www.last.fm/music/Pajama+Club', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5629', 'playcount': '84400'}, 'similar': {'artist': [{'name': 'Betchadupa', 'url': 'https://www.last.fm/music/Betchadupa', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Liam Finn + Eliza Jane', 'url': 'https://www.last.fm/music/Liam+Finn+%252B+Eliza+Jane', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Barb', 'url': 'https://www.last.fm/music/Barb', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Don McGlashan', 'url': 'https://www.last.fm/music/Don+McGlashan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Neil Finn', 'url': 'https://www.last.fm/music/Neil+Finn', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'New Zealand', 'url': 'https://www.last.fm/tag/New+Zealand'}, {'name': 'Garage Rock', 'url': 'https://www.last.fm/tag/Garage+Rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Pajama+Club/+wiki'}}, 'published': '06 Jul 2011, 13:42', 'summary': 'Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>', 'content': 'Pajama Club are a New Zealand outfit formed by husband-and-wife duo of Neil Finn (of Crowded House fame) on guitar, keys, and vocals, and Sharon Finn on bass and vocals. On stage and when recording the duo is expanded with Sean Donnelly (keyboards, guitar and harmonies) and Alana Skyring (drums).\\n\\nIt’s always been the element of struggle that makes music human and exciting. Neil and Sharon Finn discovered that for themselves at home late one night in their pajamas, having their first jam, making a racket in the grand tradition of enthusiastic amateurs.\\n\\nFor Neil, after a career of writing songs and strumming guitars, it was liberating to be behind a drumkit, no chords or melody to navigate, just keeping time and making it swing. For Sharon, after raising 2 fine boys and coping with Neil it was just 3 notes, pure feel on the bass guitar.\\n\\nIt’s no wonder they both listened back to this music and felt like something exciting and fresh had been revealed. For the next few weeks it became a nightly ritual, a few wines and into the music room, pick up instruments and push record.\\n\\nAnd so inspired, Sharon and Neil were compelled to take it further. They invited respected Auckland songwriter and musician Sean Donnelly to lend a hand. The three of them went to work and steadily those jams became songs, a body of work more diverse and dynamic than any of them had imagined.\\n\\nWith the album now complete and due for release mid year the Pajama Club are delighted to be joining Wilco at their Solid Sound festival for their North American debut. More dates will follow.\\n\\nThe Pajama Club on stage are:\\nSharon Finn - bass and vocals\\nNeil Finn - guitar, keys, occasional drums and vocals\\nSean Donnelly - keyboards, guitar and harmonies\\nAlana Skyring - drums <a href=\"https://www.last.fm/music/Pajama+Club\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1VaizNLTTwSmSStmrpCwaZ', url='https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ', name='Pajama Club', popularity=3, followers=1411, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273f27b96e97190845c62c72a36', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02f27b96e97190845c62c72a36', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851f27b96e97190845c62c72a36', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ'}, 'followers': {'href': None, 'total': 1411}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/1VaizNLTTwSmSStmrpCwaZ', 'id': '1VaizNLTTwSmSStmrpCwaZ', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273f27b96e97190845c62c72a36', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02f27b96e97190845c62c72a36', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851f27b96e97190845c62c72a36', 'height': 64, 'width': 64}], 'name': 'Pajama Club', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:1VaizNLTTwSmSStmrpCwaZ'})",
@@ -144,6 +245,6 @@
   },
   "spotify_id": "1VaizNLTTwSmSStmrpCwaZ",
   "spotify_url": "https://open.spotify.com/artist/1VaizNLTTwSmSStmrpCwaZ",
-  "updated_at": "2026-10-22T14:10:01.402606",
+  "updated_at": "2026-10-30T18:43:38.682804",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Pajama_Club"
 }

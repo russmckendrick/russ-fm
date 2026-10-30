@@ -97,22 +97,51 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='111022605', url='https://music.apple.com/gb/artist/gabriels/111022605', name='Gabriels', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/f4/04/a1/f404a14e-daaa-df9f-53cb-b39e434d12a6/aeedbd1f-6f49-4d57-89e6-9cd0be1e6b1e_file_cropped.png/2000x2000bb.jpg', genres=['R&B/Soul'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '111022605', 'type': 'artists', 'href': '/v1/catalog/gb/artists/111022605', 'attributes': {'name': 'Gabriels', 'genreNames': ['R&B/Soul'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/f4/04/a1/f404a14e-daaa-df9f-53cb-b39e434d12a6/aeedbd1f-6f49-4d57-89e6-9cd0be1e6b1e_file_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'f7f7f7', 'textColor1': '060606', 'textColor2': '2d2d2d', 'textColor3': '363636', 'textColor4': '555555'}, 'url': 'https://music.apple.com/gb/artist/gabriels/111022605'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/111022605/albums', 'data': [{'id': '1642716607', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1642716607'}, {'id': '1696010729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1696010729'}, {'id': '1616907534', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1616907534'}, {'id': '1568154887', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1568154887'}, {'id': '1593285736', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1593285736'}, {'id': '1670502218', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1670502218'}, {'id': '1565370656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1565370656'}, {'id': '1666549066', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666549066'}, {'id': '1657053176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1657053176'}, {'id': '1579086261', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1579086261'}, {'id': '1575231660', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575231660'}, {'id': '1567415609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1567415609'}, {'id': '1751551002', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751551002'}, {'id': '1696614374', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1696614374'}, {'id': '1718975143', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718975143'}, {'id': '1788198123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788198123'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "8402472",
-      "images": [],
-      "members": [],
-      "name": "Gabriels",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "8402472",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8402472"
-      },
+      "data_quality": "Needs Vote",
+      "id": 8402472,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/vB9kYPLwaK2tHmyBVxPpx-KYzbrAKE3vwciIemBNRAo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/vB9kYPLwaK2tHmyBVxPpx-KYzbrAKE3vwciIemBNRAo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/T6dEyVA2Kqohu0C9l8HAGulMb6aPr38pt52HHdZidiE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 2231445,
+          "name": "Jacob Lusk",
+          "resource_url": "https://api.discogs.com/artists/2231445"
+        },
+        {
+          "active": true,
+          "id": 2423684,
+          "name": "Ryan Hope",
+          "resource_url": "https://api.discogs.com/artists/2423684"
+        },
+        {
+          "active": true,
+          "id": 4261939,
+          "name": "Ari Balouzian",
+          "resource_url": "https://api.discogs.com/artists/4261939"
+        }
+      ],
+      "name": "Gabriels (3)",
+      "profile": "Soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope.",
+      "releases_url": "https://api.discogs.com/artists/8402472/releases",
       "resource_url": "https://api.discogs.com/artists/8402472",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8402472",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/8402472-Gabriels-3",
+      "urls": [
+        "https://www.gabrielsofficial.com/",
+        "https://gabriels.bandcamp.com/",
+        "https://www.instagram.com/__gabriels__/",
+        "https://www.facebook.com/GabrielsWorldwide/",
+        "https://twitter.com/___gabriels",
+        "https://www.youtube.com/channel/UC0lPl19KmZ58dGu7iTC16Xg"
+      ]
     },
     "identity": {
       "musicbrainz_id": "c6bbc197-ce7b-48c7-8690-71a149073429",
@@ -122,27 +151,57 @@
     },
     "lastfm": "ArtistLastFmData(name='gabriels', url='https://www.last.fm/music/gabriels', mbid=None, listeners=147752, playcount=1246686, bio_summary='There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>', bio_content='There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. Their five track debut EP  Love and Hate in a Different Time was released in 2020. Jacob Lusk is an influential member of the LA gospel community and in Gabriels\\' music you can hear the influences of gospel, soul and funk.\\n\\n2) Gabriels is Italian Piano/Keyboard player and Composer Gabriels Shiro from Messina, Sicily Italy with Classical, Symphonic and Metal background. Among his collaborations, the rock-opera “Prophecy” featuring Mark Boals and live performances with Fabio Lione.\\nDiscography:\\nThe Legend of a Prince\\tFull-length\\t2007\\t \\nCall Me\\tSingle\\t2009\\t \\nThe Enchanted Wood\\tSingle\\t2009\\t \\nProphecy\\tFull-length\\t2013\\nBlack Gate\\tSingle\\t2014\\t \\nFist of the Seven Stars - Act 1: Fist of Steel\\tFull-length\\t2016\\n\"Over the Olympus\" Concerto for Synthesizer and Orchestra in D Minor Op. 1\\tFull-length\\t2017\\t \\nFist of the Seven Stars - Act 2: Hokuto Brothers\\tFull-length\\t2018\\t \\nFist of the Seven Stars - Act 3: Nanto Chaos\\tFull-length\\t2020\\t \\nItalian Metal Force\\tSingle\\t2020\\nhttp://gabriels.altervista.org/sito/ \\n\\n3) Gabriels is a Techno/House project. The single \"Amethyst\" was released in 2016. \\n\\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['soul', 'rnb', 'symphonic metal', 'Neo-Soul', 'Power metal'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'gabriels', 'url': 'https://www.last.fm/music/gabriels', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '147752', 'playcount': '1246686'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'soul', 'url': 'https://www.last.fm/tag/soul'}, {'name': 'rnb', 'url': 'https://www.last.fm/tag/rnb'}, {'name': 'symphonic metal', 'url': 'https://www.last.fm/tag/symphonic+metal'}, {'name': 'Neo-Soul', 'url': 'https://www.last.fm/tag/Neo-Soul'}, {'name': 'Power metal', 'url': 'https://www.last.fm/tag/Power+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/gabriels/+wiki'}}, 'published': '04 Jan 2021, 20:20', 'summary': 'There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>', 'content': 'There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. Their five track debut EP  Love and Hate in a Different Time was released in 2020. Jacob Lusk is an influential member of the LA gospel community and in Gabriels\\' music you can hear the influences of gospel, soul and funk.\\n\\n2) Gabriels is Italian Piano/Keyboard player and Composer Gabriels Shiro from Messina, Sicily Italy with Classical, Symphonic and Metal background. Among his collaborations, the rock-opera “Prophecy” featuring Mark Boals and live performances with Fabio Lione.\\nDiscography:\\nThe Legend of a Prince\\tFull-length\\t2007\\t \\nCall Me\\tSingle\\t2009\\t \\nThe Enchanted Wood\\tSingle\\t2009\\t \\nProphecy\\tFull-length\\t2013\\nBlack Gate\\tSingle\\t2014\\t \\nFist of the Seven Stars - Act 1: Fist of Steel\\tFull-length\\t2016\\n\"Over the Olympus\" Concerto for Synthesizer and Orchestra in D Minor Op. 1\\tFull-length\\t2017\\t \\nFist of the Seven Stars - Act 2: Hokuto Brothers\\tFull-length\\t2018\\t \\nFist of the Seven Stars - Act 3: Nanto Chaos\\tFull-length\\t2020\\t \\nItalian Metal Force\\tSingle\\t2020\\nhttp://gabriels.altervista.org/sito/ \\n\\n3) Gabriels is a Techno/House project. The single \"Amethyst\" was released in 2016. \\n\\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5tHs3fthucNRGAFpdE9rmz', url='https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz', name='Gabriels', popularity=48, followers=150000, genres=['retro soul'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb7c3ee4602ccc27286b25776b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747c3ee4602ccc27286b25776b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787c3ee4602ccc27286b25776b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz'}, 'followers': {'href': None, 'total': 150000}, 'genres': ['retro soul'], 'href': 'https://api.spotify.com/v1/artists/5tHs3fthucNRGAFpdE9rmz', 'id': '5tHs3fthucNRGAFpdE9rmz', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb7c3ee4602ccc27286b25776b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747c3ee4602ccc27286b25776b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787c3ee4602ccc27286b25776b', 'height': 160, 'width': 160}], 'name': 'Gabriels', 'popularity': 48, 'type': 'artist', 'uri': 'spotify:artist:5tHs3fthucNRGAFpdE9rmz'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='111022605', url='https://music.apple.com/gb/artist/gabriels/111022605', name='Gabriels', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/f4/04/a1/f404a14e-daaa-df9f-53cb-b39e434d12a6/aeedbd1f-6f49-4d57-89e6-9cd0be1e6b1e_file_cropped.png/2000x2000bb.jpg', genres=['R&B/Soul'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '111022605', 'type': 'artists', 'href': '/v1/catalog/gb/artists/111022605', 'attributes': {'name': 'Gabriels', 'genreNames': ['R&B/Soul'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/f4/04/a1/f404a14e-daaa-df9f-53cb-b39e434d12a6/aeedbd1f-6f49-4d57-89e6-9cd0be1e6b1e_file_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'f7f7f7', 'textColor1': '060606', 'textColor2': '2d2d2d', 'textColor3': '363636', 'textColor4': '555555'}, 'url': 'https://music.apple.com/gb/artist/gabriels/111022605'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/111022605/albums', 'data': [{'id': '1642716607', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1642716607'}, {'id': '1696010729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1696010729'}, {'id': '1616907534', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1616907534'}, {'id': '1568154887', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1568154887'}, {'id': '1593285736', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1593285736'}, {'id': '1670502218', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1670502218'}, {'id': '1565370656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1565370656'}, {'id': '1666549066', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1666549066'}, {'id': '1657053176', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1657053176'}, {'id': '1579086261', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1579086261'}, {'id': '1575231660', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575231660'}, {'id': '1567415609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1567415609'}, {'id': '1751551002', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751551002'}, {'id': '1696614374', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1696614374'}, {'id': '1718975143', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1718975143'}, {'id': '1788198123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788198123'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "8402472",
-      "images": [],
-      "members": [],
-      "name": "Gabriels",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "8402472",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/8402472"
-      },
+      "data_quality": "Needs Vote",
+      "id": 8402472,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/vB9kYPLwaK2tHmyBVxPpx-KYzbrAKE3vwciIemBNRAo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/vB9kYPLwaK2tHmyBVxPpx-KYzbrAKE3vwciIemBNRAo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/T6dEyVA2Kqohu0C9l8HAGulMb6aPr38pt52HHdZidiE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDI0/NzItMTY1MjI5MzA5/OC04NTcxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 2231445,
+          "name": "Jacob Lusk",
+          "resource_url": "https://api.discogs.com/artists/2231445"
+        },
+        {
+          "active": true,
+          "id": 2423684,
+          "name": "Ryan Hope",
+          "resource_url": "https://api.discogs.com/artists/2423684"
+        },
+        {
+          "active": true,
+          "id": 4261939,
+          "name": "Ari Balouzian",
+          "resource_url": "https://api.discogs.com/artists/4261939"
+        }
+      ],
+      "name": "Gabriels (3)",
+      "profile": "Soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope.",
+      "releases_url": "https://api.discogs.com/artists/8402472/releases",
       "resource_url": "https://api.discogs.com/artists/8402472",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/8402472",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/8402472-Gabriels-3",
+      "urls": [
+        "https://www.gabrielsofficial.com/",
+        "https://gabriels.bandcamp.com/",
+        "https://www.instagram.com/__gabriels__/",
+        "https://www.facebook.com/GabrielsWorldwide/",
+        "https://twitter.com/___gabriels",
+        "https://www.youtube.com/channel/UC0lPl19KmZ58dGu7iTC16Xg"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='gabriels', url='https://www.last.fm/music/gabriels', mbid=None, listeners=147752, playcount=1246686, bio_summary='There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>', bio_content='There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. Their five track debut EP  Love and Hate in a Different Time was released in 2020. Jacob Lusk is an influential member of the LA gospel community and in Gabriels\\' music you can hear the influences of gospel, soul and funk.\\n\\n2) Gabriels is Italian Piano/Keyboard player and Composer Gabriels Shiro from Messina, Sicily Italy with Classical, Symphonic and Metal background. Among his collaborations, the rock-opera “Prophecy” featuring Mark Boals and live performances with Fabio Lione.\\nDiscography:\\nThe Legend of a Prince\\tFull-length\\t2007\\t \\nCall Me\\tSingle\\t2009\\t \\nThe Enchanted Wood\\tSingle\\t2009\\t \\nProphecy\\tFull-length\\t2013\\nBlack Gate\\tSingle\\t2014\\t \\nFist of the Seven Stars - Act 1: Fist of Steel\\tFull-length\\t2016\\n\"Over the Olympus\" Concerto for Synthesizer and Orchestra in D Minor Op. 1\\tFull-length\\t2017\\t \\nFist of the Seven Stars - Act 2: Hokuto Brothers\\tFull-length\\t2018\\t \\nFist of the Seven Stars - Act 3: Nanto Chaos\\tFull-length\\t2020\\t \\nItalian Metal Force\\tSingle\\t2020\\nhttp://gabriels.altervista.org/sito/ \\n\\n3) Gabriels is a Techno/House project. The single \"Amethyst\" was released in 2016. \\n\\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['soul', 'rnb', 'symphonic metal', 'Neo-Soul', 'Power metal'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'gabriels', 'url': 'https://www.last.fm/music/gabriels', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '147752', 'playcount': '1246686'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'soul', 'url': 'https://www.last.fm/tag/soul'}, {'name': 'rnb', 'url': 'https://www.last.fm/tag/rnb'}, {'name': 'symphonic metal', 'url': 'https://www.last.fm/tag/symphonic+metal'}, {'name': 'Neo-Soul', 'url': 'https://www.last.fm/tag/Neo-Soul'}, {'name': 'Power metal', 'url': 'https://www.last.fm/tag/Power+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/gabriels/+wiki'}}, 'published': '04 Jan 2021, 20:20', 'summary': 'There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>', 'content': 'There is more than one artist with this name, including: \\n1) Gabriels is an American soul group from Palm Desert, California, consisting of lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. \\n2) Gabriels is Italian piano/keyboard player and composer Gabriels Shiro. \\n3) Gabriels is a Techno/House project. \\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. \\n\\n1) Gabriels is an American soul trio based in LA comprising lead singer Jacob Lusk and producers Ari Balouzian and Ryan Hope. Their five track debut EP  Love and Hate in a Different Time was released in 2020. Jacob Lusk is an influential member of the LA gospel community and in Gabriels\\' music you can hear the influences of gospel, soul and funk.\\n\\n2) Gabriels is Italian Piano/Keyboard player and Composer Gabriels Shiro from Messina, Sicily Italy with Classical, Symphonic and Metal background. Among his collaborations, the rock-opera “Prophecy” featuring Mark Boals and live performances with Fabio Lione.\\nDiscography:\\nThe Legend of a Prince\\tFull-length\\t2007\\t \\nCall Me\\tSingle\\t2009\\t \\nThe Enchanted Wood\\tSingle\\t2009\\t \\nProphecy\\tFull-length\\t2013\\nBlack Gate\\tSingle\\t2014\\t \\nFist of the Seven Stars - Act 1: Fist of Steel\\tFull-length\\t2016\\n\"Over the Olympus\" Concerto for Synthesizer and Orchestra in D Minor Op. 1\\tFull-length\\t2017\\t \\nFist of the Seven Stars - Act 2: Hokuto Brothers\\tFull-length\\t2018\\t \\nFist of the Seven Stars - Act 3: Nanto Chaos\\tFull-length\\t2020\\t \\nItalian Metal Force\\tSingle\\t2020\\nhttp://gabriels.altervista.org/sito/ \\n\\n3) Gabriels is a Techno/House project. The single \"Amethyst\" was released in 2016. \\n\\n4) Gabriels is a Melodic Heavy/Progressive Metal solo project by Gabriele Crisafulli. <a href=\"https://www.last.fm/music/gabriels\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5tHs3fthucNRGAFpdE9rmz', url='https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz', name='Gabriels', popularity=48, followers=150000, genres=['retro soul'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb7c3ee4602ccc27286b25776b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747c3ee4602ccc27286b25776b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787c3ee4602ccc27286b25776b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz'}, 'followers': {'href': None, 'total': 150000}, 'genres': ['retro soul'], 'href': 'https://api.spotify.com/v1/artists/5tHs3fthucNRGAFpdE9rmz', 'id': '5tHs3fthucNRGAFpdE9rmz', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb7c3ee4602ccc27286b25776b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747c3ee4602ccc27286b25776b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787c3ee4602ccc27286b25776b', 'height': 160, 'width': 160}], 'name': 'Gabriels', 'popularity': 48, 'type': 'artist', 'uri': 'spotify:artist:5tHs3fthucNRGAFpdE9rmz'})",
@@ -150,6 +209,6 @@
   },
   "spotify_id": "5tHs3fthucNRGAFpdE9rmz",
   "spotify_url": "https://open.spotify.com/artist/5tHs3fthucNRGAFpdE9rmz",
-  "updated_at": "2026-10-22T14:07:09.502834",
+  "updated_at": "2026-10-30T18:40:05.487701",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Gabriels_(band)"
 }

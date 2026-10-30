@@ -92,22 +92,59 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1676172564', url='https://music.apple.com/gb/artist/empire-state-bastard/1676172564', name='Empire State Bastard', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/d8/1f/1c/d81f1c4c-9e74-c7af-9244-c6f20a53c86f/21a858e3-e2a1-416c-b7eb-3f90383dd67d_ami-identity-2b0ec31a94008f2e8d6d825155193689-2023-06-13T09-20-15.164Z_cropped.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1676172564', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1676172564', 'attributes': {'name': 'Empire State Bastard', 'genreNames': ['Metal'], 'artwork': {'width': 1238, 'height': 1238, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/d8/1f/1c/d81f1c4c-9e74-c7af-9244-c6f20a53c86f/21a858e3-e2a1-416c-b7eb-3f90383dd67d_ami-identity-2b0ec31a94008f2e8d6d825155193689-2023-06-13T09-20-15.164Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231c14', 'textColor1': 'e3d1ab', 'textColor2': 'dccfc3', 'textColor3': 'bdad8c', 'textColor4': 'b7aba0'}, 'url': 'https://music.apple.com/gb/artist/empire-state-bastard/1676172564'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1676172564/albums', 'data': [{'id': '1686591552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686591552'}, {'id': '1710040317', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710040317'}, {'id': '1741030787', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741030787'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "12732011",
-      "images": [],
-      "members": [],
+      "data_quality": "Complete and Correct",
+      "id": 12732011,
+      "images": [
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/G3Lg2wP6SGRb9kiHLRkpFY8xBlFwznvxNmAmbAsSMK4/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/G3Lg2wP6SGRb9kiHLRkpFY8xBlFwznvxNmAmbAsSMK4/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/K8YAnf2lhv6lXo5bpqHLe-Oif8dd27YQ_G4CWoDfcpo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/t5v8WAir2_rRUNNKKIhjXZxMPOlHJwnumnHEtWxAfKo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t5v8WAir2_rRUNNKKIhjXZxMPOlHJwnumnHEtWxAfKo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/-PcprUjr-2lUTtryF4wpLC4zmk4Yhq8TkethNU0f8Ok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/hrN-eUOuyq88p2XGm6eLsnjOTtANdklSfvTaFQe8rhQ/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hrN-eUOuyq88p2XGm6eLsnjOTtANdklSfvTaFQe8rhQ/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QoQGxz-jn0WPpPIZ7NxMyc7FS0NnSLu_SB8O06YUqSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 366661,
+          "name": "Simon Neil",
+          "resource_url": "https://api.discogs.com/artists/366661"
+        },
+        {
+          "active": true,
+          "id": 369291,
+          "name": "Mike Vennart",
+          "resource_url": "https://api.discogs.com/artists/369291"
+        }
+      ],
       "name": "Empire State Bastard",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "12732011",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/12732011"
-      },
+      "profile": "[i]Empire State Bastard[/i] is a British extreme / progressive metal duo, the side-project of [a=Biffy Clyro] frontman Simon Neil and Mike Vennart (Biffy live guitarist, solo artist, and ex-[a=Oceansize] singer / guitarist).",
+      "releases_url": "https://api.discogs.com/artists/12732011/releases",
       "resource_url": "https://api.discogs.com/artists/12732011",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/12732011",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/12732011-Empire-State-Bastard",
+      "urls": [
+        "https://empirestatebastard.com",
+        "http://www.facebook.com/empirestatebastard",
+        "https://soundcloud.com/empirestatebastard",
+        "https://www.youtube.com/@empirestatebastard/videos"
+      ]
     },
     "identity": {
       "musicbrainz_id": "af18db06-c55d-47c6-98d3-67da0d73079d",
@@ -122,22 +159,59 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1676172564', url='https://music.apple.com/gb/artist/empire-state-bastard/1676172564', name='Empire State Bastard', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/d8/1f/1c/d81f1c4c-9e74-c7af-9244-c6f20a53c86f/21a858e3-e2a1-416c-b7eb-3f90383dd67d_ami-identity-2b0ec31a94008f2e8d6d825155193689-2023-06-13T09-20-15.164Z_cropped.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1676172564', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1676172564', 'attributes': {'name': 'Empire State Bastard', 'genreNames': ['Metal'], 'artwork': {'width': 1238, 'height': 1238, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/d8/1f/1c/d81f1c4c-9e74-c7af-9244-c6f20a53c86f/21a858e3-e2a1-416c-b7eb-3f90383dd67d_ami-identity-2b0ec31a94008f2e8d6d825155193689-2023-06-13T09-20-15.164Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231c14', 'textColor1': 'e3d1ab', 'textColor2': 'dccfc3', 'textColor3': 'bdad8c', 'textColor4': 'b7aba0'}, 'url': 'https://music.apple.com/gb/artist/empire-state-bastard/1676172564'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1676172564/albums', 'data': [{'id': '1686591552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686591552'}, {'id': '1710040317', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710040317'}, {'id': '1741030787', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741030787'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "12732011",
-      "images": [],
-      "members": [],
+      "data_quality": "Complete and Correct",
+      "id": 12732011,
+      "images": [
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/G3Lg2wP6SGRb9kiHLRkpFY8xBlFwznvxNmAmbAsSMK4/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/G3Lg2wP6SGRb9kiHLRkpFY8xBlFwznvxNmAmbAsSMK4/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/K8YAnf2lhv6lXo5bpqHLe-Oif8dd27YQ_G4CWoDfcpo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2OTM0OTAx/MjktMTc1OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/t5v8WAir2_rRUNNKKIhjXZxMPOlHJwnumnHEtWxAfKo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t5v8WAir2_rRUNNKKIhjXZxMPOlHJwnumnHEtWxAfKo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/-PcprUjr-2lUTtryF4wpLC4zmk4Yhq8TkethNU0f8Ok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2ODU1NDIy/NDMtNzg5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 381,
+          "resource_url": "https://i.discogs.com/hrN-eUOuyq88p2XGm6eLsnjOTtANdklSfvTaFQe8rhQ/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hrN-eUOuyq88p2XGm6eLsnjOTtANdklSfvTaFQe8rhQ/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QoQGxz-jn0WPpPIZ7NxMyc7FS0NnSLu_SB8O06YUqSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzMy/MDExLTE2Nzk2NTc3/MzAtMjc3Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 366661,
+          "name": "Simon Neil",
+          "resource_url": "https://api.discogs.com/artists/366661"
+        },
+        {
+          "active": true,
+          "id": 369291,
+          "name": "Mike Vennart",
+          "resource_url": "https://api.discogs.com/artists/369291"
+        }
+      ],
       "name": "Empire State Bastard",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "12732011",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/12732011"
-      },
+      "profile": "[i]Empire State Bastard[/i] is a British extreme / progressive metal duo, the side-project of [a=Biffy Clyro] frontman Simon Neil and Mike Vennart (Biffy live guitarist, solo artist, and ex-[a=Oceansize] singer / guitarist).",
+      "releases_url": "https://api.discogs.com/artists/12732011/releases",
       "resource_url": "https://api.discogs.com/artists/12732011",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/12732011",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/12732011-Empire-State-Bastard",
+      "urls": [
+        "https://empirestatebastard.com",
+        "http://www.facebook.com/empirestatebastard",
+        "https://soundcloud.com/empirestatebastard",
+        "https://www.youtube.com/@empirestatebastard/videos"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Empire State Bastard', url='https://www.last.fm/music/Empire+State+Bastard', mbid=None, listeners=17572, playcount=160770, bio_summary='British power duo Empire State Bastard:\\n\\nSimon Neil (Biffy Clyro) – lead vocals, guitars, \\nMike Vennart (Oceansize) – guitars.\\n\\nThe debut album “Rivers of Heresy”, released on September 1, 2023 via Roadrunner Records. With additional personnel:\\n\\nDave Lombardo (Slayer, Testament) – drums,\\nNaomi Macleod (Bitch Falcon) – bass. <a href=\"https://www.last.fm/music/Empire+State+Bastard\">Read more on Last.fm</a>', bio_content='British power duo Empire State Bastard:\\n\\nSimon Neil (Biffy Clyro) – lead vocals, guitars, \\nMike Vennart (Oceansize) – guitars.\\n\\nThe debut album “Rivers of Heresy”, released on September 1, 2023 via Roadrunner Records. With additional personnel:\\n\\nDave Lombardo (Slayer, Testament) – drums,\\nNaomi Macleod (Bitch Falcon) – bass. <a href=\"https://www.last.fm/music/Empire+State+Bastard\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['grindcore', 'metalcore', 'seen live', 'mathcore', 'sludge metal'], similar_artists=[{'name': 'Pupil Slicer', 'url': 'https://www.last.fm/music/Pupil+Slicer'}, {'name': 'Cave In', 'url': 'https://www.last.fm/music/Cave+In'}, {'name': 'Every Time I Die', 'url': 'https://www.last.fm/music/Every+Time+I+Die'}, {'name': 'End', 'url': 'https://www.last.fm/music/End'}, {'name': 'Better Lovers', 'url': 'https://www.last.fm/music/Better+Lovers'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Empire State Bastard', 'url': 'https://www.last.fm/music/Empire+State+Bastard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '17572', 'playcount': '160770'}, 'similar': {'artist': [{'name': 'Pupil Slicer', 'url': 'https://www.last.fm/music/Pupil+Slicer', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Cave In', 'url': 'https://www.last.fm/music/Cave+In', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Every Time I Die', 'url': 'https://www.last.fm/music/Every+Time+I+Die', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'End', 'url': 'https://www.last.fm/music/End', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Better Lovers', 'url': 'https://www.last.fm/music/Better+Lovers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'grindcore', 'url': 'https://www.last.fm/tag/grindcore'}, {'name': 'metalcore', 'url': 'https://www.last.fm/tag/metalcore'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'mathcore', 'url': 'https://www.last.fm/tag/mathcore'}, {'name': 'sludge metal', 'url': 'https://www.last.fm/tag/sludge+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Empire+State+Bastard/+wiki'}}, 'published': '12 Sep 2023, 19:06', 'summary': 'British power duo Empire State Bastard:\\n\\nSimon Neil (Biffy Clyro) – lead vocals, guitars, \\nMike Vennart (Oceansize) – guitars.\\n\\nThe debut album “Rivers of Heresy”, released on September 1, 2023 via Roadrunner Records. With additional personnel:\\n\\nDave Lombardo (Slayer, Testament) – drums,\\nNaomi Macleod (Bitch Falcon) – bass. <a href=\"https://www.last.fm/music/Empire+State+Bastard\">Read more on Last.fm</a>', 'content': 'British power duo Empire State Bastard:\\n\\nSimon Neil (Biffy Clyro) – lead vocals, guitars, \\nMike Vennart (Oceansize) – guitars.\\n\\nThe debut album “Rivers of Heresy”, released on September 1, 2023 via Roadrunner Records. With additional personnel:\\n\\nDave Lombardo (Slayer, Testament) – drums,\\nNaomi Macleod (Bitch Falcon) – bass. <a href=\"https://www.last.fm/music/Empire+State+Bastard\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4Lje5EOojiMe1qsGspOlDq', url='https://open.spotify.com/artist/4Lje5EOojiMe1qsGspOlDq', name='Empire State Bastard', popularity=17, followers=18917, genres=['progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf116cb91b9bcf4adb06dc113', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f116cb91b9bcf4adb06dc113', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f116cb91b9bcf4adb06dc113', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4Lje5EOojiMe1qsGspOlDq'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4Lje5EOojiMe1qsGspOlDq'}, 'followers': {'href': None, 'total': 18917}, 'genres': ['progressive metal'], 'href': 'https://api.spotify.com/v1/artists/4Lje5EOojiMe1qsGspOlDq', 'id': '4Lje5EOojiMe1qsGspOlDq', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf116cb91b9bcf4adb06dc113', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f116cb91b9bcf4adb06dc113', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f116cb91b9bcf4adb06dc113', 'height': 160, 'width': 160}], 'name': 'Empire State Bastard', 'popularity': 17, 'type': 'artist', 'uri': 'spotify:artist:4Lje5EOojiMe1qsGspOlDq'})",
@@ -145,6 +219,6 @@
   },
   "spotify_id": "4Lje5EOojiMe1qsGspOlDq",
   "spotify_url": "https://open.spotify.com/artist/4Lje5EOojiMe1qsGspOlDq",
-  "updated_at": "2026-10-22T14:06:44.959133",
+  "updated_at": "2026-10-30T18:39:15.564733",
   "wikipedia_url": null
 }

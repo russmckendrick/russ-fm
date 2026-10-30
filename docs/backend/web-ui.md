@@ -26,7 +26,7 @@ Stop it with `Ctrl-C`.
 | Add & enrich: the TUI's new-in-Discogs picker, add a release by ID or URL, enrich artists, resume the collection | ✅ |
 | Boxsets: unprocessed / processed / single-release views, discovery, single-release flag | ✅ |
 | Tools: every CLI command as a generated form, plus a command line | ✅ |
-| Site assets: `pnpm generate-colors` and `pnpm generate-artist-images`, for everything or one album / artist | ✅ |
+| Site assets: `pnpm generate-colors` and `pnpm generate-artist-images`, for everything or one album / artist, and `pnpm generate-explore` | ✅ |
 | Database: search and list releases/artists (including ones not in collection.json), delete, backups | ✅ |
 | ⌘K palette: releases, artists, pages, actions | ✅ |
 | Jobs: live log + progress over SSE, stop, interactive prompts (match picker, Perplexity description) | ✅ |
@@ -71,7 +71,7 @@ Stop it with `Ctrl-C`.
 - **Data health** (`/health`): checks across releases (no Apple Music / Spotify / Last.fm
   match, no description, tracklist, videos or artwork file, original year not looked up,
   album folders without a database record) and artists (not enriched, no photo, biography,
-  Wikidata identity or Wikipedia link). Each lists up to 300 records with a Fix (the CLI
+  Wikidata identity, Discogs artist detail or Wikipedia link). Each lists up to 300 records with a Fix (the CLI
   command for that one record) and, where a batch command exists, a fix-all. Leftover album
   folders get a guarded **Remove folder**: refused while any record has that Discogs ID.
   The dashboard shows the biggest gaps.
@@ -207,6 +207,9 @@ an unrecognised URL) answer 400 with the field name.
 stdout and stderr into the job log. `only` passes `--only <slug>` to redo one album or artist;
 `all` passes `--force` (colours) or `--full` (artist images). Album and artist pages have
 one-click buttons for their own slug. `generate-artist-images` needs macOS (Apple Vision).
+`script: "generate-explore"` rebuilds `public/explore/` (the /explore graph and atlases) in one go;
+it ignores `only` and `all`. The output is gitignored and rebuilt on deploy, so the button
+(Tools → Site assets → Rebuild explore graph) is for seeing new records on the local dev server.
 
 ### Jobs and live updates
 
@@ -249,7 +252,7 @@ to the job.
 | POST | `/api/actions/generate-collection` | Job: `scrapper generate-collection` |
 | POST | `/api/actions/process-releases` | Job: process picked candidates (`{items}`) or the newest N (`{newest}`), interactively |
 | POST | `/api/actions/enrich-artists` | Job: enrich the next `{limit}` un-enriched artists, interactively |
-| POST | `/api/actions/site-script` | Job: `pnpm run generate-colors` / `generate-artist-images` (`{script, only?, all?}`) |
+| POST | `/api/actions/site-script` | Job: `pnpm run generate-colors` / `generate-artist-images` / `generate-explore` (`{script, only?, all?}`) |
 | GET | `/api/commands` | The CLI command tree, for generated forms |
 | POST | `/api/run` | Job: `scrapper <args>` (`{args: [...]}`) |
 | GET | `/api/collection/new` | New / un-enriched releases in the Discogs collection (calls Discogs) |

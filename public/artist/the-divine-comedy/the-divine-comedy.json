@@ -93,9 +93,205 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='4421309', url='https://music.apple.com/gb/artist/the-divine-comedy/4421309', name='The Divine Comedy', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b0/ec/77/b0ec7778-1122-2e5b-9373-2a909d96556d/ami-identity-28f83b962a9ae26b89c983b5350c8a0b-2025-04-08T15-28-12.628Z_cropped.png/2000x2000bb.jpg', genres=['Pop'], origin='', editorial_notes=None, raw_data={'id': '4421309', 'type': 'artists', 'href': '/v1/catalog/gb/artists/4421309', 'attributes': {'name': 'The Divine Comedy', 'genreNames': ['Pop'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b0/ec/77/b0ec7778-1122-2e5b-9373-2a909d96556d/ami-identity-28f83b962a9ae26b89c983b5350c8a0b-2025-04-08T15-28-12.628Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0a0d1f', 'textColor1': 'dbcec3', 'textColor2': 'dd9e77', 'textColor3': 'b1a7a2', 'textColor4': 'b28165'}, 'url': 'https://music.apple.com/gb/artist/the-divine-comedy/4421309'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/4421309/albums', 'next': '/v1/catalog/gb/artists/4421309/albums?offset=25', 'data': [{'id': '163951050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/163951050'}, {'id': '1594918111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594918111'}, {'id': '1114549349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1114549349'}, {'id': '1457603079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457603079'}, {'id': '162993522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162993522'}, {'id': '1114580094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1114580094'}, {'id': '1127374629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1127374629'}, {'id': '693591007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693591007'}, {'id': '697255577', 'type': 'albums', 'href': '/v1/catalog/gb/albums/697255577'}, {'id': '693565896', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693565896'}, {'id': '162640885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162640885'}, {'id': '1803200610', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1803200610'}, {'id': '1457573675', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457573675'}, {'id': '163953681', 'type': 'albums', 'href': '/v1/catalog/gb/albums/163953681'}, {'id': '1488490035', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488490035'}, {'id': '1324447885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1324447885'}, {'id': '162641682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162641682'}, {'id': '162640704', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162640704'}, {'id': '1533155431', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533155431'}, {'id': '1534320998', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534320998'}, {'id': '1533329893', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533329893'}, {'id': '1533189272', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533189272'}, {'id': '1534310794', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534310794'}, {'id': '1188754810', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1188754810'}, {'id': '1533261674', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533261674'}]}}})",
     "discogs": {
+      "data_quality": "Needs Vote",
       "id": 27933,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/y-Z2uCWjxBXJZM1rCszkyCHHDztfk-feeAjYB5ex5uE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/y-Z2uCWjxBXJZM1rCszkyCHHDztfk-feeAjYB5ex5uE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/184vEVBlUoaCS3Vt1PuFXFVfqSTaTnSeHlXckjxF1pQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/pOZOORIA0HuGapEftD5-tQbzwADKRD5M7nvdvavUnOw/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pOZOORIA0HuGapEftD5-tQbzwADKRD5M7nvdvavUnOw/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gRIPT-WIhmD6l9yeTltVbKwOZJC-anjJUkvTnGSrRAs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/L5mwI4-2PEkhlaZ8NNdUbagtUN8pfrUgckTVno2qFUk/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/L5mwI4-2PEkhlaZ8NNdUbagtUN8pfrUgckTVno2qFUk/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yBW0kJAYh8VFuUFJvxdxE7wJkUka4s1xzLKbUkOv_R8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 448,
+          "resource_url": "https://i.discogs.com/dc90OgmJR8R1kThwUYfxmLOnib-gPRgFY-DValYY6kY/rs:fit/g:sm/q:90/h:448/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dc90OgmJR8R1kThwUYfxmLOnib-gPRgFY-DValYY6kY/rs:fit/g:sm/q:90/h:448/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6Y8lmQNb1k153W29F2XePzuRnuoqHWbm9nLLPYDj2_U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "width": 480
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/w6Qzt5P17Vj1xXxEZd3i95x2GrXqnY3J4aRPib_GXXE/rs:fit/g:sm/q:90/h:340/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/w6Qzt5P17Vj1xXxEZd3i95x2GrXqnY3J4aRPib_GXXE/rs:fit/g:sm/q:90/h:340/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/He9GVIsmlcsy7WLUVaQmZ5GI9_vPS3VQCvHuFRZpPtQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "width": 271
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/-qr5mpKdpfiB1xiISgj57RqAVtmf2YyL39arsd1jGYk/rs:fit/g:sm/q:90/h:340/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-qr5mpKdpfiB1xiISgj57RqAVtmf2YyL39arsd1jGYk/rs:fit/g:sm/q:90/h:340/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/HW0KCsrsd31Gl6R_rweZ0jyysg2fsMg6pqLAA9IUysU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "width": 524
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/5kG5Vix5eRvjdxqxKk0V2vWAI86NEDCDSfqSpn163Tk/rs:fit/g:sm/q:90/h:500/w:345/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5kG5Vix5eRvjdxqxKk0V2vWAI86NEDCDSfqSpn163Tk/rs:fit/g:sm/q:90/h:500/w:345/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/VvLYjrLPu27f7yMAx-BtTxM4Tg1l_KH9FJrpBCq8OgI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "width": 345
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/99tGjO5xocd7AEOGkO9CpumYJ3zzsZDfzl4EUfQsNHU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/99tGjO5xocd7AEOGkO9CpumYJ3zzsZDfzl4EUfQsNHU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/xZiZ_ky-woEo6DIiIbW_meN5rLFhvXHXqdDCXBeryxQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/oXfFI5sBSazcm-XIONJxmpOPSpHjXaJZZg1PhpkELsQ/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oXfFI5sBSazcm-XIONJxmpOPSpHjXaJZZg1PhpkELsQ/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/mXW7ducMVUNmVo31Ca1xecGRq0Ktn3DhdKvpwfnuaR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "width": 404
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 133606,
+          "name": "Tim Weller",
+          "resource_url": "https://api.discogs.com/artists/133606"
+        },
+        {
+          "active": true,
+          "id": 133610,
+          "name": "Andrew Skeet",
+          "resource_url": "https://api.discogs.com/artists/133610"
+        },
+        {
+          "active": true,
+          "id": 271133,
+          "name": "Neil Hannon",
+          "resource_url": "https://api.discogs.com/artists/271133"
+        },
+        {
+          "active": false,
+          "id": 271182,
+          "name": "Joby Talbot",
+          "resource_url": "https://api.discogs.com/artists/271182"
+        },
+        {
+          "active": false,
+          "id": 271834,
+          "name": "Rob Farrer",
+          "resource_url": "https://api.discogs.com/artists/271834"
+        },
+        {
+          "active": false,
+          "id": 271842,
+          "name": "Stuart Bates",
+          "resource_url": "https://api.discogs.com/artists/271842"
+        },
+        {
+          "active": false,
+          "id": 271863,
+          "name": "Bryan Mills",
+          "resource_url": "https://api.discogs.com/artists/271863"
+        },
+        {
+          "active": false,
+          "id": 271894,
+          "name": "John Allen (3)",
+          "resource_url": "https://api.discogs.com/artists/271894"
+        },
+        {
+          "active": false,
+          "id": 755063,
+          "name": "Ivor Talbot",
+          "resource_url": "https://api.discogs.com/artists/755063"
+        },
+        {
+          "active": false,
+          "id": 755086,
+          "name": "Miguel Barradas",
+          "resource_url": "https://api.discogs.com/artists/755086"
+        },
+        {
+          "active": true,
+          "id": 798432,
+          "name": "John Evans (6)",
+          "resource_url": "https://api.discogs.com/artists/798432"
+        },
+        {
+          "active": true,
+          "id": 813703,
+          "name": "John Evans (8)",
+          "resource_url": "https://api.discogs.com/artists/813703"
+        },
+        {
+          "active": false,
+          "id": 1308325,
+          "name": "Kevin Traynor",
+          "resource_url": "https://api.discogs.com/artists/1308325"
+        },
+        {
+          "active": true,
+          "id": 1846683,
+          "name": "Tosh Flood",
+          "resource_url": "https://api.discogs.com/artists/1846683"
+        },
+        {
+          "active": true,
+          "id": 2034307,
+          "name": "Ian Watson (7)",
+          "resource_url": "https://api.discogs.com/artists/2034307"
+        },
+        {
+          "active": true,
+          "id": 2344103,
+          "name": "Simon Little (2)",
+          "resource_url": "https://api.discogs.com/artists/2344103"
+        },
+        {
+          "active": true,
+          "id": 4825633,
+          "name": "Bryan Michael Mills",
+          "resource_url": "https://api.discogs.com/artists/4825633"
+        }
+      ],
+      "name": "The Divine Comedy",
+      "namevariations": [
+        "Divine Comedy",
+        "The Devine Comedy",
+        "好自在樂團",
+        "神聖喜劇"
+      ],
       "original_name": "The Divine Comedy",
-      "role": ""
+      "profile": "The Divine Comedy are a pop band from Northern Ireland, fronted by Neil Hannon. Over the years, many musicians have joined the band on tour and for recording sessions but the driving force of the band and its main (and sometimes only) member has always been Neil Hannon.",
+      "releases_url": "https://api.discogs.com/artists/27933/releases",
+      "resource_url": "https://api.discogs.com/artists/27933",
+      "uri": "https://www.discogs.com/artist/27933-The-Divine-Comedy",
+      "urls": [
+        "http://www.thedivinecomedy.com",
+        "https://www.facebook.com/divinecomedyhq",
+        "https://www.youtube.com/user/divinecomedyhq",
+        "http://www.myspace.com/thedivinecomedy",
+        "http://en.wikipedia.org/wiki/The_Divine_Comedy_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "49c4378b-3c36-4c5a-8999-8d936e74f39b",
@@ -104,20 +300,224 @@
       "wikipedia_title": "The Divine Comedy (band)"
     },
     "lastfm": "ArtistLastFmData(name='The Divine Comedy', url='https://www.last.fm/music/The+Divine+Comedy', mbid='49c4378b-3c36-4c5a-8999-8d936e74f39b', listeners=427472, playcount=10001526, bio_summary='The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>', bio_content='The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow, with newly-recruited member John Allen handling lead vocals on some tracks. After the commercial failure of the latter EP, this line-up soon fell apart.\\n\\nHannon, however, was not deterred in his efforts and re-appeared in 1993 with Liberation. Featuring a fairly diverse musical outlook that goes from the tongue-in-cheek synth pop of Europop(nearly unrecognisable from the previously-released version) to the classical stylings of Timewatching.\\n\\nIndeed, it was only some minor success in France that really enabled Hannon to proceed to his second effort Promenade. Released in 1994, this was heavily driven by classical influences, with Michael Nyman\\'s stylings clearly an influence. Hannon himself acknowledged this when he apparently sent a copy of his new album to the composer, jokingly asking him not to sue. Essentially a concept album about a day spent by two lovers, it also received similar critical acclaim to that which Liberation was afforded. Commercial success, though, was not forthcoming.\\n\\nAt around the same time, Hannon also wrote and performed the theme music for the TV sitcom Father Ted (which would subsequently be incorporated into the song Songs of Love on the album Casanova), and later wrote the music for the deliberately bad mock-Eurovision song My Lovely Horse for one episode. Hannon resisted widespread requests from fans to release the track as a single for the Christmas market, but it was eventually released in 1999 as the third track on the CD-single Gin Soaked Boy. This would not be the only time they would be responsible for a TV theme, as In Pursuit Of Happiness was also used by the BBC science and technology show, Tomorrow\\'s World. Hannon also recently composed the music for the comedy series \"The IT Crowd\".\\n\\nThe album Casanova (1996), and in particular the single Something for the Weekend led to the band\\'s first major successes, with Neil Hannon becoming a distinctive, albeit unlikely, popstar in an immaculate suit, and always appearing the elegant dandy. At the height of their commercial success, the band put out A Short Album About Love (a reference to the Krzysztof Kieślowski movie A Short Film About Love), recorded live at soundcheck with the Brunel Ensemble in preparation for a concert at the Shepherd\\'s Bush Empire, from which several songs were released as b-sides. It was aptly released on Valentine\\'s Day in 1997. Subsequently, the band contributed a reworking of Noel Coward\\'s I\\'ve Been to a Marvellous Party to a compilation of covers of the writer\\'s songs, with Hannon affecting a Cowardesque lilt (albeit interspersed with an aggressive electronic musical backing).\\n\\nThe foppish image, but not the suit, was ditched for the more sombre album Fin De Siècle in 1998, although its biggest hit, the jaunty National Express, a song about the national coach operators, belied its more intimate, soul-searching tone. Maintaining the balance between these poles, 1999\\'s Secret History - the Best of The Divine Comedy included a re-recording of Liberation track The Pop Singer\\'s Fear of the Pollen Count and two new songs (Gin-Soaked Boy and Too Young to Die) alongside the band\\'s main hits. In the same year, the band also collaborated with Tom Jones on a cover version of Portishead\\'s All Mine, featured on his album Reload.\\n\\nA serious side to the band was also in evidence in 2000\\'s collaboration with Ute Lemper on her album Punishing Kiss, most of which featured The Divine Comedy as Lemper\\'s backing band.\\n\\nThe 2001 album Regeneration attempted to remove the band still further from its association with comedy. Hannon hired famous producer Nigel Godrich to \"remake\" the band. Neil ditched the suit and donned the Britrock band image. However, the album was a greater critical than commercial success, and soon after its release it was announced that The Divine Comedy were splitting up. However within a year Hannon was touring again with a revised band line-up, playing a series of joint-headline gigs in the USA, UK and Ireland featuring both The Divine Comedy and Ben Folds, who would cover The Divine Comedy\\'s Songs of Love on his Sunny 16 EP.\\n\\nEventually a new album surfaced in the form of 2004\\'s Absent Friends. Striking a balance between the occasionally earnest sound of the band\\'s later material and the lighter tone of the more popular releases, it encapsulated the essence of The Divine Comedy. 2004 saw two dates of particularly acclaimed performances, one at the London Palladium (which was later released as a live DVD) and one at the Royal Albert Hall.\\n\\nIn January 2005, Hannon announced that he had acquired the worldwide copyrights to all of his recorded output with his former record label, Setanta Records. He declared on the band\\'s official website that he would be launching his own record label Divine Comedy Records in order to re-release his 1990s output.\\n\\nHannon\\'s ninth album under the Divine Comedy moniker, Victory for the Comic Muse (a reference to his debut), was released in June 2006. It is suggested by fans to be less personal and more free-approach in tone than his most recent albums. The bulk of the record was recorded in just two weeks, hence the more spontaneous sound, and features appearances from Travis bass player Dougie Payne.\\n\\nHannon collaborated with Thomas Walsh of Pugwash to create an album themed around the sport of cricket. Released under the alias The Duckworth Lewis Method, the self-titled album was released in 2009 to critical acclaim.\\n\\nThe following year saw the tenth Divine Comedy album and first on his own label, Bang Goes the Knighthood.\\n <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'britpop', 'chamber pop', 'alternative', 'pop'], similar_artists=[{'name': 'The Duckworth Lewis Method', 'url': 'https://www.last.fm/music/The+Duckworth+Lewis+Method'}, {'name': 'Duke Special', 'url': 'https://www.last.fm/music/Duke+Special'}, {'name': 'The Beautiful South', 'url': 'https://www.last.fm/music/The+Beautiful+South'}, {'name': 'Super Furry Animals', 'url': 'https://www.last.fm/music/Super+Furry+Animals'}, {'name': 'Sleeper', 'url': 'https://www.last.fm/music/Sleeper'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Divine Comedy', 'mbid': '49c4378b-3c36-4c5a-8999-8d936e74f39b', 'url': 'https://www.last.fm/music/The+Divine+Comedy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '427472', 'playcount': '10001526'}, 'similar': {'artist': [{'name': 'The Duckworth Lewis Method', 'url': 'https://www.last.fm/music/The+Duckworth+Lewis+Method', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Duke Special', 'url': 'https://www.last.fm/music/Duke+Special', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Beautiful South', 'url': 'https://www.last.fm/music/The+Beautiful+South', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Super Furry Animals', 'url': 'https://www.last.fm/music/Super+Furry+Animals', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sleeper', 'url': 'https://www.last.fm/music/Sleeper', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'britpop', 'url': 'https://www.last.fm/tag/britpop'}, {'name': 'chamber pop', 'url': 'https://www.last.fm/tag/chamber+pop'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Divine+Comedy/+wiki'}}, 'published': '10 Feb 2006, 19:22', 'summary': 'The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>', 'content': 'The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow, with newly-recruited member John Allen handling lead vocals on some tracks. After the commercial failure of the latter EP, this line-up soon fell apart.\\n\\nHannon, however, was not deterred in his efforts and re-appeared in 1993 with Liberation. Featuring a fairly diverse musical outlook that goes from the tongue-in-cheek synth pop of Europop(nearly unrecognisable from the previously-released version) to the classical stylings of Timewatching.\\n\\nIndeed, it was only some minor success in France that really enabled Hannon to proceed to his second effort Promenade. Released in 1994, this was heavily driven by classical influences, with Michael Nyman\\'s stylings clearly an influence. Hannon himself acknowledged this when he apparently sent a copy of his new album to the composer, jokingly asking him not to sue. Essentially a concept album about a day spent by two lovers, it also received similar critical acclaim to that which Liberation was afforded. Commercial success, though, was not forthcoming.\\n\\nAt around the same time, Hannon also wrote and performed the theme music for the TV sitcom Father Ted (which would subsequently be incorporated into the song Songs of Love on the album Casanova), and later wrote the music for the deliberately bad mock-Eurovision song My Lovely Horse for one episode. Hannon resisted widespread requests from fans to release the track as a single for the Christmas market, but it was eventually released in 1999 as the third track on the CD-single Gin Soaked Boy. This would not be the only time they would be responsible for a TV theme, as In Pursuit Of Happiness was also used by the BBC science and technology show, Tomorrow\\'s World. Hannon also recently composed the music for the comedy series \"The IT Crowd\".\\n\\nThe album Casanova (1996), and in particular the single Something for the Weekend led to the band\\'s first major successes, with Neil Hannon becoming a distinctive, albeit unlikely, popstar in an immaculate suit, and always appearing the elegant dandy. At the height of their commercial success, the band put out A Short Album About Love (a reference to the Krzysztof Kieślowski movie A Short Film About Love), recorded live at soundcheck with the Brunel Ensemble in preparation for a concert at the Shepherd\\'s Bush Empire, from which several songs were released as b-sides. It was aptly released on Valentine\\'s Day in 1997. Subsequently, the band contributed a reworking of Noel Coward\\'s I\\'ve Been to a Marvellous Party to a compilation of covers of the writer\\'s songs, with Hannon affecting a Cowardesque lilt (albeit interspersed with an aggressive electronic musical backing).\\n\\nThe foppish image, but not the suit, was ditched for the more sombre album Fin De Siècle in 1998, although its biggest hit, the jaunty National Express, a song about the national coach operators, belied its more intimate, soul-searching tone. Maintaining the balance between these poles, 1999\\'s Secret History - the Best of The Divine Comedy included a re-recording of Liberation track The Pop Singer\\'s Fear of the Pollen Count and two new songs (Gin-Soaked Boy and Too Young to Die) alongside the band\\'s main hits. In the same year, the band also collaborated with Tom Jones on a cover version of Portishead\\'s All Mine, featured on his album Reload.\\n\\nA serious side to the band was also in evidence in 2000\\'s collaboration with Ute Lemper on her album Punishing Kiss, most of which featured The Divine Comedy as Lemper\\'s backing band.\\n\\nThe 2001 album Regeneration attempted to remove the band still further from its association with comedy. Hannon hired famous producer Nigel Godrich to \"remake\" the band. Neil ditched the suit and donned the Britrock band image. However, the album was a greater critical than commercial success, and soon after its release it was announced that The Divine Comedy were splitting up. However within a year Hannon was touring again with a revised band line-up, playing a series of joint-headline gigs in the USA, UK and Ireland featuring both The Divine Comedy and Ben Folds, who would cover The Divine Comedy\\'s Songs of Love on his Sunny 16 EP.\\n\\nEventually a new album surfaced in the form of 2004\\'s Absent Friends. Striking a balance between the occasionally earnest sound of the band\\'s later material and the lighter tone of the more popular releases, it encapsulated the essence of The Divine Comedy. 2004 saw two dates of particularly acclaimed performances, one at the London Palladium (which was later released as a live DVD) and one at the Royal Albert Hall.\\n\\nIn January 2005, Hannon announced that he had acquired the worldwide copyrights to all of his recorded output with his former record label, Setanta Records. He declared on the band\\'s official website that he would be launching his own record label Divine Comedy Records in order to re-release his 1990s output.\\n\\nHannon\\'s ninth album under the Divine Comedy moniker, Victory for the Comic Muse (a reference to his debut), was released in June 2006. It is suggested by fans to be less personal and more free-approach in tone than his most recent albums. The bulk of the record was recorded in just two weeks, hence the more spontaneous sound, and features appearances from Travis bass player Dougie Payne.\\n\\nHannon collaborated with Thomas Walsh of Pugwash to create an album themed around the sport of cricket. Released under the alias The Duckworth Lewis Method, the self-titled album was released in 2009 to critical acclaim.\\n\\nThe following year saw the tenth Divine Comedy album and first on his own label, Bang Goes the Knighthood.\\n <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
-    "spotify": "ArtistSpotifyData(id='7EV6jW6dotBdvsHj6xPixi', url='https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi', name='The Divine Comedy', popularity=46, followers=157520, genres=['baroque pop', 'britpop', 'comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, 'followers': {'href': None, 'total': 157520}, 'genres': ['baroque pop', 'britpop', 'comedy'], 'href': 'https://api.spotify.com/v1/artists/7EV6jW6dotBdvsHj6xPixi', 'id': '7EV6jW6dotBdvsHj6xPixi', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], 'name': 'The Divine Comedy', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:7EV6jW6dotBdvsHj6xPixi'})"
+    "spotify": "ArtistSpotifyData(id='7EV6jW6dotBdvsHj6xPixi', url='https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi', name='The Divine Comedy', popularity=46, followers=157520, genres=['baroque pop', 'britpop', 'comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, 'followers': {'href': None, 'total': 157520}, 'genres': ['baroque pop', 'britpop', 'comedy'], 'href': 'https://api.spotify.com/v1/artists/7EV6jW6dotBdvsHj6xPixi', 'id': '7EV6jW6dotBdvsHj6xPixi', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], 'name': 'The Divine Comedy', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:7EV6jW6dotBdvsHj6xPixi'})",
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q6972520",
+        "track": "National Express",
+        "uri": "https://www.youtube.com/watch?v=gUCfDYfLtLA"
+      }
+    ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='4421309', url='https://music.apple.com/gb/artist/the-divine-comedy/4421309', name='The Divine Comedy', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b0/ec/77/b0ec7778-1122-2e5b-9373-2a909d96556d/ami-identity-28f83b962a9ae26b89c983b5350c8a0b-2025-04-08T15-28-12.628Z_cropped.png/2000x2000bb.jpg', genres=['Pop'], origin='', editorial_notes=None, raw_data={'id': '4421309', 'type': 'artists', 'href': '/v1/catalog/gb/artists/4421309', 'attributes': {'name': 'The Divine Comedy', 'genreNames': ['Pop'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b0/ec/77/b0ec7778-1122-2e5b-9373-2a909d96556d/ami-identity-28f83b962a9ae26b89c983b5350c8a0b-2025-04-08T15-28-12.628Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0a0d1f', 'textColor1': 'dbcec3', 'textColor2': 'dd9e77', 'textColor3': 'b1a7a2', 'textColor4': 'b28165'}, 'url': 'https://music.apple.com/gb/artist/the-divine-comedy/4421309'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/4421309/albums', 'next': '/v1/catalog/gb/artists/4421309/albums?offset=25', 'data': [{'id': '163951050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/163951050'}, {'id': '1594918111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594918111'}, {'id': '1114549349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1114549349'}, {'id': '1457603079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457603079'}, {'id': '162993522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162993522'}, {'id': '1114580094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1114580094'}, {'id': '1127374629', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1127374629'}, {'id': '693591007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693591007'}, {'id': '697255577', 'type': 'albums', 'href': '/v1/catalog/gb/albums/697255577'}, {'id': '693565896', 'type': 'albums', 'href': '/v1/catalog/gb/albums/693565896'}, {'id': '162640885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162640885'}, {'id': '1803200610', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1803200610'}, {'id': '1457573675', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1457573675'}, {'id': '163953681', 'type': 'albums', 'href': '/v1/catalog/gb/albums/163953681'}, {'id': '1488490035', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488490035'}, {'id': '1324447885', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1324447885'}, {'id': '162641682', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162641682'}, {'id': '162640704', 'type': 'albums', 'href': '/v1/catalog/gb/albums/162640704'}, {'id': '1533155431', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533155431'}, {'id': '1534320998', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534320998'}, {'id': '1533329893', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533329893'}, {'id': '1533189272', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533189272'}, {'id': '1534310794', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534310794'}, {'id': '1188754810', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1188754810'}, {'id': '1533261674', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1533261674'}]}}})",
     "discogs": {
+      "data_quality": "Needs Vote",
       "id": 27933,
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/y-Z2uCWjxBXJZM1rCszkyCHHDztfk-feeAjYB5ex5uE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/y-Z2uCWjxBXJZM1rCszkyCHHDztfk-feeAjYB5ex5uE/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/184vEVBlUoaCS3Vt1PuFXFVfqSTaTnSeHlXckjxF1pQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxNTYt/OTI5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/pOZOORIA0HuGapEftD5-tQbzwADKRD5M7nvdvavUnOw/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pOZOORIA0HuGapEftD5-tQbzwADKRD5M7nvdvavUnOw/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gRIPT-WIhmD6l9yeTltVbKwOZJC-anjJUkvTnGSrRAs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM4MzAxMDYt/MjM3MC5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/L5mwI4-2PEkhlaZ8NNdUbagtUN8pfrUgckTVno2qFUk/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/L5mwI4-2PEkhlaZ8NNdUbagtUN8pfrUgckTVno2qFUk/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yBW0kJAYh8VFuUFJvxdxE7wJkUka4s1xzLKbUkOv_R8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3NzM3NTE2MzAt/OTM0MC5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 448,
+          "resource_url": "https://i.discogs.com/dc90OgmJR8R1kThwUYfxmLOnib-gPRgFY-DValYY6kY/rs:fit/g:sm/q:90/h:448/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dc90OgmJR8R1kThwUYfxmLOnib-gPRgFY-DValYY6kY/rs:fit/g:sm/q:90/h:448/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6Y8lmQNb1k153W29F2XePzuRnuoqHWbm9nLLPYDj2_U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE1ODIyMzcxNDIt/NzQxNC5qcGVn.jpeg",
+          "width": 480
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/w6Qzt5P17Vj1xXxEZd3i95x2GrXqnY3J4aRPib_GXXE/rs:fit/g:sm/q:90/h:340/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/w6Qzt5P17Vj1xXxEZd3i95x2GrXqnY3J4aRPib_GXXE/rs:fit/g:sm/q:90/h:340/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/He9GVIsmlcsy7WLUVaQmZ5GI9_vPS3VQCvHuFRZpPtQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5ODMu/anBlZw.jpeg",
+          "width": 271
+        },
+        {
+          "height": 340,
+          "resource_url": "https://i.discogs.com/-qr5mpKdpfiB1xiISgj57RqAVtmf2YyL39arsd1jGYk/rs:fit/g:sm/q:90/h:340/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-qr5mpKdpfiB1xiISgj57RqAVtmf2YyL39arsd1jGYk/rs:fit/g:sm/q:90/h:340/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/HW0KCsrsd31Gl6R_rweZ0jyysg2fsMg6pqLAA9IUysU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTExMDc3NzkyOTQu/Z2lm.jpeg",
+          "width": 524
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/5kG5Vix5eRvjdxqxKk0V2vWAI86NEDCDSfqSpn163Tk/rs:fit/g:sm/q:90/h:500/w:345/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5kG5Vix5eRvjdxqxKk0V2vWAI86NEDCDSfqSpn163Tk/rs:fit/g:sm/q:90/h:500/w:345/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/VvLYjrLPu27f7yMAx-BtTxM4Tg1l_KH9FJrpBCq8OgI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTEyNjg4NTU5OTIu/anBlZw.jpeg",
+          "width": 345
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/99tGjO5xocd7AEOGkO9CpumYJ3zzsZDfzl4EUfQsNHU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/99tGjO5xocd7AEOGkO9CpumYJ3zzsZDfzl4EUfQsNHU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/xZiZ_ky-woEo6DIiIbW_meN5rLFhvXHXqdDCXBeryxQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MDkt/NjE5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/oXfFI5sBSazcm-XIONJxmpOPSpHjXaJZZg1PhpkELsQ/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oXfFI5sBSazcm-XIONJxmpOPSpHjXaJZZg1PhpkELsQ/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/mXW7ducMVUNmVo31Ca1xecGRq0Ktn3DhdKvpwfnuaR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3OTMz/LTE3Mjg2NDA3MjMt/MzA5MC5wbmc.jpeg",
+          "width": 404
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 133606,
+          "name": "Tim Weller",
+          "resource_url": "https://api.discogs.com/artists/133606"
+        },
+        {
+          "active": true,
+          "id": 133610,
+          "name": "Andrew Skeet",
+          "resource_url": "https://api.discogs.com/artists/133610"
+        },
+        {
+          "active": true,
+          "id": 271133,
+          "name": "Neil Hannon",
+          "resource_url": "https://api.discogs.com/artists/271133"
+        },
+        {
+          "active": false,
+          "id": 271182,
+          "name": "Joby Talbot",
+          "resource_url": "https://api.discogs.com/artists/271182"
+        },
+        {
+          "active": false,
+          "id": 271834,
+          "name": "Rob Farrer",
+          "resource_url": "https://api.discogs.com/artists/271834"
+        },
+        {
+          "active": false,
+          "id": 271842,
+          "name": "Stuart Bates",
+          "resource_url": "https://api.discogs.com/artists/271842"
+        },
+        {
+          "active": false,
+          "id": 271863,
+          "name": "Bryan Mills",
+          "resource_url": "https://api.discogs.com/artists/271863"
+        },
+        {
+          "active": false,
+          "id": 271894,
+          "name": "John Allen (3)",
+          "resource_url": "https://api.discogs.com/artists/271894"
+        },
+        {
+          "active": false,
+          "id": 755063,
+          "name": "Ivor Talbot",
+          "resource_url": "https://api.discogs.com/artists/755063"
+        },
+        {
+          "active": false,
+          "id": 755086,
+          "name": "Miguel Barradas",
+          "resource_url": "https://api.discogs.com/artists/755086"
+        },
+        {
+          "active": true,
+          "id": 798432,
+          "name": "John Evans (6)",
+          "resource_url": "https://api.discogs.com/artists/798432"
+        },
+        {
+          "active": true,
+          "id": 813703,
+          "name": "John Evans (8)",
+          "resource_url": "https://api.discogs.com/artists/813703"
+        },
+        {
+          "active": false,
+          "id": 1308325,
+          "name": "Kevin Traynor",
+          "resource_url": "https://api.discogs.com/artists/1308325"
+        },
+        {
+          "active": true,
+          "id": 1846683,
+          "name": "Tosh Flood",
+          "resource_url": "https://api.discogs.com/artists/1846683"
+        },
+        {
+          "active": true,
+          "id": 2034307,
+          "name": "Ian Watson (7)",
+          "resource_url": "https://api.discogs.com/artists/2034307"
+        },
+        {
+          "active": true,
+          "id": 2344103,
+          "name": "Simon Little (2)",
+          "resource_url": "https://api.discogs.com/artists/2344103"
+        },
+        {
+          "active": true,
+          "id": 4825633,
+          "name": "Bryan Michael Mills",
+          "resource_url": "https://api.discogs.com/artists/4825633"
+        }
+      ],
+      "name": "The Divine Comedy",
+      "namevariations": [
+        "Divine Comedy",
+        "The Devine Comedy",
+        "好自在樂團",
+        "神聖喜劇"
+      ],
       "original_name": "The Divine Comedy",
-      "role": ""
+      "profile": "The Divine Comedy are a pop band from Northern Ireland, fronted by Neil Hannon. Over the years, many musicians have joined the band on tour and for recording sessions but the driving force of the band and its main (and sometimes only) member has always been Neil Hannon.",
+      "releases_url": "https://api.discogs.com/artists/27933/releases",
+      "resource_url": "https://api.discogs.com/artists/27933",
+      "uri": "https://www.discogs.com/artist/27933-The-Divine-Comedy",
+      "urls": [
+        "http://www.thedivinecomedy.com",
+        "https://www.facebook.com/divinecomedyhq",
+        "https://www.youtube.com/user/divinecomedyhq",
+        "http://www.myspace.com/thedivinecomedy",
+        "http://en.wikipedia.org/wiki/The_Divine_Comedy_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Divine Comedy', url='https://www.last.fm/music/The+Divine+Comedy', mbid='49c4378b-3c36-4c5a-8999-8d936e74f39b', listeners=427472, playcount=10001526, bio_summary='The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>', bio_content='The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow, with newly-recruited member John Allen handling lead vocals on some tracks. After the commercial failure of the latter EP, this line-up soon fell apart.\\n\\nHannon, however, was not deterred in his efforts and re-appeared in 1993 with Liberation. Featuring a fairly diverse musical outlook that goes from the tongue-in-cheek synth pop of Europop(nearly unrecognisable from the previously-released version) to the classical stylings of Timewatching.\\n\\nIndeed, it was only some minor success in France that really enabled Hannon to proceed to his second effort Promenade. Released in 1994, this was heavily driven by classical influences, with Michael Nyman\\'s stylings clearly an influence. Hannon himself acknowledged this when he apparently sent a copy of his new album to the composer, jokingly asking him not to sue. Essentially a concept album about a day spent by two lovers, it also received similar critical acclaim to that which Liberation was afforded. Commercial success, though, was not forthcoming.\\n\\nAt around the same time, Hannon also wrote and performed the theme music for the TV sitcom Father Ted (which would subsequently be incorporated into the song Songs of Love on the album Casanova), and later wrote the music for the deliberately bad mock-Eurovision song My Lovely Horse for one episode. Hannon resisted widespread requests from fans to release the track as a single for the Christmas market, but it was eventually released in 1999 as the third track on the CD-single Gin Soaked Boy. This would not be the only time they would be responsible for a TV theme, as In Pursuit Of Happiness was also used by the BBC science and technology show, Tomorrow\\'s World. Hannon also recently composed the music for the comedy series \"The IT Crowd\".\\n\\nThe album Casanova (1996), and in particular the single Something for the Weekend led to the band\\'s first major successes, with Neil Hannon becoming a distinctive, albeit unlikely, popstar in an immaculate suit, and always appearing the elegant dandy. At the height of their commercial success, the band put out A Short Album About Love (a reference to the Krzysztof Kieślowski movie A Short Film About Love), recorded live at soundcheck with the Brunel Ensemble in preparation for a concert at the Shepherd\\'s Bush Empire, from which several songs were released as b-sides. It was aptly released on Valentine\\'s Day in 1997. Subsequently, the band contributed a reworking of Noel Coward\\'s I\\'ve Been to a Marvellous Party to a compilation of covers of the writer\\'s songs, with Hannon affecting a Cowardesque lilt (albeit interspersed with an aggressive electronic musical backing).\\n\\nThe foppish image, but not the suit, was ditched for the more sombre album Fin De Siècle in 1998, although its biggest hit, the jaunty National Express, a song about the national coach operators, belied its more intimate, soul-searching tone. Maintaining the balance between these poles, 1999\\'s Secret History - the Best of The Divine Comedy included a re-recording of Liberation track The Pop Singer\\'s Fear of the Pollen Count and two new songs (Gin-Soaked Boy and Too Young to Die) alongside the band\\'s main hits. In the same year, the band also collaborated with Tom Jones on a cover version of Portishead\\'s All Mine, featured on his album Reload.\\n\\nA serious side to the band was also in evidence in 2000\\'s collaboration with Ute Lemper on her album Punishing Kiss, most of which featured The Divine Comedy as Lemper\\'s backing band.\\n\\nThe 2001 album Regeneration attempted to remove the band still further from its association with comedy. Hannon hired famous producer Nigel Godrich to \"remake\" the band. Neil ditched the suit and donned the Britrock band image. However, the album was a greater critical than commercial success, and soon after its release it was announced that The Divine Comedy were splitting up. However within a year Hannon was touring again with a revised band line-up, playing a series of joint-headline gigs in the USA, UK and Ireland featuring both The Divine Comedy and Ben Folds, who would cover The Divine Comedy\\'s Songs of Love on his Sunny 16 EP.\\n\\nEventually a new album surfaced in the form of 2004\\'s Absent Friends. Striking a balance between the occasionally earnest sound of the band\\'s later material and the lighter tone of the more popular releases, it encapsulated the essence of The Divine Comedy. 2004 saw two dates of particularly acclaimed performances, one at the London Palladium (which was later released as a live DVD) and one at the Royal Albert Hall.\\n\\nIn January 2005, Hannon announced that he had acquired the worldwide copyrights to all of his recorded output with his former record label, Setanta Records. He declared on the band\\'s official website that he would be launching his own record label Divine Comedy Records in order to re-release his 1990s output.\\n\\nHannon\\'s ninth album under the Divine Comedy moniker, Victory for the Comic Muse (a reference to his debut), was released in June 2006. It is suggested by fans to be less personal and more free-approach in tone than his most recent albums. The bulk of the record was recorded in just two weeks, hence the more spontaneous sound, and features appearances from Travis bass player Dougie Payne.\\n\\nHannon collaborated with Thomas Walsh of Pugwash to create an album themed around the sport of cricket. Released under the alias The Duckworth Lewis Method, the self-titled album was released in 2009 to critical acclaim.\\n\\nThe following year saw the tenth Divine Comedy album and first on his own label, Bang Goes the Knighthood.\\n <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'britpop', 'chamber pop', 'alternative', 'pop'], similar_artists=[{'name': 'The Duckworth Lewis Method', 'url': 'https://www.last.fm/music/The+Duckworth+Lewis+Method'}, {'name': 'Duke Special', 'url': 'https://www.last.fm/music/Duke+Special'}, {'name': 'The Beautiful South', 'url': 'https://www.last.fm/music/The+Beautiful+South'}, {'name': 'Super Furry Animals', 'url': 'https://www.last.fm/music/Super+Furry+Animals'}, {'name': 'Sleeper', 'url': 'https://www.last.fm/music/Sleeper'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Divine Comedy', 'mbid': '49c4378b-3c36-4c5a-8999-8d936e74f39b', 'url': 'https://www.last.fm/music/The+Divine+Comedy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '427472', 'playcount': '10001526'}, 'similar': {'artist': [{'name': 'The Duckworth Lewis Method', 'url': 'https://www.last.fm/music/The+Duckworth+Lewis+Method', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Duke Special', 'url': 'https://www.last.fm/music/Duke+Special', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Beautiful South', 'url': 'https://www.last.fm/music/The+Beautiful+South', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Super Furry Animals', 'url': 'https://www.last.fm/music/Super+Furry+Animals', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sleeper', 'url': 'https://www.last.fm/music/Sleeper', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'britpop', 'url': 'https://www.last.fm/tag/britpop'}, {'name': 'chamber pop', 'url': 'https://www.last.fm/tag/chamber+pop'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Divine+Comedy/+wiki'}}, 'published': '10 Feb 2006, 19:22', 'summary': 'The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>', 'content': 'The Divine Comedy is a baroque pop band now based in Dublin, Ireland, fronted by Neil Hannon.\\n\\nNeil Hannon, Originally from Derry, has been the only ever-present member of the band, being its founder in 1989 when he was joined by John McCullagh and Kevin Traynor. Their first album, the heavily R.E.M.-influenced and now-deleted Fanfare for the Comic Muse, enjoyed little success though. A couple of equally unsuccessful EPs - Timewatch (1991); Europop (1992) - were to follow, with newly-recruited member John Allen handling lead vocals on some tracks. After the commercial failure of the latter EP, this line-up soon fell apart.\\n\\nHannon, however, was not deterred in his efforts and re-appeared in 1993 with Liberation. Featuring a fairly diverse musical outlook that goes from the tongue-in-cheek synth pop of Europop(nearly unrecognisable from the previously-released version) to the classical stylings of Timewatching.\\n\\nIndeed, it was only some minor success in France that really enabled Hannon to proceed to his second effort Promenade. Released in 1994, this was heavily driven by classical influences, with Michael Nyman\\'s stylings clearly an influence. Hannon himself acknowledged this when he apparently sent a copy of his new album to the composer, jokingly asking him not to sue. Essentially a concept album about a day spent by two lovers, it also received similar critical acclaim to that which Liberation was afforded. Commercial success, though, was not forthcoming.\\n\\nAt around the same time, Hannon also wrote and performed the theme music for the TV sitcom Father Ted (which would subsequently be incorporated into the song Songs of Love on the album Casanova), and later wrote the music for the deliberately bad mock-Eurovision song My Lovely Horse for one episode. Hannon resisted widespread requests from fans to release the track as a single for the Christmas market, but it was eventually released in 1999 as the third track on the CD-single Gin Soaked Boy. This would not be the only time they would be responsible for a TV theme, as In Pursuit Of Happiness was also used by the BBC science and technology show, Tomorrow\\'s World. Hannon also recently composed the music for the comedy series \"The IT Crowd\".\\n\\nThe album Casanova (1996), and in particular the single Something for the Weekend led to the band\\'s first major successes, with Neil Hannon becoming a distinctive, albeit unlikely, popstar in an immaculate suit, and always appearing the elegant dandy. At the height of their commercial success, the band put out A Short Album About Love (a reference to the Krzysztof Kieślowski movie A Short Film About Love), recorded live at soundcheck with the Brunel Ensemble in preparation for a concert at the Shepherd\\'s Bush Empire, from which several songs were released as b-sides. It was aptly released on Valentine\\'s Day in 1997. Subsequently, the band contributed a reworking of Noel Coward\\'s I\\'ve Been to a Marvellous Party to a compilation of covers of the writer\\'s songs, with Hannon affecting a Cowardesque lilt (albeit interspersed with an aggressive electronic musical backing).\\n\\nThe foppish image, but not the suit, was ditched for the more sombre album Fin De Siècle in 1998, although its biggest hit, the jaunty National Express, a song about the national coach operators, belied its more intimate, soul-searching tone. Maintaining the balance between these poles, 1999\\'s Secret History - the Best of The Divine Comedy included a re-recording of Liberation track The Pop Singer\\'s Fear of the Pollen Count and two new songs (Gin-Soaked Boy and Too Young to Die) alongside the band\\'s main hits. In the same year, the band also collaborated with Tom Jones on a cover version of Portishead\\'s All Mine, featured on his album Reload.\\n\\nA serious side to the band was also in evidence in 2000\\'s collaboration with Ute Lemper on her album Punishing Kiss, most of which featured The Divine Comedy as Lemper\\'s backing band.\\n\\nThe 2001 album Regeneration attempted to remove the band still further from its association with comedy. Hannon hired famous producer Nigel Godrich to \"remake\" the band. Neil ditched the suit and donned the Britrock band image. However, the album was a greater critical than commercial success, and soon after its release it was announced that The Divine Comedy were splitting up. However within a year Hannon was touring again with a revised band line-up, playing a series of joint-headline gigs in the USA, UK and Ireland featuring both The Divine Comedy and Ben Folds, who would cover The Divine Comedy\\'s Songs of Love on his Sunny 16 EP.\\n\\nEventually a new album surfaced in the form of 2004\\'s Absent Friends. Striking a balance between the occasionally earnest sound of the band\\'s later material and the lighter tone of the more popular releases, it encapsulated the essence of The Divine Comedy. 2004 saw two dates of particularly acclaimed performances, one at the London Palladium (which was later released as a live DVD) and one at the Royal Albert Hall.\\n\\nIn January 2005, Hannon announced that he had acquired the worldwide copyrights to all of his recorded output with his former record label, Setanta Records. He declared on the band\\'s official website that he would be launching his own record label Divine Comedy Records in order to re-release his 1990s output.\\n\\nHannon\\'s ninth album under the Divine Comedy moniker, Victory for the Comic Muse (a reference to his debut), was released in June 2006. It is suggested by fans to be less personal and more free-approach in tone than his most recent albums. The bulk of the record was recorded in just two weeks, hence the more spontaneous sound, and features appearances from Travis bass player Dougie Payne.\\n\\nHannon collaborated with Thomas Walsh of Pugwash to create an album themed around the sport of cricket. Released under the alias The Duckworth Lewis Method, the self-titled album was released in 2009 to critical acclaim.\\n\\nThe following year saw the tenth Divine Comedy album and first on his own label, Bang Goes the Knighthood.\\n <a href=\"https://www.last.fm/music/The+Divine+Comedy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7EV6jW6dotBdvsHj6xPixi', url='https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi', name='The Divine Comedy', popularity=46, followers=157520, genres=['baroque pop', 'britpop', 'comedy'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi'}, 'followers': {'href': None, 'total': 157520}, 'genres': ['baroque pop', 'britpop', 'comedy'], 'href': 'https://api.spotify.com/v1/artists/7EV6jW6dotBdvsHj6xPixi', 'id': '7EV6jW6dotBdvsHj6xPixi', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebfefd96ac60b04b1261f2ab2f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174fefd96ac60b04b1261f2ab2f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178fefd96ac60b04b1261f2ab2f', 'height': 160, 'width': 160}], 'name': 'The Divine Comedy', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:7EV6jW6dotBdvsHj6xPixi'})"
   },
   "spotify_id": "7EV6jW6dotBdvsHj6xPixi",
   "spotify_url": "https://open.spotify.com/artist/7EV6jW6dotBdvsHj6xPixi",
-  "updated_at": "2026-10-22T14:12:15.687156",
+  "updated_at": "2026-10-30T18:46:23.769634",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Divine_Comedy_(band)"
 }

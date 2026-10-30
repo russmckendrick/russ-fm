@@ -122,22 +122,52 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='268152250', url='https://music.apple.com/gb/artist/agua-de-annique/268152250', name='Agua de Annique', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/7e/0a/707e0aaa-6723-d115-2ad0-e25cced29fdb/8720923230347.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '268152250', 'type': 'artists', 'href': '/v1/catalog/gb/artists/268152250', 'attributes': {'name': 'Agua de Annique', 'genreNames': ['Rock'], 'artwork': {'width': 4000, 'height': 4000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/7e/0a/707e0aaa-6723-d115-2ad0-e25cced29fdb/8720923230347.png/{w}x{h}ac.jpg', 'bgColor': '000307', 'textColor1': 'e8d1c7', 'textColor2': 'ecbfb4', 'textColor3': 'b9a8a0', 'textColor4': 'bc9a91'}, 'url': 'https://music.apple.com/gb/artist/agua-de-annique/268152250'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/268152250/albums', 'data': [{'id': '1769677781', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769677781'}, {'id': '1769639504', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769639504'}, {'id': '1769679211', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769679211'}, {'id': '1769687031', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769687031'}, {'id': '1769687031', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769687031'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "950436",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "id": 950436,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/gE7O7jDnnBJrehibLQ66WQZZqGwf3yr91h6P82iu_n0/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gE7O7jDnnBJrehibLQ66WQZZqGwf3yr91h6P82iu_n0/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_7_K43iD2MeTHSadRJ0xfTX-lSp3qnKzpY7Td40cJSw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "width": 450
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 263993,
+          "name": "Anneke van Giersbergen",
+          "resource_url": "https://api.discogs.com/artists/263993"
+        },
+        {
+          "active": true,
+          "id": 309346,
+          "name": "Rob Snijders",
+          "resource_url": "https://api.discogs.com/artists/309346"
+        },
+        {
+          "active": true,
+          "id": 406683,
+          "name": "Jacques de Haard",
+          "resource_url": "https://api.discogs.com/artists/406683"
+        },
+        {
+          "active": true,
+          "id": 950434,
+          "name": "Joris Dirks",
+          "resource_url": "https://api.discogs.com/artists/950434"
+        }
+      ],
       "name": "Agua De Annique",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "950436",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/950436"
-      },
+      "releases_url": "https://api.discogs.com/artists/950436/releases",
       "resource_url": "https://api.discogs.com/artists/950436",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/950436",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/950436-Agua-De-Annique",
+      "urls": [
+        "http://www.aguadeannique.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "7ec864b4-660c-45d1-98af-bac9a8bf972d",
@@ -215,27 +245,58 @@
         "track": "Take Me Home",
         "uri": "http://www.youtube.com/watch?v=Pu0ZWRKgi_E"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='268152250', url='https://music.apple.com/gb/artist/agua-de-annique/268152250', name='Agua de Annique', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/7e/0a/707e0aaa-6723-d115-2ad0-e25cced29fdb/8720923230347.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '268152250', 'type': 'artists', 'href': '/v1/catalog/gb/artists/268152250', 'attributes': {'name': 'Agua de Annique', 'genreNames': ['Rock'], 'artwork': {'width': 4000, 'height': 4000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/7e/0a/707e0aaa-6723-d115-2ad0-e25cced29fdb/8720923230347.png/{w}x{h}ac.jpg', 'bgColor': '000307', 'textColor1': 'e8d1c7', 'textColor2': 'ecbfb4', 'textColor3': 'b9a8a0', 'textColor4': 'bc9a91'}, 'url': 'https://music.apple.com/gb/artist/agua-de-annique/268152250'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/268152250/albums', 'data': [{'id': '1769677781', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769677781'}, {'id': '1769639504', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769639504'}, {'id': '1769679211', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769679211'}, {'id': '1769687031', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769687031'}, {'id': '1769687031', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1769687031'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "950436",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "id": 950436,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/gE7O7jDnnBJrehibLQ66WQZZqGwf3yr91h6P82iu_n0/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/gE7O7jDnnBJrehibLQ66WQZZqGwf3yr91h6P82iu_n0/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_7_K43iD2MeTHSadRJ0xfTX-lSp3qnKzpY7Td40cJSw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MDQz/Ni0xMjYyODgyNjgx/LmpwZWc.jpeg",
+          "width": 450
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 263993,
+          "name": "Anneke van Giersbergen",
+          "resource_url": "https://api.discogs.com/artists/263993"
+        },
+        {
+          "active": true,
+          "id": 309346,
+          "name": "Rob Snijders",
+          "resource_url": "https://api.discogs.com/artists/309346"
+        },
+        {
+          "active": true,
+          "id": 406683,
+          "name": "Jacques de Haard",
+          "resource_url": "https://api.discogs.com/artists/406683"
+        },
+        {
+          "active": true,
+          "id": 950434,
+          "name": "Joris Dirks",
+          "resource_url": "https://api.discogs.com/artists/950434"
+        }
+      ],
       "name": "Agua De Annique",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "950436",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/950436"
-      },
+      "releases_url": "https://api.discogs.com/artists/950436/releases",
       "resource_url": "https://api.discogs.com/artists/950436",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/950436",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/950436-Agua-De-Annique",
+      "urls": [
+        "http://www.aguadeannique.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Agua de Annique', url='https://www.last.fm/music/Agua+de+Annique', mbid='f270a963-3926-4b21-96ea-630626529cf9', listeners=64965, playcount=2632741, bio_summary='Agua de Annique is a band from Netherlands formed by Anneke van Giersbergen after she announced her departure from The Gathering in June 2007. They released their first album, Air, in October of that year.\\n\\nIn addition to her lead vocals, Anneke also provides piano on the album. The rest of the band currently consists of Joris Dirks (guitars/vocals), Jacques de Haard (bass, Celestial Season, John Garcia) and Rob Snijders (drums, Celestial Season, Kong, John Garcia). \\n\\nhttp://www.aguadeannique.com\\n\\n <a href=\"https://www.last.fm/music/Agua+de+Annique\">Read more on Last.fm</a>', bio_content='Agua de Annique is a band from Netherlands formed by Anneke van Giersbergen after she announced her departure from The Gathering in June 2007. They released their first album, Air, in October of that year.\\n\\nIn addition to her lead vocals, Anneke also provides piano on the album. The rest of the band currently consists of Joris Dirks (guitars/vocals), Jacques de Haard (bass, Celestial Season, John Garcia) and Rob Snijders (drums, Celestial Season, Kong, John Garcia). \\n\\nhttp://www.aguadeannique.com\\n\\n <a href=\"https://www.last.fm/music/Agua+de+Annique\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['female vocalists', 'alternative rock', 'atmospheric', 'rock', 'alternative'], similar_artists=[{'name': 'Anneke van Giersbergen', 'url': 'https://www.last.fm/music/Anneke+van+Giersbergen'}, {'name': 'Anneke van Giersbergen & Agua de Annique', 'url': 'https://www.last.fm/music/Anneke+van+Giersbergen+&+Agua+de+Annique'}, {'name': 'The Gathering', 'url': 'https://www.last.fm/music/The+Gathering'}, {'name': 'Anathema', 'url': 'https://www.last.fm/music/Anathema'}, {'name': 'Lunatic Soul', 'url': 'https://www.last.fm/music/Lunatic+Soul'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Agua de Annique', 'mbid': 'f270a963-3926-4b21-96ea-630626529cf9', 'url': 'https://www.last.fm/music/Agua+de+Annique', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '64965', 'playcount': '2632741'}, 'similar': {'artist': [{'name': 'Anneke van Giersbergen', 'url': 'https://www.last.fm/music/Anneke+van+Giersbergen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Anneke van Giersbergen & Agua de Annique', 'url': 'https://www.last.fm/music/Anneke+van+Giersbergen+&+Agua+de+Annique', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Gathering', 'url': 'https://www.last.fm/music/The+Gathering', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Anathema', 'url': 'https://www.last.fm/music/Anathema', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Lunatic Soul', 'url': 'https://www.last.fm/music/Lunatic+Soul', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'atmospheric', 'url': 'https://www.last.fm/tag/atmospheric'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Agua+de+Annique/+wiki'}}, 'published': '08 Jun 2007, 10:12', 'summary': 'Agua de Annique is a band from Netherlands formed by Anneke van Giersbergen after she announced her departure from The Gathering in June 2007. They released their first album, Air, in October of that year.\\n\\nIn addition to her lead vocals, Anneke also provides piano on the album. The rest of the band currently consists of Joris Dirks (guitars/vocals), Jacques de Haard (bass, Celestial Season, John Garcia) and Rob Snijders (drums, Celestial Season, Kong, John Garcia). \\n\\nhttp://www.aguadeannique.com\\n\\n <a href=\"https://www.last.fm/music/Agua+de+Annique\">Read more on Last.fm</a>', 'content': 'Agua de Annique is a band from Netherlands formed by Anneke van Giersbergen after she announced her departure from The Gathering in June 2007. They released their first album, Air, in October of that year.\\n\\nIn addition to her lead vocals, Anneke also provides piano on the album. The rest of the band currently consists of Joris Dirks (guitars/vocals), Jacques de Haard (bass, Celestial Season, John Garcia) and Rob Snijders (drums, Celestial Season, Kong, John Garcia). \\n\\nhttp://www.aguadeannique.com\\n\\n <a href=\"https://www.last.fm/music/Agua+de+Annique\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2qYQQqPX6gwfwznMOOFE38', url='https://open.spotify.com/artist/2qYQQqPX6gwfwznMOOFE38', name='Agua de Annique', popularity=27, followers=8352, genres=['symphonic metal'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b27334b931f7e886e6784abea005', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0234b931f7e886e6784abea005', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485134b931f7e886e6784abea005', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2qYQQqPX6gwfwznMOOFE38'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2qYQQqPX6gwfwznMOOFE38'}, 'followers': {'href': None, 'total': 8352}, 'genres': ['symphonic metal'], 'href': 'https://api.spotify.com/v1/artists/2qYQQqPX6gwfwznMOOFE38', 'id': '2qYQQqPX6gwfwznMOOFE38', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27334b931f7e886e6784abea005', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0234b931f7e886e6784abea005', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485134b931f7e886e6784abea005', 'height': 64, 'width': 64}], 'name': 'Agua de Annique', 'popularity': 27, 'type': 'artist', 'uri': 'spotify:artist:2qYQQqPX6gwfwznMOOFE38'})",
@@ -297,6 +358,6 @@
   },
   "spotify_id": "2qYQQqPX6gwfwznMOOFE38",
   "spotify_url": "https://open.spotify.com/artist/2qYQQqPX6gwfwznMOOFE38",
-  "updated_at": "2026-10-22T14:04:29.701674",
+  "updated_at": "2026-10-30T18:35:46.093080",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Anneke_van_Giersbergen_(band)"
 }

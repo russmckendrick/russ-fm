@@ -135,22 +135,150 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1319633580', url='https://music.apple.com/gb/artist/orville-peck/1319633580', name='Orville Peck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/fa/f8/9c/faf89c65-f2ce-5305-09ac-4b9901c1e0cb/678fb2e2-a673-48f3-9eaf-513da075a822_ami-identity-97227665eb291f8b643ebb93f1553efa-2024-04-04T16-18-02.963Z_cropped.png/2000x2000bb.jpg', genres=['Country'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1319633580', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1319633580', 'attributes': {'name': 'Orville Peck', 'genreNames': ['Country'], 'artwork': {'width': 4344, 'height': 4344, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/fa/f8/9c/faf89c65-f2ce-5305-09ac-4b9901c1e0cb/678fb2e2-a673-48f3-9eaf-513da075a822_ami-identity-97227665eb291f8b643ebb93f1553efa-2024-04-04T16-18-02.963Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231f1c', 'textColor1': 'dad1c4', 'textColor2': 'ccc2b3', 'textColor3': 'b5ada2', 'textColor4': 'aaa195'}, 'url': 'https://music.apple.com/gb/artist/orville-peck/1319633580'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1319633580/albums', 'data': [{'id': '1749483522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1749483522'}, {'id': '1446363542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1446363542'}, {'id': '1607593873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1607593873'}, {'id': '1514674249', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514674249'}, {'id': '1525617940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1525617940'}, {'id': '1749379116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1749379116'}, {'id': '1570565942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1570565942'}, {'id': '1564004395', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1564004395'}, {'id': '1737311575', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1737311575'}, {'id': '1528795070', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1528795070'}, {'id': '1572864769', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572864769'}, {'id': '1761884672', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1761884672'}, {'id': '1688424988', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1688424988'}, {'id': '1765317653', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1765317653'}, {'id': '1773471756', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773471756'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6871068",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1254322,
+          "name": "Daniel Pitout",
+          "resource_url": "https://api.discogs.com/artists/1254322"
+        },
+        {
+          "id": 7629538,
+          "name": "Adult Books (2)",
+          "resource_url": "https://api.discogs.com/artists/7629538"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 8166715,
+          "name": "The Unrighteous Brothers",
+          "resource_url": "https://api.discogs.com/artists/8166715"
+        }
+      ],
+      "id": 6871068,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/YPXJUsw1UGb3VLeerCjbQS4sf6vkXzJrYqirV0zBci8/rs:fit/g:sm/q:90/h:600/w:489/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YPXJUsw1UGb3VLeerCjbQS4sf6vkXzJrYqirV0zBci8/rs:fit/g:sm/q:90/h:600/w:489/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ETPPm2xRMINIZoMVOYP8YLP2syuLQsJKelcy8kGHp0k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "width": 489
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X-VZK9VpyMcCj_9Vaj4WriIwSI8WSsQ59zTA219n2zA/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X-VZK9VpyMcCj_9Vaj4WriIwSI8WSsQ59zTA219n2zA/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ihYxtI-zHGYbmsK4B5cuNXwJ_4eJ7LXfUJSjRf-9jI4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 547,
+          "resource_url": "https://i.discogs.com/Kvl_wUzsWVa6d_nSaXTyaord2V5Z4YHXVOKCRXpahO4/rs:fit/g:sm/q:90/h:547/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Kvl_wUzsWVa6d_nSaXTyaord2V5Z4YHXVOKCRXpahO4/rs:fit/g:sm/q:90/h:547/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sTFPe0c6QVk2_Q0b0UksTny2Y7mqFlxAMc5Fg_Sc0wQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q6z9ppFDYdelluf-l3KQqAoPys2kfMotoTHkYZMaQFY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q6z9ppFDYdelluf-l3KQqAoPys2kfMotoTHkYZMaQFY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PJ5aLng5zDX5NvwPkG6lm3YTHC5H3j6tSc6m3scNIQM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lJdH_7zZTOqIp_YdpJ8zVdtgKTKDzhUgk-6cidhf-Lg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lJdH_7zZTOqIp_YdpJ8zVdtgKTKDzhUgk-6cidhf-Lg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rT5bdOYj9ZsNohraj4NuYjVjJ4Ekbykl76V7OZtUslI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 539,
+          "resource_url": "https://i.discogs.com/DEzKoC4j-CGEiPcX3-yLBC6d02QKkwhPd0HSJnBExMo/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DEzKoC4j-CGEiPcX3-yLBC6d02QKkwhPd0HSJnBExMo/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EOoHJoKfICtH0lnHOkpjh5FhAVNWVCs-0Azq-Ad7K0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JtNg3CD58xdxfGEzAVYn5_CivA4vhKa-d3Od6BgfUpU/rs:fit/g:sm/q:90/h:600/w:494/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JtNg3CD58xdxfGEzAVYn5_CivA4vhKa-d3Od6BgfUpU/rs:fit/g:sm/q:90/h:600/w:494/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/9dteQPQ_M3e__tZMe0aIKRFZzgStYKXo5v_rvzBfTbg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "width": 494
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X5zSFB2M0QdKkOcqDTHRChwWt0fTbAk2DSWKdMjuRLw/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X5zSFB2M0QdKkOcqDTHRChwWt0fTbAk2DSWKdMjuRLw/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IQSDSQE9WqWUiIpjNNE_pFo0U6furTAdTCIteQ1GFw0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "width": 482
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uosNrv0Bb4IWfCjyAd_G0YZE7TSbfBuOlfKm6GwQRA0/rs:fit/g:sm/q:90/h:600/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uosNrv0Bb4IWfCjyAd_G0YZE7TSbfBuOlfKm6GwQRA0/rs:fit/g:sm/q:90/h:600/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cgQN9fv_bebnlsUASVAaFcbU6loX2l164x4s5tjBq5k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "width": 492
+        },
+        {
+          "height": 455,
+          "resource_url": "https://i.discogs.com/zgzS4pcIdWj9bMNtcNhhziUScxgKwMLWf7Iqc5Qx2XQ/rs:fit/g:sm/q:90/h:455/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zgzS4pcIdWj9bMNtcNhhziUScxgKwMLWf7Iqc5Qx2XQ/rs:fit/g:sm/q:90/h:455/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V334M81sPFjl-84i4-Je6nABVauzV5USQXg5R7X99Vs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JBppEPF8f4jF7S136IBRm2r3Z7E4UBcuIdU1vbP7BHM/rs:fit/g:sm/q:90/h:600/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JBppEPF8f4jF7S136IBRm2r3Z7E4UBcuIdU1vbP7BHM/rs:fit/g:sm/q:90/h:600/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1oIhVjX9SUl5u7USRO6UvNiQ8kU86RzJdnh547unSNU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DoeIrnHKdiiXeIsIdTJGrCSSkTPAoawy8xPDgInBWtI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DoeIrnHKdiiXeIsIdTJGrCSSkTPAoawy8xPDgInBWtI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GBZD76voLEslzjnS1zAgRLC5fuWKvSkxSovRI4Oua20/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uVBlKo1qfUxDb7yi8DCd4Ysr8eGs_z-usN2S1QfC0Ew/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uVBlKo1qfUxDb7yi8DCd4Ysr8eGs_z-usN2S1QfC0Ew/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/m_GABnxk4LHe3rlazQ4lBngTTpYpKferT7KEEPJH_zU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Orville Peck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "6871068",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6871068"
-      },
+      "profile": "Orville Peck is a country musician known for his baritone voice and flashy wardrobe. Peck, who released his self-produced debut album Pony in 2019, has been widely remarked upon for his tendency to wear a fringed “Lone Ranger” mask. Peck is often incorrectly described as being Canadian, due to having spent time in Toronto, but has stated that he was raised in South Africa. Peck openly identifies as queer and has been distinguished as an icon in a new age of country music. Despite attempts to unmask him, and various rumors surrounding his 'true' identity, Peck himself has never confirmed nor denied guesswork on his 'real' self.",
+      "realname": "Daniel Pitout",
+      "releases_url": "https://api.discogs.com/artists/6871068/releases",
       "resource_url": "https://api.discogs.com/artists/6871068",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6871068",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6871068-Orville-Peck",
+      "urls": [
+        "http://www.orvillepeck.com/",
+        "https://www.facebook.com/orvillepeck/",
+        "https://twitter.com/orvillepeck",
+        "https://www.instagram.com/orvillepeck",
+        "https://www.youtube.com/@OrvillePeck",
+        "https://orvillepeck.bandcamp.com/",
+        "https://soundcloud.com/orvillepeck",
+        "https://en.wikipedia.org/wiki/Orville_Peck"
+      ]
     },
     "identity": {
       "musicbrainz_id": "437b356d-88f1-4dde-af5e-dec1c9d7dde4",
@@ -245,27 +373,156 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1319633580', url='https://music.apple.com/gb/artist/orville-peck/1319633580', name='Orville Peck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/fa/f8/9c/faf89c65-f2ce-5305-09ac-4b9901c1e0cb/678fb2e2-a673-48f3-9eaf-513da075a822_ami-identity-97227665eb291f8b643ebb93f1553efa-2024-04-04T16-18-02.963Z_cropped.png/2000x2000bb.jpg', genres=['Country'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1319633580', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1319633580', 'attributes': {'name': 'Orville Peck', 'genreNames': ['Country'], 'artwork': {'width': 4344, 'height': 4344, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/fa/f8/9c/faf89c65-f2ce-5305-09ac-4b9901c1e0cb/678fb2e2-a673-48f3-9eaf-513da075a822_ami-identity-97227665eb291f8b643ebb93f1553efa-2024-04-04T16-18-02.963Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '231f1c', 'textColor1': 'dad1c4', 'textColor2': 'ccc2b3', 'textColor3': 'b5ada2', 'textColor4': 'aaa195'}, 'url': 'https://music.apple.com/gb/artist/orville-peck/1319633580'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1319633580/albums', 'data': [{'id': '1749483522', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1749483522'}, {'id': '1446363542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1446363542'}, {'id': '1607593873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1607593873'}, {'id': '1514674249', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514674249'}, {'id': '1525617940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1525617940'}, {'id': '1749379116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1749379116'}, {'id': '1570565942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1570565942'}, {'id': '1564004395', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1564004395'}, {'id': '1737311575', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1737311575'}, {'id': '1528795070', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1528795070'}, {'id': '1572864769', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572864769'}, {'id': '1761884672', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1761884672'}, {'id': '1688424988', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1688424988'}, {'id': '1765317653', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1765317653'}, {'id': '1773471756', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773471756'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6871068",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 1254322,
+          "name": "Daniel Pitout",
+          "resource_url": "https://api.discogs.com/artists/1254322"
+        },
+        {
+          "id": 7629538,
+          "name": "Adult Books (2)",
+          "resource_url": "https://api.discogs.com/artists/7629538"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 8166715,
+          "name": "The Unrighteous Brothers",
+          "resource_url": "https://api.discogs.com/artists/8166715"
+        }
+      ],
+      "id": 6871068,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/YPXJUsw1UGb3VLeerCjbQS4sf6vkXzJrYqirV0zBci8/rs:fit/g:sm/q:90/h:600/w:489/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/YPXJUsw1UGb3VLeerCjbQS4sf6vkXzJrYqirV0zBci8/rs:fit/g:sm/q:90/h:600/w:489/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ETPPm2xRMINIZoMVOYP8YLP2syuLQsJKelcy8kGHp0k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTczMjg1MTY2/OC0yOTUwLmpwZWc.jpeg",
+          "width": 489
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X-VZK9VpyMcCj_9Vaj4WriIwSI8WSsQ59zTA219n2zA/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X-VZK9VpyMcCj_9Vaj4WriIwSI8WSsQ59zTA219n2zA/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ihYxtI-zHGYbmsK4B5cuNXwJ_4eJ7LXfUJSjRf-9jI4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTY1MzgyMTE2/OS02NzAyLmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 547,
+          "resource_url": "https://i.discogs.com/Kvl_wUzsWVa6d_nSaXTyaord2V5Z4YHXVOKCRXpahO4/rs:fit/g:sm/q:90/h:547/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Kvl_wUzsWVa6d_nSaXTyaord2V5Z4YHXVOKCRXpahO4/rs:fit/g:sm/q:90/h:547/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sTFPe0c6QVk2_Q0b0UksTny2Y7mqFlxAMc5Fg_Sc0wQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zOTk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q6z9ppFDYdelluf-l3KQqAoPys2kfMotoTHkYZMaQFY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q6z9ppFDYdelluf-l3KQqAoPys2kfMotoTHkYZMaQFY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PJ5aLng5zDX5NvwPkG6lm3YTHC5H3j6tSc6m3scNIQM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC00MzM4LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lJdH_7zZTOqIp_YdpJ8zVdtgKTKDzhUgk-6cidhf-Lg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lJdH_7zZTOqIp_YdpJ8zVdtgKTKDzhUgk-6cidhf-Lg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rT5bdOYj9ZsNohraj4NuYjVjJ4Ekbykl76V7OZtUslI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU1MzI5OTQ0/Mi0zMjIyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 539,
+          "resource_url": "https://i.discogs.com/DEzKoC4j-CGEiPcX3-yLBC6d02QKkwhPd0HSJnBExMo/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DEzKoC4j-CGEiPcX3-yLBC6d02QKkwhPd0HSJnBExMo/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EOoHJoKfICtH0lnHOkpjh5FhAVNWVCs-0Azq-Ad7K0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01ODU4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JtNg3CD58xdxfGEzAVYn5_CivA4vhKa-d3Od6BgfUpU/rs:fit/g:sm/q:90/h:600/w:494/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JtNg3CD58xdxfGEzAVYn5_CivA4vhKa-d3Od6BgfUpU/rs:fit/g:sm/q:90/h:600/w:494/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/9dteQPQ_M3e__tZMe0aIKRFZzgStYKXo5v_rvzBfTbg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0zNTkxLmpwZWc.jpeg",
+          "width": 494
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X5zSFB2M0QdKkOcqDTHRChwWt0fTbAk2DSWKdMjuRLw/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X5zSFB2M0QdKkOcqDTHRChwWt0fTbAk2DSWKdMjuRLw/rs:fit/g:sm/q:90/h:600/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IQSDSQE9WqWUiIpjNNE_pFo0U6furTAdTCIteQ1GFw0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC02NTk5LmpwZWc.jpeg",
+          "width": 482
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uosNrv0Bb4IWfCjyAd_G0YZE7TSbfBuOlfKm6GwQRA0/rs:fit/g:sm/q:90/h:600/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uosNrv0Bb4IWfCjyAd_G0YZE7TSbfBuOlfKm6GwQRA0/rs:fit/g:sm/q:90/h:600/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cgQN9fv_bebnlsUASVAaFcbU6loX2l164x4s5tjBq5k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC04ODE5LmpwZWc.jpeg",
+          "width": 492
+        },
+        {
+          "height": 455,
+          "resource_url": "https://i.discogs.com/zgzS4pcIdWj9bMNtcNhhziUScxgKwMLWf7Iqc5Qx2XQ/rs:fit/g:sm/q:90/h:455/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zgzS4pcIdWj9bMNtcNhhziUScxgKwMLWf7Iqc5Qx2XQ/rs:fit/g:sm/q:90/h:455/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V334M81sPFjl-84i4-Je6nABVauzV5USQXg5R7X99Vs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC01MTY4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JBppEPF8f4jF7S136IBRm2r3Z7E4UBcuIdU1vbP7BHM/rs:fit/g:sm/q:90/h:600/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JBppEPF8f4jF7S136IBRm2r3Z7E4UBcuIdU1vbP7BHM/rs:fit/g:sm/q:90/h:600/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1oIhVjX9SUl5u7USRO6UvNiQ8kU86RzJdnh547unSNU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xMjkxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DoeIrnHKdiiXeIsIdTJGrCSSkTPAoawy8xPDgInBWtI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DoeIrnHKdiiXeIsIdTJGrCSSkTPAoawy8xPDgInBWtI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GBZD76voLEslzjnS1zAgRLC5fuWKvSkxSovRI4Oua20/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0yNjY4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uVBlKo1qfUxDb7yi8DCd4Ysr8eGs_z-usN2S1QfC0Ew/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uVBlKo1qfUxDb7yi8DCd4Ysr8eGs_z-usN2S1QfC0Ew/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/m_GABnxk4LHe3rlazQ4lBngTTpYpKferT7KEEPJH_zU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzEw/NjgtMTU3NTkzOTA2/NC0xNDgwLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "Orville Peck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "6871068",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6871068"
-      },
+      "profile": "Orville Peck is a country musician known for his baritone voice and flashy wardrobe. Peck, who released his self-produced debut album Pony in 2019, has been widely remarked upon for his tendency to wear a fringed “Lone Ranger” mask. Peck is often incorrectly described as being Canadian, due to having spent time in Toronto, but has stated that he was raised in South Africa. Peck openly identifies as queer and has been distinguished as an icon in a new age of country music. Despite attempts to unmask him, and various rumors surrounding his 'true' identity, Peck himself has never confirmed nor denied guesswork on his 'real' self.",
+      "realname": "Daniel Pitout",
+      "releases_url": "https://api.discogs.com/artists/6871068/releases",
       "resource_url": "https://api.discogs.com/artists/6871068",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6871068",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6871068-Orville-Peck",
+      "urls": [
+        "http://www.orvillepeck.com/",
+        "https://www.facebook.com/orvillepeck/",
+        "https://twitter.com/orvillepeck",
+        "https://www.instagram.com/orvillepeck",
+        "https://www.youtube.com/@OrvillePeck",
+        "https://orvillepeck.bandcamp.com/",
+        "https://soundcloud.com/orvillepeck",
+        "https://en.wikipedia.org/wiki/Orville_Peck"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Orville Peck', url='https://www.last.fm/music/Orville+Peck', mbid=None, listeners=441945, playcount=14339809, bio_summary='Orville Peck is a country musician based in Canada. He wears a frequently fringed mask and has never shown his face publicly. He released his debut album Pony in 2019, which EP Show Pony rode the curtails of the following year. His sophomore album, Bronco, was released on April 8, 2022. After returning from a mental health break, on August 2, 2024 he released his third, Stampede — a duets album via Warner Records. Peck describes it as a standalone \"concept album.\" <a href=\"https://www.last.fm/music/Orville+Peck\">Read more on Last.fm</a>', bio_content='Orville Peck is a country musician based in Canada. He wears a frequently fringed mask and has never shown his face publicly. He released his debut album Pony in 2019, which EP Show Pony rode the curtails of the following year. His sophomore album, Bronco, was released on April 8, 2022. After returning from a mental health break, on August 2, 2024 he released his third, Stampede — a duets album via Warner Records. Peck describes it as a standalone \"concept album.\"\\n\\nPeck was born in Johannesburg, South Africa and lived there most of his life. As a child, Peck did not receive any formal music training; he taught himself music by playing on an acoustic guitar and an old Casio keyboard. He is the son of a sound engineer, and he did voice-over work for cartoons and other media as a child. Growing up, he trained in ballet for 12 years, and performed in musical theatre. By the time he was in his early 20s, Peck had been on national tours of musicals.\\n\\nIn his mid-20s, he moved to London to study acting at the London Academy of Music and Dramatic Art, and later starred in a play on the West End.\\n\\n\"Orville Peck\" is a pseudonym; he has been described as \"presumably older than 20 and younger than 40.\" Regarding his reasons for wearing a mask to perform, Peck has stated that \"the only reason I don\\'t talk about it in depth is not because I want to dodge any questions, but because I want people to have their own take on it. I don\\'t want to lay it out and pin it down. I just don\\'t think that\\'s important.\" <a href=\"https://www.last.fm/music/Orville+Peck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['country', 'Alt-country', 'seen live', 'gothic country', 'americana'], similar_artists=[{'name': 'Trixie Mattel', 'url': 'https://www.last.fm/music/Trixie+Mattel'}, {'name': 'Sierra Ferrell', 'url': 'https://www.last.fm/music/Sierra+Ferrell'}, {'name': 'Charley Crockett', 'url': 'https://www.last.fm/music/Charley+Crockett'}, {'name': 'Sturgill Simpson', 'url': 'https://www.last.fm/music/Sturgill+Simpson'}, {'name': 'The Cactus Blossoms', 'url': 'https://www.last.fm/music/The+Cactus+Blossoms'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Orville Peck', 'url': 'https://www.last.fm/music/Orville+Peck', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '441945', 'playcount': '14339809'}, 'similar': {'artist': [{'name': 'Trixie Mattel', 'url': 'https://www.last.fm/music/Trixie+Mattel', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sierra Ferrell', 'url': 'https://www.last.fm/music/Sierra+Ferrell', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Charley Crockett', 'url': 'https://www.last.fm/music/Charley+Crockett', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sturgill Simpson', 'url': 'https://www.last.fm/music/Sturgill+Simpson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Cactus Blossoms', 'url': 'https://www.last.fm/music/The+Cactus+Blossoms', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'country', 'url': 'https://www.last.fm/tag/country'}, {'name': 'Alt-country', 'url': 'https://www.last.fm/tag/Alt-country'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'gothic country', 'url': 'https://www.last.fm/tag/gothic+country'}, {'name': 'americana', 'url': 'https://www.last.fm/tag/americana'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Orville+Peck/+wiki'}}, 'published': '23 Jun 2019, 09:54', 'summary': 'Orville Peck is a country musician based in Canada. He wears a frequently fringed mask and has never shown his face publicly. He released his debut album Pony in 2019, which EP Show Pony rode the curtails of the following year. His sophomore album, Bronco, was released on April 8, 2022. After returning from a mental health break, on August 2, 2024 he released his third, Stampede — a duets album via Warner Records. Peck describes it as a standalone \"concept album.\" <a href=\"https://www.last.fm/music/Orville+Peck\">Read more on Last.fm</a>', 'content': 'Orville Peck is a country musician based in Canada. He wears a frequently fringed mask and has never shown his face publicly. He released his debut album Pony in 2019, which EP Show Pony rode the curtails of the following year. His sophomore album, Bronco, was released on April 8, 2022. After returning from a mental health break, on August 2, 2024 he released his third, Stampede — a duets album via Warner Records. Peck describes it as a standalone \"concept album.\"\\n\\nPeck was born in Johannesburg, South Africa and lived there most of his life. As a child, Peck did not receive any formal music training; he taught himself music by playing on an acoustic guitar and an old Casio keyboard. He is the son of a sound engineer, and he did voice-over work for cartoons and other media as a child. Growing up, he trained in ballet for 12 years, and performed in musical theatre. By the time he was in his early 20s, Peck had been on national tours of musicals.\\n\\nIn his mid-20s, he moved to London to study acting at the London Academy of Music and Dramatic Art, and later starred in a play on the West End.\\n\\n\"Orville Peck\" is a pseudonym; he has been described as \"presumably older than 20 and younger than 40.\" Regarding his reasons for wearing a mask to perform, Peck has stated that \"the only reason I don\\'t talk about it in depth is not because I want to dodge any questions, but because I want people to have their own take on it. I don\\'t want to lay it out and pin it down. I just don\\'t think that\\'s important.\" <a href=\"https://www.last.fm/music/Orville+Peck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='46auOkH1pk28rWrSoUNhLo', url='https://open.spotify.com/artist/46auOkH1pk28rWrSoUNhLo', name='Orville Peck', popularity=58, followers=460456, genres=['alt country'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb6e4a8c4569f94c3e04d14f72', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746e4a8c4569f94c3e04d14f72', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786e4a8c4569f94c3e04d14f72', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/46auOkH1pk28rWrSoUNhLo'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/46auOkH1pk28rWrSoUNhLo'}, 'followers': {'href': None, 'total': 460456}, 'genres': ['alt country'], 'href': 'https://api.spotify.com/v1/artists/46auOkH1pk28rWrSoUNhLo', 'id': '46auOkH1pk28rWrSoUNhLo', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb6e4a8c4569f94c3e04d14f72', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746e4a8c4569f94c3e04d14f72', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786e4a8c4569f94c3e04d14f72', 'height': 160, 'width': 160}], 'name': 'Orville Peck', 'popularity': 58, 'type': 'artist', 'uri': 'spotify:artist:46auOkH1pk28rWrSoUNhLo'})",
@@ -357,6 +614,6 @@
   },
   "spotify_id": "46auOkH1pk28rWrSoUNhLo",
   "spotify_url": "https://open.spotify.com/artist/46auOkH1pk28rWrSoUNhLo",
-  "updated_at": "2026-10-22T14:09:58.498208",
+  "updated_at": "2026-10-30T18:43:33.163226",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Orville_Peck"
 }

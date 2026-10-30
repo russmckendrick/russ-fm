@@ -91,22 +91,99 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1551707363', url='https://music.apple.com/gb/artist/held-by-trees/1551707363', name='Held By Trees', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a8/95/58/a8955824-42a4-af06-8bb9-18cdeab940d7/artwork.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1551707363', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1551707363', 'attributes': {'name': 'Held By Trees', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a8/95/58/a8955824-42a4-af06-8bb9-18cdeab940d7/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': 'ffffff', 'textColor1': '0b0615', 'textColor2': '002425', 'textColor3': '3c3844', 'textColor4': '335050'}, 'url': 'https://music.apple.com/gb/artist/held-by-trees/1551707363'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1551707363/albums', 'data': [{'id': '1692299278', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1692299278'}, {'id': '1766842687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766842687'}, {'id': '1710314024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710314024'}, {'id': '1746083464', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1746083464'}, {'id': '1554945913', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1554945913'}, {'id': '1808573818', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1808573818'}, {'id': '1698512851', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1698512851'}, {'id': '1551707362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1551707362'}, {'id': '1751961896', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751961896'}, {'id': '1575361065', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575361065'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "9253273",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 9253273,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/vbsV-1lQimpW_it7Jh4v-D9Yb8_g9Ery6w-YPPZmw6U/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/vbsV-1lQimpW_it7Jh4v-D9Yb8_g9Ery6w-YPPZmw6U/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/C55I96zKVi60R9dUQKU6dDLqCkWFGVQ2JLZGgHCg3oI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 49433,
+          "name": "Chris Pedley",
+          "resource_url": "https://api.discogs.com/artists/49433"
+        },
+        {
+          "active": true,
+          "id": 252445,
+          "name": "Martin Ditcham",
+          "resource_url": "https://api.discogs.com/artists/252445"
+        },
+        {
+          "active": true,
+          "id": 266076,
+          "name": "Robbie McIntosh",
+          "resource_url": "https://api.discogs.com/artists/266076"
+        },
+        {
+          "active": true,
+          "id": 384144,
+          "name": "Paul Beavis",
+          "resource_url": "https://api.discogs.com/artists/384144"
+        },
+        {
+          "active": true,
+          "id": 389790,
+          "name": "Lawrence Pendrous",
+          "resource_url": "https://api.discogs.com/artists/389790"
+        },
+        {
+          "active": true,
+          "id": 453163,
+          "name": "Andy Panayi (2)",
+          "resource_url": "https://api.discogs.com/artists/453163"
+        },
+        {
+          "active": true,
+          "id": 587239,
+          "name": "James Grant",
+          "resource_url": "https://api.discogs.com/artists/587239"
+        },
+        {
+          "active": true,
+          "id": 5307464,
+          "name": "Dave Griff",
+          "resource_url": "https://api.discogs.com/artists/5307464"
+        },
+        {
+          "active": true,
+          "id": 8287352,
+          "name": "Peter Moon (4)",
+          "resource_url": "https://api.discogs.com/artists/8287352"
+        },
+        {
+          "active": true,
+          "id": 11243285,
+          "name": "David Joseph (10)",
+          "resource_url": "https://api.discogs.com/artists/11243285"
+        },
+        {
+          "active": true,
+          "id": 15157525,
+          "name": "Charlie Hollis (4)",
+          "resource_url": "https://api.discogs.com/artists/15157525"
+        }
+      ],
       "name": "Held By Trees",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "9253273",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/9253273"
-      },
+      "profile": "Held By Trees is a British instrumental post-rock collaboration of musicians who took part in the sessions for [m26436] (1988), [m26553] (1991) and [m80116] (1998), led by [a11243285]. \"Other inspirations include the minimal piano work of Ryuichi Sakamoto, and early 70's Pink Floyd\" according to Held By Trees' Bandcamp bio.",
+      "releases_url": "https://api.discogs.com/artists/9253273/releases",
       "resource_url": "https://api.discogs.com/artists/9253273",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/9253273",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/9253273-Held-By-Trees",
+      "urls": [
+        "https://heldbytrees.com/",
+        "https://twitter.com/heldbytrees",
+        "https://www.facebook.com/heldbytrees",
+        "https://www.instagram.com/heldbytrees/",
+        "https://www.youtube.com/channel/UCMtTEAoLjKS79ZEeuzzzNkQ",
+        "https://heldbytrees.bandcamp.com"
+      ]
     },
     "identity": {
       "musicbrainz_id": "e38ecf1c-9c4a-4936-8be0-d6b2f9d566d4",
@@ -121,22 +198,99 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1551707363', url='https://music.apple.com/gb/artist/held-by-trees/1551707363', name='Held By Trees', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a8/95/58/a8955824-42a4-af06-8bb9-18cdeab940d7/artwork.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1551707363', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1551707363', 'attributes': {'name': 'Held By Trees', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a8/95/58/a8955824-42a4-af06-8bb9-18cdeab940d7/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': 'ffffff', 'textColor1': '0b0615', 'textColor2': '002425', 'textColor3': '3c3844', 'textColor4': '335050'}, 'url': 'https://music.apple.com/gb/artist/held-by-trees/1551707363'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1551707363/albums', 'data': [{'id': '1692299278', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1692299278'}, {'id': '1766842687', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766842687'}, {'id': '1710314024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710314024'}, {'id': '1746083464', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1746083464'}, {'id': '1554945913', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1554945913'}, {'id': '1808573818', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1808573818'}, {'id': '1698512851', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1698512851'}, {'id': '1551707362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1551707362'}, {'id': '1751961896', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1751961896'}, {'id': '1575361065', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575361065'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "9253273",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 9253273,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/vbsV-1lQimpW_it7Jh4v-D9Yb8_g9Ery6w-YPPZmw6U/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/vbsV-1lQimpW_it7Jh4v-D9Yb8_g9Ery6w-YPPZmw6U/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/C55I96zKVi60R9dUQKU6dDLqCkWFGVQ2JLZGgHCg3oI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNTMy/NzMtMTczNjk3MjQ3/MS0zMjcxLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 49433,
+          "name": "Chris Pedley",
+          "resource_url": "https://api.discogs.com/artists/49433"
+        },
+        {
+          "active": true,
+          "id": 252445,
+          "name": "Martin Ditcham",
+          "resource_url": "https://api.discogs.com/artists/252445"
+        },
+        {
+          "active": true,
+          "id": 266076,
+          "name": "Robbie McIntosh",
+          "resource_url": "https://api.discogs.com/artists/266076"
+        },
+        {
+          "active": true,
+          "id": 384144,
+          "name": "Paul Beavis",
+          "resource_url": "https://api.discogs.com/artists/384144"
+        },
+        {
+          "active": true,
+          "id": 389790,
+          "name": "Lawrence Pendrous",
+          "resource_url": "https://api.discogs.com/artists/389790"
+        },
+        {
+          "active": true,
+          "id": 453163,
+          "name": "Andy Panayi (2)",
+          "resource_url": "https://api.discogs.com/artists/453163"
+        },
+        {
+          "active": true,
+          "id": 587239,
+          "name": "James Grant",
+          "resource_url": "https://api.discogs.com/artists/587239"
+        },
+        {
+          "active": true,
+          "id": 5307464,
+          "name": "Dave Griff",
+          "resource_url": "https://api.discogs.com/artists/5307464"
+        },
+        {
+          "active": true,
+          "id": 8287352,
+          "name": "Peter Moon (4)",
+          "resource_url": "https://api.discogs.com/artists/8287352"
+        },
+        {
+          "active": true,
+          "id": 11243285,
+          "name": "David Joseph (10)",
+          "resource_url": "https://api.discogs.com/artists/11243285"
+        },
+        {
+          "active": true,
+          "id": 15157525,
+          "name": "Charlie Hollis (4)",
+          "resource_url": "https://api.discogs.com/artists/15157525"
+        }
+      ],
       "name": "Held By Trees",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "9253273",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/9253273"
-      },
+      "profile": "Held By Trees is a British instrumental post-rock collaboration of musicians who took part in the sessions for [m26436] (1988), [m26553] (1991) and [m80116] (1998), led by [a11243285]. \"Other inspirations include the minimal piano work of Ryuichi Sakamoto, and early 70's Pink Floyd\" according to Held By Trees' Bandcamp bio.",
+      "releases_url": "https://api.discogs.com/artists/9253273/releases",
       "resource_url": "https://api.discogs.com/artists/9253273",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/9253273",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/9253273-Held-By-Trees",
+      "urls": [
+        "https://heldbytrees.com/",
+        "https://twitter.com/heldbytrees",
+        "https://www.facebook.com/heldbytrees",
+        "https://www.instagram.com/heldbytrees/",
+        "https://www.youtube.com/channel/UCMtTEAoLjKS79ZEeuzzzNkQ",
+        "https://heldbytrees.bandcamp.com"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Held By Trees', url='https://www.last.fm/music/Held+By+Trees', mbid=None, listeners=2139, playcount=22094, bio_summary='Held By Trees is an instrumental post-rock collaboration of musicians from the United Kingdom. The music is heavily inspired by Talk Talk and Mark Hollis. Many musicians that took part in the infamous sessions for Talk Talk\\'s Spirit of Eden (1988) and Laughing Stock (1991), as well as Mark Hollis\\' solo album (1998), collaborated on Held By Trees\\' début LP, Solace (2022). Other inspirations include the minimal piano work of Ryuichi Sakamoto and early 1970s Pink Floyd. <a href=\"https://www.last.fm/music/Held+By+Trees\">Read more on Last.fm</a>', bio_content='Held By Trees is an instrumental post-rock collaboration of musicians from the United Kingdom. The music is heavily inspired by Talk Talk and Mark Hollis. Many musicians that took part in the infamous sessions for Talk Talk\\'s Spirit of Eden (1988) and Laughing Stock (1991), as well as Mark Hollis\\' solo album (1998), collaborated on Held By Trees\\' début LP, Solace (2022). Other inspirations include the minimal piano work of Ryuichi Sakamoto and early 1970s Pink Floyd. <a href=\"https://www.last.fm/music/Held+By+Trees\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-rock', 'instrumental', 'british', 'ambient', 'experimental'], similar_artists=[{'name': \"'O'Rang\", 'url': 'https://www.last.fm/music/%27O%27Rang'}, {'name': 'Mark Hollis', 'url': 'https://www.last.fm/music/Mark+Hollis'}, {'name': 'Held By Trees & Martin Smith', 'url': 'https://www.last.fm/music/Held+By+Trees+&+Martin+Smith'}, {'name': 'Tortoise', 'url': 'https://www.last.fm/music/Tortoise'}, {'name': 'Explosions in the Sky', 'url': 'https://www.last.fm/music/Explosions+in+the+Sky'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Held By Trees', 'url': 'https://www.last.fm/music/Held+By+Trees', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2139', 'playcount': '22094'}, 'similar': {'artist': [{'name': \"'O'Rang\", 'url': 'https://www.last.fm/music/%27O%27Rang', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Mark Hollis', 'url': 'https://www.last.fm/music/Mark+Hollis', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Held By Trees & Martin Smith', 'url': 'https://www.last.fm/music/Held+By+Trees+&+Martin+Smith', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'Tortoise', 'url': 'https://www.last.fm/music/Tortoise', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Explosions in the Sky', 'url': 'https://www.last.fm/music/Explosions+in+the+Sky', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}, {'name': 'instrumental', 'url': 'https://www.last.fm/tag/instrumental'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Held+By+Trees/+wiki'}}, 'published': '22 Sep 2022, 18:12', 'summary': 'Held By Trees is an instrumental post-rock collaboration of musicians from the United Kingdom. The music is heavily inspired by Talk Talk and Mark Hollis. Many musicians that took part in the infamous sessions for Talk Talk\\'s Spirit of Eden (1988) and Laughing Stock (1991), as well as Mark Hollis\\' solo album (1998), collaborated on Held By Trees\\' début LP, Solace (2022). Other inspirations include the minimal piano work of Ryuichi Sakamoto and early 1970s Pink Floyd. <a href=\"https://www.last.fm/music/Held+By+Trees\">Read more on Last.fm</a>', 'content': 'Held By Trees is an instrumental post-rock collaboration of musicians from the United Kingdom. The music is heavily inspired by Talk Talk and Mark Hollis. Many musicians that took part in the infamous sessions for Talk Talk\\'s Spirit of Eden (1988) and Laughing Stock (1991), as well as Mark Hollis\\' solo album (1998), collaborated on Held By Trees\\' début LP, Solace (2022). Other inspirations include the minimal piano work of Ryuichi Sakamoto and early 1970s Pink Floyd. <a href=\"https://www.last.fm/music/Held+By+Trees\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1ymZF1ZIsHaqneEoqAi7lz', url='https://open.spotify.com/artist/1ymZF1ZIsHaqneEoqAi7lz', name='Held By Trees', popularity=20, followers=3054, genres=['post-rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb3234aeab954d7e27702b1087', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743234aeab954d7e27702b1087', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783234aeab954d7e27702b1087', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1ymZF1ZIsHaqneEoqAi7lz'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1ymZF1ZIsHaqneEoqAi7lz'}, 'followers': {'href': None, 'total': 3054}, 'genres': ['post-rock'], 'href': 'https://api.spotify.com/v1/artists/1ymZF1ZIsHaqneEoqAi7lz', 'id': '1ymZF1ZIsHaqneEoqAi7lz', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb3234aeab954d7e27702b1087', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743234aeab954d7e27702b1087', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783234aeab954d7e27702b1087', 'height': 160, 'width': 160}], 'name': 'Held By Trees', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:1ymZF1ZIsHaqneEoqAi7lz'})",
@@ -144,6 +298,6 @@
   },
   "spotify_id": "1ymZF1ZIsHaqneEoqAi7lz",
   "spotify_url": "https://open.spotify.com/artist/1ymZF1ZIsHaqneEoqAi7lz",
-  "updated_at": "2026-10-22T14:07:34.883245",
+  "updated_at": "2026-10-30T18:40:50.429432",
   "wikipedia_url": null
 }

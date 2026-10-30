@@ -137,22 +137,75 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='203292917', url='https://music.apple.com/gb/artist/yola/203292917', name='Yola', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/8b/c4/6d/8bc46d7d-9241-0a78-8b88-022cc86fbcc5/b9f83744-73d0-4e62-bcef-8b2de163b36f_file_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '203292917', 'type': 'artists', 'href': '/v1/catalog/gb/artists/203292917', 'attributes': {'name': 'Yola', 'genreNames': ['Alternative'], 'artwork': {'width': 4048, 'height': 4048, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/8b/c4/6d/8bc46d7d-9241-0a78-8b88-022cc86fbcc5/b9f83744-73d0-4e62-bcef-8b2de163b36f_file_cropped.png/{w}x{h}bb.jpg', 'bgColor': '8cb6ce', 'textColor1': '0c0d0d', 'textColor2': '101213', 'textColor3': '262f34', 'textColor4': '283239'}, 'url': 'https://music.apple.com/gb/artist/yola/203292917'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/203292917/albums', 'data': [{'id': '1539170808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539170808'}, {'id': '1561240873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1561240873'}, {'id': '1488514243', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488514243'}, {'id': '1534794092', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534794092'}, {'id': '1617786123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617786123'}, {'id': '1589111609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589111609'}, {'id': '1785750067', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1785750067'}, {'id': '1763085895', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1763085895'}, {'id': '1610428738', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1610428738'}, {'id': '1773828056', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773828056'}, {'id': '1703154726', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1703154726'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "7004421",
-      "images": [],
-      "members": [],
-      "name": "Yola",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "7004421",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/7004421"
-      },
+      "aliases": [
+        {
+          "id": 228928,
+          "name": "Yolanda Quartey",
+          "resource_url": "https://api.discogs.com/artists/228928"
+        },
+        {
+          "id": 1583520,
+          "name": "Koko (9)",
+          "resource_url": "https://api.discogs.com/artists/1583520"
+        },
+        {
+          "id": 6677711,
+          "name": "Yola Carter",
+          "resource_url": "https://api.discogs.com/artists/6677711"
+        },
+        {
+          "id": 7161773,
+          "name": "Cleeo",
+          "resource_url": "https://api.discogs.com/artists/7161773"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 7004421,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JykDcqJUvkkL637KPJz6BQTyt94RN8T2PXG6VPe9Uqw/rs:fit/g:sm/q:90/h:600/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/JykDcqJUvkkL637KPJz6BQTyt94RN8T2PXG6VPe9Uqw/rs:fit/g:sm/q:90/h:600/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/bJpaMsh84Bn-meMPc9Bmhehb5_xUzWwYRadcXEEKRlw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "width": 576
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/AwPtkePB29WEoZhDAyxZ9AUR6WZoM18PqElQkIZEtE4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AwPtkePB29WEoZhDAyxZ9AUR6WZoM18PqElQkIZEtE4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pV9vD1oRhbxPO_bLlky-TJdlmVAeAiToSePdpi2JIGY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/iOcLlMnLbWs05MFdS0rq2CATYjU8rm7k2rW9TAHHjhU/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iOcLlMnLbWs05MFdS0rq2CATYjU8rm7k2rW9TAHHjhU/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oGJAEhG_peQdFZxCBBGu4nUQhgmwgvIriF2J17V_7vk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/aV-jRyi9Z4saK2H-4nz3ma-doUrB2zF6A7rweBSd0nI/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aV-jRyi9Z4saK2H-4nz3ma-doUrB2zF6A7rweBSd0nI/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SImc1k2QvQj7TKK2n-2Dlvpg62VvutZqxMG7sFeWS70/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "name": "Yola (4)",
+      "profile": "Yolanda Claire Quartey (born 31 July 1983), known professionally as Yola or Yola Carter, is an English musician, singer and songwriter.",
+      "realname": "Yolanda Claire Quartey",
+      "releases_url": "https://api.discogs.com/artists/7004421/releases",
       "resource_url": "https://api.discogs.com/artists/7004421",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/7004421",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/7004421-Yola-4",
+      "urls": [
+        "https://www.iamyola.com/",
+        "https://iamyola.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Yola_(singer)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "a690d479-091c-4c4c-aa5c-7d1d512316c6",
@@ -247,27 +300,81 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='203292917', url='https://music.apple.com/gb/artist/yola/203292917', name='Yola', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/8b/c4/6d/8bc46d7d-9241-0a78-8b88-022cc86fbcc5/b9f83744-73d0-4e62-bcef-8b2de163b36f_file_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '203292917', 'type': 'artists', 'href': '/v1/catalog/gb/artists/203292917', 'attributes': {'name': 'Yola', 'genreNames': ['Alternative'], 'artwork': {'width': 4048, 'height': 4048, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/8b/c4/6d/8bc46d7d-9241-0a78-8b88-022cc86fbcc5/b9f83744-73d0-4e62-bcef-8b2de163b36f_file_cropped.png/{w}x{h}bb.jpg', 'bgColor': '8cb6ce', 'textColor1': '0c0d0d', 'textColor2': '101213', 'textColor3': '262f34', 'textColor4': '283239'}, 'url': 'https://music.apple.com/gb/artist/yola/203292917'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/203292917/albums', 'data': [{'id': '1539170808', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539170808'}, {'id': '1561240873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1561240873'}, {'id': '1488514243', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488514243'}, {'id': '1534794092', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534794092'}, {'id': '1617786123', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617786123'}, {'id': '1589111609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589111609'}, {'id': '1785750067', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1785750067'}, {'id': '1763085895', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1763085895'}, {'id': '1610428738', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1610428738'}, {'id': '1773828056', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1773828056'}, {'id': '1703154726', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1703154726'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "7004421",
-      "images": [],
-      "members": [],
-      "name": "Yola",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "7004421",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/7004421"
-      },
+      "aliases": [
+        {
+          "id": 228928,
+          "name": "Yolanda Quartey",
+          "resource_url": "https://api.discogs.com/artists/228928"
+        },
+        {
+          "id": 1583520,
+          "name": "Koko (9)",
+          "resource_url": "https://api.discogs.com/artists/1583520"
+        },
+        {
+          "id": 6677711,
+          "name": "Yola Carter",
+          "resource_url": "https://api.discogs.com/artists/6677711"
+        },
+        {
+          "id": 7161773,
+          "name": "Cleeo",
+          "resource_url": "https://api.discogs.com/artists/7161773"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 7004421,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/JykDcqJUvkkL637KPJz6BQTyt94RN8T2PXG6VPe9Uqw/rs:fit/g:sm/q:90/h:600/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/JykDcqJUvkkL637KPJz6BQTyt94RN8T2PXG6VPe9Uqw/rs:fit/g:sm/q:90/h:600/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/bJpaMsh84Bn-meMPc9Bmhehb5_xUzWwYRadcXEEKRlw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTYzMjcyMDgx/OS0zODg5LnBuZw.jpeg",
+          "width": 576
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/AwPtkePB29WEoZhDAyxZ9AUR6WZoM18PqElQkIZEtE4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AwPtkePB29WEoZhDAyxZ9AUR6WZoM18PqElQkIZEtE4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pV9vD1oRhbxPO_bLlky-TJdlmVAeAiToSePdpi2JIGY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTAz/OC0xNzkwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/iOcLlMnLbWs05MFdS0rq2CATYjU8rm7k2rW9TAHHjhU/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iOcLlMnLbWs05MFdS0rq2CATYjU8rm7k2rW9TAHHjhU/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oGJAEhG_peQdFZxCBBGu4nUQhgmwgvIriF2J17V_7vk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1NjY3NTA0/NC03OTA4LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/aV-jRyi9Z4saK2H-4nz3ma-doUrB2zF6A7rweBSd0nI/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aV-jRyi9Z4saK2H-4nz3ma-doUrB2zF6A7rweBSd0nI/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SImc1k2QvQj7TKK2n-2Dlvpg62VvutZqxMG7sFeWS70/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDQ0/MjEtMTU1MDkwMjg2/NS00NzU2LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "name": "Yola (4)",
+      "profile": "Yolanda Claire Quartey (born 31 July 1983), known professionally as Yola or Yola Carter, is an English musician, singer and songwriter.",
+      "realname": "Yolanda Claire Quartey",
+      "releases_url": "https://api.discogs.com/artists/7004421/releases",
       "resource_url": "https://api.discogs.com/artists/7004421",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/7004421",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/7004421-Yola-4",
+      "urls": [
+        "https://www.iamyola.com/",
+        "https://iamyola.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Yola_(singer)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Yola', url='https://www.last.fm/music/Yola', mbid=None, listeners=134574, playcount=1659880, bio_summary='Yola (born Yolanda Quartey in Bristol in 1983) is a Grammy nominated English musician, singer and songwriter (she has also gone by the name Yola Carter). She became the lead singer of the band Phantom Limb, who self-released their first album in 2008 and has sung backing vocals for numerous artists (including Massive Attack, The Chemical Brothers and Iggy Azalea). \\n\\nFor the 62nd Grammy Award in 2020, her 2019 album \"Walk Through Fire\" generated three <a href=\"https://www.last.fm/music/Yola\">Read more on Last.fm</a>', bio_content='Yola (born Yolanda Quartey in Bristol in 1983) is a Grammy nominated English musician, singer and songwriter (she has also gone by the name Yola Carter). She became the lead singer of the band Phantom Limb, who self-released their first album in 2008 and has sung backing vocals for numerous artists (including Massive Attack, The Chemical Brothers and Iggy Azalea). \\n\\nFor the 62nd Grammy Award in 2020, her 2019 album \"Walk Through Fire\" generated three Grammy Award nominations; Best Americana Album for the album and the track \"Faraway Look\" was nominated for Best American Roots Song and Best American Roots Performance, and Yola herself was nominated for Best New Artist. <a href=\"https://www.last.fm/music/Yola\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['soul', 'country', 'country soul', 'americana', 'pop'], similar_artists=[{'name': 'The Highwomen', 'url': 'https://www.last.fm/music/The+Highwomen'}, {'name': 'The War and Treaty', 'url': 'https://www.last.fm/music/The+War+and+Treaty'}, {'name': 'Valerie June', 'url': 'https://www.last.fm/music/Valerie+June'}, {'name': 'Maren Morris', 'url': 'https://www.last.fm/music/Maren+Morris'}, {'name': 'Gabriels', 'url': 'https://www.last.fm/music/Gabriels'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Yola', 'url': 'https://www.last.fm/music/Yola', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '134574', 'playcount': '1659880'}, 'similar': {'artist': [{'name': 'The Highwomen', 'url': 'https://www.last.fm/music/The+Highwomen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The War and Treaty', 'url': 'https://www.last.fm/music/The+War+and+Treaty', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Valerie June', 'url': 'https://www.last.fm/music/Valerie+June', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Maren Morris', 'url': 'https://www.last.fm/music/Maren+Morris', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gabriels', 'url': 'https://www.last.fm/music/Gabriels', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'soul', 'url': 'https://www.last.fm/tag/soul'}, {'name': 'country', 'url': 'https://www.last.fm/tag/country'}, {'name': 'country soul', 'url': 'https://www.last.fm/tag/country+soul'}, {'name': 'americana', 'url': 'https://www.last.fm/tag/americana'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Yola/+wiki'}}, 'published': '23 Feb 2019, 20:37', 'summary': 'Yola (born Yolanda Quartey in Bristol in 1983) is a Grammy nominated English musician, singer and songwriter (she has also gone by the name Yola Carter). She became the lead singer of the band Phantom Limb, who self-released their first album in 2008 and has sung backing vocals for numerous artists (including Massive Attack, The Chemical Brothers and Iggy Azalea). \\n\\nFor the 62nd Grammy Award in 2020, her 2019 album \"Walk Through Fire\" generated three <a href=\"https://www.last.fm/music/Yola\">Read more on Last.fm</a>', 'content': 'Yola (born Yolanda Quartey in Bristol in 1983) is a Grammy nominated English musician, singer and songwriter (she has also gone by the name Yola Carter). She became the lead singer of the band Phantom Limb, who self-released their first album in 2008 and has sung backing vocals for numerous artists (including Massive Attack, The Chemical Brothers and Iggy Azalea). \\n\\nFor the 62nd Grammy Award in 2020, her 2019 album \"Walk Through Fire\" generated three Grammy Award nominations; Best Americana Album for the album and the track \"Faraway Look\" was nominated for Best American Roots Song and Best American Roots Performance, and Yola herself was nominated for Best New Artist. <a href=\"https://www.last.fm/music/Yola\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2gqMBdyddvN82dzZt4ZF14', url='https://open.spotify.com/artist/2gqMBdyddvN82dzZt4ZF14', name='Yola', popularity=47, followers=146751, genres=['retro soul', 'americana', 'folk'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb6fb4f9a3863db078af4f3707', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746fb4f9a3863db078af4f3707', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786fb4f9a3863db078af4f3707', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2gqMBdyddvN82dzZt4ZF14'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2gqMBdyddvN82dzZt4ZF14'}, 'followers': {'href': None, 'total': 146751}, 'genres': ['retro soul', 'americana', 'folk'], 'href': 'https://api.spotify.com/v1/artists/2gqMBdyddvN82dzZt4ZF14', 'id': '2gqMBdyddvN82dzZt4ZF14', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb6fb4f9a3863db078af4f3707', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051746fb4f9a3863db078af4f3707', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1786fb4f9a3863db078af4f3707', 'height': 160, 'width': 160}], 'name': 'Yola', 'popularity': 47, 'type': 'artist', 'uri': 'spotify:artist:2gqMBdyddvN82dzZt4ZF14'})",
@@ -359,6 +466,6 @@
   },
   "spotify_id": "2gqMBdyddvN82dzZt4ZF14",
   "spotify_url": "https://open.spotify.com/artist/2gqMBdyddvN82dzZt4ZF14",
-  "updated_at": "2026-10-22T14:13:52.772093",
+  "updated_at": "2026-10-30T18:48:24.107880",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Yola_(singer)"
 }

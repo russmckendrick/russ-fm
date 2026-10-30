@@ -120,22 +120,156 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='34274579', url='https://music.apple.com/gb/artist/snuff/34274579', name='Snuff', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/ee/c0/4d/eec04d33-7274-79da-e6c2-2cf2032d673f/mzl.orphblqy.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '34274579', 'type': 'artists', 'href': '/v1/catalog/gb/artists/34274579', 'attributes': {'name': 'Snuff', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/ee/c0/4d/eec04d33-7274-79da-e6c2-2cf2032d673f/mzl.orphblqy.jpg/{w}x{h}bb.jpg', 'bgColor': 'a1a79f', 'textColor1': '0e0e10', 'textColor2': '211e1f', 'textColor3': '2c2c2d', 'textColor4': '3a3938'}, 'url': 'https://music.apple.com/gb/artist/snuff/34274579'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/34274579/albums', 'data': [{'id': '528742329', 'type': 'albums', 'href': '/v1/catalog/gb/albums/528742329'}, {'id': '1426891657', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1426891657'}, {'id': '444195233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/444195233'}, {'id': '1615434476', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1615434476'}, {'id': '1692331544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1692331544'}, {'id': '528762410', 'type': 'albums', 'href': '/v1/catalog/gb/albums/528762410'}, {'id': '1513190056', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1513190056'}, {'id': '1730422359', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1730422359'}, {'id': '571481407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/571481407'}, {'id': '1686375519', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686375519'}, {'id': '889894651', 'type': 'albums', 'href': '/v1/catalog/gb/albums/889894651'}, {'id': '211933011', 'type': 'albums', 'href': '/v1/catalog/gb/albums/211933011'}, {'id': '580318959', 'type': 'albums', 'href': '/v1/catalog/gb/albums/580318959'}, {'id': '1781325229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781325229'}, {'id': '1661145407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1661145407'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "253286",
-      "images": [],
-      "members": [],
-      "name": "Snuff",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "253286",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/253286"
-      },
+      "data_quality": "Needs Vote",
+      "id": 253286,
+      "images": [
+        {
+          "height": 495,
+          "resource_url": "https://i.discogs.com/_1PakoLPcEaJuXVVhDaY2FWZCaVM7eJwHl21ABUpCyw/rs:fit/g:sm/q:90/h:495/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_1PakoLPcEaJuXVVhDaY2FWZCaVM7eJwHl21ABUpCyw/rs:fit/g:sm/q:90/h:495/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dfBqNB_mY3DZz1yTTI5eKwGrR4SaWt4DxKjNTj8v484/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 234,
+          "resource_url": "https://i.discogs.com/CceFXouIiyakZZBBikEevc0KMscsebQpWPjh4oSM-dE/rs:fit/g:sm/q:90/h:234/w:285/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CceFXouIiyakZZBBikEevc0KMscsebQpWPjh4oSM-dE/rs:fit/g:sm/q:90/h:234/w:285/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/-BVcGGo9vLKRKGzwxO1NkIOrYvx3OTSeBC6wZDveAwU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "width": 285
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/elV2P6Oo5GQsEWVk6BBooe8qrAM94LG4p4b18SnypTg/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/elV2P6Oo5GQsEWVk6BBooe8qrAM94LG4p4b18SnypTg/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/e0k3xqikLea3e9t2XRH8yK6A-nFcrKa5fPknYdXsHZ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/EfUNEbvBWT0vDG3xYGzbyVxsqNGEiPHiw8k9-hbScjY/rs:fit/g:sm/q:90/h:200/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EfUNEbvBWT0vDG3xYGzbyVxsqNGEiPHiw8k9-hbScjY/rs:fit/g:sm/q:90/h:200/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "uri150": "https://i.discogs.com/WFr2mdQCO9dUDGOcjIvLCqb1f3Qp4LrXMya4jfLLNfU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "width": 250
+        },
+        {
+          "height": 178,
+          "resource_url": "https://i.discogs.com/GVJI_fz2vXMapyVdHcuD8KS57TE1yHA97_52nGARe3s/rs:fit/g:sm/q:90/h:178/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GVJI_fz2vXMapyVdHcuD8KS57TE1yHA97_52nGARe3s/rs:fit/g:sm/q:90/h:178/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/19TA1RJQvvBJw4d9NKJScrmoHgk2ODB6oFWdLSpyrPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "width": 283
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/JiZisp_mjv0oTj6S6sprV8zaXt48aqoXou7LKhOD1pg/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JiZisp_mjv0oTj6S6sprV8zaXt48aqoXou7LKhOD1pg/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "uri150": "https://i.discogs.com/Kf7eAsi3ftYIjjf6fZ_lrbMZhgihqtwYN4lsrdeYp2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/tOxJc1VIbeAz4lXLhPZ1qDdKB47gIt8Fzt9uqkZkne0/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tOxJc1VIbeAz4lXLhPZ1qDdKB47gIt8Fzt9uqkZkne0/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/PazTkvSRi2rLvrw8_CW0MiuqdH8_-NPEirZDZjzgYIE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_20MTn8l3PMuG1C7ZAdBPP7ZItQp4VUDTcnFhUFZVcM/rs:fit/g:sm/q:90/h:600/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_20MTn8l3PMuG1C7ZAdBPP7ZItQp4VUDTcnFhUFZVcM/rs:fit/g:sm/q:90/h:600/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "uri150": "https://i.discogs.com/xGvfFeFs1yjtUDQfrvn8UjNdCy707CaQPEwVYL4vJzY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "width": 536
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 462148,
+          "name": "Simon Wells",
+          "resource_url": "https://api.discogs.com/artists/462148"
+        },
+        {
+          "active": true,
+          "id": 975802,
+          "name": "Lee Murphy (2)",
+          "resource_url": "https://api.discogs.com/artists/975802"
+        },
+        {
+          "active": true,
+          "id": 975803,
+          "name": "Duncan Redmonds",
+          "resource_url": "https://api.discogs.com/artists/975803"
+        },
+        {
+          "active": true,
+          "id": 975804,
+          "name": "Loz Wong",
+          "resource_url": "https://api.discogs.com/artists/975804"
+        },
+        {
+          "active": false,
+          "id": 997604,
+          "name": "Andy Crighton",
+          "resource_url": "https://api.discogs.com/artists/997604"
+        },
+        {
+          "active": true,
+          "id": 1000023,
+          "name": "Dave Redmonds",
+          "resource_url": "https://api.discogs.com/artists/1000023"
+        },
+        {
+          "active": false,
+          "id": 3038525,
+          "name": "Lee Erinmez",
+          "resource_url": "https://api.discogs.com/artists/3038525"
+        },
+        {
+          "active": true,
+          "id": 3078567,
+          "name": "Oli Stewart",
+          "resource_url": "https://api.discogs.com/artists/3078567"
+        },
+        {
+          "active": false,
+          "id": 3777401,
+          "name": "Paul Thomson (2)",
+          "resource_url": "https://api.discogs.com/artists/3777401"
+        },
+        {
+          "active": true,
+          "id": 3859815,
+          "name": "Dan Goatham",
+          "resource_url": "https://api.discogs.com/artists/3859815"
+        },
+        {
+          "active": true,
+          "id": 14375339,
+          "name": "Flo Redmonds",
+          "resource_url": "https://api.discogs.com/artists/14375339"
+        }
+      ],
+      "name": "Snuff (3)",
+      "profile": "Punk rock band from London, England formed in 1986.\r\nThey broke up in 1991 and then got back together again in 1994.\r\nAffiliated with [l33296].",
+      "releases_url": "https://api.discogs.com/artists/253286/releases",
       "resource_url": "https://api.discogs.com/artists/253286",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/253286",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/253286-Snuff-3",
+      "urls": [
+        "https://www.snuffband.com/",
+        "https://snuffband.bigcartel.com/",
+        "https://snuffuk.bandcamp.com",
+        "http://en.wikipedia.org/wiki/Snuff_%28band%29",
+        "http://www.myspace.com/snuffbanduk",
+        "https://www.facebook.com/snuffukband",
+        "http://www.fatwreck.com/band/index/17"
+      ]
     },
     "identity": {
       "musicbrainz_id": "3f909c24-94e3-42bd-b7e0-e720306bb3b0",
@@ -202,27 +336,162 @@
       "twitter": "1",
       "website": "www.fatwreck.com/band/index/17"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='34274579', url='https://music.apple.com/gb/artist/snuff/34274579', name='Snuff', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/ee/c0/4d/eec04d33-7274-79da-e6c2-2cf2032d673f/mzl.orphblqy.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '34274579', 'type': 'artists', 'href': '/v1/catalog/gb/artists/34274579', 'attributes': {'name': 'Snuff', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/ee/c0/4d/eec04d33-7274-79da-e6c2-2cf2032d673f/mzl.orphblqy.jpg/{w}x{h}bb.jpg', 'bgColor': 'a1a79f', 'textColor1': '0e0e10', 'textColor2': '211e1f', 'textColor3': '2c2c2d', 'textColor4': '3a3938'}, 'url': 'https://music.apple.com/gb/artist/snuff/34274579'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/34274579/albums', 'data': [{'id': '528742329', 'type': 'albums', 'href': '/v1/catalog/gb/albums/528742329'}, {'id': '1426891657', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1426891657'}, {'id': '444195233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/444195233'}, {'id': '1615434476', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1615434476'}, {'id': '1692331544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1692331544'}, {'id': '528762410', 'type': 'albums', 'href': '/v1/catalog/gb/albums/528762410'}, {'id': '1513190056', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1513190056'}, {'id': '1730422359', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1730422359'}, {'id': '571481407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/571481407'}, {'id': '1686375519', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686375519'}, {'id': '889894651', 'type': 'albums', 'href': '/v1/catalog/gb/albums/889894651'}, {'id': '211933011', 'type': 'albums', 'href': '/v1/catalog/gb/albums/211933011'}, {'id': '580318959', 'type': 'albums', 'href': '/v1/catalog/gb/albums/580318959'}, {'id': '1781325229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781325229'}, {'id': '1661145407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1661145407'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "253286",
-      "images": [],
-      "members": [],
-      "name": "Snuff",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "253286",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/253286"
-      },
+      "data_quality": "Needs Vote",
+      "id": 253286,
+      "images": [
+        {
+          "height": 495,
+          "resource_url": "https://i.discogs.com/_1PakoLPcEaJuXVVhDaY2FWZCaVM7eJwHl21ABUpCyw/rs:fit/g:sm/q:90/h:495/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/_1PakoLPcEaJuXVVhDaY2FWZCaVM7eJwHl21ABUpCyw/rs:fit/g:sm/q:90/h:495/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dfBqNB_mY3DZz1yTTI5eKwGrR4SaWt4DxKjNTj8v484/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTYxMTMyNTA3/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 234,
+          "resource_url": "https://i.discogs.com/CceFXouIiyakZZBBikEevc0KMscsebQpWPjh4oSM-dE/rs:fit/g:sm/q:90/h:234/w:285/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CceFXouIiyakZZBBikEevc0KMscsebQpWPjh4oSM-dE/rs:fit/g:sm/q:90/h:234/w:285/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/-BVcGGo9vLKRKGzwxO1NkIOrYvx3OTSeBC6wZDveAwU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xMTE5OTE3MjA4/LmpwZw.jpeg",
+          "width": 285
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/elV2P6Oo5GQsEWVk6BBooe8qrAM94LG4p4b18SnypTg/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/elV2P6Oo5GQsEWVk6BBooe8qrAM94LG4p4b18SnypTg/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/e0k3xqikLea3e9t2XRH8yK6A-nFcrKa5fPknYdXsHZ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU1/LTYxNzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/EfUNEbvBWT0vDG3xYGzbyVxsqNGEiPHiw8k9-hbScjY/rs:fit/g:sm/q:90/h:200/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EfUNEbvBWT0vDG3xYGzbyVxsqNGEiPHiw8k9-hbScjY/rs:fit/g:sm/q:90/h:200/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "uri150": "https://i.discogs.com/WFr2mdQCO9dUDGOcjIvLCqb1f3Qp4LrXMya4jfLLNfU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTE4NDQubXBv.jpeg",
+          "width": 250
+        },
+        {
+          "height": 178,
+          "resource_url": "https://i.discogs.com/GVJI_fz2vXMapyVdHcuD8KS57TE1yHA97_52nGARe3s/rs:fit/g:sm/q:90/h:178/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GVJI_fz2vXMapyVdHcuD8KS57TE1yHA97_52nGARe3s/rs:fit/g:sm/q:90/h:178/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/19TA1RJQvvBJw4d9NKJScrmoHgk2ODB6oFWdLSpyrPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNTE1MjQxNTU2/LTIyNTAuanBlZw.jpeg",
+          "width": 283
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/JiZisp_mjv0oTj6S6sprV8zaXt48aqoXou7LKhOD1pg/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JiZisp_mjv0oTj6S6sprV8zaXt48aqoXou7LKhOD1pg/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "uri150": "https://i.discogs.com/Kf7eAsi3ftYIjjf6fZ_lrbMZhgihqtwYN4lsrdeYp2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjQzMjM4NDYw/LTUyODUucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/tOxJc1VIbeAz4lXLhPZ1qDdKB47gIt8Fzt9uqkZkne0/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tOxJc1VIbeAz4lXLhPZ1qDdKB47gIt8Fzt9uqkZkne0/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/PazTkvSRi2rLvrw8_CW0MiuqdH8_-NPEirZDZjzgYIE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTQ4MDcucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_20MTn8l3PMuG1C7ZAdBPP7ZItQp4VUDTcnFhUFZVcM/rs:fit/g:sm/q:90/h:600/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_20MTn8l3PMuG1C7ZAdBPP7ZItQp4VUDTcnFhUFZVcM/rs:fit/g:sm/q:90/h:600/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "uri150": "https://i.discogs.com/xGvfFeFs1yjtUDQfrvn8UjNdCy707CaQPEwVYL4vJzY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzI4/Ni0xNjY1NTg3NzM5/LTIwMTIucG5n.jpeg",
+          "width": 536
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 462148,
+          "name": "Simon Wells",
+          "resource_url": "https://api.discogs.com/artists/462148"
+        },
+        {
+          "active": true,
+          "id": 975802,
+          "name": "Lee Murphy (2)",
+          "resource_url": "https://api.discogs.com/artists/975802"
+        },
+        {
+          "active": true,
+          "id": 975803,
+          "name": "Duncan Redmonds",
+          "resource_url": "https://api.discogs.com/artists/975803"
+        },
+        {
+          "active": true,
+          "id": 975804,
+          "name": "Loz Wong",
+          "resource_url": "https://api.discogs.com/artists/975804"
+        },
+        {
+          "active": false,
+          "id": 997604,
+          "name": "Andy Crighton",
+          "resource_url": "https://api.discogs.com/artists/997604"
+        },
+        {
+          "active": true,
+          "id": 1000023,
+          "name": "Dave Redmonds",
+          "resource_url": "https://api.discogs.com/artists/1000023"
+        },
+        {
+          "active": false,
+          "id": 3038525,
+          "name": "Lee Erinmez",
+          "resource_url": "https://api.discogs.com/artists/3038525"
+        },
+        {
+          "active": true,
+          "id": 3078567,
+          "name": "Oli Stewart",
+          "resource_url": "https://api.discogs.com/artists/3078567"
+        },
+        {
+          "active": false,
+          "id": 3777401,
+          "name": "Paul Thomson (2)",
+          "resource_url": "https://api.discogs.com/artists/3777401"
+        },
+        {
+          "active": true,
+          "id": 3859815,
+          "name": "Dan Goatham",
+          "resource_url": "https://api.discogs.com/artists/3859815"
+        },
+        {
+          "active": true,
+          "id": 14375339,
+          "name": "Flo Redmonds",
+          "resource_url": "https://api.discogs.com/artists/14375339"
+        }
+      ],
+      "name": "Snuff (3)",
+      "profile": "Punk rock band from London, England formed in 1986.\r\nThey broke up in 1991 and then got back together again in 1994.\r\nAffiliated with [l33296].",
+      "releases_url": "https://api.discogs.com/artists/253286/releases",
       "resource_url": "https://api.discogs.com/artists/253286",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/253286",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/253286-Snuff-3",
+      "urls": [
+        "https://www.snuffband.com/",
+        "https://snuffband.bigcartel.com/",
+        "https://snuffuk.bandcamp.com",
+        "http://en.wikipedia.org/wiki/Snuff_%28band%29",
+        "http://www.myspace.com/snuffbanduk",
+        "https://www.facebook.com/snuffukband",
+        "http://www.fatwreck.com/band/index/17"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Snuff', url='https://www.last.fm/music/Snuff', mbid='ed301477-89a3-409b-b16a-fb6891afc732', listeners=92135, playcount=1542257, bio_summary='There is more than one artist with this name:\\n\\n1) Snuff are a British band formed in London, UK in 1986 who primarily play punk rock, but have also veered off into Dub and Ska at times. Their name reportedly came about after a long discussion about names ended up with one of them claiming \\'That\\'s Enough\\', which was then shortened to Snuff. The original line up was Duncan Redmonds on drums and vocals, Simon Wells on guitar and vocals, and Andy Crighton on bass and vocals. <a href=\"https://www.last.fm/music/Snuff\">Read more on Last.fm</a>', bio_content='There is more than one artist with this name:\\n\\n1) Snuff are a British band formed in London, UK in 1986 who primarily play punk rock, but have also veered off into Dub and Ska at times. Their name reportedly came about after a long discussion about names ended up with one of them claiming \\'That\\'s Enough\\', which was then shortened to Snuff. The original line up was Duncan Redmonds on drums and vocals, Simon Wells on guitar and vocals, and Andy Crighton on bass and vocals. The band split up in 1991, but re-formed in 1994. The most recent version of Snuff sports Duncan Redmonds still on drums and vocals, Loz Wong on guitar and vocals,  Lee Batsford on bass and vocals, Dave Redmonds on trombone and Lee Murphy on keyboard.\\n\\nSnuff were one of the first British punk bands to be signed onto the influential Fat Wreck Chords label in the USA, and have been credited with paving the way for a second generation of UK bands on the label such as Goober Patrol and Consumed.\\n\\n02) Snuff is a 4-piece grindcore band from Los Angeles, California, USA. So far, they\\'ve had two releases circulate in the underground scene; the \\'Violence Solves Everything\\' demo CD-R from 2008 and their \\'Southland Grindcore Assault\\' full-length CD from 2012.\\n\\n03) Snuff is a Ukrainian Metalcore band.\\n\\n04) Snuff is an American Southern (Country) Rock band. The band was active in the 70s and 80s.\\n\\n05) Snuff is an anonymous Finnish power electronics project. They currently have cassette and LP releases on Bizarre Uproar\\'s Filth & Violence label.\\n\\n06) Snuff was the name used by Moler for their first EP Driven <a href=\"https://www.last.fm/music/Snuff\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['punk', 'punk rock', 'seen live', 'metalcore', 'skate punk'], similar_artists=[{'name': 'Good Riddance', 'url': 'https://www.last.fm/music/Good+Riddance'}, {'name': 'Leatherface', 'url': 'https://www.last.fm/music/Leatherface'}, {'name': 'No Use for a Name', 'url': 'https://www.last.fm/music/No+Use+for+a+Name'}, {'name': 'Pulley', 'url': 'https://www.last.fm/music/Pulley'}, {'name': 'Strung Out', 'url': 'https://www.last.fm/music/Strung+Out'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Snuff', 'mbid': 'ed301477-89a3-409b-b16a-fb6891afc732', 'url': 'https://www.last.fm/music/Snuff', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '92135', 'playcount': '1542257'}, 'similar': {'artist': [{'name': 'Good Riddance', 'url': 'https://www.last.fm/music/Good+Riddance', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Leatherface', 'url': 'https://www.last.fm/music/Leatherface', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'No Use for a Name', 'url': 'https://www.last.fm/music/No+Use+for+a+Name', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pulley', 'url': 'https://www.last.fm/music/Pulley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Strung Out', 'url': 'https://www.last.fm/music/Strung+Out', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'punk rock', 'url': 'https://www.last.fm/tag/punk+rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'metalcore', 'url': 'https://www.last.fm/tag/metalcore'}, {'name': 'skate punk', 'url': 'https://www.last.fm/tag/skate+punk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Snuff/+wiki'}}, 'published': '17 Jun 2006, 14:38', 'summary': 'There is more than one artist with this name:\\n\\n1) Snuff are a British band formed in London, UK in 1986 who primarily play punk rock, but have also veered off into Dub and Ska at times. Their name reportedly came about after a long discussion about names ended up with one of them claiming \\'That\\'s Enough\\', which was then shortened to Snuff. The original line up was Duncan Redmonds on drums and vocals, Simon Wells on guitar and vocals, and Andy Crighton on bass and vocals. <a href=\"https://www.last.fm/music/Snuff\">Read more on Last.fm</a>', 'content': 'There is more than one artist with this name:\\n\\n1) Snuff are a British band formed in London, UK in 1986 who primarily play punk rock, but have also veered off into Dub and Ska at times. Their name reportedly came about after a long discussion about names ended up with one of them claiming \\'That\\'s Enough\\', which was then shortened to Snuff. The original line up was Duncan Redmonds on drums and vocals, Simon Wells on guitar and vocals, and Andy Crighton on bass and vocals. The band split up in 1991, but re-formed in 1994. The most recent version of Snuff sports Duncan Redmonds still on drums and vocals, Loz Wong on guitar and vocals,  Lee Batsford on bass and vocals, Dave Redmonds on trombone and Lee Murphy on keyboard.\\n\\nSnuff were one of the first British punk bands to be signed onto the influential Fat Wreck Chords label in the USA, and have been credited with paving the way for a second generation of UK bands on the label such as Goober Patrol and Consumed.\\n\\n02) Snuff is a 4-piece grindcore band from Los Angeles, California, USA. So far, they\\'ve had two releases circulate in the underground scene; the \\'Violence Solves Everything\\' demo CD-R from 2008 and their \\'Southland Grindcore Assault\\' full-length CD from 2012.\\n\\n03) Snuff is a Ukrainian Metalcore band.\\n\\n04) Snuff is an American Southern (Country) Rock band. The band was active in the 70s and 80s.\\n\\n05) Snuff is an anonymous Finnish power electronics project. They currently have cassette and LP releases on Bizarre Uproar\\'s Filth & Violence label.\\n\\n06) Snuff was the name used by Moler for their first EP Driven <a href=\"https://www.last.fm/music/Snuff\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='39Yw8FPJXDJyf5L4vK7TD3', url='https://open.spotify.com/artist/39Yw8FPJXDJyf5L4vK7TD3', name='Snuff', popularity=29, followers=29787, genres=['skate punk', 'ska punk', 'punk', 'melodic hardcore', 'ska'], images=[{'url': 'https://i.scdn.co/image/ab6772690000c46c2434d4dae3648a89d5c7ea47', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd222434d4dae3648a89d5c7ea47', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac32434d4dae3648a89d5c7ea47', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f742434d4dae3648a89d5c7ea47', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/39Yw8FPJXDJyf5L4vK7TD3'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/39Yw8FPJXDJyf5L4vK7TD3'}, 'followers': {'href': None, 'total': 29787}, 'genres': ['skate punk', 'ska punk', 'punk', 'melodic hardcore', 'ska'], 'href': 'https://api.spotify.com/v1/artists/39Yw8FPJXDJyf5L4vK7TD3', 'id': '39Yw8FPJXDJyf5L4vK7TD3', 'images': [{'url': 'https://i.scdn.co/image/ab6772690000c46c2434d4dae3648a89d5c7ea47', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd222434d4dae3648a89d5c7ea47', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac32434d4dae3648a89d5c7ea47', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f742434d4dae3648a89d5c7ea47', 'height': 64, 'width': 64}], 'name': 'Snuff', 'popularity': 29, 'type': 'artist', 'uri': 'spotify:artist:39Yw8FPJXDJyf5L4vK7TD3'})",
@@ -286,6 +555,6 @@
   },
   "spotify_id": "39Yw8FPJXDJyf5L4vK7TD3",
   "spotify_url": "https://open.spotify.com/artist/39Yw8FPJXDJyf5L4vK7TD3",
-  "updated_at": "2026-10-22T14:11:18.769581",
+  "updated_at": "2026-10-30T18:45:22.626144",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Snuff_(British_band)"
 }

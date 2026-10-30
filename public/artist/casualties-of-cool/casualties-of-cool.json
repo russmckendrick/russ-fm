@@ -97,22 +97,171 @@
   "raw_data": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "3712038",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3712038,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/aFSRzhLfWa93E1-F3L8-_10DL9CZ8ILUhrsFRzAhKN0/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/aFSRzhLfWa93E1-F3L8-_10DL9CZ8ILUhrsFRzAhKN0/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/-52gi6_AmVnJVIuYoZK2HxXueeZ3x9-nhlS95LJS5hA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/tdnnE6G4lfI_JrgPJNYlbDA-bkPfTE6Nc2QqygtwNXo/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tdnnE6G4lfI_JrgPJNYlbDA-bkPfTE6Nc2QqygtwNXo/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4u5f5OAUaWxWUVmY2gLUeFdW3Y4Q_nDef5rV0R0iM0A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 251249,
+          "name": "Devin Townsend",
+          "resource_url": "https://api.discogs.com/artists/251249"
+        },
+        {
+          "active": true,
+          "id": 4559458,
+          "name": "Ché Aimee Dorval",
+          "resource_url": "https://api.discogs.com/artists/4559458"
+        }
+      ],
       "name": "Casualties Of Cool",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3712038",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3712038"
-      },
+      "profile": "Canadian country rock duo consisting of Devin Townsend and Ché Aimee Dorval. Townsend founded the project in 2010, and officially announced it in 2012. The duo's self-titled debut album was released in May 2014; it was partially funded by crowdfunding.",
+      "releases_url": "https://api.discogs.com/artists/3712038/releases",
       "resource_url": "https://api.discogs.com/artists/3712038",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3712038",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3712038-Casualties-Of-Cool",
+      "urls": [
+        "http://casualtiesofcool.com/",
+        "http://devintownsend.com/"
+      ]
+    },
+    "identity": {
+      "musicbrainz_id": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
+      "resolved_at": "2026-10-22T14:05:39.536805",
+      "wikidata_id": "Q30316780",
+      "wikipedia_title": null
+    },
+    "lastfm": "ArtistLastFmData(name='Casualties of Cool', url='https://www.last.fm/music/Casualties+of+Cool', mbid='b2bd4745-74e6-46e9-92fd-b3e4714e310a', listeners=9108, playcount=595034, bio_summary='Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>', bio_content='Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['country rock', 'blues rock', 'country', 'ambient', 'chillout'], similar_artists=[{'name': 'Devin Townsend', 'url': 'https://www.last.fm/music/Devin+Townsend'}, {'name': 'Devin Townsend Project', 'url': 'https://www.last.fm/music/Devin+Townsend+Project'}, {'name': 'Me and That Man', 'url': 'https://www.last.fm/music/Me+and+That+Man'}, {'name': 'The Devin Townsend Band', 'url': 'https://www.last.fm/music/The+Devin+Townsend+Band'}, {'name': 'Strapping Young Lad', 'url': 'https://www.last.fm/music/Strapping+Young+Lad'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Casualties of Cool', 'mbid': 'b2bd4745-74e6-46e9-92fd-b3e4714e310a', 'url': 'https://www.last.fm/music/Casualties+of+Cool', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '9108', 'playcount': '595034'}, 'similar': {'artist': [{'name': 'Devin Townsend', 'url': 'https://www.last.fm/music/Devin+Townsend', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Devin Townsend Project', 'url': 'https://www.last.fm/music/Devin+Townsend+Project', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Me and That Man', 'url': 'https://www.last.fm/music/Me+and+That+Man', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Devin Townsend Band', 'url': 'https://www.last.fm/music/The+Devin+Townsend+Band', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Strapping Young Lad', 'url': 'https://www.last.fm/music/Strapping+Young+Lad', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'country rock', 'url': 'https://www.last.fm/tag/country+rock'}, {'name': 'blues rock', 'url': 'https://www.last.fm/tag/blues+rock'}, {'name': 'country', 'url': 'https://www.last.fm/tag/country'}, {'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Casualties+of+Cool/+wiki'}}, 'published': '22 Feb 2014, 14:46', 'summary': 'Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>', 'content': 'Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": {},
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "",
+      "biography_de": null,
+      "biography_en": "Casualties of Cool is the debut album of country rock group Casualties of Cool, consisting of Canadian musicians Devin Townsend and Ché Aimee Dorval. It was partially funded by the crowdfunding site PledgeMusic, and was released on May 14, 2014. The album is a concept album.\n\nThe Casualties of Cool project was published officially and went into production in 2012, after Epicloud's release, although Townsend had been working on it since 2010. In September 2012, Townsend stated, \"Casualties of Cool is a duo with myself and Ché. It sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I've done. Ché sings most of the leads, and it's probably the truest reflection of who I am in life at this point\". Later Townsend mentioned that Casualties of Cool features \"music closest to his heart\" at this point of his life, referring the album to be \"a special one\", \"one of the most favorite things he's ever done\" and \"really satisfying to do\". Townsend has also said the album is \"much needed serious music for him\" and that it is an important project he doesn't want to rush.\n\nIn August 2013, Townsend stated Casualties of Cool is done and \"heading to mastering\", but in early November 2013 he noted that the album was still being mixed. On November 19, 2013, Townsend posted that Casualties of Cool was completed, and next in line was mastering the album and ultimately compiling a bonus disc. The bonus disc contains the leftover material from the main album as well as songs from Ghost 2, the unreleased compilation of leftover tracks from Ghost. The release date was originally scheduled for April 2014, but was later postponed to May 2014. In February 2014, Townsend mentioned he revisited the mix many times since the album went to mastering. Originally in 2012, Townsend stated that this album would be the sixth and the last album in the Devin Townsend Project series, but in February 2014, he confirmed that Casualties of Cool is its own project, not a part of Devin Townsend Project or his solo material. Townsend also planned to start a crowdfunding campaign to support the release of the album. The campaign started on February 22, 2014, through PledgeMusic, and at the same time the release date was confirmed to May 14, 2014. The funding quickly reached its goal, and all additional funds are put directly to Townsend's upcoming projects.\n\nTownsend described the story as being about a traveler that is lured to a sentient planet, which feeds on the traveler's fear. The traveler finds solace in an old radio and later an old phonograph. Eventually, he confronts his own fear, and his \"force of will to not submit to the fear\" liberates a woman held inside the planet, which also frees his own soul.",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "2013",
+      "country": " Vancouver, Canada",
+      "country_code": "CA",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": "",
+      "formed_year": "2013",
+      "gender": "Mixed",
+      "genre": "Alternative Rock",
+      "id": "129456",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/vrqqpy1400873481.jpg",
+          "width": 1000
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/yypvvq1469002026.jpg",
+          "width": 1920
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/yusyvw1469002039.jpg",
+          "width": 1920
+        },
+        {
+          "height": 155,
+          "resource_url": null,
+          "type": "logo",
+          "url": "https://www.theaudiodb.com/images/media/artist/logo/yuxxpq1469002222.png",
+          "width": 400
+        }
+      ],
+      "last_fm_chart": null,
+      "members": "2",
+      "mood": "Dreamy",
+      "music_videos": null,
+      "musicbrainz_id": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
+      "name": "Casualties of Cool",
+      "raw_data": {},
+      "style": "Country",
+      "twitter": "1",
+      "website": "casualtiesofcool.com"
+    },
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
+  },
+  "services": {
+    "apple_music": {},
+    "discogs": {
+      "data_quality": "Needs Vote",
+      "id": 3712038,
+      "images": [
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/aFSRzhLfWa93E1-F3L8-_10DL9CZ8ILUhrsFRzAhKN0/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/aFSRzhLfWa93E1-F3L8-_10DL9CZ8ILUhrsFRzAhKN0/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/-52gi6_AmVnJVIuYoZK2HxXueeZ3x9-nhlS95LJS5hA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk3/OC00ODgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/tdnnE6G4lfI_JrgPJNYlbDA-bkPfTE6Nc2QqygtwNXo/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tdnnE6G4lfI_JrgPJNYlbDA-bkPfTE6Nc2QqygtwNXo/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4u5f5OAUaWxWUVmY2gLUeFdW3Y4Q_nDef5rV0R0iM0A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/MzgtMTM5OTM3MTk1/NC04ODY5LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 251249,
+          "name": "Devin Townsend",
+          "resource_url": "https://api.discogs.com/artists/251249"
+        },
+        {
+          "active": true,
+          "id": 4559458,
+          "name": "Ché Aimee Dorval",
+          "resource_url": "https://api.discogs.com/artists/4559458"
+        }
+      ],
+      "name": "Casualties Of Cool",
+      "profile": "Canadian country rock duo consisting of Devin Townsend and Ché Aimee Dorval. Townsend founded the project in 2010, and officially announced it in 2012. The duo's self-titled debut album was released in May 2014; it was partially funded by crowdfunding.",
+      "releases_url": "https://api.discogs.com/artists/3712038/releases",
+      "resource_url": "https://api.discogs.com/artists/3712038",
+      "uri": "https://www.discogs.com/artist/3712038-Casualties-Of-Cool",
+      "urls": [
+        "http://casualtiesofcool.com/",
+        "http://devintownsend.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Casualties of Cool', url='https://www.last.fm/music/Casualties+of+Cool', mbid='b2bd4745-74e6-46e9-92fd-b3e4714e310a', listeners=9108, playcount=595034, bio_summary='Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>', bio_content='Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['country rock', 'blues rock', 'country', 'ambient', 'chillout'], similar_artists=[{'name': 'Devin Townsend', 'url': 'https://www.last.fm/music/Devin+Townsend'}, {'name': 'Devin Townsend Project', 'url': 'https://www.last.fm/music/Devin+Townsend+Project'}, {'name': 'Me and That Man', 'url': 'https://www.last.fm/music/Me+and+That+Man'}, {'name': 'The Devin Townsend Band', 'url': 'https://www.last.fm/music/The+Devin+Townsend+Band'}, {'name': 'Strapping Young Lad', 'url': 'https://www.last.fm/music/Strapping+Young+Lad'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Casualties of Cool', 'mbid': 'b2bd4745-74e6-46e9-92fd-b3e4714e310a', 'url': 'https://www.last.fm/music/Casualties+of+Cool', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '9108', 'playcount': '595034'}, 'similar': {'artist': [{'name': 'Devin Townsend', 'url': 'https://www.last.fm/music/Devin+Townsend', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Devin Townsend Project', 'url': 'https://www.last.fm/music/Devin+Townsend+Project', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Me and That Man', 'url': 'https://www.last.fm/music/Me+and+That+Man', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Devin Townsend Band', 'url': 'https://www.last.fm/music/The+Devin+Townsend+Band', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Strapping Young Lad', 'url': 'https://www.last.fm/music/Strapping+Young+Lad', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'country rock', 'url': 'https://www.last.fm/tag/country+rock'}, {'name': 'blues rock', 'url': 'https://www.last.fm/tag/blues+rock'}, {'name': 'country', 'url': 'https://www.last.fm/tag/country'}, {'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Casualties+of+Cool/+wiki'}}, 'published': '22 Feb 2014, 14:46', 'summary': 'Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>', 'content': 'Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\\n\\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": {},
@@ -181,158 +330,8 @@
       "website": "casualtiesofcool.com"
     }
   },
-  "services": {
-    "apple_music": {},
-    "discogs": {
-      "cover_image": "",
-      "id": "3712038",
-      "images": [],
-      "members": [],
-      "name": "Casualties Of Cool",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3712038",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3712038"
-      },
-      "resource_url": "https://api.discogs.com/artists/3712038",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3712038",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": "Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\n\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\n\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 9108,
-      "mbid": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
-      "name": "Casualties of Cool",
-      "playcount": 595034,
-      "similar_artists": [
-        {
-          "name": "Devin Townsend",
-          "url": "https://www.last.fm/music/Devin+Townsend"
-        },
-        {
-          "name": "Devin Townsend Project",
-          "url": "https://www.last.fm/music/Devin+Townsend+Project"
-        },
-        {
-          "name": "Me and That Man",
-          "url": "https://www.last.fm/music/Me+and+That+Man"
-        },
-        {
-          "name": "The Devin Townsend Band",
-          "url": "https://www.last.fm/music/The+Devin+Townsend+Band"
-        },
-        {
-          "name": "Strapping Young Lad",
-          "url": "https://www.last.fm/music/Strapping+Young+Lad"
-        }
-      ],
-      "tags": [
-        "country rock",
-        "blues rock",
-        "country",
-        "ambient",
-        "chillout"
-      ],
-      "url": "https://www.last.fm/music/Casualties+of+Cool"
-    },
-    "spotify": {},
-    "theaudiodb": {
-      "albums": null,
-      "alternate_names": "",
-      "biography_de": null,
-      "biography_en": "Casualties of Cool is the debut album of country rock group Casualties of Cool, consisting of Canadian musicians Devin Townsend and Ché Aimee Dorval. It was partially funded by the crowdfunding site PledgeMusic, and was released on May 14, 2014. The album is a concept album.\n\nThe Casualties of Cool project was published officially and went into production in 2012, after Epicloud's release, although Townsend had been working on it since 2010. In September 2012, Townsend stated, \"Casualties of Cool is a duo with myself and Ché. It sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I've done. Ché sings most of the leads, and it's probably the truest reflection of who I am in life at this point\". Later Townsend mentioned that Casualties of Cool features \"music closest to his heart\" at this point of his life, referring the album to be \"a special one\", \"one of the most favorite things he's ever done\" and \"really satisfying to do\". Townsend has also said the album is \"much needed serious music for him\" and that it is an important project he doesn't want to rush.\n\nIn August 2013, Townsend stated Casualties of Cool is done and \"heading to mastering\", but in early November 2013 he noted that the album was still being mixed. On November 19, 2013, Townsend posted that Casualties of Cool was completed, and next in line was mastering the album and ultimately compiling a bonus disc. The bonus disc contains the leftover material from the main album as well as songs from Ghost 2, the unreleased compilation of leftover tracks from Ghost. The release date was originally scheduled for April 2014, but was later postponed to May 2014. In February 2014, Townsend mentioned he revisited the mix many times since the album went to mastering. Originally in 2012, Townsend stated that this album would be the sixth and the last album in the Devin Townsend Project series, but in February 2014, he confirmed that Casualties of Cool is its own project, not a part of Devin Townsend Project or his solo material. Townsend also planned to start a crowdfunding campaign to support the release of the album. The campaign started on February 22, 2014, through PledgeMusic, and at the same time the release date was confirmed to May 14, 2014. The funding quickly reached its goal, and all additional funds are put directly to Townsend's upcoming projects.\n\nTownsend described the story as being about a traveler that is lured to a sentient planet, which feeds on the traveler's fear. The traveler finds solace in an old radio and later an old phonograph. Eventually, he confronts his own fear, and his \"force of will to not submit to the fear\" liberates a woman held inside the planet, which also frees his own soul.",
-      "biography_es": null,
-      "biography_fr": null,
-      "biography_it": null,
-      "biography_jp": null,
-      "biography_nl": null,
-      "biography_pt": null,
-      "biography_ru": null,
-      "biography_se": null,
-      "born_year": "2013",
-      "country": " Vancouver, Canada",
-      "country_code": "CA",
-      "died_year": null,
-      "disbanded": false,
-      "facebook": "",
-      "formed_year": "2013",
-      "gender": "Mixed",
-      "genre": "Alternative Rock",
-      "id": "129456",
-      "images": [
-        {
-          "height": 1000,
-          "resource_url": null,
-          "type": "artist",
-          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/vrqqpy1400873481.jpg",
-          "width": 1000
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/yypvvq1469002026.jpg",
-          "width": 1920
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/yusyvw1469002039.jpg",
-          "width": 1920
-        },
-        {
-          "height": 155,
-          "resource_url": null,
-          "type": "logo",
-          "url": "https://www.theaudiodb.com/images/media/artist/logo/yuxxpq1469002222.png",
-          "width": 400
-        }
-      ],
-      "last_fm_chart": null,
-      "members": "2",
-      "mood": "Dreamy",
-      "music_videos": null,
-      "musicbrainz_id": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
-      "name": "Casualties of Cool",
-      "raw_data": {},
-      "style": "Country",
-      "twitter": "1",
-      "website": "casualtiesofcool.com"
-    }
-  },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2025-07-13T13:15:16.028728",
+  "updated_at": "2026-10-30T18:37:29.267526",
   "wikipedia_url": null
 }

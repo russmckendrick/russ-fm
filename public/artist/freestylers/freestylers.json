@@ -112,22 +112,103 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='3295881', url='https://music.apple.com/gb/artist/freestylers/3295881', name='Freestylers', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f7/83/21/f783218e-2611-3850-635b-e27419e9e0d4/mzl.ciukbheo.jpg/2000x2000bb.jpg', genres=['Dance'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3295881', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3295881', 'attributes': {'artwork': {'bgColor': '100e0e', 'height': 1200, 'textColor1': 'e8c5b4', 'textColor2': 'dcb19f', 'textColor3': 'bca193', 'textColor4': 'b39082', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f7/83/21/f783218e-2611-3850-635b-e27419e9e0d4/mzl.ciukbheo.jpg/{w}x{h}bb.jpg', 'width': 1200}, 'genreNames': ['Dance'], 'name': 'Freestylers', 'url': 'https://music.apple.com/gb/artist/freestylers/3295881'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3295881/albums', 'next': '/v1/catalog/gb/artists/3295881/albums?offset=25', 'data': [{'id': '1145023209', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145023209'}, {'id': '1542599847', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542599847'}, {'id': '1141389205', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1141389205'}, {'id': '925643047', 'type': 'albums', 'href': '/v1/catalog/gb/albums/925643047'}, {'id': '982207167', 'type': 'albums', 'href': '/v1/catalog/gb/albums/982207167'}, {'id': '1840631499', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1840631499'}, {'id': '648914796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/648914796'}, {'id': '1472343792', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1472343792'}, {'id': '1540283128', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540283128'}, {'id': '1308182453', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1308182453'}, {'id': '1145708434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145708434'}, {'id': '1198381153', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1198381153'}, {'id': '1829031748', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1829031748'}, {'id': '1656545351', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1656545351'}, {'id': '1290393611', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1290393611'}, {'id': '1807357389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807357389'}, {'id': '1313736993', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1313736993'}, {'id': '925640694', 'type': 'albums', 'href': '/v1/catalog/gb/albums/925640694'}, {'id': '1146202796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146202796'}, {'id': '976197645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/976197645'}, {'id': '1284150523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1284150523'}, {'id': '1788349491', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788349491'}, {'id': '1435585717', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1435585717'}, {'id': '1145917955', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145917955'}, {'id': '1788353727', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788353727'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3163",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 69530,
+          "name": "Raw As F**k",
+          "resource_url": "https://api.discogs.com/artists/69530"
+        },
+        {
+          "id": 532669,
+          "name": "Ghettofunk (2)",
+          "resource_url": "https://api.discogs.com/artists/532669"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 3163,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NUY9bOf9RBg3n6hyQDxPkrQugGdUnmnWwlO3YghWUW0/rs:fit/g:sm/q:90/h:600/w:445/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/NUY9bOf9RBg3n6hyQDxPkrQugGdUnmnWwlO3YghWUW0/rs:fit/g:sm/q:90/h:600/w:445/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/ez3k83hy6Jugcq-BdlrV_OiPxL-WBTcLUJyPfc_lZRY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "width": 445
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/H0vn1u_ExEZHiWXuwJSkAIMpu2wrQdKMDxPGcEJkwf4/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/H0vn1u_ExEZHiWXuwJSkAIMpu2wrQdKMDxPGcEJkwf4/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/s7zosrtLn490vzvA-1U-S2heJYde6GVawHsQfOBVACc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/cUkm6LhIVId5QUj10FbznnKG_wXeM9ymxg-MB-Ln5N0/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cUkm6LhIVId5QUj10FbznnKG_wXeM9ymxg-MB-Ln5N0/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/QGh51ssXiX3nY4ohoLD7SetOgYzEW7ZlWWiY1V44LQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 14803,
+          "name": "Matt Cantor",
+          "resource_url": "https://api.discogs.com/artists/14803"
+        },
+        {
+          "active": true,
+          "id": 59565,
+          "name": "Aston Harvey",
+          "resource_url": "https://api.discogs.com/artists/59565"
+        },
+        {
+          "active": false,
+          "id": 143414,
+          "name": "Andrew Galea",
+          "resource_url": "https://api.discogs.com/artists/143414"
+        },
+        {
+          "active": true,
+          "id": 1134952,
+          "name": "Chris Bishop (4)",
+          "resource_url": "https://api.discogs.com/artists/1134952"
+        },
+        {
+          "active": false,
+          "id": 2086183,
+          "name": "Frederick J. Carter",
+          "resource_url": "https://api.discogs.com/artists/2086183"
+        }
+      ],
       "name": "Freestylers",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3163",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3163"
-      },
+      "namevariations": [
+        "Free Stylers",
+        "Free-Stylers",
+        "Freestyle",
+        "Freestyler",
+        "Freestylers, The",
+        "Freestyles",
+        "The Freestylers"
+      ],
+      "profile": "Breakbeat DJ & producer duo composed of Aston Harvey and Matt Cantor from London, UK.",
+      "realname": "Matt Cantor, Andrew Galea, Aston Harvey",
+      "releases_url": "https://api.discogs.com/artists/3163/releases",
       "resource_url": "https://api.discogs.com/artists/3163",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3163",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3163-Freestylers",
+      "urls": [
+        "http://www.freestylersmusic.co.uk/",
+        "http://www.myspace.com/freestylersmusic",
+        "http://www.facebook.com/freestylersofficial",
+        "http://twitter.com/thefreestylers",
+        "http://soundcloud.com/freestylers",
+        "http://www.youtube.com/user/FreestylersOfficial",
+        "https://en.wikipedia.org/wiki/Freestylers",
+        "https://thefreestylers.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "60dd8303-5ee8-4c99-a19c-009e07c17aeb",
@@ -201,27 +282,109 @@
         "track": "Push Up",
         "uri": "http://www.youtube.com/watch?v=uikiBuLfUDg"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='3295881', url='https://music.apple.com/gb/artist/freestylers/3295881', name='Freestylers', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f7/83/21/f783218e-2611-3850-635b-e27419e9e0d4/mzl.ciukbheo.jpg/2000x2000bb.jpg', genres=['Dance'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '3295881', 'type': 'artists', 'href': '/v1/catalog/gb/artists/3295881', 'attributes': {'artwork': {'bgColor': '100e0e', 'height': 1200, 'textColor1': 'e8c5b4', 'textColor2': 'dcb19f', 'textColor3': 'bca193', 'textColor4': 'b39082', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f7/83/21/f783218e-2611-3850-635b-e27419e9e0d4/mzl.ciukbheo.jpg/{w}x{h}bb.jpg', 'width': 1200}, 'genreNames': ['Dance'], 'name': 'Freestylers', 'url': 'https://music.apple.com/gb/artist/freestylers/3295881'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/3295881/albums', 'next': '/v1/catalog/gb/artists/3295881/albums?offset=25', 'data': [{'id': '1145023209', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145023209'}, {'id': '1542599847', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542599847'}, {'id': '1141389205', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1141389205'}, {'id': '925643047', 'type': 'albums', 'href': '/v1/catalog/gb/albums/925643047'}, {'id': '982207167', 'type': 'albums', 'href': '/v1/catalog/gb/albums/982207167'}, {'id': '1840631499', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1840631499'}, {'id': '648914796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/648914796'}, {'id': '1472343792', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1472343792'}, {'id': '1540283128', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540283128'}, {'id': '1308182453', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1308182453'}, {'id': '1145708434', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145708434'}, {'id': '1198381153', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1198381153'}, {'id': '1829031748', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1829031748'}, {'id': '1656545351', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1656545351'}, {'id': '1290393611', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1290393611'}, {'id': '1807357389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807357389'}, {'id': '1313736993', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1313736993'}, {'id': '925640694', 'type': 'albums', 'href': '/v1/catalog/gb/albums/925640694'}, {'id': '1146202796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1146202796'}, {'id': '976197645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/976197645'}, {'id': '1284150523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1284150523'}, {'id': '1788349491', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788349491'}, {'id': '1435585717', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1435585717'}, {'id': '1145917955', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1145917955'}, {'id': '1788353727', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1788353727'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3163",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 69530,
+          "name": "Raw As F**k",
+          "resource_url": "https://api.discogs.com/artists/69530"
+        },
+        {
+          "id": 532669,
+          "name": "Ghettofunk (2)",
+          "resource_url": "https://api.discogs.com/artists/532669"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 3163,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/NUY9bOf9RBg3n6hyQDxPkrQugGdUnmnWwlO3YghWUW0/rs:fit/g:sm/q:90/h:600/w:445/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/NUY9bOf9RBg3n6hyQDxPkrQugGdUnmnWwlO3YghWUW0/rs:fit/g:sm/q:90/h:600/w:445/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/ez3k83hy6Jugcq-BdlrV_OiPxL-WBTcLUJyPfc_lZRY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTIxNTE5NzMyNi5q/cGVn.jpeg",
+          "width": 445
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/H0vn1u_ExEZHiWXuwJSkAIMpu2wrQdKMDxPGcEJkwf4/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/H0vn1u_ExEZHiWXuwJSkAIMpu2wrQdKMDxPGcEJkwf4/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/s7zosrtLn490vzvA-1U-S2heJYde6GVawHsQfOBVACc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE1ODE2NDQxNy5q/cGVn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/cUkm6LhIVId5QUj10FbznnKG_wXeM9ymxg-MB-Ln5N0/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cUkm6LhIVId5QUj10FbznnKG_wXeM9ymxg-MB-Ln5N0/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/QGh51ssXiX3nY4ohoLD7SetOgYzEW7ZlWWiY1V44LQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNjMt/MTE5MTQ4MzUyNy5q/cGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 14803,
+          "name": "Matt Cantor",
+          "resource_url": "https://api.discogs.com/artists/14803"
+        },
+        {
+          "active": true,
+          "id": 59565,
+          "name": "Aston Harvey",
+          "resource_url": "https://api.discogs.com/artists/59565"
+        },
+        {
+          "active": false,
+          "id": 143414,
+          "name": "Andrew Galea",
+          "resource_url": "https://api.discogs.com/artists/143414"
+        },
+        {
+          "active": true,
+          "id": 1134952,
+          "name": "Chris Bishop (4)",
+          "resource_url": "https://api.discogs.com/artists/1134952"
+        },
+        {
+          "active": false,
+          "id": 2086183,
+          "name": "Frederick J. Carter",
+          "resource_url": "https://api.discogs.com/artists/2086183"
+        }
+      ],
       "name": "Freestylers",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3163",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3163"
-      },
+      "namevariations": [
+        "Free Stylers",
+        "Free-Stylers",
+        "Freestyle",
+        "Freestyler",
+        "Freestylers, The",
+        "Freestyles",
+        "The Freestylers"
+      ],
+      "profile": "Breakbeat DJ & producer duo composed of Aston Harvey and Matt Cantor from London, UK.",
+      "realname": "Matt Cantor, Andrew Galea, Aston Harvey",
+      "releases_url": "https://api.discogs.com/artists/3163/releases",
       "resource_url": "https://api.discogs.com/artists/3163",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3163",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3163-Freestylers",
+      "urls": [
+        "http://www.freestylersmusic.co.uk/",
+        "http://www.myspace.com/freestylersmusic",
+        "http://www.facebook.com/freestylersofficial",
+        "http://twitter.com/thefreestylers",
+        "http://soundcloud.com/freestylers",
+        "http://www.youtube.com/user/FreestylersOfficial",
+        "https://en.wikipedia.org/wiki/Freestylers",
+        "https://thefreestylers.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Freestylers', url='https://www.last.fm/music/Freestylers', mbid='60dd8303-5ee8-4c99-a19c-009e07c17aeb', listeners=491848, playcount=4885158, bio_summary='United Kingdom\\nThe Freestylers formed in 1996 when DJs and dance music producers Matt Cantor, Aston Harvey and (initially) Andrew Galea joined forces. All three of them had been involved in the British dance music scene since the 1980s. Cantor had recorded as Cut n\\' Paste and Strike with Andy Gardner (Plump DJs). Aston Harvey recorded as Blapps! Posse best known for the 1990 breakbeat dance hit \"Don\\'t Hold Back\" before working with Definition of Sound, Rebel MC and DJ Rap (as DJ Rap and Aston). <a href=\"https://www.last.fm/music/Freestylers\">Read more on Last.fm</a>', bio_content='United Kingdom\\nThe Freestylers formed in 1996 when DJs and dance music producers Matt Cantor, Aston Harvey and (initially) Andrew Galea joined forces. All three of them had been involved in the British dance music scene since the 1980s. Cantor had recorded as Cut n\\' Paste and Strike with Andy Gardner (Plump DJs). Aston Harvey recorded as Blapps! Posse best known for the 1990 breakbeat dance hit \"Don\\'t Hold Back\" before working with Definition of Sound, Rebel MC and DJ Rap (as DJ Rap and Aston). Harvey joined with Galea under the name Sol Brothers before Cantor was recruited to form the Freestylers. The group took their name from their first sample \"Don\\'t Stop The Rock\" by Freestyle.\\n\\nThe trio\\'s first single \"Drop The Boom (AK-48)\" on their own Scratch City Records in 1996 becoming a dancefloor hit in the UK and Miami. The band released the Freestyle EP in 1996 on Freskanova (Freskanova\\'s parent label, Fresh, had released Cantor, Galea and Harvey\\'s previous work). Andrew Galea left the Freestylers shortly after the release of the Freestyle EP.\\n\\nAfter the departure of Andrew Galea, Matt and Aston formed an 11-piece band (initially an idea of their record label, Freskanova). This consisted of the 2 producers (Cantor and Harvey), a scratch DJ (Mad Doctor X), a guitarist (Tony Ayiotou), drummer (Clive Jenner), bass guitarist (Joe Henson), 2 MCs (MC Navigator and Tenor Fly) and 3 breakdancers (Coza, Marat, Tim).\\n\\nThe band\\'s first album We Rock Hard was released in 1998. The single \"B-Boy Stance\" became a singles hit in the UK in 1998 featuring the contributions of rapper Tenor Fly. In 1999, the Freestylers enjoyed success in the U.S. with track \"Don\\'t Stop\" reached the top 10 of the Billboard dance charts and \"Here We Go\" becoming a MTV Buzzworthy clip. We Rock Hard sold well in the US selling over 150,000 and reaching the top 30 of the Billboard Heatseeker chart.\\n\\nFollowing the success of B-Boy Stance, the band were asked to remix tracks by Audioweb, Afrika Bambaataa and the Jungle Brothers as well as a big beat compilation album FSUK 2 and a Radio 1 Essential Mix featuring Beenie Man, Public Enemy, Whodini and The Fall.\\n\\nThe Freestylers released a mix album Electro Science in 2000. Their second album Pressure Point was released in 2001 with the track Get Down Massive featuring Navigator reaching top 20 on the Billboard dance charts in 2002.\\n\\nDuring 2002 and 2003 the group began releasing singles under the artist name Raw As F**k which then became the title of their third album. Released in 2004, it featured the single \"Push Up\", which reached the top 30 in the UK and top 3 in Australia. Another single, which was previously released before \"Push Up\", called \"Get A Life\", was re-released and reached the top 20 in Australia. <a href=\"https://www.last.fm/music/Freestylers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['breakbeat', 'electronic', 'breaks', 'dance', 'electronica'], similar_artists=[{'name': 'Plump DJs', 'url': 'https://www.last.fm/music/Plump+DJs'}, {'name': 'Stanton Warriors', 'url': 'https://www.last.fm/music/Stanton+Warriors'}, {'name': 'Colombo', 'url': 'https://www.last.fm/music/Colombo'}, {'name': 'Deekline', 'url': 'https://www.last.fm/music/Deekline'}, {'name': 'Ils', 'url': 'https://www.last.fm/music/Ils'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Freestylers', 'mbid': '60dd8303-5ee8-4c99-a19c-009e07c17aeb', 'url': 'https://www.last.fm/music/Freestylers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '491848', 'playcount': '4885158'}, 'similar': {'artist': [{'name': 'Plump DJs', 'url': 'https://www.last.fm/music/Plump+DJs', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Stanton Warriors', 'url': 'https://www.last.fm/music/Stanton+Warriors', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Colombo', 'url': 'https://www.last.fm/music/Colombo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Deekline', 'url': 'https://www.last.fm/music/Deekline', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ils', 'url': 'https://www.last.fm/music/Ils', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'breakbeat', 'url': 'https://www.last.fm/tag/breakbeat'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'breaks', 'url': 'https://www.last.fm/tag/breaks'}, {'name': 'dance', 'url': 'https://www.last.fm/tag/dance'}, {'name': 'electronica', 'url': 'https://www.last.fm/tag/electronica'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Freestylers/+wiki'}}, 'published': '03 Jun 2006, 10:54', 'summary': 'United Kingdom\\nThe Freestylers formed in 1996 when DJs and dance music producers Matt Cantor, Aston Harvey and (initially) Andrew Galea joined forces. All three of them had been involved in the British dance music scene since the 1980s. Cantor had recorded as Cut n\\' Paste and Strike with Andy Gardner (Plump DJs). Aston Harvey recorded as Blapps! Posse best known for the 1990 breakbeat dance hit \"Don\\'t Hold Back\" before working with Definition of Sound, Rebel MC and DJ Rap (as DJ Rap and Aston). <a href=\"https://www.last.fm/music/Freestylers\">Read more on Last.fm</a>', 'content': 'United Kingdom\\nThe Freestylers formed in 1996 when DJs and dance music producers Matt Cantor, Aston Harvey and (initially) Andrew Galea joined forces. All three of them had been involved in the British dance music scene since the 1980s. Cantor had recorded as Cut n\\' Paste and Strike with Andy Gardner (Plump DJs). Aston Harvey recorded as Blapps! Posse best known for the 1990 breakbeat dance hit \"Don\\'t Hold Back\" before working with Definition of Sound, Rebel MC and DJ Rap (as DJ Rap and Aston). Harvey joined with Galea under the name Sol Brothers before Cantor was recruited to form the Freestylers. The group took their name from their first sample \"Don\\'t Stop The Rock\" by Freestyle.\\n\\nThe trio\\'s first single \"Drop The Boom (AK-48)\" on their own Scratch City Records in 1996 becoming a dancefloor hit in the UK and Miami. The band released the Freestyle EP in 1996 on Freskanova (Freskanova\\'s parent label, Fresh, had released Cantor, Galea and Harvey\\'s previous work). Andrew Galea left the Freestylers shortly after the release of the Freestyle EP.\\n\\nAfter the departure of Andrew Galea, Matt and Aston formed an 11-piece band (initially an idea of their record label, Freskanova). This consisted of the 2 producers (Cantor and Harvey), a scratch DJ (Mad Doctor X), a guitarist (Tony Ayiotou), drummer (Clive Jenner), bass guitarist (Joe Henson), 2 MCs (MC Navigator and Tenor Fly) and 3 breakdancers (Coza, Marat, Tim).\\n\\nThe band\\'s first album We Rock Hard was released in 1998. The single \"B-Boy Stance\" became a singles hit in the UK in 1998 featuring the contributions of rapper Tenor Fly. In 1999, the Freestylers enjoyed success in the U.S. with track \"Don\\'t Stop\" reached the top 10 of the Billboard dance charts and \"Here We Go\" becoming a MTV Buzzworthy clip. We Rock Hard sold well in the US selling over 150,000 and reaching the top 30 of the Billboard Heatseeker chart.\\n\\nFollowing the success of B-Boy Stance, the band were asked to remix tracks by Audioweb, Afrika Bambaataa and the Jungle Brothers as well as a big beat compilation album FSUK 2 and a Radio 1 Essential Mix featuring Beenie Man, Public Enemy, Whodini and The Fall.\\n\\nThe Freestylers released a mix album Electro Science in 2000. Their second album Pressure Point was released in 2001 with the track Get Down Massive featuring Navigator reaching top 20 on the Billboard dance charts in 2002.\\n\\nDuring 2002 and 2003 the group began releasing singles under the artist name Raw As F**k which then became the title of their third album. Released in 2004, it featured the single \"Push Up\", which reached the top 30 in the UK and top 3 in Australia. Another single, which was previously released before \"Push Up\", called \"Get A Life\", was re-released and reached the top 20 in Australia. <a href=\"https://www.last.fm/music/Freestylers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0zg9mF9dX2knvdTKnL22T1', url='https://open.spotify.com/artist/0zg9mF9dX2knvdTKnL22T1', name='Freestylers', popularity=43, followers=81094, genres=['big beat', 'breakbeat', 'dubstep'], images=[{'url': 'https://i.scdn.co/image/063214c3aee5177d048943ab0aa023e72621e29e', 'height': 1435, 'width': 1000}, {'url': 'https://i.scdn.co/image/928d1ba233715827a3a3be36f51343c9e619f0b0', 'height': 919, 'width': 640}, {'url': 'https://i.scdn.co/image/567bffdd09868d8dd87b7104a594e9bcf0327396', 'height': 287, 'width': 200}, {'url': 'https://i.scdn.co/image/c2a767aa126bd3c92dac3008353f2ab98ce61899', 'height': 92, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0zg9mF9dX2knvdTKnL22T1'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0zg9mF9dX2knvdTKnL22T1'}, 'followers': {'href': None, 'total': 81094}, 'genres': ['big beat', 'breakbeat', 'dubstep'], 'href': 'https://api.spotify.com/v1/artists/0zg9mF9dX2knvdTKnL22T1', 'id': '0zg9mF9dX2knvdTKnL22T1', 'images': [{'url': 'https://i.scdn.co/image/063214c3aee5177d048943ab0aa023e72621e29e', 'height': 1435, 'width': 1000}, {'url': 'https://i.scdn.co/image/928d1ba233715827a3a3be36f51343c9e619f0b0', 'height': 919, 'width': 640}, {'url': 'https://i.scdn.co/image/567bffdd09868d8dd87b7104a594e9bcf0327396', 'height': 287, 'width': 200}, {'url': 'https://i.scdn.co/image/c2a767aa126bd3c92dac3008353f2ab98ce61899', 'height': 92, 'width': 64}], 'name': 'Freestylers', 'popularity': 43, 'type': 'artist', 'uri': 'spotify:artist:0zg9mF9dX2knvdTKnL22T1'})",
@@ -285,6 +448,6 @@
   },
   "spotify_id": "0zg9mF9dX2knvdTKnL22T1",
   "spotify_url": "https://open.spotify.com/artist/0zg9mF9dX2knvdTKnL22T1",
-  "updated_at": "2026-10-22T14:07:03.959630",
+  "updated_at": "2026-10-30T18:39:57.126190",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Freestylers"
 }

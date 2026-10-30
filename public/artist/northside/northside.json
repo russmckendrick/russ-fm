@@ -103,22 +103,108 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='879698351', url='https://music.apple.com/gb/artist/northside/879698351', name='Northside', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d9/cc/0d/d9cc0d27-27bb-7664-939e-71cb3c0d6fdd/190295703462.jpg/2000x2000ac.jpg', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '879698351', 'type': 'artists', 'href': '/v1/catalog/gb/artists/879698351', 'attributes': {'name': 'Northside', 'genreNames': ['Hip-Hop/Rap'], 'artwork': {'width': 1425, 'height': 1425, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d9/cc/0d/d9cc0d27-27bb-7664-939e-71cb3c0d6fdd/190295703462.jpg/{w}x{h}ac.jpg', 'bgColor': '2caad3', 'textColor1': '17150e', 'textColor2': '221c16', 'textColor3': '1b3236', 'textColor4': '24383c'}, 'url': 'https://music.apple.com/gb/artist/northside/879698351'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/879698351/albums', 'data': [{'id': '1320038054', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1320038054'}, {'id': '443942969', 'type': 'albums', 'href': '/v1/catalog/gb/albums/443942969'}, {'id': '1201006666', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201006666'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "79473",
-      "images": [],
-      "members": [],
-      "name": "Northside",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "79473",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/79473"
-      },
+      "data_quality": "Needs Vote",
+      "id": 79473,
+      "images": [
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/Qbcs-pF9B4zHSrzZZYb8sVlqb2IOM_ePey2ma9H5DgE/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Qbcs-pF9B4zHSrzZZYb8sVlqb2IOM_ePey2ma9H5DgE/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aZugOXwYXEawuADXmxbA_ikzTflTxx2FHNhiYAyq4rE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/agRYmohCPc5536uwM9HOkk1LhjwqOQP1_ubksKyDjTw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/agRYmohCPc5536uwM9HOkk1LhjwqOQP1_ubksKyDjTw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mnBPyJW4DWKzNZ6gWk3CPlZJ3rfZsQ5DsczYTQQLU0o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/zgDCCUtl7eeK0TFH5M_5KZj7FYceu7i5EoL7nKjzmAs/rs:fit/g:sm/q:90/h:600/w:370/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zgDCCUtl7eeK0TFH5M_5KZj7FYceu7i5EoL7nKjzmAs/rs:fit/g:sm/q:90/h:600/w:370/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/y2rOfSFDUiHgPLu7iVei9GedXBmnb2pjv9EISrL3Tjc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "width": 370
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/C1vV1Kc1XgADYIp_7LYIQMJwHsMqmDt8MLFXOLObWUY/rs:fit/g:sm/q:90/h:320/w:215/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C1vV1Kc1XgADYIp_7LYIQMJwHsMqmDt8MLFXOLObWUY/rs:fit/g:sm/q:90/h:320/w:215/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3McH4F72IGaJYKA497gtLbmqj3yqeCJjECFqj_4Tpgk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "width": 215
+        },
+        {
+          "height": 281,
+          "resource_url": "https://i.discogs.com/Qjd9yPsUs-u-D6k52B8ewQIKMqdGobKYYpXDoh1wsUc/rs:fit/g:sm/q:90/h:281/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Qjd9yPsUs-u-D6k52B8ewQIKMqdGobKYYpXDoh1wsUc/rs:fit/g:sm/q:90/h:281/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_Nr-riU7ZvZLBQVdRBvG4gZQLZ4pgCj1XNwnWVr5VCw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/rknqnnXX1cQ514yqvIsU6qsQR5XRkQwKwCxovhsXm1U/rs:fit/g:sm/q:90/h:338/w:549/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rknqnnXX1cQ514yqvIsU6qsQR5XRkQwKwCxovhsXm1U/rs:fit/g:sm/q:90/h:338/w:549/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yn0RTudzfoXYlwRELi-miaM1YkQ2j4gjFhZCaV6lTac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "width": 549
+        },
+        {
+          "height": 304,
+          "resource_url": "https://i.discogs.com/k6ZRT0bZDiPZgulPQN8NV3aYH0Lwxky-mBCW6WSec8o/rs:fit/g:sm/q:90/h:304/w:256/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/k6ZRT0bZDiPZgulPQN8NV3aYH0Lwxky-mBCW6WSec8o/rs:fit/g:sm/q:90/h:304/w:256/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/pOb0VxdzIaRfHCaobAy94tGnvdqWyt3_DWVaCxNt8S4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "width": 256
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/w31mp3foqNd1YdmR2WSCobbsF3fcM4X5xPnEUM_urUA/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/w31mp3foqNd1YdmR2WSCobbsF3fcM4X5xPnEUM_urUA/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CYQhA0gZ_jEZ0dsTxQJ8rnc1O8ydHtkFc8EnY7VJVTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 396697,
+          "name": "Timothy Walsh",
+          "resource_url": "https://api.discogs.com/artists/396697"
+        },
+        {
+          "active": true,
+          "id": 396698,
+          "name": "Paul Walsh",
+          "resource_url": "https://api.discogs.com/artists/396698"
+        },
+        {
+          "active": true,
+          "id": 396699,
+          "name": "Cliff Ogier",
+          "resource_url": "https://api.discogs.com/artists/396699"
+        },
+        {
+          "active": true,
+          "id": 396700,
+          "name": "Warren Dermody",
+          "resource_url": "https://api.discogs.com/artists/396700"
+        }
+      ],
+      "name": "Northside (2)",
+      "profile": "Band from Moston, Greater Manchester, UK.\r\nActive from 1989 until 1992.\r\nMembers: [a396700] (vocals), [a396697] (guitar), [a396699] (bass), [a396698] (drums)\r\n\r\nPart of the \"Madchester\" movement, signed to [l857].\r\nTheir debut single \"Shall We Take A Trip\" was produced by [a65365]. Due to the opening - 'L-S-D' - the song was banned by the BBC and yet got into the Top 50 charts. It was also used as theme tune on the Granada Soccer Night between 1990 and 1992\r\nThe second single \"My Rising Star\" and third single \"Take Five\" climbed into the Top 40.\r\nThe only ever album was released in June 1991: \"Chicken Rhythms\".\r\n\r\nIn early 1992, the band recorded demos for what should have been the 2nd album, but Factory Records collapsed, leaving the album unreleased. The band soon split thereafter.\r\n\r\nIn late 2006 there was a reunion tour, with singer Warren Dermody (being only original member), Spencer Birtwistle (Drums), Dom Morrison (Bass), Danny Yates (Guitar), making up the band. The line-up soon split again.\r\n\r\nIn late 2013, the original four members reformed for another UK tour in April and May 2014.\r\nThe band split again around 2017.",
+      "releases_url": "https://api.discogs.com/artists/79473/releases",
       "resource_url": "https://api.discogs.com/artists/79473",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/79473",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/79473-Northside-2",
+      "urls": [
+        "https://www.facebook.com/profile.php?id=100090821764742"
+      ]
     },
     "identity": {
       "musicbrainz_id": "4ef07b86-b2a2-4ab1-9d10-bf86a397e24e",
@@ -128,27 +214,114 @@
     },
     "lastfm": "ArtistLastFmData(name='Northside', url='https://www.last.fm/music/Northside', mbid='89188488-3b07-4287-ad4c-bc904c759ba7', listeners=51136, playcount=327067, bio_summary='There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>', bio_content='There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip.\" The single was banned by the BBC for its references to drugs, but it broke into the UK Singles Chart Top 50 despite the lack of airplay.\\n\\nNorthside\\'s next single, \"My Rising Star,\" was released in October 1990 and reached No. 32 on the chart. \"Chicken Rhythms\" peaked at No. 19 in June 1991, produced by Ian Broudie. In 1991, the band scored a minor hit in the United States when their single \"Take 5\" reached No. 5 on the Billboard Alternative Songs chart. The band split up after their label Factory Records declared bankruptcy in 1992, despite having recorded a second album.\\n\\nIn 2003, Dermo and Ogier formed Silent Partners, while Walsh played with Manchester rock band Sons of the Stage. In 2006, Northside played gigs in Leeds and Manchester, and the album \"Chicken Rhythms\" was re-issued on LTM Recordings. Dermo formed V Thirteen in March 2011. In 2014, Northside reunited with all four original members and toured England. In 2017, Dermo released his debut single \"Vultures\" on Eromeda Records and recorded his debut solo album set for a 2018 release.\\n\\n2) Northside, a trap artist from Costa Rica. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['madchester', 'indie', 'british', '90s', 'Manchester'], similar_artists=[{'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets'}, {'name': 'Happy Mondays', 'url': 'https://www.last.fm/music/Happy+Mondays'}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils'}, {'name': 'The Charlatans', 'url': 'https://www.last.fm/music/The+Charlatans'}, {'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Northside', 'mbid': '89188488-3b07-4287-ad4c-bc904c759ba7', 'url': 'https://www.last.fm/music/Northside', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '51136', 'playcount': '327067'}, 'similar': {'artist': [{'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Happy Mondays', 'url': 'https://www.last.fm/music/Happy+Mondays', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Charlatans', 'url': 'https://www.last.fm/music/The+Charlatans', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'madchester', 'url': 'https://www.last.fm/tag/madchester'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': '90s', 'url': 'https://www.last.fm/tag/90s'}, {'name': 'Manchester', 'url': 'https://www.last.fm/tag/Manchester'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Northside/+wiki'}}, 'published': '06 Sep 2006, 17:54', 'summary': 'There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>', 'content': 'There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip.\" The single was banned by the BBC for its references to drugs, but it broke into the UK Singles Chart Top 50 despite the lack of airplay.\\n\\nNorthside\\'s next single, \"My Rising Star,\" was released in October 1990 and reached No. 32 on the chart. \"Chicken Rhythms\" peaked at No. 19 in June 1991, produced by Ian Broudie. In 1991, the band scored a minor hit in the United States when their single \"Take 5\" reached No. 5 on the Billboard Alternative Songs chart. The band split up after their label Factory Records declared bankruptcy in 1992, despite having recorded a second album.\\n\\nIn 2003, Dermo and Ogier formed Silent Partners, while Walsh played with Manchester rock band Sons of the Stage. In 2006, Northside played gigs in Leeds and Manchester, and the album \"Chicken Rhythms\" was re-issued on LTM Recordings. Dermo formed V Thirteen in March 2011. In 2014, Northside reunited with all four original members and toured England. In 2017, Dermo released his debut single \"Vultures\" on Eromeda Records and recorded his debut solo album set for a 2018 release.\\n\\n2) Northside, a trap artist from Costa Rica. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2gv2g5svhtzsUQhtNZW7Xr', url='https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr', name='Northside', popularity=25, followers=18458, genres=['madchester', 'britpop', 'jangle pop'], images=[{'url': 'https://i.scdn.co/image/b4ca9cd9a36c96fe16ec780f63adff8abce1aa82', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ee36ee81d5d753b686f448e47557b51477bdf498', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/b2c461ee047caeffaa7eee1855170ab45b22c537', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/cf4667ac0bef0f0e8627964529601620ae92ea8a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr'}, 'followers': {'href': None, 'total': 18458}, 'genres': ['madchester', 'britpop', 'jangle pop'], 'href': 'https://api.spotify.com/v1/artists/2gv2g5svhtzsUQhtNZW7Xr', 'id': '2gv2g5svhtzsUQhtNZW7Xr', 'images': [{'url': 'https://i.scdn.co/image/b4ca9cd9a36c96fe16ec780f63adff8abce1aa82', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ee36ee81d5d753b686f448e47557b51477bdf498', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/b2c461ee047caeffaa7eee1855170ab45b22c537', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/cf4667ac0bef0f0e8627964529601620ae92ea8a', 'height': 64, 'width': 64}], 'name': 'Northside', 'popularity': 25, 'type': 'artist', 'uri': 'spotify:artist:2gv2g5svhtzsUQhtNZW7Xr'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='879698351', url='https://music.apple.com/gb/artist/northside/879698351', name='Northside', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d9/cc/0d/d9cc0d27-27bb-7664-939e-71cb3c0d6fdd/190295703462.jpg/2000x2000ac.jpg', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '879698351', 'type': 'artists', 'href': '/v1/catalog/gb/artists/879698351', 'attributes': {'name': 'Northside', 'genreNames': ['Hip-Hop/Rap'], 'artwork': {'width': 1425, 'height': 1425, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d9/cc/0d/d9cc0d27-27bb-7664-939e-71cb3c0d6fdd/190295703462.jpg/{w}x{h}ac.jpg', 'bgColor': '2caad3', 'textColor1': '17150e', 'textColor2': '221c16', 'textColor3': '1b3236', 'textColor4': '24383c'}, 'url': 'https://music.apple.com/gb/artist/northside/879698351'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/879698351/albums', 'data': [{'id': '1320038054', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1320038054'}, {'id': '443942969', 'type': 'albums', 'href': '/v1/catalog/gb/albums/443942969'}, {'id': '1201006666', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201006666'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "79473",
-      "images": [],
-      "members": [],
-      "name": "Northside",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "79473",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/79473"
-      },
+      "data_quality": "Needs Vote",
+      "id": 79473,
+      "images": [
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/Qbcs-pF9B4zHSrzZZYb8sVlqb2IOM_ePey2ma9H5DgE/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Qbcs-pF9B4zHSrzZZYb8sVlqb2IOM_ePey2ma9H5DgE/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aZugOXwYXEawuADXmxbA_ikzTflTxx2FHNhiYAyq4rE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE3NzEyNDMyNzQt/ODYwOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/agRYmohCPc5536uwM9HOkk1LhjwqOQP1_ubksKyDjTw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/agRYmohCPc5536uwM9HOkk1LhjwqOQP1_ubksKyDjTw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mnBPyJW4DWKzNZ6gWk3CPlZJ3rfZsQ5DsczYTQQLU0o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDEyNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/zgDCCUtl7eeK0TFH5M_5KZj7FYceu7i5EoL7nKjzmAs/rs:fit/g:sm/q:90/h:600/w:370/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zgDCCUtl7eeK0TFH5M_5KZj7FYceu7i5EoL7nKjzmAs/rs:fit/g:sm/q:90/h:600/w:370/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/y2rOfSFDUiHgPLu7iVei9GedXBmnb2pjv9EISrL3Tjc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/NDg3OS5qcGVn.jpeg",
+          "width": 370
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/C1vV1Kc1XgADYIp_7LYIQMJwHsMqmDt8MLFXOLObWUY/rs:fit/g:sm/q:90/h:320/w:215/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C1vV1Kc1XgADYIp_7LYIQMJwHsMqmDt8MLFXOLObWUY/rs:fit/g:sm/q:90/h:320/w:215/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3McH4F72IGaJYKA497gtLbmqj3yqeCJjECFqj_4Tpgk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyMjM0MDM2MTYu/anBlZw.jpeg",
+          "width": 215
+        },
+        {
+          "height": 281,
+          "resource_url": "https://i.discogs.com/Qjd9yPsUs-u-D6k52B8ewQIKMqdGobKYYpXDoh1wsUc/rs:fit/g:sm/q:90/h:281/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Qjd9yPsUs-u-D6k52B8ewQIKMqdGobKYYpXDoh1wsUc/rs:fit/g:sm/q:90/h:281/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_Nr-riU7ZvZLBQVdRBvG4gZQLZ4pgCj1XNwnWVr5VCw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEyNzEwNzc1NjAu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/rknqnnXX1cQ514yqvIsU6qsQR5XRkQwKwCxovhsXm1U/rs:fit/g:sm/q:90/h:338/w:549/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rknqnnXX1cQ514yqvIsU6qsQR5XRkQwKwCxovhsXm1U/rs:fit/g:sm/q:90/h:338/w:549/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yn0RTudzfoXYlwRELi-miaM1YkQ2j4gjFhZCaV6lTac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzct/NDg2Ni5qcGVn.jpeg",
+          "width": 549
+        },
+        {
+          "height": 304,
+          "resource_url": "https://i.discogs.com/k6ZRT0bZDiPZgulPQN8NV3aYH0Lwxky-mBCW6WSec8o/rs:fit/g:sm/q:90/h:304/w:256/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/k6ZRT0bZDiPZgulPQN8NV3aYH0Lwxky-mBCW6WSec8o/rs:fit/g:sm/q:90/h:304/w:256/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/pOb0VxdzIaRfHCaobAy94tGnvdqWyt3_DWVaCxNt8S4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTEwODI3NDIxMDYu/anBn.jpeg",
+          "width": 256
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/w31mp3foqNd1YdmR2WSCobbsF3fcM4X5xPnEUM_urUA/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/w31mp3foqNd1YdmR2WSCobbsF3fcM4X5xPnEUM_urUA/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CYQhA0gZ_jEZ0dsTxQJ8rnc1O8ydHtkFc8EnY7VJVTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDcz/LTE0MDI1NDgzNzYt/MzYxNy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 396697,
+          "name": "Timothy Walsh",
+          "resource_url": "https://api.discogs.com/artists/396697"
+        },
+        {
+          "active": true,
+          "id": 396698,
+          "name": "Paul Walsh",
+          "resource_url": "https://api.discogs.com/artists/396698"
+        },
+        {
+          "active": true,
+          "id": 396699,
+          "name": "Cliff Ogier",
+          "resource_url": "https://api.discogs.com/artists/396699"
+        },
+        {
+          "active": true,
+          "id": 396700,
+          "name": "Warren Dermody",
+          "resource_url": "https://api.discogs.com/artists/396700"
+        }
+      ],
+      "name": "Northside (2)",
+      "profile": "Band from Moston, Greater Manchester, UK.\r\nActive from 1989 until 1992.\r\nMembers: [a396700] (vocals), [a396697] (guitar), [a396699] (bass), [a396698] (drums)\r\n\r\nPart of the \"Madchester\" movement, signed to [l857].\r\nTheir debut single \"Shall We Take A Trip\" was produced by [a65365]. Due to the opening - 'L-S-D' - the song was banned by the BBC and yet got into the Top 50 charts. It was also used as theme tune on the Granada Soccer Night between 1990 and 1992\r\nThe second single \"My Rising Star\" and third single \"Take Five\" climbed into the Top 40.\r\nThe only ever album was released in June 1991: \"Chicken Rhythms\".\r\n\r\nIn early 1992, the band recorded demos for what should have been the 2nd album, but Factory Records collapsed, leaving the album unreleased. The band soon split thereafter.\r\n\r\nIn late 2006 there was a reunion tour, with singer Warren Dermody (being only original member), Spencer Birtwistle (Drums), Dom Morrison (Bass), Danny Yates (Guitar), making up the band. The line-up soon split again.\r\n\r\nIn late 2013, the original four members reformed for another UK tour in April and May 2014.\r\nThe band split again around 2017.",
+      "releases_url": "https://api.discogs.com/artists/79473/releases",
       "resource_url": "https://api.discogs.com/artists/79473",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/79473",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/79473-Northside-2",
+      "urls": [
+        "https://www.facebook.com/profile.php?id=100090821764742"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Northside', url='https://www.last.fm/music/Northside', mbid='89188488-3b07-4287-ad4c-bc904c759ba7', listeners=51136, playcount=327067, bio_summary='There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>', bio_content='There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip.\" The single was banned by the BBC for its references to drugs, but it broke into the UK Singles Chart Top 50 despite the lack of airplay.\\n\\nNorthside\\'s next single, \"My Rising Star,\" was released in October 1990 and reached No. 32 on the chart. \"Chicken Rhythms\" peaked at No. 19 in June 1991, produced by Ian Broudie. In 1991, the band scored a minor hit in the United States when their single \"Take 5\" reached No. 5 on the Billboard Alternative Songs chart. The band split up after their label Factory Records declared bankruptcy in 1992, despite having recorded a second album.\\n\\nIn 2003, Dermo and Ogier formed Silent Partners, while Walsh played with Manchester rock band Sons of the Stage. In 2006, Northside played gigs in Leeds and Manchester, and the album \"Chicken Rhythms\" was re-issued on LTM Recordings. Dermo formed V Thirteen in March 2011. In 2014, Northside reunited with all four original members and toured England. In 2017, Dermo released his debut single \"Vultures\" on Eromeda Records and recorded his debut solo album set for a 2018 release.\\n\\n2) Northside, a trap artist from Costa Rica. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['madchester', 'indie', 'british', '90s', 'Manchester'], similar_artists=[{'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets'}, {'name': 'Happy Mondays', 'url': 'https://www.last.fm/music/Happy+Mondays'}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils'}, {'name': 'The Charlatans', 'url': 'https://www.last.fm/music/The+Charlatans'}, {'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Northside', 'mbid': '89188488-3b07-4287-ad4c-bc904c759ba7', 'url': 'https://www.last.fm/music/Northside', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '51136', 'playcount': '327067'}, 'similar': {'artist': [{'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Happy Mondays', 'url': 'https://www.last.fm/music/Happy+Mondays', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Charlatans', 'url': 'https://www.last.fm/music/The+Charlatans', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'madchester', 'url': 'https://www.last.fm/tag/madchester'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': '90s', 'url': 'https://www.last.fm/tag/90s'}, {'name': 'Manchester', 'url': 'https://www.last.fm/tag/Manchester'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Northside/+wiki'}}, 'published': '06 Sep 2006, 17:54', 'summary': 'There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>', 'content': 'There are two artists with this name:\\n\\n1) Northside are a band from the suburbs of Blackley and Moston in North Manchester, England. Founded in 1989 by Warren \"Dermo\" Dermody (vocals/lyrics) and Cliff Ogier (bass), the band released their debut and only album, \"Chicken Rhythms,\" on Factory Records in 1991. Northside was part of the 1990s Madchester/baggy/rave scene. Michael Upton (guitar) and Paul Walsh (drums) later joined the band, replacing Timmy Walsh, who played guitar in their first single, \"Shall We Take A Trip.\" The single was banned by the BBC for its references to drugs, but it broke into the UK Singles Chart Top 50 despite the lack of airplay.\\n\\nNorthside\\'s next single, \"My Rising Star,\" was released in October 1990 and reached No. 32 on the chart. \"Chicken Rhythms\" peaked at No. 19 in June 1991, produced by Ian Broudie. In 1991, the band scored a minor hit in the United States when their single \"Take 5\" reached No. 5 on the Billboard Alternative Songs chart. The band split up after their label Factory Records declared bankruptcy in 1992, despite having recorded a second album.\\n\\nIn 2003, Dermo and Ogier formed Silent Partners, while Walsh played with Manchester rock band Sons of the Stage. In 2006, Northside played gigs in Leeds and Manchester, and the album \"Chicken Rhythms\" was re-issued on LTM Recordings. Dermo formed V Thirteen in March 2011. In 2014, Northside reunited with all four original members and toured England. In 2017, Dermo released his debut single \"Vultures\" on Eromeda Records and recorded his debut solo album set for a 2018 release.\\n\\n2) Northside, a trap artist from Costa Rica. <a href=\"https://www.last.fm/music/Northside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2gv2g5svhtzsUQhtNZW7Xr', url='https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr', name='Northside', popularity=25, followers=18458, genres=['madchester', 'britpop', 'jangle pop'], images=[{'url': 'https://i.scdn.co/image/b4ca9cd9a36c96fe16ec780f63adff8abce1aa82', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ee36ee81d5d753b686f448e47557b51477bdf498', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/b2c461ee047caeffaa7eee1855170ab45b22c537', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/cf4667ac0bef0f0e8627964529601620ae92ea8a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr'}, 'followers': {'href': None, 'total': 18458}, 'genres': ['madchester', 'britpop', 'jangle pop'], 'href': 'https://api.spotify.com/v1/artists/2gv2g5svhtzsUQhtNZW7Xr', 'id': '2gv2g5svhtzsUQhtNZW7Xr', 'images': [{'url': 'https://i.scdn.co/image/b4ca9cd9a36c96fe16ec780f63adff8abce1aa82', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ee36ee81d5d753b686f448e47557b51477bdf498', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/b2c461ee047caeffaa7eee1855170ab45b22c537', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/cf4667ac0bef0f0e8627964529601620ae92ea8a', 'height': 64, 'width': 64}], 'name': 'Northside', 'popularity': 25, 'type': 'artist', 'uri': 'spotify:artist:2gv2g5svhtzsUQhtNZW7Xr'})",
@@ -156,6 +329,6 @@
   },
   "spotify_id": "2gv2g5svhtzsUQhtNZW7Xr",
   "spotify_url": "https://open.spotify.com/artist/2gv2g5svhtzsUQhtNZW7Xr",
-  "updated_at": "2026-10-22T14:09:48.449148",
+  "updated_at": "2026-10-30T18:43:10.974887",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Northside_(band)"
 }

@@ -99,22 +99,84 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='219001546', url='https://music.apple.com/gb/artist/world-of-twist/219001546', name='World Of Twist', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/eb/98/03/eb9803b5-55e4-6fda-e3fa-41559a450160/00094639188055.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '219001546', 'type': 'artists', 'href': '/v1/catalog/gb/artists/219001546', 'attributes': {'name': 'World Of Twist', 'genreNames': ['Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/eb/98/03/eb9803b5-55e4-6fda-e3fa-41559a450160/00094639188055.jpg/{w}x{h}ac.jpg', 'bgColor': '482e2c', 'textColor1': 'e2f4fa', 'textColor2': 'e0e3dd', 'textColor3': 'c3cdd1', 'textColor4': 'c2beb9'}, 'url': 'https://music.apple.com/gb/artist/world-of-twist/219001546'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/219001546/albums', 'data': [{'id': '714633804', 'type': 'albums', 'href': '/v1/catalog/gb/albums/714633804'}, {'id': '1443344103', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443344103'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "114674",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 114674,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/AYXg2p0lBDkCAR3QXFv3u0I7rs9h-WEWsnEk70AR81Y/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/AYXg2p0lBDkCAR3QXFv3u0I7rs9h-WEWsnEk70AR81Y/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "uri150": "https://i.discogs.com/GCproqX6iKEgJ3_wUhRsv6lveXW-jj6ynk35flYR444/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 498,
+          "resource_url": "https://i.discogs.com/2GjQIofJiOgMBj0JCdL8jrdTg_wNWzAMsPiqNbuT43k/rs:fit/g:sm/q:90/h:498/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2GjQIofJiOgMBj0JCdL8jrdTg_wNWzAMsPiqNbuT43k/rs:fit/g:sm/q:90/h:498/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_jqXT42scQNEqjTAwLh9g97wGyURSOoCusFQmLcDl6k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4022,
+          "name": "Gordon King",
+          "resource_url": "https://api.discogs.com/artists/4022"
+        },
+        {
+          "active": true,
+          "id": 305520,
+          "name": "Andy Robins",
+          "resource_url": "https://api.discogs.com/artists/305520"
+        },
+        {
+          "active": true,
+          "id": 324261,
+          "name": "Nick Sanderson",
+          "resource_url": "https://api.discogs.com/artists/324261"
+        },
+        {
+          "active": true,
+          "id": 607028,
+          "name": "Tony Ogden",
+          "resource_url": "https://api.discogs.com/artists/607028"
+        },
+        {
+          "active": true,
+          "id": 607032,
+          "name": "M.C. Shells",
+          "resource_url": "https://api.discogs.com/artists/607032"
+        },
+        {
+          "active": false,
+          "id": 688944,
+          "name": "Jamie Fry",
+          "resource_url": "https://api.discogs.com/artists/688944"
+        },
+        {
+          "active": true,
+          "id": 7438457,
+          "name": "Alan Frost",
+          "resource_url": "https://api.discogs.com/artists/7438457"
+        },
+        {
+          "active": true,
+          "id": 15533502,
+          "name": "Andy Hobson (4)",
+          "resource_url": "https://api.discogs.com/artists/15533502"
+        }
+      ],
       "name": "World Of Twist",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "114674",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/114674"
-      },
+      "profile": "Initially formed in Sheffield in 1985 the band line up was: James Fry - brother of ABC's Martin Fry (Vocals) / Andrew Hobson (Bass) / Gordon King (Guitar) /Tony Ogden (Drums) / Rory Conolly (Saxophone) / Nick Phillips (Organ) and / Andy Robins (Synthesiser). \r\nThis World Of Twist soon fell to pieces only to emerge back in Manchester, three years later with a new line up:\r\nTony Ogden (Now singer and co-songwriter) and Gordon King (Guitar and co-songwriter) joined by Andy Hobson (Synthesisers), Alan Frost aka Adge (Visual effects. Synthesisers), Julia aka M.C. Shells (Swirls and Sea Noises), Angela Reilly (Visual Effects). Nick Sanderson (Drums) joined a little later.\n",
+      "releases_url": "https://api.discogs.com/artists/114674/releases",
       "resource_url": "https://api.discogs.com/artists/114674",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/114674",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/114674-World-Of-Twist",
+      "urls": [
+        "http://www.worldoftwist.info"
+      ]
     },
     "identity": {
       "musicbrainz_id": "de4944f1-e25b-4e48-a79e-5553d626c0c4",
@@ -167,27 +229,90 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='219001546', url='https://music.apple.com/gb/artist/world-of-twist/219001546', name='World Of Twist', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/eb/98/03/eb9803b5-55e4-6fda-e3fa-41559a450160/00094639188055.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '219001546', 'type': 'artists', 'href': '/v1/catalog/gb/artists/219001546', 'attributes': {'name': 'World Of Twist', 'genreNames': ['Rock'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/eb/98/03/eb9803b5-55e4-6fda-e3fa-41559a450160/00094639188055.jpg/{w}x{h}ac.jpg', 'bgColor': '482e2c', 'textColor1': 'e2f4fa', 'textColor2': 'e0e3dd', 'textColor3': 'c3cdd1', 'textColor4': 'c2beb9'}, 'url': 'https://music.apple.com/gb/artist/world-of-twist/219001546'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/219001546/albums', 'data': [{'id': '714633804', 'type': 'albums', 'href': '/v1/catalog/gb/albums/714633804'}, {'id': '1443344103', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1443344103'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "114674",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 114674,
+      "images": [
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/AYXg2p0lBDkCAR3QXFv3u0I7rs9h-WEWsnEk70AR81Y/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/AYXg2p0lBDkCAR3QXFv3u0I7rs9h-WEWsnEk70AR81Y/rs:fit/g:sm/q:90/h:301/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "uri150": "https://i.discogs.com/GCproqX6iKEgJ3_wUhRsv6lveXW-jj6ynk35flYR444/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0wMDEuanBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 498,
+          "resource_url": "https://i.discogs.com/2GjQIofJiOgMBj0JCdL8jrdTg_wNWzAMsPiqNbuT43k/rs:fit/g:sm/q:90/h:498/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2GjQIofJiOgMBj0JCdL8jrdTg_wNWzAMsPiqNbuT43k/rs:fit/g:sm/q:90/h:498/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_jqXT42scQNEqjTAwLh9g97wGyURSOoCusFQmLcDl6k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDY3/NC0xMTU4MDkyNDM3/LmpwZWc.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 4022,
+          "name": "Gordon King",
+          "resource_url": "https://api.discogs.com/artists/4022"
+        },
+        {
+          "active": true,
+          "id": 305520,
+          "name": "Andy Robins",
+          "resource_url": "https://api.discogs.com/artists/305520"
+        },
+        {
+          "active": true,
+          "id": 324261,
+          "name": "Nick Sanderson",
+          "resource_url": "https://api.discogs.com/artists/324261"
+        },
+        {
+          "active": true,
+          "id": 607028,
+          "name": "Tony Ogden",
+          "resource_url": "https://api.discogs.com/artists/607028"
+        },
+        {
+          "active": true,
+          "id": 607032,
+          "name": "M.C. Shells",
+          "resource_url": "https://api.discogs.com/artists/607032"
+        },
+        {
+          "active": false,
+          "id": 688944,
+          "name": "Jamie Fry",
+          "resource_url": "https://api.discogs.com/artists/688944"
+        },
+        {
+          "active": true,
+          "id": 7438457,
+          "name": "Alan Frost",
+          "resource_url": "https://api.discogs.com/artists/7438457"
+        },
+        {
+          "active": true,
+          "id": 15533502,
+          "name": "Andy Hobson (4)",
+          "resource_url": "https://api.discogs.com/artists/15533502"
+        }
+      ],
       "name": "World Of Twist",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "114674",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/114674"
-      },
+      "profile": "Initially formed in Sheffield in 1985 the band line up was: James Fry - brother of ABC's Martin Fry (Vocals) / Andrew Hobson (Bass) / Gordon King (Guitar) /Tony Ogden (Drums) / Rory Conolly (Saxophone) / Nick Phillips (Organ) and / Andy Robins (Synthesiser). \r\nThis World Of Twist soon fell to pieces only to emerge back in Manchester, three years later with a new line up:\r\nTony Ogden (Now singer and co-songwriter) and Gordon King (Guitar and co-songwriter) joined by Andy Hobson (Synthesisers), Alan Frost aka Adge (Visual effects. Synthesisers), Julia aka M.C. Shells (Swirls and Sea Noises), Angela Reilly (Visual Effects). Nick Sanderson (Drums) joined a little later.\n",
+      "releases_url": "https://api.discogs.com/artists/114674/releases",
       "resource_url": "https://api.discogs.com/artists/114674",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/114674",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/114674-World-Of-Twist",
+      "urls": [
+        "http://www.worldoftwist.info"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='World of Twist', url='https://www.last.fm/music/World+of+Twist', mbid='de4944f1-e25b-4e48-a79e-5553d626c0c4', listeners=18863, playcount=122116, bio_summary='World of Twist were an early 90s band tied to the Madchester movement, although their sound was closer to that of the Britpop bands that became popular later in the decade.  They released a few singles and one album before disbanding, taking on a somewhat mythical character as a result.\\n\\nFor anyone living in Manchester during the early 90\\'s and not totally convinced by the Madchester scene - preferring music with a little more glamour and a little <a href=\"https://www.last.fm/music/World+of+Twist\">Read more on Last.fm</a>', bio_content='World of Twist were an early 90s band tied to the Madchester movement, although their sound was closer to that of the Britpop bands that became popular later in the decade.  They released a few singles and one album before disbanding, taking on a somewhat mythical character as a result.\\n\\nFor anyone living in Manchester during the early 90\\'s and not totally convinced by the Madchester scene - preferring music with a little more glamour and a little less predictability - World Of Twist (along with Intastella) were the ones worth paying attention to.\\n\\nAlthough difficult to musically pin down they were a sort of Roxy Music meets Velvet Underground meets Northern Soul meets Joe Meek meets The Human League.\\n\\nSignificantly, World Of Twist were one of the first bands to be making quirky retro electronic pop music of the kind of that bands like Pulp (who at one point supported WOT live), Air and Goldfrapp would later be exploring and gaining wider success with.\\n\\nInitially formed in Sheffield in 1985 the band line up was James Fry (Vocals), Andrew Hobson (Bass), Gordon King (Guitar), Tony Ogden (Drums), Rory Conolly (Saxophone), Nick Phillips (Organ) and Andy Robbins (Synthesiser). This World Of Twist soon fell to pieces and it was another three years until a new Manchester line up would emerge.\\n\\nThe 1989 version of World Of Twist had Tony Ogden (Now singer and co-songwriter) and Gordon King (Guitar and co-songwriter) joined by Andy Hobson (Synthesisers), Alan Frost aka Adge (Visual effects. Synthesisers), Julia aka M.C. Shells (Swirls and Sea Noises), Angela Reilly (Visual Effects). Nick Sanderson (Drums) joined a little later.\\n\\nA four track demo tape (The Storm, Blackpool Tower Suite, The Spring, She\\'s A Rainbow) released early 1990 had considerable local alternative radio play and rave reviews in the local press - the inevitable London A & R frenzy soon followed.\\n\\nWorld Of Twist finally settled for Circa Records, believing they would meet the bands creative needs better than anyone else. Within a the year, they had released the critically well received singles The Storm / She\\'s A Rainbow (one of Martin Hannet\\'s final productions) and Sons Of The Stage. Both only just failed to make the top 40.\\n\\nThe band toured the UK and Europe gaining a cult following along the way with their extravagant and eccentric stage shows. The music press all the time showering them with excellent reviews. It seemed nothing could go wrong.\\n\\nThis and excellent Radio 1 sessions for John Peel & Mark Goodier hinted at what the debut album might sound like, but when Quality Street finally did appear it failed to live up to the expectations for many - including most reviewers. The fault lay mostly with the lacklustre production (by the Grid) which failed to capture the colour and energy of either the band live or the earlier singles. That said, the charm of the songs underneath is still there, and if you can turn a blind eye to some occasionaly un-inspired production there\\'s a great collection of songs lurking within.\\n\\nThe album was a modest success and Circa continued to have faith in the band. Work soon began on a follow up album and there were plans for further touring. However, problems emerged when Tony Ogden decided that he no longer wanted to sing and this reached the point where auditions were held to find a new singer. Additionally, creative difference\\'s within the band and also pressure from Circa to have a hit all started to contribute to a breakdown.\\n\\nHowever, work on the album did reach a stage where there were a dozen demo versions of new songs by Tony and Gordon. Some had vocals by Tony and some by Viv Dixon (who sang on Sons Of The Stage and the seminal Voodoo Ray), others remained only instrumentals. All these tracks have a fragile and beautiful quality about them that suggests that WOT would have produced greater things had the ride been smoother. The final track on this album is an epic cover version of McArthur Park sung by Tony Ogden, which coincidentally, was the song that the first single, The Storm, made references to with the line \"I\\'ve left the cake out in the storm\". Things had neatly come full circle, and as soon as Circa caught wind of Tony\\'s decision not to sing they were reluctant to re-new the bands contract. World Of Twist offically ceased to be in June 1992.\\n\\nSo, sadly the future never happened and what remained, if you like, was World Of Twist\\'s very own \\'Smile\\' album that few have heard. Ironically, in true Beach Boy\\'s style, Tony Ogden soon after disappeared from the Manchester music scene and became something of a mythical and reclusive Brian Wilson character.\\n\\nIn 1999, Ian Rainford of Twisted Nerve Record\\'s Mum & Dad (and one time WOT stage set co-designer) phoned Tony Ogden asking him to help write the vocal melody for their single Dawn Rider, after struggling to find their own solution. Given Tony\\'s mysterious nature, Ian wasn\\'t sure if anything would happen, but to his suprise Tony agreed and sent a tape the next day with the entire track already worked out.\\n\\nRIP Tony Ogden (thanks for all the fab grooves) <a href=\"https://www.last.fm/music/World+of+Twist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['madchester', 'indie', '90s', 'british', 'Manchester'], similar_artists=[{'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up'}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils'}, {'name': 'The Mock Turtles', 'url': 'https://www.last.fm/music/The+Mock+Turtles'}, {'name': 'Paris Angels', 'url': 'https://www.last.fm/music/Paris+Angels'}, {'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'World of Twist', 'mbid': 'de4944f1-e25b-4e48-a79e-5553d626c0c4', 'url': 'https://www.last.fm/music/World+of+Twist', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '18863', 'playcount': '122116'}, 'similar': {'artist': [{'name': 'Flowered Up', 'url': 'https://www.last.fm/music/Flowered+Up', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'New Fast Automatic Daffodils', 'url': 'https://www.last.fm/music/New+Fast+Automatic+Daffodils', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Mock Turtles', 'url': 'https://www.last.fm/music/The+Mock+Turtles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Paris Angels', 'url': 'https://www.last.fm/music/Paris+Angels', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Inspiral Carpets', 'url': 'https://www.last.fm/music/Inspiral+Carpets', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'madchester', 'url': 'https://www.last.fm/tag/madchester'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': '90s', 'url': 'https://www.last.fm/tag/90s'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'Manchester', 'url': 'https://www.last.fm/tag/Manchester'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/World+of+Twist/+wiki'}}, 'published': '03 May 2006, 00:58', 'summary': 'World of Twist were an early 90s band tied to the Madchester movement, although their sound was closer to that of the Britpop bands that became popular later in the decade.  They released a few singles and one album before disbanding, taking on a somewhat mythical character as a result.\\n\\nFor anyone living in Manchester during the early 90\\'s and not totally convinced by the Madchester scene - preferring music with a little more glamour and a little <a href=\"https://www.last.fm/music/World+of+Twist\">Read more on Last.fm</a>', 'content': 'World of Twist were an early 90s band tied to the Madchester movement, although their sound was closer to that of the Britpop bands that became popular later in the decade.  They released a few singles and one album before disbanding, taking on a somewhat mythical character as a result.\\n\\nFor anyone living in Manchester during the early 90\\'s and not totally convinced by the Madchester scene - preferring music with a little more glamour and a little less predictability - World Of Twist (along with Intastella) were the ones worth paying attention to.\\n\\nAlthough difficult to musically pin down they were a sort of Roxy Music meets Velvet Underground meets Northern Soul meets Joe Meek meets The Human League.\\n\\nSignificantly, World Of Twist were one of the first bands to be making quirky retro electronic pop music of the kind of that bands like Pulp (who at one point supported WOT live), Air and Goldfrapp would later be exploring and gaining wider success with.\\n\\nInitially formed in Sheffield in 1985 the band line up was James Fry (Vocals), Andrew Hobson (Bass), Gordon King (Guitar), Tony Ogden (Drums), Rory Conolly (Saxophone), Nick Phillips (Organ) and Andy Robbins (Synthesiser). This World Of Twist soon fell to pieces and it was another three years until a new Manchester line up would emerge.\\n\\nThe 1989 version of World Of Twist had Tony Ogden (Now singer and co-songwriter) and Gordon King (Guitar and co-songwriter) joined by Andy Hobson (Synthesisers), Alan Frost aka Adge (Visual effects. Synthesisers), Julia aka M.C. Shells (Swirls and Sea Noises), Angela Reilly (Visual Effects). Nick Sanderson (Drums) joined a little later.\\n\\nA four track demo tape (The Storm, Blackpool Tower Suite, The Spring, She\\'s A Rainbow) released early 1990 had considerable local alternative radio play and rave reviews in the local press - the inevitable London A & R frenzy soon followed.\\n\\nWorld Of Twist finally settled for Circa Records, believing they would meet the bands creative needs better than anyone else. Within a the year, they had released the critically well received singles The Storm / She\\'s A Rainbow (one of Martin Hannet\\'s final productions) and Sons Of The Stage. Both only just failed to make the top 40.\\n\\nThe band toured the UK and Europe gaining a cult following along the way with their extravagant and eccentric stage shows. The music press all the time showering them with excellent reviews. It seemed nothing could go wrong.\\n\\nThis and excellent Radio 1 sessions for John Peel & Mark Goodier hinted at what the debut album might sound like, but when Quality Street finally did appear it failed to live up to the expectations for many - including most reviewers. The fault lay mostly with the lacklustre production (by the Grid) which failed to capture the colour and energy of either the band live or the earlier singles. That said, the charm of the songs underneath is still there, and if you can turn a blind eye to some occasionaly un-inspired production there\\'s a great collection of songs lurking within.\\n\\nThe album was a modest success and Circa continued to have faith in the band. Work soon began on a follow up album and there were plans for further touring. However, problems emerged when Tony Ogden decided that he no longer wanted to sing and this reached the point where auditions were held to find a new singer. Additionally, creative difference\\'s within the band and also pressure from Circa to have a hit all started to contribute to a breakdown.\\n\\nHowever, work on the album did reach a stage where there were a dozen demo versions of new songs by Tony and Gordon. Some had vocals by Tony and some by Viv Dixon (who sang on Sons Of The Stage and the seminal Voodoo Ray), others remained only instrumentals. All these tracks have a fragile and beautiful quality about them that suggests that WOT would have produced greater things had the ride been smoother. The final track on this album is an epic cover version of McArthur Park sung by Tony Ogden, which coincidentally, was the song that the first single, The Storm, made references to with the line \"I\\'ve left the cake out in the storm\". Things had neatly come full circle, and as soon as Circa caught wind of Tony\\'s decision not to sing they were reluctant to re-new the bands contract. World Of Twist offically ceased to be in June 1992.\\n\\nSo, sadly the future never happened and what remained, if you like, was World Of Twist\\'s very own \\'Smile\\' album that few have heard. Ironically, in true Beach Boy\\'s style, Tony Ogden soon after disappeared from the Manchester music scene and became something of a mythical and reclusive Brian Wilson character.\\n\\nIn 1999, Ian Rainford of Twisted Nerve Record\\'s Mum & Dad (and one time WOT stage set co-designer) phoned Tony Ogden asking him to help write the vocal melody for their single Dawn Rider, after struggling to find their own solution. Given Tony\\'s mysterious nature, Ian wasn\\'t sure if anything would happen, but to his suprise Tony agreed and sent a tape the next day with the entire track already worked out.\\n\\nRIP Tony Ogden (thanks for all the fab grooves) <a href=\"https://www.last.fm/music/World+of+Twist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0g7hF3i6YBkGoZvw1tb4Cl', url='https://open.spotify.com/artist/0g7hF3i6YBkGoZvw1tb4Cl', name='World Of Twist', popularity=17, followers=5273, genres=['madchester', 'britpop', 'alternative dance'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273c2a898deba6c73ec17ec77b4', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02c2a898deba6c73ec17ec77b4', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851c2a898deba6c73ec17ec77b4', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0g7hF3i6YBkGoZvw1tb4Cl'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0g7hF3i6YBkGoZvw1tb4Cl'}, 'followers': {'href': None, 'total': 5273}, 'genres': ['madchester', 'britpop', 'alternative dance'], 'href': 'https://api.spotify.com/v1/artists/0g7hF3i6YBkGoZvw1tb4Cl', 'id': '0g7hF3i6YBkGoZvw1tb4Cl', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273c2a898deba6c73ec17ec77b4', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02c2a898deba6c73ec17ec77b4', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851c2a898deba6c73ec17ec77b4', 'height': 64, 'width': 64}], 'name': 'World Of Twist', 'popularity': 17, 'type': 'artist', 'uri': 'spotify:artist:0g7hF3i6YBkGoZvw1tb4Cl'})",
@@ -237,6 +362,6 @@
   },
   "spotify_id": "0g7hF3i6YBkGoZvw1tb4Cl",
   "spotify_url": "https://open.spotify.com/artist/0g7hF3i6YBkGoZvw1tb4Cl",
-  "updated_at": "2026-10-22T14:13:49.187021",
+  "updated_at": "2026-10-30T18:48:18.490422",
   "wikipedia_url": "https://en.wikipedia.org/wiki/World_of_Twist"
 }

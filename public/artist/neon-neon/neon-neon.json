@@ -119,22 +119,56 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='266739607', url='https://music.apple.com/gb/artist/neon-neon/266739607', name='Neon Neon', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/c0/63/a7c06304-2366-ecdf-bb0d-da8ce18a5e42/150.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '266739607', 'type': 'artists', 'href': '/v1/catalog/gb/artists/266739607', 'attributes': {'name': 'Neon Neon', 'genreNames': ['Alternative'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/c0/63/a7c06304-2366-ecdf-bb0d-da8ce18a5e42/150.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'dddddd', 'textColor2': 'cacaca', 'textColor3': 'b1b1b1', 'textColor4': 'a2a2a2'}, 'url': 'https://music.apple.com/gb/artist/neon-neon/266739607'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/266739607/albums', 'data': [{'id': '1601513716', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601513716'}, {'id': '1601512850', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601512850'}, {'id': '1601506841', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601506841'}, {'id': '1601510429', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601510429'}, {'id': '1468934565', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1468934565'}, {'id': '1601504307', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601504307'}, {'id': '1601507088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601507088'}, {'id': '1601509691', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601509691'}, {'id': '1601503626', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601503626'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "888538",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "id": 888538,
+      "images": [
+        {
+          "height": 424,
+          "resource_url": "https://i.discogs.com/dcBGznMoJYnHNhs6IEQq3AbLZv7PJiujzT4aD6Dqiic/rs:fit/g:sm/q:90/h:424/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dcBGznMoJYnHNhs6IEQq3AbLZv7PJiujzT4aD6Dqiic/rs:fit/g:sm/q:90/h:424/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/mxD0RbflWXJ05KtiwIiazIjJgxP3-tkHQ0nVTX7x4lE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/D4_mVBMUwpc7QuFTL27alMcmXP3IEnfF8p03T7hw5HY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D4_mVBMUwpc7QuFTL27alMcmXP3IEnfF8p03T7hw5HY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KHexAMZoPnR-1C4HWDCZR_ygCZ7-YiwaelQjEKqFKKA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/mO7Tq2GRieTqYuclTYTIbKY-iJ0lO0ORvA-068Gf0yc/rs:fit/g:sm/q:90/h:567/w:559/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mO7Tq2GRieTqYuclTYTIbKY-iJ0lO0ORvA-068Gf0yc/rs:fit/g:sm/q:90/h:567/w:559/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1yJplFRpVYZ8Z9hqTmXRucB5XWUjpGC3TgPNWfGYQi8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "width": 559
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 105594,
+          "name": "Gruff Rhys",
+          "resource_url": "https://api.discogs.com/artists/105594"
+        },
+        {
+          "active": true,
+          "id": 810328,
+          "name": "Bryan Hollon",
+          "resource_url": "https://api.discogs.com/artists/810328"
+        }
+      ],
       "name": "Neon Neon",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "888538",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/888538"
-      },
+      "releases_url": "https://api.discogs.com/artists/888538/releases",
       "resource_url": "https://api.discogs.com/artists/888538",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/888538",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/888538-Neon-Neon",
+      "urls": [
+        "http://www.myspace.com/neonx2"
+      ]
     },
     "identity": {
       "musicbrainz_id": "6191360a-edc5-41d7-a83e-c9f0ab842f53",
@@ -201,27 +235,62 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='266739607', url='https://music.apple.com/gb/artist/neon-neon/266739607', name='Neon Neon', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/c0/63/a7c06304-2366-ecdf-bb0d-da8ce18a5e42/150.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '266739607', 'type': 'artists', 'href': '/v1/catalog/gb/artists/266739607', 'attributes': {'name': 'Neon Neon', 'genreNames': ['Alternative'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/c0/63/a7c06304-2366-ecdf-bb0d-da8ce18a5e42/150.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'dddddd', 'textColor2': 'cacaca', 'textColor3': 'b1b1b1', 'textColor4': 'a2a2a2'}, 'url': 'https://music.apple.com/gb/artist/neon-neon/266739607'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/266739607/albums', 'data': [{'id': '1601513716', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601513716'}, {'id': '1601512850', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601512850'}, {'id': '1601506841', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601506841'}, {'id': '1601510429', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601510429'}, {'id': '1468934565', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1468934565'}, {'id': '1601504307', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601504307'}, {'id': '1601507088', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601507088'}, {'id': '1601509691', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601509691'}, {'id': '1601503626', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1601503626'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "888538",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "id": 888538,
+      "images": [
+        {
+          "height": 424,
+          "resource_url": "https://i.discogs.com/dcBGznMoJYnHNhs6IEQq3AbLZv7PJiujzT4aD6Dqiic/rs:fit/g:sm/q:90/h:424/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dcBGznMoJYnHNhs6IEQq3AbLZv7PJiujzT4aD6Dqiic/rs:fit/g:sm/q:90/h:424/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/mxD0RbflWXJ05KtiwIiazIjJgxP3-tkHQ0nVTX7x4lE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMzY1Nzk2NjMx/LTE0NzYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/D4_mVBMUwpc7QuFTL27alMcmXP3IEnfF8p03T7hw5HY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D4_mVBMUwpc7QuFTL27alMcmXP3IEnfF8p03T7hw5HY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KHexAMZoPnR-1C4HWDCZR_ygCZ7-YiwaelQjEKqFKKA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjU2/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/mO7Tq2GRieTqYuclTYTIbKY-iJ0lO0ORvA-068Gf0yc/rs:fit/g:sm/q:90/h:567/w:559/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mO7Tq2GRieTqYuclTYTIbKY-iJ0lO0ORvA-068Gf0yc/rs:fit/g:sm/q:90/h:567/w:559/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1yJplFRpVYZ8Z9hqTmXRucB5XWUjpGC3TgPNWfGYQi8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4ODUz/OC0xMjAzNjAyMjY0/LmpwZWc.jpeg",
+          "width": 559
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 105594,
+          "name": "Gruff Rhys",
+          "resource_url": "https://api.discogs.com/artists/105594"
+        },
+        {
+          "active": true,
+          "id": 810328,
+          "name": "Bryan Hollon",
+          "resource_url": "https://api.discogs.com/artists/810328"
+        }
+      ],
       "name": "Neon Neon",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "888538",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/888538"
-      },
+      "releases_url": "https://api.discogs.com/artists/888538/releases",
       "resource_url": "https://api.discogs.com/artists/888538",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/888538",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/888538-Neon-Neon",
+      "urls": [
+        "http://www.myspace.com/neonx2"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Neon Neon', url='https://www.last.fm/music/Neon+Neon', mbid='6191360a-edc5-41d7-a83e-c9f0ab842f53', listeners=98002, playcount=1616618, bio_summary='Neon Neon is a collaboration between the artists Boom Bip and Gruff Rhys. They first worked together on Boom Bip\\'s Blue Eyed in the Red Room album, released in 2005. Their debut album, Stainless Style was released on March 18th, 2008 through Lex Records. Their first single Trick for Treat is also out, and can be heard on their myspace page.\\n\\nThe album \"Stainless Style\" was nominated for the 2008 Mercury Prize. <a href=\"https://www.last.fm/music/Neon+Neon\">Read more on Last.fm</a>', bio_content='Neon Neon is a collaboration between the artists Boom Bip and Gruff Rhys. They first worked together on Boom Bip\\'s Blue Eyed in the Red Room album, released in 2005. Their debut album, Stainless Style was released on March 18th, 2008 through Lex Records. Their first single Trick for Treat is also out, and can be heard on their myspace page.\\n\\nThe album \"Stainless Style\" was nominated for the 2008 Mercury Prize. <a href=\"https://www.last.fm/music/Neon+Neon\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electropop', 'electronic', 'electronica', 'seen live', 'electro'], similar_artists=[{'name': 'Hot Chip', 'url': 'https://www.last.fm/music/Hot+Chip'}, {'name': 'Ladyhawke', 'url': 'https://www.last.fm/music/Ladyhawke'}, {'name': 'Little Boots', 'url': 'https://www.last.fm/music/Little+Boots'}, {'name': 'Junior Boys', 'url': 'https://www.last.fm/music/Junior+Boys'}, {'name': 'Ladytron', 'url': 'https://www.last.fm/music/Ladytron'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Neon Neon', 'mbid': '6191360a-edc5-41d7-a83e-c9f0ab842f53', 'url': 'https://www.last.fm/music/Neon+Neon', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '98002', 'playcount': '1616618'}, 'similar': {'artist': [{'name': 'Hot Chip', 'url': 'https://www.last.fm/music/Hot+Chip', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ladyhawke', 'url': 'https://www.last.fm/music/Ladyhawke', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Little Boots', 'url': 'https://www.last.fm/music/Little+Boots', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Junior Boys', 'url': 'https://www.last.fm/music/Junior+Boys', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ladytron', 'url': 'https://www.last.fm/music/Ladytron', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electropop', 'url': 'https://www.last.fm/tag/electropop'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'electronica', 'url': 'https://www.last.fm/tag/electronica'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'electro', 'url': 'https://www.last.fm/tag/electro'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Neon+Neon/+wiki'}}, 'published': '06 Jul 2007, 14:17', 'summary': 'Neon Neon is a collaboration between the artists Boom Bip and Gruff Rhys. They first worked together on Boom Bip\\'s Blue Eyed in the Red Room album, released in 2005. Their debut album, Stainless Style was released on March 18th, 2008 through Lex Records. Their first single Trick for Treat is also out, and can be heard on their myspace page.\\n\\nThe album \"Stainless Style\" was nominated for the 2008 Mercury Prize. <a href=\"https://www.last.fm/music/Neon+Neon\">Read more on Last.fm</a>', 'content': 'Neon Neon is a collaboration between the artists Boom Bip and Gruff Rhys. They first worked together on Boom Bip\\'s Blue Eyed in the Red Room album, released in 2005. Their debut album, Stainless Style was released on March 18th, 2008 through Lex Records. Their first single Trick for Treat is also out, and can be heard on their myspace page.\\n\\nThe album \"Stainless Style\" was nominated for the 2008 Mercury Prize. <a href=\"https://www.last.fm/music/Neon+Neon\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0GHcMuYNbDXb8cfJ7I5PsD', url='https://open.spotify.com/artist/0GHcMuYNbDXb8cfJ7I5PsD', name='Neon Neon', popularity=20, followers=10779, genres=['alternative dance', 'indie electronic'], images=[{'url': 'https://i.scdn.co/image/ab6772690000c46c947da41e57ceb150ac8590f0', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd22947da41e57ceb150ac8590f0', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac3947da41e57ceb150ac8590f0', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f74947da41e57ceb150ac8590f0', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0GHcMuYNbDXb8cfJ7I5PsD'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0GHcMuYNbDXb8cfJ7I5PsD'}, 'followers': {'href': None, 'total': 10779}, 'genres': ['alternative dance', 'indie electronic'], 'href': 'https://api.spotify.com/v1/artists/0GHcMuYNbDXb8cfJ7I5PsD', 'id': '0GHcMuYNbDXb8cfJ7I5PsD', 'images': [{'url': 'https://i.scdn.co/image/ab6772690000c46c947da41e57ceb150ac8590f0', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd22947da41e57ceb150ac8590f0', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac3947da41e57ceb150ac8590f0', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f74947da41e57ceb150ac8590f0', 'height': 64, 'width': 64}], 'name': 'Neon Neon', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:0GHcMuYNbDXb8cfJ7I5PsD'})",
@@ -285,6 +354,6 @@
   },
   "spotify_id": "0GHcMuYNbDXb8cfJ7I5PsD",
   "spotify_url": "https://open.spotify.com/artist/0GHcMuYNbDXb8cfJ7I5PsD",
-  "updated_at": "2026-10-22T14:09:38.025111",
+  "updated_at": "2026-10-30T18:42:59.775600",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Neon_Neon"
 }

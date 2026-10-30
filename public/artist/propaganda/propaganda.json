@@ -98,22 +98,185 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='724352980', url='https://music.apple.com/gb/artist/propaganda/724352980', name='Propaganda', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/4e/a3/b14ea3ee-a86d-0ab8-cda7-a5610872d36a/21UM1IM08874.rgb.jpg/2000x2000ac.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '724352980', 'type': 'artists', 'href': '/v1/catalog/gb/artists/724352980', 'attributes': {'artwork': {'bgColor': 'cdced0', 'height': 3000, 'textColor1': '050907', 'textColor2': '1a2123', 'textColor3': '2d312f', 'textColor4': '3e4445', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/4e/a3/b14ea3ee-a86d-0ab8-cda7-a5610872d36a/21UM1IM08874.rgb.jpg/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Electronic'], 'name': 'Propaganda', 'url': 'https://music.apple.com/gb/artist/propaganda/724352980'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/724352980/albums', 'data': [{'id': '1585357196', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585357196'}, {'id': '1754148116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1754148116'}, {'id': '1585274258', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585274258'}, {'id': '1594879622', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594879622'}, {'id': '1583223335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583223335'}, {'id': '1591603394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1591603394'}, {'id': '1745292229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1745292229'}, {'id': '1584975292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584975292'}, {'id': '1582169843', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1582169843'}, {'id': '1823046422', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1823046422'}, {'id': '1592687003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592687003'}, {'id': '1752177315', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1752177315'}, {'id': '1761854567', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1761854567'}, {'id': '1784672937', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1784672937'}, {'id': '1586275835', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1586275835'}, {'id': '1791570160', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1791570160'}, {'id': '1597389807', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597389807'}, {'id': '1598462729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598462729'}, {'id': '1831717229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831717229'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "13999",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 6782856,
+          "name": "M:",
+          "resource_url": "https://api.discogs.com/artists/6782856"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 13999,
+      "images": [
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/QAcJhWhVLNVc_4KdOnsNRadPeDW7aIN-ZDzZIRwQwn4/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QAcJhWhVLNVc_4KdOnsNRadPeDW7aIN-ZDzZIRwQwn4/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DesdVOnJ7xLHo4MRpU6JxJryOsHT5IXQ-ZoBiX_LD7E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 593,
+          "resource_url": "https://i.discogs.com/TAZBsRsBrkVUllFZIWOm38NWiK9j5bTdVHv6OVdUAp0/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TAZBsRsBrkVUllFZIWOm38NWiK9j5bTdVHv6OVdUAp0/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sH0AuoBhXBtuSYWsTpZX0nSQqiKWxtVLXJv5wupzepU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/XPw-_Nt8HJcQ9yRavgVk9YKH-2NNJhSfoh1lfune0lc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XPw-_Nt8HJcQ9yRavgVk9YKH-2NNJhSfoh1lfune0lc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/UZXoxhICsG9GyPGL31fWZ3lhxuHfQsKDx1HEY2fxw9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/ZEXw-NQYEFzQVuGsr6s9QCBwk5i4bBXC21APszRUZu8/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZEXw-NQYEFzQVuGsr6s9QCBwk5i4bBXC21APszRUZu8/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XUWTgxE0_vEfLKVRsb8t55Ax-6-r6BZEqCVp6-2sCWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/sMAv1PLq8BZMG3-y_wtoU01ddKB1rebpRglks7N_mlM/rs:fit/g:sm/q:90/h:600/w:461/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sMAv1PLq8BZMG3-y_wtoU01ddKB1rebpRglks7N_mlM/rs:fit/g:sm/q:90/h:600/w:461/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/n0teD-XPFGif_VZMAkU1UeR2rB90EMHOP52IX3HxNJo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "width": 461
+        },
+        {
+          "height": 197,
+          "resource_url": "https://i.discogs.com/lV3uv2qGBJM5fae0oGx0WOhGtNhFqnTEjwkvoByr_iw/rs:fit/g:sm/q:90/h:197/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lV3uv2qGBJM5fae0oGx0WOhGtNhFqnTEjwkvoByr_iw/rs:fit/g:sm/q:90/h:197/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/kXHsCaa6FHxmlyMCNEKgaB0H3CGwGchOiKLOvMMZJE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "width": 323
+        },
+        {
+          "height": 291,
+          "resource_url": "https://i.discogs.com/-u8t9_d0q8FQw0nuoGShYpZdxLq3xsiE4a4Weaou0as/rs:fit/g:sm/q:90/h:291/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-u8t9_d0q8FQw0nuoGShYpZdxLq3xsiE4a4Weaou0as/rs:fit/g:sm/q:90/h:291/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4veMNrWlwDQxaFCPDMAKcPBC0WymYDyJz-JTqr0Ngt0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "width": 460
+        },
+        {
+          "height": 411,
+          "resource_url": "https://i.discogs.com/7CFon_3CTVSgBeWJLGdF3PhT_cbBfoiWyhVxFJPp5LE/rs:fit/g:sm/q:90/h:411/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7CFon_3CTVSgBeWJLGdF3PhT_cbBfoiWyhVxFJPp5LE/rs:fit/g:sm/q:90/h:411/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/CGCfIv2XtQEEFrtRcahLT3TUSU_U0xT6jw7jIfcvCnk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "width": 564
+        },
+        {
+          "height": 307,
+          "resource_url": "https://i.discogs.com/r26PMY9SjbS0ig1L8_TCrAOzC1KlMYwWNKKDua9xiyg/rs:fit/g:sm/q:90/h:307/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r26PMY9SjbS0ig1L8_TCrAOzC1KlMYwWNKKDua9xiyg/rs:fit/g:sm/q:90/h:307/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/t-Ls99-5J4al-frbdVb9aR1e1xzmzzJN1bF2Hp6HCVA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "width": 492
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/t3VE1v_9hDzvx2CapN92HL6PASOIoOpFqEJpz-BEhcY/rs:fit/g:sm/q:90/h:425/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t3VE1v_9hDzvx2CapN92HL6PASOIoOpFqEJpz-BEhcY/rs:fit/g:sm/q:90/h:425/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hPK17ewlZkSO32vvyrsmm6_h36KJL-Aqxkak2s5HijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "width": 333
+        },
+        {
+          "height": 587,
+          "resource_url": "https://i.discogs.com/OLg3sRebLNjsKTYSpkm4cVLdwSOyVajyynCG8K80n84/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OLg3sRebLNjsKTYSpkm4cVLdwSOyVajyynCG8K80n84/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/O6tsxBZp9OPSoCQkNdX99yJoF1hdO3qPqcsHz5IDr9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/pS7BitGNE9BVYtH1oOhTw11JFm_B3UYuP6PvSeAAf9M/rs:fit/g:sm/q:90/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pS7BitGNE9BVYtH1oOhTw11JFm_B3UYuP6PvSeAAf9M/rs:fit/g:sm/q:90/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/UyQLnmX5U9umqf1C1eDo1s9_TeXH0TWXx6qkPxdZVPU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 58686,
+          "name": "Claudia Brücken",
+          "resource_url": "https://api.discogs.com/artists/58686"
+        },
+        {
+          "active": true,
+          "id": 78375,
+          "name": "Ralf Dörper",
+          "resource_url": "https://api.discogs.com/artists/78375"
+        },
+        {
+          "active": true,
+          "id": 117679,
+          "name": "Michael Mertens",
+          "resource_url": "https://api.discogs.com/artists/117679"
+        },
+        {
+          "active": false,
+          "id": 124236,
+          "name": "Susanne Freytag",
+          "resource_url": "https://api.discogs.com/artists/124236"
+        },
+        {
+          "active": false,
+          "id": 126335,
+          "name": "Brian McGee",
+          "resource_url": "https://api.discogs.com/artists/126335"
+        },
+        {
+          "active": false,
+          "id": 243034,
+          "name": "Andreas Thein",
+          "resource_url": "https://api.discogs.com/artists/243034"
+        },
+        {
+          "active": false,
+          "id": 287983,
+          "name": "Derek Forbes",
+          "resource_url": "https://api.discogs.com/artists/287983"
+        },
+        {
+          "active": false,
+          "id": 552585,
+          "name": "Betsi Miller",
+          "resource_url": "https://api.discogs.com/artists/552585"
+        }
+      ],
       "name": "Propaganda",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "13999",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/13999"
-      },
+      "namevariations": [
+        "P: Propaganda P:",
+        "Propaganda's",
+        "Propoganda",
+        "Präpaganda",
+        "p : Propaganda",
+        "p: Propaganda",
+        "プロパガンダ"
+      ],
+      "profile": "Synth pop group originating from Düsseldorf, Germany; formed in 1982 by former Die Krupps keyboard player Ralf Dörper and Andreas Thein. The first recordings were made in the summer of 1982 (at '[l280914]' in Essen, Germany, the reason being that it had a PPG Synthesizer.) Dörper and Thein recorded two songs, \"Disziplin\" (political) and \"Sünde\" (religious), with vocals provided by Susanne Freytag. The plan was to release them on the London label [l24857] which had released Ralf's solo records in the UK. However, Ralf also sent the two songs to Chris Bohn at the NME. This came to the attention of producer [a32875], who signed the band to his label ZTT in 1983.\r\n\r\nA few months before ZTT signed them, the band (incl. drummer Weet) were invited to London to record tracks with [url=http://www.discogs.com/artist/65173]Nick Froome[/url] at [l264413] in February 1983 (soon to be renamed Sarm West). Trevor Horn, Jill Sinclair and Paul Morley wanted to explore what Propaganda was about and decide whether to sign them based on the material recorded in that session. Demos of \"Doppelganger\", \"Radetzky Marsch\" and \"Mabuse\" were recorded in this session.\r\n\r\nPropaganda has been through several line-up changes in its recording career:\r\n\r\n[b]1984, ZTT[/b] (\"Dr. Mabuse\")\r\nClaudia Brücken, Ralf Dörper, Susanne Freytag, Michael Mertens, Andreas Thein\r\n\r\n[b]1985, ZTT[/b] (\"Duel\", \"A Secret Wish\", \"p:Machinery\", \"Wishful Thinking\")\r\nClaudia Brücken, Ralf Dörper, Susanne Freytag, Michael Mertens\r\n\r\nClaudia Brücken left Propaganda in 1986 and the remaining members of the group took ZTT to court to release them from their contract. New album demos were recorded in 1987-88. Mertens, Freytag and Dörper were joined by Derek Forbes and Brian McGee along with vocalist Betsi Miller. Although Freytag and Dörper contributed to the new album, they were no longer members by its release.\r\n\r\n[b]1990, Virgin[/b] (\"Heaven Give Me Words\", \"1234\", \"Only One Word\", \"Your Wildlife\")\r\nDerek Forbes, Brian McGee, Michael Mertens, Betsi Miller\r\nThis line-up fizzled out in 1991. \r\n\r\nBy 1998 Mertens was working again with Brücken and Freytag, and in 1999 Propaganda's website announced a new album was being recorded. This line-up were set to sign with EastWest, but this was not to be, and the album remains unreleased, although recordings leaked via the internet. Some of the tracks were recorded by Brücken's act Onetwo and released on \"[m=286115]\".\r\n\r\nIn 2004 Mertens, Freytag, Brücken and Dörper reunited for a performance of Dr. Mabuse to benefit The Prince's Trust and to celebrate Trevor Horn's 25 years in the music industry. \r\n\r\n[b]2005+, Amontillado Music[/b] (\"Valley Of The Machine Gods\")\r\nMichael Mertens, Susanne Freytag\r\n\r\nIn 2011, Brücken performed a live concert in London and was joined onstage by Dörper and Freytag. Around 2014 Mertens, Brücken, Freytag and Dörper started working together on new material, but the planned reunion did not take place as the two parties had different views on live performances. In 2015 Propaganda (i.e. Dörper and Mertens) was credited for remixing Holly Johnson's \"Dancing with Fear\".\r\n\r\nBrücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with [a12340] in 2018. With the name stylized as [a6770365], the duo released a live version of Propaganda's \"Secret Wish\" album (\"[m=1487849]\") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.\r\n\r\nAfter Brücken and Freytag, the other, male half of the band also emerged from obscurity in 2024 and has already released three singles under the original name ‘Propaganda’, with an album to follow in winter 2024. Their new female singer (credited as ‘featured artist’) is [a10126660].",
+      "releases_url": "https://api.discogs.com/artists/13999/releases",
       "resource_url": "https://api.discogs.com/artists/13999",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/13999",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/13999-Propaganda",
+      "urls": [
+        "http://www.ztt.com/artists/propaganda/",
+        "http://www.facebook.com/pages/Propaganda-Band/135375113199791",
+        "https://zttaat.com",
+        "http://www.hirschbergers.de/Propaganda/e_disco.htm",
+        "https://web.archive.org/web/20001003215133/http://www.p-fan.de/",
+        "https://en.wikipedia.org/wiki/Propaganda_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "9ad7e479-e9e1-4b4e-9431-da0343739d6c",
@@ -192,27 +355,198 @@
         "track": "Duel",
         "uri": "https://www.youtube.com/watch?v=nnQ2zOmb6Hg"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q114013754",
+        "track": "Duel",
+        "uri": "https://www.youtube.com/watch?v=nnQ2zOmb6Hg"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='724352980', url='https://music.apple.com/gb/artist/propaganda/724352980', name='Propaganda', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/4e/a3/b14ea3ee-a86d-0ab8-cda7-a5610872d36a/21UM1IM08874.rgb.jpg/2000x2000ac.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '724352980', 'type': 'artists', 'href': '/v1/catalog/gb/artists/724352980', 'attributes': {'artwork': {'bgColor': 'cdced0', 'height': 3000, 'textColor1': '050907', 'textColor2': '1a2123', 'textColor3': '2d312f', 'textColor4': '3e4445', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/4e/a3/b14ea3ee-a86d-0ab8-cda7-a5610872d36a/21UM1IM08874.rgb.jpg/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Electronic'], 'name': 'Propaganda', 'url': 'https://music.apple.com/gb/artist/propaganda/724352980'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/724352980/albums', 'data': [{'id': '1585357196', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585357196'}, {'id': '1754148116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1754148116'}, {'id': '1585274258', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1585274258'}, {'id': '1594879622', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1594879622'}, {'id': '1583223335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583223335'}, {'id': '1591603394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1591603394'}, {'id': '1745292229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1745292229'}, {'id': '1584975292', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584975292'}, {'id': '1582169843', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1582169843'}, {'id': '1823046422', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1823046422'}, {'id': '1592687003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1592687003'}, {'id': '1752177315', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1752177315'}, {'id': '1761854567', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1761854567'}, {'id': '1784672937', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1784672937'}, {'id': '1586275835', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1586275835'}, {'id': '1791570160', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1791570160'}, {'id': '1597389807', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597389807'}, {'id': '1598462729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1598462729'}, {'id': '1831717229', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1831717229'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "13999",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 6782856,
+          "name": "M:",
+          "resource_url": "https://api.discogs.com/artists/6782856"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 13999,
+      "images": [
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/QAcJhWhVLNVc_4KdOnsNRadPeDW7aIN-ZDzZIRwQwn4/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QAcJhWhVLNVc_4KdOnsNRadPeDW7aIN-ZDzZIRwQwn4/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/DesdVOnJ7xLHo4MRpU6JxJryOsHT5IXQ-ZoBiX_LD7E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNjUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 593,
+          "resource_url": "https://i.discogs.com/TAZBsRsBrkVUllFZIWOm38NWiK9j5bTdVHv6OVdUAp0/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TAZBsRsBrkVUllFZIWOm38NWiK9j5bTdVHv6OVdUAp0/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sH0AuoBhXBtuSYWsTpZX0nSQqiKWxtVLXJv5wupzepU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEzMzEwNTM5NDYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/XPw-_Nt8HJcQ9yRavgVk9YKH-2NNJhSfoh1lfune0lc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XPw-_Nt8HJcQ9yRavgVk9YKH-2NNJhSfoh1lfune0lc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/UZXoxhICsG9GyPGL31fWZ3lhxuHfQsKDx1HEY2fxw9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3MjkxOTU0OTgt/ODQ5My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/ZEXw-NQYEFzQVuGsr6s9QCBwk5i4bBXC21APszRUZu8/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZEXw-NQYEFzQVuGsr6s9QCBwk5i4bBXC21APszRUZu8/rs:fit/g:sm/q:90/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/XUWTgxE0_vEfLKVRsb8t55Ax-6-r6BZEqCVp6-2sCWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0MzIzNzc3MTkt/MTM0Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/sMAv1PLq8BZMG3-y_wtoU01ddKB1rebpRglks7N_mlM/rs:fit/g:sm/q:90/h:600/w:461/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sMAv1PLq8BZMG3-y_wtoU01ddKB1rebpRglks7N_mlM/rs:fit/g:sm/q:90/h:600/w:461/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/n0teD-XPFGif_VZMAkU1UeR2rB90EMHOP52IX3HxNJo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyNzYu/anBlZw.jpeg",
+          "width": 461
+        },
+        {
+          "height": 197,
+          "resource_url": "https://i.discogs.com/lV3uv2qGBJM5fae0oGx0WOhGtNhFqnTEjwkvoByr_iw/rs:fit/g:sm/q:90/h:197/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lV3uv2qGBJM5fae0oGx0WOhGtNhFqnTEjwkvoByr_iw/rs:fit/g:sm/q:90/h:197/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/kXHsCaa6FHxmlyMCNEKgaB0H3CGwGchOiKLOvMMZJE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMi5qcGc.jpeg",
+          "width": 323
+        },
+        {
+          "height": 291,
+          "resource_url": "https://i.discogs.com/-u8t9_d0q8FQw0nuoGShYpZdxLq3xsiE4a4Weaou0as/rs:fit/g:sm/q:90/h:291/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-u8t9_d0q8FQw0nuoGShYpZdxLq3xsiE4a4Weaou0as/rs:fit/g:sm/q:90/h:291/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4veMNrWlwDQxaFCPDMAKcPBC0WymYDyJz-JTqr0Ngt0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTEyNjAyODgyOTUu/anBlZw.jpeg",
+          "width": 460
+        },
+        {
+          "height": 411,
+          "resource_url": "https://i.discogs.com/7CFon_3CTVSgBeWJLGdF3PhT_cbBfoiWyhVxFJPp5LE/rs:fit/g:sm/q:90/h:411/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7CFon_3CTVSgBeWJLGdF3PhT_cbBfoiWyhVxFJPp5LE/rs:fit/g:sm/q:90/h:411/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/CGCfIv2XtQEEFrtRcahLT3TUSU_U0xT6jw7jIfcvCnk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTAwMS5qcGc.jpeg",
+          "width": 564
+        },
+        {
+          "height": 307,
+          "resource_url": "https://i.discogs.com/r26PMY9SjbS0ig1L8_TCrAOzC1KlMYwWNKKDua9xiyg/rs:fit/g:sm/q:90/h:307/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r26PMY9SjbS0ig1L8_TCrAOzC1KlMYwWNKKDua9xiyg/rs:fit/g:sm/q:90/h:307/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/t-Ls99-5J4al-frbdVb9aR1e1xzmzzJN1bF2Hp6HCVA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NDY2NTI1ODEt/MTU3Ni5qcGVn.jpeg",
+          "width": 492
+        },
+        {
+          "height": 425,
+          "resource_url": "https://i.discogs.com/t3VE1v_9hDzvx2CapN92HL6PASOIoOpFqEJpz-BEhcY/rs:fit/g:sm/q:90/h:425/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t3VE1v_9hDzvx2CapN92HL6PASOIoOpFqEJpz-BEhcY/rs:fit/g:sm/q:90/h:425/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hPK17ewlZkSO32vvyrsmm6_h36KJL-Aqxkak2s5HijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE0NTI0ODUwMjEt/OTYyNy5qcGVn.jpeg",
+          "width": 333
+        },
+        {
+          "height": 587,
+          "resource_url": "https://i.discogs.com/OLg3sRebLNjsKTYSpkm4cVLdwSOyVajyynCG8K80n84/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OLg3sRebLNjsKTYSpkm4cVLdwSOyVajyynCG8K80n84/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/O6tsxBZp9OPSoCQkNdX99yJoF1hdO3qPqcsHz5IDr9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/OTM3MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/pS7BitGNE9BVYtH1oOhTw11JFm_B3UYuP6PvSeAAf9M/rs:fit/g:sm/q:90/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pS7BitGNE9BVYtH1oOhTw11JFm_B3UYuP6PvSeAAf9M/rs:fit/g:sm/q:90/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/UyQLnmX5U9umqf1C1eDo1s9_TeXH0TWXx6qkPxdZVPU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTk5/LTE3NzM0Mjg3NjMt/ODQwMy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 58686,
+          "name": "Claudia Brücken",
+          "resource_url": "https://api.discogs.com/artists/58686"
+        },
+        {
+          "active": true,
+          "id": 78375,
+          "name": "Ralf Dörper",
+          "resource_url": "https://api.discogs.com/artists/78375"
+        },
+        {
+          "active": true,
+          "id": 117679,
+          "name": "Michael Mertens",
+          "resource_url": "https://api.discogs.com/artists/117679"
+        },
+        {
+          "active": false,
+          "id": 124236,
+          "name": "Susanne Freytag",
+          "resource_url": "https://api.discogs.com/artists/124236"
+        },
+        {
+          "active": false,
+          "id": 126335,
+          "name": "Brian McGee",
+          "resource_url": "https://api.discogs.com/artists/126335"
+        },
+        {
+          "active": false,
+          "id": 243034,
+          "name": "Andreas Thein",
+          "resource_url": "https://api.discogs.com/artists/243034"
+        },
+        {
+          "active": false,
+          "id": 287983,
+          "name": "Derek Forbes",
+          "resource_url": "https://api.discogs.com/artists/287983"
+        },
+        {
+          "active": false,
+          "id": 552585,
+          "name": "Betsi Miller",
+          "resource_url": "https://api.discogs.com/artists/552585"
+        }
+      ],
       "name": "Propaganda",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "13999",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/13999"
-      },
+      "namevariations": [
+        "P: Propaganda P:",
+        "Propaganda's",
+        "Propoganda",
+        "Präpaganda",
+        "p : Propaganda",
+        "p: Propaganda",
+        "プロパガンダ"
+      ],
+      "profile": "Synth pop group originating from Düsseldorf, Germany; formed in 1982 by former Die Krupps keyboard player Ralf Dörper and Andreas Thein. The first recordings were made in the summer of 1982 (at '[l280914]' in Essen, Germany, the reason being that it had a PPG Synthesizer.) Dörper and Thein recorded two songs, \"Disziplin\" (political) and \"Sünde\" (religious), with vocals provided by Susanne Freytag. The plan was to release them on the London label [l24857] which had released Ralf's solo records in the UK. However, Ralf also sent the two songs to Chris Bohn at the NME. This came to the attention of producer [a32875], who signed the band to his label ZTT in 1983.\r\n\r\nA few months before ZTT signed them, the band (incl. drummer Weet) were invited to London to record tracks with [url=http://www.discogs.com/artist/65173]Nick Froome[/url] at [l264413] in February 1983 (soon to be renamed Sarm West). Trevor Horn, Jill Sinclair and Paul Morley wanted to explore what Propaganda was about and decide whether to sign them based on the material recorded in that session. Demos of \"Doppelganger\", \"Radetzky Marsch\" and \"Mabuse\" were recorded in this session.\r\n\r\nPropaganda has been through several line-up changes in its recording career:\r\n\r\n[b]1984, ZTT[/b] (\"Dr. Mabuse\")\r\nClaudia Brücken, Ralf Dörper, Susanne Freytag, Michael Mertens, Andreas Thein\r\n\r\n[b]1985, ZTT[/b] (\"Duel\", \"A Secret Wish\", \"p:Machinery\", \"Wishful Thinking\")\r\nClaudia Brücken, Ralf Dörper, Susanne Freytag, Michael Mertens\r\n\r\nClaudia Brücken left Propaganda in 1986 and the remaining members of the group took ZTT to court to release them from their contract. New album demos were recorded in 1987-88. Mertens, Freytag and Dörper were joined by Derek Forbes and Brian McGee along with vocalist Betsi Miller. Although Freytag and Dörper contributed to the new album, they were no longer members by its release.\r\n\r\n[b]1990, Virgin[/b] (\"Heaven Give Me Words\", \"1234\", \"Only One Word\", \"Your Wildlife\")\r\nDerek Forbes, Brian McGee, Michael Mertens, Betsi Miller\r\nThis line-up fizzled out in 1991. \r\n\r\nBy 1998 Mertens was working again with Brücken and Freytag, and in 1999 Propaganda's website announced a new album was being recorded. This line-up were set to sign with EastWest, but this was not to be, and the album remains unreleased, although recordings leaked via the internet. Some of the tracks were recorded by Brücken's act Onetwo and released on \"[m=286115]\".\r\n\r\nIn 2004 Mertens, Freytag, Brücken and Dörper reunited for a performance of Dr. Mabuse to benefit The Prince's Trust and to celebrate Trevor Horn's 25 years in the music industry. \r\n\r\n[b]2005+, Amontillado Music[/b] (\"Valley Of The Machine Gods\")\r\nMichael Mertens, Susanne Freytag\r\n\r\nIn 2011, Brücken performed a live concert in London and was joined onstage by Dörper and Freytag. Around 2014 Mertens, Brücken, Freytag and Dörper started working together on new material, but the planned reunion did not take place as the two parties had different views on live performances. In 2015 Propaganda (i.e. Dörper and Mertens) was credited for remixing Holly Johnson's \"Dancing with Fear\".\r\n\r\nBrücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with [a12340] in 2018. With the name stylized as [a6770365], the duo released a live version of Propaganda's \"Secret Wish\" album (\"[m=1487849]\") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.\r\n\r\nAfter Brücken and Freytag, the other, male half of the band also emerged from obscurity in 2024 and has already released three singles under the original name ‘Propaganda’, with an album to follow in winter 2024. Their new female singer (credited as ‘featured artist’) is [a10126660].",
+      "releases_url": "https://api.discogs.com/artists/13999/releases",
       "resource_url": "https://api.discogs.com/artists/13999",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/13999",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/13999-Propaganda",
+      "urls": [
+        "http://www.ztt.com/artists/propaganda/",
+        "http://www.facebook.com/pages/Propaganda-Band/135375113199791",
+        "https://zttaat.com",
+        "http://www.hirschbergers.de/Propaganda/e_disco.htm",
+        "https://web.archive.org/web/20001003215133/http://www.p-fan.de/",
+        "https://en.wikipedia.org/wiki/Propaganda_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Propaganda', url='https://www.last.fm/music/Propaganda', mbid='9ad7e479-e9e1-4b4e-9431-da0343739d6c', listeners=233815, playcount=2604397, bio_summary='There are two Bands under the Name Propaganda :\\n\\n1. Synthpop band Propaganda was formed in Germany by vocalist Claudia Brücken and drummer Michael Mertens plus keyboard players Susanne Freytag and Ralf Dorper. The quartet moved to England in 1983 and signed to ZTT Records, also the home of Frankie Goes to Hollywood and Art of Noise. Propaganda\\'s first single, \"Dr. Mabuse,\" reached the British Top 30 in early 1984, but the band\\'s second release was more than a year in coming. <a href=\"https://www.last.fm/music/Propaganda\">Read more on Last.fm</a>', bio_content='There are two Bands under the Name Propaganda :\\n\\n1. Synthpop band Propaganda was formed in Germany by vocalist Claudia Brücken and drummer Michael Mertens plus keyboard players Susanne Freytag and Ralf Dorper. The quartet moved to England in 1983 and signed to ZTT Records, also the home of Frankie Goes to Hollywood and Art of Noise. Propaganda\\'s first single, \"Dr. Mabuse,\" reached the British Top 30 in early 1984, but the band\\'s second release was more than a year in coming. Finally, in May 1985, \"Duel\" trumped the debut single by hitting number 21.\\n\\nPropaganda\\'s first album A Secret Wish appeared one month later, and the resulting tour necessitated the addition of bassist Derek Forbes and drummer Brian McGee -- both formerly with Simple Minds. After the release of the remix album Wishful Thinking later that year, Dorper became the first original member to leave the band, and Propaganda splintered soon after, due to a prolonged legal battle to leave ZTT. The group finally re-emerged in 1988 with Mertens, Forbes, McGee and American vocalist Betsi Miller. The quartet signed with Virgin, and released 1234 in 1990. The single \"Heaven Give Me Words\" broke the British Top 40 in 1990, and \"Only One Word\" placed modestly later that year.\\n\\nMeanwhile, Claudia Brücken -- who had stayed with ZTT in large part because of her marriage to label-owner Paul Morley -- formed Act with Thomas Leer. The duo charted \"Snobbery and Decay\" in mid-1987 and released their only album, Laughter, Tears, and Rage in 1988. Brücken became a solo act by the turn of the decade, and charted only one single, \"Absolut (E),\" from her 1991 album Love, And a Million Other Things. Though neither the band nor Brücken had recorded recently, rumours flew during the mid-\\'90s that a Propaganda reunion was in the works.\\n\\n2.  Jason Emmanuel Petty (born May 27, 1979), better known by his stage name Propaganda, is an American Christian hip hop and spoken word artist and poet from Los Angeles, California. He has released four albums as an independent artist and one collaborative album with the rapper Odd Thomas, and has performed and recorded as a member of the underground hip hop group Tunnel Rats and associated act Footsoldiers. <a href=\"https://www.last.fm/music/Propaganda\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['new wave', 'synthpop', '80s', 'electronic', 'german'], similar_artists=[{'name': 'Blancmange', 'url': 'https://www.last.fm/music/Blancmange'}, {'name': 'Heaven 17', 'url': 'https://www.last.fm/music/Heaven+17'}, {'name': 'Act', 'url': 'https://www.last.fm/music/Act'}, {'name': 'The Human League', 'url': 'https://www.last.fm/music/The+Human+League'}, {'name': 'Ultravox', 'url': 'https://www.last.fm/music/Ultravox'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Propaganda', 'mbid': '9ad7e479-e9e1-4b4e-9431-da0343739d6c', 'url': 'https://www.last.fm/music/Propaganda', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '233815', 'playcount': '2604397'}, 'similar': {'artist': [{'name': 'Blancmange', 'url': 'https://www.last.fm/music/Blancmange', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Heaven 17', 'url': 'https://www.last.fm/music/Heaven+17', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Act', 'url': 'https://www.last.fm/music/Act', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Human League', 'url': 'https://www.last.fm/music/The+Human+League', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ultravox', 'url': 'https://www.last.fm/music/Ultravox', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'new wave', 'url': 'https://www.last.fm/tag/new+wave'}, {'name': 'synthpop', 'url': 'https://www.last.fm/tag/synthpop'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'german', 'url': 'https://www.last.fm/tag/german'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Propaganda/+wiki'}}, 'published': '28 Aug 2006, 01:17', 'summary': 'There are two Bands under the Name Propaganda :\\n\\n1. Synthpop band Propaganda was formed in Germany by vocalist Claudia Brücken and drummer Michael Mertens plus keyboard players Susanne Freytag and Ralf Dorper. The quartet moved to England in 1983 and signed to ZTT Records, also the home of Frankie Goes to Hollywood and Art of Noise. Propaganda\\'s first single, \"Dr. Mabuse,\" reached the British Top 30 in early 1984, but the band\\'s second release was more than a year in coming. <a href=\"https://www.last.fm/music/Propaganda\">Read more on Last.fm</a>', 'content': 'There are two Bands under the Name Propaganda :\\n\\n1. Synthpop band Propaganda was formed in Germany by vocalist Claudia Brücken and drummer Michael Mertens plus keyboard players Susanne Freytag and Ralf Dorper. The quartet moved to England in 1983 and signed to ZTT Records, also the home of Frankie Goes to Hollywood and Art of Noise. Propaganda\\'s first single, \"Dr. Mabuse,\" reached the British Top 30 in early 1984, but the band\\'s second release was more than a year in coming. Finally, in May 1985, \"Duel\" trumped the debut single by hitting number 21.\\n\\nPropaganda\\'s first album A Secret Wish appeared one month later, and the resulting tour necessitated the addition of bassist Derek Forbes and drummer Brian McGee -- both formerly with Simple Minds. After the release of the remix album Wishful Thinking later that year, Dorper became the first original member to leave the band, and Propaganda splintered soon after, due to a prolonged legal battle to leave ZTT. The group finally re-emerged in 1988 with Mertens, Forbes, McGee and American vocalist Betsi Miller. The quartet signed with Virgin, and released 1234 in 1990. The single \"Heaven Give Me Words\" broke the British Top 40 in 1990, and \"Only One Word\" placed modestly later that year.\\n\\nMeanwhile, Claudia Brücken -- who had stayed with ZTT in large part because of her marriage to label-owner Paul Morley -- formed Act with Thomas Leer. The duo charted \"Snobbery and Decay\" in mid-1987 and released their only album, Laughter, Tears, and Rage in 1988. Brücken became a solo act by the turn of the decade, and charted only one single, \"Absolut (E),\" from her 1991 album Love, And a Million Other Things. Though neither the band nor Brücken had recorded recently, rumours flew during the mid-\\'90s that a Propaganda reunion was in the works.\\n\\n2.  Jason Emmanuel Petty (born May 27, 1979), better known by his stage name Propaganda, is an American Christian hip hop and spoken word artist and poet from Los Angeles, California. He has released four albums as an independent artist and one collaborative album with the rapper Odd Thomas, and has performed and recorded as a member of the underground hip hop group Tunnel Rats and associated act Footsoldiers. <a href=\"https://www.last.fm/music/Propaganda\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='28yIUgPYZqgJoNZjeBvrHn', url='https://open.spotify.com/artist/28yIUgPYZqgJoNZjeBvrHn', name='Propaganda', popularity=44, followers=135037, genres=['synthpop', 'new wave'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebecd299d1ab6add5c974aac58', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174ecd299d1ab6add5c974aac58', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178ecd299d1ab6add5c974aac58', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/28yIUgPYZqgJoNZjeBvrHn'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/28yIUgPYZqgJoNZjeBvrHn'}, 'followers': {'href': None, 'total': 135037}, 'genres': ['synthpop', 'new wave'], 'href': 'https://api.spotify.com/v1/artists/28yIUgPYZqgJoNZjeBvrHn', 'id': '28yIUgPYZqgJoNZjeBvrHn', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebecd299d1ab6add5c974aac58', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174ecd299d1ab6add5c974aac58', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178ecd299d1ab6add5c974aac58', 'height': 160, 'width': 160}], 'name': 'Propaganda', 'popularity': 44, 'type': 'artist', 'uri': 'spotify:artist:28yIUgPYZqgJoNZjeBvrHn'})",
@@ -269,6 +603,6 @@
   },
   "spotify_id": "28yIUgPYZqgJoNZjeBvrHn",
   "spotify_url": "https://open.spotify.com/artist/28yIUgPYZqgJoNZjeBvrHn",
-  "updated_at": "2026-10-22T14:10:25.843321",
+  "updated_at": "2026-10-30T18:44:17.783160",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Propaganda_(band)"
 }

@@ -137,22 +137,213 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='140870416', url='https://music.apple.com/gb/artist/tool/140870416', name='TOOL', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ff/5e/01/ff5e01ec-7f22-b9c7-3935-dcddeee06334/mza_2880414082109595232.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes='It’s really here. Listen to TOOL’s first new song in 13 years.', raw_data={'id': '140870416', 'type': 'artists', 'href': '/v1/catalog/gb/artists/140870416', 'attributes': {'name': 'TOOL', 'genreNames': ['Metal'], 'editorialNotes': {'short': 'It’s really here. Listen to TOOL’s first new song in 13 years.'}, 'artwork': {'width': 3840, 'height': 3840, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ff/5e/01/ff5e01ec-7f22-b9c7-3935-dcddeee06334/mza_2880414082109595232.png/{w}x{h}bb.jpg', 'bgColor': '000000', 'textColor1': 'edd185', 'textColor2': 'f1c472', 'textColor3': 'bea76b', 'textColor4': 'c09d5b'}, 'url': 'https://music.apple.com/gb/artist/tool/140870416'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/140870416/albums', 'data': [{'id': '1475686696', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1475686696'}, {'id': '1474185412', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185412'}, {'id': '1474250650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474250650'}, {'id': '1474185335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185335'}, {'id': '1474185287', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185287'}, {'id': '1611206659', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611206659'}, {'id': '1474180609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474180609'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "87016",
-      "images": [],
-      "members": [],
-      "name": "Tool",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "87016",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/87016"
-      },
+      "data_quality": "Needs Vote",
+      "id": 87016,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/phrPQqMaL4W89TCfU3S160Wnx2mQYhLZJyptpiknnyg/rs:fit/g:sm/q:90/h:600/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/phrPQqMaL4W89TCfU3S160Wnx2mQYhLZJyptpiknnyg/rs:fit/g:sm/q:90/h:600/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zxL2Z0YC-sD8v9haQnTW1cJoYenIndrdQNvI8GL038k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "width": 439
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/LRjDp9BD3CMXfw0k6vduLHPttcL12S0tuDLzKCmVWbQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LRjDp9BD3CMXfw0k6vduLHPttcL12S0tuDLzKCmVWbQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/U2Vhv8LyCg4UHpDqlmSmLPGH8JZA9jO9H0c_2KnzWNU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/lQ_KxlEAkY3SwLhI7BmbbcBVYqbCWse5kZeYIvyLVPI/rs:fit/g:sm/q:90/h:375/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lQ_KxlEAkY3SwLhI7BmbbcBVYqbCWse5kZeYIvyLVPI/rs:fit/g:sm/q:90/h:375/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7LvyKYoikVbBaKeS6gXeI-cKnjKoFtEFbvl7NISu7YE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "width": 563
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/AX5CoIF0309Ndw3GS5TYSMLV-sc5Tb-FDBrxgajdSH4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AX5CoIF0309Ndw3GS5TYSMLV-sc5Tb-FDBrxgajdSH4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CQQ3u_omkIerN72UClDqOwCOHB9CQTJbdJVXEi5Pswo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 221,
+          "resource_url": "https://i.discogs.com/sxd9SQMJ0PUyTXL5pFz4bS1lmxpfxqCQqXS_uBkYmd0/rs:fit/g:sm/q:90/h:221/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sxd9SQMJ0PUyTXL5pFz4bS1lmxpfxqCQqXS_uBkYmd0/rs:fit/g:sm/q:90/h:221/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4G03ixKjAqJnkeUbZlPjWrCbXvL4uqPkdNUEEaF_Oy8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 382,
+          "resource_url": "https://i.discogs.com/5sePLgx-cpunSzsL2qk2FgE4swyUREIygB9NS4OIkrs/rs:fit/g:sm/q:90/h:382/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5sePLgx-cpunSzsL2qk2FgE4swyUREIygB9NS4OIkrs/rs:fit/g:sm/q:90/h:382/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QdwMefHAyYTpwGczugNGIsSZI-gQWTGHXrKNZ8MuG7Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VegAqTSWi471xgwOnraVoGuyXrz1IPMeCeiZ82S54Bs/rs:fit/g:sm/q:90/h:600/w:416/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VegAqTSWi471xgwOnraVoGuyXrz1IPMeCeiZ82S54Bs/rs:fit/g:sm/q:90/h:600/w:416/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/-uQEga0gKka-c1ofSx-J1NfdgabnQDYlki2wLkC7cA0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "width": 416
+        },
+        {
+          "height": 268,
+          "resource_url": "https://i.discogs.com/EfTnLcScx-WKmqULyQBzNl-RkxmQ2EWtb3SRHFpuwDc/rs:fit/g:sm/q:90/h:268/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EfTnLcScx-WKmqULyQBzNl-RkxmQ2EWtb3SRHFpuwDc/rs:fit/g:sm/q:90/h:268/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/dcxwlQVLEAXzT-RY3NGnMplFal40bbWF_nA06KlSJTg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 214,
+          "resource_url": "https://i.discogs.com/wKzLi_3WqZT3Fze55LxCmwDZ0h7e52sXQfdmiboL0xs/rs:fit/g:sm/q:90/h:214/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wKzLi_3WqZT3Fze55LxCmwDZ0h7e52sXQfdmiboL0xs/rs:fit/g:sm/q:90/h:214/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/7l8MEgqNMwV-guCXYikOrXqRxGE0Qi-dYCv9cWJ2vok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "width": 324
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/mNiDby8TwtbrDFzffvyVLQKlPL1SUAqsTgwUkw6TZT4/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mNiDby8TwtbrDFzffvyVLQKlPL1SUAqsTgwUkw6TZT4/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/HsDJTSNZWbuhNIvhgeNGV857lzINVaBS_x8af1eeZSQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 150,
+          "resource_url": "https://i.discogs.com/QtTqeyvBgjKVqSZAzo-20MWNgZg4CgPs3Oqsv8wjUPs/rs:fit/g:sm/q:90/h:150/w:241/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QtTqeyvBgjKVqSZAzo-20MWNgZg4CgPs3Oqsv8wjUPs/rs:fit/g:sm/q:90/h:150/w:241/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/RM1bY3HsirO999GM7ynt-bFyupW6ZT7sxZZ6xVdYu_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "width": 241
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/pThwrdFBxzGFpn--forKob4MLQL_YQyOEGb4fMpuqhk/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pThwrdFBxzGFpn--forKob4MLQL_YQyOEGb4fMpuqhk/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/G653-gqpuhl-TRXgLu5TaB2TRyVynSQCdgzNGxgh1Jc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/vkcFflPheZq_fKlNqiIe2jzHVuaWqA9U711TvG92d4s/rs:fit/g:sm/q:90/h:598/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vkcFflPheZq_fKlNqiIe2jzHVuaWqA9U711TvG92d4s/rs:fit/g:sm/q:90/h:598/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZgE4VSDYkzhXzYpnwsShWL8joAbMUVffAzqQOIQezWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "width": 459
+        },
+        {
+          "height": 417,
+          "resource_url": "https://i.discogs.com/2Dm3l7jhsVfTfopCkT8xGqjUr4ZO5kb4Xl39RSAT67M/rs:fit/g:sm/q:90/h:417/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2Dm3l7jhsVfTfopCkT8xGqjUr4ZO5kb4Xl39RSAT67M/rs:fit/g:sm/q:90/h:417/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/X2w9-aeyfho683dSgksRFUquVYoPsYEclTSVuv1W9K8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 355,
+          "resource_url": "https://i.discogs.com/-1kQYU_XT4KTmb45moOIBXH-mMU0dVzHOSDDyb3onw4/rs:fit/g:sm/q:90/h:355/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-1kQYU_XT4KTmb45moOIBXH-mMU0dVzHOSDDyb3onw4/rs:fit/g:sm/q:90/h:355/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/eYIXCDf-yQRCcU8PFz-6zQ0w-zW90WRmHBdC4ZAsj3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q56BqjgtVH-h_5gRr8Dy6RpW-et4fTZSPXdiJRPwgZw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q56BqjgtVH-h_5gRr8Dy6RpW-et4fTZSPXdiJRPwgZw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/IgOMnQKGsU_kDR0uj8PiHiKX-8D-N35QWBXKi8o4pTE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_9CbU_DwRVdfiXwO5dYW1_uP8QQjZZPcTXZiN5W6uww/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_9CbU_DwRVdfiXwO5dYW1_uP8QQjZZPcTXZiN5W6uww/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RzjA3u1197fgAOiN0106BIhdqvIRmCcLXIkzcZoqxK8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/NzOEMym2J9VCA9D9_bYOSC0uCrtxPmgHWuzVI9MpPFk/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NzOEMym2J9VCA9D9_bYOSC0uCrtxPmgHWuzVI9MpPFk/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/flJP1XDPrZ2GPkw-X4qjkUJVWdZGHR3DlNSDlWFsWNs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uAxZDizAc7Ezm1I2RUujRyy07esuHU8KyqCrc5ybv7w/rs:fit/g:sm/q:90/h:600/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uAxZDizAc7Ezm1I2RUujRyy07esuHU8KyqCrc5ybv7w/rs:fit/g:sm/q:90/h:600/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QGlfhT7DIU-I5yRf36fXJicNKbNNDd16dGY2sivrRjI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 206290,
+          "name": "Danny Carey",
+          "resource_url": "https://api.discogs.com/artists/206290"
+        },
+        {
+          "active": true,
+          "id": 251558,
+          "name": "Maynard James Keenan",
+          "resource_url": "https://api.discogs.com/artists/251558"
+        },
+        {
+          "active": true,
+          "id": 251559,
+          "name": "Adam Jones",
+          "resource_url": "https://api.discogs.com/artists/251559"
+        },
+        {
+          "active": true,
+          "id": 251560,
+          "name": "Justin Chancellor",
+          "resource_url": "https://api.discogs.com/artists/251560"
+        },
+        {
+          "active": false,
+          "id": 251569,
+          "name": "Paul D'Amour",
+          "resource_url": "https://api.discogs.com/artists/251569"
+        }
+      ],
+      "name": "Tool (2)",
+      "namevariations": [
+        "TOOL",
+        "トゥール"
+      ],
+      "profile": "Tool is an American rock band from Los Angeles, California, USA, formed in 1990. They emerged with a heavy metal sound on their first studio album, Undertow (1993), and later became a dominant act in the alternative metal movement, with the release of their second album, Ænima in 1996. Their efforts to unify musical experimentation, visual arts, and a message of personal evolution continued with Lateralus (2001), 10,000 Days (2006) and the most recent album, Fear Inoculum (2019).\r\n\r\n[b][u]Line-up:[/u][/b]\r\nMaynard James Keenan – vocals (1990–)\r\nAdam Jones – guitar (1990–)\r\nDanny Carey – drums, percussion (1990–)\r\nJustin Chancellor – bass (1995–)\r\n\r\n[u][b]Former Members:[/b][/u]\r\nPaul D'Amour – bass (1990–1995)",
+      "realname": "TOOL",
+      "releases_url": "https://api.discogs.com/artists/87016/releases",
       "resource_url": "https://api.discogs.com/artists/87016",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/87016",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/87016-Tool-2",
+      "urls": [
+        "http://www.toolband.com",
+        "https://www.facebook.com/ToolMusic",
+        "https://twitter.com/Tool",
+        "http://en.wikipedia.org/wiki/Tool_%28band%29",
+        "https://soundcloud.com/officialtool",
+        "https://www.youtube.com/channel/UC1wUo-29zS7m_Jp-U_xYcFQ",
+        "https://www.instagram.com/toolmusic/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "66fc5bf8-daa4-4241-b378-9bc9077939d2",
@@ -290,27 +481,292 @@
         "track": "Ænema",
         "uri": "https://www.youtube.com/watch?v=uCEeAn6_QJo"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "Fear Inoculum",
+        "id": "Q85738614",
+        "track": "7empest",
+        "uri": "https://www.youtube.com/watch?v=9D2R69gVyZ0"
+      },
+      {
+        "album": null,
+        "id": "Q66343807",
+        "track": "Fear Inoculum",
+        "uri": "https://www.youtube.com/watch?v=q7DfQMPmJRI"
+      },
+      {
+        "album": null,
+        "id": "Q111046167",
+        "track": "Opiate²",
+        "uri": "https://www.youtube.com/watch?v=KY7cofvtbco"
+      },
+      {
+        "album": "Opiate",
+        "id": "Q2887843",
+        "track": "Hush",
+        "uri": "https://www.youtube.com/watch?v=sPSKdHlwm5U"
+      },
+      {
+        "album": null,
+        "id": "Q527131",
+        "track": "Sober",
+        "uri": "https://www.youtube.com/watch?v=nspxAG12Cpc"
+      },
+      {
+        "album": null,
+        "id": "Q940560",
+        "track": "Ænema",
+        "uri": "https://www.youtube.com/watch?v=CehYA3omb5o"
+      },
+      {
+        "album": null,
+        "id": "Q1054596",
+        "track": "Prison Sex",
+        "uri": "https://www.youtube.com/watch?v=cUPV4OfNlt0"
+      },
+      {
+        "album": null,
+        "id": "Q2236558",
+        "track": "Schism",
+        "uri": "https://www.youtube.com/watch?v=MM62wjLrgmA"
+      },
+      {
+        "album": null,
+        "id": "Q2531325",
+        "track": "Stinkfist",
+        "uri": "https://www.youtube.com/watch?v=6zpvlMp04D0"
+      },
+      {
+        "album": null,
+        "id": "Q2738988",
+        "track": "Parabola",
+        "uri": "https://www.youtube.com/watch?v=-_nQhGR0K8M"
+      },
+      {
+        "album": null,
+        "id": "Q3295824",
+        "track": "Vicarious",
+        "uri": "https://www.youtube.com/watch?v=h_TUP2vuaDs"
+      },
+      {
+        "album": null,
+        "id": "Q3391559",
+        "track": "Jambi",
+        "uri": "https://www.youtube.com/watch?v=NNojdoI_D_M"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='140870416', url='https://music.apple.com/gb/artist/tool/140870416', name='TOOL', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ff/5e/01/ff5e01ec-7f22-b9c7-3935-dcddeee06334/mza_2880414082109595232.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes='It’s really here. Listen to TOOL’s first new song in 13 years.', raw_data={'id': '140870416', 'type': 'artists', 'href': '/v1/catalog/gb/artists/140870416', 'attributes': {'name': 'TOOL', 'genreNames': ['Metal'], 'editorialNotes': {'short': 'It’s really here. Listen to TOOL’s first new song in 13 years.'}, 'artwork': {'width': 3840, 'height': 3840, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ff/5e/01/ff5e01ec-7f22-b9c7-3935-dcddeee06334/mza_2880414082109595232.png/{w}x{h}bb.jpg', 'bgColor': '000000', 'textColor1': 'edd185', 'textColor2': 'f1c472', 'textColor3': 'bea76b', 'textColor4': 'c09d5b'}, 'url': 'https://music.apple.com/gb/artist/tool/140870416'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/140870416/albums', 'data': [{'id': '1475686696', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1475686696'}, {'id': '1474185412', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185412'}, {'id': '1474250650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474250650'}, {'id': '1474185335', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185335'}, {'id': '1474185287', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474185287'}, {'id': '1611206659', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1611206659'}, {'id': '1474180609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1474180609'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "87016",
-      "images": [],
-      "members": [],
-      "name": "Tool",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "87016",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/87016"
-      },
+      "data_quality": "Needs Vote",
+      "id": 87016,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/phrPQqMaL4W89TCfU3S160Wnx2mQYhLZJyptpiknnyg/rs:fit/g:sm/q:90/h:600/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/phrPQqMaL4W89TCfU3S160Wnx2mQYhLZJyptpiknnyg/rs:fit/g:sm/q:90/h:600/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zxL2Z0YC-sD8v9haQnTW1cJoYenIndrdQNvI8GL038k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0ODAt/ODI5MS5qcGVn.jpeg",
+          "width": 439
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/LRjDp9BD3CMXfw0k6vduLHPttcL12S0tuDLzKCmVWbQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LRjDp9BD3CMXfw0k6vduLHPttcL12S0tuDLzKCmVWbQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/U2Vhv8LyCg4UHpDqlmSmLPGH8JZA9jO9H0c_2KnzWNU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1NjUxODE3NTct/MTQ0Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/lQ_KxlEAkY3SwLhI7BmbbcBVYqbCWse5kZeYIvyLVPI/rs:fit/g:sm/q:90/h:375/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lQ_KxlEAkY3SwLhI7BmbbcBVYqbCWse5kZeYIvyLVPI/rs:fit/g:sm/q:90/h:375/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7LvyKYoikVbBaKeS6gXeI-cKnjKoFtEFbvl7NISu7YE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc4NTIu/anBlZw.jpeg",
+          "width": 563
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/AX5CoIF0309Ndw3GS5TYSMLV-sc5Tb-FDBrxgajdSH4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AX5CoIF0309Ndw3GS5TYSMLV-sc5Tb-FDBrxgajdSH4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CQQ3u_omkIerN72UClDqOwCOHB9CQTJbdJVXEi5Pswo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0Njkt/ODY5MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 221,
+          "resource_url": "https://i.discogs.com/sxd9SQMJ0PUyTXL5pFz4bS1lmxpfxqCQqXS_uBkYmd0/rs:fit/g:sm/q:90/h:221/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sxd9SQMJ0PUyTXL5pFz4bS1lmxpfxqCQqXS_uBkYmd0/rs:fit/g:sm/q:90/h:221/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4G03ixKjAqJnkeUbZlPjWrCbXvL4uqPkdNUEEaF_Oy8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEzNTE0NDgwMDgt/MzUwNy5qcGVn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 382,
+          "resource_url": "https://i.discogs.com/5sePLgx-cpunSzsL2qk2FgE4swyUREIygB9NS4OIkrs/rs:fit/g:sm/q:90/h:382/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5sePLgx-cpunSzsL2qk2FgE4swyUREIygB9NS4OIkrs/rs:fit/g:sm/q:90/h:382/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QdwMefHAyYTpwGczugNGIsSZI-gQWTGHXrKNZ8MuG7Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE2NjMwODU0NjMt/NjQyMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VegAqTSWi471xgwOnraVoGuyXrz1IPMeCeiZ82S54Bs/rs:fit/g:sm/q:90/h:600/w:416/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VegAqTSWi471xgwOnraVoGuyXrz1IPMeCeiZ82S54Bs/rs:fit/g:sm/q:90/h:600/w:416/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/-uQEga0gKka-c1ofSx-J1NfdgabnQDYlki2wLkC7cA0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMDEu/anBn.jpeg",
+          "width": 416
+        },
+        {
+          "height": 268,
+          "resource_url": "https://i.discogs.com/EfTnLcScx-WKmqULyQBzNl-RkxmQ2EWtb3SRHFpuwDc/rs:fit/g:sm/q:90/h:268/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EfTnLcScx-WKmqULyQBzNl-RkxmQ2EWtb3SRHFpuwDc/rs:fit/g:sm/q:90/h:268/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/dcxwlQVLEAXzT-RY3NGnMplFal40bbWF_nA06KlSJTg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMjgu/anBn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 214,
+          "resource_url": "https://i.discogs.com/wKzLi_3WqZT3Fze55LxCmwDZ0h7e52sXQfdmiboL0xs/rs:fit/g:sm/q:90/h:214/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wKzLi_3WqZT3Fze55LxCmwDZ0h7e52sXQfdmiboL0xs/rs:fit/g:sm/q:90/h:214/w:324/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/7l8MEgqNMwV-guCXYikOrXqRxGE0Qi-dYCv9cWJ2vok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ0ODEyMzMu/anBn.jpeg",
+          "width": 324
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/mNiDby8TwtbrDFzffvyVLQKlPL1SUAqsTgwUkw6TZT4/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mNiDby8TwtbrDFzffvyVLQKlPL1SUAqsTgwUkw6TZT4/rs:fit/g:sm/q:90/h:435/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/HsDJTSNZWbuhNIvhgeNGV857lzINVaBS_x8af1eeZSQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MjYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 150,
+          "resource_url": "https://i.discogs.com/QtTqeyvBgjKVqSZAzo-20MWNgZg4CgPs3Oqsv8wjUPs/rs:fit/g:sm/q:90/h:150/w:241/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QtTqeyvBgjKVqSZAzo-20MWNgZg4CgPs3Oqsv8wjUPs/rs:fit/g:sm/q:90/h:150/w:241/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/RM1bY3HsirO999GM7ynt-bFyupW6ZT7sxZZ6xVdYu_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTExMDQ1MTgyMTUu/anBn.jpeg",
+          "width": 241
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/pThwrdFBxzGFpn--forKob4MLQL_YQyOEGb4fMpuqhk/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pThwrdFBxzGFpn--forKob4MLQL_YQyOEGb4fMpuqhk/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/G653-gqpuhl-TRXgLu5TaB2TRyVynSQCdgzNGxgh1Jc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzY1MjQ4NTYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/vkcFflPheZq_fKlNqiIe2jzHVuaWqA9U711TvG92d4s/rs:fit/g:sm/q:90/h:598/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vkcFflPheZq_fKlNqiIe2jzHVuaWqA9U711TvG92d4s/rs:fit/g:sm/q:90/h:598/w:459/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZgE4VSDYkzhXzYpnwsShWL8joAbMUVffAzqQOIQezWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyNzg2OTA2MDcu/anBlZw.jpeg",
+          "width": 459
+        },
+        {
+          "height": 417,
+          "resource_url": "https://i.discogs.com/2Dm3l7jhsVfTfopCkT8xGqjUr4ZO5kb4Xl39RSAT67M/rs:fit/g:sm/q:90/h:417/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2Dm3l7jhsVfTfopCkT8xGqjUr4ZO5kb4Xl39RSAT67M/rs:fit/g:sm/q:90/h:417/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/X2w9-aeyfho683dSgksRFUquVYoPsYEclTSVuv1W9K8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTEyMzEyMzc5MTcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 355,
+          "resource_url": "https://i.discogs.com/-1kQYU_XT4KTmb45moOIBXH-mMU0dVzHOSDDyb3onw4/rs:fit/g:sm/q:90/h:355/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-1kQYU_XT4KTmb45moOIBXH-mMU0dVzHOSDDyb3onw4/rs:fit/g:sm/q:90/h:355/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/eYIXCDf-yQRCcU8PFz-6zQ0w-zW90WRmHBdC4ZAsj3M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE1MDg1Nzc4ODIt/MzU1Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q56BqjgtVH-h_5gRr8Dy6RpW-et4fTZSPXdiJRPwgZw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q56BqjgtVH-h_5gRr8Dy6RpW-et4fTZSPXdiJRPwgZw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/IgOMnQKGsU_kDR0uj8PiHiKX-8D-N35QWBXKi8o4pTE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/NjQ4My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_9CbU_DwRVdfiXwO5dYW1_uP8QQjZZPcTXZiN5W6uww/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_9CbU_DwRVdfiXwO5dYW1_uP8QQjZZPcTXZiN5W6uww/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RzjA3u1197fgAOiN0106BIhdqvIRmCcLXIkzcZoqxK8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/NDIwNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/NzOEMym2J9VCA9D9_bYOSC0uCrtxPmgHWuzVI9MpPFk/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NzOEMym2J9VCA9D9_bYOSC0uCrtxPmgHWuzVI9MpPFk/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/flJP1XDPrZ2GPkw-X4qjkUJVWdZGHR3DlNSDlWFsWNs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2NDAt/MTQ2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uAxZDizAc7Ezm1I2RUujRyy07esuHU8KyqCrc5ybv7w/rs:fit/g:sm/q:90/h:600/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uAxZDizAc7Ezm1I2RUujRyy07esuHU8KyqCrc5ybv7w/rs:fit/g:sm/q:90/h:600/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QGlfhT7DIU-I5yRf36fXJicNKbNNDd16dGY2sivrRjI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDE2/LTE3NjI0NTQ2Mzkt/MjAxNS5qcGVn.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 206290,
+          "name": "Danny Carey",
+          "resource_url": "https://api.discogs.com/artists/206290"
+        },
+        {
+          "active": true,
+          "id": 251558,
+          "name": "Maynard James Keenan",
+          "resource_url": "https://api.discogs.com/artists/251558"
+        },
+        {
+          "active": true,
+          "id": 251559,
+          "name": "Adam Jones",
+          "resource_url": "https://api.discogs.com/artists/251559"
+        },
+        {
+          "active": true,
+          "id": 251560,
+          "name": "Justin Chancellor",
+          "resource_url": "https://api.discogs.com/artists/251560"
+        },
+        {
+          "active": false,
+          "id": 251569,
+          "name": "Paul D'Amour",
+          "resource_url": "https://api.discogs.com/artists/251569"
+        }
+      ],
+      "name": "Tool (2)",
+      "namevariations": [
+        "TOOL",
+        "トゥール"
+      ],
+      "profile": "Tool is an American rock band from Los Angeles, California, USA, formed in 1990. They emerged with a heavy metal sound on their first studio album, Undertow (1993), and later became a dominant act in the alternative metal movement, with the release of their second album, Ænima in 1996. Their efforts to unify musical experimentation, visual arts, and a message of personal evolution continued with Lateralus (2001), 10,000 Days (2006) and the most recent album, Fear Inoculum (2019).\r\n\r\n[b][u]Line-up:[/u][/b]\r\nMaynard James Keenan – vocals (1990–)\r\nAdam Jones – guitar (1990–)\r\nDanny Carey – drums, percussion (1990–)\r\nJustin Chancellor – bass (1995–)\r\n\r\n[u][b]Former Members:[/b][/u]\r\nPaul D'Amour – bass (1990–1995)",
+      "realname": "TOOL",
+      "releases_url": "https://api.discogs.com/artists/87016/releases",
       "resource_url": "https://api.discogs.com/artists/87016",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/87016",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/87016-Tool-2",
+      "urls": [
+        "http://www.toolband.com",
+        "https://www.facebook.com/ToolMusic",
+        "https://twitter.com/Tool",
+        "http://en.wikipedia.org/wiki/Tool_%28band%29",
+        "https://soundcloud.com/officialtool",
+        "https://www.youtube.com/channel/UC1wUo-29zS7m_Jp-U_xYcFQ",
+        "https://www.instagram.com/toolmusic/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Tool', url='https://www.last.fm/music/Tool', mbid='bbfa1e12-8b61-4ed8-bc6e-52d2298f41a2', listeners=2300954, playcount=189270592, bio_summary='Tool is an American progressive metal band from Los Angeles. Formed in 1990, the group\\'s line-up includes vocalist Maynard James Keenan, guitarist Adam Jones and drummer Danny Carey. Justin Chancellor has been the band\\'s bassist since 1995, replacing their original bassist Paul D\\'Amour. Tool has won four Grammy Awards, performed worldwide tours, and produced albums topping the charts in several countries.\\n\\nTo date, the band has released five studio albums, one EP and one box set. <a href=\"https://www.last.fm/music/Tool\">Read more on Last.fm</a>', bio_content='Tool is an American progressive metal band from Los Angeles. Formed in 1990, the group\\'s line-up includes vocalist Maynard James Keenan, guitarist Adam Jones and drummer Danny Carey. Justin Chancellor has been the band\\'s bassist since 1995, replacing their original bassist Paul D\\'Amour. Tool has won four Grammy Awards, performed worldwide tours, and produced albums topping the charts in several countries.\\n\\nTo date, the band has released five studio albums, one EP and one box set. They emerged with a heavy metal sound on their first studio album, Undertow (1993), and became a dominant act in the alternative metal movement with the release of their follow-up album Ænima in 1996. Their efforts to unify musical experimentation, visual arts, and a message of personal evolution continued with Lateralus (2001) and 10,000 Days (2006), gaining critical acclaim and international commercial success. Their fifth studio album, Fear Inoculum, was released on August 30, 2019, to widespread critical acclaim. Prior to its release, the band had sold more than 13 million albums in the US alone.\\n\\nDue to Tool\\'s incorporation of visual arts and very long and complex releases, the band is generally described as a style-transcending act and part of progressive rock, psychedelic rock, and art rock. The relationship between the band and today\\'s music industry is ambivalent, at times marked by censorship, and the band\\'s insistence on privacy.\\n\\nThere is a raging debate about whether Tool can be considered \"post-metal\" or not. However, they surely had a hand in its creation as much as Neurosis. The influential act Isis was heavily influenced by Tool\\'s music, so much that they lifted entire basslines and guitar riffing from Tool and even their iconic snare sound was inspired by Tool\\'s style. Much has been made of both Isis and Tool\\'s sound and influence across the years but one thing is for sure: modern post-metal has their fingerprints everywhere and it would not have sounded the way that it currently sounds without them. Additionally, Tool was actually aware of and liked Isis\\' music as they chose Isis as touring partners, a move that brought even more attention to Isis\\'s music.\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Tool_(band)\\n\\nStudio albums\\nUndertow (1993)\\nÆnima (1996)\\nLateralus (2001)\\n10,000 Days (2006)\\nFear Inoculum (2019)\\n\\nOther releases\\n[Demo tape] 72826 (1991)\\n[EP]Opiate (1992)\\n[Live album]Salival (2000)\\n[Non-album single]Opiate² (2022) <a href=\"https://www.last.fm/music/Tool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive metal', 'Progressive rock', 'metal', 'alternative', 'rock'], similar_artists=[{'name': 'A Perfect Circle', 'url': 'https://www.last.fm/music/A+Perfect+Circle'}, {'name': 'Puscifer', 'url': 'https://www.last.fm/music/Puscifer'}, {'name': 'Rishloo', 'url': 'https://www.last.fm/music/Rishloo'}, {'name': 'Karnivool', 'url': 'https://www.last.fm/music/Karnivool'}, {'name': 'Dream Theater', 'url': 'https://www.last.fm/music/Dream+Theater'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Tool', 'mbid': 'bbfa1e12-8b61-4ed8-bc6e-52d2298f41a2', 'url': 'https://www.last.fm/music/Tool', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2300954', 'playcount': '189270592'}, 'similar': {'artist': [{'name': 'A Perfect Circle', 'url': 'https://www.last.fm/music/A+Perfect+Circle', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Puscifer', 'url': 'https://www.last.fm/music/Puscifer', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rishloo', 'url': 'https://www.last.fm/music/Rishloo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Karnivool', 'url': 'https://www.last.fm/music/Karnivool', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dream Theater', 'url': 'https://www.last.fm/music/Dream+Theater', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive metal', 'url': 'https://www.last.fm/tag/Progressive+metal'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'metal', 'url': 'https://www.last.fm/tag/metal'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Tool/+wiki'}}, 'published': '02 Feb 2006, 02:49', 'summary': 'Tool is an American progressive metal band from Los Angeles. Formed in 1990, the group\\'s line-up includes vocalist Maynard James Keenan, guitarist Adam Jones and drummer Danny Carey. Justin Chancellor has been the band\\'s bassist since 1995, replacing their original bassist Paul D\\'Amour. Tool has won four Grammy Awards, performed worldwide tours, and produced albums topping the charts in several countries.\\n\\nTo date, the band has released five studio albums, one EP and one box set. <a href=\"https://www.last.fm/music/Tool\">Read more on Last.fm</a>', 'content': 'Tool is an American progressive metal band from Los Angeles. Formed in 1990, the group\\'s line-up includes vocalist Maynard James Keenan, guitarist Adam Jones and drummer Danny Carey. Justin Chancellor has been the band\\'s bassist since 1995, replacing their original bassist Paul D\\'Amour. Tool has won four Grammy Awards, performed worldwide tours, and produced albums topping the charts in several countries.\\n\\nTo date, the band has released five studio albums, one EP and one box set. They emerged with a heavy metal sound on their first studio album, Undertow (1993), and became a dominant act in the alternative metal movement with the release of their follow-up album Ænima in 1996. Their efforts to unify musical experimentation, visual arts, and a message of personal evolution continued with Lateralus (2001) and 10,000 Days (2006), gaining critical acclaim and international commercial success. Their fifth studio album, Fear Inoculum, was released on August 30, 2019, to widespread critical acclaim. Prior to its release, the band had sold more than 13 million albums in the US alone.\\n\\nDue to Tool\\'s incorporation of visual arts and very long and complex releases, the band is generally described as a style-transcending act and part of progressive rock, psychedelic rock, and art rock. The relationship between the band and today\\'s music industry is ambivalent, at times marked by censorship, and the band\\'s insistence on privacy.\\n\\nThere is a raging debate about whether Tool can be considered \"post-metal\" or not. However, they surely had a hand in its creation as much as Neurosis. The influential act Isis was heavily influenced by Tool\\'s music, so much that they lifted entire basslines and guitar riffing from Tool and even their iconic snare sound was inspired by Tool\\'s style. Much has been made of both Isis and Tool\\'s sound and influence across the years but one thing is for sure: modern post-metal has their fingerprints everywhere and it would not have sounded the way that it currently sounds without them. Additionally, Tool was actually aware of and liked Isis\\' music as they chose Isis as touring partners, a move that brought even more attention to Isis\\'s music.\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Tool_(band)\\n\\nStudio albums\\nUndertow (1993)\\nÆnima (1996)\\nLateralus (2001)\\n10,000 Days (2006)\\nFear Inoculum (2019)\\n\\nOther releases\\n[Demo tape] 72826 (1991)\\n[EP]Opiate (1992)\\n[Live album]Salival (2000)\\n[Non-album single]Opiate² (2022) <a href=\"https://www.last.fm/music/Tool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2yEwvVSSSUkcLeSTNyHKh8', url='https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8', name='TOOL', popularity=73, followers=4322892, genres=['progressive metal', 'alternative metal', 'progressive rock', 'metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb13f5472b709101616c87cba3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517413f5472b709101616c87cba3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17813f5472b709101616c87cba3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8'}, 'followers': {'href': None, 'total': 4322892}, 'genres': ['progressive metal', 'alternative metal', 'progressive rock', 'metal'], 'href': 'https://api.spotify.com/v1/artists/2yEwvVSSSUkcLeSTNyHKh8', 'id': '2yEwvVSSSUkcLeSTNyHKh8', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb13f5472b709101616c87cba3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517413f5472b709101616c87cba3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17813f5472b709101616c87cba3', 'height': 160, 'width': 160}], 'name': 'TOOL', 'popularity': 73, 'type': 'artist', 'uri': 'spotify:artist:2yEwvVSSSUkcLeSTNyHKh8'})",
@@ -402,6 +858,6 @@
   },
   "spotify_id": "2yEwvVSSSUkcLeSTNyHKh8",
   "spotify_url": "https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8",
-  "updated_at": "2026-10-22T14:13:19.323468",
+  "updated_at": "2026-10-30T18:47:47.057460",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Tool_(band)"
 }

@@ -127,22 +127,296 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='372976', url='https://music.apple.com/gb/artist/abba/372976', name='ABBA', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/77/b2/e3/77b2e3f8-3af4-1928-f411-901705218d2d/mza_402627401905230864.png/2000x2000bb.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '372976', 'type': 'artists', 'href': '/v1/catalog/gb/artists/372976', 'attributes': {'artwork': {'bgColor': 'cbd3e7', 'height': 3840, 'textColor1': '2c231f', 'textColor2': '372f2c', 'textColor3': '4c4647', 'textColor4': '554f51', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/77/b2/e3/77b2e3f8-3af4-1928-f411-901705218d2d/mza_402627401905230864.png/{w}x{h}bb.jpg', 'width': 3840}, 'genreNames': ['Pop'], 'name': 'ABBA', 'url': 'https://music.apple.com/gb/artist/abba/372976'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/372976/albums', 'next': '/v1/catalog/gb/artists/372976/albums?offset=25', 'data': [{'id': '1440767912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767912'}, {'id': '1440767912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767912'}, {'id': '1380464428', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380464428'}, {'id': '1380464428', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380464428'}, {'id': '1440816833', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440816833'}, {'id': '1422648512', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1422648512'}, {'id': '1583785050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583785050'}, {'id': '1442609540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442609540'}, {'id': '1442609540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442609540'}, {'id': '1440820126', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440820126'}, {'id': '1440816296', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440816296'}, {'id': '1440823811', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440823811'}, {'id': '1440821028', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440821028'}, {'id': '1440849364', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440849364'}, {'id': '1440790242', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440790242'}, {'id': '1440790242', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440790242'}, {'id': '1440802799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440802799'}, {'id': '1440715246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440715246'}, {'id': '1445870793', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445870793'}, {'id': '1440739110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440739110'}, {'id': '1440861160', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440861160'}, {'id': '1440818233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440818233'}, {'id': '1440852986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440852986'}, {'id': '1440822052', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440822052'}, {'id': '1530391535', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1530391535'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "69866",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 679507,
+          "name": "Björn & Benny, Agnetha & Anni-Frid",
+          "resource_url": "https://api.discogs.com/artists/679507"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 69866,
+      "images": [
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/kpdT1jyOYgCXgph0GYI6O7ScqUtgHxm_HVX4scQvo18/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/kpdT1jyOYgCXgph0GYI6O7ScqUtgHxm_HVX4scQvo18/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/LskEBEtsSa4yRT6s_3RSYKvjgnEo8qXZdsj7Z4Np1c0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/ERCzwLwzc5sffH7UgYBTsofPz-4sBbSKQAw3tUXZoKY/rs:fit/g:sm/q:90/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ERCzwLwzc5sffH7UgYBTsofPz-4sBbSKQAw3tUXZoKY/rs:fit/g:sm/q:90/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Xk2c9cBi2Jw3GXVsP1jwuEL4nvs0oTVyv-_T_X-ewDI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "width": 320
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/oDhk6Zi-WuwcMdR4Qav0LWhyZ1ODDVCHij1Gp7PSSTs/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oDhk6Zi-WuwcMdR4Qav0LWhyZ1ODDVCHij1Gp7PSSTs/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/DgEvV554gMR_uA9pbJ2wlr5LvaDSD1Vt0IRGWRiyqLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "width": 599
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/g4DijAPNtWYYA-Q_exINfiFYO5B5Axci0aISnwdjfn4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g4DijAPNtWYYA-Q_exINfiFYO5B5Axci0aISnwdjfn4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AdOqqKqFi7HFSm5rmbGDXHOXtNW2PgHt-6wT35PqXtM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 573,
+          "resource_url": "https://i.discogs.com/Ccj6GA4WK5DDbl6AqKmZbivYGiYqw7CqNWr0EYQsT80/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ccj6GA4WK5DDbl6AqKmZbivYGiYqw7CqNWr0EYQsT80/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gSe9Zy8oxYOrUBzI2X9jqETaeE8wx4_wdm6elekaask/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/kjZKp0xikoArqperehOlZAtGkF09RlJTWzL_Kf093hU/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kjZKp0xikoArqperehOlZAtGkF09RlJTWzL_Kf093hU/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VplaUDjXSol-7XzLQk_XlgFwwHI11AVEm35kfVmY1VQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/tZmW28tRbjzLhHcE1KDnS9N5Cj6_o-2JcpmrS__GhsM/rs:fit/g:sm/q:90/h:600/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tZmW28tRbjzLhHcE1KDnS9N5Cj6_o-2JcpmrS__GhsM/rs:fit/g:sm/q:90/h:600/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/llg9wKVMibnlwsDlPBj-2lP9FJwQjt19d4qgkL9y8-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "width": 592
+        },
+        {
+          "height": 582,
+          "resource_url": "https://i.discogs.com/mAvcfg3vD3xMVD3JXnofNeDbLvH3ZXXbB7vnCAUAzo4/rs:fit/g:sm/q:90/h:582/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mAvcfg3vD3xMVD3JXnofNeDbLvH3ZXXbB7vnCAUAzo4/rs:fit/g:sm/q:90/h:582/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iAhnU4gzZQUwGkhtSn0uaKc-gdMRTAqh28AMmM3MPUI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 512,
+          "resource_url": "https://i.discogs.com/TqWF4slYwiQxKBq99-JTUnkesmOauKTAISl4__Aa-sY/rs:fit/g:sm/q:90/h:512/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TqWF4slYwiQxKBq99-JTUnkesmOauKTAISl4__Aa-sY/rs:fit/g:sm/q:90/h:512/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/I2n9IDj82y3aPejpHkkMXB3-Jv5u7ZH4G7UjBOZXj5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/bTAgZ8TM5hMnWL3HNfuss7h8gfS1MeLRqJUo5gHtys8/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bTAgZ8TM5hMnWL3HNfuss7h8gfS1MeLRqJUo5gHtys8/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/w0iGOIwiDM2rNy2xBejm4bzgkYklBPYivm6d1P6IlGQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "width": 590
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QmTaeuYPN2rKj0-96fGjunoFVRXOFkijpFSn_L0zMDY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QmTaeuYPN2rKj0-96fGjunoFVRXOFkijpFSn_L0zMDY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/OB6KQkgyHTCw-5B2dAIvfZ8AgiC5kI_-WaEADN4_8Fk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 533,
+          "resource_url": "https://i.discogs.com/_GJJb37qZ3n2eBtLxUSXgOenwdfRU-iaELzBmmJHOiU/rs:fit/g:sm/q:90/h:533/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_GJJb37qZ3n2eBtLxUSXgOenwdfRU-iaELzBmmJHOiU/rs:fit/g:sm/q:90/h:533/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_bwU5yHa1TidPIsdUNGc9XTgcRRlmsian4SHD3Bij0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/Wrv-fExsyN74XcNr1kImS9WdCR5CYkTaFaD1P6pCWAQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Wrv-fExsyN74XcNr1kImS9WdCR5CYkTaFaD1P6pCWAQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/uWur-Gh0zG1DmytTajg19z5VrFgojrHBne1G2fFC7rI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 563,
+          "resource_url": "https://i.discogs.com/DZ7N0DW2uZeSyzAGYF540FnYXR-jdoQWAd-VEYokOig/rs:fit/g:sm/q:90/h:563/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DZ7N0DW2uZeSyzAGYF540FnYXR-jdoQWAd-VEYokOig/rs:fit/g:sm/q:90/h:563/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/nyrB96Sa-9BxfvPa-Ev4U6xPVzHf4C3mu-fFvAVO2fc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "width": 545
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/HCfqBysmh-HzicbuyplQEzteEjzBw8KRwZAFf48IH1I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HCfqBysmh-HzicbuyplQEzteEjzBw8KRwZAFf48IH1I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mYLjO6B6hPASCjJRJMaogZdWP4A1nxB7B6dIjqQ7iVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X09YbZRc1V5z4b7NzEjLABkS7tKS9ydNigTieNybWEs/rs:fit/g:sm/q:90/h:600/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X09YbZRc1V5z4b7NzEjLABkS7tKS9ydNigTieNybWEs/rs:fit/g:sm/q:90/h:600/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/It-jBFiJV_xtSDd2TCKSYd-m5JuVSSZT6szExFJHoqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "width": 571
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ARKCUyVdMksz6yavdd-z7YrcBtKjVRUQhL-U5JaW4as/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ARKCUyVdMksz6yavdd-z7YrcBtKjVRUQhL-U5JaW4as/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9a8_zkUxKQJd5PfHJlzhr921ThaUVsRA6ajqHAABB-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/a3yxRPgBu6UJoy1SQFy0UGHTc1fZvl0BWWK5Ikh5gjY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a3yxRPgBu6UJoy1SQFy0UGHTc1fZvl0BWWK5Ikh5gjY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/SUuLW3efCsyrA1l9aCkEzZomOYW6Osgk72bV0MN53oQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Fud-nezKsXBB2F-_XRYVp_T9roVWHDjsiX2AXRd9hlI/rs:fit/g:sm/q:90/h:600/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Fud-nezKsXBB2F-_XRYVp_T9roVWHDjsiX2AXRd9hlI/rs:fit/g:sm/q:90/h:600/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/frGFHfuX9nHHjsFXUX3qs-Me_21U4aj7dW85RTl28Ag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "width": 438
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/T-K7K0PcXjnzqjcnV6UORQea-_TSWyQTYTSgCaj3brk/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/T-K7K0PcXjnzqjcnV6UORQea-_TSWyQTYTSgCaj3brk/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dkh72Gc8ZyedjG2FbcD7o2ECjOpBslRO-WV1I_ibm9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "width": 480
+        },
+        {
+          "height": 583,
+          "resource_url": "https://i.discogs.com/ZRSvPgmv0tTmVd4wKn-5zj7HTtCwlJdeYdmQHlc9jLo/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZRSvPgmv0tTmVd4wKn-5zj7HTtCwlJdeYdmQHlc9jLo/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9hU46OhnNWeIckUiy4mEPc_8Ea0njHRGkfj_Fip2Kis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/5oYagZU_Jbf4zEMa-LvfaFEYt00GJhW9uQ-BOBFAGRY/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5oYagZU_Jbf4zEMa-LvfaFEYt00GJhW9uQ-BOBFAGRY/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/MtGUFMfStyELZ2H0x3OrYgTwVA8wVtEycDahHvOCG-8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/7D5UM2KREyOW48GiUEAtpVGTypGm0WFajAyX0ghaZfs/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7D5UM2KREyOW48GiUEAtpVGTypGm0WFajAyX0ghaZfs/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/bnBgDq4wIdMFRr1h9-OGdC8Wk34Bs4JKOFA3V-WN9t4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "width": 590
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/hxHMU6jPZSNZnIy9UrPQnvPsr9cnQHptsPP7M2vlYaw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hxHMU6jPZSNZnIy9UrPQnvPsr9cnQHptsPP7M2vlYaw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AQQL2nVmXjZd_oiPAfsLZHLWaoZiZzS7WBT8tz9OUvs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/NHyxaLiXM7sXGq8A0M36e_jjzMZpUh0OTK-R2C1TrS0/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NHyxaLiXM7sXGq8A0M36e_jjzMZpUh0OTK-R2C1TrS0/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RiOH6J7aK_deRvN_Rb7DzKNjgkquF4FewVYvZLjROjc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 69873,
+          "name": "Benny Andersson",
+          "resource_url": "https://api.discogs.com/artists/69873"
+        },
+        {
+          "active": true,
+          "id": 149038,
+          "name": "Agnetha Fältskog",
+          "resource_url": "https://api.discogs.com/artists/149038"
+        },
+        {
+          "active": true,
+          "id": 268733,
+          "name": "Björn Ulvaeus",
+          "resource_url": "https://api.discogs.com/artists/268733"
+        },
+        {
+          "active": true,
+          "id": 688940,
+          "name": "Anni-Frid Lyngstad",
+          "resource_url": "https://api.discogs.com/artists/688940"
+        }
+      ],
       "name": "ABBA",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "69866",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/69866"
-      },
+      "namevariations": [
+        "A B B A",
+        "ABBA (Agnetha, Björn, Benny & Anna-Frid)",
+        "ABBA (Agnetha, Björn, Benny, Anna-Frid)",
+        "ABBA (Bjorn, Benny, Anna & Frida)",
+        "ABBA (Bjorn, Benny, Anna, Frida)",
+        "ABBA (Bjorn-Benny-Agnetha & Frida)",
+        "ABBA (Bjorn-Benny-Agnetha-Frida)",
+        "ABBA (Bjorn/Benny/Agnetha & Frida)",
+        "ABBA (Björn, Benny, Agnetha & Frida)",
+        "ABBA (Björn, Benny, Anna & Frida)",
+        "ABBA®",
+        "Abba",
+        "Abbasongs",
+        "Agnetha Björn Benny Anna-Frid",
+        "G. Aa",
+        "Groupe ABBA",
+        "Grupo Abba",
+        "Los ABBA",
+        "Super Star (ABBA)",
+        "АББА",
+        "Абба",
+        "Анс. \"АББА\"",
+        "Ансамбль \"АББА\"",
+        "Ансамбль «АББА»",
+        "Ансамбль АББА",
+        "гр. ABBA",
+        "アバ",
+        "アパ",
+        "阿巴",
+        "阿巴乐队",
+        "阿巴合唱团",
+        "阿巴合唱團",
+        "아바"
+      ],
+      "profile": "Swedish pop group ABBA, founded in 1972, became famous when they won the Eurovision Song Contest in 1974. It started a decade of almost uninterrupted string of hits and major selling albums.\r\nAfter the group stopped releasing new material in 1982 (they never officially disbanded) there was a relative lull in their popularity – which came to an end in 1992 when \"[m=12249]\" was released. The compilation has become one of the world's best-selling albums of all time.\r\nIn 1999, a musical based on ABBA hits called 'Mamma Mia!' opened in London. With various international productions, in 50 countries in all 6 continents, it is one of the most popular musicals of all time.\r\nABBA were inducted into the Rock & Roll Hall of Fame in 2010, in the category of 'Performers'.\r\nABBA released a new album in November 2021. Live shows with ABBA appearing as virtual 'abbatars' started in London in May 2022.\r\n\r\n[a149038] (born April 5th, 1950): vocals\r\n[a268733] (born April 25th, 1945): guitars, vocals\r\n[a69873] (born December 16th, 1946): keyboards, vocals\r\n[a688940] (born November 15th, 1945): vocals",
+      "releases_url": "https://api.discogs.com/artists/69866/releases",
       "resource_url": "https://api.discogs.com/artists/69866",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/69866",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/69866-ABBA",
+      "urls": [
+        "https://abbasite.com/",
+        "https://abbavoyage.com/",
+        "https://www.facebook.com/ABBA/",
+        "https://www.youtube.com/user/abba",
+        "https://www.youtube.com/user/AbbaVEVO",
+        "https://soundcloud.com/abba-official",
+        "https://abbathemuseum.com/",
+        "https://en.wikipedia.org/wiki/ABBA",
+        "https://abbaomnibus.com/",
+        "https://abbaoncd.wordpress.com/",
+        "https://www.thorsven.net/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
@@ -412,27 +686,681 @@
         "track": "Does Your Mother Know",
         "uri": "https://youtu.be/WkL7Fkigfn8"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "The Visitors",
+        "id": "Q2296052",
+        "track": "When All Is Said and Done",
+        "uri": "https://www.youtube.com/watch?v=tUh4u-lYEhM"
+      },
+      {
+        "album": "The Visitors",
+        "id": "Q2375697",
+        "track": "Slipping Through My Fingers",
+        "uri": "https://www.youtube.com/watch?v=E67Ix2mobJg"
+      },
+      {
+        "album": "Voyage",
+        "id": "Q108386526",
+        "track": "Don't Shut Me Down",
+        "uri": "https://www.youtube.com/watch?v=hWGWFa3jznI"
+      },
+      {
+        "album": "Greatest Hits Vol. 2",
+        "id": "Q1123081",
+        "track": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+        "uri": "https://www.youtube.com/watch?v=XEjLoHdbVeE"
+      },
+      {
+        "album": "Voulez-Vous",
+        "id": "Q1074676",
+        "track": "Chiquitita",
+        "uri": "https://www.youtube.com/watch?v=p4QqMKe3rwY"
+      },
+      {
+        "album": "Voulez-Vous",
+        "id": "Q1234579",
+        "track": "Does Your Mother Know",
+        "uri": "https://www.youtube.com/watch?v=WkL7Fkigfn8"
+      },
+      {
+        "album": "Voulez-Vous",
+        "id": "Q1514055",
+        "track": "I Have a Dream",
+        "uri": "https://www.youtube.com/watch?v=ht7ZLDFyKsQ"
+      },
+      {
+        "album": null,
+        "id": "Q108405625",
+        "track": "Ode to Freedom",
+        "uri": "https://www.youtube.com/watch?v=mrA7ld0eVvc"
+      },
+      {
+        "album": null,
+        "id": "Q108406039",
+        "track": "Keep an Eye on Dan",
+        "uri": "https://www.youtube.com/watch?v=kIywjSfqP9c"
+      },
+      {
+        "album": null,
+        "id": "Q108475170",
+        "track": "Estoy Soñando (Spanish)",
+        "uri": "https://www.youtube.com/watch?v=jlC3otqX8bc"
+      },
+      {
+        "album": null,
+        "id": "Q108475171",
+        "track": "Gracias por la Música (Spanish)",
+        "uri": "https://www.youtube.com/watch?v=do1EGAs_UNQ"
+      },
+      {
+        "album": null,
+        "id": "Q108475174",
+        "track": "Felicidad (Spanish)",
+        "uri": "https://www.youtube.com/watch?v=YihxpsmH3cQ"
+      },
+      {
+        "album": null,
+        "id": "Q108475172",
+        "track": "Conociéndome, Conociéndote (Spanish)",
+        "uri": "https://www.youtube.com/watch?v=Jdsei0_JXD0"
+      },
+      {
+        "album": null,
+        "id": "Q108475173",
+        "track": "No hay a quien culpar (Spanish)",
+        "uri": "https://www.youtube.com/watch?v=6qmzmD4POMk"
+      },
+      {
+        "album": null,
+        "id": "Q109357890",
+        "track": "Ring Ring",
+        "uri": "https://www.youtube.com/watch?v=ZEbZqnC2oN4"
+      },
+      {
+        "album": null,
+        "id": "Q109551247",
+        "track": "I Still Have Faith in You",
+        "uri": "https://www.youtube.com/watch?v=pAzEY1MfXrQ"
+      },
+      {
+        "album": null,
+        "id": "Q625383",
+        "track": "One of Us",
+        "uri": "https://www.youtube.com/watch?v=IIKAe8Wi0S0"
+      },
+      {
+        "album": null,
+        "id": "Q1418336",
+        "track": "Take a Chance on Me",
+        "uri": "https://www.youtube.com/watch?v=-crgQGdpZR0"
+      },
+      {
+        "album": null,
+        "id": "Q1626845",
+        "track": "Honey, Honey",
+        "uri": "https://www.youtube.com/watch?v=vg7ZsOFSV7c"
+      },
+      {
+        "album": null,
+        "id": "Q3376287",
+        "track": "Like an Angel Passing Through My Room",
+        "uri": "https://www.youtube.com/watch?v=EPwbI7PTm-o"
+      },
+      {
+        "album": null,
+        "id": "Q5990607",
+        "track": "If It Wasn't for the Nights",
+        "uri": "https://www.youtube.com/watch?v=1xfKqxdv3Gk"
+      },
+      {
+        "album": null,
+        "id": "Q63333125",
+        "track": "The Winner Takes It All",
+        "uri": "https://www.youtube.com/watch?v=92cwKCU8Z5c"
+      },
+      {
+        "album": null,
+        "id": "Q104092943",
+        "track": "Knowing Me, Knowing You / Happy Hawaii",
+        "uri": "https://www.youtube.com/watch?v=iUrzicaiRLU"
+      },
+      {
+        "album": null,
+        "id": "Q105850909",
+        "track": "Voulez-Vous",
+        "uri": "https://www.youtube.com/watch?v=tmhFWw6tiAo"
+      },
+      {
+        "album": null,
+        "id": "Q106621041",
+        "track": "When I Kissed the Teacher",
+        "uri": "https://www.youtube.com/watch?v=SXpzPWwEFOI"
+      },
+      {
+        "album": null,
+        "id": "Q107125352",
+        "track": "Waterloo",
+        "uri": "https://www.youtube.com/watch?v=Sj_9CiNkkn4"
+      },
+      {
+        "album": null,
+        "id": "Q107125489",
+        "track": "Ring Ring",
+        "uri": "https://www.youtube.com/watch?v=TL0EoXdpOqg"
+      },
+      {
+        "album": null,
+        "id": "Q107125531",
+        "track": "Mamma Mia",
+        "uri": "https://www.youtube.com/watch?v=unfzfe8f9NI"
+      },
+      {
+        "album": null,
+        "id": "Q107125546",
+        "track": "SOS",
+        "uri": "https://www.youtube.com/watch?v=cvChjHcABPA"
+      },
+      {
+        "album": null,
+        "id": "Q107125555",
+        "track": "Bang a Boomerang",
+        "uri": "https://www.youtube.com/watch?v=_CsJCa2TlXU"
+      },
+      {
+        "album": null,
+        "id": "Q107125565",
+        "track": "I Do, I Do, I Do, I Do, I Do",
+        "uri": "https://www.youtube.com/watch?v=tW3HN_pvbE4"
+      },
+      {
+        "album": null,
+        "id": "Q107125587",
+        "track": "Fernando",
+        "uri": "https://www.youtube.com/watch?v=dQsjAbZDx-4"
+      },
+      {
+        "album": null,
+        "id": "Q107125593",
+        "track": "Dancing Queen",
+        "uri": "https://www.youtube.com/watch?v=xFrGuyw1V8s"
+      },
+      {
+        "album": null,
+        "id": "Q107125612",
+        "track": "Money, Money, Money",
+        "uri": "https://www.youtube.com/watch?v=ETxmCCsMoD0"
+      },
+      {
+        "album": null,
+        "id": "Q107125640",
+        "track": "Knowing Me, Knowing You",
+        "uri": "https://www.youtube.com/watch?v=iUrzicaiRLU"
+      },
+      {
+        "album": null,
+        "id": "Q107125666",
+        "track": "That’s Me",
+        "uri": "https://www.youtube.com/watch?v=mP_dk429rbc"
+      },
+      {
+        "album": null,
+        "id": "Q107125672",
+        "track": "The Name of the Game",
+        "uri": "https://www.youtube.com/watch?v=iJ90ZqH0PWI"
+      },
+      {
+        "album": null,
+        "id": "Q107125721",
+        "track": "Take a Chance on Me",
+        "uri": "https://www.youtube.com/watch?v=-crgQGdpZR0"
+      },
+      {
+        "album": null,
+        "id": "Q107125738",
+        "track": "Eagle",
+        "uri": "https://www.youtube.com/watch?v=dDI7x1nwTUw"
+      },
+      {
+        "album": null,
+        "id": "Q107125747",
+        "track": "One Man, One Woman",
+        "uri": "https://www.youtube.com/watch?v=sw_fuu9jIOc"
+      },
+      {
+        "album": null,
+        "id": "Q107125767",
+        "track": "Thank You for the Music",
+        "uri": "https://www.youtube.com/watch?v=0dcbw4IEY5w"
+      },
+      {
+        "album": null,
+        "id": "Q107125780",
+        "track": "Summer Night City",
+        "uri": "https://www.youtube.com/watch?v=_d5dPYHi17k"
+      },
+      {
+        "album": null,
+        "id": "Q107125798",
+        "track": "Chiquitita",
+        "uri": "https://www.youtube.com/watch?v=p4QqMKe3rwY"
+      },
+      {
+        "album": null,
+        "id": "Q107125831",
+        "track": "Does Your Mother Know",
+        "uri": "https://www.youtube.com/watch?v=WkL7Fkigfn8"
+      },
+      {
+        "album": null,
+        "id": "Q107126078",
+        "track": "Voulez-Vous",
+        "uri": "https://www.youtube.com/watch?v=za05HBtGsgU"
+      },
+      {
+        "album": null,
+        "id": "Q107126095",
+        "track": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+        "uri": "https://www.youtube.com/watch?v=XEjLoHdbVeE"
+      },
+      {
+        "album": null,
+        "id": "Q107126122",
+        "track": "On and On and On",
+        "uri": "https://www.youtube.com/watch?v=PyxBYbfu6k8"
+      },
+      {
+        "album": null,
+        "id": "Q107126149",
+        "track": "The Winner Takes It All",
+        "uri": "https://www.youtube.com/watch?v=92cwKCU8Z5c"
+      },
+      {
+        "album": null,
+        "id": "Q107126159",
+        "track": "Super Trouper",
+        "uri": "https://www.youtube.com/watch?v=BshxCIjNEjY"
+      },
+      {
+        "album": null,
+        "id": "Q107126175",
+        "track": "Happy New Year",
+        "uri": "https://www.youtube.com/watch?v=3Uo0JAUWijM"
+      },
+      {
+        "album": null,
+        "id": "Q107126192",
+        "track": "When All is Said and Done",
+        "uri": "https://www.youtube.com/watch?v=tUh4u-lYEhM"
+      },
+      {
+        "album": null,
+        "id": "Q107126212",
+        "track": "One of Us",
+        "uri": "https://www.youtube.com/watch?v=IIKAe8Wi0S0"
+      },
+      {
+        "album": null,
+        "id": "Q107126241",
+        "track": "Head Over Heels",
+        "uri": "https://www.youtube.com/watch?v=pL2_PZwKDPg"
+      },
+      {
+        "album": null,
+        "id": "Q107126255",
+        "track": "The Day Before You Came",
+        "uri": "https://www.youtube.com/watch?v=1HnOFwqpLRQ"
+      },
+      {
+        "album": null,
+        "id": "Q107126295",
+        "track": "Under Attack",
+        "uri": "https://www.youtube.com/watch?v=rAYB46Z_osM"
+      },
+      {
+        "album": null,
+        "id": "Q108386120",
+        "track": "I Still Have Faith in You",
+        "uri": "https://www.youtube.com/watch?v=tny2C4yrHUQ"
+      },
+      {
+        "album": null,
+        "id": "Q108386829",
+        "track": "Don't Shut Me Down",
+        "uri": "https://www.youtube.com/watch?v=a64hi1cGqLw"
+      },
+      {
+        "album": null,
+        "id": "Q108405503",
+        "track": "When You Danced with Me",
+        "uri": "https://www.youtube.com/watch?v=Y8c5vWdhfpw"
+      },
+      {
+        "album": null,
+        "id": "Q108405532",
+        "track": "Little Things",
+        "uri": "https://www.youtube.com/watch?v=sSQx-Bvzlfo"
+      },
+      {
+        "album": null,
+        "id": "Q108405551",
+        "track": "Just a Notion",
+        "uri": "https://www.youtube.com/watch?v=xGJ_1bwvZmw"
+      },
+      {
+        "album": null,
+        "id": "Q108405564",
+        "track": "I Can Be That Woman",
+        "uri": "https://www.youtube.com/watch?v=PHzpJJQE4nY"
+      },
+      {
+        "album": null,
+        "id": "Q108405587",
+        "track": "Bumblebee",
+        "uri": "https://www.youtube.com/watch?v=z4dQUI73xVQ"
+      },
+      {
+        "album": null,
+        "id": "Q108405602",
+        "track": "No Doubt About It",
+        "uri": "https://www.youtube.com/watch?v=U9RAPEqw6Z0"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='372976', url='https://music.apple.com/gb/artist/abba/372976', name='ABBA', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/77/b2/e3/77b2e3f8-3af4-1928-f411-901705218d2d/mza_402627401905230864.png/2000x2000bb.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '372976', 'type': 'artists', 'href': '/v1/catalog/gb/artists/372976', 'attributes': {'artwork': {'bgColor': 'cbd3e7', 'height': 3840, 'textColor1': '2c231f', 'textColor2': '372f2c', 'textColor3': '4c4647', 'textColor4': '554f51', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/77/b2/e3/77b2e3f8-3af4-1928-f411-901705218d2d/mza_402627401905230864.png/{w}x{h}bb.jpg', 'width': 3840}, 'genreNames': ['Pop'], 'name': 'ABBA', 'url': 'https://music.apple.com/gb/artist/abba/372976'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/372976/albums', 'next': '/v1/catalog/gb/artists/372976/albums?offset=25', 'data': [{'id': '1440767912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767912'}, {'id': '1440767912', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440767912'}, {'id': '1380464428', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380464428'}, {'id': '1380464428', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1380464428'}, {'id': '1440816833', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440816833'}, {'id': '1422648512', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1422648512'}, {'id': '1583785050', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583785050'}, {'id': '1442609540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442609540'}, {'id': '1442609540', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442609540'}, {'id': '1440820126', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440820126'}, {'id': '1440816296', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440816296'}, {'id': '1440823811', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440823811'}, {'id': '1440821028', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440821028'}, {'id': '1440849364', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440849364'}, {'id': '1440790242', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440790242'}, {'id': '1440790242', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440790242'}, {'id': '1440802799', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440802799'}, {'id': '1440715246', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440715246'}, {'id': '1445870793', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1445870793'}, {'id': '1440739110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440739110'}, {'id': '1440861160', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440861160'}, {'id': '1440818233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440818233'}, {'id': '1440852986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440852986'}, {'id': '1440822052', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440822052'}, {'id': '1530391535', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1530391535'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "69866",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 679507,
+          "name": "Björn & Benny, Agnetha & Anni-Frid",
+          "resource_url": "https://api.discogs.com/artists/679507"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 69866,
+      "images": [
+        {
+          "height": 567,
+          "resource_url": "https://i.discogs.com/kpdT1jyOYgCXgph0GYI6O7ScqUtgHxm_HVX4scQvo18/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/kpdT1jyOYgCXgph0GYI6O7ScqUtgHxm_HVX4scQvo18/rs:fit/g:sm/q:90/h:567/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/LskEBEtsSa4yRT6s_3RSYKvjgnEo8qXZdsj7Z4Np1c0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTEyMTU0MjA0OTMu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/ERCzwLwzc5sffH7UgYBTsofPz-4sBbSKQAw3tUXZoKY/rs:fit/g:sm/q:90/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ERCzwLwzc5sffH7UgYBTsofPz-4sBbSKQAw3tUXZoKY/rs:fit/g:sm/q:90/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Xk2c9cBi2Jw3GXVsP1jwuEL4nvs0oTVyv-_T_X-ewDI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NDM1NzQ0MjQt/MjgzMS5qcGVn.jpeg",
+          "width": 320
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/oDhk6Zi-WuwcMdR4Qav0LWhyZ1ODDVCHij1Gp7PSSTs/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oDhk6Zi-WuwcMdR4Qav0LWhyZ1ODDVCHij1Gp7PSSTs/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/DgEvV554gMR_uA9pbJ2wlr5LvaDSD1Vt0IRGWRiyqLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MjkxNTI0ODMt/NTg4Ny5qcGVn.jpeg",
+          "width": 599
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/g4DijAPNtWYYA-Q_exINfiFYO5B5Axci0aISnwdjfn4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g4DijAPNtWYYA-Q_exINfiFYO5B5Axci0aISnwdjfn4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AdOqqKqFi7HFSm5rmbGDXHOXtNW2PgHt-6wT35PqXtM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3MTcyNDcwMTIt/NTYzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 573,
+          "resource_url": "https://i.discogs.com/Ccj6GA4WK5DDbl6AqKmZbivYGiYqw7CqNWr0EYQsT80/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ccj6GA4WK5DDbl6AqKmZbivYGiYqw7CqNWr0EYQsT80/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gSe9Zy8oxYOrUBzI2X9jqETaeE8wx4_wdm6elekaask/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI3NjIt/NzgzMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/kjZKp0xikoArqperehOlZAtGkF09RlJTWzL_Kf093hU/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kjZKp0xikoArqperehOlZAtGkF09RlJTWzL_Kf093hU/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VplaUDjXSol-7XzLQk_XlgFwwHI11AVEm35kfVmY1VQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM4Mjct/NjE2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/tZmW28tRbjzLhHcE1KDnS9N5Cj6_o-2JcpmrS__GhsM/rs:fit/g:sm/q:90/h:600/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tZmW28tRbjzLhHcE1KDnS9N5Cj6_o-2JcpmrS__GhsM/rs:fit/g:sm/q:90/h:600/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/llg9wKVMibnlwsDlPBj-2lP9FJwQjt19d4qgkL9y8-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODYxNDMt/ODc3MC5qcGVn.jpeg",
+          "width": 592
+        },
+        {
+          "height": 582,
+          "resource_url": "https://i.discogs.com/mAvcfg3vD3xMVD3JXnofNeDbLvH3ZXXbB7vnCAUAzo4/rs:fit/g:sm/q:90/h:582/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mAvcfg3vD3xMVD3JXnofNeDbLvH3ZXXbB7vnCAUAzo4/rs:fit/g:sm/q:90/h:582/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iAhnU4gzZQUwGkhtSn0uaKc-gdMRTAqh28AMmM3MPUI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NjE5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 512,
+          "resource_url": "https://i.discogs.com/TqWF4slYwiQxKBq99-JTUnkesmOauKTAISl4__Aa-sY/rs:fit/g:sm/q:90/h:512/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TqWF4slYwiQxKBq99-JTUnkesmOauKTAISl4__Aa-sY/rs:fit/g:sm/q:90/h:512/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/I2n9IDj82y3aPejpHkkMXB3-Jv5u7ZH4G7UjBOZXj5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE1NzU1NDY4MDQt/OTI2MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/bTAgZ8TM5hMnWL3HNfuss7h8gfS1MeLRqJUo5gHtys8/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bTAgZ8TM5hMnWL3HNfuss7h8gfS1MeLRqJUo5gHtys8/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/w0iGOIwiDM2rNy2xBejm4bzgkYklBPYivm6d1P6IlGQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5NjAt/Nzk0My5qcGVn.jpeg",
+          "width": 590
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QmTaeuYPN2rKj0-96fGjunoFVRXOFkijpFSn_L0zMDY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QmTaeuYPN2rKj0-96fGjunoFVRXOFkijpFSn_L0zMDY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/OB6KQkgyHTCw-5B2dAIvfZ8AgiC5kI_-WaEADN4_8Fk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTMyMDMt/OTg0My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 533,
+          "resource_url": "https://i.discogs.com/_GJJb37qZ3n2eBtLxUSXgOenwdfRU-iaELzBmmJHOiU/rs:fit/g:sm/q:90/h:533/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_GJJb37qZ3n2eBtLxUSXgOenwdfRU-iaELzBmmJHOiU/rs:fit/g:sm/q:90/h:533/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_bwU5yHa1TidPIsdUNGc9XTgcRRlmsian4SHD3Bij0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTM4NzM5MTAt/NjM3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/Wrv-fExsyN74XcNr1kImS9WdCR5CYkTaFaD1P6pCWAQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Wrv-fExsyN74XcNr1kImS9WdCR5CYkTaFaD1P6pCWAQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/uWur-Gh0zG1DmytTajg19z5VrFgojrHBne1G2fFC7rI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE0OTY1OTI5MzIt/NTgwMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 563,
+          "resource_url": "https://i.discogs.com/DZ7N0DW2uZeSyzAGYF540FnYXR-jdoQWAd-VEYokOig/rs:fit/g:sm/q:90/h:563/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DZ7N0DW2uZeSyzAGYF540FnYXR-jdoQWAd-VEYokOig/rs:fit/g:sm/q:90/h:563/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/nyrB96Sa-9BxfvPa-Ev4U6xPVzHf4C3mu-fFvAVO2fc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzUt/NTAxNS5qcGVn.jpeg",
+          "width": 545
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/HCfqBysmh-HzicbuyplQEzteEjzBw8KRwZAFf48IH1I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HCfqBysmh-HzicbuyplQEzteEjzBw8KRwZAFf48IH1I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mYLjO6B6hPASCjJRJMaogZdWP4A1nxB7B6dIjqQ7iVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODUxNDQwOTAt/NDk4My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/X09YbZRc1V5z4b7NzEjLABkS7tKS9ydNigTieNybWEs/rs:fit/g:sm/q:90/h:600/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/X09YbZRc1V5z4b7NzEjLABkS7tKS9ydNigTieNybWEs/rs:fit/g:sm/q:90/h:600/w:571/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/It-jBFiJV_xtSDd2TCKSYd-m5JuVSSZT6szExFJHoqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MDA1MzMyNzIt/ODU5NC5qcGVn.jpeg",
+          "width": 571
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ARKCUyVdMksz6yavdd-z7YrcBtKjVRUQhL-U5JaW4as/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ARKCUyVdMksz6yavdd-z7YrcBtKjVRUQhL-U5JaW4as/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9a8_zkUxKQJd5PfHJlzhr921ThaUVsRA6ajqHAABB-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA5Ni5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/a3yxRPgBu6UJoy1SQFy0UGHTc1fZvl0BWWK5Ikh5gjY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a3yxRPgBu6UJoy1SQFy0UGHTc1fZvl0BWWK5Ikh5gjY/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/SUuLW3efCsyrA1l9aCkEzZomOYW6Osgk72bV0MN53oQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/OTcwNC5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Fud-nezKsXBB2F-_XRYVp_T9roVWHDjsiX2AXRd9hlI/rs:fit/g:sm/q:90/h:600/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Fud-nezKsXBB2F-_XRYVp_T9roVWHDjsiX2AXRd9hlI/rs:fit/g:sm/q:90/h:600/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/frGFHfuX9nHHjsFXUX3qs-Me_21U4aj7dW85RTl28Ag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/MzE1Ni5qcGVn.jpeg",
+          "width": 438
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/T-K7K0PcXjnzqjcnV6UORQea-_TSWyQTYTSgCaj3brk/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/T-K7K0PcXjnzqjcnV6UORQea-_TSWyQTYTSgCaj3brk/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dkh72Gc8ZyedjG2FbcD7o2ECjOpBslRO-WV1I_ibm9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/Mzk4My5qcGVn.jpeg",
+          "width": 480
+        },
+        {
+          "height": 583,
+          "resource_url": "https://i.discogs.com/ZRSvPgmv0tTmVd4wKn-5zj7HTtCwlJdeYdmQHlc9jLo/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZRSvPgmv0tTmVd4wKn-5zj7HTtCwlJdeYdmQHlc9jLo/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9hU46OhnNWeIckUiy4mEPc_8Ea0njHRGkfj_Fip2Kis/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0MzYt/NDA2OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/5oYagZU_Jbf4zEMa-LvfaFEYt00GJhW9uQ-BOBFAGRY/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5oYagZU_Jbf4zEMa-LvfaFEYt00GJhW9uQ-BOBFAGRY/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/MtGUFMfStyELZ2H0x3OrYgTwVA8wVtEycDahHvOCG-8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2ODcwNjM0Mzct/NTg0NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/7D5UM2KREyOW48GiUEAtpVGTypGm0WFajAyX0ghaZfs/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7D5UM2KREyOW48GiUEAtpVGTypGm0WFajAyX0ghaZfs/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/bnBgDq4wIdMFRr1h9-OGdC8Wk34Bs4JKOFA3V-WN9t4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE2MTU5ODY2NTQt/NTY4MC5qcGVn.jpeg",
+          "width": 590
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/hxHMU6jPZSNZnIy9UrPQnvPsr9cnQHptsPP7M2vlYaw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hxHMU6jPZSNZnIy9UrPQnvPsr9cnQHptsPP7M2vlYaw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/AQQL2nVmXjZd_oiPAfsLZHLWaoZiZzS7WBT8tz9OUvs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NTI3ODIzNTQt/NjQwNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/NHyxaLiXM7sXGq8A0M36e_jjzMZpUh0OTK-R2C1TrS0/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NHyxaLiXM7sXGq8A0M36e_jjzMZpUh0OTK-R2C1TrS0/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RiOH6J7aK_deRvN_Rb7DzKNjgkquF4FewVYvZLjROjc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODY2/LTE3NzY3NTMzMTIt/Njk1Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 69873,
+          "name": "Benny Andersson",
+          "resource_url": "https://api.discogs.com/artists/69873"
+        },
+        {
+          "active": true,
+          "id": 149038,
+          "name": "Agnetha Fältskog",
+          "resource_url": "https://api.discogs.com/artists/149038"
+        },
+        {
+          "active": true,
+          "id": 268733,
+          "name": "Björn Ulvaeus",
+          "resource_url": "https://api.discogs.com/artists/268733"
+        },
+        {
+          "active": true,
+          "id": 688940,
+          "name": "Anni-Frid Lyngstad",
+          "resource_url": "https://api.discogs.com/artists/688940"
+        }
+      ],
       "name": "ABBA",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "69866",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/69866"
-      },
+      "namevariations": [
+        "A B B A",
+        "ABBA (Agnetha, Björn, Benny & Anna-Frid)",
+        "ABBA (Agnetha, Björn, Benny, Anna-Frid)",
+        "ABBA (Bjorn, Benny, Anna & Frida)",
+        "ABBA (Bjorn, Benny, Anna, Frida)",
+        "ABBA (Bjorn-Benny-Agnetha & Frida)",
+        "ABBA (Bjorn-Benny-Agnetha-Frida)",
+        "ABBA (Bjorn/Benny/Agnetha & Frida)",
+        "ABBA (Björn, Benny, Agnetha & Frida)",
+        "ABBA (Björn, Benny, Anna & Frida)",
+        "ABBA®",
+        "Abba",
+        "Abbasongs",
+        "Agnetha Björn Benny Anna-Frid",
+        "G. Aa",
+        "Groupe ABBA",
+        "Grupo Abba",
+        "Los ABBA",
+        "Super Star (ABBA)",
+        "АББА",
+        "Абба",
+        "Анс. \"АББА\"",
+        "Ансамбль \"АББА\"",
+        "Ансамбль «АББА»",
+        "Ансамбль АББА",
+        "гр. ABBA",
+        "アバ",
+        "アパ",
+        "阿巴",
+        "阿巴乐队",
+        "阿巴合唱团",
+        "阿巴合唱團",
+        "아바"
+      ],
+      "profile": "Swedish pop group ABBA, founded in 1972, became famous when they won the Eurovision Song Contest in 1974. It started a decade of almost uninterrupted string of hits and major selling albums.\r\nAfter the group stopped releasing new material in 1982 (they never officially disbanded) there was a relative lull in their popularity – which came to an end in 1992 when \"[m=12249]\" was released. The compilation has become one of the world's best-selling albums of all time.\r\nIn 1999, a musical based on ABBA hits called 'Mamma Mia!' opened in London. With various international productions, in 50 countries in all 6 continents, it is one of the most popular musicals of all time.\r\nABBA were inducted into the Rock & Roll Hall of Fame in 2010, in the category of 'Performers'.\r\nABBA released a new album in November 2021. Live shows with ABBA appearing as virtual 'abbatars' started in London in May 2022.\r\n\r\n[a149038] (born April 5th, 1950): vocals\r\n[a268733] (born April 25th, 1945): guitars, vocals\r\n[a69873] (born December 16th, 1946): keyboards, vocals\r\n[a688940] (born November 15th, 1945): vocals",
+      "releases_url": "https://api.discogs.com/artists/69866/releases",
       "resource_url": "https://api.discogs.com/artists/69866",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/69866",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/69866-ABBA",
+      "urls": [
+        "https://abbasite.com/",
+        "https://abbavoyage.com/",
+        "https://www.facebook.com/ABBA/",
+        "https://www.youtube.com/user/abba",
+        "https://www.youtube.com/user/AbbaVEVO",
+        "https://soundcloud.com/abba-official",
+        "https://abbathemuseum.com/",
+        "https://en.wikipedia.org/wiki/ABBA",
+        "https://abbaomnibus.com/",
+        "https://abbaoncd.wordpress.com/",
+        "https://www.thorsven.net/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='ABBA', url='https://www.last.fm/music/ABBA', mbid='d87e52c5-bb8d-4da8-b941-9f4928627dc8', listeners=4234976, playcount=180621083, bio_summary='ABBA were a Swedish pop group formed in Stockholm in 1972 by Agnetha Fältskog, Björn Ulvaeus, Benny Andersson, and Anni-Frid Lyngstad. They became one of the most internationally recognized and commercially successful music groups of the late 20th century.\\n\\nThe group achieved global attention after winning the Eurovision Song Contest in 1974 for Sweden with the song \"Waterloo\". During the peak of their success, ABBA consisted of two married couples: Fältskog and Ulvaeus, and Lyngstad and Andersson. <a href=\"https://www.last.fm/music/ABBA\">Read more on Last.fm</a>', bio_content='ABBA were a Swedish pop group formed in Stockholm in 1972 by Agnetha Fältskog, Björn Ulvaeus, Benny Andersson, and Anni-Frid Lyngstad. They became one of the most internationally recognized and commercially successful music groups of the late 20th century.\\n\\nThe group achieved global attention after winning the Eurovision Song Contest in 1974 for Sweden with the song \"Waterloo\". During the peak of their success, ABBA consisted of two married couples: Fältskog and Ulvaeus, and Lyngstad and Andersson. Both marriages later ended, and the changes in the members’ personal lives were reflected in the group’s later music, which increasingly incorporated emotional and introspective themes. ABBA disbanded in December 1982. Andersson and Ulvaeus continued to work together as composers for stage and film, while Fältskog and Lyngstad pursued individual solo careers. In 1992, the compilation album \"ABBA Gold\" was released and became a major worldwide commercial success. Their music was later adapted into \"Mamma Mia!\", a stage musical that premiered in 1999 and toured internationally. A film adaptation, \"Mamma Mia!\", was released in 2008 and became a major box-office success, followed by a sequel, \"Mamma Mia! Here We Go Again\", in 2018.\\n\\nABBA have sold an estimated 150 million records worldwide, placing them among the best-selling music artists in history. They were the first group from a non-English-speaking country to achieve sustained success in major English-speaking markets, including the United Kingdom, Australia, the United States, and Canada. They achieved eight consecutive number-one albums in the United Kingdom and also recorded a Spanish-language compilation that broadened their popularity in Latin America. ABBA have received numerous honors, including induction into the Vocal Group Hall of Fame in 2002 and the Rock and Roll Hall of Fame in 2010. Their song \"Dancing Queen\" was added to the Grammy Hall of Fame in 2015, and the album \"Arrival\" (1976) was selected for preservation in the United States National Recording Registry in 2024.\\n\\nThe group reunited in the late 2010s to participate in a digital avatar concert project. New music followed, and \"Voyage\", their first studio album in four decades, was released on 5 November 2021. ABBA Voyage, a concert residency featuring motion-captured digital avatars of the group, opened in London in May 2022.\\n\\nStudio albums\\nRing Ring (1973)\\nWaterloo (1974)\\nABBA (1975)\\nArrival (1976)\\nABBA: The Album (1977)\\nVoulez-Vous (1979)\\nSuper Trouper (1980)\\nThe Visitors (1981)\\nVoyage (2021) <a href=\"https://www.last.fm/music/ABBA\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['pop', 'Disco', '70s', 'swedish', '80s'], similar_artists=[{'name': 'Agnetha Fältskog', 'url': 'https://www.last.fm/music/Agnetha+F%C3%A4ltskog'}, {'name': 'Frida', 'url': 'https://www.last.fm/music/Frida'}, {'name': 'Bee Gees', 'url': 'https://www.last.fm/music/Bee+Gees'}, {'name': 'Olivia Newton-John', 'url': 'https://www.last.fm/music/Olivia+Newton-John'}, {'name': 'Boney M.', 'url': 'https://www.last.fm/music/Boney+M.'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'ABBA', 'mbid': 'd87e52c5-bb8d-4da8-b941-9f4928627dc8', 'url': 'https://www.last.fm/music/ABBA', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4234976', 'playcount': '180621083'}, 'similar': {'artist': [{'name': 'Agnetha Fältskog', 'url': 'https://www.last.fm/music/Agnetha+F%C3%A4ltskog', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Frida', 'url': 'https://www.last.fm/music/Frida', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bee Gees', 'url': 'https://www.last.fm/music/Bee+Gees', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Olivia Newton-John', 'url': 'https://www.last.fm/music/Olivia+Newton-John', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Boney M.', 'url': 'https://www.last.fm/music/Boney+M.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'Disco', 'url': 'https://www.last.fm/tag/Disco'}, {'name': '70s', 'url': 'https://www.last.fm/tag/70s'}, {'name': 'swedish', 'url': 'https://www.last.fm/tag/swedish'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/ABBA/+wiki'}}, 'published': '19 Feb 2006, 16:14', 'summary': 'ABBA were a Swedish pop group formed in Stockholm in 1972 by Agnetha Fältskog, Björn Ulvaeus, Benny Andersson, and Anni-Frid Lyngstad. They became one of the most internationally recognized and commercially successful music groups of the late 20th century.\\n\\nThe group achieved global attention after winning the Eurovision Song Contest in 1974 for Sweden with the song \"Waterloo\". During the peak of their success, ABBA consisted of two married couples: Fältskog and Ulvaeus, and Lyngstad and Andersson. <a href=\"https://www.last.fm/music/ABBA\">Read more on Last.fm</a>', 'content': 'ABBA were a Swedish pop group formed in Stockholm in 1972 by Agnetha Fältskog, Björn Ulvaeus, Benny Andersson, and Anni-Frid Lyngstad. They became one of the most internationally recognized and commercially successful music groups of the late 20th century.\\n\\nThe group achieved global attention after winning the Eurovision Song Contest in 1974 for Sweden with the song \"Waterloo\". During the peak of their success, ABBA consisted of two married couples: Fältskog and Ulvaeus, and Lyngstad and Andersson. Both marriages later ended, and the changes in the members’ personal lives were reflected in the group’s later music, which increasingly incorporated emotional and introspective themes. ABBA disbanded in December 1982. Andersson and Ulvaeus continued to work together as composers for stage and film, while Fältskog and Lyngstad pursued individual solo careers. In 1992, the compilation album \"ABBA Gold\" was released and became a major worldwide commercial success. Their music was later adapted into \"Mamma Mia!\", a stage musical that premiered in 1999 and toured internationally. A film adaptation, \"Mamma Mia!\", was released in 2008 and became a major box-office success, followed by a sequel, \"Mamma Mia! Here We Go Again\", in 2018.\\n\\nABBA have sold an estimated 150 million records worldwide, placing them among the best-selling music artists in history. They were the first group from a non-English-speaking country to achieve sustained success in major English-speaking markets, including the United Kingdom, Australia, the United States, and Canada. They achieved eight consecutive number-one albums in the United Kingdom and also recorded a Spanish-language compilation that broadened their popularity in Latin America. ABBA have received numerous honors, including induction into the Vocal Group Hall of Fame in 2002 and the Rock and Roll Hall of Fame in 2010. Their song \"Dancing Queen\" was added to the Grammy Hall of Fame in 2015, and the album \"Arrival\" (1976) was selected for preservation in the United States National Recording Registry in 2024.\\n\\nThe group reunited in the late 2010s to participate in a digital avatar concert project. New music followed, and \"Voyage\", their first studio album in four decades, was released on 5 November 2021. ABBA Voyage, a concert residency featuring motion-captured digital avatars of the group, opened in London in May 2022.\\n\\nStudio albums\\nRing Ring (1973)\\nWaterloo (1974)\\nABBA (1975)\\nArrival (1976)\\nABBA: The Album (1977)\\nVoulez-Vous (1979)\\nSuper Trouper (1980)\\nThe Visitors (1981)\\nVoyage (2021) <a href=\"https://www.last.fm/music/ABBA\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0LcJLqbBmaGUft1e9Mm8HV', url='https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV', name='ABBA', popularity=83, followers=15269455, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb81a5ec3c9b4a6750440904d8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517481a5ec3c9b4a6750440904d8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17881a5ec3c9b4a6750440904d8', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV'}, 'followers': {'href': None, 'total': 15269455}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV', 'id': '0LcJLqbBmaGUft1e9Mm8HV', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb81a5ec3c9b4a6750440904d8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517481a5ec3c9b4a6750440904d8', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17881a5ec3c9b4a6750440904d8', 'height': 160, 'width': 160}], 'name': 'ABBA', 'popularity': 83, 'type': 'artist', 'uri': 'spotify:artist:0LcJLqbBmaGUft1e9Mm8HV'})",
@@ -524,6 +1452,6 @@
   },
   "spotify_id": "0LcJLqbBmaGUft1e9Mm8HV",
   "spotify_url": "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV",
-  "updated_at": "2026-10-22T14:04:22.172579",
+  "updated_at": "2026-10-30T18:35:18.284451",
   "wikipedia_url": "https://en.wikipedia.org/wiki/ABBA"
 }

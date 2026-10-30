@@ -102,22 +102,100 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='59580566', url='https://music.apple.com/gb/artist/john-cleese/59580566', name='John Cleese', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/3e/49/1c/mzi.odknyjte.jpg/2000x2000ac.jpg', genres=['Spoken Word'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '59580566', 'type': 'artists', 'href': '/v1/catalog/gb/artists/59580566', 'attributes': {'name': 'John Cleese', 'genreNames': ['Spoken Word'], 'artwork': {'width': 600, 'height': 600, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/3e/49/1c/mzi.odknyjte.jpg/{w}x{h}ac.jpg', 'bgColor': 'ffffff', 'textColor1': '000000', 'textColor2': '0f2314', 'textColor3': '333333', 'textColor4': '3f4f43'}, 'url': 'https://music.apple.com/gb/artist/john-cleese/59580566'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/59580566/albums', 'data': [{'id': '151898362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151898362'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "64695",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "groups": [
+        {
+          "active": true,
+          "id": 262731,
+          "name": "Monty Python",
+          "resource_url": "https://api.discogs.com/artists/262731"
+        },
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        },
+        {
+          "active": true,
+          "id": 506144,
+          "name": "I'm Sorry I'll Read That Again",
+          "resource_url": "https://api.discogs.com/artists/506144"
+        },
+        {
+          "active": true,
+          "id": 1814933,
+          "name": "Cambridge Circus (London Cast)",
+          "resource_url": "https://api.discogs.com/artists/1814933"
+        }
+      ],
+      "id": 64695,
+      "images": [
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/ezH0H0p20SXnTI_3ap_tl1qXAgBuP3cdOSs5yWajoB0/rs:fit/g:sm/q:90/h:357/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ezH0H0p20SXnTI_3ap_tl1qXAgBuP3cdOSs5yWajoB0/rs:fit/g:sm/q:90/h:357/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/u7pDEttudQC-GcEuuQLPmPtIib9wc6Q2J_NbRj9tFfI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "width": 250
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/sgr6UxhZEz5pmOcZDmsz1O_KWY8qKrvMn0t5SYUI8hY/rs:fit/g:sm/q:90/h:460/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sgr6UxhZEz5pmOcZDmsz1O_KWY8qKrvMn0t5SYUI8hY/rs:fit/g:sm/q:90/h:460/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KbI2QCAHJJGpyjfcg93Xt2N_Tp3fFEC2fWKwDXIhU2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "width": 340
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/r0bJYqryCIL7qZe1LsvTWksGVuq4WveWf7O3RKclk1o/rs:fit/g:sm/q:90/h:600/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r0bJYqryCIL7qZe1LsvTWksGVuq4WveWf7O3RKclk1o/rs:fit/g:sm/q:90/h:600/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xMoIqWNdkpbAbJ-DY_pkr9G8Bq9yqNl2ZAbje9uM_xY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "width": 514
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/gxBR8grYDjER_9Tc7cp_e3C2iTvNZxntSGPKg_znuJs/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gxBR8grYDjER_9Tc7cp_e3C2iTvNZxntSGPKg_znuJs/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/GqEZxhlNQOHBShalMvtZTkJ6fTbu7iNNOD4l8tjjZAQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/j5WLE2bf-n3_KsssSvBcEAaZbcm8c1C2a0tXdj9IUGY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j5WLE2bf-n3_KsssSvBcEAaZbcm8c1C2a0tXdj9IUGY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dDUELghzRs8-PgIF8Q34dpMHv8BXkN8fiGXP0jKcksY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/ha70tGDZhps8jRvgupRR3nhzvuMK0cp6ln3TWXKLHiU/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ha70tGDZhps8jRvgupRR3nhzvuMK0cp6ln3TWXKLHiU/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Beru7qsAEU7p0-tIOKmxBHg_jrDRw-3iaHI5HqLQ7X4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
       "name": "John Cleese",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "64695",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/64695"
-      },
+      "namevariations": [
+        "Cleese",
+        "J. Cleese",
+        "John Clease",
+        "John Cleese As The Voice Of \"Ape\""
+      ],
+      "profile": "British comedian, actor, writer and film producer, born October 27, 1939 in Weston-Super-Mare, Somerset, England. In the late 1960's, he co-founded the comedy team [a262731]. In the mid-1970's, Cleese and his first wife, [a434396] (divorced), co-wrote and starred in the British television sitcom [i]Fawlty Towers[/i] (1975-1979).",
+      "realname": "John Marwood Cleese ",
+      "releases_url": "https://api.discogs.com/artists/64695/releases",
       "resource_url": "https://api.discogs.com/artists/64695",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/64695",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/64695-John-Cleese",
+      "urls": [
+        "https://www.johncleeselive.com/",
+        "https://en.wikipedia.org/wiki/John_Cleese"
+      ]
     },
     "identity": {
       "musicbrainz_id": "589a0ad5-30d4-4bbc-adb3-373ce0ad49ae",
@@ -170,27 +248,106 @@
       "twitter": "1",
       "website": "thejohncleese.com"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='59580566', url='https://music.apple.com/gb/artist/john-cleese/59580566', name='John Cleese', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/3e/49/1c/mzi.odknyjte.jpg/2000x2000ac.jpg', genres=['Spoken Word'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '59580566', 'type': 'artists', 'href': '/v1/catalog/gb/artists/59580566', 'attributes': {'name': 'John Cleese', 'genreNames': ['Spoken Word'], 'artwork': {'width': 600, 'height': 600, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/3e/49/1c/mzi.odknyjte.jpg/{w}x{h}ac.jpg', 'bgColor': 'ffffff', 'textColor1': '000000', 'textColor2': '0f2314', 'textColor3': '333333', 'textColor4': '3f4f43'}, 'url': 'https://music.apple.com/gb/artist/john-cleese/59580566'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/59580566/albums', 'data': [{'id': '151898362', 'type': 'albums', 'href': '/v1/catalog/gb/albums/151898362'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "64695",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "groups": [
+        {
+          "active": true,
+          "id": 262731,
+          "name": "Monty Python",
+          "resource_url": "https://api.discogs.com/artists/262731"
+        },
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        },
+        {
+          "active": true,
+          "id": 506144,
+          "name": "I'm Sorry I'll Read That Again",
+          "resource_url": "https://api.discogs.com/artists/506144"
+        },
+        {
+          "active": true,
+          "id": 1814933,
+          "name": "Cambridge Circus (London Cast)",
+          "resource_url": "https://api.discogs.com/artists/1814933"
+        }
+      ],
+      "id": 64695,
+      "images": [
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/ezH0H0p20SXnTI_3ap_tl1qXAgBuP3cdOSs5yWajoB0/rs:fit/g:sm/q:90/h:357/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ezH0H0p20SXnTI_3ap_tl1qXAgBuP3cdOSs5yWajoB0/rs:fit/g:sm/q:90/h:357/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/u7pDEttudQC-GcEuuQLPmPtIib9wc6Q2J_NbRj9tFfI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzAyMzI4NjYu/anBlZw.jpeg",
+          "width": 250
+        },
+        {
+          "height": 460,
+          "resource_url": "https://i.discogs.com/sgr6UxhZEz5pmOcZDmsz1O_KWY8qKrvMn0t5SYUI8hY/rs:fit/g:sm/q:90/h:460/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sgr6UxhZEz5pmOcZDmsz1O_KWY8qKrvMn0t5SYUI8hY/rs:fit/g:sm/q:90/h:460/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KbI2QCAHJJGpyjfcg93Xt2N_Tp3fFEC2fWKwDXIhU2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTExMzc1MjkyMTcu/anBlZw.jpeg",
+          "width": 340
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/r0bJYqryCIL7qZe1LsvTWksGVuq4WveWf7O3RKclk1o/rs:fit/g:sm/q:90/h:600/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r0bJYqryCIL7qZe1LsvTWksGVuq4WveWf7O3RKclk1o/rs:fit/g:sm/q:90/h:600/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xMoIqWNdkpbAbJ-DY_pkr9G8Bq9yqNl2ZAbje9uM_xY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3MDcu/anBlZw.jpeg",
+          "width": 514
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/gxBR8grYDjER_9Tc7cp_e3C2iTvNZxntSGPKg_znuJs/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gxBR8grYDjER_9Tc7cp_e3C2iTvNZxntSGPKg_znuJs/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/GqEZxhlNQOHBShalMvtZTkJ6fTbu7iNNOD4l8tjjZAQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTEyMTIwNzc3OTAu/anBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/j5WLE2bf-n3_KsssSvBcEAaZbcm8c1C2a0tXdj9IUGY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j5WLE2bf-n3_KsssSvBcEAaZbcm8c1C2a0tXdj9IUGY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dDUELghzRs8-PgIF8Q34dpMHv8BXkN8fiGXP0jKcksY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3NjgzMTM4MzQt/NDY2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/ha70tGDZhps8jRvgupRR3nhzvuMK0cp6ln3TWXKLHiU/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ha70tGDZhps8jRvgupRR3nhzvuMK0cp6ln3TWXKLHiU/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Beru7qsAEU7p0-tIOKmxBHg_jrDRw-3iaHI5HqLQ7X4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0Njk1/LTE3ODUwNTQ2MDIt/Mzg2MS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
       "name": "John Cleese",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "64695",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/64695"
-      },
+      "namevariations": [
+        "Cleese",
+        "J. Cleese",
+        "John Clease",
+        "John Cleese As The Voice Of \"Ape\""
+      ],
+      "profile": "British comedian, actor, writer and film producer, born October 27, 1939 in Weston-Super-Mare, Somerset, England. In the late 1960's, he co-founded the comedy team [a262731]. In the mid-1970's, Cleese and his first wife, [a434396] (divorced), co-wrote and starred in the British television sitcom [i]Fawlty Towers[/i] (1975-1979).",
+      "realname": "John Marwood Cleese ",
+      "releases_url": "https://api.discogs.com/artists/64695/releases",
       "resource_url": "https://api.discogs.com/artists/64695",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/64695",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/64695-John-Cleese",
+      "urls": [
+        "https://www.johncleeselive.com/",
+        "https://en.wikipedia.org/wiki/John_Cleese"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='John Cleese', url='https://www.last.fm/music/John+Cleese', mbid='589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', listeners=3003, playcount=16040, bio_summary='John Marwood Cleese (born 27 October 1939) is an English award-winning actor, comedian, writer, film producer and singer.\\nCleese is probably best known for his various roles in the British comedy Monty Python\\'s Flying Circus, his role as Basil Fawlty in Fawlty Towers \\nand his various roles in the British comedy The Frost Report. He is also known for his award-winning role as Archie Leach in the American / British comedy film A Fish Called Wanda.\\n <a href=\"https://www.last.fm/music/John+Cleese\">Read more on Last.fm</a>', bio_content='John Marwood Cleese (born 27 October 1939) is an English award-winning actor, comedian, writer, film producer and singer.\\nCleese is probably best known for his various roles in the British comedy Monty Python\\'s Flying Circus, his role as Basil Fawlty in Fawlty Towers \\nand his various roles in the British comedy The Frost Report. He is also known for his award-winning role as Archie Leach in the American / British comedy film A Fish Called Wanda.\\n <a href=\"https://www.last.fm/music/John+Cleese\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['comedy', 'british', 'funny', 'humor', 'monty pythons flying circus'], similar_artists=[{'name': 'Terry Jones', 'url': 'https://www.last.fm/music/Terry+Jones'}, {'name': 'Rowan Atkinson', 'url': 'https://www.last.fm/music/Rowan+Atkinson'}, {'name': 'Neil Innes', 'url': 'https://www.last.fm/music/Neil+Innes'}, {'name': 'Ricky Gervais, Steve Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Steve+Merchant+and+Karl+Pilkington'}, {'name': 'Stewart Lee', 'url': 'https://www.last.fm/music/Stewart+Lee'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'John Cleese', 'mbid': '589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', 'url': 'https://www.last.fm/music/John+Cleese', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3003', 'playcount': '16040'}, 'similar': {'artist': [{'name': 'Terry Jones', 'url': 'https://www.last.fm/music/Terry+Jones', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rowan Atkinson', 'url': 'https://www.last.fm/music/Rowan+Atkinson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Neil Innes', 'url': 'https://www.last.fm/music/Neil+Innes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ricky Gervais, Steve Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Steve+Merchant+and+Karl+Pilkington', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Stewart Lee', 'url': 'https://www.last.fm/music/Stewart+Lee', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'comedy', 'url': 'https://www.last.fm/tag/comedy'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'funny', 'url': 'https://www.last.fm/tag/funny'}, {'name': 'humor', 'url': 'https://www.last.fm/tag/humor'}, {'name': 'monty pythons flying circus', 'url': 'https://www.last.fm/tag/monty+pythons+flying+circus'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/John+Cleese/+wiki'}}, 'published': '30 Sep 2008, 19:37', 'summary': 'John Marwood Cleese (born 27 October 1939) is an English award-winning actor, comedian, writer, film producer and singer.\\nCleese is probably best known for his various roles in the British comedy Monty Python\\'s Flying Circus, his role as Basil Fawlty in Fawlty Towers \\nand his various roles in the British comedy The Frost Report. He is also known for his award-winning role as Archie Leach in the American / British comedy film A Fish Called Wanda.\\n <a href=\"https://www.last.fm/music/John+Cleese\">Read more on Last.fm</a>', 'content': 'John Marwood Cleese (born 27 October 1939) is an English award-winning actor, comedian, writer, film producer and singer.\\nCleese is probably best known for his various roles in the British comedy Monty Python\\'s Flying Circus, his role as Basil Fawlty in Fawlty Towers \\nand his various roles in the British comedy The Frost Report. He is also known for his award-winning role as Archie Leach in the American / British comedy film A Fish Called Wanda.\\n <a href=\"https://www.last.fm/music/John+Cleese\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5z46WSAUKQiQHggSDqMkLL', url='https://open.spotify.com/artist/5z46WSAUKQiQHggSDqMkLL', name='John Cleese', popularity=1, followers=750, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2733fa3683821a69c59c2b5f47a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e023fa3683821a69c59c2b5f47a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048513fa3683821a69c59c2b5f47a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/5z46WSAUKQiQHggSDqMkLL'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5z46WSAUKQiQHggSDqMkLL'}, 'followers': {'href': None, 'total': 750}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5z46WSAUKQiQHggSDqMkLL', 'id': '5z46WSAUKQiQHggSDqMkLL', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2733fa3683821a69c59c2b5f47a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e023fa3683821a69c59c2b5f47a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048513fa3683821a69c59c2b5f47a', 'height': 64, 'width': 64}], 'name': 'John Cleese', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:5z46WSAUKQiQHggSDqMkLL'})",
@@ -240,6 +397,6 @@
   },
   "spotify_id": "5z46WSAUKQiQHggSDqMkLL",
   "spotify_url": "https://open.spotify.com/artist/5z46WSAUKQiQHggSDqMkLL",
-  "updated_at": "2026-10-22T14:08:08.666862",
+  "updated_at": "2026-10-30T18:41:24.287110",
   "wikipedia_url": "https://en.wikipedia.org/wiki/John_Cleese"
 }

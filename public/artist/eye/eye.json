@@ -43,22 +43,89 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='31349628', url='https://music.apple.com/gb/artist/eye/31349628', name='Eye', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/ad/f3/5d/mzi.zzlugiyb.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '31349628', 'type': 'artists', 'href': '/v1/catalog/gb/artists/31349628', 'attributes': {'name': 'Eye', 'genreNames': ['Alternative'], 'artwork': {'width': 807, 'height': 768, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/ad/f3/5d/mzi.zzlugiyb.jpg/{w}x{h}ac.jpg', 'bgColor': '090e1f', 'textColor1': 'fffffd', 'textColor2': 'dd8ab3', 'textColor3': 'cdced0', 'textColor4': 'b27295'}, 'url': 'https://music.apple.com/gb/artist/eye/31349628'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/31349628/albums', 'data': [{'id': '1202059458', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1202059458'}, {'id': '1589111553', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589111553'}, {'id': '1775750495', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775750495'}, {'id': '250779753', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250779753'}, {'id': '1028568981', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1028568981'}, {'id': '1170660470', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170660470'}, {'id': '307363566', 'type': 'albums', 'href': '/v1/catalog/gb/albums/307363566'}, {'id': '1802452537', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1802452537'}, {'id': '1740339233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1740339233'}, {'id': '1739500128', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739500128'}, {'id': '1702477565', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1702477565'}, {'id': '1632900048', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632900048'}, {'id': '1614828949', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1614828949'}, {'id': '1610107111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1610107111'}, {'id': '1572427269', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572427269'}, {'id': '1564013552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1564013552'}, {'id': '1552015733', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552015733'}, {'id': '1550299110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550299110'}, {'id': '1544786776', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1544786776'}, {'id': '1542257942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542257942'}, {'id': '1522594719', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1522594719'}, {'id': '1516558796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1516558796'}, {'id': '972921477', 'type': 'albums', 'href': '/v1/catalog/gb/albums/972921477'}, {'id': '309276854', 'type': 'albums', 'href': '/v1/catalog/gb/albums/309276854'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2569352",
-      "images": [],
-      "members": [],
-      "name": "EYE",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2569352",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2569352"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2569352,
+      "images": [
+        {
+          "height": 466,
+          "resource_url": "https://i.discogs.com/lXIfH6d66-w91_4EdmOw9N-ylO_AAdTiuctBlVy6Tak/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lXIfH6d66-w91_4EdmOw9N-ylO_AAdTiuctBlVy6Tak/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/59GXkkVnomNqcDdfbS8gZB0XpBmpW0MKJ5s8VIapVW4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 451,
+          "resource_url": "https://i.discogs.com/8WVBs79GOJqaeb0-sVT1dBfTIEFuZqzF4woFQ50RVZo/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8WVBs79GOJqaeb0-sVT1dBfTIEFuZqzF4woFQ50RVZo/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/9sNDyejASAmY-_MyV5eGNC7zp6wFggkJFhqYaNX_6eY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/IndhmaD901BaybvIHIS-Raf8Nvka9YBWDK45IztvKUo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IndhmaD901BaybvIHIS-Raf8Nvka9YBWDK45IztvKUo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QCiBfttJ1RbsRt4rV1mk_w0fMMO0DEMwvalNZX3d2LY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 570915,
+          "name": "Jon Finley",
+          "resource_url": "https://api.discogs.com/artists/570915"
+        },
+        {
+          "active": false,
+          "id": 818790,
+          "name": "Adam Smith (3)",
+          "resource_url": "https://api.discogs.com/artists/818790"
+        },
+        {
+          "active": false,
+          "id": 1398672,
+          "name": "Matt Bailey (3)",
+          "resource_url": "https://api.discogs.com/artists/1398672"
+        },
+        {
+          "active": true,
+          "id": 2569350,
+          "name": "Brandon Smith (8)",
+          "resource_url": "https://api.discogs.com/artists/2569350"
+        },
+        {
+          "active": false,
+          "id": 2569351,
+          "name": "Matt Auxier",
+          "resource_url": "https://api.discogs.com/artists/2569351"
+        },
+        {
+          "active": true,
+          "id": 4182893,
+          "name": "Amy Michele Hoffman",
+          "resource_url": "https://api.discogs.com/artists/4182893"
+        },
+        {
+          "active": true,
+          "id": 4684593,
+          "name": "Lisa Bella Donna",
+          "resource_url": "https://api.discogs.com/artists/4684593"
+        },
+        {
+          "active": true,
+          "id": 5579083,
+          "name": "Michael Sliclen",
+          "resource_url": "https://api.discogs.com/artists/5579083"
+        }
+      ],
+      "name": "EYE (16)",
+      "profile": "Progressive rock band with stoner roots from Ohio, USA.",
+      "releases_url": "https://api.discogs.com/artists/2569352/releases",
       "resource_url": "https://api.discogs.com/artists/2569352",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2569352",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2569352-EYE-16"
     },
     "identity": {
       "musicbrainz_id": "4f9085ac-40db-4b4b-a749-28d45c52a4b9",
@@ -73,22 +140,89 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='31349628', url='https://music.apple.com/gb/artist/eye/31349628', name='Eye', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/ad/f3/5d/mzi.zzlugiyb.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '31349628', 'type': 'artists', 'href': '/v1/catalog/gb/artists/31349628', 'attributes': {'name': 'Eye', 'genreNames': ['Alternative'], 'artwork': {'width': 807, 'height': 768, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/ad/f3/5d/mzi.zzlugiyb.jpg/{w}x{h}ac.jpg', 'bgColor': '090e1f', 'textColor1': 'fffffd', 'textColor2': 'dd8ab3', 'textColor3': 'cdced0', 'textColor4': 'b27295'}, 'url': 'https://music.apple.com/gb/artist/eye/31349628'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/31349628/albums', 'data': [{'id': '1202059458', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1202059458'}, {'id': '1589111553', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589111553'}, {'id': '1775750495', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775750495'}, {'id': '250779753', 'type': 'albums', 'href': '/v1/catalog/gb/albums/250779753'}, {'id': '1028568981', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1028568981'}, {'id': '1170660470', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170660470'}, {'id': '307363566', 'type': 'albums', 'href': '/v1/catalog/gb/albums/307363566'}, {'id': '1802452537', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1802452537'}, {'id': '1740339233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1740339233'}, {'id': '1739500128', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739500128'}, {'id': '1702477565', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1702477565'}, {'id': '1632900048', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1632900048'}, {'id': '1614828949', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1614828949'}, {'id': '1610107111', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1610107111'}, {'id': '1572427269', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572427269'}, {'id': '1564013552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1564013552'}, {'id': '1552015733', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552015733'}, {'id': '1550299110', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550299110'}, {'id': '1544786776', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1544786776'}, {'id': '1542257942', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542257942'}, {'id': '1522594719', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1522594719'}, {'id': '1516558796', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1516558796'}, {'id': '972921477', 'type': 'albums', 'href': '/v1/catalog/gb/albums/972921477'}, {'id': '309276854', 'type': 'albums', 'href': '/v1/catalog/gb/albums/309276854'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2569352",
-      "images": [],
-      "members": [],
-      "name": "EYE",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2569352",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2569352"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2569352,
+      "images": [
+        {
+          "height": 466,
+          "resource_url": "https://i.discogs.com/lXIfH6d66-w91_4EdmOw9N-ylO_AAdTiuctBlVy6Tak/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lXIfH6d66-w91_4EdmOw9N-ylO_AAdTiuctBlVy6Tak/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/59GXkkVnomNqcDdfbS8gZB0XpBmpW0MKJ5s8VIapVW4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjEx/NS0zMzM3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 451,
+          "resource_url": "https://i.discogs.com/8WVBs79GOJqaeb0-sVT1dBfTIEFuZqzF4woFQ50RVZo/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8WVBs79GOJqaeb0-sVT1dBfTIEFuZqzF4woFQ50RVZo/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/9sNDyejASAmY-_MyV5eGNC7zp6wFggkJFhqYaNX_6eY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTUwMzUxNjE2/Ny05NzA5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/IndhmaD901BaybvIHIS-Raf8Nvka9YBWDK45IztvKUo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IndhmaD901BaybvIHIS-Raf8Nvka9YBWDK45IztvKUo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QCiBfttJ1RbsRt4rV1mk_w0fMMO0DEMwvalNZX3d2LY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Njkz/NTItMTM1NzUwMTk0/OS0yNDUyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 570915,
+          "name": "Jon Finley",
+          "resource_url": "https://api.discogs.com/artists/570915"
+        },
+        {
+          "active": false,
+          "id": 818790,
+          "name": "Adam Smith (3)",
+          "resource_url": "https://api.discogs.com/artists/818790"
+        },
+        {
+          "active": false,
+          "id": 1398672,
+          "name": "Matt Bailey (3)",
+          "resource_url": "https://api.discogs.com/artists/1398672"
+        },
+        {
+          "active": true,
+          "id": 2569350,
+          "name": "Brandon Smith (8)",
+          "resource_url": "https://api.discogs.com/artists/2569350"
+        },
+        {
+          "active": false,
+          "id": 2569351,
+          "name": "Matt Auxier",
+          "resource_url": "https://api.discogs.com/artists/2569351"
+        },
+        {
+          "active": true,
+          "id": 4182893,
+          "name": "Amy Michele Hoffman",
+          "resource_url": "https://api.discogs.com/artists/4182893"
+        },
+        {
+          "active": true,
+          "id": 4684593,
+          "name": "Lisa Bella Donna",
+          "resource_url": "https://api.discogs.com/artists/4684593"
+        },
+        {
+          "active": true,
+          "id": 5579083,
+          "name": "Michael Sliclen",
+          "resource_url": "https://api.discogs.com/artists/5579083"
+        }
+      ],
+      "name": "EYE (16)",
+      "profile": "Progressive rock band with stoner roots from Ohio, USA.",
+      "releases_url": "https://api.discogs.com/artists/2569352/releases",
       "resource_url": "https://api.discogs.com/artists/2569352",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2569352",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2569352-EYE-16"
     },
     "lastfm": {},
     "spotify": {},
@@ -96,6 +230,6 @@
   },
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2026-10-22T14:06:32.248745",
+  "updated_at": "2026-10-30T18:39:09.707751",
   "wikipedia_url": null
 }

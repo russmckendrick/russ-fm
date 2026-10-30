@@ -97,22 +97,84 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='27076397', url='https://music.apple.com/gb/artist/civ/27076397', name='CIV', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a5/b4/1ba5b49e-a532-fc6f-64a5-f919240ece74/196626177216.jpg/2000x2000ac.jpg', genres=['Punk'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '27076397', 'type': 'artists', 'href': '/v1/catalog/gb/artists/27076397', 'attributes': {'artwork': {'bgColor': '1e1c10', 'height': 3000, 'textColor1': 'f8e414', 'textColor2': 'd0cdbc', 'textColor3': 'ccbc13', 'textColor4': 'aca99a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a5/b4/1ba5b49e-a532-fc6f-64a5-f919240ece74/196626177216.jpg/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Punk'], 'name': 'CIV', 'url': 'https://music.apple.com/gb/artist/civ/27076397'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/27076397/albums', 'data': [{'id': '1603635168', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603635168'}, {'id': '1603642484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603642484'}, {'id': '1603642792', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603642792'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "87020",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 87020,
+      "images": [
+        {
+          "height": 251,
+          "resource_url": "https://i.discogs.com/6B-diTYcpgGZUP6Ae1AOzWEw0sySWauIAXzVk1C4zkk/rs:fit/g:sm/q:90/h:251/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/6B-diTYcpgGZUP6Ae1AOzWEw0sySWauIAXzVk1C4zkk/rs:fit/g:sm/q:90/h:251/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/5E70ZSMsbL4kO5003E8z-EFmYls0LZFmhcxuszg7KeI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "width": 250
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4KptsMUMeIjcVbbyGZceng0p9Xm8GuuiYOZ3lBrYVjI/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4KptsMUMeIjcVbbyGZceng0p9Xm8GuuiYOZ3lBrYVjI/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RL5WxeyCrxWUVIONeCuOOqNxOdLGIIHpGHBaRNU3vEc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "width": 478
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_C6Vl5VidGiqf6ZdUDqttxyf8RA6prFyhvgb3mOiff0/rs:fit/g:sm/q:90/h:600/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_C6Vl5VidGiqf6ZdUDqttxyf8RA6prFyhvgb3mOiff0/rs:fit/g:sm/q:90/h:600/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Q6iNQbFqXaB1FIRUoZshNL7BOj89XKIIkL-F3ogXHrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "width": 449
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lAdOYAerx8I6RSH-abTNfX3kuKc5PALzfzswLYhKgUw/rs:fit/g:sm/q:90/h:600/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lAdOYAerx8I6RSH-abTNfX3kuKc5PALzfzswLYhKgUw/rs:fit/g:sm/q:90/h:600/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/7bbFvf1EWbR5D3BFOh_X4F2_VzJxuDgN8GJTt_qGiVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "width": 395
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 671392,
+          "name": "Sammy Siegler",
+          "resource_url": "https://api.discogs.com/artists/671392"
+        },
+        {
+          "active": true,
+          "id": 812986,
+          "name": "Charlie Garriga",
+          "resource_url": "https://api.discogs.com/artists/812986"
+        },
+        {
+          "active": false,
+          "id": 2428356,
+          "name": "Luke Abbey",
+          "resource_url": "https://api.discogs.com/artists/2428356"
+        },
+        {
+          "active": true,
+          "id": 2428398,
+          "name": "Arthur Smilios",
+          "resource_url": "https://api.discogs.com/artists/2428398"
+        },
+        {
+          "active": true,
+          "id": 2428457,
+          "name": "Anthony Civorelli",
+          "resource_url": "https://api.discogs.com/artists/2428457"
+        }
+      ],
       "name": "CIV",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "87020",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/87020"
-      },
+      "profile": " Hardcore punk band from New York City including members previously in [a257227].",
+      "releases_url": "https://api.discogs.com/artists/87020/releases",
       "resource_url": "https://api.discogs.com/artists/87020",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/87020",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/87020-CIV",
+      "urls": [
+        "http://www.civband.com/",
+        "http://www.revelationrecords.com/bands/show/105",
+        "http://en.wikipedia.org/wiki/CIV_%28band%29"
+      ]
     },
     "identity": {
       "musicbrainz_id": "1649c891-eea0-45b2-8caf-c85d985ff3bd",
@@ -172,27 +234,90 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='27076397', url='https://music.apple.com/gb/artist/civ/27076397', name='CIV', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a5/b4/1ba5b49e-a532-fc6f-64a5-f919240ece74/196626177216.jpg/2000x2000ac.jpg', genres=['Punk'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '27076397', 'type': 'artists', 'href': '/v1/catalog/gb/artists/27076397', 'attributes': {'artwork': {'bgColor': '1e1c10', 'height': 3000, 'textColor1': 'f8e414', 'textColor2': 'd0cdbc', 'textColor3': 'ccbc13', 'textColor4': 'aca99a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a5/b4/1ba5b49e-a532-fc6f-64a5-f919240ece74/196626177216.jpg/{w}x{h}ac.jpg', 'width': 3000}, 'genreNames': ['Punk'], 'name': 'CIV', 'url': 'https://music.apple.com/gb/artist/civ/27076397'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/27076397/albums', 'data': [{'id': '1603635168', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603635168'}, {'id': '1603642484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603642484'}, {'id': '1603642792', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603642792'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "87020",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 87020,
+      "images": [
+        {
+          "height": 251,
+          "resource_url": "https://i.discogs.com/6B-diTYcpgGZUP6Ae1AOzWEw0sySWauIAXzVk1C4zkk/rs:fit/g:sm/q:90/h:251/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/6B-diTYcpgGZUP6Ae1AOzWEw0sySWauIAXzVk1C4zkk/rs:fit/g:sm/q:90/h:251/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/5E70ZSMsbL4kO5003E8z-EFmYls0LZFmhcxuszg7KeI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE0MTg2NjA2NTYt/MTM5NS5qcGVn.jpeg",
+          "width": 250
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4KptsMUMeIjcVbbyGZceng0p9Xm8GuuiYOZ3lBrYVjI/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4KptsMUMeIjcVbbyGZceng0p9Xm8GuuiYOZ3lBrYVjI/rs:fit/g:sm/q:90/h:600/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RL5WxeyCrxWUVIONeCuOOqNxOdLGIIHpGHBaRNU3vEc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3MTUt/NzgwMy5qcGVn.jpeg",
+          "width": 478
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/_C6Vl5VidGiqf6ZdUDqttxyf8RA6prFyhvgb3mOiff0/rs:fit/g:sm/q:90/h:600/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_C6Vl5VidGiqf6ZdUDqttxyf8RA6prFyhvgb3mOiff0/rs:fit/g:sm/q:90/h:600/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Q6iNQbFqXaB1FIRUoZshNL7BOj89XKIIkL-F3ogXHrk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE1MzQ2ODU3Njkt/MTc2Ny5qcGVn.jpeg",
+          "width": 449
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/lAdOYAerx8I6RSH-abTNfX3kuKc5PALzfzswLYhKgUw/rs:fit/g:sm/q:90/h:600/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lAdOYAerx8I6RSH-abTNfX3kuKc5PALzfzswLYhKgUw/rs:fit/g:sm/q:90/h:600/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/7bbFvf1EWbR5D3BFOh_X4F2_VzJxuDgN8GJTt_qGiVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3MDIw/LTE2OTcyMTk1Nzkt/NzY4My5qcGVn.jpeg",
+          "width": 395
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 671392,
+          "name": "Sammy Siegler",
+          "resource_url": "https://api.discogs.com/artists/671392"
+        },
+        {
+          "active": true,
+          "id": 812986,
+          "name": "Charlie Garriga",
+          "resource_url": "https://api.discogs.com/artists/812986"
+        },
+        {
+          "active": false,
+          "id": 2428356,
+          "name": "Luke Abbey",
+          "resource_url": "https://api.discogs.com/artists/2428356"
+        },
+        {
+          "active": true,
+          "id": 2428398,
+          "name": "Arthur Smilios",
+          "resource_url": "https://api.discogs.com/artists/2428398"
+        },
+        {
+          "active": true,
+          "id": 2428457,
+          "name": "Anthony Civorelli",
+          "resource_url": "https://api.discogs.com/artists/2428457"
+        }
+      ],
       "name": "CIV",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "87020",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/87020"
-      },
+      "profile": " Hardcore punk band from New York City including members previously in [a257227].",
+      "releases_url": "https://api.discogs.com/artists/87020/releases",
       "resource_url": "https://api.discogs.com/artists/87020",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/87020",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/87020-CIV",
+      "urls": [
+        "http://www.civband.com/",
+        "http://www.revelationrecords.com/bands/show/105",
+        "http://en.wikipedia.org/wiki/CIV_%28band%29"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='CIV', url='https://www.last.fm/music/CIV', mbid='1649c891-eea0-45b2-8caf-c85d985ff3bd', listeners=134124, playcount=1496026, bio_summary='There are multiple artists who go by \"CIV\"\\n1 CIV (rapper)\\n2 CIV (hardcore punk band)\\n\\n(1)  Civ is a musician who gained popularity in early 2025 with the release of the song “1 AM.” The track was officially released on February 7, 2025, and is available on platforms like Spotify.\\n\\nPrior to its release, Civ promoted “1 AM” on TikTok starting in mid-January 2025, featuring videos of an AI-generated bear singing along to the song’s lyrics. This unique promotional strategy contributed to the song’s viral success on the platform. <a href=\"https://www.last.fm/music/CIV\">Read more on Last.fm</a>', bio_content='There are multiple artists who go by \"CIV\"\\n1 CIV (rapper)\\n2 CIV (hardcore punk band)\\n\\n(1)  Civ is a musician who gained popularity in early 2025 with the release of the song “1 AM.” The track was officially released on February 7, 2025, and is available on platforms like Spotify.\\n\\nPrior to its release, Civ promoted “1 AM” on TikTok starting in mid-January 2025, featuring videos of an AI-generated bear singing along to the song’s lyrics. This unique promotional strategy contributed to the song’s viral success on the platform.\\n\\n\\n(2)   CIV was a hardcore punk band from New York City. The band is named after its vocalist, Anthony Civarelli. With the exception of CIV, all of the band members go by their first names only. Both Civ and Arthur are former members of Gorilla Biscuits, while Sammy played in many hardcore bands including Youth Of Today and Judge.\\n\\nCiv works in his own tattoo parlor in Long Island. The band managed to land a record deal shortly after, partially due to their habit of wearing leisure suits while playing.\\n\\nCIV disbanded shortly after the releasing two albums (Set Your Goals and Thirteen Day Getaway). In 2000, it was announced that CIV\\'s hiatus is permanent and the band may not reunite at any time in the future.\\nLou Koller from the New York hardcore band Sick Of It All provided additional vocal tracks to the song \"Can\\'t Wait One Minute More\".\\nThey are best known for the single \"Can\\'t Wait One Minute More,\" which, as of the summer of 2005, was being used in a Nissan commercial.\\nYears Active\\n\\n1994 – 2000 (6 years)\\n\\nMembers Anthony Civarelli Arthur Smilios Charlie Garriga Sammy Siegler\\n\\nThey are best known for the single \"Can\\'t Wait One Minute More,\" which, as of the summer of 2005, was being used in a Nissan commercial. <a href=\"https://www.last.fm/music/CIV\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['hardcore punk', 'hardcore', 'melodic hardcore', 'punk', 'Straight Edge'], similar_artists=[{'name': 'H2O', 'url': 'https://www.last.fm/music/H2O'}, {'name': '7Seconds', 'url': 'https://www.last.fm/music/7Seconds'}, {'name': 'Gorilla Biscuits', 'url': 'https://www.last.fm/music/Gorilla+Biscuits'}, {'name': 'Avail', 'url': 'https://www.last.fm/music/Avail'}, {'name': 'Shelter', 'url': 'https://www.last.fm/music/Shelter'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'CIV', 'mbid': '1649c891-eea0-45b2-8caf-c85d985ff3bd', 'url': 'https://www.last.fm/music/CIV', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '134124', 'playcount': '1496026'}, 'similar': {'artist': [{'name': 'H2O', 'url': 'https://www.last.fm/music/H2O', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': '7Seconds', 'url': 'https://www.last.fm/music/7Seconds', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Gorilla Biscuits', 'url': 'https://www.last.fm/music/Gorilla+Biscuits', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Avail', 'url': 'https://www.last.fm/music/Avail', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Shelter', 'url': 'https://www.last.fm/music/Shelter', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'hardcore punk', 'url': 'https://www.last.fm/tag/hardcore+punk'}, {'name': 'hardcore', 'url': 'https://www.last.fm/tag/hardcore'}, {'name': 'melodic hardcore', 'url': 'https://www.last.fm/tag/melodic+hardcore'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'Straight Edge', 'url': 'https://www.last.fm/tag/Straight+Edge'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/CIV/+wiki'}}, 'published': '29 Nov 2006, 11:43', 'summary': 'There are multiple artists who go by \"CIV\"\\n1 CIV (rapper)\\n2 CIV (hardcore punk band)\\n\\n(1)  Civ is a musician who gained popularity in early 2025 with the release of the song “1 AM.” The track was officially released on February 7, 2025, and is available on platforms like Spotify.\\n\\nPrior to its release, Civ promoted “1 AM” on TikTok starting in mid-January 2025, featuring videos of an AI-generated bear singing along to the song’s lyrics. This unique promotional strategy contributed to the song’s viral success on the platform. <a href=\"https://www.last.fm/music/CIV\">Read more on Last.fm</a>', 'content': 'There are multiple artists who go by \"CIV\"\\n1 CIV (rapper)\\n2 CIV (hardcore punk band)\\n\\n(1)  Civ is a musician who gained popularity in early 2025 with the release of the song “1 AM.” The track was officially released on February 7, 2025, and is available on platforms like Spotify.\\n\\nPrior to its release, Civ promoted “1 AM” on TikTok starting in mid-January 2025, featuring videos of an AI-generated bear singing along to the song’s lyrics. This unique promotional strategy contributed to the song’s viral success on the platform.\\n\\n\\n(2)   CIV was a hardcore punk band from New York City. The band is named after its vocalist, Anthony Civarelli. With the exception of CIV, all of the band members go by their first names only. Both Civ and Arthur are former members of Gorilla Biscuits, while Sammy played in many hardcore bands including Youth Of Today and Judge.\\n\\nCiv works in his own tattoo parlor in Long Island. The band managed to land a record deal shortly after, partially due to their habit of wearing leisure suits while playing.\\n\\nCIV disbanded shortly after the releasing two albums (Set Your Goals and Thirteen Day Getaway). In 2000, it was announced that CIV\\'s hiatus is permanent and the band may not reunite at any time in the future.\\nLou Koller from the New York hardcore band Sick Of It All provided additional vocal tracks to the song \"Can\\'t Wait One Minute More\".\\nThey are best known for the single \"Can\\'t Wait One Minute More,\" which, as of the summer of 2005, was being used in a Nissan commercial.\\nYears Active\\n\\n1994 – 2000 (6 years)\\n\\nMembers Anthony Civarelli Arthur Smilios Charlie Garriga Sammy Siegler\\n\\nThey are best known for the single \"Can\\'t Wait One Minute More,\" which, as of the summer of 2005, was being used in a Nissan commercial. <a href=\"https://www.last.fm/music/CIV\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7qXQhtVwPF2ze2dLKpb5LT', url='https://open.spotify.com/artist/7qXQhtVwPF2ze2dLKpb5LT', name='Civ', popularity=48, followers=70106, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb8af668a7f56d89bfe523b1aa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051748af668a7f56d89bfe523b1aa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1788af668a7f56d89bfe523b1aa', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/7qXQhtVwPF2ze2dLKpb5LT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7qXQhtVwPF2ze2dLKpb5LT'}, 'followers': {'href': None, 'total': 70106}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7qXQhtVwPF2ze2dLKpb5LT', 'id': '7qXQhtVwPF2ze2dLKpb5LT', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb8af668a7f56d89bfe523b1aa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051748af668a7f56d89bfe523b1aa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1788af668a7f56d89bfe523b1aa', 'height': 160, 'width': 160}], 'name': 'Civ', 'popularity': 48, 'type': 'artist', 'uri': 'spotify:artist:7qXQhtVwPF2ze2dLKpb5LT'})",
@@ -249,6 +374,6 @@
   },
   "spotify_id": "7qXQhtVwPF2ze2dLKpb5LT",
   "spotify_url": "https://open.spotify.com/artist/7qXQhtVwPF2ze2dLKpb5LT",
-  "updated_at": "2026-10-22T14:05:33.515032",
+  "updated_at": "2026-10-30T18:37:15.207759",
   "wikipedia_url": "https://en.wikipedia.org/wiki/CIV_(band)"
 }

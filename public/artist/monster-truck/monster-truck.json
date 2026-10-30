@@ -129,22 +129,95 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='466061729', url='https://music.apple.com/gb/artist/monster-truck/466061729', name='Monster Truck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9d/14/2d/9d142d0f-7a88-3cbc-8e54-5a88a3a2a577/ami-identity-3bb22afc849637048d6c0ca25aad19a2-2025-01-14T17-16-32.146Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '466061729', 'type': 'artists', 'href': '/v1/catalog/gb/artists/466061729', 'attributes': {'name': 'Monster Truck', 'genreNames': ['Rock'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9d/14/2d/9d142d0f-7a88-3cbc-8e54-5a88a3a2a577/ami-identity-3bb22afc849637048d6c0ca25aad19a2-2025-01-14T17-16-32.146Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '132938', 'textColor1': 'cac3eb', 'textColor2': 'aea4df', 'textColor3': 'a5a4c7', 'textColor4': '8f8cbe'}, 'url': 'https://music.apple.com/gb/artist/monster-truck/466061729'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/466061729/albums', 'data': [{'id': '1600457332', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600457332'}, {'id': '1600461353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600461353'}, {'id': '1593939873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1593939873'}, {'id': '1633516055', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1633516055'}, {'id': '1625178098', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1625178098'}, {'id': '1781833055', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781833055'}, {'id': '1628410821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1628410821'}, {'id': '1494809797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1494809797'}, {'id': '1781683897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781683897'}, {'id': '1781693786', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781693786'}, {'id': '1774910977', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774910977'}, {'id': '1597834627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597834627'}, {'id': '1786428008', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786428008'}, {'id': '1497665189', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1497665189'}, {'id': '1790138488', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1790138488'}, {'id': '1779455353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1779455353'}, {'id': '1795675097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1795675097'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2831934",
-      "images": [],
-      "members": [],
-      "name": "Monster Truck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2831934",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2831934"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2831934,
+      "images": [
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/dUjKcRJ9dhTZRR_sNdseqUyBPf_paAvMMzmr0CI2niY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dUjKcRJ9dhTZRR_sNdseqUyBPf_paAvMMzmr0CI2niY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/K8NEVVJOXEo8aO0S1akS-E4gaswEVAPdhSHvjw4pEOw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/awCTi-dDiqZNxjyEqTe8NRPykJfsXuvs_SMxpRlLCBQ/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/awCTi-dDiqZNxjyEqTe8NRPykJfsXuvs_SMxpRlLCBQ/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V7KVNrnlfGahckIhapdNOXPLAS7LdgPXcs1qAvknlu0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/Aadz_zpiK3fT1NiP4S6TVmF0lHw0ohAmlGYuYcmvf5c/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Aadz_zpiK3fT1NiP4S6TVmF0lHw0ohAmlGYuYcmvf5c/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/73_qIQCMRJUNkX1PkC2MA5T9JjTGOF9XKiV263kvFVk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 329,
+          "resource_url": "https://i.discogs.com/IjgFtoIVf8kSl59GOTcsQ6NsAo3J9TIikakzpu20BWg/rs:fit/g:sm/q:90/h:329/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IjgFtoIVf8kSl59GOTcsQ6NsAo3J9TIikakzpu20BWg/rs:fit/g:sm/q:90/h:329/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PSpzbCgyZJIZeSJ_Qg6KO2MWgo7nO8CbE31A9Q83ffw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JliIjPdB0GvDRMzwO2sGmQgD03cSjDd-y7UCAVuv1fQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JliIjPdB0GvDRMzwO2sGmQgD03cSjDd-y7UCAVuv1fQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RZ2Qbul_xdlJ6DWWM_qpyV4VR6g5gKFvapiAWE1aGhY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uBnmf4RM34-Ikx2IwV7hPtarLAyS5sYSndi8saMpZSI/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uBnmf4RM34-Ikx2IwV7hPtarLAyS5sYSndi8saMpZSI/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ajoHDrTifF7ji5mqVtj4Wct8MQya1h0iItNXZ6OZX5I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "width": 404
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1145606,
+          "name": "Jeremy Widerman",
+          "resource_url": "https://api.discogs.com/artists/1145606"
+        },
+        {
+          "active": true,
+          "id": 2964932,
+          "name": "Brandon Bliss",
+          "resource_url": "https://api.discogs.com/artists/2964932"
+        },
+        {
+          "active": true,
+          "id": 3309404,
+          "name": "Jon Harvey",
+          "resource_url": "https://api.discogs.com/artists/3309404"
+        },
+        {
+          "active": true,
+          "id": 3583344,
+          "name": "Steve Kiely",
+          "resource_url": "https://api.discogs.com/artists/3583344"
+        }
+      ],
+      "name": "Monster Truck (2)",
+      "profile": "Monster Truck are a Canadian hard rock band from Hamilton, Ontario",
+      "releases_url": "https://api.discogs.com/artists/2831934/releases",
       "resource_url": "https://api.discogs.com/artists/2831934",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2831934",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2831934-Monster-Truck-2",
+      "urls": [
+        "http://ilovemonstertruck.com/",
+        "https://www.facebook.com/ilovemonstertruck/",
+        "https://www.youtube.com/user/ilovemonstertruck",
+        "https://twitter.com/monster_truck_"
+      ]
     },
     "identity": {
       "musicbrainz_id": "5fdbd21b-cdf7-4368-ad58-48b1fd49721a",
@@ -281,27 +354,101 @@
         "track": "Sweet Mountain River",
         "uri": "https://youtu.be/wHrRPLHRgDA"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='466061729', url='https://music.apple.com/gb/artist/monster-truck/466061729', name='Monster Truck', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9d/14/2d/9d142d0f-7a88-3cbc-8e54-5a88a3a2a577/ami-identity-3bb22afc849637048d6c0ca25aad19a2-2025-01-14T17-16-32.146Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '466061729', 'type': 'artists', 'href': '/v1/catalog/gb/artists/466061729', 'attributes': {'name': 'Monster Truck', 'genreNames': ['Rock'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9d/14/2d/9d142d0f-7a88-3cbc-8e54-5a88a3a2a577/ami-identity-3bb22afc849637048d6c0ca25aad19a2-2025-01-14T17-16-32.146Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '132938', 'textColor1': 'cac3eb', 'textColor2': 'aea4df', 'textColor3': 'a5a4c7', 'textColor4': '8f8cbe'}, 'url': 'https://music.apple.com/gb/artist/monster-truck/466061729'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/466061729/albums', 'data': [{'id': '1600457332', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600457332'}, {'id': '1600461353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1600461353'}, {'id': '1593939873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1593939873'}, {'id': '1633516055', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1633516055'}, {'id': '1625178098', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1625178098'}, {'id': '1781833055', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781833055'}, {'id': '1628410821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1628410821'}, {'id': '1494809797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1494809797'}, {'id': '1781683897', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781683897'}, {'id': '1781693786', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1781693786'}, {'id': '1774910977', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1774910977'}, {'id': '1597834627', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597834627'}, {'id': '1786428008', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1786428008'}, {'id': '1497665189', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1497665189'}, {'id': '1790138488', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1790138488'}, {'id': '1779455353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1779455353'}, {'id': '1795675097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1795675097'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2831934",
-      "images": [],
-      "members": [],
-      "name": "Monster Truck",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2831934",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2831934"
-      },
+      "data_quality": "Needs Vote",
+      "id": 2831934,
+      "images": [
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/dUjKcRJ9dhTZRR_sNdseqUyBPf_paAvMMzmr0CI2niY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dUjKcRJ9dhTZRR_sNdseqUyBPf_paAvMMzmr0CI2niY/rs:fit/g:sm/q:90/h:406/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/K8NEVVJOXEo8aO0S1akS-E4gaswEVAPdhSHvjw4pEOw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk4/OS0zMTYwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/awCTi-dDiqZNxjyEqTe8NRPykJfsXuvs_SMxpRlLCBQ/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/awCTi-dDiqZNxjyEqTe8NRPykJfsXuvs_SMxpRlLCBQ/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/V7KVNrnlfGahckIhapdNOXPLAS7LdgPXcs1qAvknlu0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzA0/Mi0yNzIzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/Aadz_zpiK3fT1NiP4S6TVmF0lHw0ohAmlGYuYcmvf5c/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Aadz_zpiK3fT1NiP4S6TVmF0lHw0ohAmlGYuYcmvf5c/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/73_qIQCMRJUNkX1PkC2MA5T9JjTGOF9XKiV263kvFVk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAw/Mi04NjYwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 329,
+          "resource_url": "https://i.discogs.com/IjgFtoIVf8kSl59GOTcsQ6NsAo3J9TIikakzpu20BWg/rs:fit/g:sm/q:90/h:329/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IjgFtoIVf8kSl59GOTcsQ6NsAo3J9TIikakzpu20BWg/rs:fit/g:sm/q:90/h:329/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PSpzbCgyZJIZeSJ_Qg6KO2MWgo7nO8CbE31A9Q83ffw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMjk3/MC00NjExLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/JliIjPdB0GvDRMzwO2sGmQgD03cSjDd-y7UCAVuv1fQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JliIjPdB0GvDRMzwO2sGmQgD03cSjDd-y7UCAVuv1fQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RZ2Qbul_xdlJ6DWWM_qpyV4VR6g5gKFvapiAWE1aGhY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTQ2NDkwMzAy/MC0yNzk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uBnmf4RM34-Ikx2IwV7hPtarLAyS5sYSndi8saMpZSI/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uBnmf4RM34-Ikx2IwV7hPtarLAyS5sYSndi8saMpZSI/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ajoHDrTifF7ji5mqVtj4Wct8MQya1h0iItNXZ6OZX5I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzE5/MzQtMTM1MzEyNjQ5/NC00MzE2LmpwZWc.jpeg",
+          "width": 404
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1145606,
+          "name": "Jeremy Widerman",
+          "resource_url": "https://api.discogs.com/artists/1145606"
+        },
+        {
+          "active": true,
+          "id": 2964932,
+          "name": "Brandon Bliss",
+          "resource_url": "https://api.discogs.com/artists/2964932"
+        },
+        {
+          "active": true,
+          "id": 3309404,
+          "name": "Jon Harvey",
+          "resource_url": "https://api.discogs.com/artists/3309404"
+        },
+        {
+          "active": true,
+          "id": 3583344,
+          "name": "Steve Kiely",
+          "resource_url": "https://api.discogs.com/artists/3583344"
+        }
+      ],
+      "name": "Monster Truck (2)",
+      "profile": "Monster Truck are a Canadian hard rock band from Hamilton, Ontario",
+      "releases_url": "https://api.discogs.com/artists/2831934/releases",
       "resource_url": "https://api.discogs.com/artists/2831934",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2831934",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2831934-Monster-Truck-2",
+      "urls": [
+        "http://ilovemonstertruck.com/",
+        "https://www.facebook.com/ilovemonstertruck/",
+        "https://www.youtube.com/user/ilovemonstertruck",
+        "https://twitter.com/monster_truck_"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Monster Truck', url='https://www.last.fm/music/Monster+Truck', mbid='5fdbd21b-cdf7-4368-ad58-48b1fd49721a', listeners=72434, playcount=950329, bio_summary='The band was formed in 2009 by Jon Harvey (Bass & Lead vocals), Jeremy Widerman (Guitar & Vocals), Brandon Bliss (Organ & Vocals) and Steve Kiely (Drums & Vocals) as somewhat of a side-project for their other more serious bands (The Reason, Saint Alvia). Quickly the original plan of getting wasted and playing sloppy rock got twisted into something new entirely. Everyone\\'s influences gelled in a cohesive and exciting new take on all of the classic rock that had come before them. <a href=\"https://www.last.fm/music/Monster+Truck\">Read more on Last.fm</a>', bio_content='The band was formed in 2009 by Jon Harvey (Bass & Lead vocals), Jeremy Widerman (Guitar & Vocals), Brandon Bliss (Organ & Vocals) and Steve Kiely (Drums & Vocals) as somewhat of a side-project for their other more serious bands (The Reason, Saint Alvia). Quickly the original plan of getting wasted and playing sloppy rock got twisted into something new entirely. Everyone\\'s influences gelled in a cohesive and exciting new take on all of the classic rock that had come before them. Quickly show offers piled up as well as festival slots and the band realized that they had something that was undeniably fun and exciting on their hands.\\n\\nOne of the most notable experiences came when the premiere of FUBAR 2 was rolling into TIFF on a flatbed truck driving through Toronto, Canada. The band was asked to come aboard to add their music to a mix of Terry, Deaner and dancing bikini babes. Needless to say a match made in rock n\\' roll heaven was quickly formed. Other memorable 2010 shows included two different appearances at the Sound Academy. One supporting Steel Panther and a second show for EDGE 102\\'s Xmas bash with Die Mannequin.\\n\\nTwo EP\\'s have been released since the band\\'s inception. The first self-titled EP was recorded by Gus Van Go & Werner F (The Stills, Preistess, Hollerado) and was received with open arms and ears by eager fans in August of 2010. Eager to follow up the recording the band hit the studio and tracked The Brown EP with Eric Ratz (Billy Talent, Cancer Bats, Three Days Grace). The four songs it contains not only shows a firm grasp of the classic roots that enabled this group but also their ability to add in flavours of grunge and punk era greats they loved so dearly.\\n\\nThe band has quickly become known for their live show and the growing confidence on stage is now more apparent than ever. The constant show regiment and recording process is sharpening the band\\'s delivery and there\\'s no doubt that anyone still interested in original and authentic rock music will be compelled to pay attention.\\n\\nhttp://www.ilovemonstertruck.com <a href=\"https://www.last.fm/music/Monster+Truck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['hard rock', 'seen live', 'Canadian', 'Southern Rock', 'rock'], similar_artists=[{'name': 'The Temperance Movement', 'url': 'https://www.last.fm/music/The+Temperance+Movement'}, {'name': 'The Lazys', 'url': 'https://www.last.fm/music/The+Lazys'}, {'name': 'Airbourne', 'url': 'https://www.last.fm/music/Airbourne'}, {'name': 'Black Stone Cherry', 'url': 'https://www.last.fm/music/Black+Stone+Cherry'}, {'name': 'Dirty Honey', 'url': 'https://www.last.fm/music/Dirty+Honey'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Monster Truck', 'mbid': '5fdbd21b-cdf7-4368-ad58-48b1fd49721a', 'url': 'https://www.last.fm/music/Monster+Truck', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '72434', 'playcount': '950329'}, 'similar': {'artist': [{'name': 'The Temperance Movement', 'url': 'https://www.last.fm/music/The+Temperance+Movement', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Lazys', 'url': 'https://www.last.fm/music/The+Lazys', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Airbourne', 'url': 'https://www.last.fm/music/Airbourne', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Black Stone Cherry', 'url': 'https://www.last.fm/music/Black+Stone+Cherry', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dirty Honey', 'url': 'https://www.last.fm/music/Dirty+Honey', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'Canadian', 'url': 'https://www.last.fm/tag/Canadian'}, {'name': 'Southern Rock', 'url': 'https://www.last.fm/tag/Southern+Rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Monster+Truck/+wiki'}}, 'published': '17 Jan 2008, 05:41', 'summary': 'The band was formed in 2009 by Jon Harvey (Bass & Lead vocals), Jeremy Widerman (Guitar & Vocals), Brandon Bliss (Organ & Vocals) and Steve Kiely (Drums & Vocals) as somewhat of a side-project for their other more serious bands (The Reason, Saint Alvia). Quickly the original plan of getting wasted and playing sloppy rock got twisted into something new entirely. Everyone\\'s influences gelled in a cohesive and exciting new take on all of the classic rock that had come before them. <a href=\"https://www.last.fm/music/Monster+Truck\">Read more on Last.fm</a>', 'content': 'The band was formed in 2009 by Jon Harvey (Bass & Lead vocals), Jeremy Widerman (Guitar & Vocals), Brandon Bliss (Organ & Vocals) and Steve Kiely (Drums & Vocals) as somewhat of a side-project for their other more serious bands (The Reason, Saint Alvia). Quickly the original plan of getting wasted and playing sloppy rock got twisted into something new entirely. Everyone\\'s influences gelled in a cohesive and exciting new take on all of the classic rock that had come before them. Quickly show offers piled up as well as festival slots and the band realized that they had something that was undeniably fun and exciting on their hands.\\n\\nOne of the most notable experiences came when the premiere of FUBAR 2 was rolling into TIFF on a flatbed truck driving through Toronto, Canada. The band was asked to come aboard to add their music to a mix of Terry, Deaner and dancing bikini babes. Needless to say a match made in rock n\\' roll heaven was quickly formed. Other memorable 2010 shows included two different appearances at the Sound Academy. One supporting Steel Panther and a second show for EDGE 102\\'s Xmas bash with Die Mannequin.\\n\\nTwo EP\\'s have been released since the band\\'s inception. The first self-titled EP was recorded by Gus Van Go & Werner F (The Stills, Preistess, Hollerado) and was received with open arms and ears by eager fans in August of 2010. Eager to follow up the recording the band hit the studio and tracked The Brown EP with Eric Ratz (Billy Talent, Cancer Bats, Three Days Grace). The four songs it contains not only shows a firm grasp of the classic roots that enabled this group but also their ability to add in flavours of grunge and punk era greats they loved so dearly.\\n\\nThe band has quickly become known for their live show and the growing confidence on stage is now more apparent than ever. The constant show regiment and recording process is sharpening the band\\'s delivery and there\\'s no doubt that anyone still interested in original and authentic rock music will be compelled to pay attention.\\n\\nhttp://www.ilovemonstertruck.com <a href=\"https://www.last.fm/music/Monster+Truck\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2xuGblLzZ8xX3Adh3Y15vj', url='https://open.spotify.com/artist/2xuGblLzZ8xX3Adh3Y15vj', name='Monster Truck', popularity=48, followers=7366, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb997b84f316c43297e575cb2b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174997b84f316c43297e575cb2b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178997b84f316c43297e575cb2b', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2xuGblLzZ8xX3Adh3Y15vj'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2xuGblLzZ8xX3Adh3Y15vj'}, 'followers': {'href': None, 'total': 7366}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/2xuGblLzZ8xX3Adh3Y15vj', 'id': '2xuGblLzZ8xX3Adh3Y15vj', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb997b84f316c43297e575cb2b', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174997b84f316c43297e575cb2b', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178997b84f316c43297e575cb2b', 'height': 160, 'width': 160}], 'name': 'Monster Truck', 'popularity': 48, 'type': 'artist', 'uri': 'spotify:artist:2xuGblLzZ8xX3Adh3Y15vj'})",
@@ -386,6 +533,6 @@
   },
   "spotify_id": "2xuGblLzZ8xX3Adh3Y15vj",
   "spotify_url": "https://open.spotify.com/artist/2xuGblLzZ8xX3Adh3Y15vj",
-  "updated_at": "2026-10-22T14:09:21.233946",
+  "updated_at": "2026-10-30T18:42:33.661496",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Monster_Truck_(band)"
 }

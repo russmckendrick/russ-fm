@@ -94,22 +94,62 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1462248654', url='https://music.apple.com/gb/artist/wpc/1462248654', name='WPC', artwork_url='', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1462248654', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1462248654', 'attributes': {'name': 'WPC', 'url': 'https://music.apple.com/gb/artist/wpc/1462248654', 'genreNames': ['Hip-Hop/Rap']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1462248654/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3925212",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 8978,
+          "name": "Billy Corgan",
+          "resource_url": "https://api.discogs.com/artists/8978"
+        },
+        {
+          "id": 827422,
+          "name": "Johnny Goat",
+          "resource_url": "https://api.discogs.com/artists/827422"
+        },
+        {
+          "id": 968011,
+          "name": "Billy Burke",
+          "resource_url": "https://api.discogs.com/artists/968011"
+        },
+        {
+          "id": 1364264,
+          "name": "Mr. Lemon",
+          "resource_url": "https://api.discogs.com/artists/1364264"
+        },
+        {
+          "id": 5712394,
+          "name": "Freddie Raygun",
+          "resource_url": "https://api.discogs.com/artists/5712394"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 3925212,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q0QgnLiMVgSU79iEj9LjTB_Tyatpz01wi1hPV-6nJOc/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/q0QgnLiMVgSU79iEj9LjTB_Tyatpz01wi1hPV-6nJOc/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZKj0CmYD5w0ahhqwvdZKOuHsnm3vfnkn5yGC3p4rVkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "width": 504
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/DEx8fTGBPLFwkE8qJ5Psh8xvM0JTllQ57RyU_hX1APs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DEx8fTGBPLFwkE8qJ5Psh8xvM0JTllQ57RyU_hX1APs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/O_OCgxyhN2zQPH5k6nn8lIOtTFQoenR87kIjxRiVgqo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "WPC",
-      "namevariations": [],
+      "namevariations": [
+        "William Patrick Corgan"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "3925212",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3925212"
-      },
+      "realname": "William Patrick Corgan",
+      "releases_url": "https://api.discogs.com/artists/3925212/releases",
       "resource_url": "https://api.discogs.com/artists/3925212",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3925212",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3925212-WPC"
     },
     "identity": {
       "musicbrainz_id": "3cbfd3e3-6d9b-4327-84ba-42cf646c98f9",
@@ -174,22 +214,62 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1462248654', url='https://music.apple.com/gb/artist/wpc/1462248654', name='WPC', artwork_url='', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1462248654', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1462248654', 'attributes': {'name': 'WPC', 'url': 'https://music.apple.com/gb/artist/wpc/1462248654', 'genreNames': ['Hip-Hop/Rap']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1462248654/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3925212",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 8978,
+          "name": "Billy Corgan",
+          "resource_url": "https://api.discogs.com/artists/8978"
+        },
+        {
+          "id": 827422,
+          "name": "Johnny Goat",
+          "resource_url": "https://api.discogs.com/artists/827422"
+        },
+        {
+          "id": 968011,
+          "name": "Billy Burke",
+          "resource_url": "https://api.discogs.com/artists/968011"
+        },
+        {
+          "id": 1364264,
+          "name": "Mr. Lemon",
+          "resource_url": "https://api.discogs.com/artists/1364264"
+        },
+        {
+          "id": 5712394,
+          "name": "Freddie Raygun",
+          "resource_url": "https://api.discogs.com/artists/5712394"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 3925212,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/q0QgnLiMVgSU79iEj9LjTB_Tyatpz01wi1hPV-6nJOc/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/q0QgnLiMVgSU79iEj9LjTB_Tyatpz01wi1hPV-6nJOc/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZKj0CmYD5w0ahhqwvdZKOuHsnm3vfnkn5yGC3p4rVkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTU0MTY1ODI2/Ni00NzExLmpwZWc.jpeg",
+          "width": 504
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/DEx8fTGBPLFwkE8qJ5Psh8xvM0JTllQ57RyU_hX1APs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DEx8fTGBPLFwkE8qJ5Psh8xvM0JTllQ57RyU_hX1APs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/O_OCgxyhN2zQPH5k6nn8lIOtTFQoenR87kIjxRiVgqo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MjUy/MTItMTQwNjM4MDQ0/NS03OTM0LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
       "name": "WPC",
-      "namevariations": [],
+      "namevariations": [
+        "William Patrick Corgan"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "3925212",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3925212"
-      },
+      "realname": "William Patrick Corgan",
+      "releases_url": "https://api.discogs.com/artists/3925212/releases",
       "resource_url": "https://api.discogs.com/artists/3925212",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3925212",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3925212-WPC"
     },
     "lastfm": "ArtistLastFmData(name='WPC', url='https://www.last.fm/music/WPC', mbid=None, listeners=142, playcount=6792, bio_summary='WPC are the initials of William Patrick Corgan, III (born March 17, 1967 in Elk Grove Village, Illinois, U.S.A.), most commonly known as Billy Corgan, is an American vocalist, guitarist, and songwriter best known for his work in the alternative rock band The Smashing Pumpkins (and, briefly, as the frontman for alt-rock supergroup Zwan).\\n\\nCorgan released his first solo album TheFutureEmbrace on June 21st, 2005. It warranted mostly lukewarm reviews from the press and only sold 69,000 copies. <a href=\"https://www.last.fm/music/WPC\">Read more on Last.fm</a>', bio_content='WPC are the initials of William Patrick Corgan, III (born March 17, 1967 in Elk Grove Village, Illinois, U.S.A.), most commonly known as Billy Corgan, is an American vocalist, guitarist, and songwriter best known for his work in the alternative rock band The Smashing Pumpkins (and, briefly, as the frontman for alt-rock supergroup Zwan).\\n\\nCorgan released his first solo album TheFutureEmbrace on June 21st, 2005. It warranted mostly lukewarm reviews from the press and only sold 69,000 copies. It was followed by a tour of Europe, USA, Australia, and Japan.  <a href=\"https://www.last.fm/music/WPC\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['ambient'], similar_artists=[{'name': 'William Patrick Corgan', 'url': 'https://www.last.fm/music/William+Patrick+Corgan'}, {'name': '8:58', 'url': 'https://www.last.fm/music/8:58'}, {'name': 'Zwan', 'url': 'https://www.last.fm/music/Zwan'}, {'name': 'Billy Corgan', 'url': 'https://www.last.fm/music/Billy+Corgan'}, {'name': 'James Iha', 'url': 'https://www.last.fm/music/James+Iha'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'WPC', 'url': 'https://www.last.fm/music/WPC', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '142', 'playcount': '6792'}, 'similar': {'artist': [{'name': 'William Patrick Corgan', 'url': 'https://www.last.fm/music/William+Patrick+Corgan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': '8:58', 'url': 'https://www.last.fm/music/8:58', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Zwan', 'url': 'https://www.last.fm/music/Zwan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Billy Corgan', 'url': 'https://www.last.fm/music/Billy+Corgan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'James Iha', 'url': 'https://www.last.fm/music/James+Iha', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/WPC/+wiki'}}, 'published': '21 Jan 2018, 10:01', 'summary': 'WPC are the initials of William Patrick Corgan, III (born March 17, 1967 in Elk Grove Village, Illinois, U.S.A.), most commonly known as Billy Corgan, is an American vocalist, guitarist, and songwriter best known for his work in the alternative rock band The Smashing Pumpkins (and, briefly, as the frontman for alt-rock supergroup Zwan).\\n\\nCorgan released his first solo album TheFutureEmbrace on June 21st, 2005. It warranted mostly lukewarm reviews from the press and only sold 69,000 copies. <a href=\"https://www.last.fm/music/WPC\">Read more on Last.fm</a>', 'content': 'WPC are the initials of William Patrick Corgan, III (born March 17, 1967 in Elk Grove Village, Illinois, U.S.A.), most commonly known as Billy Corgan, is an American vocalist, guitarist, and songwriter best known for his work in the alternative rock band The Smashing Pumpkins (and, briefly, as the frontman for alt-rock supergroup Zwan).\\n\\nCorgan released his first solo album TheFutureEmbrace on June 21st, 2005. It warranted mostly lukewarm reviews from the press and only sold 69,000 copies. It was followed by a tour of Europe, USA, Australia, and Japan.  <a href=\"https://www.last.fm/music/WPC\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5ccoHi9Es88ooAPE6tojVh', url='https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh', name='WPC', popularity=0, followers=1, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273e63484cc28191031e76f3e71', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02e63484cc28191031e76f3e71', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851e63484cc28191031e76f3e71', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh'}, 'followers': {'href': None, 'total': 1}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5ccoHi9Es88ooAPE6tojVh', 'id': '5ccoHi9Es88ooAPE6tojVh', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273e63484cc28191031e76f3e71', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02e63484cc28191031e76f3e71', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851e63484cc28191031e76f3e71', 'height': 64, 'width': 64}], 'name': 'WPC', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:5ccoHi9Es88ooAPE6tojVh'})",
@@ -246,6 +326,6 @@
   },
   "spotify_id": "5ccoHi9Es88ooAPE6tojVh",
   "spotify_url": "https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh",
-  "updated_at": "2026-10-22T14:13:38.334669",
+  "updated_at": "2026-10-30T18:48:07.082337",
   "wikipedia_url": null
 }

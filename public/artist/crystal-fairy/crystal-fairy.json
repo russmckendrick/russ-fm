@@ -100,22 +100,73 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1165218760', url='https://music.apple.com/gb/artist/crystal-fairy/1165218760', name='Crystal Fairy', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fb/72/93/fb72934d-832d-c723-2ab3-fd28666a752c/5051083114486_cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1165218760', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1165218760', 'attributes': {'name': 'Crystal Fairy', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fb/72/93/fb72934d-832d-c723-2ab3-fd28666a752c/5051083114486_cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'ffe8d8', 'textColor2': 'f7906e', 'textColor3': 'cbb9ac', 'textColor4': 'c67358'}, 'url': 'https://music.apple.com/gb/artist/crystal-fairy/1165218760'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1165218760/albums', 'data': [{'id': '1183014173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1183014173'}, {'id': '1165225790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1165225790'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5312262",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5312262,
+      "images": [
+        {
+          "height": 430,
+          "resource_url": "https://i.discogs.com/G-WkteARhxb7rfMP74zU8LK_XTaHD7MylTXa9JcvOeQ/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/G-WkteARhxb7rfMP74zU8LK_XTaHD7MylTXa9JcvOeQ/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1FvOWcZIJ86I2B_gF4ro5dzX_R1YRDaCD-He24Om1Qk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/wv4PXgbfBZrM5H86BkTdpgRzdinYy6TWlJ3myRkMMfw/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wv4PXgbfBZrM5H86BkTdpgRzdinYy6TWlJ3myRkMMfw/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8-a5ewlo_tbigK35wk4W5aCgf2ooKovOpZQCgpMEw8M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/fuhTPH0DWL__zTMwREnTR7eScftYZ_yHiu1aYfQ7PuQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fuhTPH0DWL__zTMwREnTR7eScftYZ_yHiu1aYfQ7PuQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/H0wRhnTjaG4Siu4AhW-XcAl2XrkZYeasV5PAQV29kOg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261337,
+          "name": "Dale Crover",
+          "resource_url": "https://api.discogs.com/artists/261337"
+        },
+        {
+          "active": true,
+          "id": 274511,
+          "name": "Omar Rodriguez-Lopez",
+          "resource_url": "https://api.discogs.com/artists/274511"
+        },
+        {
+          "active": true,
+          "id": 3797909,
+          "name": "Roger Osborne",
+          "resource_url": "https://api.discogs.com/artists/3797909"
+        },
+        {
+          "active": true,
+          "id": 4032402,
+          "name": "Teresa Suaréz Cosío",
+          "resource_url": "https://api.discogs.com/artists/4032402"
+        }
+      ],
       "name": "Crystal Fairy",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5312262",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5312262"
-      },
+      "profile": "[b]Crystal Fairy[/b], briefly known as [b][a=Red Alpha Royale][/b], was a short-lived American alt-rock/stoner supergroup, formed in 2016 by two [b][a=Melvins][/b] members, guitarist [a=Buzz Osborne] and drummer [a=Dale Crover], vocalist [a=Teri Gender Bender] of [b][a=Le Butcherettes][/b], and [a=Omar Rodriguez-Lopez] from [b][a=At The Drive-In][/b] and [b][a=The Mars Volta][/b]. After releasing two 7\" singles and a self-titled [url=/master/1140486]CD/LP album[/url] in 2017, the project was abandoned shortly after. [a=Melvins] had already collaborated with [a=Teri Gender Bender] on several occasions in 2015; she opened for the band on a few dates, and occasionally joined as a guest vocalist to sing covers on [i][url=/master/2880268]Fascists Eat Donuts[/url][/i]\" by [a=Pop-O-Pies] and [a=Bikini Kill]'s \"[i][url=/master/35741]Rebel Girl[/url][/i].\" Meanwhile, Teri's band, [a=Le Butcherettes], was signed to Omar's label, [l=Rodriguez Lopez Productions], and they played in [a=Bosnian Rainbows] (2013) and [a=Kimono Kult] (2014) together. In September 2015, Melvins recorded the \"[i]Rebel Girl[/i]\" cover with [a=Teri Gender Bender], released as a [url=/master/954038]single-sided 7\" lathe cut[/url] by [l=Joyful Noise Recordings]. Soon after, they started a new band, [b][i][a=Red Alpha Royale][/b][/i], with [a=Omar Rodriguez-Lopez] joining on bass (which he used to play in [url=/artist/53557]De Facto[/url]).\r\n\r\nIn October 2016, the Red Alpha Royale's debut [i][r=9198844][/i] 7\" single came out on [l=Amphetamine Reptile Records]. The band soon renamed to \"Crystal Fairy,\" ad-libbed by Teri during one of the recording sessions, when she exclaimed, \"My name is Crystal Fairy.\" Allegedly, the title was inspired by [a=Sebastian Silva]'s 2013 independent comedy, [i]Crystal Fairy y el Cáctus Mágico[/i]. (The inaugural seven-inch was reprinted with a revised artwork.) In February 2017, [b]Crystal Fairy[/b] released the eponymous [url=/master/1140486]studio album[/url] on [l=Ipecac Recordings], featuring six more songs and the cover of \"[i][url=/master/441807]Possession[/url][/i]\" by [a=Tales Of Terror]. Shortly after, however, Crystal Fairy abruptly cancelled the promised tour and went defunct. According to [a=Dale Crover]'s October 2018 interview with a [i]Sight/Sound/Rhythm[/i] music blog, such a rapid cancellation became a \"tough loss\" for him and Buzz; the artist further claimed Crystal Fairy was \"one of [his] favourite things\" and both were beyond enthusiastic and fully committed, even planning to put Melvins on hold to focus entirely on what seemingly was a \"really special\" collaboration.\r\n\r\n[b]Lineup[/b]\r\n[a=Teri Gender Bender] – vocals, guitar, keyboards\r\n[a=King Buzzo] – guitar, vocals\r\n[a=Dale Crover] – drums, guitar\r\n[a=Omar Rodriguez-Lopez] – bass, guitar",
+      "releases_url": "https://api.discogs.com/artists/5312262/releases",
       "resource_url": "https://api.discogs.com/artists/5312262",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5312262",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5312262-Crystal-Fairy",
+      "urls": [
+        "https://crystalfairy.bandcamp.com/music",
+        "https://ipecac.com/artists/crystal-fairy",
+        "https://en.wikipedia.org/wiki/Crystal_Fairy_(band)#",
+        "https://facebook.com/crystalfairyband",
+        "https://daily.bandcamp.com/features/crystal-fairy-feature",
+        "https://sightsoundrhythm.tumblr.com/post/180889612896/dale-crover"
+      ]
     },
     "identity": {
       "musicbrainz_id": "0942784d-7af6-41d2-bf17-b294a1a7b661",
@@ -125,27 +176,79 @@
     },
     "lastfm": "ArtistLastFmData(name='Crystal Fairy', url='https://www.last.fm/music/Crystal+Fairy', mbid=None, listeners=24723, playcount=215406, bio_summary='Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>', bio_content='Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['alternative rock', 'alternative', 'Sludge', 'USA', 'hard rock'], similar_artists=[{'name': 'Bosnian Rainbows', 'url': 'https://www.last.fm/music/Bosnian+Rainbows'}, {'name': 'Antemasque', 'url': 'https://www.last.fm/music/Antemasque'}, {'name': 'Tomahawk', 'url': 'https://www.last.fm/music/Tomahawk'}, {'name': \"Jane's Addiction\", 'url': 'https://www.last.fm/music/Jane%27s+Addiction'}, {'name': 'Dale Crover', 'url': 'https://www.last.fm/music/Dale+Crover'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Crystal Fairy', 'url': 'https://www.last.fm/music/Crystal+Fairy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '24723', 'playcount': '215406'}, 'similar': {'artist': [{'name': 'Bosnian Rainbows', 'url': 'https://www.last.fm/music/Bosnian+Rainbows', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Antemasque', 'url': 'https://www.last.fm/music/Antemasque', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tomahawk', 'url': 'https://www.last.fm/music/Tomahawk', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Jane's Addiction\", 'url': 'https://www.last.fm/music/Jane%27s+Addiction', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dale Crover', 'url': 'https://www.last.fm/music/Dale+Crover', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'Sludge', 'url': 'https://www.last.fm/tag/Sludge'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}, {'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Crystal+Fairy/+wiki'}}, 'published': '04 Oct 2016, 15:12', 'summary': 'Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>', 'content': 'Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7gYQ4PXtY79IzrD2WHxJ0d', url='https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d', name='Crystal Fairy', popularity=14, followers=16586, genres=['stoner rock', 'sludge metal', 'stoner metal'], images=[{'url': 'https://i.scdn.co/image/c3ec6c100b216d5290db915734c56ef6c3ecbc6d', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/33793866415be3e4e573419af215cc8074333096', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/822f427387559ea7f728fb3c1ec3dbc37391ddb7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7a00701f2a9f10c3895fc0fe1bb4fbbaf7317b03', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d'}, 'followers': {'href': None, 'total': 16586}, 'genres': ['stoner rock', 'sludge metal', 'stoner metal'], 'href': 'https://api.spotify.com/v1/artists/7gYQ4PXtY79IzrD2WHxJ0d', 'id': '7gYQ4PXtY79IzrD2WHxJ0d', 'images': [{'url': 'https://i.scdn.co/image/c3ec6c100b216d5290db915734c56ef6c3ecbc6d', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/33793866415be3e4e573419af215cc8074333096', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/822f427387559ea7f728fb3c1ec3dbc37391ddb7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7a00701f2a9f10c3895fc0fe1bb4fbbaf7317b03', 'height': 64, 'width': 64}], 'name': 'Crystal Fairy', 'popularity': 14, 'type': 'artist', 'uri': 'spotify:artist:7gYQ4PXtY79IzrD2WHxJ0d'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1165218760', url='https://music.apple.com/gb/artist/crystal-fairy/1165218760', name='Crystal Fairy', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fb/72/93/fb72934d-832d-c723-2ab3-fd28666a752c/5051083114486_cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1165218760', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1165218760', 'attributes': {'name': 'Crystal Fairy', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fb/72/93/fb72934d-832d-c723-2ab3-fd28666a752c/5051083114486_cover.jpg/{w}x{h}ac.jpg', 'bgColor': '000000', 'textColor1': 'ffe8d8', 'textColor2': 'f7906e', 'textColor3': 'cbb9ac', 'textColor4': 'c67358'}, 'url': 'https://music.apple.com/gb/artist/crystal-fairy/1165218760'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1165218760/albums', 'data': [{'id': '1183014173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1183014173'}, {'id': '1165225790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1165225790'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5312262",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5312262,
+      "images": [
+        {
+          "height": 430,
+          "resource_url": "https://i.discogs.com/G-WkteARhxb7rfMP74zU8LK_XTaHD7MylTXa9JcvOeQ/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/G-WkteARhxb7rfMP74zU8LK_XTaHD7MylTXa9JcvOeQ/rs:fit/g:sm/q:90/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1FvOWcZIJ86I2B_gF4ro5dzX_R1YRDaCD-He24Om1Qk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/Mi02MTQxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/wv4PXgbfBZrM5H86BkTdpgRzdinYy6TWlJ3myRkMMfw/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wv4PXgbfBZrM5H86BkTdpgRzdinYy6TWlJ3myRkMMfw/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8-a5ewlo_tbigK35wk4W5aCgf2ooKovOpZQCgpMEw8M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTc2Mzk1MTk0/My0zODk5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/fuhTPH0DWL__zTMwREnTR7eScftYZ_yHiu1aYfQ7PuQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fuhTPH0DWL__zTMwREnTR7eScftYZ_yHiu1aYfQ7PuQ/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/H0wRhnTjaG4Siu4AhW-XcAl2XrkZYeasV5PAQV29kOg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMTIy/NjItMTU3MzA0MTU3/My00NzE0LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261337,
+          "name": "Dale Crover",
+          "resource_url": "https://api.discogs.com/artists/261337"
+        },
+        {
+          "active": true,
+          "id": 274511,
+          "name": "Omar Rodriguez-Lopez",
+          "resource_url": "https://api.discogs.com/artists/274511"
+        },
+        {
+          "active": true,
+          "id": 3797909,
+          "name": "Roger Osborne",
+          "resource_url": "https://api.discogs.com/artists/3797909"
+        },
+        {
+          "active": true,
+          "id": 4032402,
+          "name": "Teresa Suaréz Cosío",
+          "resource_url": "https://api.discogs.com/artists/4032402"
+        }
+      ],
       "name": "Crystal Fairy",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5312262",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5312262"
-      },
+      "profile": "[b]Crystal Fairy[/b], briefly known as [b][a=Red Alpha Royale][/b], was a short-lived American alt-rock/stoner supergroup, formed in 2016 by two [b][a=Melvins][/b] members, guitarist [a=Buzz Osborne] and drummer [a=Dale Crover], vocalist [a=Teri Gender Bender] of [b][a=Le Butcherettes][/b], and [a=Omar Rodriguez-Lopez] from [b][a=At The Drive-In][/b] and [b][a=The Mars Volta][/b]. After releasing two 7\" singles and a self-titled [url=/master/1140486]CD/LP album[/url] in 2017, the project was abandoned shortly after. [a=Melvins] had already collaborated with [a=Teri Gender Bender] on several occasions in 2015; she opened for the band on a few dates, and occasionally joined as a guest vocalist to sing covers on [i][url=/master/2880268]Fascists Eat Donuts[/url][/i]\" by [a=Pop-O-Pies] and [a=Bikini Kill]'s \"[i][url=/master/35741]Rebel Girl[/url][/i].\" Meanwhile, Teri's band, [a=Le Butcherettes], was signed to Omar's label, [l=Rodriguez Lopez Productions], and they played in [a=Bosnian Rainbows] (2013) and [a=Kimono Kult] (2014) together. In September 2015, Melvins recorded the \"[i]Rebel Girl[/i]\" cover with [a=Teri Gender Bender], released as a [url=/master/954038]single-sided 7\" lathe cut[/url] by [l=Joyful Noise Recordings]. Soon after, they started a new band, [b][i][a=Red Alpha Royale][/b][/i], with [a=Omar Rodriguez-Lopez] joining on bass (which he used to play in [url=/artist/53557]De Facto[/url]).\r\n\r\nIn October 2016, the Red Alpha Royale's debut [i][r=9198844][/i] 7\" single came out on [l=Amphetamine Reptile Records]. The band soon renamed to \"Crystal Fairy,\" ad-libbed by Teri during one of the recording sessions, when she exclaimed, \"My name is Crystal Fairy.\" Allegedly, the title was inspired by [a=Sebastian Silva]'s 2013 independent comedy, [i]Crystal Fairy y el Cáctus Mágico[/i]. (The inaugural seven-inch was reprinted with a revised artwork.) In February 2017, [b]Crystal Fairy[/b] released the eponymous [url=/master/1140486]studio album[/url] on [l=Ipecac Recordings], featuring six more songs and the cover of \"[i][url=/master/441807]Possession[/url][/i]\" by [a=Tales Of Terror]. Shortly after, however, Crystal Fairy abruptly cancelled the promised tour and went defunct. According to [a=Dale Crover]'s October 2018 interview with a [i]Sight/Sound/Rhythm[/i] music blog, such a rapid cancellation became a \"tough loss\" for him and Buzz; the artist further claimed Crystal Fairy was \"one of [his] favourite things\" and both were beyond enthusiastic and fully committed, even planning to put Melvins on hold to focus entirely on what seemingly was a \"really special\" collaboration.\r\n\r\n[b]Lineup[/b]\r\n[a=Teri Gender Bender] – vocals, guitar, keyboards\r\n[a=King Buzzo] – guitar, vocals\r\n[a=Dale Crover] – drums, guitar\r\n[a=Omar Rodriguez-Lopez] – bass, guitar",
+      "releases_url": "https://api.discogs.com/artists/5312262/releases",
       "resource_url": "https://api.discogs.com/artists/5312262",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5312262",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5312262-Crystal-Fairy",
+      "urls": [
+        "https://crystalfairy.bandcamp.com/music",
+        "https://ipecac.com/artists/crystal-fairy",
+        "https://en.wikipedia.org/wiki/Crystal_Fairy_(band)#",
+        "https://facebook.com/crystalfairyband",
+        "https://daily.bandcamp.com/features/crystal-fairy-feature",
+        "https://sightsoundrhythm.tumblr.com/post/180889612896/dale-crover"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Crystal Fairy', url='https://www.last.fm/music/Crystal+Fairy', mbid=None, listeners=24723, playcount=215406, bio_summary='Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>', bio_content='Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['alternative rock', 'alternative', 'Sludge', 'USA', 'hard rock'], similar_artists=[{'name': 'Bosnian Rainbows', 'url': 'https://www.last.fm/music/Bosnian+Rainbows'}, {'name': 'Antemasque', 'url': 'https://www.last.fm/music/Antemasque'}, {'name': 'Tomahawk', 'url': 'https://www.last.fm/music/Tomahawk'}, {'name': \"Jane's Addiction\", 'url': 'https://www.last.fm/music/Jane%27s+Addiction'}, {'name': 'Dale Crover', 'url': 'https://www.last.fm/music/Dale+Crover'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Crystal Fairy', 'url': 'https://www.last.fm/music/Crystal+Fairy', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '24723', 'playcount': '215406'}, 'similar': {'artist': [{'name': 'Bosnian Rainbows', 'url': 'https://www.last.fm/music/Bosnian+Rainbows', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Antemasque', 'url': 'https://www.last.fm/music/Antemasque', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tomahawk', 'url': 'https://www.last.fm/music/Tomahawk', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"Jane's Addiction\", 'url': 'https://www.last.fm/music/Jane%27s+Addiction', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dale Crover', 'url': 'https://www.last.fm/music/Dale+Crover', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'Sludge', 'url': 'https://www.last.fm/tag/Sludge'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}, {'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Crystal+Fairy/+wiki'}}, 'published': '04 Oct 2016, 15:12', 'summary': 'Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>', 'content': 'Crystal Fairy are a rock supergroup formed by Melvins members Buzz Osborne and Dale Crover, At The Drive-In member Omar Rodriguez-Lopez and Le Butcherettes member Teri Gender Bender.\\n\\nTheir self-titled debut album will be released on Feb 24 on Ipecac Records. <a href=\"https://www.last.fm/music/Crystal+Fairy\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='7gYQ4PXtY79IzrD2WHxJ0d', url='https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d', name='Crystal Fairy', popularity=14, followers=16586, genres=['stoner rock', 'sludge metal', 'stoner metal'], images=[{'url': 'https://i.scdn.co/image/c3ec6c100b216d5290db915734c56ef6c3ecbc6d', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/33793866415be3e4e573419af215cc8074333096', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/822f427387559ea7f728fb3c1ec3dbc37391ddb7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7a00701f2a9f10c3895fc0fe1bb4fbbaf7317b03', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d'}, 'followers': {'href': None, 'total': 16586}, 'genres': ['stoner rock', 'sludge metal', 'stoner metal'], 'href': 'https://api.spotify.com/v1/artists/7gYQ4PXtY79IzrD2WHxJ0d', 'id': '7gYQ4PXtY79IzrD2WHxJ0d', 'images': [{'url': 'https://i.scdn.co/image/c3ec6c100b216d5290db915734c56ef6c3ecbc6d', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/33793866415be3e4e573419af215cc8074333096', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/822f427387559ea7f728fb3c1ec3dbc37391ddb7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/7a00701f2a9f10c3895fc0fe1bb4fbbaf7317b03', 'height': 64, 'width': 64}], 'name': 'Crystal Fairy', 'popularity': 14, 'type': 'artist', 'uri': 'spotify:artist:7gYQ4PXtY79IzrD2WHxJ0d'})",
@@ -153,6 +256,6 @@
   },
   "spotify_id": "7gYQ4PXtY79IzrD2WHxJ0d",
   "spotify_url": "https://open.spotify.com/artist/7gYQ4PXtY79IzrD2WHxJ0d",
-  "updated_at": "2026-10-22T14:05:56.757500",
+  "updated_at": "2026-10-30T18:38:14.122936",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Crystal_Fairy_(band)"
 }

@@ -114,22 +114,86 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='35316475', url='https://music.apple.com/gb/artist/amplifier/35316475', name='Amplifier', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/93/b6/2b93b606-764a-4c1b-b15d-c4dbc8e0792d/191773037987.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '35316475', 'type': 'artists', 'href': '/v1/catalog/gb/artists/35316475', 'attributes': {'name': 'Amplifier', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/93/b6/2b93b606-764a-4c1b-b15d-c4dbc8e0792d/191773037987.jpg/{w}x{h}ac.jpg', 'bgColor': 'f5ea30', 'textColor1': '1a1514', 'textColor2': '272220', 'textColor3': '453f19', 'textColor4': '504a23'}, 'url': 'https://music.apple.com/gb/artist/amplifier/35316475'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/35316475/albums', 'data': [{'id': '1201106185', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201106185'}, {'id': '1235100150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1235100150'}, {'id': '1179873452', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1179873452'}, {'id': '1198303873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1198303873'}, {'id': '1189715758', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189715758'}, {'id': '1671607587', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1671607587'}, {'id': '1189717939', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189717939'}, {'id': '1792459543', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1792459543'}, {'id': '1191817521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1191817521'}, {'id': '1327760944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1327760944'}, {'id': '1169669580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169669580'}, {'id': '1047128557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1047128557'}, {'id': '1485656224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485656224'}, {'id': '1189725279', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189725279'}, {'id': '1575763838', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575763838'}, {'id': '1553832177', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1553832177'}, {'id': '1726638329', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726638329'}, {'id': '1575765827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575765827'}, {'id': '1572512150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572512150'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "369290",
-      "images": [],
-      "members": [],
-      "name": "Amplifier",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "369290",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/369290"
-      },
+      "data_quality": "Needs Vote",
+      "id": 369290,
+      "images": [
+        {
+          "height": 362,
+          "resource_url": "https://i.discogs.com/6yiwhqtKQkSs_d1HHzbp_fWjbC5gsRuM03Rfrht_0D8/rs:fit/g:sm/q:90/h:362/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/6yiwhqtKQkSs_d1HHzbp_fWjbC5gsRuM03Rfrht_0D8/rs:fit/g:sm/q:90/h:362/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/EB-vRk_hfqEo1YOBh1TtUnglJLr0McR97B1ILdyUH_E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/xKqOhJ0jmgbYK2fxJp8vTgLCIanf993KsGRd2t9q6bg/rs:fit/g:sm/q:90/h:420/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xKqOhJ0jmgbYK2fxJp8vTgLCIanf993KsGRd2t9q6bg/rs:fit/g:sm/q:90/h:420/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jmX7zSRPkDrujI6SiR3kSvwBwa9ZXEEfcG8KGhgWMBk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "width": 311
+        },
+        {
+          "height": 237,
+          "resource_url": "https://i.discogs.com/FkG7PKeDkPMoIJSwGye6b0_kFHF4stgAUwTr8DuAvZU/rs:fit/g:sm/q:90/h:237/w:490/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FkG7PKeDkPMoIJSwGye6b0_kFHF4stgAUwTr8DuAvZU/rs:fit/g:sm/q:90/h:237/w:490/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kF-n2ualxqttpRE1H0FFT8n-bsVhQg4KDeYwyuYt4FI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "width": 490
+        },
+        {
+          "height": 64,
+          "resource_url": "https://i.discogs.com/cFuXuGQHdYrHGJ6jlo_QXuYgwWqspFdReqG7dgaJqoo/rs:fit/g:sm/q:90/h:64/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cFuXuGQHdYrHGJ6jlo_QXuYgwWqspFdReqG7dgaJqoo/rs:fit/g:sm/q:90/h:64/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/AyMn50CvJJJ2Arrurk_A9kphkyFHnsiYpgVsB7arwY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "width": 152
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 369288,
+          "name": "Sel Balamir",
+          "resource_url": "https://api.discogs.com/artists/369288"
+        },
+        {
+          "active": true,
+          "id": 369289,
+          "name": "Steve Durose",
+          "resource_url": "https://api.discogs.com/artists/369289"
+        },
+        {
+          "active": true,
+          "id": 445660,
+          "name": "Matt Brobin",
+          "resource_url": "https://api.discogs.com/artists/445660"
+        },
+        {
+          "active": false,
+          "id": 445661,
+          "name": "Neil Mahony",
+          "resource_url": "https://api.discogs.com/artists/445661"
+        },
+        {
+          "active": true,
+          "id": 3235251,
+          "name": "Alexander Redhead",
+          "resource_url": "https://api.discogs.com/artists/3235251"
+        }
+      ],
+      "name": "Amplifier (3)",
+      "profile": "British alternative rock band from Manchester, England formed in 1999.",
+      "releases_url": "https://api.discogs.com/artists/369290/releases",
       "resource_url": "https://api.discogs.com/artists/369290",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/369290",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/369290-Amplifier-3",
+      "urls": [
+        "http://www.amplifierband.com/",
+        "https://www.facebook.com/amplifierband",
+        "http://www.myspace.com/amplifiertheband",
+        "https://amplifier.bandcamp.com/",
+        "http://en.wikipedia.org/wiki/Amplifier_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "39e1e020-2790-4ce6-83ca-f3a931926bd6",
@@ -196,27 +260,92 @@
       "twitter": "1",
       "website": "www.amplifierband.com"
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='35316475', url='https://music.apple.com/gb/artist/amplifier/35316475', name='Amplifier', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/93/b6/2b93b606-764a-4c1b-b15d-c4dbc8e0792d/191773037987.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '35316475', 'type': 'artists', 'href': '/v1/catalog/gb/artists/35316475', 'attributes': {'name': 'Amplifier', 'genreNames': ['Rock'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/93/b6/2b93b606-764a-4c1b-b15d-c4dbc8e0792d/191773037987.jpg/{w}x{h}ac.jpg', 'bgColor': 'f5ea30', 'textColor1': '1a1514', 'textColor2': '272220', 'textColor3': '453f19', 'textColor4': '504a23'}, 'url': 'https://music.apple.com/gb/artist/amplifier/35316475'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/35316475/albums', 'data': [{'id': '1201106185', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1201106185'}, {'id': '1235100150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1235100150'}, {'id': '1179873452', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1179873452'}, {'id': '1198303873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1198303873'}, {'id': '1189715758', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189715758'}, {'id': '1671607587', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1671607587'}, {'id': '1189717939', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189717939'}, {'id': '1792459543', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1792459543'}, {'id': '1191817521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1191817521'}, {'id': '1327760944', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1327760944'}, {'id': '1169669580', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169669580'}, {'id': '1047128557', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1047128557'}, {'id': '1485656224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1485656224'}, {'id': '1189725279', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1189725279'}, {'id': '1575763838', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575763838'}, {'id': '1553832177', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1553832177'}, {'id': '1726638329', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726638329'}, {'id': '1575765827', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575765827'}, {'id': '1572512150', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1572512150'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "369290",
-      "images": [],
-      "members": [],
-      "name": "Amplifier",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "369290",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/369290"
-      },
+      "data_quality": "Needs Vote",
+      "id": 369290,
+      "images": [
+        {
+          "height": 362,
+          "resource_url": "https://i.discogs.com/6yiwhqtKQkSs_d1HHzbp_fWjbC5gsRuM03Rfrht_0D8/rs:fit/g:sm/q:90/h:362/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/6yiwhqtKQkSs_d1HHzbp_fWjbC5gsRuM03Rfrht_0D8/rs:fit/g:sm/q:90/h:362/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/EB-vRk_hfqEo1YOBh1TtUnglJLr0McR97B1ILdyUH_E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xNTMzNDg0MzQz/LTI1OTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/xKqOhJ0jmgbYK2fxJp8vTgLCIanf993KsGRd2t9q6bg/rs:fit/g:sm/q:90/h:420/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xKqOhJ0jmgbYK2fxJp8vTgLCIanf993KsGRd2t9q6bg/rs:fit/g:sm/q:90/h:420/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jmX7zSRPkDrujI6SiR3kSvwBwa9ZXEEfcG8KGhgWMBk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMTU0NDQ0NDg4/LmpwZWc.jpeg",
+          "width": 311
+        },
+        {
+          "height": 237,
+          "resource_url": "https://i.discogs.com/FkG7PKeDkPMoIJSwGye6b0_kFHF4stgAUwTr8DuAvZU/rs:fit/g:sm/q:90/h:237/w:490/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FkG7PKeDkPMoIJSwGye6b0_kFHF4stgAUwTr8DuAvZU/rs:fit/g:sm/q:90/h:237/w:490/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kF-n2ualxqttpRE1H0FFT8n-bsVhQg4KDeYwyuYt4FI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMjkyODg0NDc2/LmpwZWc.jpeg",
+          "width": 490
+        },
+        {
+          "height": 64,
+          "resource_url": "https://i.discogs.com/cFuXuGQHdYrHGJ6jlo_QXuYgwWqspFdReqG7dgaJqoo/rs:fit/g:sm/q:90/h:64/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cFuXuGQHdYrHGJ6jlo_QXuYgwWqspFdReqG7dgaJqoo/rs:fit/g:sm/q:90/h:64/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/AyMn50CvJJJ2Arrurk_A9kphkyFHnsiYpgVsB7arwY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTI5/MC0xMzA1NzM5NDkw/LmpwZWc.jpeg",
+          "width": 152
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 369288,
+          "name": "Sel Balamir",
+          "resource_url": "https://api.discogs.com/artists/369288"
+        },
+        {
+          "active": true,
+          "id": 369289,
+          "name": "Steve Durose",
+          "resource_url": "https://api.discogs.com/artists/369289"
+        },
+        {
+          "active": true,
+          "id": 445660,
+          "name": "Matt Brobin",
+          "resource_url": "https://api.discogs.com/artists/445660"
+        },
+        {
+          "active": false,
+          "id": 445661,
+          "name": "Neil Mahony",
+          "resource_url": "https://api.discogs.com/artists/445661"
+        },
+        {
+          "active": true,
+          "id": 3235251,
+          "name": "Alexander Redhead",
+          "resource_url": "https://api.discogs.com/artists/3235251"
+        }
+      ],
+      "name": "Amplifier (3)",
+      "profile": "British alternative rock band from Manchester, England formed in 1999.",
+      "releases_url": "https://api.discogs.com/artists/369290/releases",
       "resource_url": "https://api.discogs.com/artists/369290",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/369290",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/369290-Amplifier-3",
+      "urls": [
+        "http://www.amplifierband.com/",
+        "https://www.facebook.com/amplifierband",
+        "http://www.myspace.com/amplifiertheband",
+        "https://amplifier.bandcamp.com/",
+        "http://en.wikipedia.org/wiki/Amplifier_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Amplifier', url='https://www.last.fm/music/Amplifier', mbid='825f5805-3bf2-490f-8c8a-42636094ad81', listeners=136241, playcount=3601886, bio_summary='Amplifier is a British alternative rock/progressive rock band from Manchester, United Kingdom. The band has released four albums and four EPs since its inception in 1999. Their self-titled debut album was released in 2004 by Music for Nations. Their second album, Insider was released in Europe in 2006 on the SPV label. Their third album, The Octopus, was released to fans in December 2010 ahead of a full release in January 2011.\\n\\nThe band\\'s sound has been described as \"Soundgarden <a href=\"https://www.last.fm/music/Amplifier\">Read more on Last.fm</a>', bio_content='Amplifier is a British alternative rock/progressive rock band from Manchester, United Kingdom. The band has released four albums and four EPs since its inception in 1999. Their self-titled debut album was released in 2004 by Music for Nations. Their second album, Insider was released in Europe in 2006 on the SPV label. Their third album, The Octopus, was released to fans in December 2010 ahead of a full release in January 2011.\\n\\nThe band\\'s sound has been described as \"Soundgarden, Tool, Black Sabbath, Oceansize and Pink Floyd taking copious amounts of mind-altering substances and venturing on a trip through time and space (to another dimension), and back again.\" Their music is characterised by guitarist Sel Balamir\\'s effects pedals, extended heavy sections, atmospheric compositions and philosophical lyrics.\\n\\nhttps://www.amplifierband.com/ <a href=\"https://www.last.fm/music/Amplifier\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'alternative rock', 'space rock', 'seen live', 'rock'], similar_artists=[{'name': 'Oceansize', 'url': 'https://www.last.fm/music/Oceansize'}, {'name': 'Vennart', 'url': 'https://www.last.fm/music/Vennart'}, {'name': 'Pure Reason Revolution', 'url': 'https://www.last.fm/music/Pure+Reason+Revolution'}, {'name': 'The Pineapple Thief', 'url': 'https://www.last.fm/music/The+Pineapple+Thief'}, {'name': 'Steven Wilson', 'url': 'https://www.last.fm/music/Steven+Wilson'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Amplifier', 'mbid': '825f5805-3bf2-490f-8c8a-42636094ad81', 'url': 'https://www.last.fm/music/Amplifier', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '136241', 'playcount': '3601886'}, 'similar': {'artist': [{'name': 'Oceansize', 'url': 'https://www.last.fm/music/Oceansize', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Vennart', 'url': 'https://www.last.fm/music/Vennart', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Pure Reason Revolution', 'url': 'https://www.last.fm/music/Pure+Reason+Revolution', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Pineapple Thief', 'url': 'https://www.last.fm/music/The+Pineapple+Thief', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Steven Wilson', 'url': 'https://www.last.fm/music/Steven+Wilson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'alternative rock', 'url': 'https://www.last.fm/tag/alternative+rock'}, {'name': 'space rock', 'url': 'https://www.last.fm/tag/space+rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Amplifier/+wiki'}}, 'published': '24 Feb 2006, 20:25', 'summary': 'Amplifier is a British alternative rock/progressive rock band from Manchester, United Kingdom. The band has released four albums and four EPs since its inception in 1999. Their self-titled debut album was released in 2004 by Music for Nations. Their second album, Insider was released in Europe in 2006 on the SPV label. Their third album, The Octopus, was released to fans in December 2010 ahead of a full release in January 2011.\\n\\nThe band\\'s sound has been described as \"Soundgarden <a href=\"https://www.last.fm/music/Amplifier\">Read more on Last.fm</a>', 'content': 'Amplifier is a British alternative rock/progressive rock band from Manchester, United Kingdom. The band has released four albums and four EPs since its inception in 1999. Their self-titled debut album was released in 2004 by Music for Nations. Their second album, Insider was released in Europe in 2006 on the SPV label. Their third album, The Octopus, was released to fans in December 2010 ahead of a full release in January 2011.\\n\\nThe band\\'s sound has been described as \"Soundgarden, Tool, Black Sabbath, Oceansize and Pink Floyd taking copious amounts of mind-altering substances and venturing on a trip through time and space (to another dimension), and back again.\" Their music is characterised by guitarist Sel Balamir\\'s effects pedals, extended heavy sections, atmospheric compositions and philosophical lyrics.\\n\\nhttps://www.amplifierband.com/ <a href=\"https://www.last.fm/music/Amplifier\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1lCspmd05bYpPS814xw5nl', url='https://open.spotify.com/artist/1lCspmd05bYpPS814xw5nl', name='Amplifier', popularity=25, followers=22924, genres=['space rock', 'progressive rock', 'progressive metal', 'art rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb4bda8b3817f6f6d738b26efb', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744bda8b3817f6f6d738b26efb', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784bda8b3817f6f6d738b26efb', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1lCspmd05bYpPS814xw5nl'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1lCspmd05bYpPS814xw5nl'}, 'followers': {'href': None, 'total': 22924}, 'genres': ['space rock', 'progressive rock', 'progressive metal', 'art rock'], 'href': 'https://api.spotify.com/v1/artists/1lCspmd05bYpPS814xw5nl', 'id': '1lCspmd05bYpPS814xw5nl', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb4bda8b3817f6f6d738b26efb', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744bda8b3817f6f6d738b26efb', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784bda8b3817f6f6d738b26efb', 'height': 160, 'width': 160}], 'name': 'Amplifier', 'popularity': 25, 'type': 'artist', 'uri': 'spotify:artist:1lCspmd05bYpPS814xw5nl'})",
@@ -280,6 +409,6 @@
   },
   "spotify_id": "1lCspmd05bYpPS814xw5nl",
   "spotify_url": "https://open.spotify.com/artist/1lCspmd05bYpPS814xw5nl",
-  "updated_at": "2026-10-22T14:04:36.728380",
+  "updated_at": "2026-10-30T18:35:54.677281",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Amplifier_(band)"
 }

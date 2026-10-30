@@ -111,22 +111,117 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1092250261', url='https://music.apple.com/gb/artist/the-claypool-lennon-delirium/1092250261', name='The Claypool Lennon Delirium', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/74/8e/c5/748ec5f9-d6ea-2f53-6fb4-09f0d4eb33ea/mzl.fhipnrjj.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1092250261', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1092250261', 'attributes': {'name': 'The Claypool Lennon Delirium', 'genreNames': ['Alternative'], 'artwork': {'width': 3983, 'height': 3983, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/74/8e/c5/748ec5f9-d6ea-2f53-6fb4-09f0d4eb33ea/mzl.fhipnrjj.jpg/{w}x{h}bb.jpg', 'bgColor': '0c0b11', 'textColor1': 'fdd0e5', 'textColor2': 'd294c9', 'textColor3': 'cda8ba', 'textColor4': 'aa78a4'}, 'url': 'https://music.apple.com/gb/artist/the-claypool-lennon-delirium/1092250261'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1092250261/albums', 'data': [{'id': '1440080018', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440080018'}, {'id': '1092814235', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1092814235'}, {'id': '1263610097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1263610097'}, {'id': '1444318417', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444318417'}, {'id': '1444391400', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444391400'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5026586",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5026586,
+      "images": [
+        {
+          "height": 560,
+          "resource_url": "https://i.discogs.com/H_4Nwg4OXvJe3F8ADe4Ci8axGzYqGNwMSg-QKJsuDDM/rs:fit/g:sm/q:90/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/H_4Nwg4OXvJe3F8ADe4Ci8axGzYqGNwMSg-QKJsuDDM/rs:fit/g:sm/q:90/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/BUgrH3AYn4vC1sP41-BNaL0SsAyrcO-JRSCI5Vblrac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 579,
+          "resource_url": "https://i.discogs.com/-4M3NmnNH5CR0mnA4GKU4O8cwi-Dv03emphhxcKXd0E/rs:fit/g:sm/q:90/h:579/w:570/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-4M3NmnNH5CR0mnA4GKU4O8cwi-Dv03emphhxcKXd0E/rs:fit/g:sm/q:90/h:579/w:570/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oB6wxeHtIxv5-5swesS0bcBy_dxopohJzp_fVruVsdM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "width": 570
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/BjwyHxb-7ufeSYRwayAUFPPCr0FGpkn3nQQ0FC0KI7I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BjwyHxb-7ufeSYRwayAUFPPCr0FGpkn3nQQ0FC0KI7I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tz3daSbSVZyc6mgUWoGEEumxjhpfSZGho5q635zIAIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/n8H3PT1gceKJNPfBHuppjO9ztEXRgSEIAHewjHQ1Ch8/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n8H3PT1gceKJNPfBHuppjO9ztEXRgSEIAHewjHQ1Ch8/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rrIzu2PZCzr_CQoys05JfUe20ZStvQy1GmGThQg--Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QS_Trkg0V7-MPew-StKfnDVNRZMRXKTqF54jX3aUW0E/rs:fit/g:sm/q:90/h:600/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QS_Trkg0V7-MPew-StKfnDVNRZMRXKTqF54jX3aUW0E/rs:fit/g:sm/q:90/h:600/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/n2HNAon2GxfzeEy6DpuajHV_K5iKZiIAq2MdrFs9BqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "width": 560
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/lFGnSTpi3cBIK3nfc22xk_Ti6gggmt8w860iLBSrOXU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lFGnSTpi3cBIK3nfc22xk_Ti6gggmt8w860iLBSrOXU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/FY84VLSbKO54BVl29Izh0xj77QrBNciOm0xG9MouCNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/57pursMbo9LnVuugBw9SMaiGEnTQDHHd7eOH2RuAsjQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/57pursMbo9LnVuugBw9SMaiGEnTQDHHd7eOH2RuAsjQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kpESTntIMysiB0LPS82qPsrUpshjXWhMX6fgyEWFTb8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/mP-pLDbJibFgZtK210b-Em0qQ4w4-O7zh6w2UtWaNyQ/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mP-pLDbJibFgZtK210b-Em0qQ4w4-O7zh6w2UtWaNyQ/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/H-HOBXZ5C6XrSSZSBO8y5YF7b6nXOT0gDm4ZyCF97UY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "width": 450
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/j6uz-yOcqY9cxj8IJ2h3X5lSabjXvrZkJPqyakdedxE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j6uz-yOcqY9cxj8IJ2h3X5lSabjXvrZkJPqyakdedxE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Kcpcnec_3HcmEmsnMisaGBrhQy6WWfqFfRJcjJPEU1Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/MnsQeUE-nf_y6w80lwHkv-EomJiAaHI0gW1yCYrLLf8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/MnsQeUE-nf_y6w80lwHkv-EomJiAaHI0gW1yCYrLLf8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Ru_-YgvNy8QD8FhpH4HZcmNEKBAIKpOOg9LYgGeSEtg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 18552,
+          "name": "Sean Lennon",
+          "resource_url": "https://api.discogs.com/artists/18552"
+        },
+        {
+          "active": true,
+          "id": 149855,
+          "name": "Les Claypool",
+          "resource_url": "https://api.discogs.com/artists/149855"
+        }
+      ],
       "name": "The Claypool Lennon Delirium",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5026586",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5026586"
-      },
+      "profile": "U.S. psychedelic / prog rock band led by Les Claypool ([a=Primus]) and Sean Ono Lennon ([a=The Ghost of a Saber Tooth Tiger]), which began in 2015.",
+      "releases_url": "https://api.discogs.com/artists/5026586/releases",
       "resource_url": "https://api.discogs.com/artists/5026586",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5026586",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5026586-The-Claypool-Lennon-Delirium",
+      "urls": [
+        "http://theclaypoollennondelirium.com",
+        "https://twitter.com/cl_delirium",
+        "https://www.facebook.com/theclaypoollennondelirium",
+        "https://www.instagram.com/cldelirium/",
+        "https://en.wikipedia.org/wiki/The_Claypool_Lennon_Delirium",
+        "https://theclaypoollennondelirium.bandcamp.com/music"
+      ]
     },
     "identity": {
       "musicbrainz_id": "c8d60780-4293-43e2-8e9e-3532a430d748",
@@ -186,27 +281,123 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1092250261', url='https://music.apple.com/gb/artist/the-claypool-lennon-delirium/1092250261', name='The Claypool Lennon Delirium', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/74/8e/c5/748ec5f9-d6ea-2f53-6fb4-09f0d4eb33ea/mzl.fhipnrjj.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1092250261', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1092250261', 'attributes': {'name': 'The Claypool Lennon Delirium', 'genreNames': ['Alternative'], 'artwork': {'width': 3983, 'height': 3983, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/74/8e/c5/748ec5f9-d6ea-2f53-6fb4-09f0d4eb33ea/mzl.fhipnrjj.jpg/{w}x{h}bb.jpg', 'bgColor': '0c0b11', 'textColor1': 'fdd0e5', 'textColor2': 'd294c9', 'textColor3': 'cda8ba', 'textColor4': 'aa78a4'}, 'url': 'https://music.apple.com/gb/artist/the-claypool-lennon-delirium/1092250261'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1092250261/albums', 'data': [{'id': '1440080018', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440080018'}, {'id': '1092814235', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1092814235'}, {'id': '1263610097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1263610097'}, {'id': '1444318417', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444318417'}, {'id': '1444391400', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444391400'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5026586",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5026586,
+      "images": [
+        {
+          "height": 560,
+          "resource_url": "https://i.discogs.com/H_4Nwg4OXvJe3F8ADe4Ci8axGzYqGNwMSg-QKJsuDDM/rs:fit/g:sm/q:90/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/H_4Nwg4OXvJe3F8ADe4Ci8axGzYqGNwMSg-QKJsuDDM/rs:fit/g:sm/q:90/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/BUgrH3AYn4vC1sP41-BNaL0SsAyrcO-JRSCI5Vblrac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTQ2MjEwNjcy/MS01MjMzLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 579,
+          "resource_url": "https://i.discogs.com/-4M3NmnNH5CR0mnA4GKU4O8cwi-Dv03emphhxcKXd0E/rs:fit/g:sm/q:90/h:579/w:570/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-4M3NmnNH5CR0mnA4GKU4O8cwi-Dv03emphhxcKXd0E/rs:fit/g:sm/q:90/h:579/w:570/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oB6wxeHtIxv5-5swesS0bcBy_dxopohJzp_fVruVsdM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/MC0yMzY1LmpwZWc.jpeg",
+          "width": 570
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/BjwyHxb-7ufeSYRwayAUFPPCr0FGpkn3nQQ0FC0KI7I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BjwyHxb-7ufeSYRwayAUFPPCr0FGpkn3nQQ0FC0KI7I/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tz3daSbSVZyc6mgUWoGEEumxjhpfSZGho5q635zIAIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/Mi0zNzg2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/n8H3PT1gceKJNPfBHuppjO9ztEXRgSEIAHewjHQ1Ch8/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n8H3PT1gceKJNPfBHuppjO9ztEXRgSEIAHewjHQ1Ch8/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rrIzu2PZCzr_CQoys05JfUe20ZStvQy1GmGThQg--Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/NS01MjI0LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QS_Trkg0V7-MPew-StKfnDVNRZMRXKTqF54jX3aUW0E/rs:fit/g:sm/q:90/h:600/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QS_Trkg0V7-MPew-StKfnDVNRZMRXKTqF54jX3aUW0E/rs:fit/g:sm/q:90/h:600/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/n2HNAon2GxfzeEy6DpuajHV_K5iKZiIAq2MdrFs9BqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTAx/NC00MDU4LnBuZw.jpeg",
+          "width": 560
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/lFGnSTpi3cBIK3nfc22xk_Ti6gggmt8w860iLBSrOXU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lFGnSTpi3cBIK3nfc22xk_Ti6gggmt8w860iLBSrOXU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/FY84VLSbKO54BVl29Izh0xj77QrBNciOm0xG9MouCNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk2/OC0xNDQ5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/57pursMbo9LnVuugBw9SMaiGEnTQDHHd7eOH2RuAsjQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/57pursMbo9LnVuugBw9SMaiGEnTQDHHd7eOH2RuAsjQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kpESTntIMysiB0LPS82qPsrUpshjXWhMX6fgyEWFTb8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk3/OC00NDIwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/mP-pLDbJibFgZtK210b-Em0qQ4w4-O7zh6w2UtWaNyQ/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mP-pLDbJibFgZtK210b-Em0qQ4w4-O7zh6w2UtWaNyQ/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/H-HOBXZ5C6XrSSZSBO8y5YF7b6nXOT0gDm4ZyCF97UY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/My00NjE4LmpwZWc.jpeg",
+          "width": 450
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/j6uz-yOcqY9cxj8IJ2h3X5lSabjXvrZkJPqyakdedxE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j6uz-yOcqY9cxj8IJ2h3X5lSabjXvrZkJPqyakdedxE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Kcpcnec_3HcmEmsnMisaGBrhQy6WWfqFfRJcjJPEU1Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNDk4/OS0yMjUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/MnsQeUE-nf_y6w80lwHkv-EomJiAaHI0gW1yCYrLLf8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/MnsQeUE-nf_y6w80lwHkv-EomJiAaHI0gW1yCYrLLf8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Ru_-YgvNy8QD8FhpH4HZcmNEKBAIKpOOg9LYgGeSEtg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjY1/ODYtMTY2MzcxNTEz/MC0zMTEyLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 18552,
+          "name": "Sean Lennon",
+          "resource_url": "https://api.discogs.com/artists/18552"
+        },
+        {
+          "active": true,
+          "id": 149855,
+          "name": "Les Claypool",
+          "resource_url": "https://api.discogs.com/artists/149855"
+        }
+      ],
       "name": "The Claypool Lennon Delirium",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5026586",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5026586"
-      },
+      "profile": "U.S. psychedelic / prog rock band led by Les Claypool ([a=Primus]) and Sean Ono Lennon ([a=The Ghost of a Saber Tooth Tiger]), which began in 2015.",
+      "releases_url": "https://api.discogs.com/artists/5026586/releases",
       "resource_url": "https://api.discogs.com/artists/5026586",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5026586",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5026586-The-Claypool-Lennon-Delirium",
+      "urls": [
+        "http://theclaypoollennondelirium.com",
+        "https://twitter.com/cl_delirium",
+        "https://www.facebook.com/theclaypoollennondelirium",
+        "https://www.instagram.com/cldelirium/",
+        "https://en.wikipedia.org/wiki/The_Claypool_Lennon_Delirium",
+        "https://theclaypoollennondelirium.bandcamp.com/music"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Claypool Lennon Delirium', url='https://www.last.fm/music/The+Claypool+Lennon+Delirium', mbid=None, listeners=118760, playcount=1621958, bio_summary='The Claypool Lennon Delirium is an American psychedelic rock band, currently composed of bassist/vocalist Les Claypool (best known as the bandleader of Primus, and guitarist/vocalist Sean Lennon, son of Yoko Ono and the late Beatles member John Lennon .\\n\\nAfter touring with Lennon\\'s band The Ghost of a Saber Tooth Tiger (as well as Dinosaur Jr.) in 2015, Claypool invited Lennon to his guesthouse to drink wine, run some ideas and play drums.  They enthusiastically began work on an old-school, psychedelic and progressive rock record. <a href=\"https://www.last.fm/music/The+Claypool+Lennon+Delirium\">Read more on Last.fm</a>', bio_content='The Claypool Lennon Delirium is an American psychedelic rock band, currently composed of bassist/vocalist Les Claypool (best known as the bandleader of Primus, and guitarist/vocalist Sean Lennon, son of Yoko Ono and the late Beatles member John Lennon .\\n\\nAfter touring with Lennon\\'s band The Ghost of a Saber Tooth Tiger (as well as Dinosaur Jr.) in 2015, Claypool invited Lennon to his guesthouse to drink wine, run some ideas and play drums.  They enthusiastically began work on an old-school, psychedelic and progressive rock record.  Over the course of six weeks, they wrote and recorded a total of ten songs, each sharing various vocal and instrumental responsibilities and expanding beyond their traditional core instruments of bass and guitar, culminating in the release of their first studio album, Monolith of Phobos. The album debuted in the Top 10 of three Billboard charts: Top Vinyl Albums, Top Tastemakers Albums, and Top Alternative Albums.\\n\\nOn February 22nd, 2019, the duo released their second studio album, South of Reality. The LP was written and recorded over two months at Claypool\\'s home recording studio in California, and was preceded by the release of the six and a half minute long track \"Blood and Rockets\". The duo embarked on a brief headlining tour in support of the record in late 2018, with successive dates in the spring of 2019. <a href=\"https://www.last.fm/music/The+Claypool+Lennon+Delirium\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Psychedelic Rock', 'Progressive rock', 'experimental', 'psychedelic', 'USA'], similar_artists=[{'name': 'Oysterhead', 'url': 'https://www.last.fm/music/Oysterhead'}, {'name': 'Psychedelic Porn Crumpets', 'url': 'https://www.last.fm/music/Psychedelic+Porn+Crumpets'}, {'name': 'The Murlocs', 'url': 'https://www.last.fm/music/The+Murlocs'}, {'name': 'Kikagaku Moyo', 'url': 'https://www.last.fm/music/Kikagaku+Moyo'}, {'name': 'King Gizzard & The Lizard Wizard', 'url': 'https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Claypool Lennon Delirium', 'url': 'https://www.last.fm/music/The+Claypool+Lennon+Delirium', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '118760', 'playcount': '1621958'}, 'similar': {'artist': [{'name': 'Oysterhead', 'url': 'https://www.last.fm/music/Oysterhead', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Psychedelic Porn Crumpets', 'url': 'https://www.last.fm/music/Psychedelic+Porn+Crumpets', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Murlocs', 'url': 'https://www.last.fm/music/The+Murlocs', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kikagaku Moyo', 'url': 'https://www.last.fm/music/Kikagaku+Moyo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'King Gizzard & The Lizard Wizard', 'url': 'https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'psychedelic', 'url': 'https://www.last.fm/tag/psychedelic'}, {'name': 'USA', 'url': 'https://www.last.fm/tag/USA'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Claypool+Lennon+Delirium/+wiki'}}, 'published': '21 Jan 2016, 20:05', 'summary': 'The Claypool Lennon Delirium is an American psychedelic rock band, currently composed of bassist/vocalist Les Claypool (best known as the bandleader of Primus, and guitarist/vocalist Sean Lennon, son of Yoko Ono and the late Beatles member John Lennon .\\n\\nAfter touring with Lennon\\'s band The Ghost of a Saber Tooth Tiger (as well as Dinosaur Jr.) in 2015, Claypool invited Lennon to his guesthouse to drink wine, run some ideas and play drums.  They enthusiastically began work on an old-school, psychedelic and progressive rock record. <a href=\"https://www.last.fm/music/The+Claypool+Lennon+Delirium\">Read more on Last.fm</a>', 'content': 'The Claypool Lennon Delirium is an American psychedelic rock band, currently composed of bassist/vocalist Les Claypool (best known as the bandleader of Primus, and guitarist/vocalist Sean Lennon, son of Yoko Ono and the late Beatles member John Lennon .\\n\\nAfter touring with Lennon\\'s band The Ghost of a Saber Tooth Tiger (as well as Dinosaur Jr.) in 2015, Claypool invited Lennon to his guesthouse to drink wine, run some ideas and play drums.  They enthusiastically began work on an old-school, psychedelic and progressive rock record.  Over the course of six weeks, they wrote and recorded a total of ten songs, each sharing various vocal and instrumental responsibilities and expanding beyond their traditional core instruments of bass and guitar, culminating in the release of their first studio album, Monolith of Phobos. The album debuted in the Top 10 of three Billboard charts: Top Vinyl Albums, Top Tastemakers Albums, and Top Alternative Albums.\\n\\nOn February 22nd, 2019, the duo released their second studio album, South of Reality. The LP was written and recorded over two months at Claypool\\'s home recording studio in California, and was preceded by the release of the six and a half minute long track \"Blood and Rockets\". The duo embarked on a brief headlining tour in support of the record in late 2018, with successive dates in the spring of 2019. <a href=\"https://www.last.fm/music/The+Claypool+Lennon+Delirium\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2yUsje7CszKGu4g1f4ih3b', url='https://open.spotify.com/artist/2yUsje7CszKGu4g1f4ih3b', name='The Claypool Lennon Delirium', popularity=37, followers=159806, genres=['psychedelic rock', 'neo-psychedelic'], images=[{'url': 'https://i.scdn.co/image/c1d8265bd830bfe67944afa875a751c3dd4f9057', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/efafb7f0af4716dda85db4b4bad0ec27919bc2e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/13e9475f259f5c1e5e79d40d679b3a89d76653da', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/d389b43ed1dc475d042b132775f909fb6935befd', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2yUsje7CszKGu4g1f4ih3b'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2yUsje7CszKGu4g1f4ih3b'}, 'followers': {'href': None, 'total': 159806}, 'genres': ['psychedelic rock', 'neo-psychedelic'], 'href': 'https://api.spotify.com/v1/artists/2yUsje7CszKGu4g1f4ih3b', 'id': '2yUsje7CszKGu4g1f4ih3b', 'images': [{'url': 'https://i.scdn.co/image/c1d8265bd830bfe67944afa875a751c3dd4f9057', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/efafb7f0af4716dda85db4b4bad0ec27919bc2e8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/13e9475f259f5c1e5e79d40d679b3a89d76653da', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/d389b43ed1dc475d042b132775f909fb6935befd', 'height': 64, 'width': 64}], 'name': 'The Claypool Lennon Delirium', 'popularity': 37, 'type': 'artist', 'uri': 'spotify:artist:2yUsje7CszKGu4g1f4ih3b'})",
@@ -263,6 +454,6 @@
   },
   "spotify_id": "2yUsje7CszKGu4g1f4ih3b",
   "spotify_url": "https://open.spotify.com/artist/2yUsje7CszKGu4g1f4ih3b",
-  "updated_at": "2026-10-22T14:12:08.708690",
+  "updated_at": "2026-10-30T18:46:12.641258",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Claypool_Lennon_Delirium"
 }

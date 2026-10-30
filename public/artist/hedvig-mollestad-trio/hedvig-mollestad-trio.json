@@ -93,22 +93,109 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='468729311', url='https://music.apple.com/gb/artist/hedvig-mollestad-trio/468729311', name='Hedvig Mollestad Trio', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/cf/b8/c4cfb8e6-977c-4b40-7034-6ebccc03f094/cover.jpg/2000x2000ac.jpg', genres=['Prog-Rock/Art Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '468729311', 'type': 'artists', 'href': '/v1/catalog/gb/artists/468729311', 'attributes': {'artwork': {'bgColor': '000000', 'height': 1482, 'textColor1': 'dfdad8', 'textColor2': 'c8c2c0', 'textColor3': 'b2aead', 'textColor4': 'a09b9a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/cf/b8/c4cfb8e6-977c-4b40-7034-6ebccc03f094/cover.jpg/{w}x{h}ac.jpg', 'width': 1648}, 'genreNames': ['Prog-Rock/Art Rock'], 'name': 'Hedvig Mollestad Trio', 'url': 'https://music.apple.com/gb/artist/hedvig-mollestad-trio/468729311'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/468729311/albums', 'data': [{'id': '1548945417', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1548945417'}, {'id': '1441356568', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441356568'}, {'id': '1799210819', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1799210819'}, {'id': '1113650658', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1113650658'}, {'id': '647596461', 'type': 'albums', 'href': '/v1/catalog/gb/albums/647596461'}, {'id': '468729109', 'type': 'albums', 'href': '/v1/catalog/gb/albums/468729109'}, {'id': '844550224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/844550224'}, {'id': '1113652281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1113652281'}, {'id': '1442659450', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442659450'}, {'id': '1550683946', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550683946'}, {'id': '1794589216', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794589216'}, {'id': '1805121438', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1805121438'}, {'id': '829047891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/829047891'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2424007",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2424007,
+      "images": [
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/QW5DzocFAQ1TLv2RUgqsSCjglsJvpwJ7TrsAGSa8LG0/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QW5DzocFAQ1TLv2RUgqsSCjglsJvpwJ7TrsAGSa8LG0/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/C38PED4LaptJ58kLbQS_lNfxRiuUD2I7eXctnUiS8Yg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 449,
+          "resource_url": "https://i.discogs.com/8nmVSyGapYuwkn5EydPMz5mHXxFqCkrDyJim-BGOedQ/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8nmVSyGapYuwkn5EydPMz5mHXxFqCkrDyJim-BGOedQ/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/ENmIr_UVXX81DHHQo5KHi8nxhSH1ol8YxGHXIIEmmUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/nA6SveGUXrtPy92KnfsvQi9g-Gl1h29fIcVhQxLbRYs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nA6SveGUXrtPy92KnfsvQi9g-Gl1h29fIcVhQxLbRYs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/u-4QWc1asXXk_i3f-g51pB36sry15gLAyxoKKxp4J8U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/maPvMYUyR192eMd2pgVFTKAeB8EyBZGFL-BJ2N-nq7w/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/maPvMYUyR192eMd2pgVFTKAeB8EyBZGFL-BJ2N-nq7w/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/uWC5W6-wzBrRoT-lIBxhp0i561X0y7G_MHAxbLacjC4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Yp0XBXc7bSJCrp4H2yHyn9ObFIC-hPsl8PnE7LIwWEY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Yp0XBXc7bSJCrp4H2yHyn9ObFIC-hPsl8PnE7LIwWEY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/U4kjtK6PhMBns9LXg3DIBrBS4XIjGqQWVkB9QymfkLw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/lzvqFS5Ktluu9zXf4pQbBKkMxGrQ8kPrzvaOqEN5mOY/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lzvqFS5Ktluu9zXf4pQbBKkMxGrQ8kPrzvaOqEN5mOY/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/5CpJyd4017SNmBMNaLzoWmlH5Bf9eLO864rq3I9NMNo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 370,
+          "resource_url": "https://i.discogs.com/qAnAw3SX63M3QIoLi8wUgCRPGGFTT4ET0QKoz-JYdx0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qAnAw3SX63M3QIoLi8wUgCRPGGFTT4ET0QKoz-JYdx0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/g1Mfp1ZXj-dNO-ndEDaT0BGmJ-zAqJYC3aDLVa9QXLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 371,
+          "resource_url": "https://i.discogs.com/JUwmvI6BIkmqGDd99yWXYRuzB3HMD25liIqBwA0qWhU/rs:fit/g:sm/q:90/h:371/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JUwmvI6BIkmqGDd99yWXYRuzB3HMD25liIqBwA0qWhU/rs:fit/g:sm/q:90/h:371/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/01ay-vypCua7vGn3ZqNjbKrdETRtcYVIDx9-viOeroA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1619029,
+          "name": "Hedvig Mollestad Thomassen",
+          "resource_url": "https://api.discogs.com/artists/1619029"
+        },
+        {
+          "active": true,
+          "id": 2446174,
+          "name": "Ellen Brekken",
+          "resource_url": "https://api.discogs.com/artists/2446174"
+        },
+        {
+          "active": true,
+          "id": 2449658,
+          "name": "Ivar Loe Bjørnstad",
+          "resource_url": "https://api.discogs.com/artists/2449658"
+        }
+      ],
       "name": "Hedvig Mollestad Trio",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2424007",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2424007"
-      },
+      "profile": "Norwegian jazz-rock trio, founded in 2009 by Hedvig Mollestad.\r\n\r\nLine-up: \r\n- Hedvig Mollestad Thomassen, guitar\r\n- Ellen Brekken, double bass\r\n- Ivar Loe Bjørnstad, drums",
+      "releases_url": "https://api.discogs.com/artists/2424007/releases",
       "resource_url": "https://api.discogs.com/artists/2424007",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2424007",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2424007-Hedvig-Mollestad-Trio",
+      "urls": [
+        "http://www.facebook.com/HedvigMollestadTrio",
+        "http://instagram.com/hedvigmollestadtrio",
+        "http://myspace.com/hedvigmollestadtrio",
+        "http://en.wikipedia.org/wiki/Hedvig_Mollestad_Thomassen",
+        "http://soundcloud.com/hedvigmollestadtrio",
+        "http://hedvigmollestadtrio.bandcamp.com/",
+        "http://www.reverbnation.com/hedvigmollestadtrio",
+        "http://www.youtube.com/user/hedvigmollestadtrio"
+      ]
     },
     "identity": {
       "musicbrainz_id": "4524ef36-442b-4f38-9570-4fde466e77dc",
@@ -153,27 +240,115 @@
       "twitter": null,
       "website": null
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='468729311', url='https://music.apple.com/gb/artist/hedvig-mollestad-trio/468729311', name='Hedvig Mollestad Trio', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/cf/b8/c4cfb8e6-977c-4b40-7034-6ebccc03f094/cover.jpg/2000x2000ac.jpg', genres=['Prog-Rock/Art Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '468729311', 'type': 'artists', 'href': '/v1/catalog/gb/artists/468729311', 'attributes': {'artwork': {'bgColor': '000000', 'height': 1482, 'textColor1': 'dfdad8', 'textColor2': 'c8c2c0', 'textColor3': 'b2aead', 'textColor4': 'a09b9a', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/cf/b8/c4cfb8e6-977c-4b40-7034-6ebccc03f094/cover.jpg/{w}x{h}ac.jpg', 'width': 1648}, 'genreNames': ['Prog-Rock/Art Rock'], 'name': 'Hedvig Mollestad Trio', 'url': 'https://music.apple.com/gb/artist/hedvig-mollestad-trio/468729311'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/468729311/albums', 'data': [{'id': '1548945417', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1548945417'}, {'id': '1441356568', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441356568'}, {'id': '1799210819', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1799210819'}, {'id': '1113650658', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1113650658'}, {'id': '647596461', 'type': 'albums', 'href': '/v1/catalog/gb/albums/647596461'}, {'id': '468729109', 'type': 'albums', 'href': '/v1/catalog/gb/albums/468729109'}, {'id': '844550224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/844550224'}, {'id': '1113652281', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1113652281'}, {'id': '1442659450', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1442659450'}, {'id': '1550683946', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550683946'}, {'id': '1794589216', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794589216'}, {'id': '1805121438', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1805121438'}, {'id': '829047891', 'type': 'albums', 'href': '/v1/catalog/gb/albums/829047891'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "2424007",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 2424007,
+      "images": [
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/QW5DzocFAQ1TLv2RUgqsSCjglsJvpwJ7TrsAGSa8LG0/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/QW5DzocFAQ1TLv2RUgqsSCjglsJvpwJ7TrsAGSa8LG0/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/C38PED4LaptJ58kLbQS_lNfxRiuUD2I7eXctnUiS8Yg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/MS04OTY5LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 449,
+          "resource_url": "https://i.discogs.com/8nmVSyGapYuwkn5EydPMz5mHXxFqCkrDyJim-BGOedQ/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8nmVSyGapYuwkn5EydPMz5mHXxFqCkrDyJim-BGOedQ/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/ENmIr_UVXX81DHHQo5KHi8nxhSH1ol8YxGHXIIEmmUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OS0xMDMyLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/nA6SveGUXrtPy92KnfsvQi9g-Gl1h29fIcVhQxLbRYs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nA6SveGUXrtPy92KnfsvQi9g-Gl1h29fIcVhQxLbRYs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/u-4QWc1asXXk_i3f-g51pB36sry15gLAyxoKKxp4J8U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny05MDcwLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/maPvMYUyR192eMd2pgVFTKAeB8EyBZGFL-BJ2N-nq7w/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/maPvMYUyR192eMd2pgVFTKAeB8EyBZGFL-BJ2N-nq7w/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/uWC5W6-wzBrRoT-lIBxhp0i561X0y7G_MHAxbLacjC4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Ni04Njg0LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Yp0XBXc7bSJCrp4H2yHyn9ObFIC-hPsl8PnE7LIwWEY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Yp0XBXc7bSJCrp4H2yHyn9ObFIC-hPsl8PnE7LIwWEY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/U4kjtK6PhMBns9LXg3DIBrBS4XIjGqQWVkB9QymfkLw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/Ny00ODAxLnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/lzvqFS5Ktluu9zXf4pQbBKkMxGrQ8kPrzvaOqEN5mOY/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lzvqFS5Ktluu9zXf4pQbBKkMxGrQ8kPrzvaOqEN5mOY/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/5CpJyd4017SNmBMNaLzoWmlH5Bf9eLO864rq3I9NMNo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM2/Mi0xODE2LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 370,
+          "resource_url": "https://i.discogs.com/qAnAw3SX63M3QIoLi8wUgCRPGGFTT4ET0QKoz-JYdx0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qAnAw3SX63M3QIoLi8wUgCRPGGFTT4ET0QKoz-JYdx0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/g1Mfp1ZXj-dNO-ndEDaT0BGmJ-zAqJYC3aDLVa9QXLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTU1ODQ0MDM1/OC0zNTY1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 371,
+          "resource_url": "https://i.discogs.com/JUwmvI6BIkmqGDd99yWXYRuzB3HMD25liIqBwA0qWhU/rs:fit/g:sm/q:90/h:371/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JUwmvI6BIkmqGDd99yWXYRuzB3HMD25liIqBwA0qWhU/rs:fit/g:sm/q:90/h:371/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/01ay-vypCua7vGn3ZqNjbKrdETRtcYVIDx9-viOeroA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjQw/MDctMTM1MjMwMzEy/Ny0yMTM1LmpwZWc.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 1619029,
+          "name": "Hedvig Mollestad Thomassen",
+          "resource_url": "https://api.discogs.com/artists/1619029"
+        },
+        {
+          "active": true,
+          "id": 2446174,
+          "name": "Ellen Brekken",
+          "resource_url": "https://api.discogs.com/artists/2446174"
+        },
+        {
+          "active": true,
+          "id": 2449658,
+          "name": "Ivar Loe Bjørnstad",
+          "resource_url": "https://api.discogs.com/artists/2449658"
+        }
+      ],
       "name": "Hedvig Mollestad Trio",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "2424007",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/2424007"
-      },
+      "profile": "Norwegian jazz-rock trio, founded in 2009 by Hedvig Mollestad.\r\n\r\nLine-up: \r\n- Hedvig Mollestad Thomassen, guitar\r\n- Ellen Brekken, double bass\r\n- Ivar Loe Bjørnstad, drums",
+      "releases_url": "https://api.discogs.com/artists/2424007/releases",
       "resource_url": "https://api.discogs.com/artists/2424007",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/2424007",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/2424007-Hedvig-Mollestad-Trio",
+      "urls": [
+        "http://www.facebook.com/HedvigMollestadTrio",
+        "http://instagram.com/hedvigmollestadtrio",
+        "http://myspace.com/hedvigmollestadtrio",
+        "http://en.wikipedia.org/wiki/Hedvig_Mollestad_Thomassen",
+        "http://soundcloud.com/hedvigmollestadtrio",
+        "http://hedvigmollestadtrio.bandcamp.com/",
+        "http://www.reverbnation.com/hedvigmollestadtrio",
+        "http://www.youtube.com/user/hedvigmollestadtrio"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Hedvig Mollestad Trio', url='https://www.last.fm/music/Hedvig+Mollestad+Trio', mbid='4524ef36-442b-4f38-9570-4fde466e77dc', listeners=11857, playcount=457339, bio_summary='A trio led by guitarist Hedvig Mollestad Thomassen (El Doom & The Born Electric, Trondheim Jazz Orchestra). With one foot in heavy rock and one in jazz they combine the two, with a touch of blues. \\n\\nFully instrumental apart from the distant shouting on a Melvins cover, their debut album Shoot! (2011) is more song structured than other, similar Norwegian guitar-led trios on Rune Grammofon, such as Bushman\\'s Revenge and Scorch Trio. Their second album All Of Them Witches (2013) is a fully instrumental album built around Hedvig\\'s guitar <a href=\"https://www.last.fm/music/Hedvig+Mollestad+Trio\">Read more on Last.fm</a>', bio_content='A trio led by guitarist Hedvig Mollestad Thomassen (El Doom & The Born Electric, Trondheim Jazz Orchestra). With one foot in heavy rock and one in jazz they combine the two, with a touch of blues. \\n\\nFully instrumental apart from the distant shouting on a Melvins cover, their debut album Shoot! (2011) is more song structured than other, similar Norwegian guitar-led trios on Rune Grammofon, such as Bushman\\'s Revenge and Scorch Trio. Their second album All Of Them Witches (2013) is a fully instrumental album built around Hedvig\\'s guitar, and retains the hard rock and improvisational feel of the previous album.\\n\\nHedvig Mollestad Thomassen plays the guitar, Ellen Brekken plays electric and acoustic bass and Ivar Loe Bjørnstad plays the drums. <a href=\"https://www.last.fm/music/Hedvig+Mollestad+Trio\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['jazz', 'Progressive rock', 'Jazz Rock', 'rock', 'norwegian'], similar_artists=[{'name': 'Elephant9', 'url': 'https://www.last.fm/music/Elephant9'}, {'name': 'Krokofant', 'url': 'https://www.last.fm/music/Krokofant'}, {'name': 'Motorpsycho', 'url': 'https://www.last.fm/music/Motorpsycho'}, {'name': 'Geir Sundstøl', 'url': 'https://www.last.fm/music/Geir+Sundst%C3%B8l'}, {'name': 'Hedvig Mollestad', 'url': 'https://www.last.fm/music/Hedvig+Mollestad'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Hedvig Mollestad Trio', 'mbid': '4524ef36-442b-4f38-9570-4fde466e77dc', 'url': 'https://www.last.fm/music/Hedvig+Mollestad+Trio', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '11857', 'playcount': '457339'}, 'similar': {'artist': [{'name': 'Elephant9', 'url': 'https://www.last.fm/music/Elephant9', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Krokofant', 'url': 'https://www.last.fm/music/Krokofant', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Motorpsycho', 'url': 'https://www.last.fm/music/Motorpsycho', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Geir Sundstøl', 'url': 'https://www.last.fm/music/Geir+Sundst%C3%B8l', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Hedvig Mollestad', 'url': 'https://www.last.fm/music/Hedvig+Mollestad', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'Jazz Rock', 'url': 'https://www.last.fm/tag/Jazz+Rock'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'norwegian', 'url': 'https://www.last.fm/tag/norwegian'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Hedvig+Mollestad+Trio/+wiki'}}, 'published': '28 Sep 2011, 19:11', 'summary': 'A trio led by guitarist Hedvig Mollestad Thomassen (El Doom & The Born Electric, Trondheim Jazz Orchestra). With one foot in heavy rock and one in jazz they combine the two, with a touch of blues. \\n\\nFully instrumental apart from the distant shouting on a Melvins cover, their debut album Shoot! (2011) is more song structured than other, similar Norwegian guitar-led trios on Rune Grammofon, such as Bushman\\'s Revenge and Scorch Trio. Their second album All Of Them Witches (2013) is a fully instrumental album built around Hedvig\\'s guitar <a href=\"https://www.last.fm/music/Hedvig+Mollestad+Trio\">Read more on Last.fm</a>', 'content': 'A trio led by guitarist Hedvig Mollestad Thomassen (El Doom & The Born Electric, Trondheim Jazz Orchestra). With one foot in heavy rock and one in jazz they combine the two, with a touch of blues. \\n\\nFully instrumental apart from the distant shouting on a Melvins cover, their debut album Shoot! (2011) is more song structured than other, similar Norwegian guitar-led trios on Rune Grammofon, such as Bushman\\'s Revenge and Scorch Trio. Their second album All Of Them Witches (2013) is a fully instrumental album built around Hedvig\\'s guitar, and retains the hard rock and improvisational feel of the previous album.\\n\\nHedvig Mollestad Thomassen plays the guitar, Ellen Brekken plays electric and acoustic bass and Ivar Loe Bjørnstad plays the drums. <a href=\"https://www.last.fm/music/Hedvig+Mollestad+Trio\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='33Ynrn4NZsANMBJsFFqB7Y', url='https://open.spotify.com/artist/33Ynrn4NZsANMBJsFFqB7Y', name='Hedvig Mollestad Trio', popularity=15, followers=10093, genres=['norsk rock'], images=[{'url': 'https://i.scdn.co/image/ab6772690000c46c32fa8a4f1ea811cc8c3772c8', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd2232fa8a4f1ea811cc8c3772c8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac332fa8a4f1ea811cc8c3772c8', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f7432fa8a4f1ea811cc8c3772c8', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/33Ynrn4NZsANMBJsFFqB7Y'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/33Ynrn4NZsANMBJsFFqB7Y'}, 'followers': {'href': None, 'total': 10093}, 'genres': ['norsk rock'], 'href': 'https://api.spotify.com/v1/artists/33Ynrn4NZsANMBJsFFqB7Y', 'id': '33Ynrn4NZsANMBJsFFqB7Y', 'images': [{'url': 'https://i.scdn.co/image/ab6772690000c46c32fa8a4f1ea811cc8c3772c8', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd2232fa8a4f1ea811cc8c3772c8', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac332fa8a4f1ea811cc8c3772c8', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f7432fa8a4f1ea811cc8c3772c8', 'height': 64, 'width': 64}], 'name': 'Hedvig Mollestad Trio', 'popularity': 15, 'type': 'artist', 'uri': 'spotify:artist:33Ynrn4NZsANMBJsFFqB7Y'})",
@@ -215,6 +390,6 @@
   },
   "spotify_id": "33Ynrn4NZsANMBJsFFqB7Y",
   "spotify_url": "https://open.spotify.com/artist/33Ynrn4NZsANMBJsFFqB7Y",
-  "updated_at": "2026-10-22T14:07:33.882786",
+  "updated_at": "2026-10-30T18:40:47.519853",
   "wikipedia_url": null
 }

@@ -29,22 +29,309 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='2989314', url='https://music.apple.com/gb/artist/boards-of-canada/2989314', name='Boards of Canada', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/6b/ad/db/6baddb68-711b-115e-ec2d-4c5f9121a15a/ami-identity-0a4ba5dd94f4f44e79de87a958b1d9e9-2026-04-21T14-34-38.401Z_cropped.png/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '2989314', 'type': 'artists', 'href': '/v1/catalog/gb/artists/2989314', 'attributes': {'artwork': {'bgColor': '20190d', 'height': 2500, 'textColor1': 'f7a952', 'textColor2': 'e4a653', 'textColor3': 'cc8c44', 'textColor4': 'bc8945', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/6b/ad/db/6baddb68-711b-115e-ec2d-4c5f9121a15a/ami-identity-0a4ba5dd94f4f44e79de87a958b1d9e9-2026-04-21T14-34-38.401Z_cropped.png/{w}x{h}bb.jpg', 'width': 2500}, 'genreNames': ['Electronic'], 'name': 'Boards of Canada', 'url': 'https://music.apple.com/gb/artist/boards-of-canada/2989314'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/2989314/albums', 'data': [{'id': '281116024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281116024'}, {'id': '281208446', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281208446'}, {'id': '81696254', 'type': 'albums', 'href': '/v1/catalog/gb/albums/81696254'}, {'id': '641229267', 'type': 'albums', 'href': '/v1/catalog/gb/albums/641229267'}, {'id': '282484650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/282484650'}, {'id': '916746995', 'type': 'albums', 'href': '/v1/catalog/gb/albums/916746995'}, {'id': '282541484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/282541484'}, {'id': '274007376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/274007376'}, {'id': '1890015523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1890015523'}, {'id': '1478291567', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478291567'}, {'id': '1686583346', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686583346'}, {'id': '652126911', 'type': 'albums', 'href': '/v1/catalog/gb/albums/652126911'}, {'id': '1829708749', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1829708749'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "307",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3603,
+          "name": "Hell Interface",
+          "resource_url": "https://api.discogs.com/artists/3603"
+        }
+      ],
+      "data_quality": "Correct",
+      "id": 307,
+      "images": [
+        {
+          "height": 336,
+          "resource_url": "https://i.discogs.com/Cc-514m5oLtK9xfKAsdoqR9SZoyLhPj6mv94mSNBcNw/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Cc-514m5oLtK9xfKAsdoqR9SZoyLhPj6mv94mSNBcNw/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/AStuRhprh5rYLd2mb9y5RGmkfx6H5uTwVsfYJYpZrLM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/cGeOxVGg82fNgunlrQI6pIX_JlG05uhCiVmxCVSXoeg/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cGeOxVGg82fNgunlrQI6pIX_JlG05uhCiVmxCVSXoeg/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/k7swa31xBEfXTuPnzJgaTibhSAFWlZc1LJJvqh3WjUg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "width": 594
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/CmMQnRFmYb25goGucrFbM5w20MOBH9FFw8Jj-Q2fLUM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CmMQnRFmYb25goGucrFbM5w20MOBH9FFw8Jj-Q2fLUM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/legnMbLvp9Npd_dtWEBp7_9ID9OiLzCbTIt6uyz7Rog/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 127,
+          "resource_url": "https://i.discogs.com/PvOcRxsRNU_xlUg0HVCyG2g4S6baboTF8DWrYEJkCcI/rs:fit/g:sm/q:90/h:127/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PvOcRxsRNU_xlUg0HVCyG2g4S6baboTF8DWrYEJkCcI/rs:fit/g:sm/q:90/h:127/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kESPCz4Xbi1J0OuYQWYs1UfeIxG04z1ViHld2s_X43A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "width": 170
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/zJ1dklZWc44BSvKUsJVRS3zLC3SefR4xcCntv_LPPpY/rs:fit/g:sm/q:90/h:320/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zJ1dklZWc44BSvKUsJVRS3zLC3SefR4xcCntv_LPPpY/rs:fit/g:sm/q:90/h:320/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3SFuD3UnLYerkRwIb39ab4jtcsKqqu0dwGR0ZhqrMfM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 475,
+          "resource_url": "https://i.discogs.com/N78Ps3G5AGAA7XEToBvGp1PyHkMchkumaZJIcYosd-0/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N78Ps3G5AGAA7XEToBvGp1PyHkMchkumaZJIcYosd-0/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xGCL65Vs3IOjgtVq7F7FiMRF2aRhejKQ4APOrMR1jM4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/a4dFWelDJ9h-6ZHGuaFE-dYNDPT7IFVWyYpQyk3ujdQ/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a4dFWelDJ9h-6ZHGuaFE-dYNDPT7IFVWyYpQyk3ujdQ/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/QIYK_Z_A5fForJi_uMmNzpWA8VY3nodTv1JPqZw3U_o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 395,
+          "resource_url": "https://i.discogs.com/uoHJIQfrzcygIQR_InE06uhUC5qCoK6W3fmMhiZThuo/rs:fit/g:sm/q:90/h:395/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uoHJIQfrzcygIQR_InE06uhUC5qCoK6W3fmMhiZThuo/rs:fit/g:sm/q:90/h:395/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/x2mZN4i98R8PylRw9T5ZeXLele-d_VwrjFlZ65ACmws/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/D_lyIj1Un-BVBCkKFCNwgYL_MV_ANf70vun6b4pZxyc/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D_lyIj1Un-BVBCkKFCNwgYL_MV_ANf70vun6b4pZxyc/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UQtfBL9j0ibbJLhHUT6_RrDiWF7KDmDJhM0goMeQAgo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/R_zZO09N-cfcJd05aL4Wlj0_MlzY0wIkD19raAkHt7Q/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/R_zZO09N-cfcJd05aL4Wlj0_MlzY0wIkD19raAkHt7Q/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "uri150": "https://i.discogs.com/jMQ0bpUx84QWCthQt_KiRPv5P7CfYSIGEIw8lFC0uJE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 275,
+          "resource_url": "https://i.discogs.com/ogfQf3OsOObxLsI82DtNGeTVJ_HsStD2Nj3K-ihS_zY/rs:fit/g:sm/q:90/h:275/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ogfQf3OsOObxLsI82DtNGeTVJ_HsStD2Nj3K-ihS_zY/rs:fit/g:sm/q:90/h:275/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UnTpXMDF0YWEBthniiXgbBxSmxQK0N30BJZSpDd38B0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/UMIgUQ1ub0xdrMaCUsAkL3UL7Xf6BlJtSE4fCj-5RuY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UMIgUQ1ub0xdrMaCUsAkL3UL7Xf6BlJtSE4fCj-5RuY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JCPrx33yOWSosNbFN2LEO4Fxc0tm6Jb8Fm__Y1FCgEU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 276,
+          "resource_url": "https://i.discogs.com/05-UmMohmes4BFso8jEjOsejvtk7MozjwjpqwUSFfUE/rs:fit/g:sm/q:90/h:276/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/05-UmMohmes4BFso8jEjOsejvtk7MozjwjpqwUSFfUE/rs:fit/g:sm/q:90/h:276/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NHTJEUpBTuiqGUXHQhx77ztu899Pi8pRnr46GDDPPt8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "width": 460
+        },
+        {
+          "height": 497,
+          "resource_url": "https://i.discogs.com/gYR0CKAh1QRTESghzlsF6-oqke9IjaQvj2rRD3wYkj0/rs:fit/g:sm/q:90/h:497/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gYR0CKAh1QRTESghzlsF6-oqke9IjaQvj2rRD3wYkj0/rs:fit/g:sm/q:90/h:497/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/OsWpy1ibZsUK32_hHqz2ZsEIPPfKwnUAktKxIhcVVgI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 328,
+          "resource_url": "https://i.discogs.com/r8eUxKe6KzToAgPZgdNEIwkzgrpQ16jrEIpAIkHdcu0/rs:fit/g:sm/q:90/h:328/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r8eUxKe6KzToAgPZgdNEIwkzgrpQ16jrEIpAIkHdcu0/rs:fit/g:sm/q:90/h:328/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/mllzt_e31Azbitfw4JkoVXsurr9zD86gDLm0qbL9uug/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 317,
+          "resource_url": "https://i.discogs.com/wtb9C9vbf4NClMp8DCWJ7sqwdu1eCfyR9NsFeNFcSbc/rs:fit/g:sm/q:90/h:317/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wtb9C9vbf4NClMp8DCWJ7sqwdu1eCfyR9NsFeNFcSbc/rs:fit/g:sm/q:90/h:317/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZvaPP9waK8bF5Qsj8j9zNwN8r0ZerSaPK5tO91_t12w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/eZ5p-evemnjUTBTF6LLjfPVAGxlCuDiSudWu8SYUBvo/rs:fit/g:sm/q:90/h:397/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eZ5p-evemnjUTBTF6LLjfPVAGxlCuDiSudWu8SYUBvo/rs:fit/g:sm/q:90/h:397/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/yQTXJMciNmnr3m59wf93kehfqSq2B0l4ayi5_pb3VcA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 173,
+          "resource_url": "https://i.discogs.com/4-aue58Y1VOgV6gy0CXORbFeo_ocLsp0ej9eBySyUiE/rs:fit/g:sm/q:90/h:173/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4-aue58Y1VOgV6gy0CXORbFeo_ocLsp0ej9eBySyUiE/rs:fit/g:sm/q:90/h:173/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/P8amG3YghFRqgFZbaE3r3--CfXXxWtsz7EBsPY5tl40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 168,
+          "resource_url": "https://i.discogs.com/IBp_yddz6nH09OOXcg5ZChbR2ErcDktEEvkEx-b3sSA/rs:fit/g:sm/q:90/h:168/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IBp_yddz6nH09OOXcg5ZChbR2ErcDktEEvkEx-b3sSA/rs:fit/g:sm/q:90/h:168/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/z9wuOzLRhOpIaekGF8OLbuX4728B8LWMoSn7H1YRczk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "width": 250
+        },
+        {
+          "height": 326,
+          "resource_url": "https://i.discogs.com/BjkYlWObQP_30MOlxNBC2iVKzqQlgoDvx-LM2nl8CiI/rs:fit/g:sm/q:90/h:326/w:477/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BjkYlWObQP_30MOlxNBC2iVKzqQlgoDvx-LM2nl8CiI/rs:fit/g:sm/q:90/h:326/w:477/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/nvioG92oPnBKffyZF53N8VlP238C4FWryFolPXXdGSY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "width": 477
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/tsW45JGOYM9rtTjusiZWIl12JtSQ_rt1uqGsE0i3kGo/rs:fit/g:sm/q:90/h:391/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tsW45JGOYM9rtTjusiZWIl12JtSQ_rt1uqGsE0i3kGo/rs:fit/g:sm/q:90/h:391/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/u0s0OgBuciV0KdPcTyZ6pXhh4gimCSl9r1oYWaFpZio/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "width": 388
+        },
+        {
+          "height": 363,
+          "resource_url": "https://i.discogs.com/5b_whDrOFIVjvWfbUh3tdvpMkDLZL53vG6zd8WiTKwE/rs:fit/g:sm/q:90/h:363/w:369/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5b_whDrOFIVjvWfbUh3tdvpMkDLZL53vG6zd8WiTKwE/rs:fit/g:sm/q:90/h:363/w:369/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "uri150": "https://i.discogs.com/WH1_cp9cZI4ZNrG3b4XZyf4kBTdVFkxwfYnyy621tf4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "width": 369
+        },
+        {
+          "height": 234,
+          "resource_url": "https://i.discogs.com/a7CQ2UPRbIvwiWtrIemieYNr2GbHAMe_-Tx_n-h0uMQ/rs:fit/g:sm/q:90/h:234/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a7CQ2UPRbIvwiWtrIemieYNr2GbHAMe_-Tx_n-h0uMQ/rs:fit/g:sm/q:90/h:234/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/1cGbYTnS4lMCQgs_l69Kf_8Yt2uNtP-_sljXhNMmqDE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "width": 312
+        },
+        {
+          "height": 230,
+          "resource_url": "https://i.discogs.com/Kp0JtRRheuq1sUAEdscjkKnCZj-lmKrMzc_a-oyx3Mg/rs:fit/g:sm/q:90/h:230/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Kp0JtRRheuq1sUAEdscjkKnCZj-lmKrMzc_a-oyx3Mg/rs:fit/g:sm/q:90/h:230/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/ShJsJsA6sHkFdlUS80YrklPE7h1tv64evXHmaTIaeUQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "width": 218
+        },
+        {
+          "height": 321,
+          "resource_url": "https://i.discogs.com/2j3Mei957FdS4q3Kj-0Y_mYiMYiNLdPqkZcMi76tui4/rs:fit/g:sm/q:90/h:321/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2j3Mei957FdS4q3Kj-0Y_mYiMYiNLdPqkZcMi76tui4/rs:fit/g:sm/q:90/h:321/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g3jkLW6Xj6pm_AKUgVvWBHa60OeofZkV2StqJJeZw1I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/c3xvHMWXQMuDzWkiwsNhgbMb7A3UF0sCZIzTC1AwFOA/rs:fit/g:sm/q:90/h:400/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c3xvHMWXQMuDzWkiwsNhgbMb7A3UF0sCZIzTC1AwFOA/rs:fit/g:sm/q:90/h:400/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/nyAVpHnrqoN7EDOPZjHTJGbF3YxfoSNSTiSahX8mcFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "width": 306
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/-1kbRMAB497lS1w7OoMvnwzPx48WNNr44rV7KICVMvI/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-1kbRMAB497lS1w7OoMvnwzPx48WNNr44rV7KICVMvI/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/daPGAxCm6F5e0KM692_7rxlsf_ptetgbsvvuTZCCUJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3G4V8fRvX4_6HQcbNWbLq_9IFlQCm-eBjjk_pqUVEME/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3G4V8fRvX4_6HQcbNWbLq_9IFlQCm-eBjjk_pqUVEME/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/n7Gb074ZcBo8See6o-QwIY0p39dsJyoVx_CvBSUPXbU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/uaKx-qoiJ1iqXZmxLE4TBVeqeOPU7SDtfFqB5vR4WNY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uaKx-qoiJ1iqXZmxLE4TBVeqeOPU7SDtfFqB5vR4WNY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gGxkw2gwGzJ-Vb2WQIcgf5s7dyXxwR3H-1WvRcHVJKg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/6TO2flklhKtD5K_u_6CUeem6L-ftkwa02sTmfWBAJLc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6TO2flklhKtD5K_u_6CUeem6L-ftkwa02sTmfWBAJLc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0s60B5EIWU1x_ZxTWvgKyDY1DXN7l272b0uTwKsLKRs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 430140,
+          "name": "Michael Sandison",
+          "resource_url": "https://api.discogs.com/artists/430140"
+        },
+        {
+          "active": true,
+          "id": 430141,
+          "name": "Marcus Eoin",
+          "resource_url": "https://api.discogs.com/artists/430141"
+        },
+        {
+          "active": false,
+          "id": 436767,
+          "name": "Chris Horne",
+          "resource_url": "https://api.discogs.com/artists/436767"
+        }
+      ],
       "name": "Boards Of Canada",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "307",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/307"
-      },
+      "namevariations": [
+        "B O C",
+        "B.O.C.",
+        "BOC",
+        "BoC",
+        "Board Of Canada",
+        "Board's Of Canada",
+        "b.o.c.",
+        "ボーズ・オブ・カナダ",
+        "ボーズ・オブ・カンダ",
+        "ボーズ・オヴ・カナダ"
+      ],
+      "profile": "Electronic music duo from Edinburgh, Scotland, UK consisting of brothers Michael Sandison and Marcus Eoin. The name 'Boards Of Canada' derives from the National Film Board Of Canada, whose documentary films inspired the duo.",
+      "releases_url": "https://api.discogs.com/artists/307/releases",
       "resource_url": "https://api.discogs.com/artists/307",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/307",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/307-Boards-Of-Canada",
+      "urls": [
+        "http://www.boardsofcanada.com",
+        "http://warp.net/artists/91407-boards-of-canada",
+        "http://boardsofcanada.bandcamp.com",
+        "http://bocpages.org/wiki/About",
+        "http://www.facebook.com/boardsofcanada",
+        "http://www.instagram.com/boardsofcanada",
+        "http://myspace.com/abeautifulplace",
+        "http://soundcloud.com/boardsofcanada",
+        "http://twitter.com/boardsofcanada",
+        "http://vimeo.com/boardsofcanada",
+        "http://en.wikipedia.org/wiki/Boards_of_Canada",
+        "http://www.youtube.com/user/boardsofcanada",
+        "https://bsky.app/profile/boardsofcanada.bsky.social"
+      ]
     },
     "identity": {
       "musicbrainz_id": "69158f97-4c07-4c4e-baf8-4e4ab1ed666e",
@@ -182,27 +469,328 @@
         "track": "Roygbiv",
         "uri": "https://www.youtube.com/watch?v=yT0gRc2c2wQ"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q107637102",
+        "track": "XYZ",
+        "uri": "https://www.youtube.com/watch?v=JZYnw3GBAlU"
+      },
+      {
+        "album": null,
+        "id": "Q139441332",
+        "track": "Tape 05",
+        "uri": "https://www.youtube.com/watch?v=6bghDcbzfEU"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='2989314', url='https://music.apple.com/gb/artist/boards-of-canada/2989314', name='Boards of Canada', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/6b/ad/db/6baddb68-711b-115e-ec2d-4c5f9121a15a/ami-identity-0a4ba5dd94f4f44e79de87a958b1d9e9-2026-04-21T14-34-38.401Z_cropped.png/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '2989314', 'type': 'artists', 'href': '/v1/catalog/gb/artists/2989314', 'attributes': {'artwork': {'bgColor': '20190d', 'height': 2500, 'textColor1': 'f7a952', 'textColor2': 'e4a653', 'textColor3': 'cc8c44', 'textColor4': 'bc8945', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/6b/ad/db/6baddb68-711b-115e-ec2d-4c5f9121a15a/ami-identity-0a4ba5dd94f4f44e79de87a958b1d9e9-2026-04-21T14-34-38.401Z_cropped.png/{w}x{h}bb.jpg', 'width': 2500}, 'genreNames': ['Electronic'], 'name': 'Boards of Canada', 'url': 'https://music.apple.com/gb/artist/boards-of-canada/2989314'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/2989314/albums', 'data': [{'id': '281116024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281116024'}, {'id': '281208446', 'type': 'albums', 'href': '/v1/catalog/gb/albums/281208446'}, {'id': '81696254', 'type': 'albums', 'href': '/v1/catalog/gb/albums/81696254'}, {'id': '641229267', 'type': 'albums', 'href': '/v1/catalog/gb/albums/641229267'}, {'id': '282484650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/282484650'}, {'id': '916746995', 'type': 'albums', 'href': '/v1/catalog/gb/albums/916746995'}, {'id': '282541484', 'type': 'albums', 'href': '/v1/catalog/gb/albums/282541484'}, {'id': '274007376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/274007376'}, {'id': '1890015523', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1890015523'}, {'id': '1478291567', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478291567'}, {'id': '1686583346', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1686583346'}, {'id': '652126911', 'type': 'albums', 'href': '/v1/catalog/gb/albums/652126911'}, {'id': '1829708749', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1829708749'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "307",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 3603,
+          "name": "Hell Interface",
+          "resource_url": "https://api.discogs.com/artists/3603"
+        }
+      ],
+      "data_quality": "Correct",
+      "id": 307,
+      "images": [
+        {
+          "height": 336,
+          "resource_url": "https://i.discogs.com/Cc-514m5oLtK9xfKAsdoqR9SZoyLhPj6mv94mSNBcNw/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Cc-514m5oLtK9xfKAsdoqR9SZoyLhPj6mv94mSNBcNw/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/AStuRhprh5rYLd2mb9y5RGmkfx6H5uTwVsfYJYpZrLM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/Nzc5OTkyMTA0LTk5/ODkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/cGeOxVGg82fNgunlrQI6pIX_JlG05uhCiVmxCVSXoeg/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cGeOxVGg82fNgunlrQI6pIX_JlG05uhCiVmxCVSXoeg/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/k7swa31xBEfXTuPnzJgaTibhSAFWlZc1LJJvqh3WjUg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzkwMjA5OTE5LTg0/ODEuanBlZw.jpeg",
+          "width": 594
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/CmMQnRFmYb25goGucrFbM5w20MOBH9FFw8Jj-Q2fLUM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CmMQnRFmYb25goGucrFbM5w20MOBH9FFw8Jj-Q2fLUM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/legnMbLvp9Npd_dtWEBp7_9ID9OiLzCbTIt6uyz7Rog/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDAxNDM2MjQwLTkz/OTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 127,
+          "resource_url": "https://i.discogs.com/PvOcRxsRNU_xlUg0HVCyG2g4S6baboTF8DWrYEJkCcI/rs:fit/g:sm/q:90/h:127/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PvOcRxsRNU_xlUg0HVCyG2g4S6baboTF8DWrYEJkCcI/rs:fit/g:sm/q:90/h:127/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kESPCz4Xbi1J0OuYQWYs1UfeIxG04z1ViHld2s_X43A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzE5MDgyOTA2LTc3/MzQuanBlZw.jpeg",
+          "width": 170
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/zJ1dklZWc44BSvKUsJVRS3zLC3SefR4xcCntv_LPPpY/rs:fit/g:sm/q:90/h:320/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zJ1dklZWc44BSvKUsJVRS3zLC3SefR4xcCntv_LPPpY/rs:fit/g:sm/q:90/h:320/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3SFuD3UnLYerkRwIb39ab4jtcsKqqu0dwGR0ZhqrMfM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzY3MzA4MjIyLTQ3/MTEuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 475,
+          "resource_url": "https://i.discogs.com/N78Ps3G5AGAA7XEToBvGp1PyHkMchkumaZJIcYosd-0/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N78Ps3G5AGAA7XEToBvGp1PyHkMchkumaZJIcYosd-0/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/xGCL65Vs3IOjgtVq7F7FiMRF2aRhejKQ4APOrMR1jM4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDY3ODc4Mjk1LTc4/NTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/a4dFWelDJ9h-6ZHGuaFE-dYNDPT7IFVWyYpQyk3ujdQ/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a4dFWelDJ9h-6ZHGuaFE-dYNDPT7IFVWyYpQyk3ujdQ/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/QIYK_Z_A5fForJi_uMmNzpWA8VY3nodTv1JPqZw3U_o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NzYwMzgxNzYxLTIz/NjYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 395,
+          "resource_url": "https://i.discogs.com/uoHJIQfrzcygIQR_InE06uhUC5qCoK6W3fmMhiZThuo/rs:fit/g:sm/q:90/h:395/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uoHJIQfrzcygIQR_InE06uhUC5qCoK6W3fmMhiZThuo/rs:fit/g:sm/q:90/h:395/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/x2mZN4i98R8PylRw9T5ZeXLele-d_VwrjFlZ65ACmws/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTIyODIwNTk4LTQx/OTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/D_lyIj1Un-BVBCkKFCNwgYL_MV_ANf70vun6b4pZxyc/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D_lyIj1Un-BVBCkKFCNwgYL_MV_ANf70vun6b4pZxyc/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UQtfBL9j0ibbJLhHUT6_RrDiWF7KDmDJhM0goMeQAgo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NDE4MTcxMjgxLTM4/MTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/R_zZO09N-cfcJd05aL4Wlj0_MlzY0wIkD19raAkHt7Q/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/R_zZO09N-cfcJd05aL4Wlj0_MlzY0wIkD19raAkHt7Q/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "uri150": "https://i.discogs.com/jMQ0bpUx84QWCthQt_KiRPv5P7CfYSIGEIw8lFC0uJE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDEuanBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 275,
+          "resource_url": "https://i.discogs.com/ogfQf3OsOObxLsI82DtNGeTVJ_HsStD2Nj3K-ihS_zY/rs:fit/g:sm/q:90/h:275/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ogfQf3OsOObxLsI82DtNGeTVJ_HsStD2Nj3K-ihS_zY/rs:fit/g:sm/q:90/h:275/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UnTpXMDF0YWEBthniiXgbBxSmxQK0N30BJZSpDd38B0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDcxMDkxLTk3/MzIuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/UMIgUQ1ub0xdrMaCUsAkL3UL7Xf6BlJtSE4fCj-5RuY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UMIgUQ1ub0xdrMaCUsAkL3UL7Xf6BlJtSE4fCj-5RuY/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JCPrx33yOWSosNbFN2LEO4Fxc0tm6Jb8Fm__Y1FCgEU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMTAxLTU4/NjAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 276,
+          "resource_url": "https://i.discogs.com/05-UmMohmes4BFso8jEjOsejvtk7MozjwjpqwUSFfUE/rs:fit/g:sm/q:90/h:276/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/05-UmMohmes4BFso8jEjOsejvtk7MozjwjpqwUSFfUE/rs:fit/g:sm/q:90/h:276/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/NHTJEUpBTuiqGUXHQhx77ztu899Pi8pRnr46GDDPPt8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTk4NTAyMzgzLTQx/NTkuanBlZw.jpeg",
+          "width": 460
+        },
+        {
+          "height": 497,
+          "resource_url": "https://i.discogs.com/gYR0CKAh1QRTESghzlsF6-oqke9IjaQvj2rRD3wYkj0/rs:fit/g:sm/q:90/h:497/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gYR0CKAh1QRTESghzlsF6-oqke9IjaQvj2rRD3wYkj0/rs:fit/g:sm/q:90/h:497/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/OsWpy1ibZsUK32_hHqz2ZsEIPPfKwnUAktKxIhcVVgI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTQ5MTA2MjY5LTI2/NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 328,
+          "resource_url": "https://i.discogs.com/r8eUxKe6KzToAgPZgdNEIwkzgrpQ16jrEIpAIkHdcu0/rs:fit/g:sm/q:90/h:328/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r8eUxKe6KzToAgPZgdNEIwkzgrpQ16jrEIpAIkHdcu0/rs:fit/g:sm/q:90/h:328/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/mllzt_e31Azbitfw4JkoVXsurr9zD86gDLm0qbL9uug/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMDgwMDA2LTI3/NzQuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 317,
+          "resource_url": "https://i.discogs.com/wtb9C9vbf4NClMp8DCWJ7sqwdu1eCfyR9NsFeNFcSbc/rs:fit/g:sm/q:90/h:317/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wtb9C9vbf4NClMp8DCWJ7sqwdu1eCfyR9NsFeNFcSbc/rs:fit/g:sm/q:90/h:317/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZvaPP9waK8bF5Qsj8j9zNwN8r0ZerSaPK5tO91_t12w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcwMjE1NDI2LTgz/NDYuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/eZ5p-evemnjUTBTF6LLjfPVAGxlCuDiSudWu8SYUBvo/rs:fit/g:sm/q:90/h:397/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eZ5p-evemnjUTBTF6LLjfPVAGxlCuDiSudWu8SYUBvo/rs:fit/g:sm/q:90/h:397/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/yQTXJMciNmnr3m59wf93kehfqSq2B0l4ayi5_pb3VcA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDMwLmpw/ZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 173,
+          "resource_url": "https://i.discogs.com/4-aue58Y1VOgV6gy0CXORbFeo_ocLsp0ej9eBySyUiE/rs:fit/g:sm/q:90/h:173/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4-aue58Y1VOgV6gy0CXORbFeo_ocLsp0ej9eBySyUiE/rs:fit/g:sm/q:90/h:173/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/P8amG3YghFRqgFZbaE3r3--CfXXxWtsz7EBsPY5tl40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTQ4NjYyMDYyLmpw/ZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 168,
+          "resource_url": "https://i.discogs.com/IBp_yddz6nH09OOXcg5ZChbR2ErcDktEEvkEx-b3sSA/rs:fit/g:sm/q:90/h:168/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IBp_yddz6nH09OOXcg5ZChbR2ErcDktEEvkEx-b3sSA/rs:fit/g:sm/q:90/h:168/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/z9wuOzLRhOpIaekGF8OLbuX4728B8LWMoSn7H1YRczk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDk4NTM4ODMyLmpw/Zw.jpeg",
+          "width": 250
+        },
+        {
+          "height": 326,
+          "resource_url": "https://i.discogs.com/BjkYlWObQP_30MOlxNBC2iVKzqQlgoDvx-LM2nl8CiI/rs:fit/g:sm/q:90/h:326/w:477/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BjkYlWObQP_30MOlxNBC2iVKzqQlgoDvx-LM2nl8CiI/rs:fit/g:sm/q:90/h:326/w:477/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/nvioG92oPnBKffyZF53N8VlP238C4FWryFolPXXdGSY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODc2Lmpw/Zw.jpeg",
+          "width": 477
+        },
+        {
+          "height": 391,
+          "resource_url": "https://i.discogs.com/tsW45JGOYM9rtTjusiZWIl12JtSQ_rt1uqGsE0i3kGo/rs:fit/g:sm/q:90/h:391/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tsW45JGOYM9rtTjusiZWIl12JtSQ_rt1uqGsE0i3kGo/rs:fit/g:sm/q:90/h:391/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "uri150": "https://i.discogs.com/u0s0OgBuciV0KdPcTyZ6pXhh4gimCSl9r1oYWaFpZio/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MjM4OTMxMzAyLmpw/ZWc.jpeg",
+          "width": 388
+        },
+        {
+          "height": 363,
+          "resource_url": "https://i.discogs.com/5b_whDrOFIVjvWfbUh3tdvpMkDLZL53vG6zd8WiTKwE/rs:fit/g:sm/q:90/h:363/w:369/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5b_whDrOFIVjvWfbUh3tdvpMkDLZL53vG6zd8WiTKwE/rs:fit/g:sm/q:90/h:363/w:369/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "uri150": "https://i.discogs.com/WH1_cp9cZI4ZNrG3b4XZyf4kBTdVFkxwfYnyy621tf4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0w/MDIuanBn.jpeg",
+          "width": 369
+        },
+        {
+          "height": 234,
+          "resource_url": "https://i.discogs.com/a7CQ2UPRbIvwiWtrIemieYNr2GbHAMe_-Tx_n-h0uMQ/rs:fit/g:sm/q:90/h:234/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a7CQ2UPRbIvwiWtrIemieYNr2GbHAMe_-Tx_n-h0uMQ/rs:fit/g:sm/q:90/h:234/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/1cGbYTnS4lMCQgs_l69Kf_8Yt2uNtP-_sljXhNMmqDE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MDc5MDMwMDczLmpw/Zw.jpeg",
+          "width": 312
+        },
+        {
+          "height": 230,
+          "resource_url": "https://i.discogs.com/Kp0JtRRheuq1sUAEdscjkKnCZj-lmKrMzc_a-oyx3Mg/rs:fit/g:sm/q:90/h:230/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Kp0JtRRheuq1sUAEdscjkKnCZj-lmKrMzc_a-oyx3Mg/rs:fit/g:sm/q:90/h:230/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/ShJsJsA6sHkFdlUS80YrklPE7h1tv64evXHmaTIaeUQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxMzQ2ODg5Lmpw/Zw.jpeg",
+          "width": 218
+        },
+        {
+          "height": 321,
+          "resource_url": "https://i.discogs.com/2j3Mei957FdS4q3Kj-0Y_mYiMYiNLdPqkZcMi76tui4/rs:fit/g:sm/q:90/h:321/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2j3Mei957FdS4q3Kj-0Y_mYiMYiNLdPqkZcMi76tui4/rs:fit/g:sm/q:90/h:321/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g3jkLW6Xj6pm_AKUgVvWBHa60OeofZkV2StqJJeZw1I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MzcxNDg4OTc1LTUy/NTIuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/c3xvHMWXQMuDzWkiwsNhgbMb7A3UF0sCZIzTC1AwFOA/rs:fit/g:sm/q:90/h:400/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c3xvHMWXQMuDzWkiwsNhgbMb7A3UF0sCZIzTC1AwFOA/rs:fit/g:sm/q:90/h:400/w:306/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "uri150": "https://i.discogs.com/nyAVpHnrqoN7EDOPZjHTJGbF3YxfoSNSTiSahX8mcFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/MTAxNzYwNjMzLmpw/Zw.jpeg",
+          "width": 306
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/-1kbRMAB497lS1w7OoMvnwzPx48WNNr44rV7KICVMvI/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-1kbRMAB497lS1w7OoMvnwzPx48WNNr44rV7KICVMvI/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/daPGAxCm6F5e0KM692_7rxlsf_ptetgbsvvuTZCCUJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NTMzNTk0MjA0LTQ3/MTMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3G4V8fRvX4_6HQcbNWbLq_9IFlQCm-eBjjk_pqUVEME/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3G4V8fRvX4_6HQcbNWbLq_9IFlQCm-eBjjk_pqUVEME/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/n7Gb074ZcBo8See6o-QwIY0p39dsJyoVx_CvBSUPXbU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MTQ1LTYx/NTcuanBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/uaKx-qoiJ1iqXZmxLE4TBVeqeOPU7SDtfFqB5vR4WNY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uaKx-qoiJ1iqXZmxLE4TBVeqeOPU7SDtfFqB5vR4WNY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gGxkw2gwGzJ-Vb2WQIcgf5s7dyXxwR3H-1WvRcHVJKg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3MzEyLTQ4/MDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/6TO2flklhKtD5K_u_6CUeem6L-ftkwa02sTmfWBAJLc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6TO2flklhKtD5K_u_6CUeem6L-ftkwa02sTmfWBAJLc/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0s60B5EIWU1x_ZxTWvgKyDY1DXN7l272b0uTwKsLKRs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNy0x/NjI3NjM3Mzg2LTc5/MTguanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 430140,
+          "name": "Michael Sandison",
+          "resource_url": "https://api.discogs.com/artists/430140"
+        },
+        {
+          "active": true,
+          "id": 430141,
+          "name": "Marcus Eoin",
+          "resource_url": "https://api.discogs.com/artists/430141"
+        },
+        {
+          "active": false,
+          "id": 436767,
+          "name": "Chris Horne",
+          "resource_url": "https://api.discogs.com/artists/436767"
+        }
+      ],
       "name": "Boards Of Canada",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "307",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/307"
-      },
+      "namevariations": [
+        "B O C",
+        "B.O.C.",
+        "BOC",
+        "BoC",
+        "Board Of Canada",
+        "Board's Of Canada",
+        "b.o.c.",
+        "ボーズ・オブ・カナダ",
+        "ボーズ・オブ・カンダ",
+        "ボーズ・オヴ・カナダ"
+      ],
+      "profile": "Electronic music duo from Edinburgh, Scotland, UK consisting of brothers Michael Sandison and Marcus Eoin. The name 'Boards Of Canada' derives from the National Film Board Of Canada, whose documentary films inspired the duo.",
+      "releases_url": "https://api.discogs.com/artists/307/releases",
       "resource_url": "https://api.discogs.com/artists/307",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/307",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/307-Boards-Of-Canada",
+      "urls": [
+        "http://www.boardsofcanada.com",
+        "http://warp.net/artists/91407-boards-of-canada",
+        "http://boardsofcanada.bandcamp.com",
+        "http://bocpages.org/wiki/About",
+        "http://www.facebook.com/boardsofcanada",
+        "http://www.instagram.com/boardsofcanada",
+        "http://myspace.com/abeautifulplace",
+        "http://soundcloud.com/boardsofcanada",
+        "http://twitter.com/boardsofcanada",
+        "http://vimeo.com/boardsofcanada",
+        "http://en.wikipedia.org/wiki/Boards_of_Canada",
+        "http://www.youtube.com/user/boardsofcanada",
+        "https://bsky.app/profile/boardsofcanada.bsky.social"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Boards of Canada', url='https://www.last.fm/music/Boards+of+Canada', mbid='69158f97-4c07-4c4e-baf8-4e4ab1ed666e', listeners=2101357, playcount=167047249, bio_summary='Boards of Canada are a Scottish electronic music duo consisting of brothers Mike Sandison and Marcus Eoin. They initially signed to Skam Records and later to Warp Records in the 1990s, gaining wider recognition after the release of their debut studio album \"Music Has the Right to Children\" in 1998. The album was followed by \"Geogaddi\" (2002), \"The Campfire Headphase\" (2005) and \"Tomorrow\\'s Harvest\" (2013), all of which contributed to their reputation within electronic music for distinctive production and atmospheric composition. <a href=\"https://www.last.fm/music/Boards+of+Canada\">Read more on Last.fm</a>', bio_content='Boards of Canada are a Scottish electronic music duo consisting of brothers Mike Sandison and Marcus Eoin. They initially signed to Skam Records and later to Warp Records in the 1990s, gaining wider recognition after the release of their debut studio album \"Music Has the Right to Children\" in 1998. The album was followed by \"Geogaddi\" (2002), \"The Campfire Headphase\" (2005) and \"Tomorrow\\'s Harvest\" (2013), all of which contributed to their reputation within electronic music for distinctive production and atmospheric composition.\\n\\nTheir music is strongly influenced by 1970s media and electronic sounds, incorporating vintage synthesizer tones, analogue equipment, samples, and hip hop-inspired rhythms. Critics have associated their work with themes of nostalgia, childhood memory, environmental concern, science, and esoteric or ambiguous subject matter. The duo have also become known for their reclusive public presence, rarely granting interviews, not performing live since 2001, and frequently incorporating cryptic or subliminal elements into their work, including promotional puzzles and alternate reality-style campaigns. In 2012, they were described as one of the best-known and best-loved electronic acts of the previous two decades.\\n\\nMike Sandison (born Michael Peter Sandison, 14 July 1971) and Marcus Eoin (born Marcus Eoin Sandison, 27 May 1973) were raised in Cullen, Moray, in Scotland, and spent part of their childhood in Calgary, Canada, while their father worked on construction projects. They later attended the University of Edinburgh, where Mike studied music and Marcus studied artificial intelligence, although Marcus left before completing his degree. The brothers initially did not publicly confirm their familial relationship, reportedly to avoid comparisons with other sibling electronic acts such as Orbital, revealing this only in a 2005 interview.\\n\\nBoth brothers began experimenting with music and recording techniques at a young age, using tape machines to layer sampled sounds. By their teenage years they were involved in amateur musical projects, and Boards of Canada formed in 1986 when Marcus joined Mike\\'s band. The name was inspired by the National Film Board of Canada. Early releases included \"Catalog 3\" (1987) on their own label Music70 and \"Acid Memories\" (1989), both of which had extremely limited circulation, primarily among friends and family, although short excerpts were later shared online. In the early 1990s, associated recordings such as \"Play By Numbers\" and \"Hooper Bay\" (both 1994) were also produced within their wider collective environment, Hexagon Sun, alongside similarly limited distribution material.\\n\\nThe duo self-released the \"Twoism\" EP in 1995. After a copy reached Autechre, they were encouraged to contact Skam Records, leading to the release of \"Hi Scores\" in 1996. They also released \"Boc Maxima\" the same year through Music70 in a limited form. Between 1995 and 1997 they developed material for \"Music Has the Right to Children\", which was released in April 1998 jointly by Skam Records and Warp Records. Its cover features a family photograph from Banff Springs with digitally removed faces. The album combined longer tracks with short interludes and included notable pieces such as \"Roygbiv\". It received critical acclaim and was later ranked among the most significant albums of the 1990s in retrospective lists.\\n\\nRecording for \"Geogaddi\" took place between 1999 and 2001, with its release following in 2002 in Japan and Europe. The album’s imagery and tone were widely described as darker and more intense than earlier work, with critics noting themes of tension and unease. It was later suggested by the duo that the album was influenced in part by the September 11 attacks. Work on \"The Campfire Headphase\" began as early as 2002, with full studio production starting in 2004. The album was released in 2005 and included a stylistic shift that incorporated more guitar-based textures alongside electronic production. The track \"Dayvan Cowboy\" was promoted with a music video, and critics noted its blending of electronic and rock elements.\\n\\nFollowing the EP \"Trans Canada Highway\", the duo took a period of reduced public activity, during which they traveled and expanded their Hexagon Sun studio in Scotland. In 2013, a promotional campaign involving hidden codes and broadcast messages across various media platforms preceded the announcement of \"Tomorrow\\'s Harvest\". After the codes were deciphered through coordinated online activity, the album was revealed and released in June 2013 to widespread critical acclaim.\\n\\nIn subsequent years, Boards of Canada released a small number of remixes, including reinterpretations of \"Mr Mistake\" by Nevermen, \"Sisters\" by Odd Nosdam, and \"Sometimes\" by The Sexual Objects, as well as an instrumental version of their earlier remix work. In 2019, Warp Records’ WXAXRXP celebration included a 100-hour broadcast event on NTS Radio, during which Boards of Canada contributed a two-hour mixtape titled \"Societas X Tape\". The set included material from artists such as Grace Jones, Devo, and Yellow Magic Orchestra, combined with spoken word samples and material rumored to include unreleased work by the duo. In 2021, they released a remix of \"Treat Em Right\", another track by Nevermen.\\n\\nIn April 2026, speculation surrounding new Boards of Canada material emerged after fans received mysterious VHS tapes featuring analogue imagery, distorted voice recordings, and a seven-hexagon logo. The campaign expanded through posters appearing in several major cities and the reactivation of a website previously associated with \"Tomorrow\\'s Harvest\". Warp Records later confirmed its involvement.\\n\\nOn 16 April 2026, Boards of Canada released \"Tape 05\", their first original piece of music in thirteen years. The accompanying video featured VHS-style visuals and documentary footage, while the track itself was described as dark ambient and heavily atmospheric.\\n\\nOn 22 April 2026, the duo announced their fifth studio album, \"Inferno\", scheduled for release on 29 May 2026 through Warp Records. In the weeks leading up to the album, they organized a series of listening events known as the \"Inferno Sessions\" and released the opening tracks, \"Introit\" and \"Prophecy at 1420 MHz\".\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Boards_of_Canada\\n\\nStudio albums\\nMusic Has the Right to Children (1998)\\nGeogaddi (2002)\\nThe Campfire Headphase (2005)\\nTomorrow\\'s Harvest (2013)\\nInferno (2026) <a href=\"https://www.last.fm/music/Boards+of+Canada\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['ambient', 'electronic', 'idm', 'chillout', 'electronica'], similar_artists=[{'name': 'Aphex Twin', 'url': 'https://www.last.fm/music/Aphex+Twin'}, {'name': 'Autechre', 'url': 'https://www.last.fm/music/Autechre'}, {'name': 'Casino Versus Japan', 'url': 'https://www.last.fm/music/Casino+Versus+Japan'}, {'name': 'Christ.', 'url': 'https://www.last.fm/music/Christ.'}, {'name': 'Squarepusher', 'url': 'https://www.last.fm/music/Squarepusher'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Boards of Canada', 'mbid': '69158f97-4c07-4c4e-baf8-4e4ab1ed666e', 'url': 'https://www.last.fm/music/Boards+of+Canada', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2101357', 'playcount': '167047249'}, 'similar': {'artist': [{'name': 'Aphex Twin', 'url': 'https://www.last.fm/music/Aphex+Twin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Autechre', 'url': 'https://www.last.fm/music/Autechre', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Casino Versus Japan', 'url': 'https://www.last.fm/music/Casino+Versus+Japan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Christ.', 'url': 'https://www.last.fm/music/Christ.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Squarepusher', 'url': 'https://www.last.fm/music/Squarepusher', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'idm', 'url': 'https://www.last.fm/tag/idm'}, {'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}, {'name': 'electronica', 'url': 'https://www.last.fm/tag/electronica'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Boards+of+Canada/+wiki'}}, 'published': '02 Feb 2006, 04:15', 'summary': 'Boards of Canada are a Scottish electronic music duo consisting of brothers Mike Sandison and Marcus Eoin. They initially signed to Skam Records and later to Warp Records in the 1990s, gaining wider recognition after the release of their debut studio album \"Music Has the Right to Children\" in 1998. The album was followed by \"Geogaddi\" (2002), \"The Campfire Headphase\" (2005) and \"Tomorrow\\'s Harvest\" (2013), all of which contributed to their reputation within electronic music for distinctive production and atmospheric composition. <a href=\"https://www.last.fm/music/Boards+of+Canada\">Read more on Last.fm</a>', 'content': 'Boards of Canada are a Scottish electronic music duo consisting of brothers Mike Sandison and Marcus Eoin. They initially signed to Skam Records and later to Warp Records in the 1990s, gaining wider recognition after the release of their debut studio album \"Music Has the Right to Children\" in 1998. The album was followed by \"Geogaddi\" (2002), \"The Campfire Headphase\" (2005) and \"Tomorrow\\'s Harvest\" (2013), all of which contributed to their reputation within electronic music for distinctive production and atmospheric composition.\\n\\nTheir music is strongly influenced by 1970s media and electronic sounds, incorporating vintage synthesizer tones, analogue equipment, samples, and hip hop-inspired rhythms. Critics have associated their work with themes of nostalgia, childhood memory, environmental concern, science, and esoteric or ambiguous subject matter. The duo have also become known for their reclusive public presence, rarely granting interviews, not performing live since 2001, and frequently incorporating cryptic or subliminal elements into their work, including promotional puzzles and alternate reality-style campaigns. In 2012, they were described as one of the best-known and best-loved electronic acts of the previous two decades.\\n\\nMike Sandison (born Michael Peter Sandison, 14 July 1971) and Marcus Eoin (born Marcus Eoin Sandison, 27 May 1973) were raised in Cullen, Moray, in Scotland, and spent part of their childhood in Calgary, Canada, while their father worked on construction projects. They later attended the University of Edinburgh, where Mike studied music and Marcus studied artificial intelligence, although Marcus left before completing his degree. The brothers initially did not publicly confirm their familial relationship, reportedly to avoid comparisons with other sibling electronic acts such as Orbital, revealing this only in a 2005 interview.\\n\\nBoth brothers began experimenting with music and recording techniques at a young age, using tape machines to layer sampled sounds. By their teenage years they were involved in amateur musical projects, and Boards of Canada formed in 1986 when Marcus joined Mike\\'s band. The name was inspired by the National Film Board of Canada. Early releases included \"Catalog 3\" (1987) on their own label Music70 and \"Acid Memories\" (1989), both of which had extremely limited circulation, primarily among friends and family, although short excerpts were later shared online. In the early 1990s, associated recordings such as \"Play By Numbers\" and \"Hooper Bay\" (both 1994) were also produced within their wider collective environment, Hexagon Sun, alongside similarly limited distribution material.\\n\\nThe duo self-released the \"Twoism\" EP in 1995. After a copy reached Autechre, they were encouraged to contact Skam Records, leading to the release of \"Hi Scores\" in 1996. They also released \"Boc Maxima\" the same year through Music70 in a limited form. Between 1995 and 1997 they developed material for \"Music Has the Right to Children\", which was released in April 1998 jointly by Skam Records and Warp Records. Its cover features a family photograph from Banff Springs with digitally removed faces. The album combined longer tracks with short interludes and included notable pieces such as \"Roygbiv\". It received critical acclaim and was later ranked among the most significant albums of the 1990s in retrospective lists.\\n\\nRecording for \"Geogaddi\" took place between 1999 and 2001, with its release following in 2002 in Japan and Europe. The album’s imagery and tone were widely described as darker and more intense than earlier work, with critics noting themes of tension and unease. It was later suggested by the duo that the album was influenced in part by the September 11 attacks. Work on \"The Campfire Headphase\" began as early as 2002, with full studio production starting in 2004. The album was released in 2005 and included a stylistic shift that incorporated more guitar-based textures alongside electronic production. The track \"Dayvan Cowboy\" was promoted with a music video, and critics noted its blending of electronic and rock elements.\\n\\nFollowing the EP \"Trans Canada Highway\", the duo took a period of reduced public activity, during which they traveled and expanded their Hexagon Sun studio in Scotland. In 2013, a promotional campaign involving hidden codes and broadcast messages across various media platforms preceded the announcement of \"Tomorrow\\'s Harvest\". After the codes were deciphered through coordinated online activity, the album was revealed and released in June 2013 to widespread critical acclaim.\\n\\nIn subsequent years, Boards of Canada released a small number of remixes, including reinterpretations of \"Mr Mistake\" by Nevermen, \"Sisters\" by Odd Nosdam, and \"Sometimes\" by The Sexual Objects, as well as an instrumental version of their earlier remix work. In 2019, Warp Records’ WXAXRXP celebration included a 100-hour broadcast event on NTS Radio, during which Boards of Canada contributed a two-hour mixtape titled \"Societas X Tape\". The set included material from artists such as Grace Jones, Devo, and Yellow Magic Orchestra, combined with spoken word samples and material rumored to include unreleased work by the duo. In 2021, they released a remix of \"Treat Em Right\", another track by Nevermen.\\n\\nIn April 2026, speculation surrounding new Boards of Canada material emerged after fans received mysterious VHS tapes featuring analogue imagery, distorted voice recordings, and a seven-hexagon logo. The campaign expanded through posters appearing in several major cities and the reactivation of a website previously associated with \"Tomorrow\\'s Harvest\". Warp Records later confirmed its involvement.\\n\\nOn 16 April 2026, Boards of Canada released \"Tape 05\", their first original piece of music in thirteen years. The accompanying video featured VHS-style visuals and documentary footage, while the track itself was described as dark ambient and heavily atmospheric.\\n\\nOn 22 April 2026, the duo announced their fifth studio album, \"Inferno\", scheduled for release on 29 May 2026 through Warp Records. In the weeks leading up to the album, they organized a series of listening events known as the \"Inferno Sessions\" and released the opening tracks, \"Introit\" and \"Prophecy at 1420 MHz\".\\n\\nFull Wikipedia article: https://en.wikipedia.org/wiki/Boards_of_Canada\\n\\nStudio albums\\nMusic Has the Right to Children (1998)\\nGeogaddi (2002)\\nThe Campfire Headphase (2005)\\nTomorrow\\'s Harvest (2013)\\nInferno (2026) <a href=\"https://www.last.fm/music/Boards+of+Canada\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "perplexity": {
@@ -300,6 +888,6 @@
   },
   "spotify_id": "2VAvhf61GgLYmC6C8anyX1",
   "spotify_url": "https://open.spotify.com/artist/2VAvhf61GgLYmC6C8anyX1",
-  "updated_at": "2026-10-22T14:05:19.039214",
+  "updated_at": "2026-10-30T18:36:49.774955",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Boards_of_Canada"
 }

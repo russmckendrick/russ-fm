@@ -126,22 +126,204 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='2930043', url='https://music.apple.com/gb/artist/sleep/2930043', name='Sleep', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/da/f6/b1/daf6b19a-2c41-c0c4-c780-958241c07e6e/pr_source.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '2930043', 'type': 'artists', 'href': '/v1/catalog/gb/artists/2930043', 'attributes': {'name': 'Sleep', 'genreNames': ['Metal'], 'artwork': {'width': 992, 'height': 992, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/da/f6/b1/daf6b19a-2c41-c0c4-c780-958241c07e6e/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '060409', 'textColor1': 'b9cad6', 'textColor2': 'c5b6ce', 'textColor3': '95a3ad', 'textColor4': '9f92a6'}, 'url': 'https://music.apple.com/gb/artist/sleep/2930043'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/2930043/albums', 'data': [{'id': '1510661717', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510661717'}, {'id': '43359181', 'type': 'albums', 'href': '/v1/catalog/gb/albums/43359181'}, {'id': '1556744849', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1556744849'}, {'id': '969252365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/969252365'}, {'id': '1391569737', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1391569737'}, {'id': '1627094365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1627094365'}, {'id': '272772755', 'type': 'albums', 'href': '/v1/catalog/gb/albums/272772755'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "57916",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 57916,
+      "images": [
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/ZlT5u8FffpA8Z-TeF8RMERHjR4g9xbNS1DmZehnAKlU/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ZlT5u8FffpA8Z-TeF8RMERHjR4g9xbNS1DmZehnAKlU/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/3GEZYEwObxJqta2Dm8H9zUZXbYGIPa1lUgfNmB2Ftjo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/UU__OeyvDIXEbM5D6w-dAlOm37VlcBSUw06gsT67n9E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UU__OeyvDIXEbM5D6w-dAlOm37VlcBSUw06gsT67n9E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YUX23vTQHE5vQ7l2lnD8hxuVf9y2OkmE5Hlv4xqFw8I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3IYOuhSVz-2QaKvIBhae65NE8JiH3WRuDt1xjgf6PoM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3IYOuhSVz-2QaKvIBhae65NE8JiH3WRuDt1xjgf6PoM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8JDDqI60qBtq99rEg-nIUIsMGDWi_oHQ8QrkffvyaU8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/LCy8DH0LLXyy-ZY3E6WYBU8wCMO1JsSlEi4zisimFKk/rs:fit/g:sm/q:90/h:600/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LCy8DH0LLXyy-ZY3E6WYBU8wCMO1JsSlEi4zisimFKk/rs:fit/g:sm/q:90/h:600/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RJX9Ckj1QIQXVTuCWTdb7QtaksbymQYBpMPjO5_Q3MM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "width": 413
+        },
+        {
+          "height": 532,
+          "resource_url": "https://i.discogs.com/NV7yOrc_hLnhWjEii0a85YgxqWigODCDS09xlZ4uAiQ/rs:fit/g:sm/q:90/h:532/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NV7yOrc_hLnhWjEii0a85YgxqWigODCDS09xlZ4uAiQ/rs:fit/g:sm/q:90/h:532/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/2c32_STtUjaqraB5EpT7ChoCdNCOuzlVzBEuC-n0u-M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VW7y63Q9UkwoHqJdA9NZDb7QTlqTpEILfRu8HyPrucY/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VW7y63Q9UkwoHqJdA9NZDb7QTlqTpEILfRu8HyPrucY/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/b8Gb70dXCdHj3ARBPiq98-_ZP6DzNCe2JJ66FaPkzLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "width": 411
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/D5l4B3gUrHaZUgTpr0T49yzbYlI-6_AW7b6XCw3vpBA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D5l4B3gUrHaZUgTpr0T49yzbYlI-6_AW7b6XCw3vpBA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yeuWjhuQv06BY8a252fw4FI4tOpOuL-qyQQq3eOZc00/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 299,
+          "resource_url": "https://i.discogs.com/vXwP7P8o8KxoVYheAYIwWfamtjYlyMutaqN_xvHVWG4/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vXwP7P8o8KxoVYheAYIwWfamtjYlyMutaqN_xvHVWG4/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NXIAdemhXjXnMVeheav07uOzqyLIcqArgXehGbOF5WA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 411,
+          "resource_url": "https://i.discogs.com/4gJOv5TnZn1q1-4-CaNu6nLkAJWgJNlAsCheG97c0HU/rs:fit/g:sm/q:90/h:411/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4gJOv5TnZn1q1-4-CaNu6nLkAJWgJNlAsCheG97c0HU/rs:fit/g:sm/q:90/h:411/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/2eYONf5rKIpnVGv9Bg9sb2z_8EW31NxVwCBAxBkGKA0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 272,
+          "resource_url": "https://i.discogs.com/D2cOtkD4FmyG1qJystY42Op4qqc5wmYHuCdicCIk12o/rs:fit/g:sm/q:90/h:272/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D2cOtkD4FmyG1qJystY42Op4qqc5wmYHuCdicCIk12o/rs:fit/g:sm/q:90/h:272/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VnGjTrUvnyXV5zr36ys6S2HFsLyY4WxwaG1Wg9jueN0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/FIoJb_t6_-5m4p6f_FHeSg1z8censioEsn0uy9aWKp4/rs:fit/g:sm/q:90/h:406/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FIoJb_t6_-5m4p6f_FHeSg1z8censioEsn0uy9aWKp4/rs:fit/g:sm/q:90/h:406/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/pM8mHauU31lTBkybcRzSk2Ti5wPJt_zasnu-CNfYGoQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 353,
+          "resource_url": "https://i.discogs.com/JF3FjGosFQv5AdaH77l34QbBqeMzvCPyOaDA01_OjoQ/rs:fit/g:sm/q:90/h:353/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JF3FjGosFQv5AdaH77l34QbBqeMzvCPyOaDA01_OjoQ/rs:fit/g:sm/q:90/h:353/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/84WHBE316FZ72P0NHSs7_wvp4M4ONrta2ZR92exjGIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 413,
+          "resource_url": "https://i.discogs.com/dI_eUpsasBzcRuy38jA1HED2Kc7VtP743ofG7mHE5Wc/rs:fit/g:sm/q:90/h:413/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dI_eUpsasBzcRuy38jA1HED2Kc7VtP743ofG7mHE5Wc/rs:fit/g:sm/q:90/h:413/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/pUC9P4U4VuonUt4kbrSiR_Ov2n_vfgNp_hy9Ba2aZ6g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/6VFSbsEB5YmOu8Dt4khtCMb3W0pk7n1_NyTqUrEJR1c/rs:fit/g:sm/q:90/h:600/w:519/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6VFSbsEB5YmOu8Dt4khtCMb3W0pk7n1_NyTqUrEJR1c/rs:fit/g:sm/q:90/h:600/w:519/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tX53jSA0nyK-uQNZmJ1in371xYnMJfjrqTAZSaH5DwY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "width": 519
+        },
+        {
+          "height": 558,
+          "resource_url": "https://i.discogs.com/8leHbqeVyeX9ZJgou6_uWPTMsH1ITZM38gwmrst7fE4/rs:fit/g:sm/q:90/h:558/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8leHbqeVyeX9ZJgou6_uWPTMsH1ITZM38gwmrst7fE4/rs:fit/g:sm/q:90/h:558/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Bx1Zqg-Byfeh6UFJ7pWp2usrcy6F0epiBuHgH1Pr33k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4EDqLOZyCBflG2xWihFKort_ukanMJLhv6qdzuz3o_8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4EDqLOZyCBflG2xWihFKort_ukanMJLhv6qdzuz3o_8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6i25rG2ofvAaJk2-4GwB8GfU-2Cx5McxXqNumot9sVw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 293,
+          "resource_url": "https://i.discogs.com/52cOqNLn3s33Npj5zCg_Suxkr12lHAA9oUrBqkDG11E/rs:fit/g:sm/q:90/h:293/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/52cOqNLn3s33Npj5zCg_Suxkr12lHAA9oUrBqkDG11E/rs:fit/g:sm/q:90/h:293/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wQ9cdcpHdAMJ6us7B6XlehVX4yzMPd14J5j2afBw8fM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261337,
+          "name": "Dale Crover",
+          "resource_url": "https://api.discogs.com/artists/261337"
+        },
+        {
+          "active": true,
+          "id": 279818,
+          "name": "Al Cisneros",
+          "resource_url": "https://api.discogs.com/artists/279818"
+        },
+        {
+          "active": false,
+          "id": 279819,
+          "name": "Chris Hakius",
+          "resource_url": "https://api.discogs.com/artists/279819"
+        },
+        {
+          "active": false,
+          "id": 290985,
+          "name": "Matt Pike",
+          "resource_url": "https://api.discogs.com/artists/290985"
+        },
+        {
+          "active": false,
+          "id": 418466,
+          "name": "Jason Roeder",
+          "resource_url": "https://api.discogs.com/artists/418466"
+        },
+        {
+          "active": true,
+          "id": 543811,
+          "name": "Bubba Dupree",
+          "resource_url": "https://api.discogs.com/artists/543811"
+        },
+        {
+          "active": false,
+          "id": 817170,
+          "name": "Justin Marler",
+          "resource_url": "https://api.discogs.com/artists/817170"
+        }
+      ],
       "name": "Sleep",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "57916",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/57916"
-      },
+      "profile": "Stoner rock band from San Jose, California, USA.\r\nSleep emerged in 1990 from the remains of [a=Asbestosdeath], which featured members Al Cisneros (vocals/bass), Matt Pike (guitar), and Chris Hakius (drums).\r\nAfter Sleep broke up, Matt Pike formed [a=High On Fire], while Al Cisneros and Chris Hakius eventually reunited in [a=OM (8)]. In 2009 Pike, Cisneros, and Hakius reunited to perform two sets at All Tomorrow's Parties. The following year, Pike and Cisneros resumed touring as Sleep, with drummer Jason Roeder (of [a=Neurosis]) replacing Chris Hakius.",
+      "releases_url": "https://api.discogs.com/artists/57916/releases",
       "resource_url": "https://api.discogs.com/artists/57916",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/57916",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/57916-Sleep",
+      "urls": [
+        "https://hempispheres.com",
+        "http://weedian.com",
+        "https://sleep.bandcamp.com",
+        "http://www.facebook.com/officialsleep",
+        "https://www.instagram.com/sleeptheband",
+        "https://twitter.com/sleep_official",
+        "https://en.wikipedia.org/wiki/Sleep_(band)"
+      ]
     },
     "identity": {
       "musicbrainz_id": "6fc69ec6-3e59-4ff7-849d-b5da932abe4d",
@@ -239,22 +421,204 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='2930043', url='https://music.apple.com/gb/artist/sleep/2930043', name='Sleep', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/da/f6/b1/daf6b19a-2c41-c0c4-c780-958241c07e6e/pr_source.png/2000x2000bb.jpg', genres=['Metal'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '2930043', 'type': 'artists', 'href': '/v1/catalog/gb/artists/2930043', 'attributes': {'name': 'Sleep', 'genreNames': ['Metal'], 'artwork': {'width': 992, 'height': 992, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/da/f6/b1/daf6b19a-2c41-c0c4-c780-958241c07e6e/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '060409', 'textColor1': 'b9cad6', 'textColor2': 'c5b6ce', 'textColor3': '95a3ad', 'textColor4': '9f92a6'}, 'url': 'https://music.apple.com/gb/artist/sleep/2930043'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/2930043/albums', 'data': [{'id': '1510661717', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1510661717'}, {'id': '43359181', 'type': 'albums', 'href': '/v1/catalog/gb/albums/43359181'}, {'id': '1556744849', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1556744849'}, {'id': '969252365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/969252365'}, {'id': '1391569737', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1391569737'}, {'id': '1627094365', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1627094365'}, {'id': '272772755', 'type': 'albums', 'href': '/v1/catalog/gb/albums/272772755'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "57916",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 57916,
+      "images": [
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/ZlT5u8FffpA8Z-TeF8RMERHjR4g9xbNS1DmZehnAKlU/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ZlT5u8FffpA8Z-TeF8RMERHjR4g9xbNS1DmZehnAKlU/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/3GEZYEwObxJqta2Dm8H9zUZXbYGIPa1lUgfNmB2Ftjo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3ODE4MDY1OTYt/ODIzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/UU__OeyvDIXEbM5D6w-dAlOm37VlcBSUw06gsT67n9E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UU__OeyvDIXEbM5D6w-dAlOm37VlcBSUw06gsT67n9E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YUX23vTQHE5vQ7l2lnD8hxuVf9y2OkmE5Hlv4xqFw8I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MjQyMzQyNTEt/ODcxMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3IYOuhSVz-2QaKvIBhae65NE8JiH3WRuDt1xjgf6PoM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3IYOuhSVz-2QaKvIBhae65NE8JiH3WRuDt1xjgf6PoM/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8JDDqI60qBtq99rEg-nIUIsMGDWi_oHQ8QrkffvyaU8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MDct/NDg1Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/LCy8DH0LLXyy-ZY3E6WYBU8wCMO1JsSlEi4zisimFKk/rs:fit/g:sm/q:90/h:600/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LCy8DH0LLXyy-ZY3E6WYBU8wCMO1JsSlEi4zisimFKk/rs:fit/g:sm/q:90/h:600/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RJX9Ckj1QIQXVTuCWTdb7QtaksbymQYBpMPjO5_Q3MM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTEyNDE2MDE1MTcu/anBlZw.jpeg",
+          "width": 413
+        },
+        {
+          "height": 532,
+          "resource_url": "https://i.discogs.com/NV7yOrc_hLnhWjEii0a85YgxqWigODCDS09xlZ4uAiQ/rs:fit/g:sm/q:90/h:532/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NV7yOrc_hLnhWjEii0a85YgxqWigODCDS09xlZ4uAiQ/rs:fit/g:sm/q:90/h:532/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/2c32_STtUjaqraB5EpT7ChoCdNCOuzlVzBEuC-n0u-M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MjQt/NTgyOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/VW7y63Q9UkwoHqJdA9NZDb7QTlqTpEILfRu8HyPrucY/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VW7y63Q9UkwoHqJdA9NZDb7QTlqTpEILfRu8HyPrucY/rs:fit/g:sm/q:90/h:600/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/b8Gb70dXCdHj3ARBPiq98-_ZP6DzNCe2JJ66FaPkzLs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4NDYt/MzIzNy5qcGVn.jpeg",
+          "width": 411
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/D5l4B3gUrHaZUgTpr0T49yzbYlI-6_AW7b6XCw3vpBA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D5l4B3gUrHaZUgTpr0T49yzbYlI-6_AW7b6XCw3vpBA/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yeuWjhuQv06BY8a252fw4FI4tOpOuL-qyQQq3eOZc00/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg4MzIt/Nzg5NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 299,
+          "resource_url": "https://i.discogs.com/vXwP7P8o8KxoVYheAYIwWfamtjYlyMutaqN_xvHVWG4/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vXwP7P8o8KxoVYheAYIwWfamtjYlyMutaqN_xvHVWG4/rs:fit/g:sm/q:90/h:299/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/NXIAdemhXjXnMVeheav07uOzqyLIcqArgXehGbOF5WA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE1MTIxMzA4NzAt/Njk2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 411,
+          "resource_url": "https://i.discogs.com/4gJOv5TnZn1q1-4-CaNu6nLkAJWgJNlAsCheG97c0HU/rs:fit/g:sm/q:90/h:411/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4gJOv5TnZn1q1-4-CaNu6nLkAJWgJNlAsCheG97c0HU/rs:fit/g:sm/q:90/h:411/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/2eYONf5rKIpnVGv9Bg9sb2z_8EW31NxVwCBAxBkGKA0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NjA5MTcyMjgt/NTU2OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 272,
+          "resource_url": "https://i.discogs.com/D2cOtkD4FmyG1qJystY42Op4qqc5wmYHuCdicCIk12o/rs:fit/g:sm/q:90/h:272/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D2cOtkD4FmyG1qJystY42Op4qqc5wmYHuCdicCIk12o/rs:fit/g:sm/q:90/h:272/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VnGjTrUvnyXV5zr36ys6S2HFsLyY4WxwaG1Wg9jueN0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTUxMzU4ODYt/MTI0Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 406,
+          "resource_url": "https://i.discogs.com/FIoJb_t6_-5m4p6f_FHeSg1z8censioEsn0uy9aWKp4/rs:fit/g:sm/q:90/h:406/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FIoJb_t6_-5m4p6f_FHeSg1z8censioEsn0uy9aWKp4/rs:fit/g:sm/q:90/h:406/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/pM8mHauU31lTBkybcRzSk2Ti5wPJt_zasnu-CNfYGoQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NDA5Ny5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 353,
+          "resource_url": "https://i.discogs.com/JF3FjGosFQv5AdaH77l34QbBqeMzvCPyOaDA01_OjoQ/rs:fit/g:sm/q:90/h:353/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JF3FjGosFQv5AdaH77l34QbBqeMzvCPyOaDA01_OjoQ/rs:fit/g:sm/q:90/h:353/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/84WHBE316FZ72P0NHSs7_wvp4M4ONrta2ZR92exjGIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU4ODk2OTAt/NjM5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 413,
+          "resource_url": "https://i.discogs.com/dI_eUpsasBzcRuy38jA1HED2Kc7VtP743ofG7mHE5Wc/rs:fit/g:sm/q:90/h:413/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dI_eUpsasBzcRuy38jA1HED2Kc7VtP743ofG7mHE5Wc/rs:fit/g:sm/q:90/h:413/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/pUC9P4U4VuonUt4kbrSiR_Ov2n_vfgNp_hy9Ba2aZ6g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTYyNTE3NzMt/NDY5NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/6VFSbsEB5YmOu8Dt4khtCMb3W0pk7n1_NyTqUrEJR1c/rs:fit/g:sm/q:90/h:600/w:519/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6VFSbsEB5YmOu8Dt4khtCMb3W0pk7n1_NyTqUrEJR1c/rs:fit/g:sm/q:90/h:600/w:519/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tX53jSA0nyK-uQNZmJ1in371xYnMJfjrqTAZSaH5DwY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/ODk3OC5qcGVn.jpeg",
+          "width": 519
+        },
+        {
+          "height": 558,
+          "resource_url": "https://i.discogs.com/8leHbqeVyeX9ZJgou6_uWPTMsH1ITZM38gwmrst7fE4/rs:fit/g:sm/q:90/h:558/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8leHbqeVyeX9ZJgou6_uWPTMsH1ITZM38gwmrst7fE4/rs:fit/g:sm/q:90/h:558/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Bx1Zqg-Byfeh6UFJ7pWp2usrcy6F0epiBuHgH1Pr33k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/MTM3OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4EDqLOZyCBflG2xWihFKort_ukanMJLhv6qdzuz3o_8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4EDqLOZyCBflG2xWihFKort_ukanMJLhv6qdzuz3o_8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6i25rG2ofvAaJk2-4GwB8GfU-2Cx5McxXqNumot9sVw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE3NTU1MzA4NjUt/NTE5OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 293,
+          "resource_url": "https://i.discogs.com/52cOqNLn3s33Npj5zCg_Suxkr12lHAA9oUrBqkDG11E/rs:fit/g:sm/q:90/h:293/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/52cOqNLn3s33Npj5zCg_Suxkr12lHAA9oUrBqkDG11E/rs:fit/g:sm/q:90/h:293/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wQ9cdcpHdAMJ6us7B6XlehVX4yzMPd14J5j2afBw8fM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3OTE2/LTE0NzYyNzg3ODgt/MTQ3NC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 261337,
+          "name": "Dale Crover",
+          "resource_url": "https://api.discogs.com/artists/261337"
+        },
+        {
+          "active": true,
+          "id": 279818,
+          "name": "Al Cisneros",
+          "resource_url": "https://api.discogs.com/artists/279818"
+        },
+        {
+          "active": false,
+          "id": 279819,
+          "name": "Chris Hakius",
+          "resource_url": "https://api.discogs.com/artists/279819"
+        },
+        {
+          "active": false,
+          "id": 290985,
+          "name": "Matt Pike",
+          "resource_url": "https://api.discogs.com/artists/290985"
+        },
+        {
+          "active": false,
+          "id": 418466,
+          "name": "Jason Roeder",
+          "resource_url": "https://api.discogs.com/artists/418466"
+        },
+        {
+          "active": true,
+          "id": 543811,
+          "name": "Bubba Dupree",
+          "resource_url": "https://api.discogs.com/artists/543811"
+        },
+        {
+          "active": false,
+          "id": 817170,
+          "name": "Justin Marler",
+          "resource_url": "https://api.discogs.com/artists/817170"
+        }
+      ],
       "name": "Sleep",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "57916",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/57916"
-      },
+      "profile": "Stoner rock band from San Jose, California, USA.\r\nSleep emerged in 1990 from the remains of [a=Asbestosdeath], which featured members Al Cisneros (vocals/bass), Matt Pike (guitar), and Chris Hakius (drums).\r\nAfter Sleep broke up, Matt Pike formed [a=High On Fire], while Al Cisneros and Chris Hakius eventually reunited in [a=OM (8)]. In 2009 Pike, Cisneros, and Hakius reunited to perform two sets at All Tomorrow's Parties. The following year, Pike and Cisneros resumed touring as Sleep, with drummer Jason Roeder (of [a=Neurosis]) replacing Chris Hakius.",
+      "releases_url": "https://api.discogs.com/artists/57916/releases",
       "resource_url": "https://api.discogs.com/artists/57916",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/57916",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/57916-Sleep",
+      "urls": [
+        "https://hempispheres.com",
+        "http://weedian.com",
+        "https://sleep.bandcamp.com",
+        "http://www.facebook.com/officialsleep",
+        "https://www.instagram.com/sleeptheband",
+        "https://twitter.com/sleep_official",
+        "https://en.wikipedia.org/wiki/Sleep_(band)"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Sleep', url='https://www.last.fm/music/Sleep', mbid='a58100f4-a2f9-4972-a163-41949f187909', listeners=406546, playcount=9645582, bio_summary='There are several artists titled Sleep;\\n\\n1) Sleep is an American doom metal power trio from San Jose, California. The band earned critical and record label attention early in its career. Critic Eduardo Rivadavia describes them as \"perhaps the ultimate stoner rock band\" and notes they exerted a strong influence on heavy metal in the 1990s. However, conflict with its record company contributed to Sleep\\'s breakup by the end of the decade. The band reformed in 2009 and has played sporadic live dates internationally since. <a href=\"https://www.last.fm/music/Sleep\">Read more on Last.fm</a>', bio_content='There are several artists titled Sleep;\\n\\n1) Sleep is an American doom metal power trio from San Jose, California. The band earned critical and record label attention early in its career. Critic Eduardo Rivadavia describes them as \"perhaps the ultimate stoner rock band\" and notes they exerted a strong influence on heavy metal in the 1990s. However, conflict with its record company contributed to Sleep\\'s breakup by the end of the decade. The band reformed in 2009 and has played sporadic live dates internationally since. In 2018, Sleep released their fourth and comeback album, The Sciences, to critical acclaim.\\n\\nSleep evolved in the early 1990s from the band Asbestosdeath, which was established by vocalist/bassist Al Cisneros, drummer Chris Hakius, and guitarist Tom Choi. Asbestosdeath expanded to a quartet with the introduction of Matt Pike on guitar, and recorded two singles - \"Dejection\" for Profane Existence and the self-released \"Unclean\". Choi departed, and would later found Operator Generator, It Is I, Noothgrush, and Las Vegas\\' Black Jetts. Asbestosdeath recruited Justin Marler as replacement and the band adopted the new name, Sleep.\\n\\nSleep has used cannabis-influenced imagery since the release of their second album. In an interview about the making of Jerusalem, Matt Pike acknowledged that the band spent \"a lot\" of their label advance on cannabis, and \"a lot of time.\" Pike also said that about $75,000 was spent on customized amplifiers so the album would have numerous tone layers.\\n\\n2) Sleep is an experimental avant-garde group from New Zealand. Members are: Kim Pieters (Dadamah, Flies Inside The Sun, Rain), Peter Stapleton (Dadamah, The Pin Group, The Terminals, Flies Inside The Sun), and Susan Ballard. Also sometimes Nathan Thompson (Sandoz Lab Technicians) included. They released two albums; Enfolded In Luxury (1999) and Ghostwriting (2001), both on Metonymic label. Their music can be categorized as \"free noise\" or \"free improvisation\" as well.\\n\\n3) Sleep is a melodic hardcore punk band from Brighton, UK. They were only active from 89-91. They release a 7\"  in 1990 and an LP entitled \"Cat And Mouse\" in 1991. Both were released on Meantime Records. They featured two members of indie punk band Knownothing.\\n\\n4) Sleep is the name of a Harsh Noise Wall project. They released a split cassette with Authority.\\n\\n5) Sleep is the name of an Australian electronic music producer. Main body of works center around long ambient \"sleep\"-style productions, but also has done some more techno influenced tracks (see: Stalker Remixes). Released via the Polybonk netlabel.\\n\\n6) Sleep is a hip hop artist and member of The Chicharones along with Josh Martinez. As a solo artist he has released Riot by Candlelight, Christopher, and Hesitation Wounds. As a member of The Chicharones he has released When Pigs Fly, Boss Hogs EP, and Swine Country. \\n\\nSleep grew up in the old-school Mexican community of Farmington, NM. By the age of 9 he was writing and performing his own raps. Fast forward 20 years or so…he’s now married with a 14 year old daughter, a 20 month old son, and a new album that  incubated in a pressure cooker for three years. It is called “Hesitation Wounds.”\\n\\nCo-founder the Oldominion crew, a conglomerate of hip-hop artists based out of the Pacific Northwest, Sleep and his people have been putting it down for Seattle and Portland for the past decade. Sleep first made a name for himself with his lighting-quick delivery and dominant stage presence, but after releasing two solo albums (Riot by Candlelight, Christopher) it was the strength of his song writing that earned him a devout following in the underground scene. <a href=\"https://www.last.fm/music/Sleep\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['doom metal', 'stoner metal', 'Stoner Rock', 'Sludge', 'stoner'], similar_artists=[{'name': 'Electric Wizard', 'url': 'https://www.last.fm/music/Electric+Wizard'}, {'name': 'Bongzilla', 'url': 'https://www.last.fm/music/Bongzilla'}, {'name': 'Om', 'url': 'https://www.last.fm/music/Om'}, {'name': 'Weedeater', 'url': 'https://www.last.fm/music/Weedeater'}, {'name': 'Acid King', 'url': 'https://www.last.fm/music/Acid+King'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Sleep', 'mbid': 'a58100f4-a2f9-4972-a163-41949f187909', 'url': 'https://www.last.fm/music/Sleep', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '406546', 'playcount': '9645582'}, 'similar': {'artist': [{'name': 'Electric Wizard', 'url': 'https://www.last.fm/music/Electric+Wizard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bongzilla', 'url': 'https://www.last.fm/music/Bongzilla', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Om', 'url': 'https://www.last.fm/music/Om', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Weedeater', 'url': 'https://www.last.fm/music/Weedeater', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Acid King', 'url': 'https://www.last.fm/music/Acid+King', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'doom metal', 'url': 'https://www.last.fm/tag/doom+metal'}, {'name': 'stoner metal', 'url': 'https://www.last.fm/tag/stoner+metal'}, {'name': 'Stoner Rock', 'url': 'https://www.last.fm/tag/Stoner+Rock'}, {'name': 'Sludge', 'url': 'https://www.last.fm/tag/Sludge'}, {'name': 'stoner', 'url': 'https://www.last.fm/tag/stoner'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Sleep/+wiki'}}, 'published': '14 Feb 2006, 04:47', 'summary': 'There are several artists titled Sleep;\\n\\n1) Sleep is an American doom metal power trio from San Jose, California. The band earned critical and record label attention early in its career. Critic Eduardo Rivadavia describes them as \"perhaps the ultimate stoner rock band\" and notes they exerted a strong influence on heavy metal in the 1990s. However, conflict with its record company contributed to Sleep\\'s breakup by the end of the decade. The band reformed in 2009 and has played sporadic live dates internationally since. <a href=\"https://www.last.fm/music/Sleep\">Read more on Last.fm</a>', 'content': 'There are several artists titled Sleep;\\n\\n1) Sleep is an American doom metal power trio from San Jose, California. The band earned critical and record label attention early in its career. Critic Eduardo Rivadavia describes them as \"perhaps the ultimate stoner rock band\" and notes they exerted a strong influence on heavy metal in the 1990s. However, conflict with its record company contributed to Sleep\\'s breakup by the end of the decade. The band reformed in 2009 and has played sporadic live dates internationally since. In 2018, Sleep released their fourth and comeback album, The Sciences, to critical acclaim.\\n\\nSleep evolved in the early 1990s from the band Asbestosdeath, which was established by vocalist/bassist Al Cisneros, drummer Chris Hakius, and guitarist Tom Choi. Asbestosdeath expanded to a quartet with the introduction of Matt Pike on guitar, and recorded two singles - \"Dejection\" for Profane Existence and the self-released \"Unclean\". Choi departed, and would later found Operator Generator, It Is I, Noothgrush, and Las Vegas\\' Black Jetts. Asbestosdeath recruited Justin Marler as replacement and the band adopted the new name, Sleep.\\n\\nSleep has used cannabis-influenced imagery since the release of their second album. In an interview about the making of Jerusalem, Matt Pike acknowledged that the band spent \"a lot\" of their label advance on cannabis, and \"a lot of time.\" Pike also said that about $75,000 was spent on customized amplifiers so the album would have numerous tone layers.\\n\\n2) Sleep is an experimental avant-garde group from New Zealand. Members are: Kim Pieters (Dadamah, Flies Inside The Sun, Rain), Peter Stapleton (Dadamah, The Pin Group, The Terminals, Flies Inside The Sun), and Susan Ballard. Also sometimes Nathan Thompson (Sandoz Lab Technicians) included. They released two albums; Enfolded In Luxury (1999) and Ghostwriting (2001), both on Metonymic label. Their music can be categorized as \"free noise\" or \"free improvisation\" as well.\\n\\n3) Sleep is a melodic hardcore punk band from Brighton, UK. They were only active from 89-91. They release a 7\"  in 1990 and an LP entitled \"Cat And Mouse\" in 1991. Both were released on Meantime Records. They featured two members of indie punk band Knownothing.\\n\\n4) Sleep is the name of a Harsh Noise Wall project. They released a split cassette with Authority.\\n\\n5) Sleep is the name of an Australian electronic music producer. Main body of works center around long ambient \"sleep\"-style productions, but also has done some more techno influenced tracks (see: Stalker Remixes). Released via the Polybonk netlabel.\\n\\n6) Sleep is a hip hop artist and member of The Chicharones along with Josh Martinez. As a solo artist he has released Riot by Candlelight, Christopher, and Hesitation Wounds. As a member of The Chicharones he has released When Pigs Fly, Boss Hogs EP, and Swine Country. \\n\\nSleep grew up in the old-school Mexican community of Farmington, NM. By the age of 9 he was writing and performing his own raps. Fast forward 20 years or so…he’s now married with a 14 year old daughter, a 20 month old son, and a new album that  incubated in a pressure cooker for three years. It is called “Hesitation Wounds.”\\n\\nCo-founder the Oldominion crew, a conglomerate of hip-hop artists based out of the Pacific Northwest, Sleep and his people have been putting it down for Seattle and Portland for the past decade. Sleep first made a name for himself with his lighting-quick delivery and dominant stage presence, but after releasing two solo albums (Riot by Candlelight, Christopher) it was the strength of his song writing that earned him a devout following in the underground scene. <a href=\"https://www.last.fm/music/Sleep\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4Mt6w4tDGiPgV5q6JWPlrI', url='https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI', name='Sleep', popularity=44, followers=314282, genres=['stoner metal', 'sludge metal', 'doom metal', 'stoner rock', 'drone metal', 'drone'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb36931f79c04ab8418391515', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b36931f79c04ab8418391515', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b36931f79c04ab8418391515', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI'}, 'followers': {'href': None, 'total': 314282}, 'genres': ['stoner metal', 'sludge metal', 'doom metal', 'stoner rock', 'drone metal', 'drone'], 'href': 'https://api.spotify.com/v1/artists/4Mt6w4tDGiPgV5q6JWPlrI', 'id': '4Mt6w4tDGiPgV5q6JWPlrI', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb36931f79c04ab8418391515', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b36931f79c04ab8418391515', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b36931f79c04ab8418391515', 'height': 160, 'width': 160}], 'name': 'Sleep', 'popularity': 44, 'type': 'artist', 'uri': 'spotify:artist:4Mt6w4tDGiPgV5q6JWPlrI'})",
@@ -332,6 +696,6 @@
   },
   "spotify_id": "4Mt6w4tDGiPgV5q6JWPlrI",
   "spotify_url": "https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI",
-  "updated_at": "2026-10-30T07:28:17.263199",
+  "updated_at": "2026-10-30T18:34:48.035899",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Sleep_(band)"
 }

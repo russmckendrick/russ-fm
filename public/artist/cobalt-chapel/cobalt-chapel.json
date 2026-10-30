@@ -92,22 +92,76 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1164183119', url='https://music.apple.com/gb/artist/cobalt-chapel/1164183119', name='Cobalt Chapel', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/f4/6a/52/f46a52a9-3c23-0836-4b08-d3b6d5aaa85e/5053760026716.png/2000x2000ac.jpg', genres=['Psychedelic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1164183119', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1164183119', 'attributes': {'name': 'Cobalt Chapel', 'genreNames': ['Psychedelic'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/f4/6a/52/f46a52a9-3c23-0836-4b08-d3b6d5aaa85e/5053760026716.png/{w}x{h}ac.jpg', 'bgColor': '1c1c1e', 'textColor1': 'd1dffa', 'textColor2': 'c4c4c0', 'textColor3': 'acb8ce', 'textColor4': 'a2a2a0'}, 'url': 'https://music.apple.com/gb/artist/cobalt-chapel/1164183119'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1164183119/albums', 'data': [{'id': '1536139108', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536139108'}, {'id': '1166121890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1166121890'}, {'id': '1441791023', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441791023'}, {'id': '1667600349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667600349'}, {'id': '1373810725', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1373810725'}, {'id': '1164182708', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1164182708'}, {'id': '1661303638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1661303638'}, {'id': '1521429415', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521429415'}, {'id': '1534733798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534733798'}, {'id': '1714247017', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1714247017'}, {'id': '1542197812', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542197812'}, {'id': '1204776612', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1204776612'}, {'id': '1702728729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1702728729'}, {'id': '1373814550', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1373814550'}, {'id': '1709112378', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1709112378'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5581844",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5581844,
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/HzX9GRefcGWPTLY3miaNrB_VmgFqjh9BNavmeHuECSM/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/HzX9GRefcGWPTLY3miaNrB_VmgFqjh9BNavmeHuECSM/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tfl4AlWQ3ITCLRXFn-L0w2o_sZars41pmHF5bzCXo0s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/-Dne35I2vr8i1-Hf582F-Atubjag_UJCJktJn0GWQM4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-Dne35I2vr8i1-Hf582F-Atubjag_UJCJktJn0GWQM4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4rt-PUI4hYAbiKwaJnOijZ1H05YOzyNYhqALilSyhR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/GWoZilM8jbKd-JkXzgsfPemajo36noXiBm9PHqIR-Qs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GWoZilM8jbKd-JkXzgsfPemajo36noXiBm9PHqIR-Qs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yz9PQMvyUVcIxcFtcOAwkZpfwMAjL_l7toJiUMqRuN4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3xBsc_dnDU8GHIfdF_Ysx1RgGZU0WwEKhuAuEWCYih4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3xBsc_dnDU8GHIfdF_Ysx1RgGZU0WwEKhuAuEWCYih4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SRTI4X7VzgA9vjiMZIYlrlAy4kuzL10HyPha3QzkOX4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/1HL7WtikWMQxJi6fO35-2BVHrFJmWvwGFsfkDoLS_bw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1HL7WtikWMQxJi6fO35-2BVHrFJmWvwGFsfkDoLS_bw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/UU_nldYpn8Ni4QJ4Bg51FqHkmPAY11ANdbAMx9t_LWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 64365,
+          "name": "Jarrod Gosling",
+          "resource_url": "https://api.discogs.com/artists/64365"
+        },
+        {
+          "active": true,
+          "id": 1698876,
+          "name": "Cecilia Fage",
+          "resource_url": "https://api.discogs.com/artists/1698876"
+        }
+      ],
       "name": "Cobalt Chapel",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5581844",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5581844"
-      },
+      "profile": "Cobalt Chapel was formed in 2014 by London-based vocalist and actress Cecilia Fage ([a5771593]) and Sheffield-based musician Jarrod Gosling ([a=I Monster], [a=Regal Worm]).",
+      "releases_url": "https://api.discogs.com/artists/5581844/releases",
       "resource_url": "https://api.discogs.com/artists/5581844",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5581844",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5581844-Cobalt-Chapel",
+      "urls": [
+        "https://www.facebook.com/Cobalt-Chapel-1883182601909163/",
+        "https://twitter.com/cobaltchapel",
+        "https://www.instagram.com/cobaltchapel/",
+        "https://soundcloud.com/cobalt-chapel/sets/cobalt-chapel-1",
+        "https://cobaltchapel.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "e96680d3-b034-4116-b966-b0349cbb704b",
@@ -122,22 +176,76 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1164183119', url='https://music.apple.com/gb/artist/cobalt-chapel/1164183119', name='Cobalt Chapel', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/f4/6a/52/f46a52a9-3c23-0836-4b08-d3b6d5aaa85e/5053760026716.png/2000x2000ac.jpg', genres=['Psychedelic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1164183119', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1164183119', 'attributes': {'name': 'Cobalt Chapel', 'genreNames': ['Psychedelic'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/f4/6a/52/f46a52a9-3c23-0836-4b08-d3b6d5aaa85e/5053760026716.png/{w}x{h}ac.jpg', 'bgColor': '1c1c1e', 'textColor1': 'd1dffa', 'textColor2': 'c4c4c0', 'textColor3': 'acb8ce', 'textColor4': 'a2a2a0'}, 'url': 'https://music.apple.com/gb/artist/cobalt-chapel/1164183119'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1164183119/albums', 'data': [{'id': '1536139108', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536139108'}, {'id': '1166121890', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1166121890'}, {'id': '1441791023', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441791023'}, {'id': '1667600349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667600349'}, {'id': '1373810725', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1373810725'}, {'id': '1164182708', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1164182708'}, {'id': '1661303638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1661303638'}, {'id': '1521429415', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1521429415'}, {'id': '1534733798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1534733798'}, {'id': '1714247017', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1714247017'}, {'id': '1542197812', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1542197812'}, {'id': '1204776612', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1204776612'}, {'id': '1702728729', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1702728729'}, {'id': '1373814550', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1373814550'}, {'id': '1709112378', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1709112378'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "5581844",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 5581844,
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/HzX9GRefcGWPTLY3miaNrB_VmgFqjh9BNavmeHuECSM/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/HzX9GRefcGWPTLY3miaNrB_VmgFqjh9BNavmeHuECSM/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tfl4AlWQ3ITCLRXFn-L0w2o_sZars41pmHF5bzCXo0s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/MC0zMTkxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/-Dne35I2vr8i1-Hf582F-Atubjag_UJCJktJn0GWQM4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-Dne35I2vr8i1-Hf582F-Atubjag_UJCJktJn0GWQM4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/4rt-PUI4hYAbiKwaJnOijZ1H05YOzyNYhqALilSyhR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI3/My03ODQxLmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/GWoZilM8jbKd-JkXzgsfPemajo36noXiBm9PHqIR-Qs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GWoZilM8jbKd-JkXzgsfPemajo36noXiBm9PHqIR-Qs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yz9PQMvyUVcIxcFtcOAwkZpfwMAjL_l7toJiUMqRuN4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI5/MS03NDg0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/3xBsc_dnDU8GHIfdF_Ysx1RgGZU0WwEKhuAuEWCYih4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3xBsc_dnDU8GHIfdF_Ysx1RgGZU0WwEKhuAuEWCYih4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SRTI4X7VzgA9vjiMZIYlrlAy4kuzL10HyPha3QzkOX4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Ny04MzUyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/1HL7WtikWMQxJi6fO35-2BVHrFJmWvwGFsfkDoLS_bw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1HL7WtikWMQxJi6fO35-2BVHrFJmWvwGFsfkDoLS_bw/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/UU_nldYpn8Ni4QJ4Bg51FqHkmPAY11ANdbAMx9t_LWw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1ODE4/NDQtMTQ4NzYxNDI4/Mi03NjEzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 64365,
+          "name": "Jarrod Gosling",
+          "resource_url": "https://api.discogs.com/artists/64365"
+        },
+        {
+          "active": true,
+          "id": 1698876,
+          "name": "Cecilia Fage",
+          "resource_url": "https://api.discogs.com/artists/1698876"
+        }
+      ],
       "name": "Cobalt Chapel",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "5581844",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/5581844"
-      },
+      "profile": "Cobalt Chapel was formed in 2014 by London-based vocalist and actress Cecilia Fage ([a5771593]) and Sheffield-based musician Jarrod Gosling ([a=I Monster], [a=Regal Worm]).",
+      "releases_url": "https://api.discogs.com/artists/5581844/releases",
       "resource_url": "https://api.discogs.com/artists/5581844",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/5581844",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/5581844-Cobalt-Chapel",
+      "urls": [
+        "https://www.facebook.com/Cobalt-Chapel-1883182601909163/",
+        "https://twitter.com/cobaltchapel",
+        "https://www.instagram.com/cobaltchapel/",
+        "https://soundcloud.com/cobalt-chapel/sets/cobalt-chapel-1",
+        "https://cobaltchapel.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='cobalt chapel', url='https://www.last.fm/music/cobalt+chapel', mbid=None, listeners=2359, playcount=28032, bio_summary='Psychedelic band featuring Cecilia Fage (Matt Berry & The Maypoles) and Jarrod Gosling (I Monster, Regal Worm). Based in Hebden Bridge and Sheffield. <a href=\"https://www.last.fm/music/cobalt+chapel\">Read more on Last.fm</a>', bio_content='Psychedelic band featuring Cecilia Fage (Matt Berry & The Maypoles) and Jarrod Gosling (I Monster, Regal Worm). Based in Hebden Bridge and Sheffield. <a href=\"https://www.last.fm/music/cobalt+chapel\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['psychedelic pop', 'indie', 'pop', 'indie pop', 'post-punk'], similar_artists=[{'name': 'Hollow Hand', 'url': 'https://www.last.fm/music/Hollow+Hand'}, {'name': 'Green Seagull', 'url': 'https://www.last.fm/music/Green+Seagull'}, {'name': 'The Fernweh', 'url': 'https://www.last.fm/music/The+Fernweh'}, {'name': 'Colorama', 'url': 'https://www.last.fm/music/Colorama'}, {'name': 'Regal Worm', 'url': 'https://www.last.fm/music/Regal+Worm'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'cobalt chapel', 'url': 'https://www.last.fm/music/cobalt+chapel', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2359', 'playcount': '28032'}, 'similar': {'artist': [{'name': 'Hollow Hand', 'url': 'https://www.last.fm/music/Hollow+Hand', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Green Seagull', 'url': 'https://www.last.fm/music/Green+Seagull', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Fernweh', 'url': 'https://www.last.fm/music/The+Fernweh', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Colorama', 'url': 'https://www.last.fm/music/Colorama', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Regal Worm', 'url': 'https://www.last.fm/music/Regal+Worm', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'psychedelic pop', 'url': 'https://www.last.fm/tag/psychedelic+pop'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'indie pop', 'url': 'https://www.last.fm/tag/indie+pop'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/cobalt+chapel/+wiki'}}, 'published': '06 Feb 2021, 10:24', 'summary': 'Psychedelic band featuring Cecilia Fage (Matt Berry & The Maypoles) and Jarrod Gosling (I Monster, Regal Worm). Based in Hebden Bridge and Sheffield. <a href=\"https://www.last.fm/music/cobalt+chapel\">Read more on Last.fm</a>', 'content': 'Psychedelic band featuring Cecilia Fage (Matt Berry & The Maypoles) and Jarrod Gosling (I Monster, Regal Worm). Based in Hebden Bridge and Sheffield. <a href=\"https://www.last.fm/music/cobalt+chapel\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2HtBooKkWSKx6DMYsbaAsJ', url='https://open.spotify.com/artist/2HtBooKkWSKx6DMYsbaAsJ', name='Cobalt Chapel', popularity=1, followers=1086, genres=['baroque pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb56c868b249bb4e2f0b456f0f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517456c868b249bb4e2f0b456f0f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17856c868b249bb4e2f0b456f0f', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2HtBooKkWSKx6DMYsbaAsJ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2HtBooKkWSKx6DMYsbaAsJ'}, 'followers': {'href': None, 'total': 1086}, 'genres': ['baroque pop'], 'href': 'https://api.spotify.com/v1/artists/2HtBooKkWSKx6DMYsbaAsJ', 'id': '2HtBooKkWSKx6DMYsbaAsJ', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb56c868b249bb4e2f0b456f0f', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517456c868b249bb4e2f0b456f0f', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17856c868b249bb4e2f0b456f0f', 'height': 160, 'width': 160}], 'name': 'Cobalt Chapel', 'popularity': 1, 'type': 'artist', 'uri': 'spotify:artist:2HtBooKkWSKx6DMYsbaAsJ'})",
@@ -145,6 +253,6 @@
   },
   "spotify_id": "2HtBooKkWSKx6DMYsbaAsJ",
   "spotify_url": "https://open.spotify.com/artist/2HtBooKkWSKx6DMYsbaAsJ",
-  "updated_at": "2026-10-22T14:05:48.735824",
+  "updated_at": "2026-10-30T18:38:02.781376",
   "wikipedia_url": null
 }

@@ -119,22 +119,157 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='49249818', url='https://music.apple.com/gb/artist/fugazi/49249818', name='Fugazi', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/1f/0c/95/1f0c950d-16a8-e13a-cb48-97269ce2c7c5/mzl.qwjxdiac.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '49249818', 'type': 'artists', 'href': '/v1/catalog/gb/artists/49249818', 'attributes': {'name': 'Fugazi', 'genreNames': ['Alternative'], 'artwork': {'width': 1200, 'height': 1200, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/1f/0c/95/1f0c950d-16a8-e13a-cb48-97269ce2c7c5/mzl.qwjxdiac.jpg/{w}x{h}bb.jpg', 'bgColor': '545454', 'textColor1': 'ffffff', 'textColor2': 'dfdfdf', 'textColor3': 'dcdcdc', 'textColor4': 'c3c3c3'}, 'url': 'https://music.apple.com/gb/artist/fugazi/49249818'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/49249818/albums', 'data': [{'id': '49249845', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249845'}, {'id': '49249888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249888'}, {'id': '57918888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/57918888'}, {'id': '49250022', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250022'}, {'id': '49249926', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249926'}, {'id': '49250182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250182'}, {'id': '49250097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250097'}, {'id': '49250233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250233'}, {'id': '49250384', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250384'}, {'id': '935113795', 'type': 'albums', 'href': '/v1/catalog/gb/albums/935113795'}, {'id': '1815820857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815820857'}, {'id': '1809213389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1809213389'}, {'id': '1808471170', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1808471170'}, {'id': '1815827985', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815827985'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "82103",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 82103,
+      "images": [
+        {
+          "height": 407,
+          "resource_url": "https://i.discogs.com/Gp_XU1e9upE4u5ovSbfYxnVIOYGdag40a2YNzGzJuz0/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Gp_XU1e9upE4u5ovSbfYxnVIOYGdag40a2YNzGzJuz0/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sxTlimamZFmSyJ1CNjIWX2wr5hoFtWJmfTuFBt78n84/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/9L7icGhTyaBL9hdU7jhj5bpeEE9nk9X-m4LI691BKHs/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9L7icGhTyaBL9hdU7jhj5bpeEE9nk9X-m4LI691BKHs/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/G25st8wtE7IsHo5Ybrsn2R_HrO49rEw8HR9jP9HAbt4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "width": 450
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/IYp09wES2tO9opcY4j0NC8BDiFqnVZQjA0YGOTdtf7k/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IYp09wES2tO9opcY4j0NC8BDiFqnVZQjA0YGOTdtf7k/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/syrRYJdyj5sL-sdIRN-l7f_67vPf-QZm2XpKBol5jlY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 254,
+          "resource_url": "https://i.discogs.com/5-Fo7LZZVmhx8t9od_0y2oUDe9Kw3meZir6OhwOOKZs/rs:fit/g:sm/q:90/h:254/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5-Fo7LZZVmhx8t9od_0y2oUDe9Kw3meZir6OhwOOKZs/rs:fit/g:sm/q:90/h:254/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/5KWcviAchsfNAq1RDlYGI4wjpfXxXQyAq1UzX0tmie4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 586,
+          "resource_url": "https://i.discogs.com/2984JKAwCQQLUBteN5_CvkP-X0qd2tMqgGmm3Djm-S8/rs:fit/g:sm/q:90/h:586/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2984JKAwCQQLUBteN5_CvkP-X0qd2tMqgGmm3Djm-S8/rs:fit/g:sm/q:90/h:586/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0mZO1qfbaNVvjWFlg1ETOeIO_UtqKnCiucqcJWulITk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "width": 434
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/yIF6WKosyGGOUFIB-KgPwmPFZ7U_iXJKatnZkLDATi8/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yIF6WKosyGGOUFIB-KgPwmPFZ7U_iXJKatnZkLDATi8/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CPEaeJDmhtdPhkFgLson6NzP_i3aKClYAHR31JHzIH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "width": 597
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/vKaDOxnF7x48a4WINeq2x0nEX5V_zKvP3vbA2MxVh1M/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vKaDOxnF7x48a4WINeq2x0nEX5V_zKvP3vbA2MxVh1M/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hmTRtbBZXNp_t6OWYPrJxf8Gg5rTluRuEFHsPtXlCPw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/hxVID2VqUAV83YnHykn-9h-zp3MfLpLo8HtFQ9qldQo/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hxVID2VqUAV83YnHykn-9h-zp3MfLpLo8HtFQ9qldQo/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zAsviAoGqjKcAVc_gWmh3A-ksmqyHkBAR7FgYgweIbA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 448,
+          "resource_url": "https://i.discogs.com/92lAZL3DAVZmS2gzSOXx2BiDahWRFazbHz45F9jXD04/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/92lAZL3DAVZmS2gzSOXx2BiDahWRFazbHz45F9jXD04/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6YXNyPFh9QtY1Ji3es2NYymseK1smI7osINf36bK58A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DPYDJM7ibBfCGNHTtUIbloT79tzE9SaB_-sJr0Ld-SU/rs:fit/g:sm/q:90/h:600/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DPYDJM7ibBfCGNHTtUIbloT79tzE9SaB_-sJr0Ld-SU/rs:fit/g:sm/q:90/h:600/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/a-M48O2gcZmHMQgudo1WfyZJfex_5d4CIQihIhXGA40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "width": 474
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/s4nbYt7RjuOHO5xVwfQsgW2TvEWtrwCzjKk23kO_IB0/rs:fit/g:sm/q:90/h:600/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s4nbYt7RjuOHO5xVwfQsgW2TvEWtrwCzjKk23kO_IB0/rs:fit/g:sm/q:90/h:600/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HmFG5rIV6ronu2Q4nJXFiEwR036uMxtdyOf7IW4c1_U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "width": 409
+        },
+        {
+          "height": 370,
+          "resource_url": "https://i.discogs.com/XYzHT3dFec39A_5LmACQLfqbDrHfjsMiZh0WLR7eVZ0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XYzHT3dFec39A_5LmACQLfqbDrHfjsMiZh0WLR7eVZ0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ug67mN6SzMwPPXSYw9Bcfp-NRFjiokdsFeijPl6_hTI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 379,
+          "resource_url": "https://i.discogs.com/yN_tjbUXvEVFNZDkOoJeIqfR5ae7ME5f5vU66C5TzEw/rs:fit/g:sm/q:90/h:379/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yN_tjbUXvEVFNZDkOoJeIqfR5ae7ME5f5vU66C5TzEw/rs:fit/g:sm/q:90/h:379/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/W9WjOxG18HWCsR_W-M9M0S-dX3BFqglwxfBRHXINw-A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "width": 381
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 254168,
+          "name": "Ian MacKaye",
+          "resource_url": "https://api.discogs.com/artists/254168"
+        },
+        {
+          "active": true,
+          "id": 279521,
+          "name": "Guy Picciotto",
+          "resource_url": "https://api.discogs.com/artists/279521"
+        },
+        {
+          "active": true,
+          "id": 339856,
+          "name": "Brendan Canty",
+          "resource_url": "https://api.discogs.com/artists/339856"
+        },
+        {
+          "active": false,
+          "id": 516055,
+          "name": "Colin Sears",
+          "resource_url": "https://api.discogs.com/artists/516055"
+        },
+        {
+          "active": true,
+          "id": 518383,
+          "name": "Joe Lally",
+          "resource_url": "https://api.discogs.com/artists/518383"
+        }
+      ],
       "name": "Fugazi",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "82103",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/82103"
-      },
+      "profile": "U.S. rock band whose sound spans alternative, post-hardcore and experimental sonic territories with punk roots. Fugazi formed during Fall 1987 in Washington, D.C. and played their first show on September 3rd 1987. The band consists of guitarists / vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, plus drummer Brendan Canty. They are noted for their DIY ethic, self-managed business practices, and contempt towards the music industry. The band has been on indefinite hiatus since 2003 (their last live performance was on November 4th 2002). From the approx. 1998 until the band's last shows in 2002, [a=Jerry Busher] was a touring musician with Fugazi who contributed second drums and percussion to songs on the 2001 releases '[m=3652]' (album) and '[m=3672]' (single).\r\n\r\nThe word fugazi is Vietnam War era U.S. military slang for: fucked up, got ambushed, zipped in.",
+      "releases_url": "https://api.discogs.com/artists/82103/releases",
       "resource_url": "https://api.discogs.com/artists/82103",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/82103",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/82103-Fugazi",
+      "urls": [
+        "http://www.dischord.com/band/fugazi",
+        "http://fugazi.bandcamp.com/music",
+        "https://dischord.com/fugazi_live_series",
+        "http://en.wikipedia.org/wiki/Fugazi"
+      ]
     },
     "identity": {
       "musicbrainz_id": "233fc3f3-6de2-465c-985e-e721dbabbace",
@@ -208,27 +343,163 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='49249818', url='https://music.apple.com/gb/artist/fugazi/49249818', name='Fugazi', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/1f/0c/95/1f0c950d-16a8-e13a-cb48-97269ce2c7c5/mzl.qwjxdiac.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '49249818', 'type': 'artists', 'href': '/v1/catalog/gb/artists/49249818', 'attributes': {'name': 'Fugazi', 'genreNames': ['Alternative'], 'artwork': {'width': 1200, 'height': 1200, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/1f/0c/95/1f0c950d-16a8-e13a-cb48-97269ce2c7c5/mzl.qwjxdiac.jpg/{w}x{h}bb.jpg', 'bgColor': '545454', 'textColor1': 'ffffff', 'textColor2': 'dfdfdf', 'textColor3': 'dcdcdc', 'textColor4': 'c3c3c3'}, 'url': 'https://music.apple.com/gb/artist/fugazi/49249818'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/49249818/albums', 'data': [{'id': '49249845', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249845'}, {'id': '49249888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249888'}, {'id': '57918888', 'type': 'albums', 'href': '/v1/catalog/gb/albums/57918888'}, {'id': '49250022', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250022'}, {'id': '49249926', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49249926'}, {'id': '49250182', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250182'}, {'id': '49250097', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250097'}, {'id': '49250233', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250233'}, {'id': '49250384', 'type': 'albums', 'href': '/v1/catalog/gb/albums/49250384'}, {'id': '935113795', 'type': 'albums', 'href': '/v1/catalog/gb/albums/935113795'}, {'id': '1815820857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815820857'}, {'id': '1809213389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1809213389'}, {'id': '1808471170', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1808471170'}, {'id': '1815827985', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1815827985'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "82103",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 82103,
+      "images": [
+        {
+          "height": 407,
+          "resource_url": "https://i.discogs.com/Gp_XU1e9upE4u5ovSbfYxnVIOYGdag40a2YNzGzJuz0/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Gp_XU1e9upE4u5ovSbfYxnVIOYGdag40a2YNzGzJuz0/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sxTlimamZFmSyJ1CNjIWX2wr5hoFtWJmfTuFBt78n84/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNDcxMDY3ODcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/9L7icGhTyaBL9hdU7jhj5bpeEE9nk9X-m4LI691BKHs/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9L7icGhTyaBL9hdU7jhj5bpeEE9nk9X-m4LI691BKHs/rs:fit/g:sm/q:90/h:300/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/G25st8wtE7IsHo5Ybrsn2R_HrO49rEw8HR9jP9HAbt4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4NDAu/anBlZw.jpeg",
+          "width": 450
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/IYp09wES2tO9opcY4j0NC8BDiFqnVZQjA0YGOTdtf7k/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IYp09wES2tO9opcY4j0NC8BDiFqnVZQjA0YGOTdtf7k/rs:fit/g:sm/q:90/h:334/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/syrRYJdyj5sL-sdIRN-l7f_67vPf-QZm2XpKBol5jlY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTExNjA4NzQ4MTgu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 254,
+          "resource_url": "https://i.discogs.com/5-Fo7LZZVmhx8t9od_0y2oUDe9Kw3meZir6OhwOOKZs/rs:fit/g:sm/q:90/h:254/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5-Fo7LZZVmhx8t9od_0y2oUDe9Kw3meZir6OhwOOKZs/rs:fit/g:sm/q:90/h:254/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/5KWcviAchsfNAq1RDlYGI4wjpfXxXQyAq1UzX0tmie4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEwODM5MjUwOTEu/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 586,
+          "resource_url": "https://i.discogs.com/2984JKAwCQQLUBteN5_CvkP-X0qd2tMqgGmm3Djm-S8/rs:fit/g:sm/q:90/h:586/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2984JKAwCQQLUBteN5_CvkP-X0qd2tMqgGmm3Djm-S8/rs:fit/g:sm/q:90/h:586/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0mZO1qfbaNVvjWFlg1ETOeIO_UtqKnCiucqcJWulITk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTEyODYzMDgxMDku/anBlZw.jpeg",
+          "width": 434
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/yIF6WKosyGGOUFIB-KgPwmPFZ7U_iXJKatnZkLDATi8/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yIF6WKosyGGOUFIB-KgPwmPFZ7U_iXJKatnZkLDATi8/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CPEaeJDmhtdPhkFgLson6NzP_i3aKClYAHR31JHzIH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzAwNDUwMjAt/NzE4NC5qcGVn.jpeg",
+          "width": 597
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/vKaDOxnF7x48a4WINeq2x0nEX5V_zKvP3vbA2MxVh1M/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vKaDOxnF7x48a4WINeq2x0nEX5V_zKvP3vbA2MxVh1M/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hmTRtbBZXNp_t6OWYPrJxf8Gg5rTluRuEFHsPtXlCPw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NjM2Nzc5MTct/Mjg3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 357,
+          "resource_url": "https://i.discogs.com/hxVID2VqUAV83YnHykn-9h-zp3MfLpLo8HtFQ9qldQo/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hxVID2VqUAV83YnHykn-9h-zp3MfLpLo8HtFQ9qldQo/rs:fit/g:sm/q:90/h:357/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zAsviAoGqjKcAVc_gWmh3A-ksmqyHkBAR7FgYgweIbA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMyNzgt/MTk4MC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 448,
+          "resource_url": "https://i.discogs.com/92lAZL3DAVZmS2gzSOXx2BiDahWRFazbHz45F9jXD04/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/92lAZL3DAVZmS2gzSOXx2BiDahWRFazbHz45F9jXD04/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6YXNyPFh9QtY1Ji3es2NYymseK1smI7osINf36bK58A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1NzgzNDMzNjgt/MTc5OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DPYDJM7ibBfCGNHTtUIbloT79tzE9SaB_-sJr0Ld-SU/rs:fit/g:sm/q:90/h:600/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DPYDJM7ibBfCGNHTtUIbloT79tzE9SaB_-sJr0Ld-SU/rs:fit/g:sm/q:90/h:600/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/a-M48O2gcZmHMQgudo1WfyZJfex_5d4CIQihIhXGA40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE1ODEwMTgxNjUt/NTIzMC5qcGVn.jpeg",
+          "width": 474
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/s4nbYt7RjuOHO5xVwfQsgW2TvEWtrwCzjKk23kO_IB0/rs:fit/g:sm/q:90/h:600/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s4nbYt7RjuOHO5xVwfQsgW2TvEWtrwCzjKk23kO_IB0/rs:fit/g:sm/q:90/h:600/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/HmFG5rIV6ronu2Q4nJXFiEwR036uMxtdyOf7IW4c1_U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3MTU5NTc1MDAt/MzIzOS5qcGVn.jpeg",
+          "width": 409
+        },
+        {
+          "height": 370,
+          "resource_url": "https://i.discogs.com/XYzHT3dFec39A_5LmACQLfqbDrHfjsMiZh0WLR7eVZ0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XYzHT3dFec39A_5LmACQLfqbDrHfjsMiZh0WLR7eVZ0/rs:fit/g:sm/q:90/h:370/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ug67mN6SzMwPPXSYw9Bcfp-NRFjiokdsFeijPl6_hTI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzM2MDEyNzAt/OTQyNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 379,
+          "resource_url": "https://i.discogs.com/yN_tjbUXvEVFNZDkOoJeIqfR5ae7ME5f5vU66C5TzEw/rs:fit/g:sm/q:90/h:379/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yN_tjbUXvEVFNZDkOoJeIqfR5ae7ME5f5vU66C5TzEw/rs:fit/g:sm/q:90/h:379/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/W9WjOxG18HWCsR_W-M9M0S-dX3BFqglwxfBRHXINw-A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyMTAz/LTE3NzQwOTYxMjkt/NDA3Ny5qcGVn.jpeg",
+          "width": 381
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 254168,
+          "name": "Ian MacKaye",
+          "resource_url": "https://api.discogs.com/artists/254168"
+        },
+        {
+          "active": true,
+          "id": 279521,
+          "name": "Guy Picciotto",
+          "resource_url": "https://api.discogs.com/artists/279521"
+        },
+        {
+          "active": true,
+          "id": 339856,
+          "name": "Brendan Canty",
+          "resource_url": "https://api.discogs.com/artists/339856"
+        },
+        {
+          "active": false,
+          "id": 516055,
+          "name": "Colin Sears",
+          "resource_url": "https://api.discogs.com/artists/516055"
+        },
+        {
+          "active": true,
+          "id": 518383,
+          "name": "Joe Lally",
+          "resource_url": "https://api.discogs.com/artists/518383"
+        }
+      ],
       "name": "Fugazi",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "82103",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/82103"
-      },
+      "profile": "U.S. rock band whose sound spans alternative, post-hardcore and experimental sonic territories with punk roots. Fugazi formed during Fall 1987 in Washington, D.C. and played their first show on September 3rd 1987. The band consists of guitarists / vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, plus drummer Brendan Canty. They are noted for their DIY ethic, self-managed business practices, and contempt towards the music industry. The band has been on indefinite hiatus since 2003 (their last live performance was on November 4th 2002). From the approx. 1998 until the band's last shows in 2002, [a=Jerry Busher] was a touring musician with Fugazi who contributed second drums and percussion to songs on the 2001 releases '[m=3652]' (album) and '[m=3672]' (single).\r\n\r\nThe word fugazi is Vietnam War era U.S. military slang for: fucked up, got ambushed, zipped in.",
+      "releases_url": "https://api.discogs.com/artists/82103/releases",
       "resource_url": "https://api.discogs.com/artists/82103",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/82103",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/82103-Fugazi",
+      "urls": [
+        "http://www.dischord.com/band/fugazi",
+        "http://fugazi.bandcamp.com/music",
+        "https://dischord.com/fugazi_live_series",
+        "http://en.wikipedia.org/wiki/Fugazi"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Fugazi', url='https://www.last.fm/music/Fugazi', mbid='233fc3f3-6de2-465c-985e-e721dbabbace', listeners=1371507, playcount=53314573, bio_summary='Fugazi were an American post-hardcore band formed in Washington, D.C., in 1986. The band consists of guitarists and vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, and drummer Brendan Canty. They are noted for their style-transcending music, DIY ethical stance, manner of business practice and contempt for the music industry.\\n\\nSince its inception, Fugazi has been self-managed and have released almost all their material through Dischord Records, an independent label founded by MacKaye and partner Jeff Nelson in 1980. <a href=\"https://www.last.fm/music/Fugazi\">Read more on Last.fm</a>', bio_content='Fugazi were an American post-hardcore band formed in Washington, D.C., in 1986. The band consists of guitarists and vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, and drummer Brendan Canty. They are noted for their style-transcending music, DIY ethical stance, manner of business practice and contempt for the music industry.\\n\\nSince its inception, Fugazi has been self-managed and have released almost all their material through Dischord Records, an independent label founded by MacKaye and partner Jeff Nelson in 1980. The band maintained a policy of affordable access to their work through low record and ticket prices and all-ages concerts.\\n\\nSays AMG All Music Guide, \"Along with their stridently underground ethics — which were more out of pragmatism and modesty than anything else — they gained an extremely loyal and numerous global following. To many, Fugazi meant as much to them as Bob Dylan did to their parents.\" \\n\\nThey played their first show in the fall of 1987 and since then released 7 albums and toured the world extensively covering all 50 United States, Europe, Australia, South America, Japan and many points in between.\\n\\nIn addition to their recorded output Fugazi released a documentary film/video called \"Instrument\" in collaboration with independent filmmaker, Jem Cohen. The feature length video offers a documentary overview of the the band\\'s career with footage shot in a variety of formats over the last 10 years combining concert, tour and studio material backed with a musical soundtrack by the band unique to the movie.\\n\\nFugazi\\'s last musical releases were The Argument, a 10 song LP, and Furniture, a 3 song single, released in the Fall of 2001. These sessions marked the first studio appearance of long time roadie and second drummer Jerry Busher who played additional drums and percussion on a number of the tracks on both releases. The recordings were once again made in collaboration with long time Fugazi engineer Don Zientara at Inner Ear studios.\\n\\nPrior to forming Fugazi, the members of the band played in various other bands with releases available on Dischord. \\n\\nFugazi are currently on hiatus as of 2002, with Mackaye in The Evens, Picciotto having produced various bands including Blonde Redhead and The Blood Brothers, and Lally playing with John Frusciante and Josh Klinghoffer on both Ataxia releases and working on a solo album. <a href=\"https://www.last.fm/music/Fugazi\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-hardcore', 'punk', 'indie', 'hardcore', 'indie rock'], similar_artists=[{'name': 'Unwound', 'url': 'https://www.last.fm/music/Unwound'}, {'name': 'Rites of Spring', 'url': 'https://www.last.fm/music/Rites+of+Spring'}, {'name': 'Drive Like Jehu', 'url': 'https://www.last.fm/music/Drive+Like+Jehu'}, {'name': 'Minutemen', 'url': 'https://www.last.fm/music/Minutemen'}, {'name': 'Squirrel Bait', 'url': 'https://www.last.fm/music/Squirrel+Bait'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Fugazi', 'mbid': '233fc3f3-6de2-465c-985e-e721dbabbace', 'url': 'https://www.last.fm/music/Fugazi', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1371507', 'playcount': '53314573'}, 'similar': {'artist': [{'name': 'Unwound', 'url': 'https://www.last.fm/music/Unwound', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rites of Spring', 'url': 'https://www.last.fm/music/Rites+of+Spring', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Drive Like Jehu', 'url': 'https://www.last.fm/music/Drive+Like+Jehu', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Minutemen', 'url': 'https://www.last.fm/music/Minutemen', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Squirrel Bait', 'url': 'https://www.last.fm/music/Squirrel+Bait', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-hardcore', 'url': 'https://www.last.fm/tag/post-hardcore'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'hardcore', 'url': 'https://www.last.fm/tag/hardcore'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Fugazi/+wiki'}}, 'published': '02 Feb 2006, 03:38', 'summary': 'Fugazi were an American post-hardcore band formed in Washington, D.C., in 1986. The band consists of guitarists and vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, and drummer Brendan Canty. They are noted for their style-transcending music, DIY ethical stance, manner of business practice and contempt for the music industry.\\n\\nSince its inception, Fugazi has been self-managed and have released almost all their material through Dischord Records, an independent label founded by MacKaye and partner Jeff Nelson in 1980. <a href=\"https://www.last.fm/music/Fugazi\">Read more on Last.fm</a>', 'content': 'Fugazi were an American post-hardcore band formed in Washington, D.C., in 1986. The band consists of guitarists and vocalists Ian MacKaye and Guy Picciotto, bassist Joe Lally, and drummer Brendan Canty. They are noted for their style-transcending music, DIY ethical stance, manner of business practice and contempt for the music industry.\\n\\nSince its inception, Fugazi has been self-managed and have released almost all their material through Dischord Records, an independent label founded by MacKaye and partner Jeff Nelson in 1980. The band maintained a policy of affordable access to their work through low record and ticket prices and all-ages concerts.\\n\\nSays AMG All Music Guide, \"Along with their stridently underground ethics — which were more out of pragmatism and modesty than anything else — they gained an extremely loyal and numerous global following. To many, Fugazi meant as much to them as Bob Dylan did to their parents.\" \\n\\nThey played their first show in the fall of 1987 and since then released 7 albums and toured the world extensively covering all 50 United States, Europe, Australia, South America, Japan and many points in between.\\n\\nIn addition to their recorded output Fugazi released a documentary film/video called \"Instrument\" in collaboration with independent filmmaker, Jem Cohen. The feature length video offers a documentary overview of the the band\\'s career with footage shot in a variety of formats over the last 10 years combining concert, tour and studio material backed with a musical soundtrack by the band unique to the movie.\\n\\nFugazi\\'s last musical releases were The Argument, a 10 song LP, and Furniture, a 3 song single, released in the Fall of 2001. These sessions marked the first studio appearance of long time roadie and second drummer Jerry Busher who played additional drums and percussion on a number of the tracks on both releases. The recordings were once again made in collaboration with long time Fugazi engineer Don Zientara at Inner Ear studios.\\n\\nPrior to forming Fugazi, the members of the band played in various other bands with releases available on Dischord. \\n\\nFugazi are currently on hiatus as of 2002, with Mackaye in The Evens, Picciotto having produced various bands including Blonde Redhead and The Blood Brothers, and Lally playing with John Frusciante and Josh Klinghoffer on both Ataxia releases and working on a solo album. <a href=\"https://www.last.fm/music/Fugazi\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='62sC6lUEWRjbFqXpMmOk4G', url='https://open.spotify.com/artist/62sC6lUEWRjbFqXpMmOk4G', name='Fugazi', popularity=57, followers=664545, genres=['post-hardcore', 'punk', 'noise rock', 'hardcore punk'], images=[{'url': 'https://i.scdn.co/image/0234b34b265a6ec22de6b4ebb52abc4d6c9d7371', 'height': 737, 'width': 578}, {'url': 'https://i.scdn.co/image/4d6612201d8bbf1a8e5b3ef6ced9d5b0e92d1dd3', 'height': 255, 'width': 200}, {'url': 'https://i.scdn.co/image/9f6d3f86533750a49e3dbc215ae9edf54b95a04c', 'height': 82, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/62sC6lUEWRjbFqXpMmOk4G'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/62sC6lUEWRjbFqXpMmOk4G'}, 'followers': {'href': None, 'total': 664545}, 'genres': ['post-hardcore', 'punk', 'noise rock', 'hardcore punk'], 'href': 'https://api.spotify.com/v1/artists/62sC6lUEWRjbFqXpMmOk4G', 'id': '62sC6lUEWRjbFqXpMmOk4G', 'images': [{'url': 'https://i.scdn.co/image/0234b34b265a6ec22de6b4ebb52abc4d6c9d7371', 'height': 737, 'width': 578}, {'url': 'https://i.scdn.co/image/4d6612201d8bbf1a8e5b3ef6ced9d5b0e92d1dd3', 'height': 255, 'width': 200}, {'url': 'https://i.scdn.co/image/9f6d3f86533750a49e3dbc215ae9edf54b95a04c', 'height': 82, 'width': 64}], 'name': 'Fugazi', 'popularity': 57, 'type': 'artist', 'uri': 'spotify:artist:62sC6lUEWRjbFqXpMmOk4G'})",
@@ -299,6 +570,6 @@
   },
   "spotify_id": "62sC6lUEWRjbFqXpMmOk4G",
   "spotify_url": "https://open.spotify.com/artist/62sC6lUEWRjbFqXpMmOk4G",
-  "updated_at": "2026-10-22T14:07:05.944500",
+  "updated_at": "2026-10-30T18:40:02.744099",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Fugazi"
 }

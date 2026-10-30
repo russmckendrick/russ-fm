@@ -634,6 +634,10 @@ are left out, as are credits for a record's own artists or their band members, a
 same record. A person credited on more than 12 artists' records is kept in `people` but makes no
 `shared-credit` links.
 
+Member, group and alias links come from each artist JSON's Discogs payload: `raw_data.discogs.raw_data`
+on rows the Python scrapper wrote, `raw_data.discogs` itself on rows the Rust scrapper fetched. Artists
+still on a placeholder make no such links; `scrapper backfill-artist-discogs` fills them.
+
 The atlases sit next to it: `sleeves-N.webp` (64 × 64 cells of 64px, album order) and `avatars.webp`
 (40 columns of 64px, artist order). They are same-origin site assets because WebGL can't read images
 from assets.russ.fm, which sends no CORS header.

@@ -5,7 +5,7 @@
   "country": null,
   "created_at": "2026-09-12T20:00:57.209443",
   "discogs_id": "816783",
-  "discogs_url": null,
+  "discogs_url": "https://www.discogs.com/artist/816783-The-Magic-Band",
   "followers": null,
   "formed_date": null,
   "genres": [],
@@ -17,16 +17,616 @@
   "name": "The Magic Band",
   "popularity": null,
   "raw_data": {
+    "discogs": {
+      "data_quality": "Needs Vote",
+      "id": 816783,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/dBjZctW0HQSv9vB6HtgTjZzOSFDf0FoaTjNjOzv3TNk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dBjZctW0HQSv9vB6HtgTjZzOSFDf0FoaTjNjOzv3TNk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/EaTdADLU1eNTHkxUmBghmLjLVMeQgKJKJ7hCb2qte0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 453,
+          "resource_url": "https://i.discogs.com/wZGumhLHruRbXZOAsfrC78JMxChUx4ndeS2zi57dZH0/rs:fit/g:sm/q:90/h:453/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wZGumhLHruRbXZOAsfrC78JMxChUx4ndeS2zi57dZH0/rs:fit/g:sm/q:90/h:453/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/YjImmL9O9PGVSz7BuPWvmHtzoc7F4IWZIMfDqL0kt8c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/irBcfUwze7pFVo5jWloGt4TEYMolrYbZNcvh-U6YznE/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/irBcfUwze7pFVo5jWloGt4TEYMolrYbZNcvh-U6YznE/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/LVSEtl4R-2jvCCqxrJHxZv3yc8tEPPGqdIjKIQJAUEs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 587,
+          "resource_url": "https://i.discogs.com/XRq8rX9lN0tCeAXeTp6iwwH3PL2qB5MbjGBLcIweY8A/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XRq8rX9lN0tCeAXeTp6iwwH3PL2qB5MbjGBLcIweY8A/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/C3ZmZFH_KrPYVj2cDP4bbzhgEHXaCTFlGOa0rAQlkuA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 55080,
+          "name": "Ry Cooder",
+          "resource_url": "https://api.discogs.com/artists/55080"
+        },
+        {
+          "active": false,
+          "id": 130861,
+          "name": "Cliff Martinez",
+          "resource_url": "https://api.discogs.com/artists/130861"
+        },
+        {
+          "active": false,
+          "id": 160591,
+          "name": "Dean Smith",
+          "resource_url": "https://api.discogs.com/artists/160591"
+        },
+        {
+          "active": true,
+          "id": 196010,
+          "name": "John French",
+          "resource_url": "https://api.discogs.com/artists/196010"
+        },
+        {
+          "active": false,
+          "id": 223296,
+          "name": "Eric Drew Feldman",
+          "resource_url": "https://api.discogs.com/artists/223296"
+        },
+        {
+          "active": false,
+          "id": 256277,
+          "name": "Mark Marcellino",
+          "resource_url": "https://api.discogs.com/artists/256277"
+        },
+        {
+          "active": false,
+          "id": 256279,
+          "name": "Del Simmons",
+          "resource_url": "https://api.discogs.com/artists/256279"
+        },
+        {
+          "active": false,
+          "id": 256280,
+          "name": "Art Tripp",
+          "resource_url": "https://api.discogs.com/artists/256280"
+        },
+        {
+          "active": false,
+          "id": 257654,
+          "name": "Roy Estrada",
+          "resource_url": "https://api.discogs.com/artists/257654"
+        },
+        {
+          "active": true,
+          "id": 258476,
+          "name": "Gary Lucas",
+          "resource_url": "https://api.discogs.com/artists/258476"
+        },
+        {
+          "active": false,
+          "id": 274903,
+          "name": "Gary \"Magic\" Marker",
+          "resource_url": "https://api.discogs.com/artists/274903"
+        },
+        {
+          "active": false,
+          "id": 277686,
+          "name": "Milt Holland",
+          "resource_url": "https://api.discogs.com/artists/277686"
+        },
+        {
+          "active": false,
+          "id": 290328,
+          "name": "Elliot Ingber",
+          "resource_url": "https://api.discogs.com/artists/290328"
+        },
+        {
+          "active": true,
+          "id": 290334,
+          "name": "Jimmy Carl Black",
+          "resource_url": "https://api.discogs.com/artists/290334"
+        },
+        {
+          "active": true,
+          "id": 296274,
+          "name": "Denny Walley",
+          "resource_url": "https://api.discogs.com/artists/296274"
+        },
+        {
+          "active": false,
+          "id": 338865,
+          "name": "Jeff Moris Tepper",
+          "resource_url": "https://api.discogs.com/artists/338865"
+        },
+        {
+          "active": false,
+          "id": 343714,
+          "name": "Victor Hayden",
+          "resource_url": "https://api.discogs.com/artists/343714"
+        },
+        {
+          "active": false,
+          "id": 401161,
+          "name": "Jimmy Caravan",
+          "resource_url": "https://api.discogs.com/artists/401161"
+        },
+        {
+          "active": false,
+          "id": 407002,
+          "name": "Jeff Cotton",
+          "resource_url": "https://api.discogs.com/artists/407002"
+        },
+        {
+          "active": false,
+          "id": 407003,
+          "name": "Jerry Handley",
+          "resource_url": "https://api.discogs.com/artists/407003"
+        },
+        {
+          "active": false,
+          "id": 412619,
+          "name": "Alex St. Clair Snouffer",
+          "resource_url": "https://api.discogs.com/artists/412619"
+        },
+        {
+          "active": false,
+          "id": 416219,
+          "name": "Ty Grimes",
+          "resource_url": "https://api.discogs.com/artists/416219"
+        },
+        {
+          "active": false,
+          "id": 416221,
+          "name": "Ira Ingber",
+          "resource_url": "https://api.discogs.com/artists/416221"
+        },
+        {
+          "active": false,
+          "id": 473167,
+          "name": "Richard Redus",
+          "resource_url": "https://api.discogs.com/artists/473167"
+        },
+        {
+          "active": false,
+          "id": 473169,
+          "name": "Robert Arthur Williams",
+          "resource_url": "https://api.discogs.com/artists/473169"
+        },
+        {
+          "active": false,
+          "id": 479416,
+          "name": "John Thomas (5)",
+          "resource_url": "https://api.discogs.com/artists/479416"
+        },
+        {
+          "active": false,
+          "id": 530617,
+          "name": "Doug Moon",
+          "resource_url": "https://api.discogs.com/artists/530617"
+        },
+        {
+          "active": false,
+          "id": 738971,
+          "name": "Richard Snyder",
+          "resource_url": "https://api.discogs.com/artists/738971"
+        },
+        {
+          "active": false,
+          "id": 794897,
+          "name": "Micheal Smotherman",
+          "resource_url": "https://api.discogs.com/artists/794897"
+        },
+        {
+          "active": false,
+          "id": 806730,
+          "name": "Rich Hepner",
+          "resource_url": "https://api.discogs.com/artists/806730"
+        },
+        {
+          "active": false,
+          "id": 825970,
+          "name": "Bill Harkleroad",
+          "resource_url": "https://api.discogs.com/artists/825970"
+        },
+        {
+          "active": true,
+          "id": 1073438,
+          "name": "Mark Boston",
+          "resource_url": "https://api.discogs.com/artists/1073438"
+        },
+        {
+          "active": false,
+          "id": 1073439,
+          "name": "Jeff Bruchell",
+          "resource_url": "https://api.discogs.com/artists/1073439"
+        },
+        {
+          "active": false,
+          "id": 1483735,
+          "name": "Paul Uhrig",
+          "resource_url": "https://api.discogs.com/artists/1483735"
+        },
+        {
+          "active": false,
+          "id": 1515476,
+          "name": "Paul Blakeley",
+          "resource_url": "https://api.discogs.com/artists/1515476"
+        },
+        {
+          "active": false,
+          "id": 1625379,
+          "name": "Fuzzy Fuscaldo",
+          "resource_url": "https://api.discogs.com/artists/1625379"
+        },
+        {
+          "active": false,
+          "id": 2053979,
+          "name": "Mary Jane Eisenberg",
+          "resource_url": "https://api.discogs.com/artists/2053979"
+        },
+        {
+          "active": false,
+          "id": 2636463,
+          "name": "Bruce Fowler (3)",
+          "resource_url": "https://api.discogs.com/artists/2636463"
+        },
+        {
+          "active": false,
+          "id": 2738633,
+          "name": "Michael Traylor",
+          "resource_url": "https://api.discogs.com/artists/2738633"
+        },
+        {
+          "active": false,
+          "id": 12691271,
+          "name": "Jim Sloan (6)",
+          "resource_url": "https://api.discogs.com/artists/12691271"
+        }
+      ],
+      "name": "The Magic Band",
+      "namevariations": [
+        "His Magic Band",
+        "His Magic band",
+        "His Majic Band",
+        "Magic Band",
+        "ザ・マジック・バンド"
+      ],
+      "profile": "A rotating assembly of musicians dedicated to interpreting, recording or performing the concepts and works of songwriter [a256283], both in support of his performing persona [a119009] and as a solo unit. Members of an early line-up of The Magic Band (who performed without Vliet at Blue Lakes) also formed the short-lived [a825969]. After Vliet's retirement, in 1982, members of the The Magic Band were reformed in 2003 by drummer [a196010], who also took on the vocal role. As such they released :\r\n- [m1061559] (ATP 2003)\r\n- [r3584033] (Proper 2005)\r\n- [m935792] (Sundazed 2011)\r\n- [m1626041] (Proper 2014)\r\nand a number of live DVDs.\r\n\r\nThe original Magic Band, formed by guitarist [url=http://www.discogs.com/artist/Alex+St.+Clair+Snouffer]Alexis Snouffer[/url] in the mid-sixties, had become a popular rhythm n' blues group \"Captain Beefheart and his Magic Band\". By the release of their debut album \"Safe As Milk\" there was much conflict within the group, leading to dramatic changes in its musical direction. With the founder members gone and a troubled trail of label-changes and contract disputes, Don Van Vliet emerged to take control in new directions with his [a92623] produced opus \"Trout Mask Replica\". This was followed by eight further official albums, released under his Beefheart persona, until his retirement in 1982.\r\n\r\nOn completion of the album \"Unconditionally Guaranteed\", on which Magic Band founder Snouffer reappeared, the entire band once again had disputes with Vliet and departed. A replacement ensemble was quickly formed for the album's 1974 tour. Lacking full understanding or rehearsals of the Beefheart catalog, this line-up is often cuttingly referred to by passionate followers as 'The Tragic Band'.\r\n",
+      "releases_url": "https://api.discogs.com/artists/816783/releases",
+      "resource_url": "https://api.discogs.com/artists/816783",
+      "uri": "https://www.discogs.com/artist/816783-The-Magic-Band",
+      "urls": [
+        "https://themagicband.bandcamp.com/",
+        "https://www.facebook.com/TheMagicBand/",
+        "http://www.proper-records.co.uk/artists/the-magic-band/",
+        "https://en.wikipedia.org/wiki/The_Magic_Band",
+        "https://www.allmusic.com/artist/captain-beefheart-the-magic-band-mn0000646816"
+      ]
+    },
     "identity": {
       "musicbrainz_id": "7c5bb396-3b57-472a-9dfd-24ff98d2cc50",
       "resolved_at": "2026-10-22T14:12:32.797863",
       "wikidata_id": "Q820040",
       "wikipedia_title": "The Magic Band"
+    },
+    "wikidata_videos": []
+  },
+  "services": {
+    "discogs": {
+      "data_quality": "Needs Vote",
+      "id": 816783,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/dBjZctW0HQSv9vB6HtgTjZzOSFDf0FoaTjNjOzv3TNk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dBjZctW0HQSv9vB6HtgTjZzOSFDf0FoaTjNjOzv3TNk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/EaTdADLU1eNTHkxUmBghmLjLVMeQgKJKJ7hCb2qte0g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xMzUzOTUzMzI2/LTEzNTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 453,
+          "resource_url": "https://i.discogs.com/wZGumhLHruRbXZOAsfrC78JMxChUx4ndeS2zi57dZH0/rs:fit/g:sm/q:90/h:453/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wZGumhLHruRbXZOAsfrC78JMxChUx4ndeS2zi57dZH0/rs:fit/g:sm/q:90/h:453/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/YjImmL9O9PGVSz7BuPWvmHtzoc7F4IWZIMfDqL0kt8c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjgwNjEwMDk3/LTE2MDQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/irBcfUwze7pFVo5jWloGt4TEYMolrYbZNcvh-U6YznE/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/irBcfUwze7pFVo5jWloGt4TEYMolrYbZNcvh-U6YznE/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/LVSEtl4R-2jvCCqxrJHxZv3yc8tEPPGqdIjKIQJAUEs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2MDgz/LTUwNTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 587,
+          "resource_url": "https://i.discogs.com/XRq8rX9lN0tCeAXeTp6iwwH3PL2qB5MbjGBLcIweY8A/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XRq8rX9lN0tCeAXeTp6iwwH3PL2qB5MbjGBLcIweY8A/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/C3ZmZFH_KrPYVj2cDP4bbzhgEHXaCTFlGOa0rAQlkuA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxNjc4/My0xNjQ0NzA2Mzc5/LTI1NzkuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 55080,
+          "name": "Ry Cooder",
+          "resource_url": "https://api.discogs.com/artists/55080"
+        },
+        {
+          "active": false,
+          "id": 130861,
+          "name": "Cliff Martinez",
+          "resource_url": "https://api.discogs.com/artists/130861"
+        },
+        {
+          "active": false,
+          "id": 160591,
+          "name": "Dean Smith",
+          "resource_url": "https://api.discogs.com/artists/160591"
+        },
+        {
+          "active": true,
+          "id": 196010,
+          "name": "John French",
+          "resource_url": "https://api.discogs.com/artists/196010"
+        },
+        {
+          "active": false,
+          "id": 223296,
+          "name": "Eric Drew Feldman",
+          "resource_url": "https://api.discogs.com/artists/223296"
+        },
+        {
+          "active": false,
+          "id": 256277,
+          "name": "Mark Marcellino",
+          "resource_url": "https://api.discogs.com/artists/256277"
+        },
+        {
+          "active": false,
+          "id": 256279,
+          "name": "Del Simmons",
+          "resource_url": "https://api.discogs.com/artists/256279"
+        },
+        {
+          "active": false,
+          "id": 256280,
+          "name": "Art Tripp",
+          "resource_url": "https://api.discogs.com/artists/256280"
+        },
+        {
+          "active": false,
+          "id": 257654,
+          "name": "Roy Estrada",
+          "resource_url": "https://api.discogs.com/artists/257654"
+        },
+        {
+          "active": true,
+          "id": 258476,
+          "name": "Gary Lucas",
+          "resource_url": "https://api.discogs.com/artists/258476"
+        },
+        {
+          "active": false,
+          "id": 274903,
+          "name": "Gary \"Magic\" Marker",
+          "resource_url": "https://api.discogs.com/artists/274903"
+        },
+        {
+          "active": false,
+          "id": 277686,
+          "name": "Milt Holland",
+          "resource_url": "https://api.discogs.com/artists/277686"
+        },
+        {
+          "active": false,
+          "id": 290328,
+          "name": "Elliot Ingber",
+          "resource_url": "https://api.discogs.com/artists/290328"
+        },
+        {
+          "active": true,
+          "id": 290334,
+          "name": "Jimmy Carl Black",
+          "resource_url": "https://api.discogs.com/artists/290334"
+        },
+        {
+          "active": true,
+          "id": 296274,
+          "name": "Denny Walley",
+          "resource_url": "https://api.discogs.com/artists/296274"
+        },
+        {
+          "active": false,
+          "id": 338865,
+          "name": "Jeff Moris Tepper",
+          "resource_url": "https://api.discogs.com/artists/338865"
+        },
+        {
+          "active": false,
+          "id": 343714,
+          "name": "Victor Hayden",
+          "resource_url": "https://api.discogs.com/artists/343714"
+        },
+        {
+          "active": false,
+          "id": 401161,
+          "name": "Jimmy Caravan",
+          "resource_url": "https://api.discogs.com/artists/401161"
+        },
+        {
+          "active": false,
+          "id": 407002,
+          "name": "Jeff Cotton",
+          "resource_url": "https://api.discogs.com/artists/407002"
+        },
+        {
+          "active": false,
+          "id": 407003,
+          "name": "Jerry Handley",
+          "resource_url": "https://api.discogs.com/artists/407003"
+        },
+        {
+          "active": false,
+          "id": 412619,
+          "name": "Alex St. Clair Snouffer",
+          "resource_url": "https://api.discogs.com/artists/412619"
+        },
+        {
+          "active": false,
+          "id": 416219,
+          "name": "Ty Grimes",
+          "resource_url": "https://api.discogs.com/artists/416219"
+        },
+        {
+          "active": false,
+          "id": 416221,
+          "name": "Ira Ingber",
+          "resource_url": "https://api.discogs.com/artists/416221"
+        },
+        {
+          "active": false,
+          "id": 473167,
+          "name": "Richard Redus",
+          "resource_url": "https://api.discogs.com/artists/473167"
+        },
+        {
+          "active": false,
+          "id": 473169,
+          "name": "Robert Arthur Williams",
+          "resource_url": "https://api.discogs.com/artists/473169"
+        },
+        {
+          "active": false,
+          "id": 479416,
+          "name": "John Thomas (5)",
+          "resource_url": "https://api.discogs.com/artists/479416"
+        },
+        {
+          "active": false,
+          "id": 530617,
+          "name": "Doug Moon",
+          "resource_url": "https://api.discogs.com/artists/530617"
+        },
+        {
+          "active": false,
+          "id": 738971,
+          "name": "Richard Snyder",
+          "resource_url": "https://api.discogs.com/artists/738971"
+        },
+        {
+          "active": false,
+          "id": 794897,
+          "name": "Micheal Smotherman",
+          "resource_url": "https://api.discogs.com/artists/794897"
+        },
+        {
+          "active": false,
+          "id": 806730,
+          "name": "Rich Hepner",
+          "resource_url": "https://api.discogs.com/artists/806730"
+        },
+        {
+          "active": false,
+          "id": 825970,
+          "name": "Bill Harkleroad",
+          "resource_url": "https://api.discogs.com/artists/825970"
+        },
+        {
+          "active": true,
+          "id": 1073438,
+          "name": "Mark Boston",
+          "resource_url": "https://api.discogs.com/artists/1073438"
+        },
+        {
+          "active": false,
+          "id": 1073439,
+          "name": "Jeff Bruchell",
+          "resource_url": "https://api.discogs.com/artists/1073439"
+        },
+        {
+          "active": false,
+          "id": 1483735,
+          "name": "Paul Uhrig",
+          "resource_url": "https://api.discogs.com/artists/1483735"
+        },
+        {
+          "active": false,
+          "id": 1515476,
+          "name": "Paul Blakeley",
+          "resource_url": "https://api.discogs.com/artists/1515476"
+        },
+        {
+          "active": false,
+          "id": 1625379,
+          "name": "Fuzzy Fuscaldo",
+          "resource_url": "https://api.discogs.com/artists/1625379"
+        },
+        {
+          "active": false,
+          "id": 2053979,
+          "name": "Mary Jane Eisenberg",
+          "resource_url": "https://api.discogs.com/artists/2053979"
+        },
+        {
+          "active": false,
+          "id": 2636463,
+          "name": "Bruce Fowler (3)",
+          "resource_url": "https://api.discogs.com/artists/2636463"
+        },
+        {
+          "active": false,
+          "id": 2738633,
+          "name": "Michael Traylor",
+          "resource_url": "https://api.discogs.com/artists/2738633"
+        },
+        {
+          "active": false,
+          "id": 12691271,
+          "name": "Jim Sloan (6)",
+          "resource_url": "https://api.discogs.com/artists/12691271"
+        }
+      ],
+      "name": "The Magic Band",
+      "namevariations": [
+        "His Magic Band",
+        "His Magic band",
+        "His Majic Band",
+        "Magic Band",
+        "ザ・マジック・バンド"
+      ],
+      "profile": "A rotating assembly of musicians dedicated to interpreting, recording or performing the concepts and works of songwriter [a256283], both in support of his performing persona [a119009] and as a solo unit. Members of an early line-up of The Magic Band (who performed without Vliet at Blue Lakes) also formed the short-lived [a825969]. After Vliet's retirement, in 1982, members of the The Magic Band were reformed in 2003 by drummer [a196010], who also took on the vocal role. As such they released :\r\n- [m1061559] (ATP 2003)\r\n- [r3584033] (Proper 2005)\r\n- [m935792] (Sundazed 2011)\r\n- [m1626041] (Proper 2014)\r\nand a number of live DVDs.\r\n\r\nThe original Magic Band, formed by guitarist [url=http://www.discogs.com/artist/Alex+St.+Clair+Snouffer]Alexis Snouffer[/url] in the mid-sixties, had become a popular rhythm n' blues group \"Captain Beefheart and his Magic Band\". By the release of their debut album \"Safe As Milk\" there was much conflict within the group, leading to dramatic changes in its musical direction. With the founder members gone and a troubled trail of label-changes and contract disputes, Don Van Vliet emerged to take control in new directions with his [a92623] produced opus \"Trout Mask Replica\". This was followed by eight further official albums, released under his Beefheart persona, until his retirement in 1982.\r\n\r\nOn completion of the album \"Unconditionally Guaranteed\", on which Magic Band founder Snouffer reappeared, the entire band once again had disputes with Vliet and departed. A replacement ensemble was quickly formed for the album's 1974 tour. Lacking full understanding or rehearsals of the Beefheart catalog, this line-up is often cuttingly referred to by passionate followers as 'The Tragic Band'.\r\n",
+      "releases_url": "https://api.discogs.com/artists/816783/releases",
+      "resource_url": "https://api.discogs.com/artists/816783",
+      "uri": "https://www.discogs.com/artist/816783-The-Magic-Band",
+      "urls": [
+        "https://themagicband.bandcamp.com/",
+        "https://www.facebook.com/TheMagicBand/",
+        "http://www.proper-records.co.uk/artists/the-magic-band/",
+        "https://en.wikipedia.org/wiki/The_Magic_Band",
+        "https://www.allmusic.com/artist/captain-beefheart-the-magic-band-mn0000646816"
+      ]
     }
   },
-  "services": {},
   "spotify_id": null,
   "spotify_url": null,
-  "updated_at": "2026-10-22T14:12:32.797869",
+  "updated_at": "2026-10-30T18:46:46.023657",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Magic_Band"
 }

@@ -36,22 +36,51 @@
   "raw_data": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "434396",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        }
+      ],
+      "id": 434396,
+      "images": [
+        {
+          "height": 322,
+          "resource_url": "https://i.discogs.com/ULkWYIizpOFWHsZLdI3Qg-sXMFfiftWzPnb6_0QSCIc/rs:fit/g:sm/q:90/h:322/w:182/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ULkWYIizpOFWHsZLdI3Qg-sXMFfiftWzPnb6_0QSCIc/rs:fit/g:sm/q:90/h:322/w:182/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/b2_81urwg0YvcZQyK0lQKHnZmj6CP4LHTbB-i9uYtZk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "width": 182
+        },
+        {
+          "height": 325,
+          "resource_url": "https://i.discogs.com/HCxxvqnOSlE-NKuGjyuhka_jU9faHZEki0GA_R-7UZs/rs:fit/g:sm/q:90/h:325/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HCxxvqnOSlE-NKuGjyuhka_jU9faHZEki0GA_R-7UZs/rs:fit/g:sm/q:90/h:325/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jwlgN0wCk_ffQKo7QPFh3wtg0BR8PF6epxOfRk7mVOs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "width": 250
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/19Y-AOc8_t2z5_BGq1541fLH_vKDQG8N7sUMq54dIk4/rs:fit/g:sm/q:90/h:600/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/19Y-AOc8_t2z5_BGq1541fLH_vKDQG8N7sUMq54dIk4/rs:fit/g:sm/q:90/h:600/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lGY7ygGdPurfMhzrnrlqhSGTCaM3b7Jsnlq2-BMJiPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "width": 505
+        }
+      ],
       "name": "Connie Booth",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "434396",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/434396"
-      },
+      "profile": "Connie Booth (born December 2, 1940, Indianapolis, Indiana, USA) is an American actress best known for her work alongside [a64695], to whom she was married from 1968 to 1978, in particular the BBC TV sitcom, [i]Fawlty Towers[/i] (1975-1979) in which she played the role of \"Polly Sherman\".\r\n",
+      "realname": "Constance Booth Bollinger",
+      "releases_url": "https://api.discogs.com/artists/434396/releases",
       "resource_url": "https://api.discogs.com/artists/434396",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/434396",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/434396-Connie-Booth",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Connie_Booth"
+      ]
     },
     "identity": {
       "musicbrainz_id": "0e1b1e54-55ba-4c09-8412-dccea69ac328",
@@ -60,33 +89,63 @@
       "wikipedia_title": "Connie Booth"
     },
     "lastfm": "ArtistLastFmData(name='John Cleese and Connie Booth', url='https://www.last.fm/music/John+Cleese+and+Connie+Booth', mbid='589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', listeners=77, playcount=416, bio_summary='<a href=\"https://www.last.fm/music/John+Cleese+and+Connie+Booth\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[{'name': 'Richard Curtis and Ben Elton', 'url': 'https://www.last.fm/music/Richard+Curtis+and+Ben+Elton'}, {'name': 'J.K. Rowling', 'url': 'https://www.last.fm/music/J.K.+Rowling'}, {'name': 'Alan Partridge', 'url': 'https://www.last.fm/music/Alan+Partridge'}, {'name': 'Fawlty Towers', 'url': 'https://www.last.fm/music/Fawlty+Towers'}, {'name': 'Ricky Gervais, Stephen Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Stephen+Merchant+and+Karl+Pilkington'}], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'John Cleese and Connie Booth', 'mbid': '589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', 'url': 'https://www.last.fm/music/John+Cleese+and+Connie+Booth', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '77', 'playcount': '416'}, 'similar': {'artist': [{'name': 'Richard Curtis and Ben Elton', 'url': 'https://www.last.fm/music/Richard+Curtis+and+Ben+Elton', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'J.K. Rowling', 'url': 'https://www.last.fm/music/J.K.+Rowling', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Alan Partridge', 'url': 'https://www.last.fm/music/Alan+Partridge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Fawlty Towers', 'url': 'https://www.last.fm/music/Fawlty+Towers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ricky Gervais, Stephen Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Stephen+Merchant+and+Karl+Pilkington', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/John+Cleese+and+Connie+Booth/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/John+Cleese+and+Connie+Booth\">Read more on Last.fm</a>', 'content': ''}}})",
-    "spotify": "ArtistSpotifyData(id='7zxmMre8MFIj5G31m024wr', url='https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr', name='Connie Booth', popularity=2, followers=43, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, 'followers': {'href': None, 'total': 43}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7zxmMre8MFIj5G31m024wr', 'id': '7zxmMre8MFIj5G31m024wr', 'images': [], 'name': 'Connie Booth', 'popularity': 2, 'type': 'artist', 'uri': 'spotify:artist:7zxmMre8MFIj5G31m024wr'})"
+    "spotify": "ArtistSpotifyData(id='7zxmMre8MFIj5G31m024wr', url='https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr', name='Connie Booth', popularity=2, followers=43, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, 'followers': {'href': None, 'total': 43}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7zxmMre8MFIj5G31m024wr', 'id': '7zxmMre8MFIj5G31m024wr', 'images': [], 'name': 'Connie Booth', 'popularity': 2, 'type': 'artist', 'uri': 'spotify:artist:7zxmMre8MFIj5G31m024wr'})",
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "434396",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 506139,
+          "name": "Fawlty Towers",
+          "resource_url": "https://api.discogs.com/artists/506139"
+        }
+      ],
+      "id": 434396,
+      "images": [
+        {
+          "height": 322,
+          "resource_url": "https://i.discogs.com/ULkWYIizpOFWHsZLdI3Qg-sXMFfiftWzPnb6_0QSCIc/rs:fit/g:sm/q:90/h:322/w:182/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ULkWYIizpOFWHsZLdI3Qg-sXMFfiftWzPnb6_0QSCIc/rs:fit/g:sm/q:90/h:322/w:182/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/b2_81urwg0YvcZQyK0lQKHnZmj6CP4LHTbB-i9uYtZk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQy/LmpwZWc.jpeg",
+          "width": 182
+        },
+        {
+          "height": 325,
+          "resource_url": "https://i.discogs.com/HCxxvqnOSlE-NKuGjyuhka_jU9faHZEki0GA_R-7UZs/rs:fit/g:sm/q:90/h:325/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HCxxvqnOSlE-NKuGjyuhka_jU9faHZEki0GA_R-7UZs/rs:fit/g:sm/q:90/h:325/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jwlgN0wCk_ffQKo7QPFh3wtg0BR8PF6epxOfRk7mVOs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xMTUwOTMyNDQ5/LmpwZWc.jpeg",
+          "width": 250
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/19Y-AOc8_t2z5_BGq1541fLH_vKDQG8N7sUMq54dIk4/rs:fit/g:sm/q:90/h:600/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/19Y-AOc8_t2z5_BGq1541fLH_vKDQG8N7sUMq54dIk4/rs:fit/g:sm/q:90/h:600/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lGY7ygGdPurfMhzrnrlqhSGTCaM3b7Jsnlq2-BMJiPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDM5/Ni0xNzg1NzA3MzI3/LTcyMDkuanBlZw.jpeg",
+          "width": 505
+        }
+      ],
       "name": "Connie Booth",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "434396",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/434396"
-      },
+      "profile": "Connie Booth (born December 2, 1940, Indianapolis, Indiana, USA) is an American actress best known for her work alongside [a64695], to whom she was married from 1968 to 1978, in particular the BBC TV sitcom, [i]Fawlty Towers[/i] (1975-1979) in which she played the role of \"Polly Sherman\".\r\n",
+      "realname": "Constance Booth Bollinger",
+      "releases_url": "https://api.discogs.com/artists/434396/releases",
       "resource_url": "https://api.discogs.com/artists/434396",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/434396",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/434396-Connie-Booth",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Connie_Booth"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='John Cleese and Connie Booth', url='https://www.last.fm/music/John+Cleese+and+Connie+Booth', mbid='589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', listeners=77, playcount=416, bio_summary='<a href=\"https://www.last.fm/music/John+Cleese+and+Connie+Booth\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[{'name': 'Richard Curtis and Ben Elton', 'url': 'https://www.last.fm/music/Richard+Curtis+and+Ben+Elton'}, {'name': 'J.K. Rowling', 'url': 'https://www.last.fm/music/J.K.+Rowling'}, {'name': 'Alan Partridge', 'url': 'https://www.last.fm/music/Alan+Partridge'}, {'name': 'Fawlty Towers', 'url': 'https://www.last.fm/music/Fawlty+Towers'}, {'name': 'Ricky Gervais, Stephen Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Stephen+Merchant+and+Karl+Pilkington'}], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'John Cleese and Connie Booth', 'mbid': '589a0ad5-30d4-4bbc-adb3-373ce0ad49ae', 'url': 'https://www.last.fm/music/John+Cleese+and+Connie+Booth', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '77', 'playcount': '416'}, 'similar': {'artist': [{'name': 'Richard Curtis and Ben Elton', 'url': 'https://www.last.fm/music/Richard+Curtis+and+Ben+Elton', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'J.K. Rowling', 'url': 'https://www.last.fm/music/J.K.+Rowling', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Alan Partridge', 'url': 'https://www.last.fm/music/Alan+Partridge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Fawlty Towers', 'url': 'https://www.last.fm/music/Fawlty+Towers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ricky Gervais, Stephen Merchant and Karl Pilkington', 'url': 'https://www.last.fm/music/Ricky+Gervais,+Stephen+Merchant+and+Karl+Pilkington', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/John+Cleese+and+Connie+Booth/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/John+Cleese+and+Connie+Booth\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='7zxmMre8MFIj5G31m024wr', url='https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr', name='Connie Booth', popularity=2, followers=43, genres=[], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr'}, 'followers': {'href': None, 'total': 43}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/7zxmMre8MFIj5G31m024wr', 'id': '7zxmMre8MFIj5G31m024wr', 'images': [], 'name': 'Connie Booth', 'popularity': 2, 'type': 'artist', 'uri': 'spotify:artist:7zxmMre8MFIj5G31m024wr'})"
   },
   "spotify_id": "7zxmMre8MFIj5G31m024wr",
   "spotify_url": "https://open.spotify.com/artist/7zxmMre8MFIj5G31m024wr",
-  "updated_at": "2026-10-22T14:05:51.351668",
+  "updated_at": "2026-10-30T18:38:05.530017",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Connie_Booth"
 }

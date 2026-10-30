@@ -128,22 +128,146 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='548342', url='https://music.apple.com/gb/artist/alison-moyet/548342', name='Alison Moyet', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9a/ca/93/9aca93aa-2d94-4f9c-bdf7-d6704d66421b/27e3036e-6a05-433f-81ac-7dc08f73003b_ami-identity-8279caadb2268ace42c87eef710ba4d9-2024-06-17T11-06-21.425Z_cropped.png/2000x2000bb.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '548342', 'type': 'artists', 'href': '/v1/catalog/gb/artists/548342', 'attributes': {'artwork': {'bgColor': '545454', 'height': 1101, 'textColor1': 'f9f9f9', 'textColor2': 'f5f5f5', 'textColor3': 'd8d8d8', 'textColor4': 'd5d5d5', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9a/ca/93/9aca93aa-2d94-4f9c-bdf7-d6704d66421b/27e3036e-6a05-433f-81ac-7dc08f73003b_ami-identity-8279caadb2268ace42c87eef710ba4d9-2024-06-17T11-06-21.425Z_cropped.png/{w}x{h}bb.jpg', 'width': 1101}, 'genreNames': ['Pop'], 'name': 'Alison Moyet', 'url': 'https://music.apple.com/gb/artist/alison-moyet/548342'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/548342/albums', 'next': '/v1/catalog/gb/artists/548342/albums?offset=25', 'data': [{'id': '334987302', 'type': 'albums', 'href': '/v1/catalog/gb/albums/334987302'}, {'id': '1439950967', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439950967'}, {'id': '1455990790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1455990790'}, {'id': '427821270', 'type': 'albums', 'href': '/v1/catalog/gb/albums/427821270'}, {'id': '1747967353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1747967353'}, {'id': '1212448146', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1212448146'}, {'id': '1439941734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439941734'}, {'id': '332551510', 'type': 'albums', 'href': '/v1/catalog/gb/albums/332551510'}, {'id': '1170049647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170049647'}, {'id': '1173763882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1173763882'}, {'id': '1439676107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439676107'}, {'id': '1169966603', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169966603'}, {'id': '268066770', 'type': 'albums', 'href': '/v1/catalog/gb/albums/268066770'}, {'id': '1170067877', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170067877'}, {'id': '1431302203', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1431302203'}, {'id': '1359476867', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1359476867'}, {'id': '1439944542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439944542'}, {'id': '580337755', 'type': 'albums', 'href': '/v1/catalog/gb/albums/580337755'}, {'id': '1170067338', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170067338'}, {'id': '1439674162', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439674162'}, {'id': '1783327763', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783327763'}, {'id': '1173768355', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1173768355'}, {'id': '1620860440', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1620860440'}, {'id': '1169661293', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169661293'}, {'id': '1170052291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170052291'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "19674",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 2713,
+          "name": "Yazoo",
+          "resource_url": "https://api.discogs.com/artists/2713"
+        },
+        {
+          "active": true,
+          "id": 955594,
+          "name": "The Vicars",
+          "resource_url": "https://api.discogs.com/artists/955594"
+        },
+        {
+          "active": false,
+          "id": 1261988,
+          "name": "The Little Roosters",
+          "resource_url": "https://api.discogs.com/artists/1261988"
+        }
+      ],
+      "id": 19674,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/z0yajKNL2lzgT1UD8qUhYfnbFCNJC98Hw71IRORfZec/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/z0yajKNL2lzgT1UD8qUhYfnbFCNJC98Hw71IRORfZec/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9VOBcCMd5Dis5RtnPkHGS7hJOZniP0L-e5xpFVJj1aE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 585,
+          "resource_url": "https://i.discogs.com/slIo89JCRXSZd7JPmaYFci78gIlo_4rdKL3opAUoI3Y/rs:fit/g:sm/q:90/h:585/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/slIo89JCRXSZd7JPmaYFci78gIlo_4rdKL3opAUoI3Y/rs:fit/g:sm/q:90/h:585/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ldiubWdTjl_QhYinxST2NGs1410Rc1zoQYu0qFXcp54/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/KOwrKtTb6yON6AYoJdEgPPFYi9LfB-eyzSQ6uPYB4tw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KOwrKtTb6yON6AYoJdEgPPFYi9LfB-eyzSQ6uPYB4tw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iCMjIp_JOaONPCGZN8yB6Ps8JqUcYw_7tHAGt9kYp5A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/BL27DDhzGKjhBr3jGye_U9f9GhAX5mUTr8yBpYhD3CY/rs:fit/g:sm/q:90/h:598/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BL27DDhzGKjhBr3jGye_U9f9GhAX5mUTr8yBpYhD3CY/rs:fit/g:sm/q:90/h:598/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/A9RnkWAR_Jx7XoUeiM_ETY9fK2khYxZKznkhCl7z6hM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/8f1obTGHBkuwoWcv-doBhCAHWtRR2_xzBD7e0-F1Th0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8f1obTGHBkuwoWcv-doBhCAHWtRR2_xzBD7e0-F1Th0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Vtj9pYoMB5mvrTqrB_2a8UB_jMNMySgbi_6CLL3JM2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/aOe7qPFx6FTCwvB69zJUe-xBXHE3XVASoLdmcR1HA_A/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aOe7qPFx6FTCwvB69zJUe-xBXHE3XVASoLdmcR1HA_A/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/JHRvuV1KJQUGKCiewpskBqo_gGJdS7aYAL5dshxp-S4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/LNcifUNtvIsVTlgDt9BAbdcfTr1DpSc381Sn9A2VQUI/rs:fit/g:sm/q:90/h:350/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LNcifUNtvIsVTlgDt9BAbdcfTr1DpSc381Sn9A2VQUI/rs:fit/g:sm/q:90/h:350/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/d6dQW89JcUqLyaWqupOb1dyeinOoptxnnxpxtx8ICb0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "width": 323
+        },
+        {
+          "height": 235,
+          "resource_url": "https://i.discogs.com/g9-tEQsenmgsECrfOtL5wpD7_mlxLJxMUVPe6fIILas/rs:fit/g:sm/q:90/h:235/w:236/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g9-tEQsenmgsECrfOtL5wpD7_mlxLJxMUVPe6fIILas/rs:fit/g:sm/q:90/h:235/w:236/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/JOB3xL3HU4Qqrd37vd8HtVWxcpV93ek7R6U-OessUos/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "width": 236
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uhkBYgujQYTgkyA3XMOCNbHUQjkrPOPVft5edMF_ZBU/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uhkBYgujQYTgkyA3XMOCNbHUQjkrPOPVft5edMF_ZBU/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QBWF8BI2gr5UXlK2TcjS8H3elZEjWZgFp2cm_YPUksw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "width": 584
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/t9ST3qnSBGv59wdW06HBA7UqeTd8e9UyhbiqmuiIj7M/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t9ST3qnSBGv59wdW06HBA7UqeTd8e9UyhbiqmuiIj7M/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9baaZciOrfm0hSRNmQ3GHWBViMWkhPycyNNoviJbr4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "width": 586
+        }
+      ],
       "name": "Alison Moyet",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "19674",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/19674"
-      },
+      "namevariations": [
+        "A Moyet",
+        "A. Moyel",
+        "A. Moyet",
+        "A.Moyet",
+        "A.X. Moyet",
+        "Alison",
+        "Alison Moyet (Yazoo)",
+        "Allison Moyet",
+        "Alyson Moyet",
+        "G. Moyet",
+        "Genevieve Alison Jane Moyet",
+        "Moyeet",
+        "Moyet",
+        "Moyet Alison",
+        "Moyet, Alison",
+        "Moyett",
+        "アリソン・モイエ",
+        "アリソン・モイエット",
+        "艾莉森摩耶"
+      ],
+      "profile": "Born Genevieve Alison Moyet on 18 June 1961 in Billericay, Essex. Grew up in Basildon, Essex.  She was nicknamed \"Alf\" from an early age and started her singing career with R&B groups 'The Screaming Abdabs' and 'The Vicars' before finding fame as half of 'Yazoo' ('Yaz' in the USA).\r\n\r\nMarried to [a486845].\r\nLegal name: Genevieve Alison-Jane Ballard",
+      "realname": "Genevieve Alison Jane Moyet",
+      "releases_url": "https://api.discogs.com/artists/19674/releases",
       "resource_url": "https://api.discogs.com/artists/19674",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/19674",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/19674-Alison-Moyet",
+      "urls": [
+        "https://www.alisonmoyetmusic.com/",
+        "https://www.facebook.com/AlisonMoyet/",
+        "https://www.instagram.com/alisonmoyetofficial/",
+        "https://twitter.com/Alisonmoyetnews",
+        "https://myspace.com/alisonmoyetofficial",
+        "https://en.wikipedia.org/wiki/Alison_Moyet",
+        "https://www.imdb.com/name/nm0999265/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "79feb79b-8f0d-4306-b30a-e28bd88c9323",
@@ -281,27 +405,183 @@
         "track": "Reassuring Pinches",
         "uri": "https://www.youtube.com/watch?v=PNuzHQxDBfE"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "The Turn",
+        "id": "Q65087913",
+        "track": "One More Time",
+        "uri": "https://www.youtube.com/watch?v=Yn6q_Wv6cdo"
+      },
+      {
+        "album": null,
+        "id": "Q6061097",
+        "track": "Invisible",
+        "uri": "https://www.youtube.com/watch?v=Z8CeAHfAD2w"
+      },
+      {
+        "album": null,
+        "id": "Q16858949",
+        "track": "Changeling",
+        "uri": "https://www.youtube.com/watch?v=wtIfQIKXjKs"
+      },
+      {
+        "album": null,
+        "id": "Q16997046",
+        "track": "Love Reign Supreme",
+        "uri": "https://www.youtube.com/watch?v=zPIe4yjGWMA"
+      },
+      {
+        "album": null,
+        "id": "Q17066488",
+        "track": "When I Was Your Girl",
+        "uri": "https://www.youtube.com/watch?v=n-wtJyh2Co4"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='548342', url='https://music.apple.com/gb/artist/alison-moyet/548342', name='Alison Moyet', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9a/ca/93/9aca93aa-2d94-4f9c-bdf7-d6704d66421b/27e3036e-6a05-433f-81ac-7dc08f73003b_ami-identity-8279caadb2268ace42c87eef710ba4d9-2024-06-17T11-06-21.425Z_cropped.png/2000x2000bb.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '548342', 'type': 'artists', 'href': '/v1/catalog/gb/artists/548342', 'attributes': {'artwork': {'bgColor': '545454', 'height': 1101, 'textColor1': 'f9f9f9', 'textColor2': 'f5f5f5', 'textColor3': 'd8d8d8', 'textColor4': 'd5d5d5', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/9a/ca/93/9aca93aa-2d94-4f9c-bdf7-d6704d66421b/27e3036e-6a05-433f-81ac-7dc08f73003b_ami-identity-8279caadb2268ace42c87eef710ba4d9-2024-06-17T11-06-21.425Z_cropped.png/{w}x{h}bb.jpg', 'width': 1101}, 'genreNames': ['Pop'], 'name': 'Alison Moyet', 'url': 'https://music.apple.com/gb/artist/alison-moyet/548342'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/548342/albums', 'next': '/v1/catalog/gb/artists/548342/albums?offset=25', 'data': [{'id': '334987302', 'type': 'albums', 'href': '/v1/catalog/gb/albums/334987302'}, {'id': '1439950967', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439950967'}, {'id': '1455990790', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1455990790'}, {'id': '427821270', 'type': 'albums', 'href': '/v1/catalog/gb/albums/427821270'}, {'id': '1747967353', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1747967353'}, {'id': '1212448146', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1212448146'}, {'id': '1439941734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439941734'}, {'id': '332551510', 'type': 'albums', 'href': '/v1/catalog/gb/albums/332551510'}, {'id': '1170049647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170049647'}, {'id': '1173763882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1173763882'}, {'id': '1439676107', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439676107'}, {'id': '1169966603', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169966603'}, {'id': '268066770', 'type': 'albums', 'href': '/v1/catalog/gb/albums/268066770'}, {'id': '1170067877', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170067877'}, {'id': '1431302203', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1431302203'}, {'id': '1359476867', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1359476867'}, {'id': '1439944542', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439944542'}, {'id': '580337755', 'type': 'albums', 'href': '/v1/catalog/gb/albums/580337755'}, {'id': '1170067338', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170067338'}, {'id': '1439674162', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1439674162'}, {'id': '1783327763', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783327763'}, {'id': '1173768355', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1173768355'}, {'id': '1620860440', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1620860440'}, {'id': '1169661293', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169661293'}, {'id': '1170052291', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1170052291'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "19674",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": true,
+          "id": 2713,
+          "name": "Yazoo",
+          "resource_url": "https://api.discogs.com/artists/2713"
+        },
+        {
+          "active": true,
+          "id": 955594,
+          "name": "The Vicars",
+          "resource_url": "https://api.discogs.com/artists/955594"
+        },
+        {
+          "active": false,
+          "id": 1261988,
+          "name": "The Little Roosters",
+          "resource_url": "https://api.discogs.com/artists/1261988"
+        }
+      ],
+      "id": 19674,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/z0yajKNL2lzgT1UD8qUhYfnbFCNJC98Hw71IRORfZec/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/z0yajKNL2lzgT1UD8qUhYfnbFCNJC98Hw71IRORfZec/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9VOBcCMd5Dis5RtnPkHGS7hJOZniP0L-e5xpFVJj1aE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODQt/Mzk0OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 585,
+          "resource_url": "https://i.discogs.com/slIo89JCRXSZd7JPmaYFci78gIlo_4rdKL3opAUoI3Y/rs:fit/g:sm/q:90/h:585/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/slIo89JCRXSZd7JPmaYFci78gIlo_4rdKL3opAUoI3Y/rs:fit/g:sm/q:90/h:585/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ldiubWdTjl_QhYinxST2NGs1410Rc1zoQYu0qFXcp54/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0OTQ2OTUwNDMt/Mzc2My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/KOwrKtTb6yON6AYoJdEgPPFYi9LfB-eyzSQ6uPYB4tw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KOwrKtTb6yON6AYoJdEgPPFYi9LfB-eyzSQ6uPYB4tw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iCMjIp_JOaONPCGZN8yB6Ps8JqUcYw_7tHAGt9kYp5A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzgt/OTA1Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/BL27DDhzGKjhBr3jGye_U9f9GhAX5mUTr8yBpYhD3CY/rs:fit/g:sm/q:90/h:598/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BL27DDhzGKjhBr3jGye_U9f9GhAX5mUTr8yBpYhD3CY/rs:fit/g:sm/q:90/h:598/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/A9RnkWAR_Jx7XoUeiM_ETY9fK2khYxZKznkhCl7z6hM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzMzY2NjAyODYt/NzI4MS5qcGVn.jpeg",
+          "width": 598
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/8f1obTGHBkuwoWcv-doBhCAHWtRR2_xzBD7e0-F1Th0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8f1obTGHBkuwoWcv-doBhCAHWtRR2_xzBD7e0-F1Th0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Vtj9pYoMB5mvrTqrB_2a8UB_jMNMySgbi_6CLL3JM2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE1NTcxNTc1ODkt/MTI4Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/aOe7qPFx6FTCwvB69zJUe-xBXHE3XVASoLdmcR1HA_A/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aOe7qPFx6FTCwvB69zJUe-xBXHE3XVASoLdmcR1HA_A/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/JHRvuV1KJQUGKCiewpskBqo_gGJdS7aYAL5dshxp-S4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE0ODk3MzgyMzkt/NTg2MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/LNcifUNtvIsVTlgDt9BAbdcfTr1DpSc381Sn9A2VQUI/rs:fit/g:sm/q:90/h:350/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LNcifUNtvIsVTlgDt9BAbdcfTr1DpSc381Sn9A2VQUI/rs:fit/g:sm/q:90/h:350/w:323/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/d6dQW89JcUqLyaWqupOb1dyeinOoptxnnxpxtx8ICb0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTAwMS5qcGc.jpeg",
+          "width": 323
+        },
+        {
+          "height": 235,
+          "resource_url": "https://i.discogs.com/g9-tEQsenmgsECrfOtL5wpD7_mlxLJxMUVPe6fIILas/rs:fit/g:sm/q:90/h:235/w:236/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g9-tEQsenmgsECrfOtL5wpD7_mlxLJxMUVPe6fIILas/rs:fit/g:sm/q:90/h:235/w:236/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/JOB3xL3HU4Qqrd37vd8HtVWxcpV93ek7R6U-OessUos/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTEzNjc5NTg3NDMt/NjY3Mi5qcGVn.jpeg",
+          "width": 236
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uhkBYgujQYTgkyA3XMOCNbHUQjkrPOPVft5edMF_ZBU/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uhkBYgujQYTgkyA3XMOCNbHUQjkrPOPVft5edMF_ZBU/rs:fit/g:sm/q:90/h:600/w:584/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QBWF8BI2gr5UXlK2TcjS8H3elZEjWZgFp2cm_YPUksw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4MjAt/NzMwMy5qcGVn.jpeg",
+          "width": 584
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/t9ST3qnSBGv59wdW06HBA7UqeTd8e9UyhbiqmuiIj7M/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t9ST3qnSBGv59wdW06HBA7UqeTd8e9UyhbiqmuiIj7M/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9baaZciOrfm0hSRNmQ3GHWBViMWkhPycyNNoviJbr4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc0/LTE2NDU5NDI4NjYt/MTk1Ni5qcGVn.jpeg",
+          "width": 586
+        }
+      ],
       "name": "Alison Moyet",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "19674",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/19674"
-      },
+      "namevariations": [
+        "A Moyet",
+        "A. Moyel",
+        "A. Moyet",
+        "A.Moyet",
+        "A.X. Moyet",
+        "Alison",
+        "Alison Moyet (Yazoo)",
+        "Allison Moyet",
+        "Alyson Moyet",
+        "G. Moyet",
+        "Genevieve Alison Jane Moyet",
+        "Moyeet",
+        "Moyet",
+        "Moyet Alison",
+        "Moyet, Alison",
+        "Moyett",
+        "アリソン・モイエ",
+        "アリソン・モイエット",
+        "艾莉森摩耶"
+      ],
+      "profile": "Born Genevieve Alison Moyet on 18 June 1961 in Billericay, Essex. Grew up in Basildon, Essex.  She was nicknamed \"Alf\" from an early age and started her singing career with R&B groups 'The Screaming Abdabs' and 'The Vicars' before finding fame as half of 'Yazoo' ('Yaz' in the USA).\r\n\r\nMarried to [a486845].\r\nLegal name: Genevieve Alison-Jane Ballard",
+      "realname": "Genevieve Alison Jane Moyet",
+      "releases_url": "https://api.discogs.com/artists/19674/releases",
       "resource_url": "https://api.discogs.com/artists/19674",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/19674",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/19674-Alison-Moyet",
+      "urls": [
+        "https://www.alisonmoyetmusic.com/",
+        "https://www.facebook.com/AlisonMoyet/",
+        "https://www.instagram.com/alisonmoyetofficial/",
+        "https://twitter.com/Alisonmoyetnews",
+        "https://myspace.com/alisonmoyetofficial",
+        "https://en.wikipedia.org/wiki/Alison_Moyet",
+        "https://www.imdb.com/name/nm0999265/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Alison Moyet', url='https://www.last.fm/music/Alison+Moyet', mbid='79feb79b-8f0d-4306-b30a-e28bd88c9323', listeners=393986, playcount=3979749, bio_summary='Alison Moyet (born Geneviève Alison Jane Moyet on 18 June 1961 - Billericay, Essex, England), is an English pop singer-songwriter noted for her bluesy voice.\\n\\nMoyet was born to a French father and English mother. She grew up in Basildon, where she attended school. After leaving school at 16, she worked as a shop worker and a piano tuner. She was involved in a number of punk rock, pub rock and blues bands in the South East Essex area during the late 1970s and early 1980s <a href=\"https://www.last.fm/music/Alison+Moyet\">Read more on Last.fm</a>', bio_content='Alison Moyet (born Geneviève Alison Jane Moyet on 18 June 1961 - Billericay, Essex, England), is an English pop singer-songwriter noted for her bluesy voice.\\n\\nMoyet was born to a French father and English mother. She grew up in Basildon, where she attended school. After leaving school at 16, she worked as a shop worker and a piano tuner. She was involved in a number of punk rock, pub rock and blues bands in the South East Essex area during the late 1970s and early 1980s, including The Vandals and the Screamin\\' Ab Dabs, The Vicars, The Vandals (UK 1978) and The Little Roosters.\\n\\nHer mainstream pop career began in 1982 when she formed the electro-pop duo Yazoo with former Depeche Mode member Vince Clarke. The duo had several hits, including \"Situation\", \"Only You\", \"Don\\'t Go\" and recorded two albums, \"Upstairs At Eric\\'s\" and \"You And Me Both\". The group was notable for melding Clarke\\'s trademark electronic sounds with Moyet\\'s warm, soulful voice.\\n\\nIn 1983 Moyet and Clarke decided to disband Yazoo. While Clarke went on to form Erasure, Moyet signed to CBS (in part because it had been Janis Joplin\\'s label), and began her solo career.\\n\\nIn 1984 she released her debut album \"Alf\" (titled after her punk-era nickname). Alf included contributions by popular producers/songwriters Swain and Jolley, as well as a song, \"Invisible\", written by Motown legend Lamont Dozier. The record was a hit in Britain, reaching number one in the album charts. Alf spawned 3 hit singles, \"Love Resurrection\", \"Invisible\" and \"All Cried Out\". In the US, \"Invisible\" was a Top 40 hit (something Yazoo had never achieved).\\n\\nIn 1985 Moyet performed at the historic Live Aid concert, alongside Paul Young. She also released a single not featured on \"Alf\", a cover of the standard \"That Ole Devil Called Love.\" The single went to #2 on the UK singles chart. (At present, it remains Moyet\\'s highest-charting UK single.)\\n\\nIn 1986 Moyet had another big UK hit with the single \"Is This Love?,\" followed in 1987 by the album Raindancing. Raindancing spawned further hit singles, including a cover of Floy Joy\\'s \"Weak In The Presence of Beauty\" and \"Ordinary Girl\". In 1987, she scored another cover hit with \"Love Letters\"; the video for the song featured comedy duo French & Saunders.\\n\\nFollowing a period of personal and career evaluation Hoodoo was released in 1991. Hoodoo, which took several steps away from the glossy pop sheen of Raindancing and was a far earthier and more personal album. Compared to her earlier releases, Hoodoo received little label support and only minimal promotion. The album sold respectably in Britain, and was nominated for a Grammy for the single \"It Won\\'t Be Long.\" However, the release of Hoodoo marked the beginning of what was to become a long fight for Moyet to secure complete control of her artistic direction. Like many similar artists of Moyet\\'s calibre (including Aimee Mann and the late Kirsty MacColl), Moyet was reluctant to record a radio-friendly \"pop\" album simply for the sake of creating chart hits.\\n\\nMoyet\\'s next album Essex (1994) was also a source of controversy for her; in order for the album to be released, her label (now Sony) insisted that certain Essex tracks be re-recorded and re-produced, and that there be additional material remixed to create a more \\'commercial\\' package. The video for the single \"Whispering Your Name\" again featured Dawn French.\\n\\nFollowing the release of Essex, Sony released a greatest-hits compilation of Moyet\\'s work the following year. Singles entered the UK charts at number one. Following incredible CD success and a UK tour, Singles was re-issued as a double CD set which included \"No Overdubs\", a bonus live CD. Upon re-issue Singles again charted, this time in the top 20.\\n\\nDue to prolonged litigation with Sony, Moyet did not record or release a new studio album for over eight years after the release of Essex. During this time, however, Moyet recorded vocals for Tricky, Sylk-130, Ocean Colour Scene, The Lightning Seeds and King Britt, and was featured on the British leg of the Lilith Fair tour. 2001 saw the release of The Essential Alison Moyet CD.\\n\\nIn August 2002, after years of holding out and refusing to compromise, Moyet was finally released from her Sony contract. Moyet signed to Sanctuary Records and released her first studio album in eight years, Hometime, an album which Sony had refused to release. Hometime was produced by the Insects, who had also produced works by Goldfrapp and Massive Attack. The release of the CD launched Moyet into the top five best-selling female UK artists of 2002 and resulted in a Brit nomination for Best Female Vocal as well as a nomination for the Mercury Music Prize.\\n\\nMoyet\\'s following CD, Voice, an eclectic collection of covers, was released on 6 September 2004 and entered the UK charts at number seven. The album was later re-issued with a bonus track, \"Alfie.\" A companion DVD, One Blue Voice, was released in 2006. \\n\\nAfter signing with the W14 Music label in late 2006, Moyet released the all-original The Turn in October 2007. As of this writing (15 Sept 2008), Moyet will be touring North America for the first time in 14 years after the huge success of the Yazoo Reconnected Tour of 2008.\\n\\nwww.alisonmoyet.com/ <a href=\"https://www.last.fm/music/Alison+Moyet\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['female vocalists', 'pop', '80s', 'british', 'synthpop'], similar_artists=[{'name': 'Yazoo', 'url': 'https://www.last.fm/music/Yazoo'}, {'name': 'Paul Young', 'url': 'https://www.last.fm/music/Paul+Young'}, {'name': 'Erasure', 'url': 'https://www.last.fm/music/Erasure'}, {'name': 'Bananarama', 'url': 'https://www.last.fm/music/Bananarama'}, {'name': 'Howard Jones', 'url': 'https://www.last.fm/music/Howard+Jones'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Alison Moyet', 'mbid': '79feb79b-8f0d-4306-b30a-e28bd88c9323', 'url': 'https://www.last.fm/music/Alison+Moyet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '393986', 'playcount': '3979749'}, 'similar': {'artist': [{'name': 'Yazoo', 'url': 'https://www.last.fm/music/Yazoo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Paul Young', 'url': 'https://www.last.fm/music/Paul+Young', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Erasure', 'url': 'https://www.last.fm/music/Erasure', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bananarama', 'url': 'https://www.last.fm/music/Bananarama', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Howard Jones', 'url': 'https://www.last.fm/music/Howard+Jones', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'synthpop', 'url': 'https://www.last.fm/tag/synthpop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Alison+Moyet/+wiki'}}, 'published': '06 Nov 2006, 07:45', 'summary': 'Alison Moyet (born Geneviève Alison Jane Moyet on 18 June 1961 - Billericay, Essex, England), is an English pop singer-songwriter noted for her bluesy voice.\\n\\nMoyet was born to a French father and English mother. She grew up in Basildon, where she attended school. After leaving school at 16, she worked as a shop worker and a piano tuner. She was involved in a number of punk rock, pub rock and blues bands in the South East Essex area during the late 1970s and early 1980s <a href=\"https://www.last.fm/music/Alison+Moyet\">Read more on Last.fm</a>', 'content': 'Alison Moyet (born Geneviève Alison Jane Moyet on 18 June 1961 - Billericay, Essex, England), is an English pop singer-songwriter noted for her bluesy voice.\\n\\nMoyet was born to a French father and English mother. She grew up in Basildon, where she attended school. After leaving school at 16, she worked as a shop worker and a piano tuner. She was involved in a number of punk rock, pub rock and blues bands in the South East Essex area during the late 1970s and early 1980s, including The Vandals and the Screamin\\' Ab Dabs, The Vicars, The Vandals (UK 1978) and The Little Roosters.\\n\\nHer mainstream pop career began in 1982 when she formed the electro-pop duo Yazoo with former Depeche Mode member Vince Clarke. The duo had several hits, including \"Situation\", \"Only You\", \"Don\\'t Go\" and recorded two albums, \"Upstairs At Eric\\'s\" and \"You And Me Both\". The group was notable for melding Clarke\\'s trademark electronic sounds with Moyet\\'s warm, soulful voice.\\n\\nIn 1983 Moyet and Clarke decided to disband Yazoo. While Clarke went on to form Erasure, Moyet signed to CBS (in part because it had been Janis Joplin\\'s label), and began her solo career.\\n\\nIn 1984 she released her debut album \"Alf\" (titled after her punk-era nickname). Alf included contributions by popular producers/songwriters Swain and Jolley, as well as a song, \"Invisible\", written by Motown legend Lamont Dozier. The record was a hit in Britain, reaching number one in the album charts. Alf spawned 3 hit singles, \"Love Resurrection\", \"Invisible\" and \"All Cried Out\". In the US, \"Invisible\" was a Top 40 hit (something Yazoo had never achieved).\\n\\nIn 1985 Moyet performed at the historic Live Aid concert, alongside Paul Young. She also released a single not featured on \"Alf\", a cover of the standard \"That Ole Devil Called Love.\" The single went to #2 on the UK singles chart. (At present, it remains Moyet\\'s highest-charting UK single.)\\n\\nIn 1986 Moyet had another big UK hit with the single \"Is This Love?,\" followed in 1987 by the album Raindancing. Raindancing spawned further hit singles, including a cover of Floy Joy\\'s \"Weak In The Presence of Beauty\" and \"Ordinary Girl\". In 1987, she scored another cover hit with \"Love Letters\"; the video for the song featured comedy duo French & Saunders.\\n\\nFollowing a period of personal and career evaluation Hoodoo was released in 1991. Hoodoo, which took several steps away from the glossy pop sheen of Raindancing and was a far earthier and more personal album. Compared to her earlier releases, Hoodoo received little label support and only minimal promotion. The album sold respectably in Britain, and was nominated for a Grammy for the single \"It Won\\'t Be Long.\" However, the release of Hoodoo marked the beginning of what was to become a long fight for Moyet to secure complete control of her artistic direction. Like many similar artists of Moyet\\'s calibre (including Aimee Mann and the late Kirsty MacColl), Moyet was reluctant to record a radio-friendly \"pop\" album simply for the sake of creating chart hits.\\n\\nMoyet\\'s next album Essex (1994) was also a source of controversy for her; in order for the album to be released, her label (now Sony) insisted that certain Essex tracks be re-recorded and re-produced, and that there be additional material remixed to create a more \\'commercial\\' package. The video for the single \"Whispering Your Name\" again featured Dawn French.\\n\\nFollowing the release of Essex, Sony released a greatest-hits compilation of Moyet\\'s work the following year. Singles entered the UK charts at number one. Following incredible CD success and a UK tour, Singles was re-issued as a double CD set which included \"No Overdubs\", a bonus live CD. Upon re-issue Singles again charted, this time in the top 20.\\n\\nDue to prolonged litigation with Sony, Moyet did not record or release a new studio album for over eight years after the release of Essex. During this time, however, Moyet recorded vocals for Tricky, Sylk-130, Ocean Colour Scene, The Lightning Seeds and King Britt, and was featured on the British leg of the Lilith Fair tour. 2001 saw the release of The Essential Alison Moyet CD.\\n\\nIn August 2002, after years of holding out and refusing to compromise, Moyet was finally released from her Sony contract. Moyet signed to Sanctuary Records and released her first studio album in eight years, Hometime, an album which Sony had refused to release. Hometime was produced by the Insects, who had also produced works by Goldfrapp and Massive Attack. The release of the CD launched Moyet into the top five best-selling female UK artists of 2002 and resulted in a Brit nomination for Best Female Vocal as well as a nomination for the Mercury Music Prize.\\n\\nMoyet\\'s following CD, Voice, an eclectic collection of covers, was released on 6 September 2004 and entered the UK charts at number seven. The album was later re-issued with a bonus track, \"Alfie.\" A companion DVD, One Blue Voice, was released in 2006. \\n\\nAfter signing with the W14 Music label in late 2006, Moyet released the all-original The Turn in October 2007. As of this writing (15 Sept 2008), Moyet will be touring North America for the first time in 14 years after the huge success of the Yazoo Reconnected Tour of 2008.\\n\\nwww.alisonmoyet.com/ <a href=\"https://www.last.fm/music/Alison+Moyet\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0s0rOb0gT2S9N0SDcjtPC4', url='https://open.spotify.com/artist/0s0rOb0gT2S9N0SDcjtPC4', name='Alison Moyet', popularity=49, followers=513352, genres=['synthpop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb3517c0e665325c9c70b3c104', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743517c0e665325c9c70b3c104', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783517c0e665325c9c70b3c104', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0s0rOb0gT2S9N0SDcjtPC4'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0s0rOb0gT2S9N0SDcjtPC4'}, 'followers': {'href': None, 'total': 513352}, 'genres': ['synthpop'], 'href': 'https://api.spotify.com/v1/artists/0s0rOb0gT2S9N0SDcjtPC4', 'id': '0s0rOb0gT2S9N0SDcjtPC4', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb3517c0e665325c9c70b3c104', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743517c0e665325c9c70b3c104', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783517c0e665325c9c70b3c104', 'height': 160, 'width': 160}], 'name': 'Alison Moyet', 'popularity': 49, 'type': 'artist', 'uri': 'spotify:artist:0s0rOb0gT2S9N0SDcjtPC4'})",
@@ -393,6 +673,6 @@
   },
   "spotify_id": "0s0rOb0gT2S9N0SDcjtPC4",
   "spotify_url": "https://open.spotify.com/artist/0s0rOb0gT2S9N0SDcjtPC4",
-  "updated_at": "2026-10-22T14:04:35.339930",
+  "updated_at": "2026-10-30T18:35:51.897645",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Alison_Moyet"
 }

@@ -258,6 +258,14 @@ pub fn run(st: &AppState) -> Result<Vec<Check>> {
             Some(("Resolve identities", words(&["backfill-identities"]))),
         ),
         artist_check(
+            "artist-discogs",
+            "No Discogs artist detail",
+            "Only a placeholder where the Discogs artist belongs, so /explore has no members, groups or aliases for it.",
+            &|a| !crate::ops::artist_discogs::has_discogs_detail(&a.raw_data),
+            &|a| Some(words(&["backfill-artist-discogs", "--artist", &a.name])),
+            Some(("Fetch from Discogs", words(&["backfill-artist-discogs"]))),
+        ),
+        artist_check(
             "artist-wikipedia",
             "No Wikipedia link",
             "No Wikipedia link on the artist page.",

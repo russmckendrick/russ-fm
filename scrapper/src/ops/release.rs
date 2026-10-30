@@ -547,6 +547,9 @@ pub async fn process_release(
         // official videos reach tv.json (save_release has just seeded any new artist rows).
         if existing.is_none() {
             crate::ops::videos::refresh_release_artist_videos(services, db, &rec).await;
+            // Its artists' Discogs members/groups/aliases (for /explore), when the row only has
+            // the seeded release credit or the old scrapper's failed-fetch stub.
+            crate::ops::artist_discogs::refresh_release_artists(cfg, services, db, &rec).await;
         }
         // save_release seeded any missing artist rows; give the primary artist the Wikipedia
         // find when it has no biography yet, so the release JSON join picks it up right away.

@@ -114,22 +114,77 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='159978044', url='https://music.apple.com/gb/artist/carolina-chocolate-drops/159978044', name='Carolina Chocolate Drops', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/72/41/06/7241068d-3c63-e4bd-e001-d707acd14fa7/ami-identity-f4dd7d56b6f6823b5cb5da2942385a73-2025-12-09T16-26-36.466Z_cropped.png/2000x2000bb.jpg', genres=['Blues'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '159978044', 'type': 'artists', 'href': '/v1/catalog/gb/artists/159978044', 'attributes': {'artwork': {'bgColor': 'fff8dd', 'height': 2389, 'textColor1': '411109', 'textColor2': '540805', 'textColor3': '673f33', 'textColor4': '763830', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/72/41/06/7241068d-3c63-e4bd-e001-d707acd14fa7/ami-identity-f4dd7d56b6f6823b5cb5da2942385a73-2025-12-09T16-26-36.466Z_cropped.png/{w}x{h}bb.jpg', 'width': 2389}, 'genreNames': ['Blues'], 'name': 'Carolina Chocolate Drops', 'url': 'https://music.apple.com/gb/artist/carolina-chocolate-drops/159978044'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/159978044/albums', 'data': [{'id': '502433473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/502433473'}, {'id': '1482433893', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1482433893'}, {'id': '400136184', 'type': 'albums', 'href': '/v1/catalog/gb/albums/400136184'}, {'id': '1854650198', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1854650198'}, {'id': '1482439556', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1482439556'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1779806",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 1779806,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/zaCQrpiWXGdJTu0mkqIkbb_zGpYKCyOdVLszGJ4yM5k/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/zaCQrpiWXGdJTu0mkqIkbb_zGpYKCyOdVLszGJ4yM5k/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4wZD3fZjDXdlLanfH2Wlo5uXlEFEVc_jKq4hC3ZhNkU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/xJMdo02BwoTv8LFDfr4uP1JJogRvQBYNrK9YqKH-2M4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xJMdo02BwoTv8LFDfr4uP1JJogRvQBYNrK9YqKH-2M4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gTNoRGSxKmyoN1htlLP8uDVScz2gZjJkUhL1m7C4HhQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 797630,
+          "name": "Adam Matta",
+          "resource_url": "https://api.discogs.com/artists/797630"
+        },
+        {
+          "active": true,
+          "id": 2283199,
+          "name": "Dom Flemons",
+          "resource_url": "https://api.discogs.com/artists/2283199"
+        },
+        {
+          "active": true,
+          "id": 2612590,
+          "name": "Justin Robinson (4)",
+          "resource_url": "https://api.discogs.com/artists/2612590"
+        },
+        {
+          "active": true,
+          "id": 2612591,
+          "name": "Rhiannon Giddens",
+          "resource_url": "https://api.discogs.com/artists/2612591"
+        },
+        {
+          "active": false,
+          "id": 2648919,
+          "name": "Leyla McCalla",
+          "resource_url": "https://api.discogs.com/artists/2648919"
+        },
+        {
+          "active": true,
+          "id": 2648920,
+          "name": "Hubby Jenkins",
+          "resource_url": "https://api.discogs.com/artists/2648920"
+        }
+      ],
       "name": "Carolina Chocolate Drops",
-      "namevariations": [],
+      "namevariations": [
+        "The Carolina Chocolate",
+        "The Carolina Chocolate Drops"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "1779806",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1779806"
-      },
+      "releases_url": "https://api.discogs.com/artists/1779806/releases",
       "resource_url": "https://api.discogs.com/artists/1779806",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1779806",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1779806-Carolina-Chocolate-Drops",
+      "urls": [
+        "http://www.carolinachocolatedrops.com/",
+        "https://carolinachocolatedrops.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "9278d5f4-993d-403a-8dd8-eb61139274cf",
@@ -203,27 +258,83 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='159978044', url='https://music.apple.com/gb/artist/carolina-chocolate-drops/159978044', name='Carolina Chocolate Drops', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/72/41/06/7241068d-3c63-e4bd-e001-d707acd14fa7/ami-identity-f4dd7d56b6f6823b5cb5da2942385a73-2025-12-09T16-26-36.466Z_cropped.png/2000x2000bb.jpg', genres=['Blues'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '159978044', 'type': 'artists', 'href': '/v1/catalog/gb/artists/159978044', 'attributes': {'artwork': {'bgColor': 'fff8dd', 'height': 2389, 'textColor1': '411109', 'textColor2': '540805', 'textColor3': '673f33', 'textColor4': '763830', 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/72/41/06/7241068d-3c63-e4bd-e001-d707acd14fa7/ami-identity-f4dd7d56b6f6823b5cb5da2942385a73-2025-12-09T16-26-36.466Z_cropped.png/{w}x{h}bb.jpg', 'width': 2389}, 'genreNames': ['Blues'], 'name': 'Carolina Chocolate Drops', 'url': 'https://music.apple.com/gb/artist/carolina-chocolate-drops/159978044'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/159978044/albums', 'data': [{'id': '502433473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/502433473'}, {'id': '1482433893', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1482433893'}, {'id': '400136184', 'type': 'albums', 'href': '/v1/catalog/gb/albums/400136184'}, {'id': '1854650198', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1854650198'}, {'id': '1482439556', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1482439556'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "1779806",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 1779806,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/zaCQrpiWXGdJTu0mkqIkbb_zGpYKCyOdVLszGJ4yM5k/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/zaCQrpiWXGdJTu0mkqIkbb_zGpYKCyOdVLszGJ4yM5k/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4wZD3fZjDXdlLanfH2Wlo5uXlEFEVc_jKq4hC3ZhNkU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUy/My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/xJMdo02BwoTv8LFDfr4uP1JJogRvQBYNrK9YqKH-2M4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xJMdo02BwoTv8LFDfr4uP1JJogRvQBYNrK9YqKH-2M4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/gTNoRGSxKmyoN1htlLP8uDVScz2gZjJkUhL1m7C4HhQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzk4/MDYtMTMxMDM1MTUw/Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 797630,
+          "name": "Adam Matta",
+          "resource_url": "https://api.discogs.com/artists/797630"
+        },
+        {
+          "active": true,
+          "id": 2283199,
+          "name": "Dom Flemons",
+          "resource_url": "https://api.discogs.com/artists/2283199"
+        },
+        {
+          "active": true,
+          "id": 2612590,
+          "name": "Justin Robinson (4)",
+          "resource_url": "https://api.discogs.com/artists/2612590"
+        },
+        {
+          "active": true,
+          "id": 2612591,
+          "name": "Rhiannon Giddens",
+          "resource_url": "https://api.discogs.com/artists/2612591"
+        },
+        {
+          "active": false,
+          "id": 2648919,
+          "name": "Leyla McCalla",
+          "resource_url": "https://api.discogs.com/artists/2648919"
+        },
+        {
+          "active": true,
+          "id": 2648920,
+          "name": "Hubby Jenkins",
+          "resource_url": "https://api.discogs.com/artists/2648920"
+        }
+      ],
       "name": "Carolina Chocolate Drops",
-      "namevariations": [],
+      "namevariations": [
+        "The Carolina Chocolate",
+        "The Carolina Chocolate Drops"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "1779806",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/1779806"
-      },
+      "releases_url": "https://api.discogs.com/artists/1779806/releases",
       "resource_url": "https://api.discogs.com/artists/1779806",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/1779806",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/1779806-Carolina-Chocolate-Drops",
+      "urls": [
+        "http://www.carolinachocolatedrops.com/",
+        "https://carolinachocolatedrops.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Carolina Chocolate Drops', url='https://www.last.fm/music/Carolina+Chocolate+Drops', mbid='9278d5f4-993d-403a-8dd8-eb61139274cf', listeners=153207, playcount=1547982, bio_summary='Carolina Chocolate Drops is an American old-time string band from Durham, North Carolina. Their 2010 album, Genuine Negro Jig, won the Grammy Award for Best Traditional Folk Album at the 53rd Annual Grammy Awards, and was number 9 in fRoots magazine\\'s top 10 albums of 2010.\\n\\nThe band came together to play the rich tradition of fiddle and banjo music in Carolina\\'s Piedmont. Rhiannon Giddens and Justin Robinson both hail from Durham, North Carolina while Dom Flemons is native to Arizona. <a href=\"https://www.last.fm/music/Carolina+Chocolate+Drops\">Read more on Last.fm</a>', bio_content='Carolina Chocolate Drops is an American old-time string band from Durham, North Carolina. Their 2010 album, Genuine Negro Jig, won the Grammy Award for Best Traditional Folk Album at the 53rd Annual Grammy Awards, and was number 9 in fRoots magazine\\'s top 10 albums of 2010.\\n\\nThe band came together to play the rich tradition of fiddle and banjo music in Carolina\\'s Piedmont. Rhiannon Giddens and Justin Robinson both hail from Durham, North Carolina while Dom Flemons is native to Arizona. Although they have diverse musical backgrounds, they draw their musical heritage from the foothills of North and South Carolina. They have been under the tutelage of Joe Thompson, said to be the last black traditional string band player, of Mebane, NC, and they strive to carry on the long standing traditional music of the black and white communities. Joe\\'s musical heritage runs as deeply and fluidly as the many rivers and streams that traverse their landscape. They are proud to carry on the tradition of black musicians like Odell and Nate Thompson, Dink Roberts, John Snipes, Libba Cotten, Emp White, and countless others who have passed beyond memory and recognition. \\n\\nhttp://www.carolinachocolatedrops.com <a href=\"https://www.last.fm/music/Carolina+Chocolate+Drops\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['bluegrass', 'folk', 'country', 'Alt-country', 'old-time'], similar_artists=[{'name': 'Rhiannon Giddens', 'url': 'https://www.last.fm/music/Rhiannon+Giddens'}, {'name': 'Old Crow Medicine Show', 'url': 'https://www.last.fm/music/Old+Crow+Medicine+Show'}, {'name': 'Trampled by Turtles', 'url': 'https://www.last.fm/music/Trampled+by+Turtles'}, {'name': 'Crooked Still', 'url': 'https://www.last.fm/music/Crooked+Still'}, {'name': 'Sarah Jarosz', 'url': 'https://www.last.fm/music/Sarah+Jarosz'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Carolina Chocolate Drops', 'mbid': '9278d5f4-993d-403a-8dd8-eb61139274cf', 'url': 'https://www.last.fm/music/Carolina+Chocolate+Drops', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '153207', 'playcount': '1547982'}, 'similar': {'artist': [{'name': 'Rhiannon Giddens', 'url': 'https://www.last.fm/music/Rhiannon+Giddens', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Old Crow Medicine Show', 'url': 'https://www.last.fm/music/Old+Crow+Medicine+Show', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Trampled by Turtles', 'url': 'https://www.last.fm/music/Trampled+by+Turtles', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Crooked Still', 'url': 'https://www.last.fm/music/Crooked+Still', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sarah Jarosz', 'url': 'https://www.last.fm/music/Sarah+Jarosz', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'bluegrass', 'url': 'https://www.last.fm/tag/bluegrass'}, {'name': 'folk', 'url': 'https://www.last.fm/tag/folk'}, {'name': 'country', 'url': 'https://www.last.fm/tag/country'}, {'name': 'Alt-country', 'url': 'https://www.last.fm/tag/Alt-country'}, {'name': 'old-time', 'url': 'https://www.last.fm/tag/old-time'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Carolina+Chocolate+Drops/+wiki'}}, 'published': '15 Nov 2007, 05:26', 'summary': 'Carolina Chocolate Drops is an American old-time string band from Durham, North Carolina. Their 2010 album, Genuine Negro Jig, won the Grammy Award for Best Traditional Folk Album at the 53rd Annual Grammy Awards, and was number 9 in fRoots magazine\\'s top 10 albums of 2010.\\n\\nThe band came together to play the rich tradition of fiddle and banjo music in Carolina\\'s Piedmont. Rhiannon Giddens and Justin Robinson both hail from Durham, North Carolina while Dom Flemons is native to Arizona. <a href=\"https://www.last.fm/music/Carolina+Chocolate+Drops\">Read more on Last.fm</a>', 'content': 'Carolina Chocolate Drops is an American old-time string band from Durham, North Carolina. Their 2010 album, Genuine Negro Jig, won the Grammy Award for Best Traditional Folk Album at the 53rd Annual Grammy Awards, and was number 9 in fRoots magazine\\'s top 10 albums of 2010.\\n\\nThe band came together to play the rich tradition of fiddle and banjo music in Carolina\\'s Piedmont. Rhiannon Giddens and Justin Robinson both hail from Durham, North Carolina while Dom Flemons is native to Arizona. Although they have diverse musical backgrounds, they draw their musical heritage from the foothills of North and South Carolina. They have been under the tutelage of Joe Thompson, said to be the last black traditional string band player, of Mebane, NC, and they strive to carry on the long standing traditional music of the black and white communities. Joe\\'s musical heritage runs as deeply and fluidly as the many rivers and streams that traverse their landscape. They are proud to carry on the tradition of black musicians like Odell and Nate Thompson, Dink Roberts, John Snipes, Libba Cotten, Emp White, and countless others who have passed beyond memory and recognition. \\n\\nhttp://www.carolinachocolatedrops.com <a href=\"https://www.last.fm/music/Carolina+Chocolate+Drops\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='6H8Sj9gFyDYJ3T63LA3DKz', url='https://open.spotify.com/artist/6H8Sj9gFyDYJ3T63LA3DKz', name='Carolina Chocolate Drops', popularity=38, followers=150851, genres=['bluegrass', 'newgrass', 'americana', 'alt country', 'folk'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb3f8938aaf114834bea1858ec', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743f8938aaf114834bea1858ec', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783f8938aaf114834bea1858ec', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/6H8Sj9gFyDYJ3T63LA3DKz'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/6H8Sj9gFyDYJ3T63LA3DKz'}, 'followers': {'href': None, 'total': 150851}, 'genres': ['bluegrass', 'newgrass', 'americana', 'alt country', 'folk'], 'href': 'https://api.spotify.com/v1/artists/6H8Sj9gFyDYJ3T63LA3DKz', 'id': '6H8Sj9gFyDYJ3T63LA3DKz', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb3f8938aaf114834bea1858ec', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743f8938aaf114834bea1858ec', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783f8938aaf114834bea1858ec', 'height': 160, 'width': 160}], 'name': 'Carolina Chocolate Drops', 'popularity': 38, 'type': 'artist', 'uri': 'spotify:artist:6H8Sj9gFyDYJ3T63LA3DKz'})",
@@ -294,6 +405,6 @@
   },
   "spotify_id": "6H8Sj9gFyDYJ3T63LA3DKz",
   "spotify_url": "https://open.spotify.com/artist/6H8Sj9gFyDYJ3T63LA3DKz",
-  "updated_at": "2026-10-22T14:05:38.009122",
+  "updated_at": "2026-10-30T18:37:26.444867",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Carolina_Chocolate_Drops"
 }

@@ -95,22 +95,146 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='414127865', url='https://music.apple.com/gb/artist/thank-you-scientist/414127865', name='Thank You Scientist', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/c6/8c/1fc68cf5-3975-bc6a-f5a4-aa44469ede8a/889326695110.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '414127865', 'type': 'artists', 'href': '/v1/catalog/gb/artists/414127865', 'attributes': {'name': 'Thank You Scientist', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/c6/8c/1fc68cf5-3975-bc6a-f5a4-aa44469ede8a/889326695110.png/{w}x{h}ac.jpg', 'bgColor': 'e9d3ae', 'textColor1': '000302', 'textColor2': '24201b', 'textColor3': '2f2d24', 'textColor4': '4c4439'}, 'url': 'https://music.apple.com/gb/artist/thank-you-scientist/414127865'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/414127865/albums', 'data': [{'id': '1617477129', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617477129'}, {'id': '1618539649', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1618539649'}, {'id': '1617741451', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617741451'}, {'id': '1488019574', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488019574'}, {'id': '1588973852', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1588973852'}, {'id': '414127862', 'type': 'albums', 'href': '/v1/catalog/gb/albums/414127862'}, {'id': '1617477043', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617477043'}, {'id': '1617476874', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617476874'}, {'id': '1780924113', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1780924113'}, {'id': '1476199014', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1476199014'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3181804",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3181804,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/MM30Zu0IW58wdfiV0paxq15gcM15uVrZb5zeWNCTyTU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/MM30Zu0IW58wdfiV0paxq15gcM15uVrZb5zeWNCTyTU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rkN1a3oh46CRmuMKfXB1BUB_4_ljOFrLfyxp9KzYoXA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/7KmURJpj-S0H4cMquA5WUs1oklCXwt4VsT2f2w4C1Sw/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7KmURJpj-S0H4cMquA5WUs1oklCXwt4VsT2f2w4C1Sw/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/28AY_Guk0Fq0px8XE4moNzVwSAqP9RXXc6eZ95MAHNk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/BH8RTWDJfBjMqYbObpi_2f6MIhtoRwZzvOh6DorNHzA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BH8RTWDJfBjMqYbObpi_2f6MIhtoRwZzvOh6DorNHzA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/DZPsmCe7nki2pW5_-AsroyLsNxictskBmQ4-nG2rEhQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/A_G8ymtEOsgpIk9fA6AkFIOYaHGzUxTS6kJwLUueeAM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/A_G8ymtEOsgpIk9fA6AkFIOYaHGzUxTS6kJwLUueeAM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZDdDFVt9T9EhvsHcTVJw25WvzehssoIczTOFfDs47n0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 4101260,
+          "name": "Salvatore Marrano",
+          "resource_url": "https://api.discogs.com/artists/4101260"
+        },
+        {
+          "active": false,
+          "id": 4101261,
+          "name": "Greg Colacino",
+          "resource_url": "https://api.discogs.com/artists/4101261"
+        },
+        {
+          "active": false,
+          "id": 4101262,
+          "name": "Odin Alvarez",
+          "resource_url": "https://api.discogs.com/artists/4101262"
+        },
+        {
+          "active": true,
+          "id": 4101263,
+          "name": "Tom Monda",
+          "resource_url": "https://api.discogs.com/artists/4101263"
+        },
+        {
+          "active": false,
+          "id": 4101264,
+          "name": "Russ Lynch",
+          "resource_url": "https://api.discogs.com/artists/4101264"
+        },
+        {
+          "active": false,
+          "id": 4101266,
+          "name": "Andrew Digrius",
+          "resource_url": "https://api.discogs.com/artists/4101266"
+        },
+        {
+          "active": false,
+          "id": 4168339,
+          "name": "Sam Greenfield",
+          "resource_url": "https://api.discogs.com/artists/4168339"
+        },
+        {
+          "active": false,
+          "id": 4277886,
+          "name": "Ellis Jasenovic",
+          "resource_url": "https://api.discogs.com/artists/4277886"
+        },
+        {
+          "active": true,
+          "id": 6284805,
+          "name": "Daimon Santa Maria",
+          "resource_url": "https://api.discogs.com/artists/6284805"
+        },
+        {
+          "active": false,
+          "id": 6284806,
+          "name": "Cody McCorry",
+          "resource_url": "https://api.discogs.com/artists/6284806"
+        },
+        {
+          "active": true,
+          "id": 6772344,
+          "name": "Ben Karas",
+          "resource_url": "https://api.discogs.com/artists/6772344"
+        },
+        {
+          "active": true,
+          "id": 7096238,
+          "name": "Kevin Grossman (2)",
+          "resource_url": "https://api.discogs.com/artists/7096238"
+        },
+        {
+          "active": true,
+          "id": 7285980,
+          "name": "Joe Gullace",
+          "resource_url": "https://api.discogs.com/artists/7285980"
+        },
+        {
+          "active": false,
+          "id": 9326233,
+          "name": "Faye Fadem",
+          "resource_url": "https://api.discogs.com/artists/9326233"
+        }
+      ],
       "name": "Thank You Scientist",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3181804",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3181804"
-      },
+      "profile": "American progressive rock band from Montclair, New Jersey and formed in 2009 at the New Jersey Montclair State University's music program, when guitar player [a4101263] met saxophonist [a4277886] and trumpet player [a4101266].",
+      "releases_url": "https://api.discogs.com/artists/3181804/releases",
       "resource_url": "https://api.discogs.com/artists/3181804",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3181804",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3181804-Thank-You-Scientist",
+      "urls": [
+        "https://thankyouscientist.com/",
+        "https://www.AllMusic.com/artist/thank-you-scientist-mn0002963605/discography",
+        "http://thankyouscientist.bandcamp.com/",
+        "https://eirthankyouscientist.bandcamp.com/",
+        "http://evilinkrecords.com/thank-you-scientist",
+        "https://www.Deezer.com/fi/artist/416116",
+        "http://facebook.com/ThankYouScientist",
+        "http://www.ProgArchives.com/artist.asp?id=6464#discography",
+        "https://open.Spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5",
+        "https://en.wikipedia.org/wiki/Thank_You_Scientist",
+        "https://www.youtube.com/channel/UCQ5GXMG2MuEMw_E_KQUELSA & https://www.youtube.com/user/thankyouscientist"
+      ]
     },
     "identity": {
       "musicbrainz_id": "bb0fa8bd-c230-49b1-bc80-e69e229d158f",
@@ -120,27 +244,152 @@
     },
     "lastfm": "ArtistLastFmData(name='Thank You Scientist', url='https://www.last.fm/music/Thank+You+Scientist', mbid='bb0fa8bd-c230-49b1-bc80-e69e229d158f', listeners=113210, playcount=4373769, bio_summary='Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>', bio_content='Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. They followed up in 2016 with the ambitious Stranger Heads Prevail, which cracked the Billboard Top 200. In addition to original guitarist/band leader Tom Monda and vocalist Salvatore Marrano, the band’s lineup has gradually changed to include violinist Ben Karas, bassist Cody McCorry, drummer Faye Fadem, trumpeter Joe Gullace, and saxophonist Sam Greenfield. Thank You Scientist has spent the past several years touring internationally, both as headliners and as direct support for acts such as Coheed and Cambria, Periphery, Haken, Protest the Hero, Devin Townsend, Yes, The Aristocrats, and many more. The band is eager to follow up their 2016 release with their gargantuan third full length record, due in early 2019.\\n\\n    Salvatore Marrano – vocals (2009–present)\\n    Tom Monda – electric guitar, fretless guitar, shamisen, sitar, vocals, synth, producer (2009–present)\\n    Ben Karas – electric violin (2013–present)\\n    Cody McCorry – bass, theremin, saw (2015–present)\\n    Faye Fadem – drums (2017–present)\\n    Sam Greenfield – saxophone (2017–present)\\n    Joe Gullace – trumpet (2017–present)\\n\\nPlease visit https://www.facebook.com/ThankYouScientist <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'jazz fusion', 'jazz', 'Progressive', 'rock'], similar_artists=[{'name': 'The Dear Hunter', 'url': 'https://www.last.fm/music/The+Dear+Hunter'}, {'name': 'Closure in Moscow', 'url': 'https://www.last.fm/music/Closure+in+Moscow'}, {'name': 'The Reign Of Kindo', 'url': 'https://www.last.fm/music/The+Reign+Of+Kindo'}, {'name': 'Haken', 'url': 'https://www.last.fm/music/Haken'}, {'name': 'Native Construct', 'url': 'https://www.last.fm/music/Native+Construct'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Thank You Scientist', 'mbid': 'bb0fa8bd-c230-49b1-bc80-e69e229d158f', 'url': 'https://www.last.fm/music/Thank+You+Scientist', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '113210', 'playcount': '4373769'}, 'similar': {'artist': [{'name': 'The Dear Hunter', 'url': 'https://www.last.fm/music/The+Dear+Hunter', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Closure in Moscow', 'url': 'https://www.last.fm/music/Closure+in+Moscow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Reign Of Kindo', 'url': 'https://www.last.fm/music/The+Reign+Of+Kindo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Haken', 'url': 'https://www.last.fm/music/Haken', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Native Construct', 'url': 'https://www.last.fm/music/Native+Construct', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'jazz fusion', 'url': 'https://www.last.fm/tag/jazz+fusion'}, {'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Thank+You+Scientist/+wiki'}}, 'published': '19 Jan 2011, 23:00', 'summary': 'Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>', 'content': 'Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. They followed up in 2016 with the ambitious Stranger Heads Prevail, which cracked the Billboard Top 200. In addition to original guitarist/band leader Tom Monda and vocalist Salvatore Marrano, the band’s lineup has gradually changed to include violinist Ben Karas, bassist Cody McCorry, drummer Faye Fadem, trumpeter Joe Gullace, and saxophonist Sam Greenfield. Thank You Scientist has spent the past several years touring internationally, both as headliners and as direct support for acts such as Coheed and Cambria, Periphery, Haken, Protest the Hero, Devin Townsend, Yes, The Aristocrats, and many more. The band is eager to follow up their 2016 release with their gargantuan third full length record, due in early 2019.\\n\\n    Salvatore Marrano – vocals (2009–present)\\n    Tom Monda – electric guitar, fretless guitar, shamisen, sitar, vocals, synth, producer (2009–present)\\n    Ben Karas – electric violin (2013–present)\\n    Cody McCorry – bass, theremin, saw (2015–present)\\n    Faye Fadem – drums (2017–present)\\n    Sam Greenfield – saxophone (2017–present)\\n    Joe Gullace – trumpet (2017–present)\\n\\nPlease visit https://www.facebook.com/ThankYouScientist <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4YygB8sfxuIcj2p0G9kpQ5', url='https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5', name='Thank You Scientist', popularity=41, followers=142402, genres=['progressive metal', 'progressive rock', 'math rock', 'djent', 'jazz fusion'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb730fd84f6b5ce1e8dad322b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174730fd84f6b5ce1e8dad322b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178730fd84f6b5ce1e8dad322b3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5'}, 'followers': {'href': None, 'total': 142402}, 'genres': ['progressive metal', 'progressive rock', 'math rock', 'djent', 'jazz fusion'], 'href': 'https://api.spotify.com/v1/artists/4YygB8sfxuIcj2p0G9kpQ5', 'id': '4YygB8sfxuIcj2p0G9kpQ5', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb730fd84f6b5ce1e8dad322b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174730fd84f6b5ce1e8dad322b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178730fd84f6b5ce1e8dad322b3', 'height': 160, 'width': 160}], 'name': 'Thank You Scientist', 'popularity': 41, 'type': 'artist', 'uri': 'spotify:artist:4YygB8sfxuIcj2p0G9kpQ5'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='414127865', url='https://music.apple.com/gb/artist/thank-you-scientist/414127865', name='Thank You Scientist', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/c6/8c/1fc68cf5-3975-bc6a-f5a4-aa44469ede8a/889326695110.png/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '414127865', 'type': 'artists', 'href': '/v1/catalog/gb/artists/414127865', 'attributes': {'name': 'Thank You Scientist', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/c6/8c/1fc68cf5-3975-bc6a-f5a4-aa44469ede8a/889326695110.png/{w}x{h}ac.jpg', 'bgColor': 'e9d3ae', 'textColor1': '000302', 'textColor2': '24201b', 'textColor3': '2f2d24', 'textColor4': '4c4439'}, 'url': 'https://music.apple.com/gb/artist/thank-you-scientist/414127865'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/414127865/albums', 'data': [{'id': '1617477129', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617477129'}, {'id': '1618539649', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1618539649'}, {'id': '1617741451', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617741451'}, {'id': '1488019574', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1488019574'}, {'id': '1588973852', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1588973852'}, {'id': '414127862', 'type': 'albums', 'href': '/v1/catalog/gb/albums/414127862'}, {'id': '1617477043', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617477043'}, {'id': '1617476874', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1617476874'}, {'id': '1780924113', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1780924113'}, {'id': '1476199014', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1476199014'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "3181804",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 3181804,
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/MM30Zu0IW58wdfiV0paxq15gcM15uVrZb5zeWNCTyTU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/MM30Zu0IW58wdfiV0paxq15gcM15uVrZb5zeWNCTyTU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/rkN1a3oh46CRmuMKfXB1BUB_4_ljOFrLfyxp9KzYoXA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTY1/NC01NjgwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/7KmURJpj-S0H4cMquA5WUs1oklCXwt4VsT2f2w4C1Sw/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7KmURJpj-S0H4cMquA5WUs1oklCXwt4VsT2f2w4C1Sw/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/28AY_Guk0Fq0px8XE4moNzVwSAqP9RXXc6eZ95MAHNk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTcz/Mi0zNzk0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/BH8RTWDJfBjMqYbObpi_2f6MIhtoRwZzvOh6DorNHzA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BH8RTWDJfBjMqYbObpi_2f6MIhtoRwZzvOh6DorNHzA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/DZPsmCe7nki2pW5_-AsroyLsNxictskBmQ4-nG2rEhQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTYzODAyNTkw/NC00MzQwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/A_G8ymtEOsgpIk9fA6AkFIOYaHGzUxTS6kJwLUueeAM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/A_G8ymtEOsgpIk9fA6AkFIOYaHGzUxTS6kJwLUueeAM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZDdDFVt9T9EhvsHcTVJw25WvzehssoIczTOFfDs47n0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxODE4/MDQtMTQ3MDQ5MDY0/Mi05OTYxLmpwZWc.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 4101260,
+          "name": "Salvatore Marrano",
+          "resource_url": "https://api.discogs.com/artists/4101260"
+        },
+        {
+          "active": false,
+          "id": 4101261,
+          "name": "Greg Colacino",
+          "resource_url": "https://api.discogs.com/artists/4101261"
+        },
+        {
+          "active": false,
+          "id": 4101262,
+          "name": "Odin Alvarez",
+          "resource_url": "https://api.discogs.com/artists/4101262"
+        },
+        {
+          "active": true,
+          "id": 4101263,
+          "name": "Tom Monda",
+          "resource_url": "https://api.discogs.com/artists/4101263"
+        },
+        {
+          "active": false,
+          "id": 4101264,
+          "name": "Russ Lynch",
+          "resource_url": "https://api.discogs.com/artists/4101264"
+        },
+        {
+          "active": false,
+          "id": 4101266,
+          "name": "Andrew Digrius",
+          "resource_url": "https://api.discogs.com/artists/4101266"
+        },
+        {
+          "active": false,
+          "id": 4168339,
+          "name": "Sam Greenfield",
+          "resource_url": "https://api.discogs.com/artists/4168339"
+        },
+        {
+          "active": false,
+          "id": 4277886,
+          "name": "Ellis Jasenovic",
+          "resource_url": "https://api.discogs.com/artists/4277886"
+        },
+        {
+          "active": true,
+          "id": 6284805,
+          "name": "Daimon Santa Maria",
+          "resource_url": "https://api.discogs.com/artists/6284805"
+        },
+        {
+          "active": false,
+          "id": 6284806,
+          "name": "Cody McCorry",
+          "resource_url": "https://api.discogs.com/artists/6284806"
+        },
+        {
+          "active": true,
+          "id": 6772344,
+          "name": "Ben Karas",
+          "resource_url": "https://api.discogs.com/artists/6772344"
+        },
+        {
+          "active": true,
+          "id": 7096238,
+          "name": "Kevin Grossman (2)",
+          "resource_url": "https://api.discogs.com/artists/7096238"
+        },
+        {
+          "active": true,
+          "id": 7285980,
+          "name": "Joe Gullace",
+          "resource_url": "https://api.discogs.com/artists/7285980"
+        },
+        {
+          "active": false,
+          "id": 9326233,
+          "name": "Faye Fadem",
+          "resource_url": "https://api.discogs.com/artists/9326233"
+        }
+      ],
       "name": "Thank You Scientist",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "3181804",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/3181804"
-      },
+      "profile": "American progressive rock band from Montclair, New Jersey and formed in 2009 at the New Jersey Montclair State University's music program, when guitar player [a4101263] met saxophonist [a4277886] and trumpet player [a4101266].",
+      "releases_url": "https://api.discogs.com/artists/3181804/releases",
       "resource_url": "https://api.discogs.com/artists/3181804",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/3181804",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/3181804-Thank-You-Scientist",
+      "urls": [
+        "https://thankyouscientist.com/",
+        "https://www.AllMusic.com/artist/thank-you-scientist-mn0002963605/discography",
+        "http://thankyouscientist.bandcamp.com/",
+        "https://eirthankyouscientist.bandcamp.com/",
+        "http://evilinkrecords.com/thank-you-scientist",
+        "https://www.Deezer.com/fi/artist/416116",
+        "http://facebook.com/ThankYouScientist",
+        "http://www.ProgArchives.com/artist.asp?id=6464#discography",
+        "https://open.Spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5",
+        "https://en.wikipedia.org/wiki/Thank_You_Scientist",
+        "https://www.youtube.com/channel/UCQ5GXMG2MuEMw_E_KQUELSA & https://www.youtube.com/user/thankyouscientist"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Thank You Scientist', url='https://www.last.fm/music/Thank+You+Scientist', mbid='bb0fa8bd-c230-49b1-bc80-e69e229d158f', listeners=113210, playcount=4373769, bio_summary='Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>', bio_content='Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. They followed up in 2016 with the ambitious Stranger Heads Prevail, which cracked the Billboard Top 200. In addition to original guitarist/band leader Tom Monda and vocalist Salvatore Marrano, the band’s lineup has gradually changed to include violinist Ben Karas, bassist Cody McCorry, drummer Faye Fadem, trumpeter Joe Gullace, and saxophonist Sam Greenfield. Thank You Scientist has spent the past several years touring internationally, both as headliners and as direct support for acts such as Coheed and Cambria, Periphery, Haken, Protest the Hero, Devin Townsend, Yes, The Aristocrats, and many more. The band is eager to follow up their 2016 release with their gargantuan third full length record, due in early 2019.\\n\\n    Salvatore Marrano – vocals (2009–present)\\n    Tom Monda – electric guitar, fretless guitar, shamisen, sitar, vocals, synth, producer (2009–present)\\n    Ben Karas – electric violin (2013–present)\\n    Cody McCorry – bass, theremin, saw (2015–present)\\n    Faye Fadem – drums (2017–present)\\n    Sam Greenfield – saxophone (2017–present)\\n    Joe Gullace – trumpet (2017–present)\\n\\nPlease visit https://www.facebook.com/ThankYouScientist <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'jazz fusion', 'jazz', 'Progressive', 'rock'], similar_artists=[{'name': 'The Dear Hunter', 'url': 'https://www.last.fm/music/The+Dear+Hunter'}, {'name': 'Closure in Moscow', 'url': 'https://www.last.fm/music/Closure+in+Moscow'}, {'name': 'The Reign Of Kindo', 'url': 'https://www.last.fm/music/The+Reign+Of+Kindo'}, {'name': 'Haken', 'url': 'https://www.last.fm/music/Haken'}, {'name': 'Native Construct', 'url': 'https://www.last.fm/music/Native+Construct'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Thank You Scientist', 'mbid': 'bb0fa8bd-c230-49b1-bc80-e69e229d158f', 'url': 'https://www.last.fm/music/Thank+You+Scientist', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '113210', 'playcount': '4373769'}, 'similar': {'artist': [{'name': 'The Dear Hunter', 'url': 'https://www.last.fm/music/The+Dear+Hunter', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Closure in Moscow', 'url': 'https://www.last.fm/music/Closure+in+Moscow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Reign Of Kindo', 'url': 'https://www.last.fm/music/The+Reign+Of+Kindo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Haken', 'url': 'https://www.last.fm/music/Haken', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Native Construct', 'url': 'https://www.last.fm/music/Native+Construct', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'jazz fusion', 'url': 'https://www.last.fm/tag/jazz+fusion'}, {'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'Progressive', 'url': 'https://www.last.fm/tag/Progressive'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Thank+You+Scientist/+wiki'}}, 'published': '19 Jan 2011, 23:00', 'summary': 'Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>', 'content': 'Thank You Scientist is an eclectic seven piece progressive rock band from New Jersey. Founded by guitarist and band leader Tom Monda, the band self-released an EP in 2011, The Perils of Time Travel, before signing with Coheed and Cambria frontman Claudio Sanchez’s newly launched Evil Ink Records. Their 2012 full length debut, Maps of Non-Existent Places (re-released in 2014), was a critical success, making inroads on the Billboard Hard Rock and Heat-seekers charts, and was eventually named “Album of the Week” by Revolver Magazine in 2014. They followed up in 2016 with the ambitious Stranger Heads Prevail, which cracked the Billboard Top 200. In addition to original guitarist/band leader Tom Monda and vocalist Salvatore Marrano, the band’s lineup has gradually changed to include violinist Ben Karas, bassist Cody McCorry, drummer Faye Fadem, trumpeter Joe Gullace, and saxophonist Sam Greenfield. Thank You Scientist has spent the past several years touring internationally, both as headliners and as direct support for acts such as Coheed and Cambria, Periphery, Haken, Protest the Hero, Devin Townsend, Yes, The Aristocrats, and many more. The band is eager to follow up their 2016 release with their gargantuan third full length record, due in early 2019.\\n\\n    Salvatore Marrano – vocals (2009–present)\\n    Tom Monda – electric guitar, fretless guitar, shamisen, sitar, vocals, synth, producer (2009–present)\\n    Ben Karas – electric violin (2013–present)\\n    Cody McCorry – bass, theremin, saw (2015–present)\\n    Faye Fadem – drums (2017–present)\\n    Sam Greenfield – saxophone (2017–present)\\n    Joe Gullace – trumpet (2017–present)\\n\\nPlease visit https://www.facebook.com/ThankYouScientist <a href=\"https://www.last.fm/music/Thank+You+Scientist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='4YygB8sfxuIcj2p0G9kpQ5', url='https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5', name='Thank You Scientist', popularity=41, followers=142402, genres=['progressive metal', 'progressive rock', 'math rock', 'djent', 'jazz fusion'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb730fd84f6b5ce1e8dad322b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174730fd84f6b5ce1e8dad322b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178730fd84f6b5ce1e8dad322b3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5'}, 'followers': {'href': None, 'total': 142402}, 'genres': ['progressive metal', 'progressive rock', 'math rock', 'djent', 'jazz fusion'], 'href': 'https://api.spotify.com/v1/artists/4YygB8sfxuIcj2p0G9kpQ5', 'id': '4YygB8sfxuIcj2p0G9kpQ5', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb730fd84f6b5ce1e8dad322b3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174730fd84f6b5ce1e8dad322b3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178730fd84f6b5ce1e8dad322b3', 'height': 160, 'width': 160}], 'name': 'Thank You Scientist', 'popularity': 41, 'type': 'artist', 'uri': 'spotify:artist:4YygB8sfxuIcj2p0G9kpQ5'})",
@@ -148,6 +397,6 @@
   },
   "spotify_id": "4YygB8sfxuIcj2p0G9kpQ5",
   "spotify_url": "https://open.spotify.com/artist/4YygB8sfxuIcj2p0G9kpQ5",
-  "updated_at": "2026-10-22T14:11:54.308156",
+  "updated_at": "2026-10-30T18:45:58.679354",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Thank_You_Scientist"
 }

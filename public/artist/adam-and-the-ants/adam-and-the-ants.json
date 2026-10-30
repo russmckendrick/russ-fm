@@ -111,22 +111,177 @@
   "raw_data": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "69887",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 69887,
+      "images": [
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/jEnnUmC5iS-bTRuOSZ8lQYyqfibKmc6zcPGS0YWNu2w/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/jEnnUmC5iS-bTRuOSZ8lQYyqfibKmc6zcPGS0YWNu2w/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/at5J6US4cSfhqnPfHSWVQDaGQ-GaBHAsE13fSMwSK0k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 488,
+          "resource_url": "https://i.discogs.com/sVQA-_v61OnPL8jtjQdFOwPeVFZeUcClWsb3ws4RbiU/rs:fit/g:sm/q:90/h:488/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sVQA-_v61OnPL8jtjQdFOwPeVFZeUcClWsb3ws4RbiU/rs:fit/g:sm/q:90/h:488/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MmABn800gfjfSHOckyzvS053qasNF09Srgvz9yxrXV4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/SLsR7oRVK1kiaBp7DMIjEDRBpJS7duNVz5ysALCBmg8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SLsR7oRVK1kiaBp7DMIjEDRBpJS7duNVz5ysALCBmg8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/5MSGOlaPElauzCwwhBqV0FLY9gttKXdW15CccxIm-Z4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/qDdPtw5_nDZdGJmn9gEz0Ow3D0Cusb55ROV8VA2wNHQ/rs:fit/g:sm/q:90/h:300/w:517/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qDdPtw5_nDZdGJmn9gEz0Ow3D0Cusb55ROV8VA2wNHQ/rs:fit/g:sm/q:90/h:300/w:517/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yq996OjMPSGWpImhl5S-Sf_Xu_jsDImWtH_naWZfnKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "width": 517
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/BylSMkykqRLf22O9pmt6ct_QIjDPbjemSCLyTSU2DjA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BylSMkykqRLf22O9pmt6ct_QIjDPbjemSCLyTSU2DjA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Ia1NcjKOtSyfrTGPe0Zhe5m5fiOgfPesYHTOlH8tAYA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 466,
+          "resource_url": "https://i.discogs.com/q3Dv2zwSKx0zi07HEg6YfTOB04z3GvHOt53xu8lMwVk/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q3Dv2zwSKx0zi07HEg6YfTOB04z3GvHOt53xu8lMwVk/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/cJ8frsNDAMa6j6cJ3NsI8Bum_YsGchFUUl7DU_KYjPk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/6PIxC9rfnw5BOluN6CthoUUK_wXLornm67uT_73NpiQ/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6PIxC9rfnw5BOluN6CthoUUK_wXLornm67uT_73NpiQ/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iKwIB_dp5Vq3kMJ6cZ6OuvqfsgNSYN9MuOQMo7M8kWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/U_5g_evYmnDv1voMrkp4eKx3efFsRYFQMkFz8Ze207E/rs:fit/g:sm/q:90/h:600/w:346/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/U_5g_evYmnDv1voMrkp4eKx3efFsRYFQMkFz8Ze207E/rs:fit/g:sm/q:90/h:600/w:346/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/vgv5SrnAO4rr2AncKpQveaI4YOVRojzkD3wVP8KVvLA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "width": 346
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 95755,
+          "name": "Chris Hughes",
+          "resource_url": "https://api.discogs.com/artists/95755"
+        },
+        {
+          "active": true,
+          "id": 261082,
+          "name": "Marco Pirroni",
+          "resource_url": "https://api.discogs.com/artists/261082"
+        },
+        {
+          "active": false,
+          "id": 285949,
+          "name": "Leigh Gorman",
+          "resource_url": "https://api.discogs.com/artists/285949"
+        },
+        {
+          "active": false,
+          "id": 307830,
+          "name": "Kevin Mooney",
+          "resource_url": "https://api.discogs.com/artists/307830"
+        },
+        {
+          "active": false,
+          "id": 307833,
+          "name": "Matthew Ashman",
+          "resource_url": "https://api.discogs.com/artists/307833"
+        },
+        {
+          "active": false,
+          "id": 315861,
+          "name": "Gary Tibbs",
+          "resource_url": "https://api.discogs.com/artists/315861"
+        },
+        {
+          "active": false,
+          "id": 366306,
+          "name": "Andy Warren",
+          "resource_url": "https://api.discogs.com/artists/366306"
+        },
+        {
+          "active": false,
+          "id": 367846,
+          "name": "Dave Barbarossa",
+          "resource_url": "https://api.discogs.com/artists/367846"
+        },
+        {
+          "active": true,
+          "id": 671330,
+          "name": "Stuart Goddard",
+          "resource_url": "https://api.discogs.com/artists/671330"
+        },
+        {
+          "active": false,
+          "id": 690822,
+          "name": "Mark Ryan (3)",
+          "resource_url": "https://api.discogs.com/artists/690822"
+        },
+        {
+          "active": false,
+          "id": 730548,
+          "name": "Terry Day (2)",
+          "resource_url": "https://api.discogs.com/artists/730548"
+        },
+        {
+          "active": false,
+          "id": 1675340,
+          "name": "John Beckett (3)",
+          "resource_url": "https://api.discogs.com/artists/1675340"
+        },
+        {
+          "active": false,
+          "id": 2497034,
+          "name": "Thomas Hardy (4)",
+          "resource_url": "https://api.discogs.com/artists/2497034"
+        }
+      ],
       "name": "Adam And The Ants",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "69887",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/69887"
-      },
+      "namevariations": [
+        "Adam & The Ant",
+        "Adam & The Ants",
+        "Adam + Ants",
+        "Adam + The Ants",
+        "Adam And The Ant",
+        "Adam And The Antz",
+        "Adam Ant",
+        "Adam Ant And The Ants",
+        "The Original Adam & The Ants",
+        "The Original Adam And The Ants",
+        "アダム&ジ・アンツ",
+        "アダム＆ジ・アンツ"
+      ],
+      "profile": "Adam and the Ants (sometimes stylized with a backwards \"D\" in \"ADAM\" & a \"hard\", zig-zagged \"S\" in \"ANTS\" - making it appear as a backwards \"Z\") were an English punk, later turned new wave band, active during the late 1970s and early 1980s. The group, originally just known as The Ants, lasted from 1977 to 1982, existed in two incarnations, both fronted by [a10380] (real name [a671330]). The first, founded in April 1977, achieved considerable cult popularity during the transition from the punk rock era to the post-punk and new wave era and were noted for their high camp and overtly sexualised stage performances and songs. The band over the years featured Paul Flanagan, [a523615], Mark Ryan (The Kid), Johnny Bivouac and Andy Warren. The final lineup of this first incarnation - Dave Barbarossa, Matthew Ashman and Leigh Gorman - left the band in January 1980 at the suggestion of then-de facto manager [a24495], to form the instrumentalist personnel of the controversial [a10381].\r\n\r\nThe second incarnation of Adam And The Ants featured guitarist Marco Pirroni, drummer-producer Chris Hughes, drummer Terry Lee Mail and bassists Kevin Mooney and Gary Tibbs. The band was noted for its use of Burundi style drumming and lasted from February 1980 to March 1982 and achieved major commercial success in the UK and abroad.\r\n\r\nMarco continued to collaborate with Adam Ant throughout his solo career, until shortly after his comeback in 2010.",
+      "releases_url": "https://api.discogs.com/artists/69887/releases",
       "resource_url": "https://api.discogs.com/artists/69887",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/69887",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/69887-Adam-And-The-Ants",
+      "urls": [
+        "https://www.adam-ant.net/",
+        "https://en.wikipedia.org/wiki/Adam_and_the_Ants"
+      ]
     },
     "identity": {
       "musicbrainz_id": "75d4f194-969c-4538-b789-742f3eb3d02c",
@@ -310,27 +465,226 @@
         "track": "Deutscher Girls",
         "uri": "https://www.youtube.com/watch?v=yLGTVg5DEsc"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": "Kings of the Wild Frontier",
+        "id": "Q19892483",
+        "track": "Dog Eat Dog",
+        "uri": "https://www.youtube.com/watch?v=wtxuPqjSJDc"
+      },
+      {
+        "album": "Kings of the Wild Frontier",
+        "id": "Q19893560",
+        "track": "Kings of the Wild Frontier",
+        "uri": "https://www.youtube.com/watch?v=5hEn_rEDzp0"
+      },
+      {
+        "album": null,
+        "id": "Q4770862",
+        "track": "Ant Rap",
+        "uri": "https://www.youtube.com/watch?v=B4z__lCCBX0"
+      },
+      {
+        "album": null,
+        "id": "Q4775388",
+        "track": "Antmusic",
+        "uri": "https://www.youtube.com/watch?v=Rm9drIwmmU4"
+      },
+      {
+        "album": null,
+        "id": "Q7598125",
+        "track": "Stand and Deliver",
+        "uri": "https://www.youtube.com/watch?v=4B2a6l6wM2k"
+      },
+      {
+        "album": null,
+        "id": "Q8058337",
+        "track": "Young Parisians",
+        "uri": "https://www.youtube.com/watch?v=ASCjPATki8k"
+      },
+      {
+        "album": null,
+        "id": "Q19892436",
+        "track": "Deutscher Girls",
+        "uri": "https://www.youtube.com/watch?v=bvTgHum7xSw"
+      }
     ]
   },
   "services": {
     "apple_music": {},
     "discogs": {
-      "cover_image": "",
-      "id": "69887",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 69887,
+      "images": [
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/jEnnUmC5iS-bTRuOSZ8lQYyqfibKmc6zcPGS0YWNu2w/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/jEnnUmC5iS-bTRuOSZ8lQYyqfibKmc6zcPGS0YWNu2w/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/at5J6US4cSfhqnPfHSWVQDaGQ-GaBHAsE13fSMwSK0k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/Nzg3MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 488,
+          "resource_url": "https://i.discogs.com/sVQA-_v61OnPL8jtjQdFOwPeVFZeUcClWsb3ws4RbiU/rs:fit/g:sm/q:90/h:488/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sVQA-_v61OnPL8jtjQdFOwPeVFZeUcClWsb3ws4RbiU/rs:fit/g:sm/q:90/h:488/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MmABn800gfjfSHOckyzvS053qasNF09Srgvz9yxrXV4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTEzMzE5MDAzNzAu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/SLsR7oRVK1kiaBp7DMIjEDRBpJS7duNVz5ysALCBmg8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SLsR7oRVK1kiaBp7DMIjEDRBpJS7duNVz5ysALCBmg8/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/5MSGOlaPElauzCwwhBqV0FLY9gttKXdW15CccxIm-Z4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/NTM5OS5qcGVn.jpeg",
+          "width": 400
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/qDdPtw5_nDZdGJmn9gEz0Ow3D0Cusb55ROV8VA2wNHQ/rs:fit/g:sm/q:90/h:300/w:517/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qDdPtw5_nDZdGJmn9gEz0Ow3D0Cusb55ROV8VA2wNHQ/rs:fit/g:sm/q:90/h:300/w:517/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yq996OjMPSGWpImhl5S-Sf_Xu_jsDImWtH_naWZfnKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDIt/ODEzOC5qcGVn.jpeg",
+          "width": 517
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/BylSMkykqRLf22O9pmt6ct_QIjDPbjemSCLyTSU2DjA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BylSMkykqRLf22O9pmt6ct_QIjDPbjemSCLyTSU2DjA/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Ia1NcjKOtSyfrTGPe0Zhe5m5fiOgfPesYHTOlH8tAYA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE0MjkxMjUyNDMt/ODk2Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 466,
+          "resource_url": "https://i.discogs.com/q3Dv2zwSKx0zi07HEg6YfTOB04z3GvHOt53xu8lMwVk/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/q3Dv2zwSKx0zi07HEg6YfTOB04z3GvHOt53xu8lMwVk/rs:fit/g:sm/q:90/h:466/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/cJ8frsNDAMa6j6cJ3NsI8Bum_YsGchFUUl7DU_KYjPk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MTk5MzE4OTgt/NDExOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 422,
+          "resource_url": "https://i.discogs.com/6PIxC9rfnw5BOluN6CthoUUK_wXLornm67uT_73NpiQ/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6PIxC9rfnw5BOluN6CthoUUK_wXLornm67uT_73NpiQ/rs:fit/g:sm/q:90/h:422/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/iKwIB_dp5Vq3kMJ6cZ6OuvqfsgNSYN9MuOQMo7M8kWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE2OTkxNTIxMDAt/NDU3Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/U_5g_evYmnDv1voMrkp4eKx3efFsRYFQMkFz8Ze207E/rs:fit/g:sm/q:90/h:600/w:346/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/U_5g_evYmnDv1voMrkp4eKx3efFsRYFQMkFz8Ze207E/rs:fit/g:sm/q:90/h:600/w:346/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/vgv5SrnAO4rr2AncKpQveaI4YOVRojzkD3wVP8KVvLA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODg3/LTE1MjgzOTk1NzUt/NjU1NC5qcGVn.jpeg",
+          "width": 346
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 95755,
+          "name": "Chris Hughes",
+          "resource_url": "https://api.discogs.com/artists/95755"
+        },
+        {
+          "active": true,
+          "id": 261082,
+          "name": "Marco Pirroni",
+          "resource_url": "https://api.discogs.com/artists/261082"
+        },
+        {
+          "active": false,
+          "id": 285949,
+          "name": "Leigh Gorman",
+          "resource_url": "https://api.discogs.com/artists/285949"
+        },
+        {
+          "active": false,
+          "id": 307830,
+          "name": "Kevin Mooney",
+          "resource_url": "https://api.discogs.com/artists/307830"
+        },
+        {
+          "active": false,
+          "id": 307833,
+          "name": "Matthew Ashman",
+          "resource_url": "https://api.discogs.com/artists/307833"
+        },
+        {
+          "active": false,
+          "id": 315861,
+          "name": "Gary Tibbs",
+          "resource_url": "https://api.discogs.com/artists/315861"
+        },
+        {
+          "active": false,
+          "id": 366306,
+          "name": "Andy Warren",
+          "resource_url": "https://api.discogs.com/artists/366306"
+        },
+        {
+          "active": false,
+          "id": 367846,
+          "name": "Dave Barbarossa",
+          "resource_url": "https://api.discogs.com/artists/367846"
+        },
+        {
+          "active": true,
+          "id": 671330,
+          "name": "Stuart Goddard",
+          "resource_url": "https://api.discogs.com/artists/671330"
+        },
+        {
+          "active": false,
+          "id": 690822,
+          "name": "Mark Ryan (3)",
+          "resource_url": "https://api.discogs.com/artists/690822"
+        },
+        {
+          "active": false,
+          "id": 730548,
+          "name": "Terry Day (2)",
+          "resource_url": "https://api.discogs.com/artists/730548"
+        },
+        {
+          "active": false,
+          "id": 1675340,
+          "name": "John Beckett (3)",
+          "resource_url": "https://api.discogs.com/artists/1675340"
+        },
+        {
+          "active": false,
+          "id": 2497034,
+          "name": "Thomas Hardy (4)",
+          "resource_url": "https://api.discogs.com/artists/2497034"
+        }
+      ],
       "name": "Adam And The Ants",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "69887",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/69887"
-      },
+      "namevariations": [
+        "Adam & The Ant",
+        "Adam & The Ants",
+        "Adam + Ants",
+        "Adam + The Ants",
+        "Adam And The Ant",
+        "Adam And The Antz",
+        "Adam Ant",
+        "Adam Ant And The Ants",
+        "The Original Adam & The Ants",
+        "The Original Adam And The Ants",
+        "アダム&ジ・アンツ",
+        "アダム＆ジ・アンツ"
+      ],
+      "profile": "Adam and the Ants (sometimes stylized with a backwards \"D\" in \"ADAM\" & a \"hard\", zig-zagged \"S\" in \"ANTS\" - making it appear as a backwards \"Z\") were an English punk, later turned new wave band, active during the late 1970s and early 1980s. The group, originally just known as The Ants, lasted from 1977 to 1982, existed in two incarnations, both fronted by [a10380] (real name [a671330]). The first, founded in April 1977, achieved considerable cult popularity during the transition from the punk rock era to the post-punk and new wave era and were noted for their high camp and overtly sexualised stage performances and songs. The band over the years featured Paul Flanagan, [a523615], Mark Ryan (The Kid), Johnny Bivouac and Andy Warren. The final lineup of this first incarnation - Dave Barbarossa, Matthew Ashman and Leigh Gorman - left the band in January 1980 at the suggestion of then-de facto manager [a24495], to form the instrumentalist personnel of the controversial [a10381].\r\n\r\nThe second incarnation of Adam And The Ants featured guitarist Marco Pirroni, drummer-producer Chris Hughes, drummer Terry Lee Mail and bassists Kevin Mooney and Gary Tibbs. The band was noted for its use of Burundi style drumming and lasted from February 1980 to March 1982 and achieved major commercial success in the UK and abroad.\r\n\r\nMarco continued to collaborate with Adam Ant throughout his solo career, until shortly after his comeback in 2010.",
+      "releases_url": "https://api.discogs.com/artists/69887/releases",
       "resource_url": "https://api.discogs.com/artists/69887",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/69887",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/69887-Adam-And-The-Ants",
+      "urls": [
+        "https://www.adam-ant.net/",
+        "https://en.wikipedia.org/wiki/Adam_and_the_Ants"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Adam and the Ants', url='https://www.last.fm/music/Adam+and+the+Ants', mbid='75d4f194-969c-4538-b789-742f3eb3d02c', listeners=249129, playcount=3169408, bio_summary='Adam and the Ants were a new wave band during the late 1970s and early 1980s. It was one of the bands at the time that marked the transition from the \\'70s punk rock era to the new-wave post punk-music era. Although the band started off with a punk-influenced sound, it soon moved on to New Wave motivated by new sources such as the drum-heavy \"Burundi Beat\" heard on \"Dog Eat Dog\".\\n\\nLed by Adam Ant (real name Stuart Goddard), the band formed in 1977 in London <a href=\"https://www.last.fm/music/Adam+and+the+Ants\">Read more on Last.fm</a>', bio_content='Adam and the Ants were a new wave band during the late 1970s and early 1980s. It was one of the bands at the time that marked the transition from the \\'70s punk rock era to the new-wave post punk-music era. Although the band started off with a punk-influenced sound, it soon moved on to New Wave motivated by new sources such as the drum-heavy \"Burundi Beat\" heard on \"Dog Eat Dog\".\\n\\nLed by Adam Ant (real name Stuart Goddard), the band formed in 1977 in London, England, consisting of Lester Square (guitar), Andy Warren (bass guitar) and Paul Flanagan (drums). Square was replaced by Mark Gaumont early in the band\\'s career, before the release of their debut album Dirk Wears White Sox (1979, Do It Records). The album was somewhat dark, with post punk riffs and some vestiges of glam rock.  The album was not a success, so Adam and the Ants hired Malcolm McLaren (manager of the Sex Pistols) to help with their image.  \\n\\nWhile preparing for their second album, McLaren convinced the Ants to leave Adam and form Bow Wow Wow.  A new version of the Ants was formed by Marco Pirroni (guitar), Kevin Mooney (bass guitar) and two drummers, Terry Lee Miall and Merrick. Pirroni would go on to become an influential member of the group, and cowrite many of their songs with Adam Ant.\\n\\nThe band signed a major label deal with CBS Records and began recording Kings of the Wild Frontier. That album was an enormous hit in the United Kingdom and put the band at the forefront of the New Romantic moment. The album reached #1 on the UK album charts on January 24, 1981.\\n\\nThere were several hit singles from this LP, including Dog Eat Dog (reaching #4 on the UK singles charts in October 1980), Ant Music (#2 in January 1981) and Kings of the Wild Frontier (#2 in March 1981). In addition, Antmusic made it to No.1 in Australia for five weeks.\\n\\nBassist Kevin Mooney left the band in 1981, and was replaced with Gary Tibbs who joined just in time to record the hit single \"Stand and Deliver\".\\n\\nIn November 1981 Adam and the Ants released another highly successful album, Prince Charming. The band had two United Kingdom #1 singles. \"Stand and Deliver\" was the #1 single in the UK for 5 weeks in May 1981, followed by \"Prince Charming\", which topped the UK charts, for 4 weeks in September 1981. \"Antrap\" reached #3 in January, 1982.\\n\\nThe band seized the opportunities provided by music videos on the new MTV channel to develop a theatrical, charismatic onscreen persona. With romantic costumes and heavy make-up, the band was an early example of the New Romantic movement, with contemporaries such as Duran Duran dressing similarly. Lavish videos were produced for the Prince Charming singles, including Stand and Deliver, Prince Charming, and Ant Rap. In the Stand and Deliver video, Adam Ant is dressed as a \"dandy highwayman\" and generally indulges his exhibitionist tendencies. These videos helped break the band in the United States when MTV began airing them.\\n\\nIn early 1982 the band received a Grammy Award nomination for Best New Artist. <a href=\"https://www.last.fm/music/Adam+and+the+Ants\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['new wave', 'post-punk', '80s', 'new romantic', 'punk'], similar_artists=[{'name': 'Adam Ant', 'url': 'https://www.last.fm/music/Adam+Ant'}, {'name': 'The Icicle Works', 'url': 'https://www.last.fm/music/The+Icicle+Works'}, {'name': 'Altered Images', 'url': 'https://www.last.fm/music/Altered+Images'}, {'name': 'Bow Wow Wow', 'url': 'https://www.last.fm/music/Bow+Wow+Wow'}, {'name': 'Love and Rockets', 'url': 'https://www.last.fm/music/Love+and+Rockets'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Adam and the Ants', 'mbid': '75d4f194-969c-4538-b789-742f3eb3d02c', 'url': 'https://www.last.fm/music/Adam+and+the+Ants', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '249129', 'playcount': '3169408'}, 'similar': {'artist': [{'name': 'Adam Ant', 'url': 'https://www.last.fm/music/Adam+Ant', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Icicle Works', 'url': 'https://www.last.fm/music/The+Icicle+Works', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Altered Images', 'url': 'https://www.last.fm/music/Altered+Images', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bow Wow Wow', 'url': 'https://www.last.fm/music/Bow+Wow+Wow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Love and Rockets', 'url': 'https://www.last.fm/music/Love+and+Rockets', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'new wave', 'url': 'https://www.last.fm/tag/new+wave'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'new romantic', 'url': 'https://www.last.fm/tag/new+romantic'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Adam+and+the+Ants/+wiki'}}, 'published': '24 Feb 2006, 23:48', 'summary': 'Adam and the Ants were a new wave band during the late 1970s and early 1980s. It was one of the bands at the time that marked the transition from the \\'70s punk rock era to the new-wave post punk-music era. Although the band started off with a punk-influenced sound, it soon moved on to New Wave motivated by new sources such as the drum-heavy \"Burundi Beat\" heard on \"Dog Eat Dog\".\\n\\nLed by Adam Ant (real name Stuart Goddard), the band formed in 1977 in London <a href=\"https://www.last.fm/music/Adam+and+the+Ants\">Read more on Last.fm</a>', 'content': 'Adam and the Ants were a new wave band during the late 1970s and early 1980s. It was one of the bands at the time that marked the transition from the \\'70s punk rock era to the new-wave post punk-music era. Although the band started off with a punk-influenced sound, it soon moved on to New Wave motivated by new sources such as the drum-heavy \"Burundi Beat\" heard on \"Dog Eat Dog\".\\n\\nLed by Adam Ant (real name Stuart Goddard), the band formed in 1977 in London, England, consisting of Lester Square (guitar), Andy Warren (bass guitar) and Paul Flanagan (drums). Square was replaced by Mark Gaumont early in the band\\'s career, before the release of their debut album Dirk Wears White Sox (1979, Do It Records). The album was somewhat dark, with post punk riffs and some vestiges of glam rock.  The album was not a success, so Adam and the Ants hired Malcolm McLaren (manager of the Sex Pistols) to help with their image.  \\n\\nWhile preparing for their second album, McLaren convinced the Ants to leave Adam and form Bow Wow Wow.  A new version of the Ants was formed by Marco Pirroni (guitar), Kevin Mooney (bass guitar) and two drummers, Terry Lee Miall and Merrick. Pirroni would go on to become an influential member of the group, and cowrite many of their songs with Adam Ant.\\n\\nThe band signed a major label deal with CBS Records and began recording Kings of the Wild Frontier. That album was an enormous hit in the United Kingdom and put the band at the forefront of the New Romantic moment. The album reached #1 on the UK album charts on January 24, 1981.\\n\\nThere were several hit singles from this LP, including Dog Eat Dog (reaching #4 on the UK singles charts in October 1980), Ant Music (#2 in January 1981) and Kings of the Wild Frontier (#2 in March 1981). In addition, Antmusic made it to No.1 in Australia for five weeks.\\n\\nBassist Kevin Mooney left the band in 1981, and was replaced with Gary Tibbs who joined just in time to record the hit single \"Stand and Deliver\".\\n\\nIn November 1981 Adam and the Ants released another highly successful album, Prince Charming. The band had two United Kingdom #1 singles. \"Stand and Deliver\" was the #1 single in the UK for 5 weeks in May 1981, followed by \"Prince Charming\", which topped the UK charts, for 4 weeks in September 1981. \"Antrap\" reached #3 in January, 1982.\\n\\nThe band seized the opportunities provided by music videos on the new MTV channel to develop a theatrical, charismatic onscreen persona. With romantic costumes and heavy make-up, the band was an early example of the New Romantic movement, with contemporaries such as Duran Duran dressing similarly. Lavish videos were produced for the Prince Charming singles, including Stand and Deliver, Prince Charming, and Ant Rap. In the Stand and Deliver video, Adam Ant is dressed as a \"dandy highwayman\" and generally indulges his exhibitionist tendencies. These videos helped break the band in the United States when MTV began airing them.\\n\\nIn early 1982 the band received a Grammy Award nomination for Best New Artist. <a href=\"https://www.last.fm/music/Adam+and+the+Ants\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='0lZoBs4Pzo7R89JM9lxwoT', url='https://open.spotify.com/artist/0lZoBs4Pzo7R89JM9lxwoT', name='Duran Duran', popularity=74, followers=3721440, genres=['new wave', 'synthpop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb873c478913e5a70527b9442a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174873c478913e5a70527b9442a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178873c478913e5a70527b9442a', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0lZoBs4Pzo7R89JM9lxwoT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0lZoBs4Pzo7R89JM9lxwoT'}, 'followers': {'href': None, 'total': 3721440}, 'genres': ['new wave', 'synthpop'], 'href': 'https://api.spotify.com/v1/artists/0lZoBs4Pzo7R89JM9lxwoT', 'id': '0lZoBs4Pzo7R89JM9lxwoT', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb873c478913e5a70527b9442a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174873c478913e5a70527b9442a', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178873c478913e5a70527b9442a', 'height': 160, 'width': 160}], 'name': 'Duran Duran', 'popularity': 74, 'type': 'artist', 'uri': 'spotify:artist:0lZoBs4Pzo7R89JM9lxwoT'})",
@@ -408,6 +762,6 @@
   },
   "spotify_id": "0lZoBs4Pzo7R89JM9lxwoT",
   "spotify_url": "https://open.spotify.com/artist/0lZoBs4Pzo7R89JM9lxwoT",
-  "updated_at": "2026-10-22T14:04:26.369797",
+  "updated_at": "2026-10-30T18:35:40.550350",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Adam_and_the_Ants"
 }

@@ -106,22 +106,103 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='80489567', url='https://music.apple.com/gb/artist/senser/80489567', name='Senser', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/8f/9e/ca8f9ee4-d702-312f-219a-2d10acb70929/mzi.wfoqgkzj.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '80489567', 'type': 'artists', 'href': '/v1/catalog/gb/artists/80489567', 'attributes': {'name': 'Senser', 'genreNames': ['Rock'], 'artwork': {'width': 620, 'height': 620, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/8f/9e/ca8f9ee4-d702-312f-219a-2d10acb70929/mzi.wfoqgkzj.jpg/{w}x{h}ac.jpg', 'bgColor': 'b62313', 'textColor1': 'fefaf9', 'textColor2': 'fdf9f8', 'textColor3': 'f0cfcb', 'textColor4': 'efceca'}, 'url': 'https://music.apple.com/gb/artist/senser/80489567'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/80489567/albums', 'data': [{'id': '924017824', 'type': 'albums', 'href': '/v1/catalog/gb/albums/924017824'}, {'id': '87367588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/87367588'}, {'id': '334089024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/334089024'}, {'id': '1220006647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1220006647'}, {'id': '476402343', 'type': 'albums', 'href': '/v1/catalog/gb/albums/476402343'}, {'id': '331407314', 'type': 'albums', 'href': '/v1/catalog/gb/albums/331407314'}, {'id': '298854350', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298854350'}, {'id': '1726644797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726644797'}, {'id': '103067494', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103067494'}, {'id': '111241459', 'type': 'albums', 'href': '/v1/catalog/gb/albums/111241459'}, {'id': '111241092', 'type': 'albums', 'href': '/v1/catalog/gb/albums/111241092'}, {'id': '103068062', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103068062'}, {'id': '372290742', 'type': 'albums', 'href': '/v1/catalog/gb/albums/372290742'}, {'id': '330469760', 'type': 'albums', 'href': '/v1/catalog/gb/albums/330469760'}, {'id': '103068697', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103068697'}, {'id': '103069114', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103069114'}, {'id': '422959889', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422959889'}, {'id': '924012342', 'type': 'albums', 'href': '/v1/catalog/gb/albums/924012342'}, {'id': '103069636', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103069636'}, {'id': '1775009960', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775009960'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "35156",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 472242,
+          "name": "de:Senser",
+          "resource_url": "https://api.discogs.com/artists/472242"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 35156,
+      "images": [
+        {
+          "height": 539,
+          "resource_url": "https://i.discogs.com/nZUMOigePgSEivCkZ0rCcCE0vt4pWcYMLeRUgx0-Gmw/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/nZUMOigePgSEivCkZ0rCcCE0vt4pWcYMLeRUgx0-Gmw/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/ZRyzJ637uOFZBmETCWtu-FXy2Ju_gTlbJ3FpwR-OJxo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 290,
+          "resource_url": "https://i.discogs.com/hkNRvJmmhOXoV8cEcF4ISt27FhykgDAjc0biOXy2Riw/rs:fit/g:sm/q:90/h:290/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hkNRvJmmhOXoV8cEcF4ISt27FhykgDAjc0biOXy2Riw/rs:fit/g:sm/q:90/h:290/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sfihnMXQGZv2u9KdcUrejGLUoHJMAlDAgg_XJjTDHwo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 290,
+          "resource_url": "https://i.discogs.com/7dIoCHmhbRl3tYG8zh5LRAjUsF0VEB1KmRXVfZjg4AI/rs:fit/g:sm/q:90/h:290/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7dIoCHmhbRl3tYG8zh5LRAjUsF0VEB1KmRXVfZjg4AI/rs:fit/g:sm/q:90/h:290/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/ItPjCujQy8qCQdQstfoulaWbJr1XkaaZGXpAZrYzLsA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 154545,
+          "name": "Heitham Al-Sayed",
+          "resource_url": "https://api.discogs.com/artists/154545"
+        },
+        {
+          "active": true,
+          "id": 402792,
+          "name": "Kirsten Haigh",
+          "resource_url": "https://api.discogs.com/artists/402792"
+        },
+        {
+          "active": true,
+          "id": 426058,
+          "name": "John Morgan (3)",
+          "resource_url": "https://api.discogs.com/artists/426058"
+        },
+        {
+          "active": true,
+          "id": 491719,
+          "name": "Nick Michaelson",
+          "resource_url": "https://api.discogs.com/artists/491719"
+        },
+        {
+          "active": true,
+          "id": 598119,
+          "name": "James Barrett",
+          "resource_url": "https://api.discogs.com/artists/598119"
+        },
+        {
+          "active": false,
+          "id": 723842,
+          "name": "Paul Soden",
+          "resource_url": "https://api.discogs.com/artists/723842"
+        },
+        {
+          "active": true,
+          "id": 1382168,
+          "name": "Andy Clinton",
+          "resource_url": "https://api.discogs.com/artists/1382168"
+        },
+        {
+          "active": false,
+          "id": 1611855,
+          "name": "Alan Haggarty",
+          "resource_url": "https://api.discogs.com/artists/1611855"
+        }
+      ],
       "name": "Senser",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "35156",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/35156"
-      },
+      "profile": "A politically charged rap rock UK band, originally formed in South West London from a group of friends in the late 1980s.\r\n\r\nKersten Haigh - Lead Vocals\r\nHeitham Al-Sayed - Vocals\r\nAndy Clinton - DJ\r\nNick Michaelson - Lead Guitar\r\nJames Barrett - Bass Guitar\r\nJohn Morgan - Drums\r\nPaul Soden - Drums\r\nHaggis - Engineer, Producer & Programmer\r\n",
+      "releases_url": "https://api.discogs.com/artists/35156/releases",
       "resource_url": "https://api.discogs.com/artists/35156",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/35156",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/35156-Senser",
+      "urls": [
+        "http://www.senser.co.uk",
+        "http://www.indian.co.uk/senser",
+        "http://en.wikipedia.org/wiki/Senser",
+        "https://books.discogs.com/credit/370147-senser",
+        "https://senser.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "85b374ce-935c-4a56-b40f-107ec8d72b43",
@@ -230,27 +311,109 @@
         "track": "Witch Village",
         "uri": "https://www.youtube.com/watch?v=Ix9QEZ4lUjI"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='80489567', url='https://music.apple.com/gb/artist/senser/80489567', name='Senser', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/8f/9e/ca8f9ee4-d702-312f-219a-2d10acb70929/mzi.wfoqgkzj.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '80489567', 'type': 'artists', 'href': '/v1/catalog/gb/artists/80489567', 'attributes': {'name': 'Senser', 'genreNames': ['Rock'], 'artwork': {'width': 620, 'height': 620, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/8f/9e/ca8f9ee4-d702-312f-219a-2d10acb70929/mzi.wfoqgkzj.jpg/{w}x{h}ac.jpg', 'bgColor': 'b62313', 'textColor1': 'fefaf9', 'textColor2': 'fdf9f8', 'textColor3': 'f0cfcb', 'textColor4': 'efceca'}, 'url': 'https://music.apple.com/gb/artist/senser/80489567'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/80489567/albums', 'data': [{'id': '924017824', 'type': 'albums', 'href': '/v1/catalog/gb/albums/924017824'}, {'id': '87367588', 'type': 'albums', 'href': '/v1/catalog/gb/albums/87367588'}, {'id': '334089024', 'type': 'albums', 'href': '/v1/catalog/gb/albums/334089024'}, {'id': '1220006647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1220006647'}, {'id': '476402343', 'type': 'albums', 'href': '/v1/catalog/gb/albums/476402343'}, {'id': '331407314', 'type': 'albums', 'href': '/v1/catalog/gb/albums/331407314'}, {'id': '298854350', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298854350'}, {'id': '1726644797', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726644797'}, {'id': '103067494', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103067494'}, {'id': '111241459', 'type': 'albums', 'href': '/v1/catalog/gb/albums/111241459'}, {'id': '111241092', 'type': 'albums', 'href': '/v1/catalog/gb/albums/111241092'}, {'id': '103068062', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103068062'}, {'id': '372290742', 'type': 'albums', 'href': '/v1/catalog/gb/albums/372290742'}, {'id': '330469760', 'type': 'albums', 'href': '/v1/catalog/gb/albums/330469760'}, {'id': '103068697', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103068697'}, {'id': '103069114', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103069114'}, {'id': '422959889', 'type': 'albums', 'href': '/v1/catalog/gb/albums/422959889'}, {'id': '924012342', 'type': 'albums', 'href': '/v1/catalog/gb/albums/924012342'}, {'id': '103069636', 'type': 'albums', 'href': '/v1/catalog/gb/albums/103069636'}, {'id': '1775009960', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775009960'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "35156",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 472242,
+          "name": "de:Senser",
+          "resource_url": "https://api.discogs.com/artists/472242"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 35156,
+      "images": [
+        {
+          "height": 539,
+          "resource_url": "https://i.discogs.com/nZUMOigePgSEivCkZ0rCcCE0vt4pWcYMLeRUgx0-Gmw/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/nZUMOigePgSEivCkZ0rCcCE0vt4pWcYMLeRUgx0-Gmw/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/ZRyzJ637uOFZBmETCWtu-FXy2Ju_gTlbJ3FpwR-OJxo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTE0MzgzNzcyODgt/NzQ3My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 290,
+          "resource_url": "https://i.discogs.com/hkNRvJmmhOXoV8cEcF4ISt27FhykgDAjc0biOXy2Riw/rs:fit/g:sm/q:90/h:290/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hkNRvJmmhOXoV8cEcF4ISt27FhykgDAjc0biOXy2Riw/rs:fit/g:sm/q:90/h:290/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/sfihnMXQGZv2u9KdcUrejGLUoHJMAlDAgg_XJjTDHwo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTEyNzE0MTM3Njcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 290,
+          "resource_url": "https://i.discogs.com/7dIoCHmhbRl3tYG8zh5LRAjUsF0VEB1KmRXVfZjg4AI/rs:fit/g:sm/q:90/h:290/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7dIoCHmhbRl3tYG8zh5LRAjUsF0VEB1KmRXVfZjg4AI/rs:fit/g:sm/q:90/h:290/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/ItPjCujQy8qCQdQstfoulaWbJr1XkaaZGXpAZrYzLsA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTU2/LTExMDUxNzc1NzUu/anBn.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 154545,
+          "name": "Heitham Al-Sayed",
+          "resource_url": "https://api.discogs.com/artists/154545"
+        },
+        {
+          "active": true,
+          "id": 402792,
+          "name": "Kirsten Haigh",
+          "resource_url": "https://api.discogs.com/artists/402792"
+        },
+        {
+          "active": true,
+          "id": 426058,
+          "name": "John Morgan (3)",
+          "resource_url": "https://api.discogs.com/artists/426058"
+        },
+        {
+          "active": true,
+          "id": 491719,
+          "name": "Nick Michaelson",
+          "resource_url": "https://api.discogs.com/artists/491719"
+        },
+        {
+          "active": true,
+          "id": 598119,
+          "name": "James Barrett",
+          "resource_url": "https://api.discogs.com/artists/598119"
+        },
+        {
+          "active": false,
+          "id": 723842,
+          "name": "Paul Soden",
+          "resource_url": "https://api.discogs.com/artists/723842"
+        },
+        {
+          "active": true,
+          "id": 1382168,
+          "name": "Andy Clinton",
+          "resource_url": "https://api.discogs.com/artists/1382168"
+        },
+        {
+          "active": false,
+          "id": 1611855,
+          "name": "Alan Haggarty",
+          "resource_url": "https://api.discogs.com/artists/1611855"
+        }
+      ],
       "name": "Senser",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "35156",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/35156"
-      },
+      "profile": "A politically charged rap rock UK band, originally formed in South West London from a group of friends in the late 1980s.\r\n\r\nKersten Haigh - Lead Vocals\r\nHeitham Al-Sayed - Vocals\r\nAndy Clinton - DJ\r\nNick Michaelson - Lead Guitar\r\nJames Barrett - Bass Guitar\r\nJohn Morgan - Drums\r\nPaul Soden - Drums\r\nHaggis - Engineer, Producer & Programmer\r\n",
+      "releases_url": "https://api.discogs.com/artists/35156/releases",
       "resource_url": "https://api.discogs.com/artists/35156",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/35156",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/35156-Senser",
+      "urls": [
+        "http://www.senser.co.uk",
+        "http://www.indian.co.uk/senser",
+        "http://en.wikipedia.org/wiki/Senser",
+        "https://books.discogs.com/credit/370147-senser",
+        "https://senser.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Senser', url='https://www.last.fm/music/Senser', mbid='85b374ce-935c-4a56-b40f-107ec8d72b43', listeners=47666, playcount=646887, bio_summary='Senser was formed in the late 1980s by a group of friends and musicians from South West London – Nick Michaelson (guitar), Heitham Al-Sayed (vocals), Kerstin Haigh (vocals), John Morgan (drums), James Barrett (bass) and Haggis (engineer, producer, programmer). In 1992 they were joined by Spiral Tribe DJ, Andy Clinton.\\n\\nTheir music is a mix of rock, rap and electronic elements. Their first album, \\'Stacked Up\\', was released in 1994 and was one of <a href=\"https://www.last.fm/music/Senser\">Read more on Last.fm</a>', bio_content='Senser was formed in the late 1980s by a group of friends and musicians from South West London – Nick Michaelson (guitar), Heitham Al-Sayed (vocals), Kerstin Haigh (vocals), John Morgan (drums), James Barrett (bass) and Haggis (engineer, producer, programmer). In 1992 they were joined by Spiral Tribe DJ, Andy Clinton.\\n\\nTheir music is a mix of rock, rap and electronic elements. Their first album, \\'Stacked Up\\', was released in 1994 and was one of the first rap/rock crossover records and the band are widely regarded as being pioneers of the \\'nu-metal\\' genre (Although the actual name and rise of the genre came about a number of years after \\'Stacked Up\\'s release) and are often attributed with the subsequent success of The Prodigy, who took rock and dance a step further.\\n\\nThey split up in 1999 and Heitham and John formed \\'Lodestar\\', a less electronic, more melodic, metal orientated 4-piece in which Heitham sang throughout, rather than rapped. Lodestar created one superb self-titled album before themselves calling it a day.\\n\\nIn the meantime, Kerstin lead the vocals on the next Senser album \\'Asylum\\' which had stronger dance roots, but still with the familiar thrashy guitar riffs. Although no where near as popular as Stacked Up, Asylum\\'s closer affiliation with D&B spawned numerous remixes, some of which accompanied the main album itself, making it a 2-CD release.\\n\\nIn 2003, Senser reformed in the original line-up, to work on a compilation of their 2 90\\'s albums. Their time together also spawned brand new material, released as the album \\'Schematic\\' in 2004. The new album brought back the old sound from Stacked Up but with noticeable melodic and dance influences from Lodestar and the Senser \\'Asylum\\' album. \\n\\nA new album \\'How To Do Battle\\' was released in September 2009, and Senser is currently on tour supporting the release. <a href=\"https://www.last.fm/music/Senser\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['rapcore', 'alternative', 'crossover', 'seen live', 'rap metal'], similar_artists=[{'name': 'Downset', 'url': 'https://www.last.fm/music/Downset'}, {'name': 'Stuck Mojo', 'url': 'https://www.last.fm/music/Stuck+Mojo'}, {'name': 'Dog Eat Dog', 'url': 'https://www.last.fm/music/Dog+Eat+Dog'}, {'name': 'Dub War', 'url': 'https://www.last.fm/music/Dub+War'}, {'name': 'Biohazard', 'url': 'https://www.last.fm/music/Biohazard'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Senser', 'mbid': '85b374ce-935c-4a56-b40f-107ec8d72b43', 'url': 'https://www.last.fm/music/Senser', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '47666', 'playcount': '646887'}, 'similar': {'artist': [{'name': 'Downset', 'url': 'https://www.last.fm/music/Downset', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Stuck Mojo', 'url': 'https://www.last.fm/music/Stuck+Mojo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dog Eat Dog', 'url': 'https://www.last.fm/music/Dog+Eat+Dog', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dub War', 'url': 'https://www.last.fm/music/Dub+War', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Biohazard', 'url': 'https://www.last.fm/music/Biohazard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'rapcore', 'url': 'https://www.last.fm/tag/rapcore'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'crossover', 'url': 'https://www.last.fm/tag/crossover'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'rap metal', 'url': 'https://www.last.fm/tag/rap+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Senser/+wiki'}}, 'published': '02 Jun 2006, 13:55', 'summary': 'Senser was formed in the late 1980s by a group of friends and musicians from South West London – Nick Michaelson (guitar), Heitham Al-Sayed (vocals), Kerstin Haigh (vocals), John Morgan (drums), James Barrett (bass) and Haggis (engineer, producer, programmer). In 1992 they were joined by Spiral Tribe DJ, Andy Clinton.\\n\\nTheir music is a mix of rock, rap and electronic elements. Their first album, \\'Stacked Up\\', was released in 1994 and was one of <a href=\"https://www.last.fm/music/Senser\">Read more on Last.fm</a>', 'content': 'Senser was formed in the late 1980s by a group of friends and musicians from South West London – Nick Michaelson (guitar), Heitham Al-Sayed (vocals), Kerstin Haigh (vocals), John Morgan (drums), James Barrett (bass) and Haggis (engineer, producer, programmer). In 1992 they were joined by Spiral Tribe DJ, Andy Clinton.\\n\\nTheir music is a mix of rock, rap and electronic elements. Their first album, \\'Stacked Up\\', was released in 1994 and was one of the first rap/rock crossover records and the band are widely regarded as being pioneers of the \\'nu-metal\\' genre (Although the actual name and rise of the genre came about a number of years after \\'Stacked Up\\'s release) and are often attributed with the subsequent success of The Prodigy, who took rock and dance a step further.\\n\\nThey split up in 1999 and Heitham and John formed \\'Lodestar\\', a less electronic, more melodic, metal orientated 4-piece in which Heitham sang throughout, rather than rapped. Lodestar created one superb self-titled album before themselves calling it a day.\\n\\nIn the meantime, Kerstin lead the vocals on the next Senser album \\'Asylum\\' which had stronger dance roots, but still with the familiar thrashy guitar riffs. Although no where near as popular as Stacked Up, Asylum\\'s closer affiliation with D&B spawned numerous remixes, some of which accompanied the main album itself, making it a 2-CD release.\\n\\nIn 2003, Senser reformed in the original line-up, to work on a compilation of their 2 90\\'s albums. Their time together also spawned brand new material, released as the album \\'Schematic\\' in 2004. The new album brought back the old sound from Stacked Up but with noticeable melodic and dance influences from Lodestar and the Senser \\'Asylum\\' album. \\n\\nA new album \\'How To Do Battle\\' was released in September 2009, and Senser is currently on tour supporting the release. <a href=\"https://www.last.fm/music/Senser\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2x3n60ukOull9yln5m080E', url='https://open.spotify.com/artist/2x3n60ukOull9yln5m080E', name='Senser', popularity=31, followers=24216, genres=['rap metal', 'rap rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2736f3266d2557957dc12c906cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e026f3266d2557957dc12c906cc', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048516f3266d2557957dc12c906cc', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2x3n60ukOull9yln5m080E'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2x3n60ukOull9yln5m080E'}, 'followers': {'href': None, 'total': 24216}, 'genres': ['rap metal', 'rap rock'], 'href': 'https://api.spotify.com/v1/artists/2x3n60ukOull9yln5m080E', 'id': '2x3n60ukOull9yln5m080E', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2736f3266d2557957dc12c906cc', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e026f3266d2557957dc12c906cc', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048516f3266d2557957dc12c906cc', 'height': 64, 'width': 64}], 'name': 'Senser', 'popularity': 31, 'type': 'artist', 'uri': 'spotify:artist:2x3n60ukOull9yln5m080E'})",
@@ -307,6 +470,6 @@
   },
   "spotify_id": "2x3n60ukOull9yln5m080E",
   "spotify_url": "https://open.spotify.com/artist/2x3n60ukOull9yln5m080E",
-  "updated_at": "2026-10-22T14:11:05.634812",
+  "updated_at": "2026-10-30T18:45:02.888394",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Senser"
 }

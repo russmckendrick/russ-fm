@@ -91,22 +91,58 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='305386231', url='https://music.apple.com/gb/artist/henge/305386231', name='HENGE', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/db/63/f5/db63f5a4-3a35-f996-8f21-50e236fa1ec2/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '305386231', 'type': 'artists', 'href': '/v1/catalog/gb/artists/305386231', 'attributes': {'name': 'HENGE', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/db/63/f5/db63f5a4-3a35-f996-8f21-50e236fa1ec2/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '040509', 'textColor1': 'df84b4', 'textColor2': '03a3e7', 'textColor3': 'b36b91', 'textColor4': '0383ba'}, 'url': 'https://music.apple.com/gb/artist/henge/305386231'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/305386231/albums', 'data': [{'id': '1810707954', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810707954'}, {'id': '1810726622', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810726622'}, {'id': '1810716358', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810716358'}, {'id': '1290975762', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1290975762'}, {'id': '1782557857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1782557857'}, {'id': '1782556614', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1782556614'}, {'id': '1810707468', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810707468'}, {'id': '1783363381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783363381'}, {'id': '1810709747', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810709747'}, {'id': '1810717121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810717121'}, {'id': '1810683533', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810683533'}, {'id': '1589792445', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589792445'}, {'id': '1810697407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810697407'}, {'id': '1812628293', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812628293'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6089292",
-      "images": [],
-      "members": [],
-      "name": "Henge",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "6089292",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6089292"
-      },
+      "data_quality": "Needs Vote",
+      "id": 6089292,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/apqZD05524-DRUTIgLNUl-KSDX8DBPiWV-OZCQ-SkDw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/apqZD05524-DRUTIgLNUl-KSDX8DBPiWV-OZCQ-SkDw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/duv4WeD8X3VGFlNtPAx2chcZnt3fUL-WR1vlY1toWZg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3670572,
+          "name": "Roy Medhurst",
+          "resource_url": "https://api.discogs.com/artists/3670572"
+        },
+        {
+          "active": true,
+          "id": 3966513,
+          "name": "Matthew Whitaker",
+          "resource_url": "https://api.discogs.com/artists/3966513"
+        },
+        {
+          "active": true,
+          "id": 13245750,
+          "name": "Samuel Draper",
+          "resource_url": "https://api.discogs.com/artists/13245750"
+        },
+        {
+          "active": true,
+          "id": 13672495,
+          "name": "Pete Turner (10)",
+          "resource_url": "https://api.discogs.com/artists/13672495"
+        }
+      ],
+      "name": "Henge (3)",
+      "profile": "Henge are probably unique in that three out of the four band members are aliens.\r\nLead singer and guitarist, Zpor, originates from planet Agricular in Cosmic Redshift 7. \r\nGoo, who plays bass guitar and synth bass, is the last surviving Venusian, after mass extinction due to planet pollution.\r\nThe drummer, Nom, is of the species Nommo and comes from Xylantia in the Sirius Star System.\r\nGrok, master of synthesizers, is the only native Earthling in the band.\r\nTo Henge, planet earth is an experiment, they come in the name of Rave, in which they bring their gift of \"Cosmic Dross\" - a kind of music new to this planet! There are no earth words to describe these sounds, but you will learn how to LOVE and DANCE again!\r\n\r\nPS: Their base on earth is Manchester, UK.",
+      "releases_url": "https://api.discogs.com/artists/6089292/releases",
       "resource_url": "https://api.discogs.com/artists/6089292",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6089292",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6089292-Henge-3",
+      "urls": [
+        "https://hengemusic.com/",
+        "https://www.facebook.com/Hengemusic/",
+        "https://www.instagram.com/henge_cosmicdross/",
+        "https://www.youtube.com/channel/UCIsYg7VvHTAw9rk3BuMAipw",
+        "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5",
+        "https://twitter.com/HENGE_band",
+        "https://hengemusic.bandcamp.com/music"
+      ]
     },
     "identity": {
       "musicbrainz_id": "47b63ff9-7c33-4747-921b-7410f92adbb2",
@@ -121,22 +157,58 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='305386231', url='https://music.apple.com/gb/artist/henge/305386231', name='HENGE', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/db/63/f5/db63f5a4-3a35-f996-8f21-50e236fa1ec2/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '305386231', 'type': 'artists', 'href': '/v1/catalog/gb/artists/305386231', 'attributes': {'name': 'HENGE', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/db/63/f5/db63f5a4-3a35-f996-8f21-50e236fa1ec2/pr_source.png/{w}x{h}bb.jpg', 'bgColor': '040509', 'textColor1': 'df84b4', 'textColor2': '03a3e7', 'textColor3': 'b36b91', 'textColor4': '0383ba'}, 'url': 'https://music.apple.com/gb/artist/henge/305386231'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/305386231/albums', 'data': [{'id': '1810707954', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810707954'}, {'id': '1810726622', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810726622'}, {'id': '1810716358', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810716358'}, {'id': '1290975762', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1290975762'}, {'id': '1782557857', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1782557857'}, {'id': '1782556614', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1782556614'}, {'id': '1810707468', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810707468'}, {'id': '1783363381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1783363381'}, {'id': '1810709747', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810709747'}, {'id': '1810717121', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810717121'}, {'id': '1810683533', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810683533'}, {'id': '1589792445', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1589792445'}, {'id': '1810697407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1810697407'}, {'id': '1812628293', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1812628293'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6089292",
-      "images": [],
-      "members": [],
-      "name": "Henge",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "6089292",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6089292"
-      },
+      "data_quality": "Needs Vote",
+      "id": 6089292,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/apqZD05524-DRUTIgLNUl-KSDX8DBPiWV-OZCQ-SkDw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/apqZD05524-DRUTIgLNUl-KSDX8DBPiWV-OZCQ-SkDw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/duv4WeD8X3VGFlNtPAx2chcZnt3fUL-WR1vlY1toWZg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODky/OTItMTYwODU1Mzg2/NC02NzQ2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 3670572,
+          "name": "Roy Medhurst",
+          "resource_url": "https://api.discogs.com/artists/3670572"
+        },
+        {
+          "active": true,
+          "id": 3966513,
+          "name": "Matthew Whitaker",
+          "resource_url": "https://api.discogs.com/artists/3966513"
+        },
+        {
+          "active": true,
+          "id": 13245750,
+          "name": "Samuel Draper",
+          "resource_url": "https://api.discogs.com/artists/13245750"
+        },
+        {
+          "active": true,
+          "id": 13672495,
+          "name": "Pete Turner (10)",
+          "resource_url": "https://api.discogs.com/artists/13672495"
+        }
+      ],
+      "name": "Henge (3)",
+      "profile": "Henge are probably unique in that three out of the four band members are aliens.\r\nLead singer and guitarist, Zpor, originates from planet Agricular in Cosmic Redshift 7. \r\nGoo, who plays bass guitar and synth bass, is the last surviving Venusian, after mass extinction due to planet pollution.\r\nThe drummer, Nom, is of the species Nommo and comes from Xylantia in the Sirius Star System.\r\nGrok, master of synthesizers, is the only native Earthling in the band.\r\nTo Henge, planet earth is an experiment, they come in the name of Rave, in which they bring their gift of \"Cosmic Dross\" - a kind of music new to this planet! There are no earth words to describe these sounds, but you will learn how to LOVE and DANCE again!\r\n\r\nPS: Their base on earth is Manchester, UK.",
+      "releases_url": "https://api.discogs.com/artists/6089292/releases",
       "resource_url": "https://api.discogs.com/artists/6089292",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6089292",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6089292-Henge-3",
+      "urls": [
+        "https://hengemusic.com/",
+        "https://www.facebook.com/Hengemusic/",
+        "https://www.instagram.com/henge_cosmicdross/",
+        "https://www.youtube.com/channel/UCIsYg7VvHTAw9rk3BuMAipw",
+        "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5",
+        "https://twitter.com/HENGE_band",
+        "https://hengemusic.bandcamp.com/music"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Henge', url='https://www.last.fm/music/Henge', mbid=None, listeners=20064, playcount=158594, bio_summary='Check https://hengemusic.bandcamp.com/ \\n\\nHenge is a British group based in Manchester that plays crossover electronic dance music. \"Combining Butthole Surfers mayhem and Jesus Lizard precession, this is pure psychedelic noise rock.\" (Promo info) Their first release was a five-track EP in July 2017, entitled Cosmic Dross. Henge released their debut album, Attention Earth! (stylised in all capitals), on 19 October 2018. <a href=\"https://www.last.fm/music/Henge\">Read more on Last.fm</a>', bio_content='Check https://hengemusic.bandcamp.com/ \\n\\nHenge is a British group based in Manchester that plays crossover electronic dance music. \"Combining Butthole Surfers mayhem and Jesus Lizard precession, this is pure psychedelic noise rock.\" (Promo info) Their first release was a five-track EP in July 2017, entitled Cosmic Dross. Henge released their debut album, Attention Earth! (stylised in all capitals), on 19 October 2018. <a href=\"https://www.last.fm/music/Henge\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['industrial', 'techno', 'not stoner rock', 'not rock', 'romana'], similar_artists=[{'name': 'Shit and Shine', 'url': 'https://www.last.fm/music/Shit+and+Shine'}, {'name': 'Monster Magnet', 'url': 'https://www.last.fm/music/Monster+Magnet'}, {'name': 'Colour Haze', 'url': 'https://www.last.fm/music/Colour+Haze'}, {'name': 'Raketkanon', 'url': 'https://www.last.fm/music/Raketkanon'}, {'name': 'Causa Sui', 'url': 'https://www.last.fm/music/Causa+Sui'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Henge', 'url': 'https://www.last.fm/music/Henge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '20064', 'playcount': '158594'}, 'similar': {'artist': [{'name': 'Shit and Shine', 'url': 'https://www.last.fm/music/Shit+and+Shine', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Monster Magnet', 'url': 'https://www.last.fm/music/Monster+Magnet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Colour Haze', 'url': 'https://www.last.fm/music/Colour+Haze', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Raketkanon', 'url': 'https://www.last.fm/music/Raketkanon', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Causa Sui', 'url': 'https://www.last.fm/music/Causa+Sui', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'industrial', 'url': 'https://www.last.fm/tag/industrial'}, {'name': 'techno', 'url': 'https://www.last.fm/tag/techno'}, {'name': 'not stoner rock', 'url': 'https://www.last.fm/tag/not+stoner+rock'}, {'name': 'not rock', 'url': 'https://www.last.fm/tag/not+rock'}, {'name': 'romana', 'url': 'https://www.last.fm/tag/romana'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Henge/+wiki'}}, 'published': '25 Feb 2020, 20:00', 'summary': 'Check https://hengemusic.bandcamp.com/ \\n\\nHenge is a British group based in Manchester that plays crossover electronic dance music. \"Combining Butthole Surfers mayhem and Jesus Lizard precession, this is pure psychedelic noise rock.\" (Promo info) Their first release was a five-track EP in July 2017, entitled Cosmic Dross. Henge released their debut album, Attention Earth! (stylised in all capitals), on 19 October 2018. <a href=\"https://www.last.fm/music/Henge\">Read more on Last.fm</a>', 'content': 'Check https://hengemusic.bandcamp.com/ \\n\\nHenge is a British group based in Manchester that plays crossover electronic dance music. \"Combining Butthole Surfers mayhem and Jesus Lizard precession, this is pure psychedelic noise rock.\" (Promo info) Their first release was a five-track EP in July 2017, entitled Cosmic Dross. Henge released their debut album, Attention Earth! (stylised in all capitals), on 19 October 2018. <a href=\"https://www.last.fm/music/Henge\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='5R09pajxQjiwdUH6Fw4yM5', url='https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5', name='HENGE', popularity=29, followers=21146, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb9f0c882db20685d6ffa500d3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749f0c882db20685d6ffa500d3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789f0c882db20685d6ffa500d3', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5'}, 'followers': {'href': None, 'total': 21146}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5R09pajxQjiwdUH6Fw4yM5', 'id': '5R09pajxQjiwdUH6Fw4yM5', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb9f0c882db20685d6ffa500d3', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051749f0c882db20685d6ffa500d3', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1789f0c882db20685d6ffa500d3', 'height': 160, 'width': 160}], 'name': 'HENGE', 'popularity': 29, 'type': 'artist', 'uri': 'spotify:artist:5R09pajxQjiwdUH6Fw4yM5'})",
@@ -144,6 +216,6 @@
   },
   "spotify_id": "5R09pajxQjiwdUH6Fw4yM5",
   "spotify_url": "https://open.spotify.com/artist/5R09pajxQjiwdUH6Fw4yM5",
-  "updated_at": "2026-10-22T14:07:35.947362",
+  "updated_at": "2026-10-30T18:40:56.016894",
   "wikipedia_url": null
 }

@@ -129,22 +129,106 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='5602901', url='https://music.apple.com/gb/artist/rilo-kiley/5602901', name='Rilo Kiley', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b7/73/87/b77387e9-ffa7-d2a7-442b-f8ff77a3acfb/ami-identity-90e7b5bc244f31c8e189e2f2c5c892ce-2025-01-07T19-30-42.995Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '5602901', 'type': 'artists', 'href': '/v1/catalog/gb/artists/5602901', 'attributes': {'name': 'Rilo Kiley', 'genreNames': ['Alternative'], 'artwork': {'width': 1251, 'height': 1251, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b7/73/87/b77387e9-ffa7-d2a7-442b-f8ff77a3acfb/ami-identity-90e7b5bc244f31c8e189e2f2c5c892ce-2025-01-07T19-30-42.995Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '121212', 'textColor1': 'f1f1f1', 'textColor2': 'd8d8d8', 'textColor3': 'c4c4c4', 'textColor4': 'b0b0b0'}, 'url': 'https://music.apple.com/gb/artist/rilo-kiley/5602901'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/5602901/albums', 'data': [{'id': '19046899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/19046899'}, {'id': '261661212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/261661212'}, {'id': '6951046', 'type': 'albums', 'href': '/v1/catalog/gb/albums/6951046'}, {'id': '718985959', 'type': 'albums', 'href': '/v1/catalog/gb/albums/718985959'}, {'id': '1515299273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1515299273'}, {'id': '599008619', 'type': 'albums', 'href': '/v1/catalog/gb/albums/599008619'}, {'id': '609131003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/609131003'}, {'id': '119219054', 'type': 'albums', 'href': '/v1/catalog/gb/albums/119219054'}, {'id': '280142029', 'type': 'albums', 'href': '/v1/catalog/gb/albums/280142029'}, {'id': '76150173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/76150173'}, {'id': '1794149337', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794149337'}, {'id': '261601824', 'type': 'albums', 'href': '/v1/catalog/gb/albums/261601824'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "242238",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 242238,
+      "images": [
+        {
+          "height": 452,
+          "resource_url": "https://i.discogs.com/Vgzx8EBZ0vpwmiyQTDbUcJCMAT2-p5V04FO9Z54wvqc/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Vgzx8EBZ0vpwmiyQTDbUcJCMAT2-p5V04FO9Z54wvqc/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rmlP6PHVeXBdvrVSl8F6MoSoJ7eT1tIWArozNHJwYR0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 446,
+          "resource_url": "https://i.discogs.com/z66wqrnuDM-CnuMj_tR6f2eGN_zUqvJG5ZlUCUqWHR0/rs:fit/g:sm/q:90/h:446/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z66wqrnuDM-CnuMj_tR6f2eGN_zUqvJG5ZlUCUqWHR0/rs:fit/g:sm/q:90/h:446/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Q9_xGdv79nMmgjZMhapCiQzSGUJ6My7aHCnePd5d_Fk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "width": 598
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/JP7FkCBR9PjzbB8dV_R-97Lg4GxClkUq2h_7RCHIm5g/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JP7FkCBR9PjzbB8dV_R-97Lg4GxClkUq2h_7RCHIm5g/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/03RsTqUZHZDNNVQB7WHq6T_KzM0e1QWKmvZcbZpfKlY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/D5pFRFX5_259uy_mgZ9eWzfbw-iVY3QE201RdnZ-iW0/rs:fit/g:sm/q:90/h:334/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D5pFRFX5_259uy_mgZ9eWzfbw-iVY3QE201RdnZ-iW0/rs:fit/g:sm/q:90/h:334/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/8r-bZ8kKyIVy5fJzHcn23RNMIDzWNpJwdu7Ta2TCzcA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "width": 464
+        },
+        {
+          "height": 451,
+          "resource_url": "https://i.discogs.com/DriZkKyUCIgPdmqh4hbTl8I4Ion_8QU8bdtgNSm6ywA/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DriZkKyUCIgPdmqh4hbTl8I4Ion_8QU8bdtgNSm6ywA/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/CmVPY1xKTP0IzjcK84LlHAiAnYoiQCZkEmAozQE6xnA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/Cs7FtR_wFRNY00-9BGoG57fL6dDLFqKbSCgbjcZb-1Y/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Cs7FtR_wFRNY00-9BGoG57fL6dDLFqKbSCgbjcZb-1Y/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/q5qSj83F_G4ZBRZJ3A6x8mWW6BqEoSmAVSXFcZ_-0Q4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 277021,
+          "name": "Jason Boesel",
+          "resource_url": "https://api.discogs.com/artists/277021"
+        },
+        {
+          "active": true,
+          "id": 288764,
+          "name": "Blake Sennett",
+          "resource_url": "https://api.discogs.com/artists/288764"
+        },
+        {
+          "active": true,
+          "id": 288772,
+          "name": "Jenny Lewis",
+          "resource_url": "https://api.discogs.com/artists/288772"
+        },
+        {
+          "active": true,
+          "id": 513130,
+          "name": "Pierre de Reeder",
+          "resource_url": "https://api.discogs.com/artists/513130"
+        },
+        {
+          "active": true,
+          "id": 513131,
+          "name": "Mike Bloom",
+          "resource_url": "https://api.discogs.com/artists/513131"
+        },
+        {
+          "active": false,
+          "id": 4170124,
+          "name": "Dave Rock",
+          "resource_url": "https://api.discogs.com/artists/4170124"
+        }
+      ],
       "name": "Rilo Kiley",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "242238",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/242238"
-      },
+      "profile": "American indie rock band founded in 1998 in Los Angeles. The group disbanded in 2011 but later reformed in 2025 with the surprise announcement of an International tour.",
+      "releases_url": "https://api.discogs.com/artists/242238/releases",
       "resource_url": "https://api.discogs.com/artists/242238",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/242238",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/242238-Rilo-Kiley",
+      "urls": [
+        "http://www.rilokiley.com",
+        "http://en.wikipedia.org/wiki/Rilo_Kiley",
+        "https://rilokiley.bandcamp.com/"
+      ]
     },
     "identity": {
       "musicbrainz_id": "eaf6a7ca-105d-4a94-ba02-8c3e4040319a",
@@ -251,27 +335,119 @@
         "track": "The Frug",
         "uri": "https://www.youtube.com/watch?v=WSO4Y9ygPIw"
       }
+    ],
+    "wikidata_videos": [
+      {
+        "album": null,
+        "id": "Q7752009",
+        "track": "The Moneymaker",
+        "uri": "https://www.youtube.com/watch?v=mtyhWo8qngk"
+      }
     ]
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='5602901', url='https://music.apple.com/gb/artist/rilo-kiley/5602901', name='Rilo Kiley', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b7/73/87/b77387e9-ffa7-d2a7-442b-f8ff77a3acfb/ami-identity-90e7b5bc244f31c8e189e2f2c5c892ce-2025-01-07T19-30-42.995Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '5602901', 'type': 'artists', 'href': '/v1/catalog/gb/artists/5602901', 'attributes': {'name': 'Rilo Kiley', 'genreNames': ['Alternative'], 'artwork': {'width': 1251, 'height': 1251, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/b7/73/87/b77387e9-ffa7-d2a7-442b-f8ff77a3acfb/ami-identity-90e7b5bc244f31c8e189e2f2c5c892ce-2025-01-07T19-30-42.995Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '121212', 'textColor1': 'f1f1f1', 'textColor2': 'd8d8d8', 'textColor3': 'c4c4c4', 'textColor4': 'b0b0b0'}, 'url': 'https://music.apple.com/gb/artist/rilo-kiley/5602901'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/5602901/albums', 'data': [{'id': '19046899', 'type': 'albums', 'href': '/v1/catalog/gb/albums/19046899'}, {'id': '261661212', 'type': 'albums', 'href': '/v1/catalog/gb/albums/261661212'}, {'id': '6951046', 'type': 'albums', 'href': '/v1/catalog/gb/albums/6951046'}, {'id': '718985959', 'type': 'albums', 'href': '/v1/catalog/gb/albums/718985959'}, {'id': '1515299273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1515299273'}, {'id': '599008619', 'type': 'albums', 'href': '/v1/catalog/gb/albums/599008619'}, {'id': '609131003', 'type': 'albums', 'href': '/v1/catalog/gb/albums/609131003'}, {'id': '119219054', 'type': 'albums', 'href': '/v1/catalog/gb/albums/119219054'}, {'id': '280142029', 'type': 'albums', 'href': '/v1/catalog/gb/albums/280142029'}, {'id': '76150173', 'type': 'albums', 'href': '/v1/catalog/gb/albums/76150173'}, {'id': '1794149337', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794149337'}, {'id': '261601824', 'type': 'albums', 'href': '/v1/catalog/gb/albums/261601824'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "242238",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 242238,
+      "images": [
+        {
+          "height": 452,
+          "resource_url": "https://i.discogs.com/Vgzx8EBZ0vpwmiyQTDbUcJCMAT2-p5V04FO9Z54wvqc/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Vgzx8EBZ0vpwmiyQTDbUcJCMAT2-p5V04FO9Z54wvqc/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rmlP6PHVeXBdvrVSl8F6MoSoJ7eT1tIWArozNHJwYR0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTc1NTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 446,
+          "resource_url": "https://i.discogs.com/z66wqrnuDM-CnuMj_tR6f2eGN_zUqvJG5ZlUCUqWHR0/rs:fit/g:sm/q:90/h:446/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z66wqrnuDM-CnuMj_tR6f2eGN_zUqvJG5ZlUCUqWHR0/rs:fit/g:sm/q:90/h:446/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Q9_xGdv79nMmgjZMhapCiQzSGUJ6My7aHCnePd5d_Fk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMzM0NTc2Njcz/LmpwZWc.jpeg",
+          "width": 598
+        },
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/JP7FkCBR9PjzbB8dV_R-97Lg4GxClkUq2h_7RCHIm5g/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JP7FkCBR9PjzbB8dV_R-97Lg4GxClkUq2h_7RCHIm5g/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/03RsTqUZHZDNNVQB7WHq6T_KzM0e1QWKmvZcbZpfKlY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjQxODU1NzQ1/LTQ3OTguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/D5pFRFX5_259uy_mgZ9eWzfbw-iVY3QE201RdnZ-iW0/rs:fit/g:sm/q:90/h:334/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D5pFRFX5_259uy_mgZ9eWzfbw-iVY3QE201RdnZ-iW0/rs:fit/g:sm/q:90/h:334/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/8r-bZ8kKyIVy5fJzHcn23RNMIDzWNpJwdu7Ta2TCzcA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMTE0NjA1ODE3/LmpwZw.jpeg",
+          "width": 464
+        },
+        {
+          "height": 451,
+          "resource_url": "https://i.discogs.com/DriZkKyUCIgPdmqh4hbTl8I4Ion_8QU8bdtgNSm6ywA/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DriZkKyUCIgPdmqh4hbTl8I4Ion_8QU8bdtgNSm6ywA/rs:fit/g:sm/q:90/h:451/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/CmVPY1xKTP0IzjcK84LlHAiAnYoiQCZkEmAozQE6xnA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xNjY0MDUxMzAw/LTMyNDIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 480,
+          "resource_url": "https://i.discogs.com/Cs7FtR_wFRNY00-9BGoG57fL6dDLFqKbSCgbjcZb-1Y/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Cs7FtR_wFRNY00-9BGoG57fL6dDLFqKbSCgbjcZb-1Y/rs:fit/g:sm/q:90/h:480/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/q5qSj83F_G4ZBRZJ3A6x8mWW6BqEoSmAVSXFcZ_-0Q4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0MjIz/OC0xMjQ0ODc5MTgx/LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 277021,
+          "name": "Jason Boesel",
+          "resource_url": "https://api.discogs.com/artists/277021"
+        },
+        {
+          "active": true,
+          "id": 288764,
+          "name": "Blake Sennett",
+          "resource_url": "https://api.discogs.com/artists/288764"
+        },
+        {
+          "active": true,
+          "id": 288772,
+          "name": "Jenny Lewis",
+          "resource_url": "https://api.discogs.com/artists/288772"
+        },
+        {
+          "active": true,
+          "id": 513130,
+          "name": "Pierre de Reeder",
+          "resource_url": "https://api.discogs.com/artists/513130"
+        },
+        {
+          "active": true,
+          "id": 513131,
+          "name": "Mike Bloom",
+          "resource_url": "https://api.discogs.com/artists/513131"
+        },
+        {
+          "active": false,
+          "id": 4170124,
+          "name": "Dave Rock",
+          "resource_url": "https://api.discogs.com/artists/4170124"
+        }
+      ],
       "name": "Rilo Kiley",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "242238",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/242238"
-      },
+      "profile": "American indie rock band founded in 1998 in Los Angeles. The group disbanded in 2011 but later reformed in 2025 with the surprise announcement of an International tour.",
+      "releases_url": "https://api.discogs.com/artists/242238/releases",
       "resource_url": "https://api.discogs.com/artists/242238",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/242238",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/242238-Rilo-Kiley",
+      "urls": [
+        "http://www.rilokiley.com",
+        "http://en.wikipedia.org/wiki/Rilo_Kiley",
+        "https://rilokiley.bandcamp.com/"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Rilo Kiley', url='https://www.last.fm/music/Rilo+Kiley', mbid='eaf6a7ca-105d-4a94-ba02-8c3e4040319a', listeners=1177568, playcount=38895576, bio_summary='Rilo Kiley are an American alternative rock band which formed in 1998 in Los Angeles, California. The band consists of Jenny Lewis (vocals, guitar), Blake Sennett (vocals, guitar), Pierre de Reeder (bass, keyboards) and Jason Boesel (drums).\\n\\nLewis and Sennett are former child actors and were introduced to each other by Tara Subkoff, a mutual friend, in 1993. In 2001, original drummer Dave Rock left the band and was replaced by Boesel.\\n\\nThey began their career on Barsuk Records, releasing Take Offs And Landings in 2001. <a href=\"https://www.last.fm/music/Rilo+Kiley\">Read more on Last.fm</a>', bio_content='Rilo Kiley are an American alternative rock band which formed in 1998 in Los Angeles, California. The band consists of Jenny Lewis (vocals, guitar), Blake Sennett (vocals, guitar), Pierre de Reeder (bass, keyboards) and Jason Boesel (drums).\\n\\nLewis and Sennett are former child actors and were introduced to each other by Tara Subkoff, a mutual friend, in 1993. In 2001, original drummer Dave Rock left the band and was replaced by Boesel.\\n\\nThey began their career on Barsuk Records, releasing Take Offs And Landings in 2001. They moved to Omaha-based indie label Saddle Creek for their second album, 2002\\'s The Execution of All Things. But come time for their third release, More Adventurous in 2004, the band left Saddle Creek for Brute/Beaute, a Warner Bros. imprint.\\n\\n2004 saw a great increase in recognition for the band, as Sennett and Boesel released an album with their band The Elected and Lewis sang backup on Ben Gibbard\\'s (Death Cab For Cutie) indie electronic side project The Postal Service. Lewis toured with The Postal Service before heading out on two tours in support of Rilo Kiley\\'s More Adventurous in the summer and fall of 2004. The album spent late 2004 high on Billboard Magazine\\'s Heatseekers Chart, success only furthered by appearances on the Late Night with Conan O\\'Brien and Jimmy Kimmel Live. The band opened for Bright Eyes on the international leg of Conor Oberst\\'s tour for 2005\\'s i\\'m wide awake, it\\'s morning. In Fall 2005, Rilo Kiley were the opening act for the North American dates of Coldplay\\'s Twisted Logic Tour.\\n\\nLewis released her first solo album in January of 2006, with Leigh and Chandra Watson as Jenny Lewis with the Watson Twins. The album, entitled Rabbit Fur Coat, was co-produced by Clifford M Ward and Mike Mogis. Furthermore, The Elected released their second album, sun, sun, sun on the same day as Lewis\\' album.\\n\\nThe 4th Rilo Kiley LP, Under the Blacklight, was released in August 2007. This has a more pop-influenced sound and received mixed reviews.\\n\\nThe band broke up in 2011 after vague statements made by Blake Sennett comparing the band to a \"corpse\" and referring to disagreements among members. rkives, a collection of b-sides, remixes, and rarities, was released in 2013.\\n\\nIn 2025 the band announced an appearance at Just Like Heaven, a music festival in Pasadena, California. A full tour was announced just days later. <a href=\"https://www.last.fm/music/Rilo+Kiley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'female vocalists', 'indie rock', 'indie pop', 'seen live'], similar_artists=[{'name': 'Jenny Lewis', 'url': 'https://www.last.fm/music/Jenny+Lewis'}, {'name': 'Jenny Lewis with The Watson Twins', 'url': 'https://www.last.fm/music/Jenny+Lewis+with+The+Watson+Twins'}, {'name': 'Jenny and Johnny', 'url': 'https://www.last.fm/music/Jenny+and+Johnny'}, {'name': 'Mates of State', 'url': 'https://www.last.fm/music/Mates+of+State'}, {'name': 'Bright Eyes', 'url': 'https://www.last.fm/music/Bright+Eyes'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Rilo Kiley', 'mbid': 'eaf6a7ca-105d-4a94-ba02-8c3e4040319a', 'url': 'https://www.last.fm/music/Rilo+Kiley', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '1177568', 'playcount': '38895576'}, 'similar': {'artist': [{'name': 'Jenny Lewis', 'url': 'https://www.last.fm/music/Jenny+Lewis', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jenny Lewis with The Watson Twins', 'url': 'https://www.last.fm/music/Jenny+Lewis+with+The+Watson+Twins', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jenny and Johnny', 'url': 'https://www.last.fm/music/Jenny+and+Johnny', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Mates of State', 'url': 'https://www.last.fm/music/Mates+of+State', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bright Eyes', 'url': 'https://www.last.fm/music/Bright+Eyes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'indie pop', 'url': 'https://www.last.fm/tag/indie+pop'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Rilo+Kiley/+wiki'}}, 'published': '10 Feb 2006, 14:41', 'summary': 'Rilo Kiley are an American alternative rock band which formed in 1998 in Los Angeles, California. The band consists of Jenny Lewis (vocals, guitar), Blake Sennett (vocals, guitar), Pierre de Reeder (bass, keyboards) and Jason Boesel (drums).\\n\\nLewis and Sennett are former child actors and were introduced to each other by Tara Subkoff, a mutual friend, in 1993. In 2001, original drummer Dave Rock left the band and was replaced by Boesel.\\n\\nThey began their career on Barsuk Records, releasing Take Offs And Landings in 2001. <a href=\"https://www.last.fm/music/Rilo+Kiley\">Read more on Last.fm</a>', 'content': 'Rilo Kiley are an American alternative rock band which formed in 1998 in Los Angeles, California. The band consists of Jenny Lewis (vocals, guitar), Blake Sennett (vocals, guitar), Pierre de Reeder (bass, keyboards) and Jason Boesel (drums).\\n\\nLewis and Sennett are former child actors and were introduced to each other by Tara Subkoff, a mutual friend, in 1993. In 2001, original drummer Dave Rock left the band and was replaced by Boesel.\\n\\nThey began their career on Barsuk Records, releasing Take Offs And Landings in 2001. They moved to Omaha-based indie label Saddle Creek for their second album, 2002\\'s The Execution of All Things. But come time for their third release, More Adventurous in 2004, the band left Saddle Creek for Brute/Beaute, a Warner Bros. imprint.\\n\\n2004 saw a great increase in recognition for the band, as Sennett and Boesel released an album with their band The Elected and Lewis sang backup on Ben Gibbard\\'s (Death Cab For Cutie) indie electronic side project The Postal Service. Lewis toured with The Postal Service before heading out on two tours in support of Rilo Kiley\\'s More Adventurous in the summer and fall of 2004. The album spent late 2004 high on Billboard Magazine\\'s Heatseekers Chart, success only furthered by appearances on the Late Night with Conan O\\'Brien and Jimmy Kimmel Live. The band opened for Bright Eyes on the international leg of Conor Oberst\\'s tour for 2005\\'s i\\'m wide awake, it\\'s morning. In Fall 2005, Rilo Kiley were the opening act for the North American dates of Coldplay\\'s Twisted Logic Tour.\\n\\nLewis released her first solo album in January of 2006, with Leigh and Chandra Watson as Jenny Lewis with the Watson Twins. The album, entitled Rabbit Fur Coat, was co-produced by Clifford M Ward and Mike Mogis. Furthermore, The Elected released their second album, sun, sun, sun on the same day as Lewis\\' album.\\n\\nThe 4th Rilo Kiley LP, Under the Blacklight, was released in August 2007. This has a more pop-influenced sound and received mixed reviews.\\n\\nThe band broke up in 2011 after vague statements made by Blake Sennett comparing the band to a \"corpse\" and referring to disagreements among members. rkives, a collection of b-sides, remixes, and rarities, was released in 2013.\\n\\nIn 2025 the band announced an appearance at Just Like Heaven, a music festival in Pasadena, California. A full tour was announced just days later. <a href=\"https://www.last.fm/music/Rilo+Kiley\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='2cevwbv7ISD92VMNLYLHZA', url='https://open.spotify.com/artist/2cevwbv7ISD92VMNLYLHZA', name='Rilo Kiley', popularity=51, followers=249230, genres=['indie pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb4c03bb08d83323d1b829b7e6', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744c03bb08d83323d1b829b7e6', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784c03bb08d83323d1b829b7e6', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2cevwbv7ISD92VMNLYLHZA'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2cevwbv7ISD92VMNLYLHZA'}, 'followers': {'href': None, 'total': 249230}, 'genres': ['indie pop'], 'href': 'https://api.spotify.com/v1/artists/2cevwbv7ISD92VMNLYLHZA', 'id': '2cevwbv7ISD92VMNLYLHZA', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb4c03bb08d83323d1b829b7e6', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744c03bb08d83323d1b829b7e6', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784c03bb08d83323d1b829b7e6', 'height': 160, 'width': 160}], 'name': 'Rilo Kiley', 'popularity': 51, 'type': 'artist', 'uri': 'spotify:artist:2cevwbv7ISD92VMNLYLHZA'})",
@@ -356,6 +532,6 @@
   },
   "spotify_id": "2cevwbv7ISD92VMNLYLHZA",
   "spotify_url": "https://open.spotify.com/artist/2cevwbv7ISD92VMNLYLHZA",
-  "updated_at": "2026-10-22T14:10:46.480426",
+  "updated_at": "2026-10-30T18:44:48.880148",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Rilo_Kiley"
 }

@@ -91,22 +91,76 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1440758583', url='https://music.apple.com/gb/artist/xpropaganda/1440758583', name='xPropaganda', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/1f/d7/32/1fd73231-41ca-573d-7054-6796e3cc49f5/19d9f093-816d-41a3-94d8-3df20446eaaf_ami-identity-e821c1c7b95437723d5d9511b44be1ad-2023-03-24T10-34-47.163Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1440758583', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1440758583', 'attributes': {'name': 'xPropaganda', 'genreNames': ['Alternative'], 'artwork': {'width': 2375, 'height': 2375, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/1f/d7/32/1fd73231-41ca-573d-7054-6796e3cc49f5/19d9f093-816d-41a3-94d8-3df20446eaaf_ami-identity-e821c1c7b95437723d5d9511b44be1ad-2023-03-24T10-34-47.163Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '171b0d', 'textColor1': 'e3efe9', 'textColor2': 'dbb9ac', 'textColor3': 'bac5bd', 'textColor4': 'b49a8c'}, 'url': 'https://music.apple.com/gb/artist/xpropaganda/1440758583'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1440758583/albums', 'data': [{'id': '1608061903', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1608061903'}, {'id': '1622746376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1622746376'}, {'id': '1681815766', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1681815766'}, {'id': '1622753231', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1622753231'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6770365",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 6770365,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wS_wtNkGpv_VcqImJ5_eptFDYKWppEGR-yztnhHjsNQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/wS_wtNkGpv_VcqImJ5_eptFDYKWppEGR-yztnhHjsNQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dZBvjZUxeWA_2BFawns4UNlQUwVU2xwl6GmjhOzchRY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 449,
+          "resource_url": "https://i.discogs.com/cLqMRY1nr9t3o3o3Z_Njb8AOLsXQf--02QI6t08FaYk/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cLqMRY1nr9t3o3o3Z_Njb8AOLsXQf--02QI6t08FaYk/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/obr1xT7hbzTJVxdkllYIMpb-inZd88Pf4oR5Sgy_6i4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/IM7Z7cRlbRK3IUzWSP6nQHNrMU2vVbdotdcxldcTA1Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IM7Z7cRlbRK3IUzWSP6nQHNrMU2vVbdotdcxldcTA1Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/6e5G8X3hoV6ajDfHy5YuoHuPn06ABLEZ3tDkiiOBSbg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/pLYgTZqVF8bRdyTLRK2knHz8MSjqn3B5uy8HSJNZGIc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pLYgTZqVF8bRdyTLRK2knHz8MSjqn3B5uy8HSJNZGIc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/VIEtRNsMh0kK0pAmqkpf5RQncWvUyUFm_Ll5aIjtmYk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/vvvkfG1P7nYvwkIrmc7CB-kQbvIs5FE2pk-H5sIlk0A/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vvvkfG1P7nYvwkIrmc7CB-kQbvIs5FE2pk-H5sIlk0A/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BaZdWYJUUu5VFZyVx1LLgUn5aPixAWMvg2A42v8GOoU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 58686,
+          "name": "Claudia Brücken",
+          "resource_url": "https://api.discogs.com/artists/58686"
+        },
+        {
+          "active": true,
+          "id": 124236,
+          "name": "Susanne Freytag",
+          "resource_url": "https://api.discogs.com/artists/124236"
+        }
+      ],
       "name": "xPropaganda",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "6770365",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6770365"
-      },
+      "releases_url": "https://api.discogs.com/artists/6770365/releases",
       "resource_url": "https://api.discogs.com/artists/6770365",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6770365",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6770365-xPropaganda",
+      "urls": [
+        "http://xpropaganda.co.uk",
+        "https://xpropaganda.bandcamp.com",
+        "https://www.instagram.com/_xpropaganda",
+        "https://www.twitter.com/_xpropaganda",
+        "https://www.facebook.com/xPropagandaOfficial"
+      ]
     },
     "identity": {
       "musicbrainz_id": "27d9c582-53c6-4d0f-a528-95180e6b33cb",
@@ -121,22 +175,76 @@
   "services": {
     "apple_music": "ArtistAppleMusicData(id='1440758583', url='https://music.apple.com/gb/artist/xpropaganda/1440758583', name='xPropaganda', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/1f/d7/32/1fd73231-41ca-573d-7054-6796e3cc49f5/19d9f093-816d-41a3-94d8-3df20446eaaf_ami-identity-e821c1c7b95437723d5d9511b44be1ad-2023-03-24T10-34-47.163Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1440758583', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1440758583', 'attributes': {'name': 'xPropaganda', 'genreNames': ['Alternative'], 'artwork': {'width': 2375, 'height': 2375, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/1f/d7/32/1fd73231-41ca-573d-7054-6796e3cc49f5/19d9f093-816d-41a3-94d8-3df20446eaaf_ami-identity-e821c1c7b95437723d5d9511b44be1ad-2023-03-24T10-34-47.163Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '171b0d', 'textColor1': 'e3efe9', 'textColor2': 'dbb9ac', 'textColor3': 'bac5bd', 'textColor4': 'b49a8c'}, 'url': 'https://music.apple.com/gb/artist/xpropaganda/1440758583'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1440758583/albums', 'data': [{'id': '1608061903', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1608061903'}, {'id': '1622746376', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1622746376'}, {'id': '1681815766', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1681815766'}, {'id': '1622753231', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1622753231'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "6770365",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 6770365,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wS_wtNkGpv_VcqImJ5_eptFDYKWppEGR-yztnhHjsNQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/wS_wtNkGpv_VcqImJ5_eptFDYKWppEGR-yztnhHjsNQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dZBvjZUxeWA_2BFawns4UNlQUwVU2xwl6GmjhOzchRY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTYyNDA0MTQ0/My0zNzY0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 449,
+          "resource_url": "https://i.discogs.com/cLqMRY1nr9t3o3o3Z_Njb8AOLsXQf--02QI6t08FaYk/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cLqMRY1nr9t3o3o3Z_Njb8AOLsXQf--02QI6t08FaYk/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/obr1xT7hbzTJVxdkllYIMpb-inZd88Pf4oR5Sgy_6i4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1MzI5NzQ0/Ny0zMDk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/IM7Z7cRlbRK3IUzWSP6nQHNrMU2vVbdotdcxldcTA1Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IM7Z7cRlbRK3IUzWSP6nQHNrMU2vVbdotdcxldcTA1Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/6e5G8X3hoV6ajDfHy5YuoHuPn06ABLEZ3tDkiiOBSbg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OC0yNzcwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/pLYgTZqVF8bRdyTLRK2knHz8MSjqn3B5uy8HSJNZGIc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pLYgTZqVF8bRdyTLRK2knHz8MSjqn3B5uy8HSJNZGIc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/VIEtRNsMh0kK0pAmqkpf5RQncWvUyUFm_Ll5aIjtmYk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0xMTQ5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/vvvkfG1P7nYvwkIrmc7CB-kQbvIs5FE2pk-H5sIlk0A/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vvvkfG1P7nYvwkIrmc7CB-kQbvIs5FE2pk-H5sIlk0A/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BaZdWYJUUu5VFZyVx1LLgUn5aPixAWMvg2A42v8GOoU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3NzAz/NjUtMTY1Mjk3NTI0/OS0zMDc3LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 58686,
+          "name": "Claudia Brücken",
+          "resource_url": "https://api.discogs.com/artists/58686"
+        },
+        {
+          "active": true,
+          "id": 124236,
+          "name": "Susanne Freytag",
+          "resource_url": "https://api.discogs.com/artists/124236"
+        }
+      ],
       "name": "xPropaganda",
-      "namevariations": [],
       "profile": "",
-      "raw_data": {
-        "id": "6770365",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/6770365"
-      },
+      "releases_url": "https://api.discogs.com/artists/6770365/releases",
       "resource_url": "https://api.discogs.com/artists/6770365",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/6770365",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/6770365-xPropaganda",
+      "urls": [
+        "http://xpropaganda.co.uk",
+        "https://xpropaganda.bandcamp.com",
+        "https://www.instagram.com/_xpropaganda",
+        "https://www.twitter.com/_xpropaganda",
+        "https://www.facebook.com/xPropagandaOfficial"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='xPropaganda', url='https://www.last.fm/music/xPropaganda', mbid=None, listeners=2326, playcount=42957, bio_summary='Ex-Propaganda members Claudia Brücken and Susanne Freytag with producer Steve Lipson. <a href=\"https://www.last.fm/music/xPropaganda\">Read more on Last.fm</a>', bio_content='Ex-Propaganda members Claudia Brücken and Susanne Freytag with producer Steve Lipson. <a href=\"https://www.last.fm/music/xPropaganda\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', '80s', 'new wave', 'synthpop', 'artpop'], similar_artists=[{'name': 'Propaganda', 'url': 'https://www.last.fm/music/Propaganda'}, {'name': 'Rusty Egan', 'url': 'https://www.last.fm/music/Rusty+Egan'}, {'name': 'John Foxx And The Maths', 'url': 'https://www.last.fm/music/John+Foxx+And+The+Maths'}, {'name': 'Blancmange', 'url': 'https://www.last.fm/music/Blancmange'}, {'name': 'Metroland', 'url': 'https://www.last.fm/music/Metroland'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'xPropaganda', 'url': 'https://www.last.fm/music/xPropaganda', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2326', 'playcount': '42957'}, 'similar': {'artist': [{'name': 'Propaganda', 'url': 'https://www.last.fm/music/Propaganda', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rusty Egan', 'url': 'https://www.last.fm/music/Rusty+Egan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'John Foxx And The Maths', 'url': 'https://www.last.fm/music/John+Foxx+And+The+Maths', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Blancmange', 'url': 'https://www.last.fm/music/Blancmange', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Metroland', 'url': 'https://www.last.fm/music/Metroland', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'new wave', 'url': 'https://www.last.fm/tag/new+wave'}, {'name': 'synthpop', 'url': 'https://www.last.fm/tag/synthpop'}, {'name': 'artpop', 'url': 'https://www.last.fm/tag/artpop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/xPropaganda/+wiki'}}, 'published': '05 Nov 2018, 21:01', 'summary': 'Ex-Propaganda members Claudia Brücken and Susanne Freytag with producer Steve Lipson. <a href=\"https://www.last.fm/music/xPropaganda\">Read more on Last.fm</a>', 'content': 'Ex-Propaganda members Claudia Brücken and Susanne Freytag with producer Steve Lipson. <a href=\"https://www.last.fm/music/xPropaganda\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='27sEXusRBnJ0fkCB3UgSLr', url='https://open.spotify.com/artist/27sEXusRBnJ0fkCB3UgSLr', name='xPropaganda', popularity=15, followers=4318, genres=['synthpop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebd6f6f10cd9eef3b60bf29d1e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d6f6f10cd9eef3b60bf29d1e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d6f6f10cd9eef3b60bf29d1e', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/27sEXusRBnJ0fkCB3UgSLr'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/27sEXusRBnJ0fkCB3UgSLr'}, 'followers': {'href': None, 'total': 4318}, 'genres': ['synthpop'], 'href': 'https://api.spotify.com/v1/artists/27sEXusRBnJ0fkCB3UgSLr', 'id': '27sEXusRBnJ0fkCB3UgSLr', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebd6f6f10cd9eef3b60bf29d1e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d6f6f10cd9eef3b60bf29d1e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d6f6f10cd9eef3b60bf29d1e', 'height': 160, 'width': 160}], 'name': 'xPropaganda', 'popularity': 15, 'type': 'artist', 'uri': 'spotify:artist:27sEXusRBnJ0fkCB3UgSLr'})",
@@ -144,6 +252,6 @@
   },
   "spotify_id": "27sEXusRBnJ0fkCB3UgSLr",
   "spotify_url": "https://open.spotify.com/artist/27sEXusRBnJ0fkCB3UgSLr",
-  "updated_at": "2026-10-22T14:13:56.204322",
+  "updated_at": "2026-10-30T18:48:35.387220",
   "wikipedia_url": null
 }

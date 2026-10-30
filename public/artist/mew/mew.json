@@ -112,22 +112,247 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='13813453', url='https://music.apple.com/gb/artist/mew/13813453', name='Mew', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/24/57/2c/24572c62-6bf5-7375-d0a8-aac5ba669eec/17d6c5dc-987a-4ffe-8fbb-c47461cb0e1c_ami-identity-6f5fd7facbf1b72af479642e6e6b68e3-2024-09-08T08-41-14.093Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13813453', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13813453', 'attributes': {'name': 'Mew', 'genreNames': ['Alternative'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/24/57/2c/24572c62-6bf5-7375-d0a8-aac5ba669eec/17d6c5dc-987a-4ffe-8fbb-c47461cb0e1c_ami-identity-6f5fd7facbf1b72af479642e6e6b68e3-2024-09-08T08-41-14.093Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0b0a08', 'textColor1': 'f7fbfc', 'textColor2': 'dbdee6', 'textColor3': 'c8cbcb', 'textColor4': 'b1b4ba'}, 'url': 'https://music.apple.com/gb/artist/mew/13813453'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13813453/albums', 'next': '/v1/catalog/gb/artists/13813453/albums?offset=25', 'data': [{'id': '1195025592', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1195025592'}, {'id': '326696273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/326696273'}, {'id': '958897208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/958897208'}, {'id': '424196154', 'type': 'albums', 'href': '/v1/catalog/gb/albums/424196154'}, {'id': '1308760509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1308760509'}, {'id': '1441012690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441012690'}, {'id': '402883929', 'type': 'albums', 'href': '/v1/catalog/gb/albums/402883929'}, {'id': '316009248', 'type': 'albums', 'href': '/v1/catalog/gb/albums/316009248'}, {'id': '216414923', 'type': 'albums', 'href': '/v1/catalog/gb/albums/216414923'}, {'id': '1540743473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540743473'}, {'id': '1237419007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1237419007'}, {'id': '1517906521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517906521'}, {'id': '1517893794', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517893794'}, {'id': '200586938', 'type': 'albums', 'href': '/v1/catalog/gb/albums/200586938'}, {'id': '298198735', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298198735'}, {'id': '318694079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/318694079'}, {'id': '1269432374', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1269432374'}, {'id': '324749174', 'type': 'albums', 'href': '/v1/catalog/gb/albums/324749174'}, {'id': '253348254', 'type': 'albums', 'href': '/v1/catalog/gb/albums/253348254'}, {'id': '1444395638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444395638'}, {'id': '404402397', 'type': 'albums', 'href': '/v1/catalog/gb/albums/404402397'}, {'id': '318790355', 'type': 'albums', 'href': '/v1/catalog/gb/albums/318790355'}, {'id': '325122853', 'type': 'albums', 'href': '/v1/catalog/gb/albums/325122853'}, {'id': '271420983', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271420983'}, {'id': '271420989', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271420989'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "262995",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 262995,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/8NRdw0h1D40PdJMbWKmVK--D8oMDFiwS600kztFX3Fg/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/8NRdw0h1D40PdJMbWKmVK--D8oMDFiwS600kztFX3Fg/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/YohdI4E9BKplUFZHwzh33kyi3fpe9l8uq8GChMGvBGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3zNwM0AaM5mtvOPPRFj9Iawaxa2NfiahJEL53AOgtgY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3zNwM0AaM5mtvOPPRFj9Iawaxa2NfiahJEL53AOgtgY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1LienAvpkOfsg6TN4Uhj1DCHVhbKcHcOpyt18fa5k_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 356,
+          "resource_url": "https://i.discogs.com/BQxsjs_8pmqYLDVCAyWWsA1Z9y7T56PV-0BMRJ1Nh4U/rs:fit/g:sm/q:90/h:356/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BQxsjs_8pmqYLDVCAyWWsA1Z9y7T56PV-0BMRJ1Nh4U/rs:fit/g:sm/q:90/h:356/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/17eNlwJzrXFMuHF0WjLfba-r6QlD7y4HcC25te78v_k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 307,
+          "resource_url": "https://i.discogs.com/FFuWwHxDrbDWmy-3-2lP_A_8jbrwTZFVOxqOyutxLuM/rs:fit/g:sm/q:90/h:307/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FFuWwHxDrbDWmy-3-2lP_A_8jbrwTZFVOxqOyutxLuM/rs:fit/g:sm/q:90/h:307/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1DqtD9mnEGdAlIm_wF-hkhHaur944mpsKa-kCo68CeE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/ltAQNjGdsF3aWv8sDe62PobTEAb2r2nsyAJy4imfhzk/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ltAQNjGdsF3aWv8sDe62PobTEAb2r2nsyAJy4imfhzk/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/feKeL2yv7ejViTJ4i2o1JgiM4-26YIjXGqYPQUQA9kA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 193,
+          "resource_url": "https://i.discogs.com/uezFdIlaF3PlOE9ZrkDwXT-XUwv2RdswoMM5ZqwuKb0/rs:fit/g:sm/q:90/h:193/w:261/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uezFdIlaF3PlOE9ZrkDwXT-XUwv2RdswoMM5ZqwuKb0/rs:fit/g:sm/q:90/h:193/w:261/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bZcVqe1JEV1Qu1VDTEQVjMMwfR5PmvlWP5Z7X12noR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "width": 261
+        },
+        {
+          "height": 502,
+          "resource_url": "https://i.discogs.com/Va2iULzS5gLdrp0yC_tbscIrkKs30n0QgZsIfomZzBY/rs:fit/g:sm/q:90/h:502/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Va2iULzS5gLdrp0yC_tbscIrkKs30n0QgZsIfomZzBY/rs:fit/g:sm/q:90/h:502/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JT-mEu2ZmZ0HYHEvvgvWre1juNDq7_ZugQNjXNO2RUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/mSoMSI_Xlsb0ufVjMi_HaKDWUhLeDZRbjxDmbIk77EM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mSoMSI_Xlsb0ufVjMi_HaKDWUhLeDZRbjxDmbIk77EM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6xKr20Yt3utBTDa2yIkPLffAbR8qzR6xi_DseOoksJU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/i_wPv5pyIvdKReIfmlbq0BTLVedUgNVR5JU9RReVOkI/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/i_wPv5pyIvdKReIfmlbq0BTLVedUgNVR5JU9RReVOkI/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Kxa3Skq0nwUuJc6piHK4u6_F4kVQH5wLO2U4WHT9k6A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/hAentVNtFAi9M-q1AywZXf_vt9Wmsq0kfeocuQAUmmw/rs:fit/g:sm/q:90/h:320/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hAentVNtFAi9M-q1AywZXf_vt9Wmsq0kfeocuQAUmmw/rs:fit/g:sm/q:90/h:320/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gfBC9f5-hVJ-ze_COnW758ymY9t4ygd6z4G-DpqHM_0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "width": 430
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/YE5VlZx7ipaYNaZeeXKB_2vRDu6w_cYpzCD_S1kP0eM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YE5VlZx7ipaYNaZeeXKB_2vRDu6w_cYpzCD_S1kP0eM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/e87t5tt9eX3nVqWzlcwpuVWhnQiEMjCtp3dWHaHsKX8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 407,
+          "resource_url": "https://i.discogs.com/kD-PkN6ME5mrHuMUqbXxktoghukICkiijnXKQyJXM_I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kD-PkN6ME5mrHuMUqbXxktoghukICkiijnXKQyJXM_I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/loZzRRdBakJaNO8xxNyNsQjNbLp9SlOUHSslOJZnyHY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/eMEWTuzTtrAuKn7MaI4O49ri88xi_I6_GplsjfXHwCk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eMEWTuzTtrAuKn7MaI4O49ri88xi_I6_GplsjfXHwCk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/UIRhYhuIdQ27H_CKa3LKEQoJFBXHYG51ai1Par75g2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/0r7_8Qte65BHywqzZMNhBbZQscvPmxwghgOnU9TopdA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0r7_8Qte65BHywqzZMNhBbZQscvPmxwghgOnU9TopdA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2e0ZxMZMqtjWeTZfP7MyNt6OrMj4dw6n-FUjGxrHI6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 205,
+          "resource_url": "https://i.discogs.com/kGoxr221rsa7wUm2rc36fQofi503Dp-nMhORiDoXxRw/rs:fit/g:sm/q:90/h:205/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kGoxr221rsa7wUm2rc36fQofi503Dp-nMhORiDoXxRw/rs:fit/g:sm/q:90/h:205/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/HJUws-KFckFFMIvLCl-_JVY8GkgoxcFAax2vkyazpGA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "width": 246
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/V79trN4oeXeLy58UsvV-dx9ktSd_fpZ68wzBR3vMBuc/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/V79trN4oeXeLy58UsvV-dx9ktSd_fpZ68wzBR3vMBuc/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/roJUOwZvXrOjgXQa1X5hgMBt1ovuPuPhWkmtlukOo-Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/0BBTxueummjy-c-JSd_l_U4s2by40NLqPJXxe-kNob8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0BBTxueummjy-c-JSd_l_U4s2by40NLqPJXxe-kNob8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lrgB7P2m3NzQKSBItsKYnTn5nELFyoV0lQKE41vYAz8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Qho6WEfubVsn4q0_DrTU_29xSdSbS-s2NeWWhi1rEts/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Qho6WEfubVsn4q0_DrTU_29xSdSbS-s2NeWWhi1rEts/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2F0LRTE8lKxv78BEm3MkGsyMbHhiJwua8IdYBKYRnco/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/opIs5j2f5e0PRmBFNBI17-TDcTax-7mVwEgdgFL8At0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/opIs5j2f5e0PRmBFNBI17-TDcTax-7mVwEgdgFL8At0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zh7dIk9XGe-IQoyy3iW-pQ2Tb7jDz-d9F0MQhVLQ7Ys/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/SOo7kDgZeYaSLmOCIdUWF7OFOsICRu-jHvURTfeiryU/rs:fit/g:sm/q:90/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SOo7kDgZeYaSLmOCIdUWF7OFOsICRu-jHvURTfeiryU/rs:fit/g:sm/q:90/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qgLAw-9eqD7AGV7jKVkVGLwJWE3sPJsFZw7mpuAWvdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/c9frXckoU4cpmwra5634dBYHZo1Y20ZlQ8zRetCVQ4Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c9frXckoU4cpmwra5634dBYHZo1Y20ZlQ8zRetCVQ4Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/r6QznJaW4-0voZY9mCs08SbVQk_yZgLkr023YrZa8Vo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 198,
+          "resource_url": "https://i.discogs.com/CA3zyPuHapUmEJhykibK-6M9v6GeL8701MJTrbnhEwA/rs:fit/g:sm/q:90/h:198/w:254/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CA3zyPuHapUmEJhykibK-6M9v6GeL8701MJTrbnhEwA/rs:fit/g:sm/q:90/h:198/w:254/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/SQXMXzIZSNAYcBpNZtRMxRBF3IKA9B1BBYoZxtq57Dc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "width": 254
+        },
+        {
+          "height": 389,
+          "resource_url": "https://i.discogs.com/2cgQPO7z4nnnL3f64xxzZ2GP2ezRBmsucWuGACEPExI/rs:fit/g:sm/q:90/h:389/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2cgQPO7z4nnnL3f64xxzZ2GP2ezRBmsucWuGACEPExI/rs:fit/g:sm/q:90/h:389/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1ePn8zveQpaxVjnfUlAJTKwVkJueHVaFxb9sqehP9n4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "width": 583
+        },
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/taaLRa0KYUCeN5vOt7iQQCa0jJG3GNS6gmf7KLWTR10/rs:fit/g:sm/q:90/h:301/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/taaLRa0KYUCeN5vOt7iQQCa0jJG3GNS6gmf7KLWTR10/rs:fit/g:sm/q:90/h:301/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2gHu5-o9-rWilQU2HTGW7TOsy83JZ5sgP5GxIrbE_9g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "width": 460
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 172770,
+          "name": "Jonas Bjerre",
+          "resource_url": "https://api.discogs.com/artists/172770"
+        },
+        {
+          "active": false,
+          "id": 583422,
+          "name": "Bo Madsen",
+          "resource_url": "https://api.discogs.com/artists/583422"
+        },
+        {
+          "active": true,
+          "id": 583423,
+          "name": "Silas Utke Graae Jørgensen",
+          "resource_url": "https://api.discogs.com/artists/583423"
+        },
+        {
+          "active": true,
+          "id": 583424,
+          "name": "Johan Wohlert",
+          "resource_url": "https://api.discogs.com/artists/583424"
+        },
+        {
+          "active": true,
+          "id": 1277544,
+          "name": "Mads Wegner",
+          "resource_url": "https://api.discogs.com/artists/1277544"
+        }
+      ],
       "name": "Mew",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "262995",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/262995"
-      },
+      "profile": "Danish art rock band, founded in 1994 in Hellerup, Denmark from the core of the band [a=The Degenerates].\r\nThe band has won several Danish and international music awards.\r\n\r\nJohan Wohlert left the band in 2006 before the birth of his first child together with [a56489], but made a return in 2013 while the band were in the studio, before making his first live appearances since his departure in 2014.\r\nBo Madsen left the band in 2015. Mads Wegner was added to their touring lineup after Bo's departure but not considered an official member of the group.\r\n\r\nCurrent members:\r\nJonas Bjerre – lead vocals (1994–)\r\nJohan Wohlert – bass (1994–2006, 2013–)\r\nSilas Utke Graae Jørgensen – drums (1994–)\r\n\r\nFormer members:\r\nBo Madsen – guitar (1994–2015)\r\n\r\nTouring members:\r\nNick Watts – keyboards, backing vocals, guitar (2001-–)\r\nMads Wegner – guitar (2015–)\r\n\r\nThe copyright entry is [l834817].",
+      "releases_url": "https://api.discogs.com/artists/262995/releases",
       "resource_url": "https://api.discogs.com/artists/262995",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/262995",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/262995-Mew",
+      "urls": [
+        "http://www.mewsite.com",
+        "http://www.facebook.com/mew",
+        "http://www.twitter.com/mew",
+        "http://www.instagram.com/mewofficial",
+        "http://mewsite.tumblr.com",
+        "http://en.wikipedia.org/wiki/Mew_%28band%29"
+      ]
     },
     "identity": {
       "musicbrainz_id": "fa927f59-d443-418a-b741-e557208aaf09",
@@ -231,27 +456,253 @@
         "track": "Snow Brigade",
         "uri": "http://www.youtube.com/watch?v=UgsfZChGS7w"
       }
-    ]
+    ],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='13813453', url='https://music.apple.com/gb/artist/mew/13813453', name='Mew', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/24/57/2c/24572c62-6bf5-7375-d0a8-aac5ba669eec/17d6c5dc-987a-4ffe-8fbb-c47461cb0e1c_ami-identity-6f5fd7facbf1b72af479642e6e6b68e3-2024-09-08T08-41-14.093Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '13813453', 'type': 'artists', 'href': '/v1/catalog/gb/artists/13813453', 'attributes': {'name': 'Mew', 'genreNames': ['Alternative'], 'artwork': {'width': 2000, 'height': 2000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/24/57/2c/24572c62-6bf5-7375-d0a8-aac5ba669eec/17d6c5dc-987a-4ffe-8fbb-c47461cb0e1c_ami-identity-6f5fd7facbf1b72af479642e6e6b68e3-2024-09-08T08-41-14.093Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '0b0a08', 'textColor1': 'f7fbfc', 'textColor2': 'dbdee6', 'textColor3': 'c8cbcb', 'textColor4': 'b1b4ba'}, 'url': 'https://music.apple.com/gb/artist/mew/13813453'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/13813453/albums', 'next': '/v1/catalog/gb/artists/13813453/albums?offset=25', 'data': [{'id': '1195025592', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1195025592'}, {'id': '326696273', 'type': 'albums', 'href': '/v1/catalog/gb/albums/326696273'}, {'id': '958897208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/958897208'}, {'id': '424196154', 'type': 'albums', 'href': '/v1/catalog/gb/albums/424196154'}, {'id': '1308760509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1308760509'}, {'id': '1441012690', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1441012690'}, {'id': '402883929', 'type': 'albums', 'href': '/v1/catalog/gb/albums/402883929'}, {'id': '316009248', 'type': 'albums', 'href': '/v1/catalog/gb/albums/316009248'}, {'id': '216414923', 'type': 'albums', 'href': '/v1/catalog/gb/albums/216414923'}, {'id': '1540743473', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1540743473'}, {'id': '1237419007', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1237419007'}, {'id': '1517906521', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517906521'}, {'id': '1517893794', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1517893794'}, {'id': '200586938', 'type': 'albums', 'href': '/v1/catalog/gb/albums/200586938'}, {'id': '298198735', 'type': 'albums', 'href': '/v1/catalog/gb/albums/298198735'}, {'id': '318694079', 'type': 'albums', 'href': '/v1/catalog/gb/albums/318694079'}, {'id': '1269432374', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1269432374'}, {'id': '324749174', 'type': 'albums', 'href': '/v1/catalog/gb/albums/324749174'}, {'id': '253348254', 'type': 'albums', 'href': '/v1/catalog/gb/albums/253348254'}, {'id': '1444395638', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1444395638'}, {'id': '404402397', 'type': 'albums', 'href': '/v1/catalog/gb/albums/404402397'}, {'id': '318790355', 'type': 'albums', 'href': '/v1/catalog/gb/albums/318790355'}, {'id': '325122853', 'type': 'albums', 'href': '/v1/catalog/gb/albums/325122853'}, {'id': '271420983', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271420983'}, {'id': '271420989', 'type': 'albums', 'href': '/v1/catalog/gb/albums/271420989'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "262995",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "id": 262995,
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/8NRdw0h1D40PdJMbWKmVK--D8oMDFiwS600kztFX3Fg/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/8NRdw0h1D40PdJMbWKmVK--D8oMDFiwS600kztFX3Fg/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/YohdI4E9BKplUFZHwzh33kyi3fpe9l8uq8GChMGvBGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDkyOTU1NDYy/LTk0OTkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/3zNwM0AaM5mtvOPPRFj9Iawaxa2NfiahJEL53AOgtgY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3zNwM0AaM5mtvOPPRFj9Iawaxa2NfiahJEL53AOgtgY/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1LienAvpkOfsg6TN4Uhj1DCHVhbKcHcOpyt18fa5k_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjcz/LTk0MjcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 356,
+          "resource_url": "https://i.discogs.com/BQxsjs_8pmqYLDVCAyWWsA1Z9y7T56PV-0BMRJ1Nh4U/rs:fit/g:sm/q:90/h:356/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BQxsjs_8pmqYLDVCAyWWsA1Z9y7T56PV-0BMRJ1Nh4U/rs:fit/g:sm/q:90/h:356/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/17eNlwJzrXFMuHF0WjLfba-r6QlD7y4HcC25te78v_k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNzYz/LTM5NTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 307,
+          "resource_url": "https://i.discogs.com/FFuWwHxDrbDWmy-3-2lP_A_8jbrwTZFVOxqOyutxLuM/rs:fit/g:sm/q:90/h:307/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FFuWwHxDrbDWmy-3-2lP_A_8jbrwTZFVOxqOyutxLuM/rs:fit/g:sm/q:90/h:307/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1DqtD9mnEGdAlIm_wF-hkhHaur944mpsKa-kCo68CeE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNDI5OTYxNjc3/LTg2MjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/ltAQNjGdsF3aWv8sDe62PobTEAb2r2nsyAJy4imfhzk/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ltAQNjGdsF3aWv8sDe62PobTEAb2r2nsyAJy4imfhzk/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/feKeL2yv7ejViTJ4i2o1JgiM4-26YIjXGqYPQUQA9kA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTc4NDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 193,
+          "resource_url": "https://i.discogs.com/uezFdIlaF3PlOE9ZrkDwXT-XUwv2RdswoMM5ZqwuKb0/rs:fit/g:sm/q:90/h:193/w:261/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uezFdIlaF3PlOE9ZrkDwXT-XUwv2RdswoMM5ZqwuKb0/rs:fit/g:sm/q:90/h:193/w:261/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bZcVqe1JEV1Qu1VDTEQVjMMwfR5PmvlWP5Z7X12noR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMw/LTU5NTUuanBlZw.jpeg",
+          "width": 261
+        },
+        {
+          "height": 502,
+          "resource_url": "https://i.discogs.com/Va2iULzS5gLdrp0yC_tbscIrkKs30n0QgZsIfomZzBY/rs:fit/g:sm/q:90/h:502/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Va2iULzS5gLdrp0yC_tbscIrkKs30n0QgZsIfomZzBY/rs:fit/g:sm/q:90/h:502/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JT-mEu2ZmZ0HYHEvvgvWre1juNDq7_ZugQNjXNO2RUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTYwNDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/mSoMSI_Xlsb0ufVjMi_HaKDWUhLeDZRbjxDmbIk77EM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mSoMSI_Xlsb0ufVjMi_HaKDWUhLeDZRbjxDmbIk77EM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6xKr20Yt3utBTDa2yIkPLffAbR8qzR6xi_DseOoksJU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTg3NzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/i_wPv5pyIvdKReIfmlbq0BTLVedUgNVR5JU9RReVOkI/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/i_wPv5pyIvdKReIfmlbq0BTLVedUgNVR5JU9RReVOkI/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Kxa3Skq0nwUuJc6piHK4u6_F4kVQH5wLO2U4WHT9k6A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTUxNjcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 320,
+          "resource_url": "https://i.discogs.com/hAentVNtFAi9M-q1AywZXf_vt9Wmsq0kfeocuQAUmmw/rs:fit/g:sm/q:90/h:320/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hAentVNtFAi9M-q1AywZXf_vt9Wmsq0kfeocuQAUmmw/rs:fit/g:sm/q:90/h:320/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gfBC9f5-hVJ-ze_COnW758ymY9t4ygd6z4G-DpqHM_0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTcwMjUuanBlZw.jpeg",
+          "width": 430
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/YE5VlZx7ipaYNaZeeXKB_2vRDu6w_cYpzCD_S1kP0eM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YE5VlZx7ipaYNaZeeXKB_2vRDu6w_cYpzCD_S1kP0eM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/e87t5tt9eX3nVqWzlcwpuVWhnQiEMjCtp3dWHaHsKX8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTQ3NzUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 407,
+          "resource_url": "https://i.discogs.com/kD-PkN6ME5mrHuMUqbXxktoghukICkiijnXKQyJXM_I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kD-PkN6ME5mrHuMUqbXxktoghukICkiijnXKQyJXM_I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/loZzRRdBakJaNO8xxNyNsQjNbLp9SlOUHSslOJZnyHY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMxMzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/eMEWTuzTtrAuKn7MaI4O49ri88xi_I6_GplsjfXHwCk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eMEWTuzTtrAuKn7MaI4O49ri88xi_I6_GplsjfXHwCk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/UIRhYhuIdQ27H_CKa3LKEQoJFBXHYG51ai1Par75g2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU2OTYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/0r7_8Qte65BHywqzZMNhBbZQscvPmxwghgOnU9TopdA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0r7_8Qte65BHywqzZMNhBbZQscvPmxwghgOnU9TopdA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2e0ZxMZMqtjWeTZfP7MyNt6OrMj4dw6n-FUjGxrHI6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMy/LTk4NTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 205,
+          "resource_url": "https://i.discogs.com/kGoxr221rsa7wUm2rc36fQofi503Dp-nMhORiDoXxRw/rs:fit/g:sm/q:90/h:205/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kGoxr221rsa7wUm2rc36fQofi503Dp-nMhORiDoXxRw/rs:fit/g:sm/q:90/h:205/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/HJUws-KFckFFMIvLCl-_JVY8GkgoxcFAax2vkyazpGA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTc0MjcuanBlZw.jpeg",
+          "width": 246
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/V79trN4oeXeLy58UsvV-dx9ktSd_fpZ68wzBR3vMBuc/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/V79trN4oeXeLy58UsvV-dx9ktSd_fpZ68wzBR3vMBuc/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/roJUOwZvXrOjgXQa1X5hgMBt1ovuPuPhWkmtlukOo-Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTE3MzQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 366,
+          "resource_url": "https://i.discogs.com/0BBTxueummjy-c-JSd_l_U4s2by40NLqPJXxe-kNob8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0BBTxueummjy-c-JSd_l_U4s2by40NLqPJXxe-kNob8/rs:fit/g:sm/q:90/h:366/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lrgB7P2m3NzQKSBItsKYnTn5nELFyoV0lQKE41vYAz8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTMzNjYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Qho6WEfubVsn4q0_DrTU_29xSdSbS-s2NeWWhi1rEts/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Qho6WEfubVsn4q0_DrTU_29xSdSbS-s2NeWWhi1rEts/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2F0LRTE8lKxv78BEm3MkGsyMbHhiJwua8IdYBKYRnco/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM2/LTU1MjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/opIs5j2f5e0PRmBFNBI17-TDcTax-7mVwEgdgFL8At0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/opIs5j2f5e0PRmBFNBI17-TDcTax-7mVwEgdgFL8At0/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zh7dIk9XGe-IQoyy3iW-pQ2Tb7jDz-d9F0MQhVLQ7Ys/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTM0NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/SOo7kDgZeYaSLmOCIdUWF7OFOsICRu-jHvURTfeiryU/rs:fit/g:sm/q:90/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SOo7kDgZeYaSLmOCIdUWF7OFOsICRu-jHvURTfeiryU/rs:fit/g:sm/q:90/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qgLAw-9eqD7AGV7jKVkVGLwJWE3sPJsFZw7mpuAWvdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTQ1NDUuanBlZw.jpeg",
+          "width": 480
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/c9frXckoU4cpmwra5634dBYHZo1Y20ZlQ8zRetCVQ4Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c9frXckoU4cpmwra5634dBYHZo1Y20ZlQ8zRetCVQ4Y/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/r6QznJaW4-0voZY9mCs08SbVQk_yZgLkr023YrZa8Vo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTI1MDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 198,
+          "resource_url": "https://i.discogs.com/CA3zyPuHapUmEJhykibK-6M9v6GeL8701MJTrbnhEwA/rs:fit/g:sm/q:90/h:198/w:254/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CA3zyPuHapUmEJhykibK-6M9v6GeL8701MJTrbnhEwA/rs:fit/g:sm/q:90/h:198/w:254/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/SQXMXzIZSNAYcBpNZtRMxRBF3IKA9B1BBYoZxtq57Dc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMx/LTYwNTYuanBlZw.jpeg",
+          "width": 254
+        },
+        {
+          "height": 389,
+          "resource_url": "https://i.discogs.com/2cgQPO7z4nnnL3f64xxzZ2GP2ezRBmsucWuGACEPExI/rs:fit/g:sm/q:90/h:389/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2cgQPO7z4nnnL3f64xxzZ2GP2ezRBmsucWuGACEPExI/rs:fit/g:sm/q:90/h:389/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1ePn8zveQpaxVjnfUlAJTKwVkJueHVaFxb9sqehP9n4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODM1/LTU0MzkuanBlZw.jpeg",
+          "width": 583
+        },
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/taaLRa0KYUCeN5vOt7iQQCa0jJG3GNS6gmf7KLWTR10/rs:fit/g:sm/q:90/h:301/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/taaLRa0KYUCeN5vOt7iQQCa0jJG3GNS6gmf7KLWTR10/rs:fit/g:sm/q:90/h:301/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/2gHu5-o9-rWilQU2HTGW7TOsy83JZ5sgP5GxIrbE_9g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Mjk5/NS0xNTYxNzI3ODMz/LTIwNjUuanBlZw.jpeg",
+          "width": 460
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 172770,
+          "name": "Jonas Bjerre",
+          "resource_url": "https://api.discogs.com/artists/172770"
+        },
+        {
+          "active": false,
+          "id": 583422,
+          "name": "Bo Madsen",
+          "resource_url": "https://api.discogs.com/artists/583422"
+        },
+        {
+          "active": true,
+          "id": 583423,
+          "name": "Silas Utke Graae Jørgensen",
+          "resource_url": "https://api.discogs.com/artists/583423"
+        },
+        {
+          "active": true,
+          "id": 583424,
+          "name": "Johan Wohlert",
+          "resource_url": "https://api.discogs.com/artists/583424"
+        },
+        {
+          "active": true,
+          "id": 1277544,
+          "name": "Mads Wegner",
+          "resource_url": "https://api.discogs.com/artists/1277544"
+        }
+      ],
       "name": "Mew",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "262995",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/262995"
-      },
+      "profile": "Danish art rock band, founded in 1994 in Hellerup, Denmark from the core of the band [a=The Degenerates].\r\nThe band has won several Danish and international music awards.\r\n\r\nJohan Wohlert left the band in 2006 before the birth of his first child together with [a56489], but made a return in 2013 while the band were in the studio, before making his first live appearances since his departure in 2014.\r\nBo Madsen left the band in 2015. Mads Wegner was added to their touring lineup after Bo's departure but not considered an official member of the group.\r\n\r\nCurrent members:\r\nJonas Bjerre – lead vocals (1994–)\r\nJohan Wohlert – bass (1994–2006, 2013–)\r\nSilas Utke Graae Jørgensen – drums (1994–)\r\n\r\nFormer members:\r\nBo Madsen – guitar (1994–2015)\r\n\r\nTouring members:\r\nNick Watts – keyboards, backing vocals, guitar (2001-–)\r\nMads Wegner – guitar (2015–)\r\n\r\nThe copyright entry is [l834817].",
+      "releases_url": "https://api.discogs.com/artists/262995/releases",
       "resource_url": "https://api.discogs.com/artists/262995",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/262995",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/262995-Mew",
+      "urls": [
+        "http://www.mewsite.com",
+        "http://www.facebook.com/mew",
+        "http://www.twitter.com/mew",
+        "http://www.instagram.com/mewofficial",
+        "http://mewsite.tumblr.com",
+        "http://en.wikipedia.org/wiki/Mew_%28band%29"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Mew', url='https://www.last.fm/music/Mew', mbid='fa927f59-d443-418a-b741-e557208aaf09', listeners=753356, playcount=34742490, bio_summary='There are 3 artists named Mew:\\n\\n1) Mew is an alternative rock band which formed in Hellerup, Denmark in 1995. The band consists of Jonas Bjerre (vocals), Johan Wohlert, and Silas Utke Graae Jørgensen (drums).  Wohlert left the band in 2006, but returned in 2014, and is featured on all subsequent releases. When on tour, Mew is supported by Dr. Nick Watts (Headswim) on keyboard, and Mads Wegner on guitar  (original guitarist Bo Madsen (guitar) left the band in 2015. <a href=\"https://www.last.fm/music/Mew\">Read more on Last.fm</a>', bio_content='There are 3 artists named Mew:\\n\\n1) Mew is an alternative rock band which formed in Hellerup, Denmark in 1995. The band consists of Jonas Bjerre (vocals), Johan Wohlert, and Silas Utke Graae Jørgensen (drums).  Wohlert left the band in 2006, but returned in 2014, and is featured on all subsequent releases. When on tour, Mew is supported by Dr. Nick Watts (Headswim) on keyboard, and Mads Wegner on guitar  (original guitarist Bo Madsen (guitar) left the band in 2015.) The band\\'s music can be described as experimental pop or as singer Jonas Bjerre mentioned in a recent interview: \"I think that we combine pop music with something that\\'s much more experimental, in our own way. I don\\'t think I would even try and describe it. It\\'s difficult.\" Guitarist Bo Madsen has also classified Mew\\'s music as \"indie stadium\".\\n\\nThe members of Mew started playing music together in 1995.  Mew first achieved success in Denmark with their album Frengers, although their debut album, A Triumph for Man, had been met with much critical acclaim back in 1997. At the 2003 Danish Music Critics Award Show, Mew won the awards for \"Album of the Year\" and \"Band of the Year.\" Until this point Mew was relatively unknown outside of Denmark; however after a European tour supporting R.E.M. Mew began to attract wider attention. After releasing the critically-acclaimed album And The Glass Handed Kites, featuring contributions from J Mascis from Dinosaur Jr, Mew has built on their success in Denmark as well as attracting attention from other countries in Europe and Asia. In the summer of 2006, they toured as the supporting act for Bloc Party in the U.S. as well as for Kasabian in the U.S. and Canada in the fall. After these tours, they returned to Denmark to work on new material.  \\n\\nOn March 14th, 2007, Mew embarked on their first ever headlining tour in America with Oh No! Oh My! as the supporting act. Their fifth studio album, No More Stories/Are Told Today/I\\'m Sorry/They Washed Away//No More Stories/The World Is Grey/I\\'m Tired/Let\\'s Wash Away, was released in August 25, 2009. They\\'ve also toured with Nine Inch Nails, Kings of Leon and Sigur Rós. In 2010, they released a greatest hits compilation called Eggs are Funny. They began performing new material in 2012 at Roskilde Festival, and released their sixth studio album, +- in 2015. Madsen left the band the same year, and the band began writing new material for their new album shortly after they concluded their tour. They released their seventh studio album, Visuals, after releasing a few singles in the months preceding its release. They embarked on tours for the album, as well as a tour celebrating the 15th anniversary of their breakthrough album Frengers in 2018. \\n\\nDiscography:\\n    * A Triumph for Man (1997, re-released 2006)\\n    * Half the World Is Watching Me (2000, re-released Aug 2007)\\n    * Frengers (2003)\\n    * And the Glass Handed Kites (2005)\\n    * No More Stories... (2009)\\n    * Eggs are Funny (2010)\\n    * +- (2015)\\n    * Visuals (2017)\\n\\n2) Mew (미유), formerly known as So Yeon (소연), is a South Korean singer-songwriter under HOW Entertainment. She is a former member of the indie duo Norwegian Wood. She made her solo debut on December 27, 2019 with the digital single \"Love Again\".\\n\\n3) mew, born Valentina Turchetto, is an Italian singer and songwriter. She competed in Amici di Maria De Filippi 2023 and  Sanremo Giovani 2024. <a href=\"https://www.last.fm/music/Mew\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'indie', 'alternative', 'indie rock', 'danish'], similar_artists=[{'name': 'Kashmir', 'url': 'https://www.last.fm/music/Kashmir'}, {'name': 'Kent', 'url': 'https://www.last.fm/music/Kent'}, {'name': 'Wild Beasts', 'url': 'https://www.last.fm/music/Wild+Beasts'}, {'name': 'The Raveonettes', 'url': 'https://www.last.fm/music/The+Raveonettes'}, {'name': 'Minus the Bear', 'url': 'https://www.last.fm/music/Minus+the+Bear'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Mew', 'mbid': 'fa927f59-d443-418a-b741-e557208aaf09', 'url': 'https://www.last.fm/music/Mew', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '753356', 'playcount': '34742490'}, 'similar': {'artist': [{'name': 'Kashmir', 'url': 'https://www.last.fm/music/Kashmir', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Kent', 'url': 'https://www.last.fm/music/Kent', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wild Beasts', 'url': 'https://www.last.fm/music/Wild+Beasts', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Raveonettes', 'url': 'https://www.last.fm/music/The+Raveonettes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Minus the Bear', 'url': 'https://www.last.fm/music/Minus+the+Bear', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}, {'name': 'danish', 'url': 'https://www.last.fm/tag/danish'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Mew/+wiki'}}, 'published': '01 Feb 2006, 20:36', 'summary': 'There are 3 artists named Mew:\\n\\n1) Mew is an alternative rock band which formed in Hellerup, Denmark in 1995. The band consists of Jonas Bjerre (vocals), Johan Wohlert, and Silas Utke Graae Jørgensen (drums).  Wohlert left the band in 2006, but returned in 2014, and is featured on all subsequent releases. When on tour, Mew is supported by Dr. Nick Watts (Headswim) on keyboard, and Mads Wegner on guitar  (original guitarist Bo Madsen (guitar) left the band in 2015. <a href=\"https://www.last.fm/music/Mew\">Read more on Last.fm</a>', 'content': 'There are 3 artists named Mew:\\n\\n1) Mew is an alternative rock band which formed in Hellerup, Denmark in 1995. The band consists of Jonas Bjerre (vocals), Johan Wohlert, and Silas Utke Graae Jørgensen (drums).  Wohlert left the band in 2006, but returned in 2014, and is featured on all subsequent releases. When on tour, Mew is supported by Dr. Nick Watts (Headswim) on keyboard, and Mads Wegner on guitar  (original guitarist Bo Madsen (guitar) left the band in 2015.) The band\\'s music can be described as experimental pop or as singer Jonas Bjerre mentioned in a recent interview: \"I think that we combine pop music with something that\\'s much more experimental, in our own way. I don\\'t think I would even try and describe it. It\\'s difficult.\" Guitarist Bo Madsen has also classified Mew\\'s music as \"indie stadium\".\\n\\nThe members of Mew started playing music together in 1995.  Mew first achieved success in Denmark with their album Frengers, although their debut album, A Triumph for Man, had been met with much critical acclaim back in 1997. At the 2003 Danish Music Critics Award Show, Mew won the awards for \"Album of the Year\" and \"Band of the Year.\" Until this point Mew was relatively unknown outside of Denmark; however after a European tour supporting R.E.M. Mew began to attract wider attention. After releasing the critically-acclaimed album And The Glass Handed Kites, featuring contributions from J Mascis from Dinosaur Jr, Mew has built on their success in Denmark as well as attracting attention from other countries in Europe and Asia. In the summer of 2006, they toured as the supporting act for Bloc Party in the U.S. as well as for Kasabian in the U.S. and Canada in the fall. After these tours, they returned to Denmark to work on new material.  \\n\\nOn March 14th, 2007, Mew embarked on their first ever headlining tour in America with Oh No! Oh My! as the supporting act. Their fifth studio album, No More Stories/Are Told Today/I\\'m Sorry/They Washed Away//No More Stories/The World Is Grey/I\\'m Tired/Let\\'s Wash Away, was released in August 25, 2009. They\\'ve also toured with Nine Inch Nails, Kings of Leon and Sigur Rós. In 2010, they released a greatest hits compilation called Eggs are Funny. They began performing new material in 2012 at Roskilde Festival, and released their sixth studio album, +- in 2015. Madsen left the band the same year, and the band began writing new material for their new album shortly after they concluded their tour. They released their seventh studio album, Visuals, after releasing a few singles in the months preceding its release. They embarked on tours for the album, as well as a tour celebrating the 15th anniversary of their breakthrough album Frengers in 2018. \\n\\nDiscography:\\n    * A Triumph for Man (1997, re-released 2006)\\n    * Half the World Is Watching Me (2000, re-released Aug 2007)\\n    * Frengers (2003)\\n    * And the Glass Handed Kites (2005)\\n    * No More Stories... (2009)\\n    * Eggs are Funny (2010)\\n    * +- (2015)\\n    * Visuals (2017)\\n\\n2) Mew (미유), formerly known as So Yeon (소연), is a South Korean singer-songwriter under HOW Entertainment. She is a former member of the indie duo Norwegian Wood. She made her solo debut on December 27, 2019 with the digital single \"Love Again\".\\n\\n3) mew, born Valentina Turchetto, is an Italian singer and songwriter. She competed in Amici di Maria De Filippi 2023 and  Sanremo Giovani 2024. <a href=\"https://www.last.fm/music/Mew\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='6kDMoHTcBICPILP2aclPWZ', url='https://open.spotify.com/artist/6kDMoHTcBICPILP2aclPWZ', name='Mew', popularity=45, followers=147145, genres=['dream pop'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb1f1d8e8e5414c80ac30d7813', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051741f1d8e8e5414c80ac30d7813', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1781f1d8e8e5414c80ac30d7813', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/6kDMoHTcBICPILP2aclPWZ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/6kDMoHTcBICPILP2aclPWZ'}, 'followers': {'href': None, 'total': 147145}, 'genres': ['dream pop'], 'href': 'https://api.spotify.com/v1/artists/6kDMoHTcBICPILP2aclPWZ', 'id': '6kDMoHTcBICPILP2aclPWZ', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb1f1d8e8e5414c80ac30d7813', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051741f1d8e8e5414c80ac30d7813', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1781f1d8e8e5414c80ac30d7813', 'height': 160, 'width': 160}], 'name': 'Mew', 'popularity': 45, 'type': 'artist', 'uri': 'spotify:artist:6kDMoHTcBICPILP2aclPWZ'})",
@@ -315,6 +766,6 @@
   },
   "spotify_id": "6kDMoHTcBICPILP2aclPWZ",
   "spotify_url": "https://open.spotify.com/artist/6kDMoHTcBICPILP2aclPWZ",
-  "updated_at": "2026-10-22T14:09:09.581048",
+  "updated_at": "2026-10-30T18:42:14.351811",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Mew_(band)"
 }

@@ -79,22 +79,34 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='279429193', url='https://music.apple.com/gb/artist/liam-gillick/279429193', name='Liam Gillick', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/45/13/08/mzi.slnjjkjp.jpg/2000x2000ac.jpg', genres=['Spoken Word'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '279429193', 'type': 'artists', 'href': '/v1/catalog/gb/artists/279429193', 'attributes': {'name': 'Liam Gillick', 'genreNames': ['Spoken Word'], 'artwork': {'width': 600, 'height': 600, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/45/13/08/mzi.slnjjkjp.jpg/{w}x{h}ac.jpg', 'bgColor': '040203', 'textColor1': 'ffffff', 'textColor2': 'b2daef', 'textColor3': 'cccccc', 'textColor4': '8fafbf'}, 'url': 'https://music.apple.com/gb/artist/liam-gillick/279429193'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/279429193/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "107899",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": false,
+          "id": 109649,
+          "name": "Soho (2)",
+          "resource_url": "https://api.discogs.com/artists/109649"
+        }
+      ],
+      "id": 107899,
+      "images": [
+        {
+          "height": 180,
+          "resource_url": "https://i.discogs.com/xDg3h9CRzqezFUUc5Mym4tq6rfIwjNwcf7XJQjfQK1A/rs:fit/g:sm/q:90/h:180/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/xDg3h9CRzqezFUUc5Mym4tq6rfIwjNwcf7XJQjfQK1A/rs:fit/g:sm/q:90/h:180/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/wM-Zw-TyYS_l9RNleWZgZvs5o6mv4SNDxEGMrnQLa9E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "width": 150
+        }
+      ],
       "name": "Liam Gillick",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "107899",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/107899"
-      },
+      "profile": "Liam Gillick (born 1964, Aylesbury, Buckinghamshire) is a British artist who lives and works in New York and London. As an artist, his work includes public projects, critical and theoretical writings, design objects and graphic materials, films, musical scores, and fine artworks.",
+      "releases_url": "https://api.discogs.com/artists/107899/releases",
       "resource_url": "https://api.discogs.com/artists/107899",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/107899",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/107899-Liam-Gillick",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Liam_Gillick"
+      ]
     },
     "identity": {
       "musicbrainz_id": "fc07c71e-efa8-41ee-828c-13feb4c34720",
@@ -104,27 +116,40 @@
     },
     "lastfm": "ArtistLastFmData(name='Liam Gillick', url='https://www.last.fm/music/Liam+Gillick', mbid='fc07c71e-efa8-41ee-828c-13feb4c34720', listeners=950, playcount=2138, bio_summary='<a href=\"https://www.last.fm/music/Liam+Gillick\">Read more on Last.fm</a>', bio_content=None, tags=['chillout', 'electronic', 'abstract', 'idm', 'spoken word'], similar_artists=[{'name': 'Shukar Cika', 'url': 'https://www.last.fm/music/Shukar+Cika'}, {'name': 'René Magritte', 'url': 'https://www.last.fm/music/Ren%C3%A9+Magritte'}, {'name': 'James Joyce', 'url': 'https://www.last.fm/music/James+Joyce'}, {'name': 'William S. Burroughs & Iggy Pop With Techno Animal', 'url': 'https://www.last.fm/music/William+S.+Burroughs+&+Iggy+Pop+With+Techno+Animal'}, {'name': 'Languis', 'url': 'https://www.last.fm/music/Languis'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Liam Gillick', 'mbid': 'fc07c71e-efa8-41ee-828c-13feb4c34720', 'url': 'https://www.last.fm/music/Liam+Gillick', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '950', 'playcount': '2138'}, 'similar': {'artist': [{'name': 'Shukar Cika', 'url': 'https://www.last.fm/music/Shukar+Cika', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'René Magritte', 'url': 'https://www.last.fm/music/Ren%C3%A9+Magritte', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'James Joyce', 'url': 'https://www.last.fm/music/James+Joyce', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'William S. Burroughs & Iggy Pop With Techno Animal', 'url': 'https://www.last.fm/music/William+S.+Burroughs+&+Iggy+Pop+With+Techno+Animal', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Languis', 'url': 'https://www.last.fm/music/Languis', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'abstract', 'url': 'https://www.last.fm/tag/abstract'}, {'name': 'idm', 'url': 'https://www.last.fm/tag/idm'}, {'name': 'spoken word', 'url': 'https://www.last.fm/tag/spoken+word'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Liam+Gillick/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Liam+Gillick\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='1KAB5B6Hq7w12j4nQmrO21', url='https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21', name='Liam Gillick', popularity=0, followers=53, genres=['avant-garde', 'experimental'], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21'}, 'followers': {'href': None, 'total': 53}, 'genres': ['avant-garde', 'experimental'], 'href': 'https://api.spotify.com/v1/artists/1KAB5B6Hq7w12j4nQmrO21', 'id': '1KAB5B6Hq7w12j4nQmrO21', 'images': [], 'name': 'Liam Gillick', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:1KAB5B6Hq7w12j4nQmrO21'})",
-    "theaudiodb": {}
+    "theaudiodb": {},
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='279429193', url='https://music.apple.com/gb/artist/liam-gillick/279429193', name='Liam Gillick', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/45/13/08/mzi.slnjjkjp.jpg/2000x2000ac.jpg', genres=['Spoken Word'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '279429193', 'type': 'artists', 'href': '/v1/catalog/gb/artists/279429193', 'attributes': {'name': 'Liam Gillick', 'genreNames': ['Spoken Word'], 'artwork': {'width': 600, 'height': 600, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/45/13/08/mzi.slnjjkjp.jpg/{w}x{h}ac.jpg', 'bgColor': '040203', 'textColor1': 'ffffff', 'textColor2': 'b2daef', 'textColor3': 'cccccc', 'textColor4': '8fafbf'}, 'url': 'https://music.apple.com/gb/artist/liam-gillick/279429193'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/279429193/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "107899",
-      "images": [],
-      "members": [],
+      "data_quality": "Needs Vote",
+      "groups": [
+        {
+          "active": false,
+          "id": 109649,
+          "name": "Soho (2)",
+          "resource_url": "https://api.discogs.com/artists/109649"
+        }
+      ],
+      "id": 107899,
+      "images": [
+        {
+          "height": 180,
+          "resource_url": "https://i.discogs.com/xDg3h9CRzqezFUUc5Mym4tq6rfIwjNwcf7XJQjfQK1A/rs:fit/g:sm/q:90/h:180/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/xDg3h9CRzqezFUUc5Mym4tq6rfIwjNwcf7XJQjfQK1A/rs:fit/g:sm/q:90/h:180/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/wM-Zw-TyYS_l9RNleWZgZvs5o6mv4SNDxEGMrnQLa9E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNzg5/OS0xMjY0MjcwNjU0/LmpwZWc.jpeg",
+          "width": 150
+        }
+      ],
       "name": "Liam Gillick",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "107899",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/107899"
-      },
+      "profile": "Liam Gillick (born 1964, Aylesbury, Buckinghamshire) is a British artist who lives and works in New York and London. As an artist, his work includes public projects, critical and theoretical writings, design objects and graphic materials, films, musical scores, and fine artworks.",
+      "releases_url": "https://api.discogs.com/artists/107899/releases",
       "resource_url": "https://api.discogs.com/artists/107899",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/107899",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/107899-Liam-Gillick",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Liam_Gillick"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='Liam Gillick', url='https://www.last.fm/music/Liam+Gillick', mbid='fc07c71e-efa8-41ee-828c-13feb4c34720', listeners=950, playcount=2138, bio_summary='<a href=\"https://www.last.fm/music/Liam+Gillick\">Read more on Last.fm</a>', bio_content=None, tags=['chillout', 'electronic', 'abstract', 'idm', 'spoken word'], similar_artists=[{'name': 'Shukar Cika', 'url': 'https://www.last.fm/music/Shukar+Cika'}, {'name': 'René Magritte', 'url': 'https://www.last.fm/music/Ren%C3%A9+Magritte'}, {'name': 'James Joyce', 'url': 'https://www.last.fm/music/James+Joyce'}, {'name': 'William S. Burroughs & Iggy Pop With Techno Animal', 'url': 'https://www.last.fm/music/William+S.+Burroughs+&+Iggy+Pop+With+Techno+Animal'}, {'name': 'Languis', 'url': 'https://www.last.fm/music/Languis'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Liam Gillick', 'mbid': 'fc07c71e-efa8-41ee-828c-13feb4c34720', 'url': 'https://www.last.fm/music/Liam+Gillick', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '950', 'playcount': '2138'}, 'similar': {'artist': [{'name': 'Shukar Cika', 'url': 'https://www.last.fm/music/Shukar+Cika', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'René Magritte', 'url': 'https://www.last.fm/music/Ren%C3%A9+Magritte', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'James Joyce', 'url': 'https://www.last.fm/music/James+Joyce', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'William S. Burroughs & Iggy Pop With Techno Animal', 'url': 'https://www.last.fm/music/William+S.+Burroughs+&+Iggy+Pop+With+Techno+Animal', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Languis', 'url': 'https://www.last.fm/music/Languis', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'abstract', 'url': 'https://www.last.fm/tag/abstract'}, {'name': 'idm', 'url': 'https://www.last.fm/tag/idm'}, {'name': 'spoken word', 'url': 'https://www.last.fm/tag/spoken+word'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Liam+Gillick/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Liam+Gillick\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='1KAB5B6Hq7w12j4nQmrO21', url='https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21', name='Liam Gillick', popularity=0, followers=53, genres=['avant-garde', 'experimental'], images=[], external_urls={'spotify': 'https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21'}, 'followers': {'href': None, 'total': 53}, 'genres': ['avant-garde', 'experimental'], 'href': 'https://api.spotify.com/v1/artists/1KAB5B6Hq7w12j4nQmrO21', 'id': '1KAB5B6Hq7w12j4nQmrO21', 'images': [], 'name': 'Liam Gillick', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:1KAB5B6Hq7w12j4nQmrO21'})",
@@ -132,6 +157,6 @@
   },
   "spotify_id": "1KAB5B6Hq7w12j4nQmrO21",
   "spotify_url": "https://open.spotify.com/artist/1KAB5B6Hq7w12j4nQmrO21",
-  "updated_at": "2026-10-22T14:08:42.311412",
+  "updated_at": "2026-10-30T18:41:49.371377",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Liam_Gillick"
 }

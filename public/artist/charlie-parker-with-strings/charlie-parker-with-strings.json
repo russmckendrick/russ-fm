@@ -118,22 +118,825 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='1632132757', url='https://music.apple.com/gb/artist/charlie-parker-with-strings/1632132757', name='Charlie Parker with Strings', artwork_url='', genres=[], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1632132757', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1632132757', 'attributes': {'name': 'Charlie Parker with Strings', 'url': 'https://music.apple.com/gb/artist/charlie-parker-with-strings/1632132757', 'genreNames': []}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1632132757/albums', 'data': []}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "753336",
-      "images": [],
-      "members": [],
+      "data_quality": "Correct",
+      "id": 753336,
+      "members": [
+        {
+          "active": true,
+          "id": 10589,
+          "name": "Candido",
+          "resource_url": "https://api.discogs.com/artists/10589"
+        },
+        {
+          "active": true,
+          "id": 57620,
+          "name": "Buddy Rich",
+          "resource_url": "https://api.discogs.com/artists/57620"
+        },
+        {
+          "active": true,
+          "id": 75617,
+          "name": "Charlie Parker",
+          "resource_url": "https://api.discogs.com/artists/75617"
+        },
+        {
+          "active": true,
+          "id": 251780,
+          "name": "Tommy Potter",
+          "resource_url": "https://api.discogs.com/artists/251780"
+        },
+        {
+          "active": true,
+          "id": 252998,
+          "name": "Ray Brown",
+          "resource_url": "https://api.discogs.com/artists/252998"
+        },
+        {
+          "active": true,
+          "id": 254394,
+          "name": "Oscar Peterson",
+          "resource_url": "https://api.discogs.com/artists/254394"
+        },
+        {
+          "active": true,
+          "id": 254895,
+          "name": "Bernie Privin",
+          "resource_url": "https://api.discogs.com/artists/254895"
+        },
+        {
+          "active": true,
+          "id": 255556,
+          "name": "Roy Haynes",
+          "resource_url": "https://api.discogs.com/artists/255556"
+        },
+        {
+          "active": true,
+          "id": 259078,
+          "name": "Al Haig",
+          "resource_url": "https://api.discogs.com/artists/259078"
+        },
+        {
+          "active": true,
+          "id": 260718,
+          "name": "Danny Bank",
+          "resource_url": "https://api.discogs.com/artists/260718"
+        },
+        {
+          "active": true,
+          "id": 262585,
+          "name": "Walter Bishop, Jr.",
+          "resource_url": "https://api.discogs.com/artists/262585"
+        },
+        {
+          "active": true,
+          "id": 263096,
+          "name": "Don Lamond",
+          "resource_url": "https://api.discogs.com/artists/263096"
+        },
+        {
+          "active": true,
+          "id": 265641,
+          "name": "Flip Phillips",
+          "resource_url": "https://api.discogs.com/artists/265641"
+        },
+        {
+          "active": true,
+          "id": 272665,
+          "name": "Freddie Green",
+          "resource_url": "https://api.discogs.com/artists/272665"
+        },
+        {
+          "active": true,
+          "id": 274980,
+          "name": "Maurice Brown",
+          "resource_url": "https://api.discogs.com/artists/274980"
+        },
+        {
+          "active": true,
+          "id": 277950,
+          "name": "Stan Webb",
+          "resource_url": "https://api.discogs.com/artists/277950"
+        },
+        {
+          "active": true,
+          "id": 277954,
+          "name": "Art Ryerson",
+          "resource_url": "https://api.discogs.com/artists/277954"
+        },
+        {
+          "active": true,
+          "id": 277958,
+          "name": "Art Drelinger",
+          "resource_url": "https://api.discogs.com/artists/277958"
+        },
+        {
+          "active": true,
+          "id": 277964,
+          "name": "Bernie Leighton",
+          "resource_url": "https://api.discogs.com/artists/277964"
+        },
+        {
+          "active": true,
+          "id": 312526,
+          "name": "Lou McGarity",
+          "resource_url": "https://api.discogs.com/artists/312526"
+        },
+        {
+          "active": true,
+          "id": 312553,
+          "name": "Bill Harris",
+          "resource_url": "https://api.discogs.com/artists/312553"
+        },
+        {
+          "active": true,
+          "id": 313039,
+          "name": "Jimmy Maxwell",
+          "resource_url": "https://api.discogs.com/artists/313039"
+        },
+        {
+          "active": true,
+          "id": 328323,
+          "name": "Lou Stein",
+          "resource_url": "https://api.discogs.com/artists/328323"
+        },
+        {
+          "active": true,
+          "id": 335520,
+          "name": "Tom Mace",
+          "resource_url": "https://api.discogs.com/artists/335520"
+        },
+        {
+          "active": true,
+          "id": 335565,
+          "name": "Bob Haggart",
+          "resource_url": "https://api.discogs.com/artists/335565"
+        },
+        {
+          "active": true,
+          "id": 335591,
+          "name": "Murray Williams",
+          "resource_url": "https://api.discogs.com/artists/335591"
+        },
+        {
+          "active": true,
+          "id": 335630,
+          "name": "Will Bradley",
+          "resource_url": "https://api.discogs.com/artists/335630"
+        },
+        {
+          "active": true,
+          "id": 335652,
+          "name": "Toots Mondello",
+          "resource_url": "https://api.discogs.com/artists/335652"
+        },
+        {
+          "active": true,
+          "id": 336809,
+          "name": "Sam Caplan",
+          "resource_url": "https://api.discogs.com/artists/336809"
+        },
+        {
+          "active": true,
+          "id": 339676,
+          "name": "Chris Griffin (3)",
+          "resource_url": "https://api.discogs.com/artists/339676"
+        },
+        {
+          "active": true,
+          "id": 361544,
+          "name": "Mitch Miller",
+          "resource_url": "https://api.discogs.com/artists/361544"
+        },
+        {
+          "active": true,
+          "id": 372550,
+          "name": "Hank Ross",
+          "resource_url": "https://api.discogs.com/artists/372550"
+        },
+        {
+          "active": true,
+          "id": 372551,
+          "name": "Harry Terrill",
+          "resource_url": "https://api.discogs.com/artists/372551"
+        },
+        {
+          "active": true,
+          "id": 372556,
+          "name": "Carl Poole",
+          "resource_url": "https://api.discogs.com/artists/372556"
+        },
+        {
+          "active": true,
+          "id": 372559,
+          "name": "Bart Varsalona",
+          "resource_url": "https://api.discogs.com/artists/372559"
+        },
+        {
+          "active": true,
+          "id": 386765,
+          "name": "Jack Zayde",
+          "resource_url": "https://api.discogs.com/artists/386765"
+        },
+        {
+          "active": true,
+          "id": 386766,
+          "name": "Max Hollander",
+          "resource_url": "https://api.discogs.com/artists/386766"
+        },
+        {
+          "active": true,
+          "id": 430825,
+          "name": "Stan Freeman",
+          "resource_url": "https://api.discogs.com/artists/430825"
+        },
+        {
+          "active": true,
+          "id": 430835,
+          "name": "Milt Lomask",
+          "resource_url": "https://api.discogs.com/artists/430835"
+        },
+        {
+          "active": false,
+          "id": 430838,
+          "name": "Myor Rosen",
+          "resource_url": "https://api.discogs.com/artists/430838"
+        },
+        {
+          "active": true,
+          "id": 552915,
+          "name": "Joseph Singer",
+          "resource_url": "https://api.discogs.com/artists/552915"
+        },
+        {
+          "active": true,
+          "id": 625930,
+          "name": "Harry Melnikoff",
+          "resource_url": "https://api.discogs.com/artists/625930"
+        },
+        {
+          "active": true,
+          "id": 639960,
+          "name": "Bronislaw Gimpel",
+          "resource_url": "https://api.discogs.com/artists/639960"
+        },
+        {
+          "active": false,
+          "id": 639963,
+          "name": "Frank Brieff",
+          "resource_url": "https://api.discogs.com/artists/639963"
+        },
+        {
+          "active": true,
+          "id": 752428,
+          "name": "Stanley Webb",
+          "resource_url": "https://api.discogs.com/artists/752428"
+        },
+        {
+          "active": true,
+          "id": 753316,
+          "name": "Sam Rand",
+          "resource_url": "https://api.discogs.com/artists/753316"
+        },
+        {
+          "active": true,
+          "id": 753333,
+          "name": "Dave Uchitel",
+          "resource_url": "https://api.discogs.com/artists/753333"
+        },
+        {
+          "active": true,
+          "id": 753341,
+          "name": "Zelly Smirnoff",
+          "resource_url": "https://api.discogs.com/artists/753341"
+        },
+        {
+          "active": true,
+          "id": 753347,
+          "name": "Wallace McManus",
+          "resource_url": "https://api.discogs.com/artists/753347"
+        },
+        {
+          "active": true,
+          "id": 753353,
+          "name": "Sylvan Shulman",
+          "resource_url": "https://api.discogs.com/artists/753353"
+        },
+        {
+          "active": true,
+          "id": 753357,
+          "name": "Stan Karpenia",
+          "resource_url": "https://api.discogs.com/artists/753357"
+        },
+        {
+          "active": true,
+          "id": 753360,
+          "name": "Ted Blume",
+          "resource_url": "https://api.discogs.com/artists/753360"
+        },
+        {
+          "active": true,
+          "id": 1004136,
+          "name": "Verlye Mills",
+          "resource_url": "https://api.discogs.com/artists/1004136"
+        },
+        {
+          "active": true,
+          "id": 1025548,
+          "name": "Frank Miller (3)",
+          "resource_url": "https://api.discogs.com/artists/1025548"
+        },
+        {
+          "active": true,
+          "id": 1273144,
+          "name": "Walter Yost",
+          "resource_url": "https://api.discogs.com/artists/1273144"
+        },
+        {
+          "active": true,
+          "id": 1318609,
+          "name": "Edwin C. Brown",
+          "resource_url": "https://api.discogs.com/artists/1318609"
+        },
+        {
+          "active": true,
+          "id": 1762011,
+          "name": "Howard Kay",
+          "resource_url": "https://api.discogs.com/artists/1762011"
+        },
+        {
+          "active": true,
+          "id": 2893492,
+          "name": "Isadore Zir",
+          "resource_url": "https://api.discogs.com/artists/2893492"
+        }
+      ],
       "name": "Charlie Parker With Strings",
-      "namevariations": [],
+      "namevariations": [
+        "C.Parker With Strings",
+        "Charlie Parker",
+        "Charlie Parker & Strings",
+        "Charlie Parker And Strings",
+        "Charlie Parker And The Strings",
+        "Charlie Parker With Strings (Strings & Big Band)",
+        "Charlie Parker/Strings",
+        "Parker With Strings"
+      ],
       "profile": "",
-      "raw_data": {
-        "id": "753336",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/753336"
-      },
+      "releases_url": "https://api.discogs.com/artists/753336/releases",
       "resource_url": "https://api.discogs.com/artists/753336",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/753336",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/753336-Charlie-Parker-With-Strings"
+    },
+    "identity": {
+      "musicbrainz_id": "c7356af9-9ea6-4a78-a55b-c73775716312",
+      "resolved_at": "2026-10-22T14:05:43.366736",
+      "wikidata_id": null,
+      "wikipedia_title": null
+    },
+    "lastfm": "ArtistLastFmData(name='Charlie Parker with Strings', url='https://www.last.fm/music/Charlie+Parker+with+Strings', mbid='c7356af9-9ea6-4a78-a55b-c73775716312', listeners=1658, playcount=15097, bio_summary='<a href=\"https://www.last.fm/music/Charlie+Parker+with+Strings\">Read more on Last.fm</a>', bio_content=None, tags=['swing', 'heart', 'be bop'], similar_artists=[{'name': \"Charlie Parker's New Stars\", 'url': 'https://www.last.fm/music/Charlie+Parker%27s+New+Stars'}, {'name': 'The Milt Jackson Quartet', 'url': 'https://www.last.fm/music/The+Milt+Jackson+Quartet'}, {'name': 'Slim Gaillard & His Orchestra', 'url': 'https://www.last.fm/music/Slim+Gaillard+&+His+Orchestra'}, {'name': 'Teddy Wilson and His Orchestra', 'url': 'https://www.last.fm/music/Teddy+Wilson+and+His+Orchestra'}, {'name': 'Duke Ellington & His Washingtonians', 'url': 'https://www.last.fm/music/Duke+Ellington+&+His+Washingtonians'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Charlie Parker with Strings', 'mbid': 'c7356af9-9ea6-4a78-a55b-c73775716312', 'url': 'https://www.last.fm/music/Charlie+Parker+with+Strings', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1658', 'playcount': '15097'}, 'similar': {'artist': [{'name': \"Charlie Parker's New Stars\", 'url': 'https://www.last.fm/music/Charlie+Parker%27s+New+Stars', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Milt Jackson Quartet', 'url': 'https://www.last.fm/music/The+Milt+Jackson+Quartet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Slim Gaillard & His Orchestra', 'url': 'https://www.last.fm/music/Slim+Gaillard+&+His+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Teddy Wilson and His Orchestra', 'url': 'https://www.last.fm/music/Teddy+Wilson+and+His+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Duke Ellington & His Washingtonians', 'url': 'https://www.last.fm/music/Duke+Ellington+&+His+Washingtonians', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'swing', 'url': 'https://www.last.fm/tag/swing'}, {'name': 'heart', 'url': 'https://www.last.fm/tag/heart'}, {'name': 'be bop', 'url': 'https://www.last.fm/tag/be+bop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Charlie+Parker+with+Strings/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Charlie+Parker+with+Strings\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='7Bot6qP5hA8VK9Rzk5PP4q', url='https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q', name='Charlie Parker With Strings', popularity=3, followers=2331, genres=['bebop', 'cool jazz', 'free jazz', 'jazz', 'hard bop'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b27315c20d8f776abdda4ea0357d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0215c20d8f776abdda4ea0357d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485115c20d8f776abdda4ea0357d', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q'}, 'followers': {'href': None, 'total': 2331}, 'genres': ['bebop', 'cool jazz', 'free jazz', 'jazz', 'hard bop'], 'href': 'https://api.spotify.com/v1/artists/7Bot6qP5hA8VK9Rzk5PP4q', 'id': '7Bot6qP5hA8VK9Rzk5PP4q', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27315c20d8f776abdda4ea0357d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0215c20d8f776abdda4ea0357d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485115c20d8f776abdda4ea0357d', 'height': 64, 'width': 64}], 'name': 'Charlie Parker With Strings', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:7Bot6qP5hA8VK9Rzk5PP4q'})",
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "Bird, Yardbird",
+      "biography_de": "Charlie „Bird“ Parker (* 29. August 1920 als Charles Parker Jr. in Kansas City, Kansas; † 12. März 1955 in New York City) war ein US-amerikanischer Musiker (Altsaxophonist und Komponist), der als einer der Schöpfer und herausragenden Interpreten des Bebop zu einem wichtigen und einflussreichen Musiker in der Geschichte des Jazz wurde. Seine Musik „hat den Jazz beeinflusst wie vor ihm nur die von Louis Armstrong, wie nach ihm die von John Coltrane und Miles Davis“.\n\nAb 1942 wirkte er an den legendären Jamsessions im Monroe’s und im Minton’s Playhouse in Harlem mit, wo er gemeinsam mit Dizzy Gillespie und Thelonious Monk entscheidende Grundlagen für den Modern Jazz legte. Er spielte dabei, für damalige Verhältnisse, kühne Dissonanzen und rhythmische Verschiebungen, die aber allesamt von seinem Gefühl für melodische Schlüssigkeit geprägt waren. Auch in sehr schnellen Stücken vermochte er prägnant und stimmig mit hoher Intensität zu improvisieren. Anfang der 1950er-Jahre verschlechterte sich der gesundheitliche Zustand des Saxophonisten, der seit seiner Jugend drogensüchtig war. Seinen letzten Auftritt hatte er am 5. März 1955 in dem nach ihm benannten New Yorker Jazzclub Birdland. \n(Wikipedia)",
+      "biography_en": "Charles \"Charlie\" Parker, Jr. (August 29, 1920 – March 12, 1955), also known as \"Yardbird\" and \"Bird\", was an American jazz saxophonist and composer. Miles Davis once said, \"You can tell the history of jazz in four words: Louis Armstrong. Charlie Parker.\"\nParker acquired the nickname \"Yardbird\" early in his career and the shortened form, \"Bird\", which continued to be used for the rest of his life, inspired the titles of a number of Parker compositions, such as \"Yardbird Suite\", \"Ornithology\", \"Bird Gets the Worm\", and \"Bird of Paradise.\"\nParker was a highly influential jazz soloist and a leading figure in the development of bebop, a form of jazz characterized by fast tempos, virtuosic technique, and improvisation. Parker introduced revolutionary harmonic ideas, including rapid passing chords, new variants of altered chords, and chord substitutions. His tone ranged from clean and penetrating to sweet and somber. Many Parker recordings demonstrate his virtuoso playing style and complex melodic lines, sometimes combining jazz with other musical genres, including blues, Latin, and classical.\nAs a teenager, Parker developed a morphine addiction while in the hospital, after an automobile accident, and subsequently became addicted to heroin. He continued using heroin throughout his life, which ultimately contributed to his death at the age of 34.\nParker was an icon for the hipster subculture and later the Beat Generation, personifying the jazz musician as an uncompromising artist and intellectual, rather than an entertainer.",
+      "biography_es": "Charles Christopher Parker Jr. (Kansas City, 29 de agosto de 1920 - Nueva York, 12 de marzo de 1955), conocido como Charlie Parker, fue un saxofonista y compositor estadounidense de jazz. Apodado Bird, es considerado uno de los mejores intérpretes de saxofón alto de la historia de ese género musical, siendo una de las figuras claves en su evolución y uno de sus artistas más legendarios y admirados.\n\nJunto con Bud Powell, Dizzy Gillespie y otros, es uno de los iniciadores del bebop. Su estilo rompe con el del swing y se basa en la improvisación sobre una melodía modificando los acordes, creando así nuevas variaciones sobre la estructura de los temas. En este sentido, aparte de su obra interpretativa, Parker es autor de varios temas que se han convertido en estándares del jazz: Anthropology, Ornithology, Scrapple From the Apple, Ko Ko, Now's the Time y Parker's Mood.",
+      "biography_fr": "Charlie Parker Jr, né Charles Christopher Parker le 29 août 1920 à Kansas City et mort le 12 mars 1955 à New York, est un saxophoniste alto américain. Parker, aussi surnommé Bird, est considéré comme l'un des créateurs et interprètes exceptionnels du style be-bop. Avec Louis Armstrong et Duke Ellington il est l'un des musiciens les plus importants et influents de l'histoire du jazz.\n\nDans les années 1940, Charlie Parker avec Dizzy Gillespie et Thelonious Monk ont assis les premiers éléments du jazz moderne en participant activement à l'émergence du be-bop, une forme de jazz caractérisée par des tempos rapides, une grande technicité et une improvisation basée sur la structure harmonique. Les nouvelles approches proposées par Parker sur la mélodie, le rythme et l'harmonie ont considérablement influencé les musiciens contemporains. De nombreux morceaux de Parker sont devenus des standards de jazz comme Ornithology ou Confirmation. À partir du début des années 1950 la santé du saxophoniste décline fortement, principalement en raison de sa dépendance aux drogues et à l'alcool initiée dans sa jeunesse. Il décède en mars 1955 à seulement 34 ans.",
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": "Charles Parker, Jr. (29 de agosto de 1920 – 12 de março de 1955) foi um saxofonista estado-unidense de jazz e compositor. No início da sua carreira Parker foi apelidado de Yardbird; esse apelido mais tarde foi encurtado para Bird e permaneceu como o apelido de Parker para o resto da sua vida.\n\nParker é comumente considerado um dos melhores músicos de jazz. Em termos de influência e impacto, sua contribuição foi tão significativa que Charles Mingus comentou que se Bird fosse vivo hoje, ele poderia pensar que estava vivendo em uma parede de espelhos. O talento de Bird é comparado, quase sem argumentos, com músicos lendários tais como Louis Armstrong e Duke Ellington. Sua reputação como um dos melhores saxofonistas é tal que alguns críticos dizem que ele é insuperável; o crítico de jazz Scott Yanow fala por muitos fãs do jazz e músicos, quando sugere que \"Parker foi indubitavelmente o melhor saxofonista de todos os tempos.\"\n\nFigura fundadora do bebop, a forma inovadora de Parker para melodia, ritmo e harmonia tem exercido uma incalculável influência no jazz. Varias canções de Parker tornaram-se standards do repertório do jazz, e inúmeros músicos têm estudado a música de Parker e absorvido elementos do seu estilo.\n\nParker tornou-se um ícone para a geração do Beat, e foi uma figura-chave no desenvolvimento conceptivo do jazz como um artista descompromissado e intelectual, ao invés de apenas um entretenedor popular. Por várias vezes, Parker fundiu o jazz com outros estilos musicais, do clássico (buscando estudar com Edgard Varese e Stefan Wolpe) à música latina (gravando com Machito), abrindo um caminho seguido mais tarde por outros.\n\nConsumido pelo álcool e pelas drogas, Parker teve uma existência breve e trágica, que inspirou criadores como o escritor argentino Julio Cortázar (que se inspirou nele para delinear o personagem central do conto \"O Perseguidor\") e o cineasta Clint Eastwood (que recebeu seu primeiro Globo de Ouro com o filme \"Bird\", de 1988, estrelado por Forest Whitaker, o qual, por sua vez, levou o prêmio de melhor ator no Festival de Cannes graças a este trabalho).\n\nA biografia de Parker contabilizou duas tentativas de suicídio e uma longa internação em um sanatório, antes de chegar ao fim, aos 34 anos -o estrago causado em seu corpo pela vida desregrada era tão grande que o legista atribuiu ao morto a idade de 65 anos. Faleceu em 12 de março de 1955. Encontra-se sepultado no Cemitério Lincoln, Kansas City, Missouri nos Estados Unidos.",
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "1920",
+      "country": "Kansas City, Kansas, USA",
+      "country_code": "US",
+      "died_year": "1955",
+      "disbanded": true,
+      "facebook": "",
+      "formed_year": null,
+      "gender": "Male",
+      "genre": "Jazz",
+      "id": "116235",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rytptv1455052016.jpg",
+          "width": 1000
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/sqtwuu1455051495.jpg",
+          "width": 1920
+        },
+        {
+          "height": 1080,
+          "resource_url": null,
+          "type": "fanart",
+          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/vqpqup1398988587.jpg",
+          "width": 1920
+        },
+        {
+          "height": 185,
+          "resource_url": null,
+          "type": "banner",
+          "url": "https://www.theaudiodb.com/images/media/artist/banner/parker-charlie-5ea84ad4b633e.jpg",
+          "width": 1000
+        },
+        {
+          "height": 155,
+          "resource_url": null,
+          "type": "logo",
+          "url": "https://www.theaudiodb.com/images/media/artist/logo/parker-charlie-4fe64865aa0fc.png",
+          "width": 400
+        }
+      ],
+      "last_fm_chart": null,
+      "members": "1",
+      "mood": "",
+      "music_videos": null,
+      "musicbrainz_id": "c7356af9-9ea6-4a78-a55b-c73775716312",
+      "name": "Charlie Parker",
+      "raw_data": {},
+      "style": "Jazz",
+      "twitter": "1",
+      "website": "www.cmgww.com/music/parker/home.html"
+    },
+    "theaudiodb_videos": []
+  },
+  "services": {
+    "apple_music": "ArtistAppleMusicData(id='1632132757', url='https://music.apple.com/gb/artist/charlie-parker-with-strings/1632132757', name='Charlie Parker with Strings', artwork_url='', genres=[], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1632132757', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1632132757', 'attributes': {'name': 'Charlie Parker with Strings', 'url': 'https://music.apple.com/gb/artist/charlie-parker-with-strings/1632132757', 'genreNames': []}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1632132757/albums', 'data': []}}})",
+    "discogs": {
+      "data_quality": "Correct",
+      "id": 753336,
+      "members": [
+        {
+          "active": true,
+          "id": 10589,
+          "name": "Candido",
+          "resource_url": "https://api.discogs.com/artists/10589"
+        },
+        {
+          "active": true,
+          "id": 57620,
+          "name": "Buddy Rich",
+          "resource_url": "https://api.discogs.com/artists/57620"
+        },
+        {
+          "active": true,
+          "id": 75617,
+          "name": "Charlie Parker",
+          "resource_url": "https://api.discogs.com/artists/75617"
+        },
+        {
+          "active": true,
+          "id": 251780,
+          "name": "Tommy Potter",
+          "resource_url": "https://api.discogs.com/artists/251780"
+        },
+        {
+          "active": true,
+          "id": 252998,
+          "name": "Ray Brown",
+          "resource_url": "https://api.discogs.com/artists/252998"
+        },
+        {
+          "active": true,
+          "id": 254394,
+          "name": "Oscar Peterson",
+          "resource_url": "https://api.discogs.com/artists/254394"
+        },
+        {
+          "active": true,
+          "id": 254895,
+          "name": "Bernie Privin",
+          "resource_url": "https://api.discogs.com/artists/254895"
+        },
+        {
+          "active": true,
+          "id": 255556,
+          "name": "Roy Haynes",
+          "resource_url": "https://api.discogs.com/artists/255556"
+        },
+        {
+          "active": true,
+          "id": 259078,
+          "name": "Al Haig",
+          "resource_url": "https://api.discogs.com/artists/259078"
+        },
+        {
+          "active": true,
+          "id": 260718,
+          "name": "Danny Bank",
+          "resource_url": "https://api.discogs.com/artists/260718"
+        },
+        {
+          "active": true,
+          "id": 262585,
+          "name": "Walter Bishop, Jr.",
+          "resource_url": "https://api.discogs.com/artists/262585"
+        },
+        {
+          "active": true,
+          "id": 263096,
+          "name": "Don Lamond",
+          "resource_url": "https://api.discogs.com/artists/263096"
+        },
+        {
+          "active": true,
+          "id": 265641,
+          "name": "Flip Phillips",
+          "resource_url": "https://api.discogs.com/artists/265641"
+        },
+        {
+          "active": true,
+          "id": 272665,
+          "name": "Freddie Green",
+          "resource_url": "https://api.discogs.com/artists/272665"
+        },
+        {
+          "active": true,
+          "id": 274980,
+          "name": "Maurice Brown",
+          "resource_url": "https://api.discogs.com/artists/274980"
+        },
+        {
+          "active": true,
+          "id": 277950,
+          "name": "Stan Webb",
+          "resource_url": "https://api.discogs.com/artists/277950"
+        },
+        {
+          "active": true,
+          "id": 277954,
+          "name": "Art Ryerson",
+          "resource_url": "https://api.discogs.com/artists/277954"
+        },
+        {
+          "active": true,
+          "id": 277958,
+          "name": "Art Drelinger",
+          "resource_url": "https://api.discogs.com/artists/277958"
+        },
+        {
+          "active": true,
+          "id": 277964,
+          "name": "Bernie Leighton",
+          "resource_url": "https://api.discogs.com/artists/277964"
+        },
+        {
+          "active": true,
+          "id": 312526,
+          "name": "Lou McGarity",
+          "resource_url": "https://api.discogs.com/artists/312526"
+        },
+        {
+          "active": true,
+          "id": 312553,
+          "name": "Bill Harris",
+          "resource_url": "https://api.discogs.com/artists/312553"
+        },
+        {
+          "active": true,
+          "id": 313039,
+          "name": "Jimmy Maxwell",
+          "resource_url": "https://api.discogs.com/artists/313039"
+        },
+        {
+          "active": true,
+          "id": 328323,
+          "name": "Lou Stein",
+          "resource_url": "https://api.discogs.com/artists/328323"
+        },
+        {
+          "active": true,
+          "id": 335520,
+          "name": "Tom Mace",
+          "resource_url": "https://api.discogs.com/artists/335520"
+        },
+        {
+          "active": true,
+          "id": 335565,
+          "name": "Bob Haggart",
+          "resource_url": "https://api.discogs.com/artists/335565"
+        },
+        {
+          "active": true,
+          "id": 335591,
+          "name": "Murray Williams",
+          "resource_url": "https://api.discogs.com/artists/335591"
+        },
+        {
+          "active": true,
+          "id": 335630,
+          "name": "Will Bradley",
+          "resource_url": "https://api.discogs.com/artists/335630"
+        },
+        {
+          "active": true,
+          "id": 335652,
+          "name": "Toots Mondello",
+          "resource_url": "https://api.discogs.com/artists/335652"
+        },
+        {
+          "active": true,
+          "id": 336809,
+          "name": "Sam Caplan",
+          "resource_url": "https://api.discogs.com/artists/336809"
+        },
+        {
+          "active": true,
+          "id": 339676,
+          "name": "Chris Griffin (3)",
+          "resource_url": "https://api.discogs.com/artists/339676"
+        },
+        {
+          "active": true,
+          "id": 361544,
+          "name": "Mitch Miller",
+          "resource_url": "https://api.discogs.com/artists/361544"
+        },
+        {
+          "active": true,
+          "id": 372550,
+          "name": "Hank Ross",
+          "resource_url": "https://api.discogs.com/artists/372550"
+        },
+        {
+          "active": true,
+          "id": 372551,
+          "name": "Harry Terrill",
+          "resource_url": "https://api.discogs.com/artists/372551"
+        },
+        {
+          "active": true,
+          "id": 372556,
+          "name": "Carl Poole",
+          "resource_url": "https://api.discogs.com/artists/372556"
+        },
+        {
+          "active": true,
+          "id": 372559,
+          "name": "Bart Varsalona",
+          "resource_url": "https://api.discogs.com/artists/372559"
+        },
+        {
+          "active": true,
+          "id": 386765,
+          "name": "Jack Zayde",
+          "resource_url": "https://api.discogs.com/artists/386765"
+        },
+        {
+          "active": true,
+          "id": 386766,
+          "name": "Max Hollander",
+          "resource_url": "https://api.discogs.com/artists/386766"
+        },
+        {
+          "active": true,
+          "id": 430825,
+          "name": "Stan Freeman",
+          "resource_url": "https://api.discogs.com/artists/430825"
+        },
+        {
+          "active": true,
+          "id": 430835,
+          "name": "Milt Lomask",
+          "resource_url": "https://api.discogs.com/artists/430835"
+        },
+        {
+          "active": false,
+          "id": 430838,
+          "name": "Myor Rosen",
+          "resource_url": "https://api.discogs.com/artists/430838"
+        },
+        {
+          "active": true,
+          "id": 552915,
+          "name": "Joseph Singer",
+          "resource_url": "https://api.discogs.com/artists/552915"
+        },
+        {
+          "active": true,
+          "id": 625930,
+          "name": "Harry Melnikoff",
+          "resource_url": "https://api.discogs.com/artists/625930"
+        },
+        {
+          "active": true,
+          "id": 639960,
+          "name": "Bronislaw Gimpel",
+          "resource_url": "https://api.discogs.com/artists/639960"
+        },
+        {
+          "active": false,
+          "id": 639963,
+          "name": "Frank Brieff",
+          "resource_url": "https://api.discogs.com/artists/639963"
+        },
+        {
+          "active": true,
+          "id": 752428,
+          "name": "Stanley Webb",
+          "resource_url": "https://api.discogs.com/artists/752428"
+        },
+        {
+          "active": true,
+          "id": 753316,
+          "name": "Sam Rand",
+          "resource_url": "https://api.discogs.com/artists/753316"
+        },
+        {
+          "active": true,
+          "id": 753333,
+          "name": "Dave Uchitel",
+          "resource_url": "https://api.discogs.com/artists/753333"
+        },
+        {
+          "active": true,
+          "id": 753341,
+          "name": "Zelly Smirnoff",
+          "resource_url": "https://api.discogs.com/artists/753341"
+        },
+        {
+          "active": true,
+          "id": 753347,
+          "name": "Wallace McManus",
+          "resource_url": "https://api.discogs.com/artists/753347"
+        },
+        {
+          "active": true,
+          "id": 753353,
+          "name": "Sylvan Shulman",
+          "resource_url": "https://api.discogs.com/artists/753353"
+        },
+        {
+          "active": true,
+          "id": 753357,
+          "name": "Stan Karpenia",
+          "resource_url": "https://api.discogs.com/artists/753357"
+        },
+        {
+          "active": true,
+          "id": 753360,
+          "name": "Ted Blume",
+          "resource_url": "https://api.discogs.com/artists/753360"
+        },
+        {
+          "active": true,
+          "id": 1004136,
+          "name": "Verlye Mills",
+          "resource_url": "https://api.discogs.com/artists/1004136"
+        },
+        {
+          "active": true,
+          "id": 1025548,
+          "name": "Frank Miller (3)",
+          "resource_url": "https://api.discogs.com/artists/1025548"
+        },
+        {
+          "active": true,
+          "id": 1273144,
+          "name": "Walter Yost",
+          "resource_url": "https://api.discogs.com/artists/1273144"
+        },
+        {
+          "active": true,
+          "id": 1318609,
+          "name": "Edwin C. Brown",
+          "resource_url": "https://api.discogs.com/artists/1318609"
+        },
+        {
+          "active": true,
+          "id": 1762011,
+          "name": "Howard Kay",
+          "resource_url": "https://api.discogs.com/artists/1762011"
+        },
+        {
+          "active": true,
+          "id": 2893492,
+          "name": "Isadore Zir",
+          "resource_url": "https://api.discogs.com/artists/2893492"
+        }
+      ],
+      "name": "Charlie Parker With Strings",
+      "namevariations": [
+        "C.Parker With Strings",
+        "Charlie Parker",
+        "Charlie Parker & Strings",
+        "Charlie Parker And Strings",
+        "Charlie Parker And The Strings",
+        "Charlie Parker With Strings (Strings & Big Band)",
+        "Charlie Parker/Strings",
+        "Parker With Strings"
+      ],
+      "profile": "",
+      "releases_url": "https://api.discogs.com/artists/753336/releases",
+      "resource_url": "https://api.discogs.com/artists/753336",
+      "uri": "https://www.discogs.com/artist/753336-Charlie-Parker-With-Strings"
     },
     "lastfm": "ArtistLastFmData(name='Charlie Parker with Strings', url='https://www.last.fm/music/Charlie+Parker+with+Strings', mbid='c7356af9-9ea6-4a78-a55b-c73775716312', listeners=1658, playcount=15097, bio_summary='<a href=\"https://www.last.fm/music/Charlie+Parker+with+Strings\">Read more on Last.fm</a>', bio_content=None, tags=['swing', 'heart', 'be bop'], similar_artists=[{'name': \"Charlie Parker's New Stars\", 'url': 'https://www.last.fm/music/Charlie+Parker%27s+New+Stars'}, {'name': 'The Milt Jackson Quartet', 'url': 'https://www.last.fm/music/The+Milt+Jackson+Quartet'}, {'name': 'Slim Gaillard & His Orchestra', 'url': 'https://www.last.fm/music/Slim+Gaillard+&+His+Orchestra'}, {'name': 'Teddy Wilson and His Orchestra', 'url': 'https://www.last.fm/music/Teddy+Wilson+and+His+Orchestra'}, {'name': 'Duke Ellington & His Washingtonians', 'url': 'https://www.last.fm/music/Duke+Ellington+&+His+Washingtonians'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Charlie Parker with Strings', 'mbid': 'c7356af9-9ea6-4a78-a55b-c73775716312', 'url': 'https://www.last.fm/music/Charlie+Parker+with+Strings', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '1658', 'playcount': '15097'}, 'similar': {'artist': [{'name': \"Charlie Parker's New Stars\", 'url': 'https://www.last.fm/music/Charlie+Parker%27s+New+Stars', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Milt Jackson Quartet', 'url': 'https://www.last.fm/music/The+Milt+Jackson+Quartet', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Slim Gaillard & His Orchestra', 'url': 'https://www.last.fm/music/Slim+Gaillard+&+His+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Teddy Wilson and His Orchestra', 'url': 'https://www.last.fm/music/Teddy+Wilson+and+His+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Duke Ellington & His Washingtonians', 'url': 'https://www.last.fm/music/Duke+Ellington+&+His+Washingtonians', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'swing', 'url': 'https://www.last.fm/tag/swing'}, {'name': 'heart', 'url': 'https://www.last.fm/tag/heart'}, {'name': 'be bop', 'url': 'https://www.last.fm/tag/be+bop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Charlie+Parker+with+Strings/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Charlie+Parker+with+Strings\">Read more on Last.fm</a>', 'content': ''}}})",
     "spotify": "ArtistSpotifyData(id='7Bot6qP5hA8VK9Rzk5PP4q', url='https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q', name='Charlie Parker With Strings', popularity=3, followers=2331, genres=['bebop', 'cool jazz', 'free jazz', 'jazz', 'hard bop'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b27315c20d8f776abdda4ea0357d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0215c20d8f776abdda4ea0357d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485115c20d8f776abdda4ea0357d', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q'}, 'followers': {'href': None, 'total': 2331}, 'genres': ['bebop', 'cool jazz', 'free jazz', 'jazz', 'hard bop'], 'href': 'https://api.spotify.com/v1/artists/7Bot6qP5hA8VK9Rzk5PP4q', 'id': '7Bot6qP5hA8VK9Rzk5PP4q', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27315c20d8f776abdda4ea0357d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0215c20d8f776abdda4ea0357d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485115c20d8f776abdda4ea0357d', 'height': 64, 'width': 64}], 'name': 'Charlie Parker With Strings', 'popularity': 3, 'type': 'artist', 'uri': 'spotify:artist:7Bot6qP5hA8VK9Rzk5PP4q'})",
@@ -209,201 +1012,8 @@
       "website": "www.cmgww.com/music/parker/home.html"
     }
   },
-  "services": {
-    "apple_music": {
-      "artwork_url": "",
-      "editorial_notes": null,
-      "genres": [],
-      "id": "1632132757",
-      "name": "Charlie Parker with Strings",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/charlie-parker-with-strings/1632132757"
-    },
-    "discogs": {
-      "cover_image": "",
-      "id": "753336",
-      "images": [],
-      "members": [],
-      "name": "Charlie Parker With Strings",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "753336",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/753336"
-      },
-      "resource_url": "https://api.discogs.com/artists/753336",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/753336",
-      "urls": []
-    },
-    "lastfm": {
-      "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Charlie+Parker+with+Strings\">Read more on Last.fm</a>",
-      "images": [
-        {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-        }
-      ],
-      "listeners": 1658,
-      "mbid": "c7356af9-9ea6-4a78-a55b-c73775716312",
-      "name": "Charlie Parker with Strings",
-      "playcount": 15097,
-      "similar_artists": [
-        {
-          "name": "Charlie Parker's New Stars",
-          "url": "https://www.last.fm/music/Charlie+Parker%27s+New+Stars"
-        },
-        {
-          "name": "The Milt Jackson Quartet",
-          "url": "https://www.last.fm/music/The+Milt+Jackson+Quartet"
-        },
-        {
-          "name": "Slim Gaillard & His Orchestra",
-          "url": "https://www.last.fm/music/Slim+Gaillard+&+His+Orchestra"
-        },
-        {
-          "name": "Teddy Wilson and His Orchestra",
-          "url": "https://www.last.fm/music/Teddy+Wilson+and+His+Orchestra"
-        },
-        {
-          "name": "Duke Ellington & His Washingtonians",
-          "url": "https://www.last.fm/music/Duke+Ellington+&+His+Washingtonians"
-        }
-      ],
-      "tags": [
-        "swing",
-        "heart",
-        "be bop"
-      ],
-      "url": "https://www.last.fm/music/Charlie+Parker+with+Strings"
-    },
-    "spotify": {
-      "followers": 2331,
-      "genres": [
-        "bebop",
-        "cool jazz",
-        "free jazz",
-        "jazz",
-        "hard bop"
-      ],
-      "id": "7Bot6qP5hA8VK9Rzk5PP4q",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27315c20d8f776abdda4ea0357d",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0215c20d8f776abdda4ea0357d",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485115c20d8f776abdda4ea0357d",
-          "width": 64
-        }
-      ],
-      "name": "Charlie Parker With Strings",
-      "popularity": 3,
-      "url": "https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q"
-    },
-    "theaudiodb": {
-      "albums": null,
-      "alternate_names": "Bird, Yardbird",
-      "biography_de": "Charlie „Bird“ Parker (* 29. August 1920 als Charles Parker Jr. in Kansas City, Kansas; † 12. März 1955 in New York City) war ein US-amerikanischer Musiker (Altsaxophonist und Komponist), der als einer der Schöpfer und herausragenden Interpreten des Bebop zu einem wichtigen und einflussreichen Musiker in der Geschichte des Jazz wurde. Seine Musik „hat den Jazz beeinflusst wie vor ihm nur die von Louis Armstrong, wie nach ihm die von John Coltrane und Miles Davis“.\n\nAb 1942 wirkte er an den legendären Jamsessions im Monroe’s und im Minton’s Playhouse in Harlem mit, wo er gemeinsam mit Dizzy Gillespie und Thelonious Monk entscheidende Grundlagen für den Modern Jazz legte. Er spielte dabei, für damalige Verhältnisse, kühne Dissonanzen und rhythmische Verschiebungen, die aber allesamt von seinem Gefühl für melodische Schlüssigkeit geprägt waren. Auch in sehr schnellen Stücken vermochte er prägnant und stimmig mit hoher Intensität zu improvisieren. Anfang der 1950er-Jahre verschlechterte sich der gesundheitliche Zustand des Saxophonisten, der seit seiner Jugend drogensüchtig war. Seinen letzten Auftritt hatte er am 5. März 1955 in dem nach ihm benannten New Yorker Jazzclub Birdland. \n(Wikipedia)",
-      "biography_en": "Charles \"Charlie\" Parker, Jr. (August 29, 1920 – March 12, 1955), also known as \"Yardbird\" and \"Bird\", was an American jazz saxophonist and composer. Miles Davis once said, \"You can tell the history of jazz in four words: Louis Armstrong. Charlie Parker.\"\nParker acquired the nickname \"Yardbird\" early in his career and the shortened form, \"Bird\", which continued to be used for the rest of his life, inspired the titles of a number of Parker compositions, such as \"Yardbird Suite\", \"Ornithology\", \"Bird Gets the Worm\", and \"Bird of Paradise.\"\nParker was a highly influential jazz soloist and a leading figure in the development of bebop, a form of jazz characterized by fast tempos, virtuosic technique, and improvisation. Parker introduced revolutionary harmonic ideas, including rapid passing chords, new variants of altered chords, and chord substitutions. His tone ranged from clean and penetrating to sweet and somber. Many Parker recordings demonstrate his virtuoso playing style and complex melodic lines, sometimes combining jazz with other musical genres, including blues, Latin, and classical.\nAs a teenager, Parker developed a morphine addiction while in the hospital, after an automobile accident, and subsequently became addicted to heroin. He continued using heroin throughout his life, which ultimately contributed to his death at the age of 34.\nParker was an icon for the hipster subculture and later the Beat Generation, personifying the jazz musician as an uncompromising artist and intellectual, rather than an entertainer.",
-      "biography_es": "Charles Christopher Parker Jr. (Kansas City, 29 de agosto de 1920 - Nueva York, 12 de marzo de 1955), conocido como Charlie Parker, fue un saxofonista y compositor estadounidense de jazz. Apodado Bird, es considerado uno de los mejores intérpretes de saxofón alto de la historia de ese género musical, siendo una de las figuras claves en su evolución y uno de sus artistas más legendarios y admirados.\n\nJunto con Bud Powell, Dizzy Gillespie y otros, es uno de los iniciadores del bebop. Su estilo rompe con el del swing y se basa en la improvisación sobre una melodía modificando los acordes, creando así nuevas variaciones sobre la estructura de los temas. En este sentido, aparte de su obra interpretativa, Parker es autor de varios temas que se han convertido en estándares del jazz: Anthropology, Ornithology, Scrapple From the Apple, Ko Ko, Now's the Time y Parker's Mood.",
-      "biography_fr": "Charlie Parker Jr, né Charles Christopher Parker le 29 août 1920 à Kansas City et mort le 12 mars 1955 à New York, est un saxophoniste alto américain. Parker, aussi surnommé Bird, est considéré comme l'un des créateurs et interprètes exceptionnels du style be-bop. Avec Louis Armstrong et Duke Ellington il est l'un des musiciens les plus importants et influents de l'histoire du jazz.\n\nDans les années 1940, Charlie Parker avec Dizzy Gillespie et Thelonious Monk ont assis les premiers éléments du jazz moderne en participant activement à l'émergence du be-bop, une forme de jazz caractérisée par des tempos rapides, une grande technicité et une improvisation basée sur la structure harmonique. Les nouvelles approches proposées par Parker sur la mélodie, le rythme et l'harmonie ont considérablement influencé les musiciens contemporains. De nombreux morceaux de Parker sont devenus des standards de jazz comme Ornithology ou Confirmation. À partir du début des années 1950 la santé du saxophoniste décline fortement, principalement en raison de sa dépendance aux drogues et à l'alcool initiée dans sa jeunesse. Il décède en mars 1955 à seulement 34 ans.",
-      "biography_it": null,
-      "biography_jp": null,
-      "biography_nl": null,
-      "biography_pt": "Charles Parker, Jr. (29 de agosto de 1920 – 12 de março de 1955) foi um saxofonista estado-unidense de jazz e compositor. No início da sua carreira Parker foi apelidado de Yardbird; esse apelido mais tarde foi encurtado para Bird e permaneceu como o apelido de Parker para o resto da sua vida.\n\nParker é comumente considerado um dos melhores músicos de jazz. Em termos de influência e impacto, sua contribuição foi tão significativa que Charles Mingus comentou que se Bird fosse vivo hoje, ele poderia pensar que estava vivendo em uma parede de espelhos. O talento de Bird é comparado, quase sem argumentos, com músicos lendários tais como Louis Armstrong e Duke Ellington. Sua reputação como um dos melhores saxofonistas é tal que alguns críticos dizem que ele é insuperável; o crítico de jazz Scott Yanow fala por muitos fãs do jazz e músicos, quando sugere que \"Parker foi indubitavelmente o melhor saxofonista de todos os tempos.\"\n\nFigura fundadora do bebop, a forma inovadora de Parker para melodia, ritmo e harmonia tem exercido uma incalculável influência no jazz. Varias canções de Parker tornaram-se standards do repertório do jazz, e inúmeros músicos têm estudado a música de Parker e absorvido elementos do seu estilo.\n\nParker tornou-se um ícone para a geração do Beat, e foi uma figura-chave no desenvolvimento conceptivo do jazz como um artista descompromissado e intelectual, ao invés de apenas um entretenedor popular. Por várias vezes, Parker fundiu o jazz com outros estilos musicais, do clássico (buscando estudar com Edgard Varese e Stefan Wolpe) à música latina (gravando com Machito), abrindo um caminho seguido mais tarde por outros.\n\nConsumido pelo álcool e pelas drogas, Parker teve uma existência breve e trágica, que inspirou criadores como o escritor argentino Julio Cortázar (que se inspirou nele para delinear o personagem central do conto \"O Perseguidor\") e o cineasta Clint Eastwood (que recebeu seu primeiro Globo de Ouro com o filme \"Bird\", de 1988, estrelado por Forest Whitaker, o qual, por sua vez, levou o prêmio de melhor ator no Festival de Cannes graças a este trabalho).\n\nA biografia de Parker contabilizou duas tentativas de suicídio e uma longa internação em um sanatório, antes de chegar ao fim, aos 34 anos -o estrago causado em seu corpo pela vida desregrada era tão grande que o legista atribuiu ao morto a idade de 65 anos. Faleceu em 12 de março de 1955. Encontra-se sepultado no Cemitério Lincoln, Kansas City, Missouri nos Estados Unidos.",
-      "biography_ru": null,
-      "biography_se": null,
-      "born_year": "1920",
-      "country": "Kansas City, Kansas, USA",
-      "country_code": "US",
-      "died_year": "1955",
-      "disbanded": true,
-      "facebook": "",
-      "formed_year": null,
-      "gender": "Male",
-      "genre": "Jazz",
-      "id": "116235",
-      "images": [
-        {
-          "height": 1000,
-          "resource_url": null,
-          "type": "artist",
-          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rytptv1455052016.jpg",
-          "width": 1000
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/sqtwuu1455051495.jpg",
-          "width": 1920
-        },
-        {
-          "height": 1080,
-          "resource_url": null,
-          "type": "fanart",
-          "url": "https://r2.theaudiodb.com/images/media/artist/fanart/vqpqup1398988587.jpg",
-          "width": 1920
-        },
-        {
-          "height": 185,
-          "resource_url": null,
-          "type": "banner",
-          "url": "https://www.theaudiodb.com/images/media/artist/banner/parker-charlie-5ea84ad4b633e.jpg",
-          "width": 1000
-        },
-        {
-          "height": 155,
-          "resource_url": null,
-          "type": "logo",
-          "url": "https://www.theaudiodb.com/images/media/artist/logo/parker-charlie-4fe64865aa0fc.png",
-          "width": 400
-        }
-      ],
-      "last_fm_chart": null,
-      "members": "1",
-      "mood": "",
-      "music_videos": null,
-      "musicbrainz_id": "c7356af9-9ea6-4a78-a55b-c73775716312",
-      "name": "Charlie Parker",
-      "raw_data": {},
-      "style": "Jazz",
-      "twitter": "1",
-      "website": "www.cmgww.com/music/parker/home.html"
-    }
-  },
   "spotify_id": "7Bot6qP5hA8VK9Rzk5PP4q",
   "spotify_url": "https://open.spotify.com/artist/7Bot6qP5hA8VK9Rzk5PP4q",
-  "updated_at": "2025-07-08T20:52:01.255314",
+  "updated_at": "2026-10-30T18:37:43.262588",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Charlie_Parker_with_Strings"
 }

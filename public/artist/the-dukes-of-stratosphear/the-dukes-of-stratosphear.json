@@ -107,22 +107,86 @@
   "raw_data": {
     "apple_music": "ArtistAppleMusicData(id='100981540', url='https://music.apple.com/gb/artist/the-dukes-of-stratosphear/100981540', name='The Dukes of Stratosphear', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/92/c4/d5/92c4d53d-3098-9fd2-473f-e6465b644870/00724385073250.rgb.jpg/2000x2000ac.jpg', genres=['Psychedelic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '100981540', 'type': 'artists', 'href': '/v1/catalog/gb/artists/100981540', 'attributes': {'name': 'The Dukes of Stratosphear', 'genreNames': ['Psychedelic'], 'artwork': {'width': 1417, 'height': 1417, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/92/c4/d5/92c4d53d-3098-9fd2-473f-e6465b644870/00724385073250.rgb.jpg/{w}x{h}ac.jpg', 'bgColor': '373795', 'textColor1': 'f5f9fa', 'textColor2': 'f7872b', 'textColor3': 'cfd2e6', 'textColor4': 'd07740'}, 'url': 'https://music.apple.com/gb/artist/the-dukes-of-stratosphear/100981540'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/100981540/albums', 'data': [{'id': '724633224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724633224'}, {'id': '724633224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724633224'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "257163",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 15118,
+          "name": "XTC",
+          "resource_url": "https://api.discogs.com/artists/15118"
+        },
+        {
+          "id": 163843,
+          "name": "The Three Wise Men",
+          "resource_url": "https://api.discogs.com/artists/163843"
+        },
+        {
+          "id": 684885,
+          "name": "The Beech Avenue Boys",
+          "resource_url": "https://api.discogs.com/artists/684885"
+        },
+        {
+          "id": 1312970,
+          "name": "Johnny Japes And His Jesticles",
+          "resource_url": "https://api.discogs.com/artists/1312970"
+        },
+        {
+          "id": 2932706,
+          "name": "Star Park",
+          "resource_url": "https://api.discogs.com/artists/2932706"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 257163,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/UfGVi51jjzNXAT239DHmcZDiObufCWR_ZD8jF7AGOj4/rs:fit/g:sm/q:90/h:600/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/UfGVi51jjzNXAT239DHmcZDiObufCWR_ZD8jF7AGOj4/rs:fit/g:sm/q:90/h:600/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0IhlLu5SS1eCYGq-9OcF63ubCm2kq2PulV3BVNEEeVU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "width": 545
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 229492,
+          "name": "Andy Partridge",
+          "resource_url": "https://api.discogs.com/artists/229492"
+        },
+        {
+          "active": true,
+          "id": 276091,
+          "name": "Dave Gregory",
+          "resource_url": "https://api.discogs.com/artists/276091"
+        },
+        {
+          "active": true,
+          "id": 316130,
+          "name": "Colin Moulding",
+          "resource_url": "https://api.discogs.com/artists/316130"
+        },
+        {
+          "active": true,
+          "id": 1719364,
+          "name": "Ian Gregory (2)",
+          "resource_url": "https://api.discogs.com/artists/1719364"
+        }
+      ],
       "name": "The Dukes Of Stratosphear",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "257163",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/257163"
-      },
+      "namevariations": [
+        "Dukes Of Stratosphear",
+        "Dukes Of The Stratosfear",
+        "Dukes Of The Stratosphear",
+        "The Dukes",
+        "The Dukes Of Stratosphere"
+      ],
+      "profile": "Members: Sir John Johns (Andy Partridge), Red Curtain (Colin Moulding), Lord Cornelius Plum (David Gregory), and E.I.E.I. Owen (Ian Gregory).\r\n\r\nFormed in Swindon, Wiltshire, United Kingdom\r\n",
+      "releases_url": "https://api.discogs.com/artists/257163/releases",
       "resource_url": "https://api.discogs.com/artists/257163",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/257163",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/257163-The-Dukes-Of-Stratosphear",
+      "urls": [
+        "https://en.wikipedia.org/wiki/The_Dukes_of_Stratosphear"
+      ]
     },
     "identity": {
       "musicbrainz_id": "2d1107b1-0d07-44bb-b12d-75c56342bc00",
@@ -182,27 +246,92 @@
       "twitter": "1",
       "website": ""
     },
-    "theaudiodb_videos": []
+    "theaudiodb_videos": [],
+    "wikidata_videos": []
   },
   "services": {
     "apple_music": "ArtistAppleMusicData(id='100981540', url='https://music.apple.com/gb/artist/the-dukes-of-stratosphear/100981540', name='The Dukes of Stratosphear', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/92/c4/d5/92c4d53d-3098-9fd2-473f-e6465b644870/00724385073250.rgb.jpg/2000x2000ac.jpg', genres=['Psychedelic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '100981540', 'type': 'artists', 'href': '/v1/catalog/gb/artists/100981540', 'attributes': {'name': 'The Dukes of Stratosphear', 'genreNames': ['Psychedelic'], 'artwork': {'width': 1417, 'height': 1417, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/92/c4/d5/92c4d53d-3098-9fd2-473f-e6465b644870/00724385073250.rgb.jpg/{w}x{h}ac.jpg', 'bgColor': '373795', 'textColor1': 'f5f9fa', 'textColor2': 'f7872b', 'textColor3': 'cfd2e6', 'textColor4': 'd07740'}, 'url': 'https://music.apple.com/gb/artist/the-dukes-of-stratosphear/100981540'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/100981540/albums', 'data': [{'id': '724633224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724633224'}, {'id': '724633224', 'type': 'albums', 'href': '/v1/catalog/gb/albums/724633224'}]}}})",
     "discogs": {
-      "cover_image": "",
-      "id": "257163",
-      "images": [],
-      "members": [],
+      "aliases": [
+        {
+          "id": 15118,
+          "name": "XTC",
+          "resource_url": "https://api.discogs.com/artists/15118"
+        },
+        {
+          "id": 163843,
+          "name": "The Three Wise Men",
+          "resource_url": "https://api.discogs.com/artists/163843"
+        },
+        {
+          "id": 684885,
+          "name": "The Beech Avenue Boys",
+          "resource_url": "https://api.discogs.com/artists/684885"
+        },
+        {
+          "id": 1312970,
+          "name": "Johnny Japes And His Jesticles",
+          "resource_url": "https://api.discogs.com/artists/1312970"
+        },
+        {
+          "id": 2932706,
+          "name": "Star Park",
+          "resource_url": "https://api.discogs.com/artists/2932706"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "id": 257163,
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/UfGVi51jjzNXAT239DHmcZDiObufCWR_ZD8jF7AGOj4/rs:fit/g:sm/q:90/h:600/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/UfGVi51jjzNXAT239DHmcZDiObufCWR_ZD8jF7AGOj4/rs:fit/g:sm/q:90/h:600/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0IhlLu5SS1eCYGq-9OcF63ubCm2kq2PulV3BVNEEeVU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NzE2/My0xNTM2Njk1MDIx/LTcwMDMuanBlZw.jpeg",
+          "width": 545
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 229492,
+          "name": "Andy Partridge",
+          "resource_url": "https://api.discogs.com/artists/229492"
+        },
+        {
+          "active": true,
+          "id": 276091,
+          "name": "Dave Gregory",
+          "resource_url": "https://api.discogs.com/artists/276091"
+        },
+        {
+          "active": true,
+          "id": 316130,
+          "name": "Colin Moulding",
+          "resource_url": "https://api.discogs.com/artists/316130"
+        },
+        {
+          "active": true,
+          "id": 1719364,
+          "name": "Ian Gregory (2)",
+          "resource_url": "https://api.discogs.com/artists/1719364"
+        }
+      ],
       "name": "The Dukes Of Stratosphear",
-      "namevariations": [],
-      "profile": "",
-      "raw_data": {
-        "id": "257163",
-        "note": "Failed to fetch data automatically",
-        "resource_url": "https://api.discogs.com/artists/257163"
-      },
+      "namevariations": [
+        "Dukes Of Stratosphear",
+        "Dukes Of The Stratosfear",
+        "Dukes Of The Stratosphear",
+        "The Dukes",
+        "The Dukes Of Stratosphere"
+      ],
+      "profile": "Members: Sir John Johns (Andy Partridge), Red Curtain (Colin Moulding), Lord Cornelius Plum (David Gregory), and E.I.E.I. Owen (Ian Gregory).\r\n\r\nFormed in Swindon, Wiltshire, United Kingdom\r\n",
+      "releases_url": "https://api.discogs.com/artists/257163/releases",
       "resource_url": "https://api.discogs.com/artists/257163",
-      "thumb": "",
-      "url": "https://www.discogs.com/artist/257163",
-      "urls": []
+      "uri": "https://www.discogs.com/artist/257163-The-Dukes-Of-Stratosphear",
+      "urls": [
+        "https://en.wikipedia.org/wiki/The_Dukes_of_Stratosphear"
+      ]
     },
     "lastfm": "ArtistLastFmData(name='The Dukes Of Stratosphear', url='https://www.last.fm/music/The+Dukes+Of+Stratosphear', mbid='2d1107b1-0d07-44bb-b12d-75c56342bc00', listeners=78179, playcount=972759, bio_summary='The Dukes of Stratosphear was a pseudonym used by the English rock band XTC in the mid-1980s. A studio-only project, the band released two vinyl albums: 25 O\\'Clock (1985) and Psonic Psunspot (1987), which drew upon influences of 1960s psychedelic music such as The Beatles, Syd Barrett-era Pink Floyd, The Kinks, The Byrds, The Pretty Things, and The Beach Boys (c. 1966). The two albums were released on a single CD under the title Chips from the Chocolate Fireball (An Anthology) in late 1987. <a href=\"https://www.last.fm/music/The+Dukes+Of+Stratosphear\">Read more on Last.fm</a>', bio_content='The Dukes of Stratosphear was a pseudonym used by the English rock band XTC in the mid-1980s. A studio-only project, the band released two vinyl albums: 25 O\\'Clock (1985) and Psonic Psunspot (1987), which drew upon influences of 1960s psychedelic music such as The Beatles, Syd Barrett-era Pink Floyd, The Kinks, The Byrds, The Pretty Things, and The Beach Boys (c. 1966). The two albums were released on a single CD under the title Chips from the Chocolate Fireball (An Anthology) in late 1987.\\n\\nThey reformed and recorded the track \"Open a Can of Human Beans\" in 2003 for a charity album. The track was later re-released on Andy Partridge\\'s Fuzzy Warbles, Vol. 7.\\n\\nUnder another pseudonym, Terry and the Lovemen, XTC appeared on its own tribute album A Testimonial Dinner and thanked The Dukes of Stratosphear for the loan of their instruments.\\n\\nThe pseudonymous personnel included:\\n\\n Sir John Johns (Andy Partridge) - singing, guitar, brain buds;\\n The Red Curtain (Colin Moulding) - electric bass, song stuff;\\n Lord Cornelius Plum (Dave Gregory) - mellotron, piano, organ, fuzz-tone guitar;\\n E.I.E.I. Owen (Ian Gregory) - drum set;\\n and their preferred producer at that time, Swami Anand Nagara (John Leckie).\\n <a href=\"https://www.last.fm/music/The+Dukes+Of+Stratosphear\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['psychedelic', 'Neo-Psychedelia', '80s', 'XTC', 'alternative'], similar_artists=[{'name': 'Andy Partridge', 'url': 'https://www.last.fm/music/Andy+Partridge'}, {'name': 'The Teardrop Explodes', 'url': 'https://www.last.fm/music/The+Teardrop+Explodes'}, {'name': 'The Pretty Things', 'url': 'https://www.last.fm/music/The+Pretty+Things'}, {'name': 'The Soft Boys', 'url': 'https://www.last.fm/music/The+Soft+Boys'}, {'name': 'The Move', 'url': 'https://www.last.fm/music/The+Move'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Dukes Of Stratosphear', 'mbid': '2d1107b1-0d07-44bb-b12d-75c56342bc00', 'url': 'https://www.last.fm/music/The+Dukes+Of+Stratosphear', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '78179', 'playcount': '972759'}, 'similar': {'artist': [{'name': 'Andy Partridge', 'url': 'https://www.last.fm/music/Andy+Partridge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Teardrop Explodes', 'url': 'https://www.last.fm/music/The+Teardrop+Explodes', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Pretty Things', 'url': 'https://www.last.fm/music/The+Pretty+Things', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Soft Boys', 'url': 'https://www.last.fm/music/The+Soft+Boys', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Move', 'url': 'https://www.last.fm/music/The+Move', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'psychedelic', 'url': 'https://www.last.fm/tag/psychedelic'}, {'name': 'Neo-Psychedelia', 'url': 'https://www.last.fm/tag/Neo-Psychedelia'}, {'name': '80s', 'url': 'https://www.last.fm/tag/80s'}, {'name': 'XTC', 'url': 'https://www.last.fm/tag/XTC'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Dukes+Of+Stratosphear/+wiki'}}, 'published': '21 Jun 2006, 19:44', 'summary': 'The Dukes of Stratosphear was a pseudonym used by the English rock band XTC in the mid-1980s. A studio-only project, the band released two vinyl albums: 25 O\\'Clock (1985) and Psonic Psunspot (1987), which drew upon influences of 1960s psychedelic music such as The Beatles, Syd Barrett-era Pink Floyd, The Kinks, The Byrds, The Pretty Things, and The Beach Boys (c. 1966). The two albums were released on a single CD under the title Chips from the Chocolate Fireball (An Anthology) in late 1987. <a href=\"https://www.last.fm/music/The+Dukes+Of+Stratosphear\">Read more on Last.fm</a>', 'content': 'The Dukes of Stratosphear was a pseudonym used by the English rock band XTC in the mid-1980s. A studio-only project, the band released two vinyl albums: 25 O\\'Clock (1985) and Psonic Psunspot (1987), which drew upon influences of 1960s psychedelic music such as The Beatles, Syd Barrett-era Pink Floyd, The Kinks, The Byrds, The Pretty Things, and The Beach Boys (c. 1966). The two albums were released on a single CD under the title Chips from the Chocolate Fireball (An Anthology) in late 1987.\\n\\nThey reformed and recorded the track \"Open a Can of Human Beans\" in 2003 for a charity album. The track was later re-released on Andy Partridge\\'s Fuzzy Warbles, Vol. 7.\\n\\nUnder another pseudonym, Terry and the Lovemen, XTC appeared on its own tribute album A Testimonial Dinner and thanked The Dukes of Stratosphear for the loan of their instruments.\\n\\nThe pseudonymous personnel included:\\n\\n Sir John Johns (Andy Partridge) - singing, guitar, brain buds;\\n The Red Curtain (Colin Moulding) - electric bass, song stuff;\\n Lord Cornelius Plum (Dave Gregory) - mellotron, piano, organ, fuzz-tone guitar;\\n E.I.E.I. Owen (Ian Gregory) - drum set;\\n and their preferred producer at that time, Swami Anand Nagara (John Leckie).\\n <a href=\"https://www.last.fm/music/The+Dukes+Of+Stratosphear\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
     "spotify": "ArtistSpotifyData(id='1ilhXoWIlGxz3fM4B24mNo', url='https://open.spotify.com/artist/1ilhXoWIlGxz3fM4B24mNo', name='The Dukes Of Stratosphear', popularity=26, followers=23752, genres=['power pop', 'neo-psychedelic', 'jangle pop', 'psychedelic rock'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273596ac7d1db535375c2163a9a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02596ac7d1db535375c2163a9a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851596ac7d1db535375c2163a9a', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/1ilhXoWIlGxz3fM4B24mNo'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1ilhXoWIlGxz3fM4B24mNo'}, 'followers': {'href': None, 'total': 23752}, 'genres': ['power pop', 'neo-psychedelic', 'jangle pop', 'psychedelic rock'], 'href': 'https://api.spotify.com/v1/artists/1ilhXoWIlGxz3fM4B24mNo', 'id': '1ilhXoWIlGxz3fM4B24mNo', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273596ac7d1db535375c2163a9a', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02596ac7d1db535375c2163a9a', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851596ac7d1db535375c2163a9a', 'height': 64, 'width': 64}], 'name': 'The Dukes Of Stratosphear', 'popularity': 26, 'type': 'artist', 'uri': 'spotify:artist:1ilhXoWIlGxz3fM4B24mNo'})",
@@ -259,6 +388,6 @@
   },
   "spotify_id": "1ilhXoWIlGxz3fM4B24mNo",
   "spotify_url": "https://open.spotify.com/artist/1ilhXoWIlGxz3fM4B24mNo",
-  "updated_at": "2026-10-22T14:12:17.156633",
+  "updated_at": "2026-10-30T18:46:26.617788",
   "wikipedia_url": "https://en.wikipedia.org/wiki/The_Dukes_of_Stratosphear"
 }
