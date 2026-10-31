@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Various Artists — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground: #131f35;
+  --ink: #fbf7ef;
+  --ink-2: rgba(251, 247, 239, .72);
+  --ink-3: rgba(251, 247, 239, .5);
+  --rule: rgba(251, 247, 239, .14);
+  --paper: #eae2d7;
+  --paper-ink: #17140f;
+  --paper-ink-2: rgba(23, 20, 15, .66);
+  --paper-rule: rgba(23, 20, 15, .16);
+  --hl: #e8553a;
+  --amber: #e9a23b;
+  --display: 'Archivo', system-ui, sans-serif;
+  --grot: 'Hanken Grotesk', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--ground); color: var(--ink); font: 16px/1.5 var(--grot); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+.display { font-family: var(--display); font-weight: 900; font-stretch: 100%; text-transform: uppercase; letter-spacing: -.005em; line-height: .86; margin: 0; }
+.label { font: 600 11px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.pill { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 16px; border: 1.5px solid currentColor; border-radius: 999px; font: 600 13px var(--grot); cursor: pointer; background: none; color: inherit; }
+.pill.solid { background: var(--paper-ink); color: var(--paper); border-color: var(--paper-ink); }
+.pill svg { width: 15px; height: 15px; }
+
+/* Mockup chrome: notes that would not ship */
+.note { font: 500 12.5px/1.5 var(--mono); color: var(--amber); border-left: 2px solid var(--amber); padding: 2px 0 2px 12px; max-width: 70ch; }
+.note b { color: var(--ink); font-weight: 600; }
+.paper .note { color: #9a5b06; border-color: #c98a24; }
+.paper .note b { color: var(--paper-ink); }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.section-head h2 { font-size: clamp(40px, 6vw, 76px); }
+.chapter { padding: 18px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 0; }
+.chapter .wrap { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+.chapter .num { color: var(--amber); }
+
+/* Site nav (as production) */
+.nav { position: sticky; top: 0; z-index: 10; background: var(--paper-ink); color: var(--paper); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 900 19px var(--display); letter-spacing: .02em; }
+.brand i { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle, var(--hl) 0 22%, #111 23% 100%); box-shadow: inset 0 0 0 4px #222; }
+.nav .tools { display: flex; gap: 10px; }
+.nav .pill { height: 32px; font-size: 12px; }
+
+/* ------------------------------------------------------------------ */
+/* 1. Artist page hero                                                  */
+.hero { position: relative; background: var(--paper); color: var(--paper-ink); min-height: 640px; overflow: hidden; }
+.hero .photo { position: absolute; inset: 0 0 0 auto; width: 60%; }
+.hero .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+.hero .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 50%, transparent) 12%, transparent 26%); }
+.hero .text { position: relative; z-index: 1; max-width: 1320px; margin: 0 auto; padding: 72px 32px 64px; }
+.hero .col { width: min(40%, 540px); min-width: 320px; }
+.hero h1 { font-size: clamp(60px, 7.4vw, 116px); }
+.hero .kicker { display: flex; gap: 10px; align-items: center; margin-bottom: 18px; color: var(--paper-ink-2); }
+.hero .kicker span { width: 22px; height: 1.5px; background: currentColor; }
+.stats { display: flex; gap: 28px; margin: 32px 0 26px; flex-wrap: wrap; }
+.stat b { display: block; font: 900 clamp(34px, 3.6vw, 54px)/.9 var(--display); }
+.stat small { display: block; margin-top: 6px; font: 600 10.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--paper-ink-2); }
+.hero p.lede { font-size: 17px; line-height: 1.55; max-width: 46ch; margin: 0 0 26px; color: var(--paper-ink-2); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero .note { margin-top: 30px; }
+
+/* ------------------------------------------------------------------ */
+/* 2. Shelves                                                           */
+.shelves { padding: 80px 0 40px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tab { display: inline-flex; align-items: baseline; gap: 8px; height: 38px; padding: 9px 16px 0; border-radius: 999px; border: 1.5px solid var(--rule); background: none; color: var(--ink-2); font: 600 14px var(--grot); cursor: pointer; }
+.tab em { font: 600 11px var(--mono); font-style: normal; color: var(--ink-3); }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+.tab[aria-selected="true"] em { color: rgba(19, 31, 53, .6); }
+.shelf-blurb { margin: 22px 0 30px; color: var(--ink-2); max-width: 62ch; min-height: 3em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(188px, 1fr)); gap: 30px 22px; }
+.card .sleeve { position: relative; aspect-ratio: 1; background: #0c1424; }
+.card .sleeve img { width: 100%; height: 100%; object-fit: cover; box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 14px 26px -16px rgba(0,0,0,.8); }
+.card .sleeve .kind { position: absolute; left: 8px; top: 8px; padding: 3px 7px 2px; border-radius: 4px; background: rgba(12, 20, 36, .82); color: var(--ink); font: 600 9.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.card h3 { margin: 12px 0 3px; font: 700 14.5px/1.3 var(--grot); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card .meta { font: 600 10.5px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.card .meta .who { color: var(--amber); }
+.more { margin-top: 36px; display: flex; justify-content: center; }
+.more .pill { color: var(--ink-2); }
+
+/* ------------------------------------------------------------------ */
+/* 3. Who turns up                                                      */
+.cast { padding: 70px 0 90px; }
+.faces { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 26px 16px; }
+.face { text-align: center; }
+.face .av { width: 92px; height: 92px; margin: 0 auto 10px; border-radius: 50%; overflow: hidden; background: #0c1424; box-shadow: 0 0 0 1.5px var(--rule); }
+.face .av img { width: 100%; height: 100%; object-fit: cover; }
+.face b { display: block; font: 700 13.5px/1.25 var(--grot); }
+.face small { font: 600 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.face:hover .av { box-shadow: 0 0 0 2.5px var(--amber); }
+.also { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px 6px; color: var(--ink-2); font-size: 14px; }
+.also .label { width: 100%; color: var(--ink-3); margin-bottom: 6px; }
+.also span { padding: 4px 11px; border-radius: 999px; background: rgba(251,247,239,.06); }
+.also span i { font-style: normal; color: var(--ink-3); font: 600 10px var(--mono); margin-left: 4px; }
+
+/* ------------------------------------------------------------------ */
+/* 4. Album page                                                        */
+.album { background: var(--paper); color: var(--paper-ink); padding: 72px 0 80px; }
+.album-grid { display: grid; grid-template-columns: minmax(280px, 460px) 1fr; gap: 56px; align-items: start; }
+.album .cover { position: sticky; top: 84px; }
+.album .cover img { width: 100%; aspect-ratio: 1; object-fit: cover; box-shadow: 0 24px 40px -24px rgba(0,0,0,.55); }
+.compare { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 14px; margin-bottom: 28px; }
+.compare > div { border: 1.5px dashed var(--paper-rule); border-radius: 12px; padding: 12px 14px 14px; }
+.compare .label { color: var(--paper-ink-2); display: block; margin-bottom: 10px; }
+.byline { display: flex; align-items: center; gap: 12px; font: 700 19px/1.15 var(--grot); min-width: 0; }
+.byline img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+.byline.old { opacity: .55; text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.stack { display: flex; }
+.stack { flex: none; }
+.stack img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2.5px var(--paper); }
+.stack img + img { margin-left: -13px; }
+.byline .sub { display: block; font: 600 10.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-ink-2); margin-top: 2px; }
+.album h2 { font-size: clamp(40px, 5vw, 66px); margin: 6px 0 14px; }
+.album .facts { color: var(--paper-ink-2); margin-bottom: 26px; }
+.tracks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--paper-rule); }
+.tracks li { display: grid; grid-template-columns: 38px 1fr auto; gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--paper-rule); }
+.tracks .pos { font: 600 11px var(--mono); color: var(--paper-ink-2); }
+.tracks .t { font-weight: 600; }
+.tracks .by { font-size: 14px; color: var(--paper-ink-2); }
+.tracks .by a { color: var(--paper-ink); font-weight: 600; border-bottom: 1.5px solid #c98a24; }
+.tracks .mini { display: flex; }
+.tracks .mini img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--paper); }
+.tracks .mini img + img { margin-left: -8px; }
+.album .note { margin-top: 26px; }
+
+/* ------------------------------------------------------------------ */
+/* 5. Also appears on                                                   */
+.appears { padding: 72px 0 80px; background: #5b1b12; }
+.appears .row { display: flex; gap: 22px; overflow-x: auto; padding-bottom: 8px; }
+.appears .card { flex: 0 0 210px; }
+.appears .card .meta { color: rgba(251,247,239,.62); }
+.appears .on { font: 500 13px/1.4 var(--grot); color: var(--ink-2); margin-top: 6px; }
+.appears .on b { color: var(--ink); }
+
+footer { padding: 40px 0 60px; color: var(--ink-3); font-size: 13px; }
+
+@media (max-width: 860px) {
+  .wrap, .hero .text { padding-left: 16px; padding-right: 16px; }
+  .hero { min-height: 0; }
+  .hero .photo { position: relative; width: 100%; aspect-ratio: 4 / 3; }
+  .hero .photo::after { background: linear-gradient(0deg, var(--paper) 0%, transparent 35%); }
+  .hero .text { padding-top: 8px; }
+  .hero .col { width: 100%; min-width: 0; }
+  .album-grid { grid-template-columns: 1fr; gap: 32px; }
+  .compare { grid-template-columns: 1fr; }
+  .nav .tools .pill:not(:first-child) { display: none; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; }
+  .tracks li { grid-template-columns: 30px 1fr; }
+  .tracks .mini { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#"><i></i>RUSS.FM</a>
+  <div class="tools"><span class="pill">Shuffle</span><span class="pill">Search</span><span class="pill">Menu</span></div>
+</div></nav>
+
+<p class="chapter"><span class="wrap"><span class="label num">01</span><span class="label">/artist/various — replaces the redirect to /artists</span></span></p>
+
+<header class="hero paper">
+  <div class="photo"><img src="various/various-hero.jpg" alt=""></div>
+  <div class="text"><div class="col">
+    <div class="kicker label"><span></span>Compilations &amp; soundtracks</div>
+    <h1 class="display">Various<br>Artists</h1>
+    <div class="stats">
+      <div class="stat"><b>112</b><small>Records</small></div>
+      <div class="stat"><b>55</b><small>Soundtracks</small></div>
+      <div class="stat"><b>1971–2026</b><small>Released</small></div>
+    </div>
+    <p class="lede">Soundtracks, tributes, label samplers and the odd Now album. Everything here is credited to more than one artist, so it's filed together rather than under any one name.</p>
+    <div class="actions">
+      <a class="pill solid" href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h3l6 8h3M2 12h3l6-8h3M12 2l2 2-2 2M12 10l2 2-2 2"/></svg>Shuffle a compilation</a>
+      <a class="pill" href="https://www.discogs.com/artist/194">Discogs ↗</a>
+    </div>
+    <p class="note"><b>No Spotify, Apple Music, Last.fm or Wikipedia links.</b> Those were matched to an unrelated dubstep duo called "Various". The bio is our own line, and the photo is generated artwork, so it's the same everywhere the avatar shows.</p>
+  </div></div>
+</header>
+
+<section class="shelves"><div class="wrap">
+  <div class="section-head">
+    <h2 class="display">The shelves</h2>
+    <div class="tabs" role="tablist" id="tabs"></div>
+  </div>
+  <p class="shelf-blurb" id="blurb"></p>
+  <div class="grid" id="grid"></div>
+  <div class="more"><button class="pill" id="more">Show all</button></div>
+  <p class="note" style="margin-top:36px"><b>Shelves are worked out at build time</b> from styles, genres and the title (Soundtrack / Stage &amp; Screen → soundtracks; "Songs of", "Tribute to", "Reimagining" → tributes; Now, Anthems, Best of, Collected → series; the rest are anthologies). A manual override in <code>raw_data.overrides</code> fixes the odd miss.</p>
+</div></section>
+
+<section class="cast"><div class="wrap">
+  <div class="section-head">
+    <h2 class="display">Who turns up</h2>
+    <p class="label" style="color:var(--ink-3)">Artists on these records who have their own page</p>
+  </div>
+  <div class="faces" id="faces"></div>
+  <div class="also" id="also"></div>
+  <p class="note" style="margin-top:36px"><b>Only 12 of 112 compilations have per-track artists today</b>, which is why this is short. A scrapper backfill of Discogs track credits (matched to artist pages by Discogs ID, not name) fills it out, and also fixes scrobbling these records as "Various".</p>
+</div></section>
+
+<p class="chapter"><span class="wrap"><span class="label num">02</span><span class="label">Album page — a compilation's byline and tracklist</span></span></p>
+
+<section class="album paper"><div class="wrap album-grid">
+  <div class="cover"><img src="https://assets.russ.fm/album/clowns-and-jugglers-the-songs-of-syd-barrett-38732007/clowns-and-jugglers-the-songs-of-syd-barrett-38732007-hi-res.jpg" alt="Clowns And Jugglers: The Songs Of Syd Barrett sleeve"></div>
+  <div>
+    <div class="compare">
+      <div>
+        <span class="label">Now</span>
+        <div class="byline old"><img src="https://assets.russ.fm/artist/various/various-avatar.jpg" alt="">Various</div>
+      </div>
+      <div>
+        <span class="label">Proposed</span>
+        <a class="byline" href="#"><span class="stack" id="stack"></span><span>Various Artists<span class="sub">29 artists · tribute</span></span></a>
+      </div>
+    </div>
+    <h2 class="display">Clowns And Jugglers: The Songs Of Syd Barrett</h2>
+    <p class="facts label">2026 · Gonzo Multimedia · 22 tracks</p>
+    <ol class="tracks" id="tracks"></ol>
+    <p class="note"><b>The byline stacks the faces of credited artists who have pages</b> and links to /artist/various. Each track names its own artists, linked when they're in the collection. The biography panel would show the first linked artist's bio (Pink Floyd here), never the "Various" one.</p>
+  </div>
+</div></section>
+
+<p class="chapter"><span class="wrap"><span class="label num">03</span><span class="label">Artist page — "Also appears on", under the discography</span></span></p>
+
+<section class="appears"><div class="wrap">
+  <div class="section-head">
+    <h2 class="display">Also appears on</h2>
+    <p class="label" style="color:rgba(251,247,239,.62)">David Bowie · 2 compilations</p>
+  </div>
+  <div class="row" id="appears"></div>
+  <p class="note" style="margin-top:30px"><b>Sits below the discography on every artist page</b> that has a track credit on a compilation. These don't count towards the artist's record total; they're a way across to the compilation shelves.</p>
+</div></section>
+
+<footer><div class="wrap">Mockup · real collection data · covers from assets.russ.fm · Various artwork generated with Codex's image tool</div></footer>
+
+<script>
+const DATA = {"albums": [{"t": "Sweet Inspiration - Guilty Reggae Pleasures", "s": "sweet-inspiration-guilty-reggae-pleasures-38873883", "k": "anthology", "y": 2026, "d": "2026-10-31", "l": "Trojan Records", "n": 17}, {"t": "Clowns And Jugglers: The Songs Of Syd Barrett", "s": "clowns-and-jugglers-the-songs-of-syd-barrett-38732007", "k": "tribute", "y": 2026, "d": "2026-10-17", "l": "Gonzo Multimedia", "n": 29}, {"t": "Empire Records - The Soundtrack", "s": "empire-records-the-soundtrack-38185662", "k": "soundtrack", "y": 1995, "d": "2026-08-25", "l": "A&M Records", "n": 15}, {"t": "Now That's What I Call An Era: (Feels Like) Heaven 1978 >> 1985 (Essential Synth-Pop)", "s": "now-thats-what-i-call-an-era-feels-like-heaven-1978-1985-essential-synth-pop-36774487", "k": "series", "y": 2026, "d": "2026-03-15", "l": "Sony Music", "n": 0}, {"t": "Now That's What I Call An Era Disco 1973 > 1980", "s": "now-thats-what-i-call-an-era-disco-1973-1980-35690722", "k": "series", "y": 2025, "d": "2025-11-24", "l": "Sony Music", "n": 0}, {"t": "Almost Famous (Music From The Motion Picture)", "s": "almost-famous-music-from-the-motion-picture-35444821", "k": "soundtrack", "y": 2000, "d": "2025-10-26", "l": "Geffen Records", "n": 0}, {"t": "Now That's What I Call An Era Such A Good Feeling 1988 >> 1995", "s": "now-thats-what-i-call-an-era-such-a-good-feeling-1988-1995-35293000", "k": "series", "y": 2025, "d": "2025-10-05", "l": "Sony Music", "n": 0}, {"t": "Now That's What I Call An Era: The Albums 1980 > 1984 (Essential Tracks From Iconic Albums)", "s": "now-thats-what-i-call-an-era-the-albums-1980-1984-essential-tracks-from-iconic-albums-34132912", "k": "series", "y": 2025, "d": "2025-09-28", "l": "Sony Music", "n": 0}, {"t": "Romy And Michele's High School Reunion (Original Soundtrack)", "s": "romy-and-micheles-high-school-reunion-original-soundtrack-25053010", "k": "soundtrack", "y": 1997, "d": "2025-07-23", "l": "Hollywood Records", "n": 0}, {"t": "The Life Aquatic With Steve Zissou (Original Soundtrack)", "s": "the-life-aquatic-with-steve-zissou-original-soundtrack-34314472", "k": "soundtrack", "y": 2004, "d": "2025-06-20", "l": "Hollywood Records", "n": 0}, {"t": "Tommy (Original Soundtrack Recording)", "s": "tommy-original-soundtrack-recording-33683172", "k": "soundtrack", "y": 1975, "d": "2025-04-13", "l": "Polydor", "n": 0}, {"t": "Now That's What I Call An Era The Sound Of The Suburbs 1977~1980", "s": "now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413", "k": "series", "y": 2025, "d": "2025-02-16", "l": "Sony Music", "n": 0}, {"t": "Spawn (The Album)", "s": "spawn-the-album-30359798", "k": "soundtrack", "y": 1997, "d": "2024-11-30", "l": "Immortal Records (3)", "n": 0}, {"t": "Katie Puckrik Presents A Yacht Rock Odyssey", "s": "katie-puckrik-presents-a-yacht-rock-odyssey-31684898", "k": "series", "y": 2023, "d": "2024-09-08", "l": "Demon Records", "n": 23}, {"t": "Everyone’s Getting Involved: A Tribute To Talking Heads’ Stop Making Sense", "s": "everyones-getting-involved-a-tribute-to-talking-heads-stop-making-sense-31314999", "k": "tribute", "y": 2024, "d": "2024-07-30", "l": "A24 Music", "n": 0}, {"t": "Now That's What I Call Rock Anthems", "s": "now-thats-what-i-call-rock-anthems-30886353", "k": "series", "y": 2024, "d": "2024-06-07", "l": "Sony Music", "n": 0}, {"t": "Reimagining The Court Of The Crimson King", "s": "reimagining-the-court-of-the-crimson-king-30166604", "k": "tribute", "y": 2024, "d": "2024-04-18", "l": "Purple Pyramid", "n": 0}, {"t": "Help", "s": "help-15889116", "k": "anthology", "y": 1995, "d": "2023-10-18", "l": "The Vinyl Factory", "n": 0}, {"t": "New Wave Of The 80's Collected", "s": "new-wave-of-the-80s-collected-28394518", "k": "series", "y": 2023, "d": "2023-09-26", "l": "Music On Vinyl", "n": 0}, {"t": "90's Alternative Collected", "s": "90s-alternative-collected-28043898", "k": "series", "y": 2023, "d": "2023-09-08", "l": "Music On Vinyl", "n": 0}, {"t": "Lock, Stock & Two Smoking Barrels - Original Soundtrack", "s": "lock-stock-two-smoking-barrels-original-soundtrack-12129965", "k": "soundtrack", "y": 1998, "d": "2023-08-06", "l": "Island Records", "n": 0}, {"t": "The Endless Coloured Ways (The Songs Of Nick Drake)", "s": "the-endless-coloured-ways-the-songs-of-nick-drake-27634329", "k": "tribute", "y": 2023, "d": "2023-07-10", "l": "Chrysalis", "n": 29}, {"t": "Now 80s Alternative", "s": "now-80s-alternative-27441879", "k": "series", "y": 2023, "d": "2023-06-21", "l": "Sony Music", "n": 0}, {"t": "Alternative Anthems", "s": "alternative-anthems-27247221", "k": "series", "y": 2021, "d": "2023-06-03", "l": "Demon Records", "n": 0}, {"t": "Waves Of Distortion (The Best Of Shoegaze 1990​-​2022)", "s": "waves-of-distortion-the-best-of-shoegaze-1990-2022-26951984", "k": "series", "y": 2023, "d": "2023-05-05", "l": "Two Piers", "n": 0}, {"t": "Dance Craze - The Best of British Ska...LIVE!", "s": "dance-craze-the-best-of-british-skalive-26536709", "k": "soundtrack", "y": 1981, "d": "2023-04-03", "l": "Two-Tone Records", "n": 6}, {"t": "Life Moves Pretty Fast: The John Hughes Mixtapes", "s": "life-moves-pretty-fast-the-john-hughes-mixtapes-25135282", "k": "soundtrack", "y": 2022, "d": "2022-11-12", "l": "Demon Records", "n": 0}, {"t": "Summer Of Soul (...Or, When The Revolution Could Not Be Televised) (Original Motion Picture Soundtrack)", "s": "summer-of-soul-or-when-the-revolution-could-not-be-televised-original-motion-picture-soundtrack-23613770", "k": "soundtrack", "y": 2022, "d": "2022-06-18", "l": "Legacy", "n": 0}, {"t": "Almost Famous (Music From The Motion Picture)", "s": "almost-famous-music-from-the-motion-picture-19945918", "k": "soundtrack", "y": 2000, "d": "2022-03-29", "l": "Geffen Records", "n": 0}, {"t": "Now That's What I Call Punk & New Wave", "s": "now-thats-what-i-call-punk-new-wave-21874351", "k": "series", "y": 2022, "d": "2022-01-25", "l": "Sony Music", "n": 0}, {"t": "Dazed and Confused (Music From Motion Picture)", "s": "dazed-and-confused-music-from-motion-picture-19590373", "k": "soundtrack", "y": 1993, "d": "2021-10-09", "l": "The Medicine Label", "n": 0}, {"t": "The Trojan Story", "s": "the-trojan-story-19182778", "k": "series", "y": 1971, "d": "2021-07-28", "l": "Trojan Records", "n": 0}, {"t": "The Apollo (Original Motion Picture Soundtrack)", "s": "the-apollo-original-motion-picture-soundtrack-15987938", "k": "soundtrack", "y": 2019, "d": "2021-07-01", "l": "Blue Note", "n": 0}, {"t": "The Many Faces Of David Bowie - A Journey Through The Inner World Of David Bowie", "s": "the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059", "k": "tribute", "y": 2016, "d": "2021-06-07", "l": "Music Brokers", "n": 16}, {"t": "Loaded", "s": "loaded-15400556", "k": "anthology", "y": 2020, "d": "2021-06-07", "l": "Spectrum Music (2)", "n": 0}, {"t": "The Bitmap Brothers: Odyssey", "s": "the-bitmap-brothers-odyssey-17581171", "k": "soundtrack", "y": 2021, "d": "2021-03-22", "l": "Read-Only-Memory Ltd.", "n": 0}, {"t": "Our New Orleans 2005, A Benefit Album", "s": "our-new-orleans-2005-a-benefit-album-16916634", "k": "anthology", "y": 2005, "d": "2021-03-04", "l": "Nonesuch", "n": 0}, {"t": "Hackers (Original Motion Picture Soundtrack)", "s": "hackers-original-motion-picture-soundtrack-15928841", "k": "soundtrack", "y": 1996, "d": "2020-09-29", "l": "Varèse Sarabande", "n": 12}, {"t": "Fonzie Favorites", "s": "fonzie-favorites-1879249", "k": "soundtrack", "y": 1976, "d": "2020-08-02", "l": "Warwick Records", "n": 0}, {"t": "Killer Watts", "s": "killer-watts-2179323", "k": "anthology", "y": 1980, "d": "2020-08-02", "l": "Epic", "n": 0}, {"t": "Music From The Motion Picture Soundtrack \"Fletch\"", "s": "music-from-the-motion-picture-soundtrack-fletch-171543", "k": "soundtrack", "y": 1985, "d": "2020-08-02", "l": "MCA Records", "n": 0}, {"t": "Ghostbusters II", "s": "ghostbusters-ii-672488", "k": "soundtrack", "y": 1989, "d": "2020-08-01", "l": "MCA Records", "n": 0}, {"t": "Ghostbusters - Original Soundtrack Album", "s": "ghostbusters-original-soundtrack-album-7318608", "k": "soundtrack", "y": 1984, "d": "2020-08-01", "l": "Arista", "n": 0}, {"t": "High Fidelity (A Hulu Original)", "s": "high-fidelity-a-hulu-original-15540975", "k": "soundtrack", "y": 2020, "d": "2020-07-27", "l": "Hollywood Records", "n": 0}, {"t": "Boyz N The Hood (Music From The Motion Picture)", "s": "boyz-n-the-hood-music-from-the-motion-picture-14303949", "k": "soundtrack", "y": 1991, "d": "2020-07-14", "l": "Universal", "n": 0}, {"t": "Factory Communications 1978-92", "s": "factory-communications-1978-92-14465749", "k": "anthology", "y": 2009, "d": "2020-06-17", "l": "Warner Music", "n": 34}, {"t": "Jay & Silent Bob Reboot (Original Motion Picture Soundtrack)", "s": "jay-silent-bob-reboot-original-motion-picture-soundtrack-14465350", "k": "soundtrack", "y": 2019, "d": "2020-01-26", "l": "eOne", "n": 0}, {"t": "Country Music A Film By Ken Burns The Soundtrack", "s": "country-music-a-film-by-ken-burns-the-soundtrack-14124491", "k": "soundtrack", "y": 2019, "d": "2019-09-13", "l": "Legacy", "n": 0}, {"t": "The Daisy Age", "s": "the-daisy-age-14069939", "k": "anthology", "y": 2019, "d": "2019-08-31", "l": "Ace", "n": 0}, {"t": "Electronic", "s": "electronic-14048921", "k": "soundtrack", "y": 2019, "d": "2019-08-31", "l": "UMC", "n": 0}, {"t": "The Best Of Indie Top 20", "s": "the-best-of-indie-top-20-974961", "k": "series", "y": 1991, "d": "2019-04-26", "l": "Beechwood Music", "n": 0}, {"t": "The Basketball Diaries (Original Motion Picture Soundtrack)", "s": "the-basketball-diaries-original-motion-picture-soundtrack-13467780", "k": "soundtrack", "y": 1995, "d": "2019-04-24", "l": "Real Gone Music", "n": 0}, {"t": "Lost In Translation (Music From The Motion Picture Soundtrack)", "s": "lost-in-translation-music-from-the-motion-picture-soundtrack-13468045", "k": "soundtrack", "y": 2003, "d": "2019-04-17", "l": "Emperor Norton", "n": 0}, {"t": "Office Space (The Motion Picture Soundtrack)", "s": "office-space-the-motion-picture-soundtrack-13458583", "k": "soundtrack", "y": 1999, "d": "2019-04-13", "l": "Interscope Records", "n": 0}, {"t": "Coneheads (Music From The Motion Picture Soundtrack)", "s": "coneheads-music-from-the-motion-picture-soundtrack-13457179", "k": "soundtrack", "y": 1993, "d": "2019-04-13", "l": "Warner Bros. Records", "n": 0}, {"t": "Stax Does The Beatles", "s": "stax-does-the-beatles-13468733", "k": "anthology", "y": 2008, "d": "2019-04-13", "l": "Craft Recordings", "n": 0}, {"t": "New Jack City (Music From The Motion Picture)", "s": "new-jack-city-music-from-the-motion-picture-13457870", "k": "soundtrack", "y": 1991, "d": "2019-04-13", "l": "Giant Records", "n": 0}, {"t": "Soft Metal - It Ain't Heavy . . .", "s": "soft-metal-it-aint-heavy-1205378", "k": "anthology", "y": 1988, "d": "2019-03-24", "l": "Stylus Music", "n": 0}, {"t": "The Big Lebowski  (Original Motion Picture Soundtrack)", "s": "the-big-lebowski-original-motion-picture-soundtrack-13075622", "k": "soundtrack", "y": 1998, "d": "2019-01-27", "l": "Mondo (3)", "n": 0}, {"t": "The Brits 1991 (The Magic Of British Music)", "s": "the-brits-1991-the-magic-of-british-music-1307225", "k": "anthology", "y": 1991, "d": "2019-01-05", "l": "Telstar", "n": 0}, {"t": "The Awards 1992", "s": "the-awards-1992-2697679", "k": "anthology", "y": 1992, "d": "2019-01-05", "l": "Polygram TV", "n": 0}, {"t": "The Harder They Come (Original Soundtrack Recording)", "s": "the-harder-they-come-original-soundtrack-recording-11949372", "k": "soundtrack", "y": 1972, "d": "2019-01-04", "l": "Island Records", "n": 0}, {"t": "Confessin' The Blues", "s": "confessin-the-blues-12774929", "k": "anthology", "y": 2018, "d": "2018-12-19", "l": "BMG", "n": 0}, {"t": "Bill & Ted's Excellent Adventure - Original Motion Picture Soundtrack", "s": "bill-teds-excellent-adventure-original-motion-picture-soundtrack-11908353", "k": "soundtrack", "y": 1989, "d": "2018-11-30", "l": "A&M Records", "n": 0}, {"t": "The Rick And Morty Soundtrack", "s": "the-rick-and-morty-soundtrack-12575433", "k": "soundtrack", "y": 2018, "d": "2018-11-04", "l": "Sub Pop", "n": 0}, {"t": "Kill Bill Vol. 1 - Original Soundtrack", "s": "kill-bill-vol-1-original-soundtrack-7798494", "k": "soundtrack", "y": 2003, "d": "2018-10-04", "l": "Maverick", "n": 16}, {"t": "True Romance (Motion Picture Soundtrack)", "s": "true-romance-motion-picture-soundtrack-12488063", "k": "soundtrack", "y": 1993, "d": "2018-09-13", "l": "Real Gone Music", "n": 10}, {"t": "The Man From Mo'Wax (Music From The Motion Picture)", "s": "the-man-from-mowax-music-from-the-motion-picture-12463781", "k": "soundtrack", "y": 2018, "d": "2018-09-03", "l": "UMC", "n": 0}, {"t": "Cutting Edge 80s (The Alternative Sound Of A Decade)", "s": "cutting-edge-80s-the-alternative-sound-of-a-decade-10555246", "k": "anthology", "y": 2011, "d": "2018-08-06", "l": "Sony Music", "n": 0}, {"t": "The Lost Boys (Original Motion Picture Soundtrack)", "s": "the-lost-boys-original-motion-picture-soundtrack-12168177", "k": "soundtrack", "y": 1987, "d": "2018-06-23", "l": "Atlantic", "n": 0}, {"t": "Stranger Things (Music From The Netflix Original Series)", "s": "stranger-things-music-from-the-netflix-original-series-11273965", "k": "soundtrack", "y": 2017, "d": "2018-05-15", "l": "Legacy", "n": 0}, {"t": "Motown Funk Volume 2", "s": "motown-funk-volume-2-11895847", "k": "anthology", "y": 2009, "d": "2018-04-21", "l": "UMC", "n": 0}, {"t": "Tank Girl - Original Soundtrack From The United Artists Film", "s": "tank-girl-original-soundtrack-from-the-united-artists-film-11824886", "k": "soundtrack", "y": 1995, "d": "2018-04-10", "l": "Real Gone Music", "n": 0}, {"t": "Classic Rock Anthems II", "s": "classic-rock-anthems-ii-11162384", "k": "series", "y": 2008, "d": "2017-12-13", "l": "Demon Records", "n": 0}, {"t": "Happy Daze (Volume One)", "s": "happy-daze-volume-one-1812503", "k": "anthology", "y": 1990, "d": "2017-12-07", "l": "Island Records", "n": 0}, {"t": "Silicon Valley (Music From The HBO Original Series)", "s": "silicon-valley-music-from-the-hbo-original-series-10885801", "k": "soundtrack", "y": 2017, "d": "2017-09-23", "l": "HBO", "n": 0}, {"t": "Twin Peaks (Music From The Limited Event Series)", "s": "twin-peaks-music-from-the-limited-event-series-10889050", "k": "soundtrack", "y": 2017, "d": "2017-09-23", "l": "Rhino Records (2)", "n": 0}, {"t": "This Is Trojan", "s": "this-is-trojan-10620174", "k": "anthology", "y": 2015, "d": "2017-07-29", "l": "Trojan Records", "n": 41}, {"t": "Baby Driver (Music From The Motion Picture)", "s": "baby-driver-music-from-the-motion-picture-10548165", "k": "soundtrack", "y": 2017, "d": "2017-07-21", "l": "30th Century Records", "n": 0}, {"t": "Metal Killers", "s": "metal-killers-1916752", "k": "anthology", "y": 1984, "d": "2017-07-11", "l": "Kastle Killers", "n": 0}, {"t": "Quadrophenia (Music From The Soundtrack Of The Who Film)", "s": "quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777", "k": "soundtrack", "y": 1979, "d": "2017-06-06", "l": "UMC", "n": 0}, {"t": "Mod Anthems: Original Northern Soul & R'N'B Classics", "s": "mod-anthems-original-northern-soul-rnb-classics-10350346", "k": "series", "y": 2015, "d": "2017-05-27", "l": "Rhino Records (2)", "n": 0}, {"t": "Indie Anthems", "s": "indie-anthems-10351934", "k": "series", "y": 2007, "d": "2017-05-27", "l": "Demon Records", "n": 0}, {"t": "Singles (Original Motion Picture Soundtrack)", "s": "singles-original-motion-picture-soundtrack-10302224", "k": "soundtrack", "y": 1992, "d": "2017-05-19", "l": "Epic Soundtrax", "n": 0}, {"t": "Motown Funk", "s": "motown-funk-10167720", "k": "anthology", "y": 2013, "d": "2017-04-23", "l": "Tamla Motown", "n": 0}, {"t": "Indie Top 20 Volume XI", "s": "indie-top-20-volume-xi-589039", "k": "anthology", "y": 1991, "d": "2017-04-14", "l": "Beechwood Music", "n": 0}, {"t": "XL Recordings: Pay Close Attention", "s": "xl-recordings-pay-close-attention-6032106", "k": "anthology", "y": 2014, "d": "2017-04-09", "l": "XL Recordings", "n": 0}, {"t": "Music From The Motion Picture Soundtrack - Beverly Hills Cop", "s": "music-from-the-motion-picture-soundtrack-beverly-hills-cop-7781680", "k": "soundtrack", "y": 1984, "d": "2017-03-25", "l": "Geffen Records", "n": 0}, {"t": "The Blacklist (Music From The Television Series)", "s": "the-blacklist-music-from-the-television-series-7720657", "k": "soundtrack", "y": 2015, "d": "2017-03-02", "l": "Music On Vinyl", "n": 0}, {"t": "Northern Soul All Nighter", "s": "northern-soul-all-nighter-8445210", "k": "anthology", "y": 2014, "d": "2017-03-02", "l": "Not Now Music", "n": 0}, {"t": "The Man Who Fell To Earth", "s": "the-man-who-fell-to-earth-9399915", "k": "soundtrack", "y": 2016, "d": "2017-02-28", "l": "UMC", "n": 0}, {"t": "Electro (A Personal Selection Of Electro Classics)", "s": "electro-a-personal-selection-of-electro-classics-9836222", "k": "anthology", "y": 2017, "d": "2017-02-22", "l": "Z Records", "n": 0}, {"t": "Judgment Night (Music From The Motion Picture)", "s": "judgment-night-music-from-the-motion-picture-2602982", "k": "soundtrack", "y": 1993, "d": "2017-01-25", "l": "Music On Vinyl", "n": 0}, {"t": "Classic Rock Anthems", "s": "classic-rock-anthems-9435053", "k": "series", "y": 2016, "d": "2016-12-27", "l": "Demon Records", "n": 0}, {"t": "Tommy (Original Soundtrack Recording)", "s": "tommy-original-soundtrack-recording-546026", "k": "soundtrack", "y": 1975, "d": "2016-12-08", "l": "Polydor", "n": 0}, {"t": "Indie Top 20 Volume VII", "s": "indie-top-20-volume-vii-430563", "k": "anthology", "y": 1989, "d": "2016-11-16", "l": "Beechwood Music", "n": 0}, {"t": "Doing It For The Kids", "s": "doing-it-for-the-kids-547494", "k": "anthology", "y": 1988, "d": "2016-11-16", "l": "Creation Records", "n": 0}, {"t": "Lost Highway (Original Motion Picture Soundtrack)", "s": "lost-highway-original-motion-picture-soundtrack-9274768", "k": "soundtrack", "y": 1997, "d": "2016-11-14", "l": "Music On Vinyl", "n": 0}, {"t": "Trainspotting (Music From The Motion Picture)", "s": "trainspotting-music-from-the-motion-picture-9329818", "k": "soundtrack", "y": 1996, "d": "2016-11-11", "l": "Parlophone", "n": 0}, {"t": "The Lost Boys (Original Motion Picture Soundtrack)", "s": "the-lost-boys-original-motion-picture-soundtrack-650426", "k": "soundtrack", "y": 1987, "d": "2016-06-18", "l": "Atlantic", "n": 0}, {"t": "*** Leader Of The Starry Skies *** (A Tribute To Tim Smith) Songbook 1", "s": "leader-of-the-starry-skies-a-tribute-to-tim-smith-songbook-1-3005353", "k": "tribute", "y": 2010, "d": "2016-05-31", "l": "Believers Roast", "n": 0}, {"t": "The Best Of The Johnny Cash TV Show: 1969-1971", "s": "the-best-of-the-johnny-cash-tv-show-1969-1971-8395514", "k": "series", "y": 2007, "d": "2016-04-27", "l": "Columbia", "n": 0}, {"t": "Rocky IV (Original Motion Picture Soundtrack)", "s": "rocky-iv-original-motion-picture-soundtrack-8300839", "k": "soundtrack", "y": 1985, "d": "2016-03-29", "l": "Music On Vinyl", "n": 0}, {"t": "Indie Top 20 Vol X", "s": "indie-top-20-vol-x-449135", "k": "anthology", "y": 1990, "d": "2016-03-24", "l": "Beechwood Music", "n": 0}, {"t": "High Fidelity (Original Soundtrack)", "s": "high-fidelity-original-soundtrack-7779144", "k": "soundtrack", "y": 2000, "d": "2016-02-29", "l": "Hollywood Records", "n": 0}, {"t": "Transformers: The Movie (Original Motion Picture Soundtrack)", "s": "transformers-the-movie-original-motion-picture-soundtrack-7782037", "k": "soundtrack", "y": 1986, "d": "2015-12-07", "l": "Volcano (2)", "n": 0}, {"t": "Loaded", "s": "loaded-1420886", "k": "anthology", "y": 1993, "d": "2015-12-07", "l": "Virgin", "n": 0}, {"t": "American Dreams", "s": "american-dreams-1665212", "k": "anthology", "y": 1985, "d": "2015-12-04", "l": "Starblend Records Ltd.", "n": 0}, {"t": "Marquee Metal", "s": "marquee-metal-1964892", "k": "anthology", "y": 1991, "d": "2015-10-14", "l": "PolyGram TV", "n": 0}, {"t": "Product 2378", "s": "product-2378-1675620", "k": "anthology", "y": 1990, "d": "2015-10-14", "l": "Telstar", "n": 0}, {"t": "Radio Active", "s": "radio-active-1762222", "k": "anthology", "y": 1980, "d": "2015-09-16", "l": "Ronco", "n": 0}, {"t": "The Marquee - 30 Legendary Years", "s": "the-marquee-30-legendary-years-1679405", "k": "anthology", "y": 1989, "d": "2015-09-10", "l": "Polydor", "n": 0}], "appear": [{"n": "David Bowie", "c": 2, "own": "david-bowie"}, {"n": "David Gilmour", "c": 2, "own": "david-gilmour"}, {"n": "Bob & Marcia", "c": 2, "own": null}, {"n": "Bruce Ruffin", "c": 2, "own": null}, {"n": "Desmond Dekker", "c": 2, "own": null}, {"n": "Greyhound", "c": 2, "own": null}, {"n": "John Holt", "c": 2, "own": null}, {"n": "Ken Boothe", "c": 2, "own": null}, {"n": "Lord Tanamo", "c": 2, "own": null}, {"n": "Nicky Thomas", "c": 2, "own": null}, {"n": "Robert Palmer", "c": 2, "own": null}, {"n": "The Pioneers", "c": 2, "own": null}, {"n": "Bad Manners", "c": 1, "own": "bad-manners"}, {"n": "David Gray", "c": 1, "own": "david-gray"}, {"n": "Dennis Brown", "c": 1, "own": "dennis-brown"}, {"n": "Desmond Dekker & The Aces", "c": 1, "own": "desmond-dekker-the-aces"}, {"n": "Electronic", "c": 1, "own": "electronic"}, {"n": "Gin Blossoms", "c": 1, "own": "gin-blossoms"}, {"n": "Hans Zimmer", "c": 1, "own": "hans-zimmer"}, {"n": "Happy Mondays", "c": 1, "own": "happy-mondays"}, {"n": "Henge", "c": 1, "own": "henge"}, {"n": "Iggy Pop", "c": 1, "own": "iggy-pop"}, {"n": "James", "c": 1, "own": "james"}, {"n": "John Grant", "c": 1, "own": "john-grant"}, {"n": "Joy Division", "c": 1, "own": "joy-division"}, {"n": "Leftfield", "c": 1, "own": "leftfield"}, {"n": "Love", "c": 1, "own": "love"}, {"n": "Madness", "c": 1, "own": "madness"}, {"n": "Massive Attack", "c": 1, "own": "massive-attack"}, {"n": "Michael McDonald", "c": 1, "own": "michael-mcdonald"}, {"n": "Nadia Reid", "c": 1, "own": "nadia-reid"}, {"n": "New Order", "c": 1, "own": "new-order"}, {"n": "Nick Drake", "c": 1, "own": "nick-drake"}, {"n": "Nick Mason's Saucerful Of Secrets", "c": 1, "own": "nick-masons-saucerful-of-secrets"}, {"n": "Northside", "c": 1, "own": "northside"}, {"n": "Orbital", "c": 1, "own": "orbital"}, {"n": "Orchestral Manoeuvres In The Dark", "c": 1, "own": "orchestral-manoeuvres-in-the-dark"}, {"n": "Pink Floyd", "c": 1, "own": "pink-floyd"}, {"n": "Richard Wright", "c": 1, "own": "richard-wright"}, {"n": "Rosalie Cunningham", "c": 1, "own": "rosalie-cunningham"}, {"n": "Soundgarden", "c": 1, "own": "soundgarden"}, {"n": "Squeeze", "c": 1, "own": "squeeze"}, {"n": "Symarip", "c": 1, "own": "symarip"}, {"n": "The Beat", "c": 1, "own": "the-beat"}, {"n": "The Cranberries", "c": 1, "own": "the-cranberries"}, {"n": "The Prodigy", "c": 1, "own": "the-prodigy"}, {"n": "The Selecter", "c": 1, "own": "the-selecter"}, {"n": "The Specials", "c": 1, "own": "the-specials"}, {"n": "The Staves", "c": 1, "own": "the-staves"}, {"n": "The Velvet Underground", "c": 1, "own": "the-velvet-underground"}, {"n": "Tim Bowness", "c": 1, "own": "tim-bowness"}, {"n": "Toto", "c": 1, "own": "toto"}, {"n": "Underworld", "c": 1, "own": "underworld"}, {"n": "52nd Street", "c": 1, "own": null}, {"n": "A Certain Ratio", "c": 1, "own": null}, {"n": "Al Hirt", "c": 1, "own": null}, {"n": "Aldous Harding", "c": 1, "own": null}, {"n": "Althea & Donna", "c": 1, "own": null}, {"n": "Angela Bowie", "c": 1, "own": null}, {"n": "Ape Hangers", "c": 1, "own": null}, {"n": "Aurora", "c": 1, "own": null}, {"n": "Ava Cherry", "c": 1, "own": null}, {"n": "Average White Band", "c": 1, "own": null}, {"n": "Ben Harper", "c": 1, "own": null}, {"n": "Bernard Herrmann", "c": 1, "own": null}, {"n": "Better Than Ezra", "c": 1, "own": null}, {"n": "Bill Champlin", "c": 1, "own": null}, {"n": "Biting Tongues", "c": 1, "own": null}, {"n": "Bobby Caldwell", "c": 1, "own": null}, {"n": "Bombay Bicycle Club", "c": 1, "own": null}, {"n": "Boris Gardiner", "c": 1, "own": null}, {"n": "Cabaret Voltaire", "c": 1, "own": null}, {"n": "Camille", "c": 1, "own": null}, {"n": "Carly Simon", "c": 1, "own": null}, {"n": "Carmen", "c": 1, "own": null}, {"n": "Cath Carroll", "c": 1, "own": null}, {"n": "Charles & Eddie", "c": 1, "own": null}, {"n": "Charlie Feathers", "c": 1, "own": null}, {"n": "Charlie Sexton", "c": 1, "own": null}, {"n": "Chris Isaak", "c": 1, "own": null}, {"n": "Christian Lee Hutson", "c": 1, "own": null}, {"n": "Christopher Cross", "c": 1, "own": null}, {"n": "Chuck Berry", "c": 1, "own": null}, {"n": "Coyote Shivers", "c": 1, "own": null}, {"n": "Cracker", "c": 1, "own": null}, {"n": "Craig Armstrong", "c": 1, "own": null}, {"n": "Crawling Chaos", "c": 1, "own": null}, {"n": "Crispy Ambulance", "c": 1, "own": null}, {"n": "Dana Gillespie", "c": 1, "own": null}, {"n": "Dandy Livingstone", "c": 1, "own": null}, {"n": "Danny Ray", "c": 1, "own": null}, {"n": "Dave & Ansel Collins", "c": 1, "own": null}, {"n": "Dave Barker", "c": 1, "own": null}, {"n": "Dave Harris", "c": 1, "own": null}, {"n": "David Carradine", "c": 1, "own": null}, {"n": "Delroy Williams", "c": 1, "own": null}, {"n": "Derrick Morgan", "c": 1, "own": null}, {"n": "Diana Silveira X Psychedelic Circus", "c": 1, "own": null}, {"n": "Diane Tell", "c": 1, "own": null}, {"n": "Drill", "c": 1, "own": null}, {"n": "Edwyn Collins", "c": 1, "own": null}, {"n": "Emeli Sandé", "c": 1, "own": null}, {"n": "Errol Dunkley", "c": 1, "own": null}, {"n": "Evan Dando", "c": 1, "own": null}, {"n": "Famous Blue Cable", "c": 1, "own": null}, {"n": "Fontaines D.C.", "c": 1, "own": null}, {"n": "Freddie Notes", "c": 1, "own": null}, {"n": "Freddie Notes & The Rudies", "c": 1, "own": null}, {"n": "Future Pilot A.K.A.", "c": 1, "own": null}, {"n": "George Benson", "c": 1, "own": null}, {"n": "Gheorghe Zamfir", "c": 1, "own": null}, {"n": "Gia Margaret", "c": 1, "own": null}, {"n": "Guy Pratt", "c": 1, "own": null}, {"n": "Harry J. All Stars", "c": 1, "own": null}, {"n": "Honey Boy", "c": 1, "own": null}, {"n": "Horace Faith", "c": 1, "own": null}, {"n": "Ian Hunter", "c": 1, "own": null}, {"n": "Isaac Hayes", "c": 1, "own": null}, {"n": "Jacques Brel", "c": 1, "own": null}, {"n": "Jim Sclavunos", "c": 1, "own": null}, {"n": "Joe Henry", "c": 1, "own": null}, {"n": "John Dowie", "c": 1, "own": null}, {"n": "John Echols", "c": 1, "own": null}, {"n": "John Parish", "c": 1, "own": null}, {"n": "John Waite", "c": 1, "own": null}, {"n": "Julie Dreyfus", "c": 1, "own": null}, {"n": "Justin Hinds & The Dominoes", "c": 1, "own": null}, {"n": "Kalima", "c": 1, "own": null}, {"n": "Karine Polwart", "c": 1, "own": null}, {"n": "Katherine Priddy", "c": 1, "own": null}, {"n": "Keith & Tex", "c": 1, "own": null}, {"n": "Kenny Rankin", "c": 1, "own": null}, {"n": "Kris Drever", "c": 1, "own": null}, {"n": "Kruder & Dorfmeister", "c": 1, "own": null}, {"n": "Kula Shaker", "c": 1, "own": null}, {"n": "Lauren Wood", "c": 1, "own": null}, {"n": "Let's Eat Grandma", "c": 1, "own": null}, {"n": "Life", "c": 1, "own": null}, {"n": "Little Feat", "c": 1, "own": null}, {"n": "Liz Phair", "c": 1, "own": null}, {"n": "Lonette McKee", "c": 1, "own": null}, {"n": "Lord Creator", "c": 1, "own": null}, {"n": "Lucy Liu", "c": 1, "own": null}, {"n": "Luis Bacalov", "c": 1, "own": null}, {"n": "Lustre", "c": 1, "own": null}, {"n": "Léo Delibes", "c": 1, "own": null}, {"n": "Marcel King", "c": 1, "own": null}, {"n": "Marcia Griffiths", "c": 1, "own": null}, {"n": "Maria Muldaur", "c": 1, "own": null}, {"n": "Martha Wainwright", "c": 1, "own": null}, {"n": "Maxus", "c": 1, "own": null}, {"n": "Me'Shell NdegéOcello", "c": 1, "own": null}, {"n": "Meiko Kaji", "c": 1, "own": null}, {"n": "Men On The Border", "c": 1, "own": null}, {"n": "Miaow", "c": 1, "own": null}, {"n": "Michael Sembello", "c": 1, "own": null}, {"n": "Mick Ronson", "c": 1, "own": null}, {"n": "Mike Lindsay", "c": 1, "own": null}, {"n": "Minny Pops", "c": 1, "own": null}, {"n": "Mystery Jets", "c": 1, "own": null}, {"n": "Nancy Sinatra", "c": 1, "own": null}, {"n": "Norman Blake", "c": 1, "own": null}, {"n": "Nymphomania", "c": 1, "own": null}, {"n": "Olivia Newton-John", "c": 1, "own": null}, {"n": "Pages", "c": 1, "own": null}, {"n": "Paul Anka", "c": 1, "own": null}, {"n": "Phil Selway", "c": 1, "own": null}, {"n": "Phyllis Dillon", "c": 1, "own": null}, {"n": "Please", "c": 1, "own": null}, {"n": "Pluto Shervington", "c": 1, "own": null}, {"n": "Pointer Sisters", "c": 1, "own": null}, {"n": "Pünk Barrett", "c": 1, "own": null}, {"n": "Quando Quango", "c": 1, "own": null}, {"n": "RZA", "c": 1, "own": null}, {"n": "Radhika", "c": 1, "own": null}, {"n": "Reeves Gabrels", "c": 1, "own": null}, {"n": "Revenge", "c": 1, "own": null}, {"n": "RichKo", "c": 1, "own": null}, {"n": "Robbie Dupree", "c": 1, "own": null}, {"n": "Robyn Hitchcock", "c": 1, "own": null}, {"n": "Royal Family And The Poor", "c": 1, "own": null}, {"n": "Rudy Mills", "c": 1, "own": null}, {"n": "Rupie Edwards", "c": 1, "own": null}, {"n": "Santa Esmeralda", "c": 1, "own": null}, {"n": "Section 25", "c": 1, "own": null}, {"n": "Shelby Lynne", "c": 1, "own": null}, {"n": "Simon Boswell", "c": 1, "own": null}, {"n": "Skullcrusher", "c": 1, "own": null}, {"n": "Soft Machine", "c": 1, "own": null}, {"n": "Sophia George", "c": 1, "own": null}, {"n": "Spiders From Mars", "c": 1, "own": null}, {"n": "Stephen Bishop", "c": 1, "own": null}, {"n": "Stereo MC's", "c": 1, "own": null}, {"n": "Stick In The Wheel", "c": 1, "own": null}, {"n": "Stockholm Monsters", "c": 1, "own": null}, {"n": "Susan Cadogan", "c": 1, "own": null}, {"n": "Swamp Children", "c": 1, "own": null}, {"n": "Teddy Brown", "c": 1, "own": null}, {"n": "The 5.6.7.8's", "c": 1, "own": null}, {"n": "The Astronettes", "c": 1, "own": null}, {"n": "The Bodysnatchers", "c": 1, "own": null}, {"n": "The Distractions", "c": 1, "own": null}, {"n": "The Durutti Column", "c": 1, "own": null}, {"n": "The Ethiopians", "c": 1, "own": null}, {"n": "The Hot Shots", "c": 1, "own": null}, {"n": "The Innocence Mission", "c": 1, "own": null}, {"n": "The Martinis", "c": 1, "own": null}, {"n": "The Marvels", "c": 1, "own": null}, {"n": "The Maytals", "c": 1, "own": null}, {"n": "The McCoys", "c": 1, "own": null}, {"n": "The Meices", "c": 1, "own": null}, {"n": "The Melodians", "c": 1, "own": null}, {"n": "The Names", "c": 1, "own": null}, {"n": "The Other Two", "c": 1, "own": null}, {"n": "The Paragons", "c": 1, "own": null}, {"n": "The Railway Children", "c": 1, "own": null}, {"n": "The Slickers", "c": 1, "own": null}, {"n": "The Upsetters", "c": 1, "own": null}, {"n": "The Wake", "c": 1, "own": null}, {"n": "The Wandering Hearts", "c": 1, "own": null}, {"n": "The Yardbirds", "c": 1, "own": null}, {"n": "Theo Travis", "c": 1, "own": null}, {"n": "Tito Simon", "c": 1, "own": null}, {"n": "Toad The Wet Sprocket", "c": 1, "own": null}, {"n": "Tommy McCook & The Supersonics", "c": 1, "own": null}, {"n": "Tomoyasu Hotei", "c": 1, "own": null}, {"n": "Tony Tribe", "c": 1, "own": null}, {"n": "Tunnelvision", "c": 1, "own": null}, {"n": "Uma Thurman", "c": 1, "own": null}, {"n": "Uncle Acid & The Deadbeats", "c": 1, "own": null}, {"n": "Urban Dance Squad", "c": 1, "own": null}, {"n": "Violeta De Outono", "c": 1, "own": null}, {"n": "Voyage 35", "c": 1, "own": null}, {"n": "Winston Groovy", "c": 1, "own": null}, {"n": "X-O-Dus", "c": 1, "own": null}, {"n": "Zeus B. Held", "c": 1, "own": null}], "clowns": [["A1", "Arnold Layne (Live At The Barbican)", [["Pink Floyd", "pink-floyd"], ["Richard Wright", "richard-wright"]]], ["A2", "Astronomy Dominé (Live At The Roundhouse)", [["Nick Mason's Saucerful Of Secrets", "nick-masons-saucerful-of-secrets"]]], ["A3", "See Emily Play", [["Martha Wainwright", null]]], ["A4", "Love You", [["Mystery Jets", null]]], ["A5", "Chapter 24 (Live In São Paulo)", [["Violeta De Outono", null]]], ["A6", "Two Of A Kind", [["Dave Harris", null], ["Zeus B. Held", null]]], ["B1", "No Good Trying/Interstellar Overdrive", [["Kula Shaker", null]]], ["B2", "Apples And Oranges", [["Voyage 35", null]]], ["B3", "Gigolo Aunt (Live At Acheron)", [["Robyn Hitchcock", null]]], ["B4", "Lucifer Sam", [["Rosalie Cunningham", "rosalie-cunningham"]]], ["B5", "Golden Hair", [["Tim Bowness", "tim-bowness"]]], ["B6", "Effervescing Elephant", [["Jim Sclavunos", null]]], ["C1", "Rhamadan (Edit)", [["Soft Machine", null]]], ["C2", "Long Gone", [["Uncle Acid & The Deadbeats", null]]], ["C3", "Matilda Mother", [["Radhika", null], ["Norman Blake", null], ["Future Pilot A.K.A.", null]]], ["C4", "Scream Thy Last Scream", [["Men On The Border", null]]], ["C5", "Bike", [["Pünk Barrett", null]]], ["D1", "Octopus (Edit)", [["Diana Silveira X Psychedelic Circus", null]]], ["D2", "Baby Lemonade", [["Love", "love"], ["John Echols", null]]], ["D3", "Terrapin", [["Henge", "henge"]]], ["D4", "Late Night", [["Theo Travis", null], ["RichKo", null]]], ["D5", "Arnold Layne (Live At The Royal Albert Hall)", [["David Gilmour", "david-gilmour"], ["David Bowie", "david-bowie"]]]], "bowie": [{"s": "clowns-and-jugglers-the-songs-of-syd-barrett-38732007", "t": "Clowns And Jugglers: The Songs Of Syd Barrett", "k": "Tribute", "on": "<b>Arnold Layne</b> (live) with David Gilmour"}, {"s": "the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059", "t": "The Many Faces Of David Bowie", "k": "Tribute", "on": "5 tracks, with <b>Iggy Pop</b>, Reeves Gabrels, Dana Gillespie and Mick Ronson"}]};
+const IMG = s => `https://assets.russ.fm/album/${s}/${s}-medium.jpg`;
+const AV = s => `https://assets.russ.fm/artist/${s}/${s}-avatar.jpg`;
+const KINDS = [
+  ['all', 'All', 'Every record credited to Various, newest first.'],
+  ['soundtrack', 'Soundtracks', 'Films, TV and the odd video game. Mostly picked up for one song and kept for the rest.'],
+  ['anthology', 'Anthologies', 'Label samplers, scene round-ups and benefit albums: Trojan, Factory, Stax, Motown and the Indie Top 20 run.'],
+  ['series', 'Series', 'Now That’s What I Call…, the Anthems run and the other numbered and decade sets.'],
+  ['tribute', 'Tributes', 'One artist’s songs, played by everyone else.'],
+];
+const KLABEL = { soundtrack: 'Soundtrack', anthology: 'Anthology', series: 'Series', tribute: 'Tribute' };
+const tabs = document.getElementById('tabs'), grid = document.getElementById('grid'), blurb = document.getElementById('blurb'), more = document.getElementById('more');
+let kind = 'all', all = false;
+function count(k) { return k === 'all' ? DATA.albums.length : DATA.albums.filter(a => a.k === k).length; }
+function card(a) {
+  const who = a.n ? `<span class="who">${a.n} artists</span> · ` : '';
+  return `<a class="card" href="#"><div class="sleeve"><img loading="lazy" src="${IMG(a.s)}" alt=""><span class="kind">${KLABEL[a.k]}</span></div><h3>${a.t}</h3><div class="meta">${who}${a.y ?? ''}${a.l ? ' · ' + a.l : ''}</div></a>`;
+}
+function render() {
+  tabs.innerHTML = KINDS.map(([k, name]) => `<button class="tab" role="tab" aria-selected="${k === kind}" data-k="${k}">${name} <em>${count(k)}</em></button>`).join('');
+  blurb.textContent = KINDS.find(x => x[0] === kind)[2];
+  const list = DATA.albums.filter(a => kind === 'all' || a.k === kind);
+  grid.innerHTML = (all ? list : list.slice(0, 18)).map(card).join('');
+  more.hidden = all || list.length <= 18;
+  more.textContent = `Show all ${list.length}`;
+}
+tabs.addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) { kind = b.dataset.k; all = false; render(); } });
+more.addEventListener('click', () => { all = true; render(); });
+render();
+
+const own = DATA.appear.filter(a => a.own), rest = DATA.appear.filter(a => !a.own);
+const face = a => `<a class="face" href="#"><div class="av"><img loading="lazy" src="${AV(a.own)}" alt=""></div><b>${a.n}</b><small>${a.c} ${a.c > 1 ? 'compilations' : 'compilation'}</small></a>`;
+const faces = document.getElementById('faces');
+faces.innerHTML = own.slice(0, 21).map(face).join('');
+if (own.length > 21) { const b = document.createElement('button'); b.className = 'pill'; b.style.cssText = 'margin:28px auto 0;display:flex;color:var(--ink-2)'; b.textContent = `Show all ${own.length}`; b.onclick = () => { faces.innerHTML = own.map(face).join(''); b.remove(); }; faces.after(b); }
+document.getElementById('also').innerHTML = `<span class="label">And ${rest.length} more without a page of their own</span>` + rest.slice(0, 40).map(a => `<span>${a.n}${a.c > 1 ? `<i>×${a.c}</i>` : ''}</span>`).join('') + `<span>…</span>`;
+
+const T = DATA.clowns;
+const linked = [...new Map(T.flatMap(t => t[2]).filter(x => x[1]).map(x => [x[1], x])).values()];
+document.getElementById('stack').innerHTML = linked.slice(0, 4).map(x => `<img src="${AV(x[1])}" alt="">`).join('');
+document.getElementById('tracks').innerHTML = T.map(([pos, title, by]) => `<li><span class="pos">${pos}</span><span><span class="t">${title}</span><br><span class="by">${by.map(x => x[1] ? `<a href="#">${x[0]}</a>` : x[0]).join(' &amp; ')}</span></span><span class="mini">${by.filter(x => x[1]).map(x => `<img src="${AV(x[1])}" alt="">`).join('')}</span></li>`).join('');
+
+document.getElementById('appears').innerHTML = DATA.bowie.map(a => `<a class="card" href="#"><div class="sleeve"><img src="${IMG(a.s)}" alt=""><span class="kind">${a.k}</span></div><h3>${a.t}</h3><div class="on">${a.on}</div></a>`).join('');
+</script>
+</body>
+</html>

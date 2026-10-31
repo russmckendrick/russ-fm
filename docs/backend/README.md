@@ -74,7 +74,7 @@ scrapper/
     │                                #   report, descriptions, videos, maintenance, services
     ├── services/                    # API clients: discogs, apple_music, spotify, lastfm,
     │                                #   wikipedia, theaudiodb, perplexity (+ rate limiting)
-    ├── output/                      # JSON writer, image manager, collection.json + tv.json generators
+    ├── output/                      # JSON writer, image manager, collection.json + tv.json + compilations.json generators
     ├── tui/                         # ratatui app, screens (incl. screens/boxsets.rs), detail
     │                                #   views, modals, runners
     └── web/                         # axum server for the web UI: API, jobs + SSE, artwork

@@ -267,6 +267,7 @@ dist/
 │   └── vendor-[hash].js
 ├── collection.json
 ├── tv.json              # /tv videos, written by the scrapper
+├── compilations.json    # who plays on the "Various" records, written by the scrapper
 ├── tv-rooms/            # /tv room photos (site assets, not R2)
 ├── sitemap.xml
 ├── album-colors.json

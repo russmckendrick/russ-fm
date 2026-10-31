@@ -51,6 +51,7 @@ public/
 ├── collection.json           # Album index for listings
 ├── album-colors.json         # Pre-extracted sleeve colour palettes
 ├── album-swatches.json       # Sleeve swatches, [hex, percent] pairs (album page only)
+├── compilations.json         # Who plays on the "Various" records (scrapper, with collection.json)
 ├── wrapped.json              # Year-in-review data
 ├── explore/                  # /explore graph + 64px atlases (generated, gitignored)
 ├── album/

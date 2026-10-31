@@ -224,6 +224,11 @@ on the ground.
   duration. The year is `originalYear()` (see
   [utilities](./utilities.md#release-years-srclibreleaseyearts)), not the
   pressing's date.
+- **Compilations** — a "Various" credit reads "Various Artists", links to
+  `/artist/various`, and its picture is `CompilationFaces`: the avatars of up
+  to four track artists with a page (else the Various avatar), with how many
+  artists the record credits under the name. The page title says "Various
+  Artists" too.
 - **Band line-up** — when `collection.json` carries `members`, a "With …"
   line sits under the title; members with an artist page are linked.
   Member credits (`role: "member"` in the album JSON) are left out of the
@@ -245,7 +250,11 @@ on the ground.
   side has a small disc and its label; scrobbling is whole-album only, from
   the hero. Section-header rows render as kickers. Each track deep-links to Spotify when a match exists
   (matched by normalised title via
-  [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)).
+  [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)). On a
+  compilation, each track's artists link to their artist page when they have
+  one (`trackArtistPage()`, from
+  [compilations.json](../data/schemas.md#compilationsjson), loaded only for
+  compilations).
 - **Listen** — `MusicPlayerSection`: YouTube (the default when there are videos), Apple Music and Spotify tabs.
   The release's YouTube videos live in the YouTube tab (`AlbumTv`, a mini
   russ.fm/tv on the site-wide TV player, always, built from the release's links when `tv.json` lacks the record), not
@@ -465,13 +474,27 @@ synchronously, and `findSimilarArtists()` falls back to
 `getGenreExplorer()` for genre-overlap candidates. `ArtistRouteHandler`
 keys the page by slug, so moving to another artist mounts a fresh page.
 
-**"Various" Artist Handling:**
+**Various Artists (`/artist/various`):** the page for every record credited to Discogs'
+"Various" placeholder, rendered by the same component (`various` is true for the slug):
 
-```tsx
-if (slug === 'various' || slug === 'various-artists') {
-  return <Navigate to="/artists" replace />;
-}
-```
+- The hero shows "Various Artists" (Discogs calls it "Various"), with Records, Soundtracks and
+  the release span, the one-line biography from the scrapper under the stats, and only the
+  Discogs link (no Wikipedia fallback, no genre chips, no Thread). Its photo is generated
+  artwork (fanned record sleeves) and its desktop hero is `various-fanart01.jpg`, the wide
+  version.
+- The discography is `VariousShelves`: All, Soundtracks, Anthologies, Series and Tributes
+  (`shelfOf()` in `src/lib/compilations.ts`), newest additions first, 24 tiles then Show all.
+  Each tile's meta is its shelf (on All), how many artists are credited on it, and its year.
+- Similar artists is replaced by `WhoTurnsUp`: the artists with a page who play on the
+  compilations, most compilations first (18, then Show all), then the most credited artists
+  without a page as plain names. Both come from
+  [compilations.json](../data/schemas.md#compilationsjson).
+- No biography section and no MusicGroup JSON-LD.
+
+**Also appears on:** on every other artist page, under the discography, `AlsoAppearsOn` lists
+the compilations they play on (a track credit, not the record's own credit), newest additions
+first, each with their tracks there as its meta. Records already in their discography are left
+out.
 
 ---
 

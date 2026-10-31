@@ -48,17 +48,10 @@ function AlbumRouteHandler() {
   return <AlbumDetailPage key={albumPath} />;
 }
 
-// Component to handle "Various" artist route interception
+// Keyed by the path, so moving between artists mounts a fresh page. /artist/various is the
+// Various Artists page (the compilations), which ArtistDetailPage renders itself.
 function ArtistRouteHandler() {
   const { artistPath } = useParams<{ artistPath: string }>();
-
-  // Check if this is a "Various" artist route
-  if (artistPath && decodeURIComponent(artistPath).toLowerCase() === 'various') {
-    // Redirect to artists page instead of showing Various artist page
-    return <Navigate to="/artists" replace />;
-  }
-
-  // For all other artists, show the normal artist detail page
   return <ArtistDetailPage key={artistPath} />;
 }
 

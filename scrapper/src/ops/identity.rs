@@ -292,7 +292,8 @@ pub async fn run(cfg: &Config, args: BackfillIdentitiesArgs) -> Result<()> {
 
     let mut artists: Vec<ArtistRecord> = Vec::new();
     for s in db.list_artists(u32::MAX, "name")? {
-        if s.discogs_id.as_deref().is_none_or(str::is_empty) {
+        // Wikidata knows Discogs 194 as the "Various artists" concept, not a performer.
+        if s.discogs_id.as_deref().is_none_or(str::is_empty) || super::is_various(&s.name) {
             continue;
         }
         if args.artist.as_deref().is_some_and(|a| !s.name.eq_ignore_ascii_case(a)) {

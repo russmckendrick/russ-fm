@@ -6,10 +6,14 @@
 //! title with its movements (`sub_tracks`) dropped, indistinguishable from a side heading. The
 //! raw Discogs tracklist isn't kept, so each such release is fetched again.
 //!
-//! Resumable: only releases with a position-less row that has no `type` yet are fetched
-//! (unless `--force`), and every fetched heading or suite gets one, so a re-run only fetches
-//! what a previous run missed. Every release with a typed tracklist then has its album JSON
-//! synced from the DB, so a re-run also repairs files an interrupted run never patched.
+//! The old scrapper also dropped the per-track artists of compilations credited to "Various",
+//! so their tracks can only be shown and scrobbled as "Various"; those are fetched again too.
+//!
+//! Resumable: only releases with a position-less row that has no `type` yet, or a compilation
+//! with no track artists, are fetched (unless `--force`), and every fetched heading or suite
+//! gets a type, so a re-run only fetches what a previous run missed. Every release with a typed
+//! tracklist or credited compilation tracks then has its album JSON synced from the DB, so a
+//! re-run also repairs files an interrupted run never patched.
 
 use anyhow::{bail, Result};
 use serde_json::Value;
@@ -28,6 +32,20 @@ fn has_untyped_header(tracklist: &Value) -> bool {
             && t.get("type").is_none()
             && t.get("parent").is_none()
     })
+}
+
+/// Some track carries its own artist credit.
+fn has_track_artists(tracklist: &Value) -> bool {
+    tracklist
+        .as_array()
+        .into_iter()
+        .flatten()
+        .any(|t| t.get("artists").and_then(Value::as_array).is_some_and(|a| !a.is_empty()))
+}
+
+/// Credited to Discogs' "Various" placeholder: a compilation.
+fn is_compilation(c: &TracklistCandidate) -> bool {
+    c.artists.iter().any(|a| super::is_various(a))
 }
 
 /// The tracklist has been mapped with row kinds (a heading, a suite or a movement).
@@ -58,13 +76,16 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
     let candidates: Vec<TracklistCandidate> = db
         .releases_for_tracklists()?
         .into_iter()
-        .filter(|c| args.force || has_untyped_header(&c.tracklist))
+        .filter(|c| args.force || has_untyped_header(&c.tracklist) || (is_compilation(c) && !has_track_artists(&c.tracklist)))
         .collect();
     let album_dir = cfg.releases_dir();
     let to_fetch = args.limit.map_or(candidates.len(), |l| candidates.len().min(l as usize));
 
     if args.dry_run {
-        crate::say!("[dry-run] {} release(s) have untyped position-less rows ({to_fetch} this run).", candidates.len());
+        crate::say!(
+            "[dry-run] {} release(s) have untyped position-less rows or uncredited compilation tracks ({to_fetch} this run).",
+            candidates.len()
+        );
         for c in candidates.iter().take(to_fetch.min(25)) {
             crate::say!("  [{}] {} — {}", c.discogs_id, c.artists.join(", "), c.title);
         }
@@ -77,7 +98,7 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
     }
     crate::say!("Re-fetching the tracklist of {to_fetch} release(s) from Discogs...");
 
-    let (mut fetched, mut failed, mut suites) = (0usize, 0usize, 0usize);
+    let (mut fetched, mut failed, mut suites, mut credited) = (0usize, 0usize, 0usize, 0usize);
     for (i, c) in candidates.iter().take(to_fetch).enumerate() {
         super::out::progress(i + 1, to_fetch);
         let label = format!("[{}/{to_fetch}] {} — {}", i + 1, c.artists.join(", "), c.title);
@@ -97,9 +118,14 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
             continue;
         }
         let n = movements(&tracklist);
-        db.set_release_tracklist(&c.discogs_id, &Value::Array(tracklist))?;
+        let tracklist = Value::Array(tracklist);
+        let newly_credited = is_compilation(c) && !has_track_artists(&c.tracklist) && has_track_artists(&tracklist);
+        db.set_release_tracklist(&c.discogs_id, &tracklist)?;
         fetched += 1;
-        if n > 0 {
+        if newly_credited {
+            credited += 1;
+            crate::say!("{label} → track artists");
+        } else if n > 0 {
             suites += 1;
             crate::say!("{label} → {n} movement(s)");
         } else {
@@ -109,7 +135,8 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
 
     // Sync every typed tracklist into its album JSON: this run's and any an earlier run fetched.
     let (mut written, mut unchanged, mut no_file) = (0usize, 0usize, 0usize);
-    for c in db.releases_for_tracklists()?.into_iter().filter(|c| is_typed(&c.tracklist)) {
+    let synced = |c: &TracklistCandidate| is_typed(&c.tracklist) || (is_compilation(c) && has_track_artists(&c.tracklist));
+    for c in db.releases_for_tracklists()?.into_iter().filter(synced) {
         let folder = release_folder_name(&c.title, &c.discogs_id);
         match patch_album_fields(&album_dir, &folder, &[("tracklist", Some(public_tracklist(&c.tracklist)))]) {
             Ok(Patch::Written) => written += 1,
@@ -123,7 +150,7 @@ pub async fn run(cfg: &Config, args: BackfillTracklistsArgs) -> Result<()> {
     }
 
     crate::say!(
-        "\nDone: {fetched} fetched from Discogs ({suites} with suites), {failed} failed (re-run to retry). Album JSON: {written} updated, {unchanged} already current, {no_file} without a file."
+        "\nDone: {fetched} fetched from Discogs ({suites} with suites, {credited} compilations credited), {failed} failed (re-run to retry). Album JSON: {written} updated, {unchanged} already current, {no_file} without a file."
     );
     Ok(())
 }
@@ -142,5 +169,21 @@ mod tests {
             {"position": "", "title": "Bonus Tracks", "type": "heading"}
         ])));
         assert!(!has_untyped_header(&json!([{"position": "A1", "title": "Airbag"}])));
+    }
+
+    #[test]
+    fn compilations_without_track_artists_need_a_refetch() {
+        let candidate = |artists: &[&str], tracklist: Value| TracklistCandidate {
+            discogs_id: "1".into(),
+            title: "Help".into(),
+            artists: artists.iter().map(|a| a.to_string()).collect(),
+            tracklist,
+        };
+        let bare = json!([{"position": "A1", "title": "Come Together", "artists": []}]);
+        let credited = json!([{"position": "A1", "title": "Come Together", "artists": [{"name": "Smokin' Mojo Filters"}]}]);
+        assert!(is_compilation(&candidate(&["Various"], bare.clone())) && !has_track_artists(&bare));
+        assert!(has_track_artists(&credited));
+        assert!(!is_compilation(&candidate(&["Radiohead"], bare)));
+        assert!(is_compilation(&candidate(&["Max Richter", "Various"], credited)));
     }
 }

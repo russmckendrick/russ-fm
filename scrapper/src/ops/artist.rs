@@ -89,7 +89,7 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
     let mut artists = db.list_artists(u32::MAX, "name")?;
     if !args.include_various {
-        artists.retain(|a| !a.name.eq_ignore_ascii_case("various") && !a.name.eq_ignore_ascii_case("various artists"));
+        artists.retain(|a| !super::is_various(&a.name));
     }
 
     if args.stats {

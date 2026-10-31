@@ -31,6 +31,8 @@ interface ArtistCardProps {
    * hidden behind the photo and fan out above it on hover.
    */
   records?: Array<Pick<Album, "uri_release" | "release_name">>;
+  /** What `albumCount` counts, singular and plural (default records). */
+  unit?: [string, string];
   onClick?: () => void;
   className?: string;
 }
@@ -51,7 +53,7 @@ const FAN: Record<number, Array<[number, number, number]>> = {
  * `records`, up to three sleeves are tucked behind the photo and fan out
  * above it on hover, the latest in the middle and on top.
  */
-export function ArtistCard({ artist, palette, feature = false, records, onClick, className }: ArtistCardProps) {
+export function ArtistCard({ artist, palette, feature = false, records, unit = ["record", "records"], onClick, className }: ArtistCardProps) {
   const colours = floodFor(palette);
   const count = artist.albumCount;
   const fan = (records ?? []).slice(0, 3);
@@ -109,7 +111,7 @@ export function ArtistCard({ artist, palette, feature = false, records, onClick,
       </h3>
       {count > 0 && (
         <span className={cn("t-mono mt-2 uppercase text-[color:var(--cream-dim)]", feature ? "text-[13px]" : "text-[11px]")}>
-          {count.toLocaleString("en-GB")} {count === 1 ? "record" : "records"}
+          {count.toLocaleString("en-GB")} {count === 1 ? unit[0] : unit[1]}
         </span>
       )}
     </div>
@@ -133,7 +135,7 @@ export function ArtistCard({ artist, palette, feature = false, records, onClick,
       to={artist.uri}
       onPointerEnter={peek}
       onFocus={peek}
-      aria-label={count > 0 ? `${artist.name}, ${count} ${count === 1 ? "record" : "records"}` : artist.name}
+      aria-label={count > 0 ? `${artist.name}, ${count} ${count === 1 ? unit[0] : unit[1]}` : artist.name}
       className={classes}
     >
       {content}

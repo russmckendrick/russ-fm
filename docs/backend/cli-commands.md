@@ -560,6 +560,8 @@ scrapper backfill-identities
 
 ### Behavior
 
+- Skips "Various": Wikidata knows Discogs 194 as the "Various artists" concept, not a
+  performer (see `maintenance various`).
 - Resolves artists with a Discogs ID and no stored identity: one Wikidata query per 200
   artists, then one MusicBrainz request (one a second) for each artist whose MBID Wikidata didn't
   settle, so a full run over ~1,250 artists takes about four minutes. An artist whose
@@ -785,9 +787,11 @@ scrapper backfill-formats
 ## backfill-tracklists
 
 Re-fetch the Discogs tracklist of releases stored before headings and suites were told apart,
-and patch the result into their album JSON. Older rows kept only the top-level Discogs rows, so a
-suite (Discogs `index` track, e.g. Rush's "2112") was stored as a bare title and its movements
-were lost.
+and of compilations stored without their per-track artists, and patch the result into their
+album JSON. Older rows kept only the top-level Discogs rows, so a suite (Discogs `index` track,
+e.g. Rush's "2112") was stored as a bare title and its movements were lost. The old scrapper
+also dropped the track credits of releases credited to "Various", so every track there could
+only be shown and scrobbled as "Various".
 
 ```bash
 scrapper backfill-tracklists [OPTIONS]
@@ -803,18 +807,22 @@ scrapper backfill-tracklists [OPTIONS]
 
 ### Behavior
 
-- Candidates are releases with a position-less row that has no `type`. Only those can hide a
-  suite. That was 393 releases when this was added.
+- Candidates are releases with a position-less row that has no `type` (only those can hide a
+  suite; 393 releases when this was added), plus compilations (a headliner is "Various") with
+  no track carrying its own `artists` (103 on 2026-10-31; 99 came back with track artists).
+  A few compilations have no per-track artists on Discogs either, so a re-run asks for them again.
 - One `GET /releases/{id}` per candidate. The tracklist is mapped by the same
   `tracklist_from_discogs()` as `process_release`: headings and suites get `type`, and movements
   are flattened in after their suite with `parent` set (see
   [Tracklist rows](../data/schemas.md#tracklist-rows-headings-suites-and-movements)). This
   replaces the stored tracklist, so hand edits to those releases are overwritten.
-- Then every release whose tracklist is typed has its album JSON `tracklist` patched from the DB,
-  with keys sorted. Only that key is touched, and a file that is already current is not
-  rewritten. `collection.json` doesn't use tracklists, so it isn't regenerated.
+- Then every release whose tracklist is typed, and every compilation with track artists, has its
+  album JSON `tracklist` patched from the DB, with keys sorted. Only that key is touched, and a
+  file that is already current is not rewritten. `collection.json` doesn't use tracklists, so it
+  isn't regenerated; run `generate-collection` afterwards to refresh `compilations.json`.
 - Resumable: a failed lookup keeps the old tracklist, and a re-run retries only those.
-- Prints `→ N movement(s)` for releases with suites.
+- Prints `→ N movement(s)` for releases with suites and `→ track artists` for compilations that
+  gained their credits.
 
 ---
 
@@ -880,9 +888,10 @@ scrapper backfill-credits
 
 ## generate-collection
 
-Generate collection.json for React frontend. A `tv.json` video index for the `/tv` page is
-written alongside it, in the same directory as `--output` (see
-[tv.json](../data/schemas.md#tvjson)).
+Generate collection.json for React frontend. A `tv.json` video index for the `/tv` page and
+`compilations.json` (who plays on the records credited to "Various") are written alongside it,
+in the same directory as `--output` (see [tv.json](../data/schemas.md#tvjson) and
+[compilations.json](../data/schemas.md#compilationsjson)).
 
 ```bash
 scrapper generate-collection [OPTIONS]
@@ -1112,6 +1121,7 @@ scrapper maintenance <SUBCOMMAND>
 | `find-missing` | Find releases/artists with missing data |
 | `reconcile` | Reconcile the database against the static JSON output |
 | `band-members` | Flag band line-up credits as `role: "member"` on stored releases, rewrite their album JSON and regenerate `collection.json`. `--dry-run` lists matches without saving |
+| `various` | Reset the "Various" artist (Discogs 194) that compilations are credited to. The old scrapper matched it by name to a dubstep duo called Various, so it carried their biography, Apple Music, Spotify, Last.fm and Wikipedia links, genres and remote photos. Clears all of that, keeps the Discogs ID, `raw_data.overrides` and the photo files, sets the page's own one-line biography, then rewrites `various.json`, every compilation's album JSON and `collection.json`. `--dry-run` lists what would be cleared |
 
 Run `scrapper maintenance --help` for flags.
 

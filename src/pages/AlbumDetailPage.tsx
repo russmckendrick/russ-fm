@@ -27,6 +27,9 @@ import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, viny
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
 import { boxMemberDiscs, buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
 import { isHeadingRow, isSuiteRow, sidingPosition, vinylSide } from '@/lib/tracklistRows';
+import { CompilationFaces } from '@/components/various/CompilationFaces';
+import { useCompilations } from '@/components/various/useCompilations';
+import { VARIOUS_NAME, isCompilation, isVarious, linkedArtists, trackArtistPage } from '@/lib/compilations';
 
 interface Album {
   release_name: string;
@@ -310,6 +313,8 @@ export function AlbumDetailPage() {
   const [detail, setDetail] = useState<{ path: string; data: DetailedAlbum } | null>(null);
   const detailedAlbum = detail && detail.path === albumPath ? detail.data : null;
   const similarAlbums = useMemo(() => (album ? findSimilarAlbums(collection, album) : []), [collection, album]);
+  // A compilation's track artists, linked to their pages (compilations.json).
+  const compilations = useCompilations(!!album && isCompilation(album));
 
   // Sleeve colours drive the whole page: flood for the hero, ground for the body.
   const palette = useAlbumColors(albumPath ? `/album/${albumPath}/` : undefined);
@@ -423,8 +428,8 @@ export function AlbumDetailPage() {
   // Set page title based on album data
   const pageTitle = detailedAlbum
     ? `${detailedAlbum.title} by ${album?.artists && album.artists.length > 1
-      ? album.artists.map(artist => artist.name).join(' & ')
-      : album?.release_artist || 'Unknown Artist'
+      ? album.artists.map(artist => (isVarious(artist.name) ? VARIOUS_NAME : artist.name)).join(' & ')
+      : isVarious(album?.release_artist) ? VARIOUS_NAME : album?.release_artist || 'Unknown Artist'
     } | Russ.fm`
     : 'Loading Album… | Russ.fm';
 
@@ -893,15 +898,30 @@ export function AlbumDetailPage() {
       <div className="flex flex-wrap items-center gap-3">
         {(album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }]).map((artist, i, all) => (
           <React.Fragment key={artist.uri_artist || artist.name}>
-            <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
-              <img
-                src={getArtistAvatarFromData(artist.uri_artist)}
-                alt=""
-                onError={handleImageError}
-                className="h-10 w-10 rounded-full object-cover max-sm:hidden md:h-11 md:w-11"
-              />
-              <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
-            </Link>
+            {isVarious(artist.name) ? (
+              // A compilation: the faces of who plays on it, and how many do.
+              <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
+                <CompilationFaces artists={linkedArtists(compilations, album.uri_release)} ring={flood.flood} className="max-sm:hidden" />
+                <span className="flex flex-col">
+                  <span className="t-dispn whitespace-nowrap text-[22px] md:text-[28px]">{VARIOUS_NAME}</span>
+                  {compilations?.releases[album.uri_release] && (
+                    <span className="t-mono text-[11px] uppercase" style={{ color: flood.sub }}>
+                      {compilations.releases[album.uri_release].artists} artists
+                    </span>
+                  )}
+                </span>
+              </Link>
+            ) : (
+              <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
+                <img
+                  src={getArtistAvatarFromData(artist.uri_artist)}
+                  alt=""
+                  onError={handleImageError}
+                  className="h-10 w-10 rounded-full object-cover max-sm:hidden md:h-11 md:w-11"
+                />
+                <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
+              </Link>
+            )}
             {i < all.length - 1 && <span aria-hidden className="t-mono opacity-60">/</span>}
           </React.Fragment>
         ))}
@@ -1080,6 +1100,7 @@ export function AlbumDetailPage() {
                   looks={looks}
                   spotifyIndex={spotifyTrackIndex}
                   getDuration={getTrackDuration}
+                  artistPage={name => trackArtistPage(compilations, album.uri_release, name)}
                 />
               </section>
             )}
@@ -1404,6 +1425,7 @@ function Tracklist({
   looks,
   spotifyIndex,
   getDuration,
+  artistPage,
 }: {
   grouping: Grouping;
   accent: string;
@@ -1412,6 +1434,8 @@ function Tracklist({
   looks: Array<VinylLook | null>;
   spotifyIndex: Map<string, string>;
   getDuration: (t: Track) => string;
+  /** A track artist's page (on a compilation), if they have one. */
+  artistPage: (name: string) => string | null;
 }) {
   const blocks: Array<{ heading?: string; sides: Array<{ label: string; tracks: Track[] }> }> =
     grouping.type === 'lp'
@@ -1476,7 +1500,23 @@ function Tracklist({
                               track.name
                             )}
                             {track.artists && track.artists.length > 0 && (
-                              <span className="ml-2 text-[13px] font-normal text-[color:var(--cream-dim)]">{track.artists.map(a => a.name).join(', ')}</span>
+                              <span className="ml-2 text-[13px] font-normal text-[color:var(--cream-dim)]">
+                                {track.artists.map((a, j) => {
+                                  const page = artistPage(a.name);
+                                  return (
+                                    <React.Fragment key={`${a.name}-${j}`}>
+                                      {j > 0 && ', '}
+                                      {page ? (
+                                        <Link to={page} className="underline decoration-1 underline-offset-4 hover:text-[color:var(--cream)]">
+                                          {a.name}
+                                        </Link>
+                                      ) : (
+                                        a.name
+                                      )}
+                                    </React.Fragment>
+                                  );
+                                })}
+                              </span>
                             )}
                           </span>
                           {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}

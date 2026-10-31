@@ -357,7 +357,22 @@ never jumps from a centre crop.
 | palette | `AlbumColorPalette \| null` | Palette of the latest record; neutral ring without one |
 | feature | `boolean` | Bigger tile: larger name, count and ring. The caller spans it (`sm:col-span-2 sm:row-span-2`) |
 | records | `Pick<Album, 'uri_release' \| 'release_name'>[]` | Up to three records, latest first: their sleeves fan out from behind the photo on hover |
+| unit | `[string, string]` | What `albumCount` counts, singular and plural (default `record`, `records`; `WhoTurnsUp` says compilations) |
 | onClick | `() => void` | Render as a button instead of a link |
+
+### Compilations (`src/components/various/`)
+
+The Various Artists page and the compilation parts of the album and artist
+pages (see [pages](./pages.md)), all fed by
+[compilations.json](../data/schemas.md#compilationsjson) through
+`useCompilations(enabled)`.
+
+| Component | Where | What |
+|-----------|-------|------|
+| `VariousShelves` | `/artist/various` | Shelf toggle (All, Soundtracks, Anthologies, Series, Tributes, with counts) over a `RecordTile` grid, 24 then Show all |
+| `WhoTurnsUp` | `/artist/various` | `ArtistCard`s of the artists with a page who play on the compilations, then the most credited artists without one as name chips |
+| `AlsoAppearsOn` | Every other artist page | The compilations the artist plays on, each tile's meta their tracks there |
+| `CompilationFaces` | Album hero byline | Up to four overlapping avatars of a compilation's credited artists, ringed in the flood colour |
 | index | `number` | Accepted; not rendered |
 
 ## Search Components
