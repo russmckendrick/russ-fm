@@ -1,10 +1,11 @@
 //! Collection-vs-filesystem maintenance — folds in `tools/find_missing_artists.py` and
-//! `tools/artist_folder_reconciler.py`, plus the band-member credit backfill. Pure local:
-//! database + filesystem + sanitizer, no APIs.
+//! `tools/artist_folder_reconciler.py`, plus the band-member credit backfill and the "Various"
+//! reset. Pure local: database + filesystem + sanitizer, no APIs.
 
 use std::collections::HashSet;
 
-use anyhow::Result;
+use anyhow::{bail, Result};
+use serde_json::{json, Map, Value};
 
 use crate::cli::MaintenanceCommand;
 use crate::sanitize::sanitize_folder_name;
@@ -15,7 +16,72 @@ pub fn run(cfg: &Config, cmd: MaintenanceCommand) -> Result<()> {
         MaintenanceCommand::FindMissing { limit, show_orphaned } => find_missing(cfg, limit, show_orphaned),
         MaintenanceCommand::Reconcile { threshold } => reconcile(cfg, threshold),
         MaintenanceCommand::BandMembers { dry_run } => band_members(cfg, dry_run),
+        MaintenanceCommand::Various { dry_run } => reset_various(cfg, dry_run),
     }
+}
+
+/// The "Various" page's own line: Discogs has no profile for its placeholder.
+pub const VARIOUS_BIOGRAPHY: &str = "Soundtracks, tributes, label samplers and the odd Now album. Everything here is credited to more than one artist, so it's filed together rather than under any one name.";
+
+/// Clear what the old scrapper matched by name onto Discogs' "Various" placeholder (a dubstep
+/// duo's biography, Apple Music, Spotify and Last.fm links, a stray album cover as its photo).
+/// The Discogs ID, hand-set overrides and the photo files on disk are kept.
+fn clear_various(rec: &mut crate::db::ArtistRecord) {
+    rec.biography = Some(VARIOUS_BIOGRAPHY.into());
+    rec.apple_music_id = None;
+    rec.apple_music_url = None;
+    rec.spotify_id = None;
+    rec.spotify_url = None;
+    rec.lastfm_mbid = None;
+    rec.lastfm_url = None;
+    rec.wikipedia_url = None;
+    rec.genres = json!([]);
+    rec.popularity = None;
+    rec.followers = None;
+    rec.country = None;
+    rec.formed_date = None;
+    rec.images = json!([]);
+    rec.enrichment_data = json!({});
+    let kept: Map<String, Value> = rec
+        .raw_data
+        .as_object()
+        .into_iter()
+        .flatten()
+        .filter(|(k, _)| matches!(k.as_str(), "discogs" | "overrides"))
+        .map(|(k, v)| (k.clone(), v.clone()))
+        .collect();
+    rec.raw_data = Value::Object(kept);
+}
+
+fn reset_various(cfg: &Config, dry_run: bool) -> Result<()> {
+    let db = Db::open(cfg.db_path())?;
+    let Some(mut rec) = db.get_artist_by_name("Various")? else { bail!("No \"Various\" artist in the database") };
+    let before = rec.clone();
+    clear_various(&mut rec);
+    let cleared: Vec<&str> = [
+        ("biography", before.biography != rec.biography),
+        ("Apple Music", before.apple_music_id.is_some()),
+        ("Spotify", before.spotify_id.is_some()),
+        ("Last.fm", before.lastfm_url.is_some() || before.lastfm_mbid.is_some()),
+        ("Wikipedia", before.wikipedia_url.is_some()),
+        ("remote photos", before.images.as_array().is_some_and(|a| !a.is_empty())),
+        ("raw service data", before.raw_data != rec.raw_data),
+    ]
+    .into_iter()
+    .filter_map(|(label, changed)| changed.then_some(label))
+    .collect();
+    if cleared.is_empty() {
+        crate::say!("\"Various\" is already clean.");
+        return Ok(());
+    }
+    crate::say!("{}\"Various\": clearing {}.", if dry_run { "[dry-run] " } else { "" }, cleared.join(", "));
+    if dry_run {
+        return Ok(());
+    }
+    let releases = crate::ops::artist::persist_artist(cfg, &db, &rec)?;
+    let entries = crate::output::collection::regenerate(cfg, &db)?;
+    crate::say!("Rewrote its JSON, {releases} album JSON(s) and collection.json ({entries} entries).");
+    Ok(())
 }
 
 /// Folder slugs present under `public/artist`.
@@ -153,4 +219,44 @@ fn band_members(cfg: &Config, dry_run: bool) -> Result<()> {
         }
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn various_keeps_only_discogs_and_overrides() {
+        let mut rec = crate::db::ArtistRecord {
+            id: "various-1".into(),
+            name: "Various".into(),
+            biography: Some("Not to be confused with Various Artists.".into()),
+            discogs_id: Some("194".into()),
+            apple_music_id: Some("59442734".into()),
+            spotify_id: Some("77zM".into()),
+            lastfm_mbid: Some("89ad".into()),
+            discogs_url: Some("https://www.discogs.com/artist/194".into()),
+            apple_music_url: Some("https://music.apple.com/x".into()),
+            spotify_url: Some("https://open.spotify.com/x".into()),
+            lastfm_url: Some("https://www.last.fm/music/Various".into()),
+            wikipedia_url: Some("https://en.wikipedia.org/wiki/Various_Artists".into()),
+            genres: json!(["Electronic"]),
+            popularity: Some(1),
+            followers: Some(444),
+            country: None,
+            formed_date: None,
+            images: json!([{"url": "https://example.com/a.jpg"}]),
+            local_images: json!({"hi-res": "public/artist/various/various-hi-res.jpg"}),
+            enrichment_data: json!({"apple_music": {}}),
+            raw_data: json!({"discogs": {"id": 194}, "spotify": {}, "identity": {}, "overrides": {"hero": "photo"}}),
+            created_at: None,
+            updated_at: None,
+        };
+        clear_various(&mut rec);
+        assert_eq!(rec.biography.as_deref(), Some(VARIOUS_BIOGRAPHY));
+        assert!(rec.apple_music_id.is_none() && rec.spotify_url.is_none() && rec.wikipedia_url.is_none());
+        assert_eq!(rec.discogs_url.as_deref(), Some("https://www.discogs.com/artist/194"));
+        assert_eq!(rec.raw_data, json!({"discogs": {"id": 194}, "overrides": {"hero": "photo"}}));
+        assert_eq!(rec.local_images, json!({"hi-res": "public/artist/various/various-hi-res.jpg"}));
+    }
 }

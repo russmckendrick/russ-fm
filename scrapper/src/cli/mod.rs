@@ -94,8 +94,9 @@ pub enum Command {
     /// Resumable; only releases without stored formats call Discogs.
     BackfillFormats(BackfillFormatsArgs),
     /// Re-fetch the Discogs tracklist of releases stored before headings and suites (Discogs
-    /// index tracks, e.g. "2112") were told apart, so each suite's movements are kept.
-    /// Resumable; only releases with an untyped position-less row call Discogs.
+    /// index tracks, e.g. "2112") were told apart, so each suite's movements are kept, and of
+    /// compilations stored without their per-track artists. Resumable; only releases with an
+    /// untyped position-less row or uncredited compilation tracks call Discogs.
     BackfillTracklists(BackfillTracklistsArgs),
     /// Store each release's Discogs credits (`extraartists`: producers, engineers, session
     /// players, sleeve designers) and write `credits` plus per-track `extraartists` into the
@@ -563,6 +564,14 @@ pub enum MaintenanceCommand {
     /// Flag band line-ups ("X Trio" followed by X and the players) as member credits.
     BandMembers {
         /// Report matching releases without saving anything.
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Reset the "Various" artist compilations are credited to: drop the service matches,
+    /// biography and photos the old scrapper found for other artists named "Various", then
+    /// rewrite its JSON, every compilation's album JSON and collection.json.
+    Various {
+        /// Show what would be cleared without saving anything.
         #[arg(long)]
         dry_run: bool,
     },

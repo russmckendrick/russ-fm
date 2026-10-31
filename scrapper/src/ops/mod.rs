@@ -27,6 +27,13 @@ pub mod videos;
 use anyhow::{bail, Result};
 use serde_json::Value;
 
+/// Discogs' "Various" placeholder (artist 194) that compilations are credited to; not a real
+/// artist, so it is never enriched from the services.
+pub fn is_various(name: &str) -> bool {
+    let name = name.trim();
+    name.eq_ignore_ascii_case("various") || name.eq_ignore_ascii_case("various artists")
+}
+
 /// How a detail-editor field is edited and validated.
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
 pub enum FieldKind {

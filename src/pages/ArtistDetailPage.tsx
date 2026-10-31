@@ -9,6 +9,11 @@ import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { heroPhotoLayout, heroPhotoOf, phoneCrop, portraitColumn, useArtistImageInfo, type ArtistImageInfo, type HeroPhotoLayout } from '@/lib/artistImage';
 import { ArtistPortrait } from '@/components/player/ArtistPortrait';
 import { ArtistHeroPhoto } from '@/components/player/ArtistHeroPhoto';
+import { AlsoAppearsOn } from '@/components/various/AlsoAppearsOn';
+import { VariousShelves } from '@/components/various/VariousShelves';
+import { WhoTurnsUp } from '@/components/various/WhoTurnsUp';
+import { useCompilations } from '@/components/various/useCompilations';
+import { VARIOUS_NAME, VARIOUS_SLUG, shelfOf } from '@/lib/compilations';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useViewportSize } from '@/hooks/useViewportSize';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
@@ -37,6 +42,7 @@ interface Album {
   }>;
   members?: AlbumMember[];
   genre_names: string[];
+  styles?: string[];
   uri_release: string;
   uri_artist: string;
   date_added: string;
@@ -163,6 +169,11 @@ export function ArtistDetailPage() {
   const { albums, artistJsonUrl } = useMemo(() => findArtistAlbums(collection, artistPath), [collection, artistPath]);
   const [detail, setDetail] = useState<{ url: string; data: ArtistData } | null>(null);
   const artistData = detail && detail.url === artistJsonUrl ? detail.data : null;
+  // /artist/various is the Various Artists page: every compilation, on shelves,
+  // and who plays on them, in place of a discography and similar artists.
+  const various = artistPath === VARIOUS_SLUG;
+  // Who plays on the compilations: the Various page's cast, everyone else's "Also appears on".
+  const compilations = useCompilations();
 
   // Newest additions first (also drives the flood below).
   const byAdded = useMemo(() => [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added)), [albums]);
@@ -222,13 +233,14 @@ export function ArtistDetailPage() {
     let alive = true;
     loadDetailJson<ArtistData>(artistJsonUrl)
       .then(data => {
-        if (alive) setDetail({ url: artistJsonUrl, data });
+        // Discogs calls the placeholder plain "Various".
+        if (alive) setDetail({ url: artistJsonUrl, data: various ? { ...data, name: VARIOUS_NAME } : data });
       })
       .catch(error => console.error('Error loading artist details:', error));
     return () => {
       alive = false;
     };
-  }, [artistJsonUrl]);
+  }, [artistJsonUrl, various]);
 
   // How many videos their own TV channel has (/tv/artist/:slug); the link
   // only shows when there are some. tv.json is shared with the TV and album pages.
@@ -246,7 +258,9 @@ export function ArtistDetailPage() {
     };
   }, [artistPath, rawCollection]);
 
-  const pageTitle = artistData
+  const pageTitle = artistData && various
+    ? `${VARIOUS_NAME} — ${albums.length} compilations in collection | Russ.fm`
+    : artistData
     ? `${artistData.name} discography — ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection | Russ.fm`
     : 'Loading Artist… | Russ.fm';
   usePageTitle(pageTitle);
@@ -254,7 +268,7 @@ export function ArtistDetailPage() {
   const artistMetaDescription = artistData
     ? buildArtistMetaDescription(artistData, albums.length)
     : 'View artist details on Russ.fm';
-  const artistJsonLd = artistData && artistPath
+  const artistJsonLd = artistData && artistPath && !various
     ? buildArtistJsonLd({
         artistData,
         canonicalUrl: artistCanonical,
@@ -287,6 +301,7 @@ export function ArtistDetailPage() {
 
   const artist = albums[0];
   const artistName = (() => {
+    if (various) return VARIOUS_NAME;
     if (artistData?.name) return artistData.name;
     const decoded = decodeURIComponent(artistPath || '');
     const targetUri = `/artist/${decoded}/`;
@@ -306,21 +321,22 @@ export function ArtistDetailPage() {
   // The Thread only knows artists credited on a record, not players known only from a band's line-up.
   const { matches: isThisArtist } = artistMatcher(artistPath || '');
   const threadUri = artistPath === 'various' ? null : (albums.flatMap(a => a.artists ?? []).find(a => isThisArtist(a.uri_artist))?.uri_artist ?? null);
-  const wikipediaUrl =
-    artistData?.wikipedia_url ||
-    `https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`;
+  const wikipediaUrl = various
+    ? null
+    : artistData?.wikipedia_url || `https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`;
   const lastfmSimilarNames = (artistData?.services?.lastfm?.similar_artists || []).map((s) => s.name.toLowerCase());
 
-  const similarArtists = findSimilarArtists(collection, artistPath, artistName, lastfmSimilarNames);
+  const similarArtists = various ? [] : findSimilarArtists(collection, artistPath, artistName, lastfmSimilarNames);
 
-  const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
+  const boxsets = various ? 0 : albums.filter(a => a.format_primary === 'Box Set').length;
+  const soundtracks = various ? albums.filter(a => shelfOf(a) === 'soundtrack').length : 0;
   const listeners = artistData?.services?.lastfm?.listeners;
   const services = [
     artistData?.services?.spotify?.url && { label: 'Spotify', url: artistData.services.spotify.url },
     artistData?.services?.apple_music?.url && { label: 'Apple Music', url: artistData.services.apple_music.url },
     artistData?.services?.lastfm?.url && { label: 'Last.fm', url: artistData.services.lastfm.url },
     (artistData?.discogs_url || artistData?.services?.discogs?.url) && { label: 'Discogs', url: (artistData?.discogs_url || artistData?.services?.discogs?.url) as string },
-    { label: 'Wikipedia', url: wikipediaUrl },
+    wikipediaUrl && { label: 'Wikipedia', url: wikipediaUrl },
   ].filter(Boolean) as Array<{ label: string; url: string }>;
 
   const years = albums.map(originalYear).filter((y): y is number => y !== null);
@@ -328,6 +344,7 @@ export function ArtistDetailPage() {
   const latestYear = years.length ? Math.max(...years) : null;
   const stats: Array<[string, string]> = [
     ['Records', String(albums.length)],
+    ...(soundtracks ? [['Soundtracks', String(soundtracks)] as [string, string]] : []),
     ...(boxsets ? [['Box sets', String(boxsets)] as [string, string]] : []),
     ...(firstYear && latestYear
       ? [[firstYear === latestYear ? 'Released' : 'Releases span', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
@@ -386,6 +403,11 @@ export function ArtistDetailPage() {
                 </div>
               ))}
             </dl>
+            {various && bio && (
+              <p className="m-0 max-w-[52ch] text-[17px] leading-[1.6] md:text-[18px]" style={{ color: flood.sub }}>
+                {bio}
+              </p>
+            )}
             <div className="flex flex-wrap gap-2.5">
               {/* Only the first pill in the row is filled: Watch when there are videos. */}
               {tvVideos > 0 && (
@@ -411,7 +433,7 @@ export function ArtistDetailPage() {
                 </Link>
               )}
             </div>
-            {cleanGenres.length > 0 && (
+            {!various && cleanGenres.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {cleanGenres.slice(0, 8).map(g => (
                   <Link key={g} to={`/genre/${slugify(g)}`} className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100" style={{ borderColor: 'currentColor' }}>
@@ -427,75 +449,91 @@ export function ArtistDetailPage() {
       </div>
 
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
-        {bio && (
+        {bio && !various && (
           <section className="flex flex-col gap-8">
             <SectionHeading title="Biography" />
             <Bio text={bio} />
           </section>
         )}
 
-        <section className="flex flex-col gap-10">
-          <SectionHeading
-            title="Discography"
-            note={`${albums.length} ${albums.length === 1 ? 'record' : 'records'}${order === 'added' ? ' · newest additions first' : ' · by original release'}`}
-          >
-            {albums.length > 1 && (
-              <div role="group" aria-label="Order" className="flex gap-1 rounded-full bg-[color:var(--ground-2)] p-1">
-                {DISCOGRAPHY_ORDERS.map(o => (
-                  <button
-                    key={o.value}
-                    type="button"
-                    aria-pressed={order === o.value}
-                    onClick={() => setOrder(o.value)}
-                    className={cn(
-                      'h-10 rounded-full px-4 text-[14px] font-bold transition-colors',
-                      order === o.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
-                    )}
-                  >
-                    {o.label}
-                  </button>
-                ))}
-              </div>
-            )}
-          </SectionHeading>
-          <div className="flex flex-col">
-            {discography.map(group => (
-              <div
-                key={group.label || 'all'}
-                className={cn(
-                  'grid gap-6 border-t py-10 first:border-t-0 first:pt-0',
-                  group.label && 'lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-10',
-                )}
-                style={{ borderColor: 'var(--cream-rule)' }}
-              >
-                {group.label && (
-                  <div className="flex items-baseline gap-4 lg:sticky lg:top-28 lg:flex-col lg:gap-2 lg:self-start">
-                    <h3 className="t-disp m-0 text-[36px] md:text-[48px]">{group.label}</h3>
-                    <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">
-                      {group.albums.length} {group.albums.length === 1 ? 'record' : 'records'}
-                    </span>
-                  </div>
-                )}
-                <div className={cn('grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 md:gap-x-6', group.label ? 'xl:grid-cols-5' : 'lg:grid-cols-4 xl:grid-cols-6')}>
-                  {group.albums.map(a => (
-                    <RecordTile
-                      key={a.uri_release}
-                      album={a}
-                      palette={colourMap?.[a.uri_release]}
-                      showArtist={a.release_artist !== artistName}
-                      meta={[
-                        order === 'added' ? `Added ${formatAdded(a.date_added)}` : originalYear(a) ?? 'Undated',
-                        a.format_primary === 'Box Set' ? 'Box set' : null,
-                      ]
-                        .filter(Boolean)
-                        .join(' · ')}
-                    />
+        {various ? (
+          <VariousShelves albums={byAdded} compilations={compilations} colourMap={colourMap} />
+        ) : (
+          <section className="flex flex-col gap-10">
+            <SectionHeading
+              title="Discography"
+              note={`${albums.length} ${albums.length === 1 ? 'record' : 'records'}${order === 'added' ? ' · newest additions first' : ' · by original release'}`}
+            >
+              {albums.length > 1 && (
+                <div role="group" aria-label="Order" className="flex gap-1 rounded-full bg-[color:var(--ground-2)] p-1">
+                  {DISCOGRAPHY_ORDERS.map(o => (
+                    <button
+                      key={o.value}
+                      type="button"
+                      aria-pressed={order === o.value}
+                      onClick={() => setOrder(o.value)}
+                      className={cn(
+                        'h-10 rounded-full px-4 text-[14px] font-bold transition-colors',
+                        order === o.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
+                      )}
+                    >
+                      {o.label}
+                    </button>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              )}
+            </SectionHeading>
+            <div className="flex flex-col">
+              {discography.map(group => (
+                <div
+                  key={group.label || 'all'}
+                  className={cn(
+                    'grid gap-6 border-t py-10 first:border-t-0 first:pt-0',
+                    group.label && 'lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-10',
+                  )}
+                  style={{ borderColor: 'var(--cream-rule)' }}
+                >
+                  {group.label && (
+                    <div className="flex items-baseline gap-4 lg:sticky lg:top-28 lg:flex-col lg:gap-2 lg:self-start">
+                      <h3 className="t-disp m-0 text-[36px] md:text-[48px]">{group.label}</h3>
+                      <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">
+                        {group.albums.length} {group.albums.length === 1 ? 'record' : 'records'}
+                      </span>
+                    </div>
+                  )}
+                  <div className={cn('grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 md:gap-x-6', group.label ? 'xl:grid-cols-5' : 'lg:grid-cols-4 xl:grid-cols-6')}>
+                    {group.albums.map(a => (
+                      <RecordTile
+                        key={a.uri_release}
+                        album={a}
+                        palette={colourMap?.[a.uri_release]}
+                        showArtist={a.release_artist !== artistName}
+                        meta={[
+                          order === 'added' ? `Added ${formatAdded(a.date_added)}` : originalYear(a) ?? 'Undated',
+                          a.format_primary === 'Box Set' ? 'Box set' : null,
+                        ]
+                          .filter(Boolean)
+                          .join(' · ')}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {various ? (
+          compilations && <WhoTurnsUp data={compilations} />
+        ) : (
+          <AlsoAppearsOn
+            artistUri={artistUri}
+            compilations={compilations}
+            collection={rawCollection}
+            own={new Set(albums.map(a => a.uri_release))}
+            colourMap={colourMap}
+          />
+        )}
 
         {similarArtists.length > 0 && (
           <section className="flex flex-col gap-8">

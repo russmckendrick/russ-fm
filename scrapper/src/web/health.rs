@@ -200,7 +200,7 @@ pub fn run(st: &AppState) -> Result<Vec<Check>> {
         fix,
         action: None,
     };
-    let is_various = |a: &ArtistRecord| a.name.eq_ignore_ascii_case("various") || a.name.eq_ignore_ascii_case("various artists");
+    let is_various = |a: &ArtistRecord| crate::ops::is_various(&a.name);
     let enrich = |a: &ArtistRecord| Some(words(&["artist", &a.name, "--save", "--interactive"]));
     let artist_check = |id: &'static str,
                         label: &'static str,

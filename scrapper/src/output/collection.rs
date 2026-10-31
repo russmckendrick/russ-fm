@@ -1,7 +1,7 @@
 //! `collection.json` generator — the flat index the React frontend reads. Port of
 //! `collection_generator.py`. Output is `indent=2, ensure_ascii=False`, insertion-order keys,
 //! no trailing newline, sorted by `date_added` descending. Every write also refreshes the
-//! sibling `tv.json` (see [`super::tv`]).
+//! sibling `tv.json` (see [`super::tv`]) and `compilations.json` (see [`super::compilations`]).
 
 use anyhow::{Context, Result};
 use serde_json::{json, Map, Value};
@@ -52,6 +52,12 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
     let artist_videos = db.official_artist_videos().context("loading official artist videos")?;
     let unplayable = db.unplayable_video_ids().context("loading video playability")?;
     super::tv::write(cfg, &releases, &artist_videos, &unplayable, &tv_path).with_context(|| format!("writing {}", tv_path.display()))?;
+
+    // So does who plays on the compilations.
+    let compilations_path = output_path.with_file_name("compilations.json");
+    let artists = db.list_artists(u32::MAX, "name").context("loading artists")?;
+    super::compilations::write(cfg, &releases, &artists, &compilations_path)
+        .with_context(|| format!("writing {}", compilations_path.display()))?;
     Ok(count)
 }
 

@@ -2,6 +2,7 @@
 //! and the collection generator.
 
 pub mod collection;
+pub mod compilations;
 pub mod images;
 pub mod json;
 pub mod tv;

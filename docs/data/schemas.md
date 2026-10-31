@@ -611,6 +611,51 @@ compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
 
 ---
 
+### compilations.json
+
+Who plays on the records credited to Discogs' "Various" placeholder (alone, or alongside a
+named artist as in "Max Richter & Various"), from each track's own `artists` credit. Written
+by the scrapper next to `collection.json` every time that file is generated
+(`scrapper/src/output/compilations.rs`), as compact JSON (about 145 KB, 30 KB gzipped). Read
+by the Various Artists page (`/artist/various`), compilation album pages and every artist
+page's "Also appears on", through `loadCompilations()` in `src/lib/compilations.ts`.
+
+```json
+{
+  "releases": {
+    "/album/clowns-and-jugglers-the-songs-of-syd-barrett-38732007/": {
+      "artists": 29,
+      "links": { "David Bowie": "/artist/david-bowie/", "Pink Floyd": "/artist/pink-floyd/" }
+    }
+  },
+  "artists": {
+    "/artist/david-bowie/": {
+      "name": "David Bowie",
+      "on": [{ "release": "/album/the-life-aquatic-with-steve-zissou-original-soundtrack-34314472/", "tracks": ["Life On Mars?", "Queen Bitch"] }]
+    }
+  },
+  "others": [{ "name": "Elton John", "releases": 8 }],
+  "others_count": 1289
+}
+```
+
+- **`releases`**: one per compilation with at least one track artist, keyed by `uri_release`.
+  `artists` counts the distinct artists credited on its tracks; `links` maps the credited name
+  (as the album JSON tracklist spells it) to the artist page, for those that have one.
+- A track artist is linked by Discogs ID through the artists table (a name can belong to
+  several artists), or by name when the credit has no ID, and only when
+  `public/artist/{slug}/{slug}.json` exists. Track credits never become collection artists, so
+  most aren't linked.
+- **`artists`**: per artist page, the compilations they play on and their tracks there, in
+  tracklist order.
+- **`others`**: the 60 most credited artists without a page, most compilations first;
+  `others_count` is how many there are in all. Discogs' "No Artist" and "Unknown Artist" are
+  left out.
+- Which shelf a compilation sits on (soundtrack, anthology, series, tribute) is not in the file:
+  the frontend works it out from the title, genres and styles (`shelfOf()`).
+
+---
+
 ### explore.json
 
 `public/explore/explore.json`, written by `scripts/generate-explore.ts` (`pnpm run generate-explore`) for

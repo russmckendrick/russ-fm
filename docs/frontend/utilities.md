@@ -396,6 +396,21 @@ const slots = slotsBetween(channel, from, to);       // guide rows (epoch ms)
   `videoIdFromParam(segment)` reads the YouTube id back from the last 11 characters.
 - `formatDuration`, `youTubeThumb` (YouTube's stills, external).
 
+## Compilations (`src/lib/compilations.ts`)
+
+Records credited to Discogs' "Various" placeholder, and who plays on them.
+
+| Export | Purpose |
+|--------|---------|
+| `VARIOUS_SLUG`, `VARIOUS_NAME` | `various` (the Various Artists page) and the name it is shown under, "Various Artists" |
+| `isVarious(name)` | "Various" or "Various Artists", ignoring case and spaces |
+| `isCompilation(album)` | Credited to Various, alone or alongside a named artist ("Max Richter & Various") |
+| `loadCompilations()` | Fetches `/compilations.json` once per tab ([schema](../data/schemas.md#compilationsjson)); `useCompilations(enabled)` in `src/components/various/` wraps it for components |
+| `shelfOf(album)` | `tribute`, `series`, `soundtrack` or `anthology`, from the title first (tribute, then a named series such as Now or Anthems, then a soundtrack title, then a numbered or best-of set), then Soundtrack / Stage & Screen in its genres or styles |
+| `SHELVES` | The shelves in page order, with their label, singular and one-line blurb |
+| `trackArtistPage(data, uriRelease, name)` | The artist page for a track credit on a compilation, or null |
+| `linkedArtists(data, uriRelease)` | The artist pages credited on a compilation, once each |
+
 ## Release Years (`src/lib/releaseYear.ts`)
 
 `date_release_year` in `collection.json` is often a reissue date: the pressing's year, or a
