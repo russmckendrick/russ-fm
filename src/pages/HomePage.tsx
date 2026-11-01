@@ -222,6 +222,10 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
             const f = floods[i];
             const title = album.release_name.trim();
             const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
+            // Size by the longest word (no breaks) and by total length, so a long title stays ~4 lines and the hero keeps its height.
+            const chars = Math.max(title.length, 12);
+            const capPx = Math.min(120, Math.floor(420 / (longest * 0.52)), Math.floor(1680 / (chars * 0.52)));
+            const minPx = Math.min(52, Math.max(32, Math.floor(1600 / chars)));
             return (
               <div
                 key={album.uri_release}
@@ -246,7 +250,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                 </div>
                 <h1
                   className="t-cond m-0"
-                  style={{ fontSize: `clamp(52px, ${Math.min(9, 60 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}
+                  style={{ fontSize: `clamp(${minPx}px, ${Math.min(9, 60 / longest, 240 / chars)}vw, ${capPx}px)` }}
                 >
                   {title}
                 </h1>

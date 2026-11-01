@@ -347,7 +347,7 @@ export function ArtistDetailPage() {
     ...(soundtracks ? [['Soundtracks', String(soundtracks)] as [string, string]] : []),
     ...(boxsets ? [['Box sets', String(boxsets)] as [string, string]] : []),
     ...(firstYear && latestYear
-      ? [[firstYear === latestYear ? 'Released' : 'Releases span', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
+      ? [['Released', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
       : []),
     ...(listeners != null ? [['Last.fm listeners', numberShort(Number(listeners))] as [string, string]] : []),
   ];
@@ -395,11 +395,12 @@ export function ArtistDetailPage() {
               photo like a poster title. */}
           <div ref={setHeroText} className="relative -mt-[calc(22vw+2rem)] flex min-w-0 flex-col gap-7 sm:-mt-[calc(10.7vw+2rem)] lg:mt-0 lg:justify-center">
             <FitTitle max={240} min={28} fitHeight className="t-disp">{artistName}</FitTitle>
-            <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
+            {/* Stats are tinted chips (value, then label), not outlined, so they don't read as links. */}
+            <dl className="m-0 flex flex-wrap gap-2">
               {stats.map(([k, v]) => (
-                <div key={k} className="flex flex-col-reverse gap-1">
+                <div key={k} className="flex flex-row-reverse items-baseline justify-end gap-2 rounded-full px-4 py-2" style={{ background: 'color-mix(in srgb, currentColor 12%, transparent)' }}>
                   <dt className="t-kicker text-[11px]">{k}</dt>
-                  <dd className="t-disp m-0 text-[36px] md:text-[56px] min-[1800px]:text-[68px]">{v}</dd>
+                  <dd className="t-disp m-0 text-[20px] md:text-[22px]">{v}</dd>
                 </div>
               ))}
             </dl>

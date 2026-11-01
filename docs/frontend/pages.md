@@ -114,7 +114,10 @@ The home page sections are local components in `HomePage.tsx`; the old
   album page, not the home hero. The text
   slides are stacked absolutely and the stack's height follows the active
   slide (measured with a `ResizeObserver`, eased with a height transition),
-  so a one-line title doesn't reserve the space a two-line title needs. From `lg` up the controls sit under the
+  so a one-line title doesn't reserve the space a two-line title needs. The
+  title (`t-cond`) is sized by its longest word and by its total length, so
+  a long edition title ("Carved In Sand Limited MMXXVI MWIS Edition") stays
+  at about four lines rather than towering over the sleeve. From `lg` up the controls sit under the
   text column; below `lg` they render after the `CoverHero`, under the
   overhanging sleeve on the dark ground (the section after the hero drops
   to `pt-16` below `lg` to make room). Both copies come from one
@@ -433,9 +436,9 @@ the flood is the hero photo's own colour instead (below), on phones and desktop.
   hero is pulled up under the header, which is a scrim of the flood there until you
   scroll (see `Navigation` in [components.md](./components.md)). The name is a `FitTitle`
   (up to 240px) with `fitHeight`, so it grows to fill a wide column and shrinks until the
-  whole text column fits; stats step up to 68px from 1800px wide. Then stats
-  (records, box sets, "Releases span" from the earliest to the latest
-  original year, or "Released" when they match, Last.fm listeners), service
+  whole text column fits. Then stats as tinted chips, value then label
+  (records, box sets, "Released" with the earliest to the latest original
+  year, or the one year when they match, Last.fm listeners), service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
   available, otherwise a constructed URL.
