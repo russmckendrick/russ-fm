@@ -1,0 +1,13 @@
+.fin-tools { display: flex; gap: 8px; margin: 30px 0 22px; }
+.fin-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 4px; }
+.fin-wall a { display: block; aspect-ratio: 1; position: relative; }
+.fin-wall img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; transition: transform .25s var(--ease), box-shadow .25s; }
+.fin-wall a:hover { z-index: 2; }
+.fin-wall a:hover img { transform: scale(1.9); box-shadow: 0 16px 40px rgba(0, 0, 0, .6); }
+.fin-wall a { opacity: 0; transform: scale(.4); }
+.fin-wall.in a { animation: fin-in .7s var(--ease) both; animation-delay: calc(min(var(--i) * 7ms, 2.2s)); }
+@keyframes fin-in { from { opacity: 0; transform: scale(.4) rotate(-8deg); } to { opacity: 1; transform: none; } }
+.fin-sum { margin-top: 72px; text-align: center; display: grid; justify-items: center; }
+.fin-big { font-size: clamp(56px, 10vw, 150px); }
+.fin-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
+@media (max-width: 700px) { .fin-wall { grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 3px; } }

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrapped — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--
+  Wrapped, told as a scroll of chapters built from the collection data.
+  Data: python3 mockups/wrapped/build-data.py  (writes data/YYYY.json)
+  View: Vite dev server, /mockups/wrapped/?year=2024
+  The record and calendar ideas follow mylisteningrecord.com (MIT, Carson Godwin).
+-->
+<link rel="stylesheet" href="wrapped.css">
+<link rel="stylesheet" href="chapters/cover.css">
+<link rel="stylesheet" href="chapters/record.css">
+<link rel="stylesheet" href="chapters/skyline.css">
+<link rel="stylesheet" href="chapters/clock.css">
+<link rel="stylesheet" href="chapters/weight.css">
+<link rel="stylesheet" href="chapters/vinyl.css">
+<link rel="stylesheet" href="chapters/artists.css">
+<link rel="stylesheet" href="chapters/genres.css">
+<link rel="stylesheet" href="chapters/decades.css">
+<link rel="stylesheet" href="chapters/credits.css">
+<link rel="stylesheet" href="chapters/connections.css">
+<link rel="stylesheet" href="chapters/finale.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="/wrapped"><i></i><span>RUSS.FM</span><em>Wrapped</em></a>
+    <nav class="years" id="years" aria-label="Year"></nav>
+  </div>
+</header>
+
+<main>
+  <section class="chapter" id="cover"></section>
+  <section class="chapter" id="record"></section>
+  <section class="chapter" id="skyline"></section>
+  <section class="chapter" id="clock"></section>
+  <section class="chapter" id="weight"></section>
+  <section class="chapter" id="vinyl"></section>
+  <section class="chapter" id="artists"></section>
+  <section class="chapter" id="genres"></section>
+  <section class="chapter" id="decades"></section>
+  <section class="chapter" id="credits"></section>
+  <section class="chapter" id="connections"></section>
+  <section class="chapter" id="finale"></section>
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
