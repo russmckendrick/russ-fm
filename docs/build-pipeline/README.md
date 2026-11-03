@@ -76,12 +76,12 @@ pnpm run build
 # 4. vite build (bundle)
 # 5. process-images (resize)
 # 6. generate-colors (album-colors.json + album-swatches.json)
-# 7. build:wrapped (year data)
-# 8. generate-sitemap (refresh sitemap.xml in public/ and dist/)
-# 9. generate-og (social images)
-# 9b. generate-og-sections (TV and genre cards into public/og/)
-# 9c. generate-explore (the /explore graph and atlases into public/explore/)
-# 10. cp dist/og-image.png public/og-image.png (for worker build)
+# 7. generate-explore (the /explore graph and atlases into public/explore/)
+# 8. build:wrapped (year data; its story links read the explore graph)
+# 9. generate-sitemap (refresh sitemap.xml in public/ and dist/)
+# 10. generate-og (social images)
+# 10b. generate-og-sections (TV and genre cards into public/og/)
+# 11. cp dist/og-image.png public/og-image.png (for worker build)
 ```
 
 ### Type Checking
@@ -137,7 +137,7 @@ pnpm run build:worker
 | `generate-og` | Create OG images |
 | `generate-og-sections` | TV and genre OG cards into `public/og/` (see [asset-processing](./asset-processing.md#tv-and-genre-cards)) |
 | `generate-explore` | The /explore graph (`public/explore/explore.json`) and its 64px sleeve and avatar atlases (`sleeves-N.webp`, `avatars.webp`), from `collection.json`, `album-colors.json`, `tv.json` and the album and artist JSON (Discogs members, groups and aliases, guests on tracks, release `credits`). Gitignored like `public/og/`: CI makes it after `process-images` so the atlases read the cached medium and avatar sizes. `--no-atlas` skips the images; `--public <dir>` / `--out <dir>` read and write elsewhere. Shape: [schemas.md](../data/schemas.md#explore-json) |
-| `build:wrapped` | Generate wrapped.json |
+| `build:wrapped` | Year files in `public/wrapped/` (`wrapped-YYYY.json`, `wrapped-ytd.json`), including the `story` block the /wrapped chapters draw. Reads the album and artist JSON and `public/explore/explore.json`, so run `generate-explore` first. Shape: [schemas.md](../data/schemas.md#wrappedjson) |
 | `preview` | Preview production build |
 | `deploy` | Deploy to Cloudflare |
 

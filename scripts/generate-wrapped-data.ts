@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildStory } from './lib/wrapped-story';
+import type { WrappedStory } from '../src/types/wrappedStory';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -166,6 +168,8 @@ interface WrappedData {
     secondary: ColorPalette;
     monthlyPalettes: ColorPalette[];
   };
+  /** Everything the chapters of /wrapped/:year draw (scripts/lib/wrapped-story.ts) */
+  story: WrappedStory;
 }
 
 function getMonthName(monthIndex: number): string {
@@ -518,7 +522,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
       topAlbums,
       topArtists
     },
-    theme
+    theme,
+    story: buildStory(year, enrichedReleases.map(e => e.release), originalCollection),
   };
 }
 

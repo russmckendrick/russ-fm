@@ -1,6 +1,5 @@
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { NEUTRAL_FLOOD, floodFor, vividFrom, type Flood } from '@/lib/sleeveColour';
-import { originalDecade } from '@/lib/releaseYear';
 import type { ColorPalette, WrappedRelease } from '@/types/wrapped';
 
 /**
@@ -58,10 +57,6 @@ export function groupColour(releases: WrappedRelease[], colours: ColourMap, used
     fallback ??= c;
   }
   return fallback ?? NEUTRAL_FLOOD;
-}
-
-export function decadeOf(release: WrappedRelease): string | null {
-  return originalDecade(release);
 }
 
 export function formatDay(iso: string, withYear = true): string {

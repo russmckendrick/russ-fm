@@ -761,6 +761,40 @@ Year-in-review data structure.
 }
 ```
 
+#### The `story` block
+
+Each year file (`public/wrapped/wrapped-YYYY.json`, `wrapped-ytd.json`) also
+carries `story`, built by `scripts/lib/wrapped-story.ts` and drawn by the
+chapters of `/wrapped/:year`. The type is `WrappedStory` in
+`src/types/wrappedStory.ts` (no imports, shared by the script and the site).
+Short keys keep it small:
+
+- `releases[]`: one per record added that year, by date. `s` slug, `t`
+  title, `by` artist, `a` artist slugs, `d` date added, `h`/`wd` hour and
+  weekday added in UK time (from the album JSON's `date_added`), `y`
+  original year, `g`/`st` genres and styles, `fam` genre family
+  (`familyOf` in `src/lib/genreFamilyDefs.ts`), `c` sleeve palette, `rt` run
+  time in seconds (only when 60% of tracks have times), `discs`, `size`
+  (12"/10"/7"), `g_wt` vinyl grams (the pressing weight Discogs gives, else
+  140 g a 12"), `vc` pressing colours parsed through
+  `src/config/vinyl-colours.json` (`hex`, `glass`, `see`, `pat`), `ed`
+  edition flags, `lab` label, `ctry` country, `cut`/`mas`/`prod` lacquer
+  cutters, mastering engineers and producers from `credits`, `lis` Last.fm
+  listeners.
+- `artists[]`: the year's artists by records added, with `new` (first year on
+  the shelves), the `fanart` file and face `focus` from the artist's
+  `-image.json`, and `from`/`formed`/`cc` from the explore graph.
+- `links[]` / `outside[]`: explore-graph links touching the year's artists
+  (`a`, `b`, `type`, `who`), keeping every link inside the year plus the 40
+  older artists most tied into it. Empty if `public/explore/explore.json`
+  hasn't been built.
+- `perYear`: records added each year across the collection (boxset members
+  excluded).
+- `perMonth`: records added each month, per year (12 counts; the latest year
+  stops at its last month) — the cover's graph.
+
+Image paths are not stored: the page builds them with `src/lib/image-utils.ts`.
+
 ---
 
 ## Database Schema

@@ -25,7 +25,7 @@ This document covers the route-level page components in russ.fm.
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
 | `/stats` | `Stats` title → headline counts → month chart → growth → decades / genres → release years → most collected → formats / countries → labels → latest additions → hidden gems → random picks / artists. All bars take sleeve colours. |
 | `/shuffle` (also `/random`) | Split-flap board clatters to a random record; its colour drops down the page and the cover turns back over the spinning record. |
-| `/wrapped/:year` | `CoverHero` on the year's first addition → headline counts → month chart → top artists → genres / decades → a shelf per month → year links. `Presentation` opens the full-screen mode. |
+| `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
 ## Route Map
 
@@ -836,31 +836,54 @@ Year-in-review pages.
 
 **Route:** `/wrapped/:year` (`/wrapped` redirects to last year)
 
-- **Hero** — `CoverHero` in the flood of the year's first addition, with
-  its `HeroRecord` and a "First in" sticker, the year in huge `t-disp`, the
-  first record's title and artist, a `Presentation` button and the
-  `YearSelector`
-- Headline counts in sleeve colours (records, artists, per month, busiest
-  month) and smaller counts (top genre, top style, records per artist,
-  projected total for the year to date)
-- Added per month (one block per record)
-- Top artists (`ArtistCard`s)
-- Genres and decades as colour bars
-- Month by month: a `shelf-scroll` row of `RecordTile`s per month
-- Links to other years
-
-Colours come from `album-colors.json` through
-[`utils/sleeves.ts`](./utilities.md#wrapped-sleeve-helpers-srcpageswrappedutilssleevests),
-falling back to the palette in the Wrapped JSON.
+Loads the year file, sets the meta tags and shows a skeleton while it loads.
+The page itself is `WrappedStory`, lazy-loaded so the chapters and d3 only
+download on a Wrapped page. A floating pill bottom right holds the
+`YearSelector` and the `Presentation` button.
 
 **Data Source:** `/wrapped/wrapped-{year}.json` or
-`/wrapped/wrapped-ytd.json`. Available years are derived from the shared
-collection.
+`/wrapped/wrapped-ytd.json`, read from its `story` block
+([schemas.md](../data/schemas.md#the-story-block)). Available years are
+derived from the shared collection.
+
+### WrappedStory (`src/pages/wrapped/story/`)
+
+The year told as a scroll of chapters. `WrappedStory.tsx` renders twelve empty
+`<section>`s under a `.ws` root and hands each to its chapter in
+`chapters/<id>.ts`: a factory taking the section and returning
+`{ render(story), dispose() }`. The chapters build their own DOM (canvas, SVG,
+animation loops, d3) and tear it all down in `dispose`. Plain `<a href="/…">`
+links inside them go through the router.
+
+`core.ts` turns the year's `story` block into a `Story` (image URLs from
+`src/lib/image-utils.ts`, records by day, the biggest day, a colour per genre
+family) and holds the shared helpers and a small event bus: `day` (a day picked
+in the skyline), `play` (the cover's button) and `goto` (a path for the router).
+`story.css` and every `chapters/<id>.css` nest their rules under `.ws`, so the
+generic class names (`.stat`, `.pill`, `.label`) stay on this page.
+
+| Chapter | What it draws |
+|---------|---------------|
+| `cover` | The year over a drifting 3D wall of its sleeves (a pool of 40), counted-up headline numbers, and a graph of records added every month since the first year: the year on show lit in amber with its busiest month marked, each year's total above it, the monthly average dashed. A sentence compares the year with the last and the average; clicking a year in the graph switches to it. |
+| `record` (A1, Sleeve by sleeve) | Every record of the year side by side as slivers of its cover, opening Dock-style to a full sleeve under the pointer and drifting through the year when left alone. Slivers start as sleeve colours and fetch their covers in batches while the strip is on screen. Below: the date, the record and its pressing chips. |
+| `skyline` (A2, Every day) | A 3D skyline, one tower per day and one slab per record, that folds into a flat calendar; the biggest day is labelled and a picked day shows its sleeves. |
+| `clock` (A3, Around the clock) | When records were added in UK time: a 24-hour dial of sleeve-coloured segments and a weekday × hour dot grid. |
+| `weight` (A4, Weight and length) | Discs, sides, kilograms and hours; the height of every disc in one pile, then the discs as twelve monthly piles (heights to scale, each disc lit in its pressing colour, the month's last sleeve as the top label); run times end to end. |
+| `vinyl` (B1, Not all black) | Every coloured pressing as a disc half out of its sleeve, in the order added, with colour-family filters; three rows until "Show all". |
+| `artists` (B2) | The most collected artist over their fanart, the next five as cards, and a bar race of records per artist through the year. |
+| `genres` (B3) | A streamgraph of the twelve genre families by week, with the family that led each month. |
+| `decades` (B4) | Sleeves in a beeswarm by original year, with decade bars and the oldest and newest records. |
+| `credits` (B5, Behind the glass) | Lacquer cutters, mastering engineers, producers and labels as leaderboards with their sleeves; edition rings. |
+| `connections` (B6) | The year's artists as a constellation linked by members, aliases and shared credits, with older artists they tie to. |
+| `finale` (C) | Every sleeve of the year on one wall, re-sorted by date, colour or artist. |
+
+The design started from [mylisteningrecord.com](https://mylisteningrecord.com)
+(MIT, Carson Godwin); the approved mockup is in `mockups/wrapped/`.
 
 ### WrappedYTD (`src/pages/wrapped/WrappedYTD.tsx`)
 
-**Route:** `/wrapped/ytd` — the current year in the same layout, with a
-"Year to date" kicker and the projected total.
+**Route:** `/wrapped/ytd` — the current year in the same chapters, read from
+`wrapped-ytd.json`; the cover marks the year "so far".
 
 ### WrappedPresentation (`src/pages/wrapped/WrappedPresentation.tsx`)
 
