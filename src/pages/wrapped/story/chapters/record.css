@@ -1,0 +1,46 @@
+.ws {
+  #record { padding: 96px 0 88px; transition: --flood 1s var(--ease);
+    background: radial-gradient(ellipse 80% 60% at 50% 55%, color-mix(in srgb, var(--flood) 34%, transparent), transparent 75%), var(--ground); }
+  .bc-head { max-width: 980px; }
+
+  /* The strip: full bleed, every sleeve a sliver */
+  .bc-stage { position: relative; padding: 56px 32px 0; }
+  .bc { display: flex; height: var(--h, 360px); touch-action: pan-y; cursor: pointer;
+    -webkit-box-reflect: below 4px linear-gradient(transparent 62%, rgba(255, 255, 255, .16)); }
+  .bar { position: relative; flex: none; height: 100%; overflow: hidden; transform-origin: 50% 100%; }
+  .bar img { position: absolute; top: 0; left: 50%; width: var(--h); height: var(--h); max-width: none; translate: -50% 0; object-fit: cover; }
+  .bar img:not([src]) { visibility: hidden; }
+  .bar img[src] { animation: bc-fade .5s var(--ease) both; }
+  .bar::after { content: ''; position: absolute; inset: 0 0 0 auto; width: 1px; background: rgba(0, 0, 0, .28); }
+  .bar.on { z-index: 1; box-shadow: 0 30px 60px rgba(0, 0, 0, .55), 0 0 0 2px var(--ink); }
+  .bar.on::after { display: none; }
+  .bc:not(.in) .bar { transform: scaleY(0); }
+  .bc.in .bar { animation: bc-in .9s var(--ease) both; animation-delay: calc(min(var(--i) * 5ms, 1.6s)); }
+
+
+  .bc-months { position: relative; height: 26px; margin-top: calc(var(--h, 360px) * .18 + 12px); }
+  .bc-months span { position: absolute; left: 0; top: 0; padding-left: 6px; border-left: 1px solid var(--ink-3); font: 600 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; will-change: transform; transition: opacity .2s; }
+
+  /* What's open */
+  .bc-info { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; margin-top: 24px; }
+  .bc-now { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 36px; align-items: start; min-height: 170px; min-width: 0; }
+  .bc-when b { display: block; font: 900 clamp(48px, 6vw, 92px)/.85 var(--display); font-stretch: 78%; text-transform: uppercase; color: var(--flood); transition: color .6s; white-space: nowrap; }
+  .bc-when span { display: block; margin-top: 10px; font: 600 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+  .bc-what { min-width: 0; }
+  .bc-what h3 { font: 900 clamp(26px, 3vw, 44px)/.92 var(--display); text-transform: uppercase; margin: 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .bc-what p { font-size: 19px; color: var(--ink-2); margin: 8px 0 14px; }
+  .now-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .now-chips span { display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 11px; border: 1px solid var(--rule); border-radius: 999px; font-size: 12.5px; color: var(--ink-2); background: rgba(0, 0, 0, .25); }
+  .now-chips i { width: 9px; height: 9px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(255, 255, 255, .3); }
+  .bc-auto { flex: none; }
+
+  @media (max-width: 700px) {
+    .bc-stage { padding: 36px 16px 0; }
+    .bc-info { flex-direction: column; gap: 16px; }
+    .bc-now { grid-template-columns: 1fr; gap: 12px; min-height: 0; }
+    .bc-when b { font-size: 52px; }
+  }
+}
+
+@keyframes bc-in { from { transform: scaleY(0); opacity: 0; } }
+@keyframes bc-fade { from { opacity: 0; } }

@@ -433,7 +433,7 @@ Both take anything with `year_original` / `date_release_year`, so collection alb
 albums and Wrapped releases all work. Anything that orders, groups, filters or labels records
 by year uses these, never `date_release_year` directly: the `/albums` Year sort, filter and
 tile meta, browse decades and facet year stats, the genre explorer, Stats decades and release
-years, Wrapped `decadeOf`, search results, the home hero and random picks, the random crate
+years, search results, the home hero and random picks, the random crate
 panel, and the album and artist pages. The album page shows the pressing's own date separately
 ("This pressing"), from the detail JSON.
 
@@ -681,7 +681,6 @@ helpers look colours up in `album-colors.json` first so Wrapped matches the rest
 | `floodForRelease(colours, release)` | `floodFor()` for a Wrapped release |
 | `tileAlbum(release)` | The fields `RecordTile` needs |
 | `groupColour(releases, colours, used?)` | A vivid colour for a group (month, genre, decade), preferring colours not already in `used` so neighbours differ |
-| `decadeOf(release)` | `"1970s"` or `null`, from the original year (`originalDecade`) |
 | `formatDay(iso, withYear = true)` | `"25 SEP 2026"` |
 
 ## Genre Utilities (`src/lib/genreUtils.ts`)

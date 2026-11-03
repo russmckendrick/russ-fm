@@ -1,0 +1,33 @@
+.cn-stats { margin: 40px 0 40px; }
+.cn-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 28px; align-items: start; }
+.cn-sky { position: relative; border-radius: 18px; overflow: hidden; min-width: 0;
+  background: radial-gradient(ellipse at 50% 45%, rgba(233, 162, 59, .08), transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(60, 123, 216, .07), transparent 55%), #0a0908;
+  border: 1px solid var(--rule); }
+.cn-sky canvas { display: block; opacity: 0; transition: opacity 1.2s; }
+.cn-sky.in canvas { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .cn-sky canvas { opacity: 1; } }
+
+.cn-k { color: var(--amber); margin: 4px 0 14px; }
+.cn-hub { display: flex; align-items: center; gap: 12px; padding: 8px; margin: 0 -8px; border-radius: 10px; transition: background .25s; }
+.cn-hub:hover { background: color-mix(in srgb, var(--c) 18%, transparent); }
+.cn-hub img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--c); flex: none; background: #222; }
+.cn-hub b { display: block; font-weight: 700; font-size: 15px; line-height: 1.2; }
+.cn-hub em { font: 600 11px var(--mono); font-style: normal; color: var(--ink-3); letter-spacing: .06em; }
+.cn-key { display: grid; gap: 8px; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-2); }
+.cn-key span { display: flex; align-items: center; gap: 10px; }
+.cn-key i { flex: none; display: inline-block; width: 22px; }
+.cn-key .strong { height: 2px; background: #e9a23b; }
+.cn-key .weak { height: 1px; background: rgba(251, 247, 239, .35); }
+.cn-key .ring { width: 14px; height: 14px; margin: 0 4px; border-radius: 50%; border: 2.5px solid #e9a23b; }
+.cn-key .dot { width: 6px; height: 6px; margin: 0 8px; border-radius: 50%; background: rgba(251, 247, 239, .7); }
+
+.cn-tip { display: grid; gap: 3px; margin-top: 8px; }
+.cn-tip span { font-size: 12.5px; }
+.cn-tip em { font-style: normal; color: var(--amber); font-size: 11.5px; }
+.cn-tip .more { color: var(--ink-3); }
+
+@media (max-width: 900px) {
+  .cn-grid { grid-template-columns: 1fr; }
+  .cn-side { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 12px; }
+  .cn-k, .cn-key { grid-column: 1 / -1; }
+}

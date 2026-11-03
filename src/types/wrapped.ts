@@ -1,4 +1,5 @@
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
+import type { WrappedStory } from '@/types/wrappedStory';
 
 // Sleeve palette copied from album-colors.json when the Wrapped data is built
 export type ColorPalette = AlbumColorPalette;
@@ -124,4 +125,6 @@ export interface WrappedData {
     }>;
   };
   theme?: WrappedTheme;
+  /** Per-record detail for the story chapters (scripts/lib/wrapped-story.ts) */
+  story?: WrappedStory;
 }

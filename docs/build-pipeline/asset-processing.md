@@ -682,6 +682,11 @@ pnpm run build:wrapped
 - Timeline and insight calculations
 - Each release carries `year_original`; `insights.decades` counts by it,
   falling back to `date_release_year`
+- A `story` block per year for the /wrapped chapters (`scripts/lib/wrapped-story.ts`):
+  per-record UK time added, run time, discs and weight, pressing colours,
+  credits and editions, plus the year's artists and their explore-graph links.
+  It reads `public/explore/explore.json`, so `generate-explore` runs first.
+  Shape: [schemas.md](../data/schemas.md#the-story-block)
 
 ### Data Structure
 

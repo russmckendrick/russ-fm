@@ -1,0 +1,25 @@
+.ws {
+  & #skyline { background: radial-gradient(120% 70% at 50% 100%, #1d1712 0%, var(--ground) 70%); }
+  & .sky-stats { margin: 44px 0 40px; }
+  & .sky-stats small { font-size: .42em; opacity: .55; margin-left: 4px; }
+  & .sky-tools { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+  & .sky-toggle { display: flex; gap: 6px; }
+  & .sky-hint { color: var(--ink-3); font-size: 13px; }
+  & .sky-wrap { overflow-x: auto; overflow-y: hidden; padding-bottom: 8px; scrollbar-width: thin; }
+  & .sky-wrap canvas { display: block; }
+  & .sky-strip { margin-top: 36px; }
+  & .sky-when { font: 800 24px/1.1 var(--display); text-transform: uppercase; font-stretch: 85%; margin: 0 0 16px; }
+  & .sky-when span { font: 500 14px var(--grot); text-transform: none; color: var(--ink-3); margin-left: 10px; letter-spacing: 0; }
+  & .sky-row { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; }
+  & .sky-row .slv { flex: 0 0 150px; animation: sky-in .5s var(--ease) both; }
+  & .sky-row .slv:nth-child(2) { animation-delay: .05s; }
+  & .sky-row .slv:nth-child(3) { animation-delay: .1s; }
+  & .sky-row .slv:nth-child(4) { animation-delay: .15s; }
+  & .sky-row .slv:nth-child(n+5) { animation-delay: .2s; }
+  @media (max-width: 700px) {
+    & .sky-row .slv { flex-basis: 120px; }
+    & .sky-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) { & .sky-row .slv { animation: none; } }
+}
+@keyframes sky-in { from { opacity: 0; transform: translateY(16px) rotate(-2deg); } }

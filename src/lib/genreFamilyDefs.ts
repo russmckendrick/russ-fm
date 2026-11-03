@@ -29,3 +29,23 @@ export const GENRE_FAMILIES: GenreFamilyDef[] = [
   { key: 'indie', code: 'B5', name: 'Indie & Britpop', terms: ['Indie Rock', 'Indie Pop', 'Britpop', 'Lo-Fi', 'Power Pop', 'Jangle Pop', 'Twee Pop', 'Madchester', 'Baggy'] },
   { key: 'alt', code: 'B6', name: 'Alternative', terms: ['Alternative Rock', 'Grunge', 'Shoegaze', 'Industrial', 'Funk Metal', 'Nu Metal', 'Alternative Metal', 'Noise', 'Goth Rock', 'Alternative'] },
 ];
+
+const TERM_TO_FAMILY = new Map<string, GenreFamilyKey>();
+for (const family of GENRE_FAMILIES) {
+  for (const term of family.terms) {
+    if (!TERM_TO_FAMILY.has(term)) TERM_TO_FAMILY.set(term, family.key);
+  }
+}
+
+/** The one family a record is filed in: its first style a family claims, then its genre names. */
+export function familyOf(album: { styles?: string[] | null; genre_names?: string[] | null }): GenreFamilyKey {
+  for (const term of album.styles ?? []) {
+    const key = TERM_TO_FAMILY.get(term);
+    if (key) return key;
+  }
+  for (const term of album.genre_names ?? []) {
+    const key = TERM_TO_FAMILY.get(term);
+    if (key) return key;
+  }
+  return (album.genre_names ?? []).includes('Rock') ? 'hard' : 'pop';
+}

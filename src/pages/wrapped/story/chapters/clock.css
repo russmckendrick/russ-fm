@@ -1,0 +1,37 @@
+.ws {
+  & #clock { background: radial-gradient(70% 60% at 25% 55%, #18202e 0%, var(--ground) 70%); }
+  & .clk-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: center; margin-top: 40px; }
+  & .clk-dial svg { width: 100%; height: auto; display: block; overflow: visible; }
+  & .clk-night { fill: rgba(80, 110, 190, .09); }
+  & .clk-day { fill: rgba(233, 162, 59, .05); }
+  & .clk-ring { fill: none; stroke: rgba(251, 247, 239, .06); }
+  & .clk-tick { stroke: rgba(251, 247, 239, .25); stroke-width: 1; }
+  & .clk-tick.major { stroke: rgba(251, 247, 239, .6); stroke-width: 2; }
+  & .clk-hour { fill: rgba(251, 247, 239, .45); font: 600 11px var(--mono); letter-spacing: .1em; text-anchor: middle; }
+  & .clk-hour.major { fill: var(--ink); font-size: 13px; }
+  & .clk-seg { cursor: pointer; transition: filter .2s; }
+  & .clk-seg:hover { filter: brightness(1.35) drop-shadow(0 0 6px rgba(255, 255, 255, .5)); }
+  & .clk-glow { fill: var(--amber); opacity: .12; animation: clk-pulse 2.8s ease-in-out infinite; }
+  & .clk-hand line { stroke: var(--amber); stroke-width: 2.5; stroke-linecap: round; }
+  & .clk-hand circle { fill: var(--amber); }
+  & .clk-hub { fill: #141210; stroke: rgba(251, 247, 239, .12); }
+  & .clk-big { fill: var(--ink); font: 900 34px var(--display); text-anchor: middle; }
+  & .clk-small { fill: var(--amber); font: 600 10px var(--mono); letter-spacing: .16em; text-anchor: middle; }
+  & .clk-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  & .clk-stats .stat b { font-size: clamp(30px, 3.4vw, 50px); white-space: nowrap; }
+  & .clk-mlabel { color: var(--ink-3); margin: 44px 0 12px; }
+  & .clk-matrix { width: 100%; height: auto; display: block; overflow: visible; }
+  & .clk-mtext { fill: rgba(251, 247, 239, .45); font: 600 10px var(--mono); letter-spacing: .08em; }
+  & .clk-mbg { fill: rgba(251, 247, 239, .12); }
+  & .clk-mdot { cursor: pointer; stroke: rgba(14, 13, 12, .6); stroke-width: 1; }
+  & .clk-mdot:hover { stroke: var(--ink); stroke-width: 2; }
+  & .clk-foot { color: var(--ink-3); font-size: 12.5px; margin: 14px 0 0; }
+  @media (max-width: 960px) { & .clk-grid { grid-template-columns: 1fr; gap: 32px; } }
+  @media (max-width: 520px) { & .clk-stats { grid-template-columns: 1fr 1fr; } }
+}
+@keyframes clk-pulse { 50% { opacity: .26; } }
+
+/* Inside the body-level tooltip, so outside .ws */
+.ws-tip .clk-tip { display: flex; gap: 10px; align-items: center; }
+.ws-tip .clk-tip img { width: 56px; height: 56px; object-fit: cover; border-radius: 2px; flex: none; }
+.ws-tip .clk-tip span { color: #e9a23b; font: 600 11px var(--font-mono); }

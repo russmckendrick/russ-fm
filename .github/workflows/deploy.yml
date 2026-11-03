@@ -95,6 +95,12 @@ jobs:
           echo "🎨 Generating album colors..."
           pnpm run generate-colors
 
+          # The /explore graph and its atlases go to public/explore/ (after
+          # process-images, so the atlases read the cached medium sizes; before
+          # build:wrapped, whose connections chapter reads the graph)
+          echo "🕸️  Generating explore data..."
+          pnpm run generate-explore
+
           echo "📊 Generating wrapped data..."
           pnpm run build:wrapped
           pnpm run generate-sitemap
@@ -105,11 +111,6 @@ jobs:
           # TV and genre cards go to public/og/ so the worker build ships them
           echo "📺 Generating TV and genre OG cards..."
           pnpm run generate-og-sections
-
-          # The /explore graph and its atlases go to public/explore/ (after
-          # process-images, so the atlases read the cached medium sizes)
-          echo "🕸️  Generating explore data..."
-          pnpm run generate-explore
 
           # Copy generic og-image.png to public/ so it's included in worker build
           echo "🖼️  Copying og-image.png to public/..."
