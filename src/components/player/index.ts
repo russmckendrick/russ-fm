@@ -6,7 +6,7 @@ export { Sleeve } from './Sleeve';
 export { Sticker } from './Sticker';
 export { PillLink } from './Pill';
 export { SectionHeading } from './SectionHeading';
-export { HeroRecord } from './HeroRecord';
+export { HeroRecord, HeroSticker } from './HeroRecord';
 export { CoverHero, AFTER_HERO } from './CoverHero';
 export { RecordTile } from './RecordTile';
 export { FitTitle } from './FitTitle';

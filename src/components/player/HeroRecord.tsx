@@ -148,7 +148,7 @@ export function HeroRecord({
  * The shop sticker. After a scrobble it swaps to a cream "Scrobbled" one,
  * which later crossfades back to "Added".
  */
-function HeroSticker({
+export function HeroSticker({
   sticker,
   scene,
   size,

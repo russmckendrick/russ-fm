@@ -23,7 +23,8 @@ export function FloodProvider({ children }: { children: ReactNode }) {
       prev.ink === target.ink &&
       (prev.cover ?? null) === (target.cover ?? null) &&
       (prev.ground ?? null) === (target.ground ?? null) &&
-      (prev.vinyl ?? null) === (target.vinyl ?? null)
+      (prev.vinyl ?? null) === (target.vinyl ?? null) &&
+      !!prev.room === !!target.room
         ? prev
         : target,
     );

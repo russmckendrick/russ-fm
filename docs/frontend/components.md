@@ -135,6 +135,16 @@ directly on `<button>`s.
 (`h1`–`h3`, default `h2`), `size` (`lg` | `md` | `sm`) and `children`
 (extra controls placed before the link, e.g. sort pills).
 
+## Release room (`src/components/album/ReleaseRoom.tsx`)
+
+`ReleaseRoom` is the album and home hero: room photos with the sleeve on a
+stand and the record (`Vinyl`, class `room-vinyl`) spinning on a turntable.
+Props: `records` (`RoomRecord[]`: `key`, `room`, `cover`, `alt`, `look`,
+`labelColour`, optional `href`), `active`, `tint` (the flood), `fast`
+(scrobbling), `sticker` (laid over the sleeve's box), `topInset` (defaults
+to the header height), `zoom`. See [release room](./release-room.md).
+`HeroSticker` (from `HeroRecord.tsx`) is exported for its sticker.
+
 ## Album components (`src/components/album/BoxSet.tsx`)
 
 Used by `AlbumDetailPage` when the album has `boxset_contents`. The disc

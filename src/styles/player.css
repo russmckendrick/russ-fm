@@ -1471,6 +1471,28 @@ body {
   }
 }
 
+/* The album and home bands' title: one line the title scales into (FitTitle
+   fitHeight), bigger than the TV's, so the band keeps its height between records. */
+.room-title-box {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 52px;
+  margin: 4px 0 6px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .room-title-box {
+    height: 66px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .room-title-box {
+    height: 84px;
+  }
+}
+
 /* Full screen: the picture letterboxed, plus the credit block. */
 .tv-layer:fullscreen {
   background: #000;
@@ -1708,6 +1730,141 @@ body {
   }
 
   .tv-layer[data-mode='mini'] {
+    animation: none;
+  }
+}
+
+/* --- Release room (album and home heroes) ----------------------------------- */
+/* src/components/album/ReleaseRoom.tsx. Each room photo is a layer with its
+   records under it: the sleeve shows through the stand's cut-out and a .vinyl
+   through the platter's, so the stand's lip and the tonearm stay on top.
+   Records in one room crossfade in place; another room crossfades the layer. */
+.release-room {
+  background: #0b0907;
+}
+
+.release-room-layer {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.1s var(--ease-out);
+}
+
+.release-room-layer.is-on {
+  opacity: 1;
+}
+
+.release-room-record {
+  opacity: 0;
+  transition: opacity 0.9s var(--ease-out);
+}
+
+.release-room-record.is-on {
+  opacity: 1;
+}
+
+.release-room-layer.is-on .release-room-record.is-on {
+  pointer-events: auto;
+}
+
+.release-room-sleeve {
+  position: absolute;
+  z-index: 1;
+  background: #111;
+}
+
+.release-room-photo {
+  position: absolute;
+  z-index: 2;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.release-room-tint {
+  position: absolute;
+  z-index: 3;
+  mix-blend-mode: color;
+  opacity: 0.25;
+  pointer-events: none;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transition: background-color 0.8s var(--ease-out);
+}
+
+.release-room-sticker {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* The record on the platter: .vinyl squashed into the turntable's perspective
+   and sized past the record's edge (the photo hides the overhang); --face-x,
+   --face-y and --face place the photo's outline on it, --label is the label's size, --room-light how
+   brightly the room lights it. Only the pattern and the label turn; grooves and
+   the light on the record are round, so they sit still over it (nothing is
+   re-blended or blurred per frame). Grooves are in overlay, which lightens and
+   darkens the pressing without greying it. */
+.room-vinyl {
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--vinyl-rim, #000);
+}
+
+.room-vinyl .vinyl-grooves {
+  background: var(--vinyl-pattern, none);
+  will-change: transform;
+}
+
+/* Grooves and the light caught in them: textures drawn by
+   scripts/make-vinyl-textures.py with the record's edge at the image's, laid
+   on the photo's outline (in perspective its centre is off the spindle). */
+.room-vinyl::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url('/release-rooms/vinyl-grooves.webp') var(--face-x) var(--face-y) / var(--face) var(--face) no-repeat;
+}
+
+/* On a coloured pressing the grooves are lighter shades of it, not white. */
+.room-vinyl:not(.room-vinyl-black)::before {
+  mix-blend-mode: overlay;
+}
+
+.room-vinyl::after {
+  z-index: 2;
+  background:
+    url('/release-rooms/vinyl-sheen.webp') var(--face-x) var(--face-y) / var(--face) var(--face) no-repeat,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), transparent 40%),
+    linear-gradient(rgba(0, 0, 0, calc(1 - var(--room-light, 1))), rgba(0, 0, 0, calc(1 - var(--room-light, 1))));
+}
+
+.room-vinyl .vinyl-label {
+  z-index: 1;
+  left: calc(50% - var(--label) / 2);
+  top: calc(50% - var(--label) / 2);
+  width: var(--label);
+  height: var(--label);
+}
+
+/* 33⅓ at the hero record's easy pace; 45 (scrobbling) keeps its speed. */
+.room-vinyl .spin-33 {
+  animation-duration: 6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-room-layer,
+  .release-room-record,
+  .release-room-tint {
+    transition: none;
+  }
+
+  .room-vinyl .spin-33,
+  .room-vinyl .spin-45 {
     animation: none;
   }
 }

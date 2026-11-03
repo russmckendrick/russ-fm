@@ -22,7 +22,10 @@ import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 import { threadFromAlbum } from '@/lib/explore/links';
-import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
+import { AFTER_HERO, CoverHero, FitTitle, HeroSticker, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
+import { serviceIconFor } from '@/components/player/service-icon';
+import { ReleaseRoom } from '@/components/album/ReleaseRoom';
+import { releaseRoomFor } from '@/lib/releaseRooms';
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
 import { boxMemberDiscs, buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
@@ -358,7 +361,8 @@ export function AlbumDetailPage() {
   usePageFlood(
     album ? flood.flood : null,
     album ? flood.ink : null,
-    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground, vinyl: discs[0] } : undefined,
+    // Albums open on a listening room (box sets keep the cover hero), with the header see-through over it.
+    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground, vinyl: discs[0], room: !album.boxset_contents?.length } : undefined,
   );
 
   useEffect(() => {
@@ -892,53 +896,42 @@ export function AlbumDetailPage() {
     detailedAlbum?.discogs_url && { label: 'Discogs', url: detailedAlbum.discogs_url },
   ].filter(Boolean) as Array<{ label: string; url: string }>;
 
-  const heroText = (
-    <div className="flex flex-col gap-2.5 sm:gap-5 lg:gap-6">
-      {isBox && <span className="t-kicker">Box set</span>}
-      <div className="flex flex-wrap items-center gap-3">
-        {(album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }]).map((artist, i, all) => (
-          <React.Fragment key={artist.uri_artist || artist.name}>
-            {isVarious(artist.name) ? (
-              // A compilation: the faces of who plays on it, and how many do.
-              <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
-                <CompilationFaces artists={linkedArtists(compilations, album.uri_release)} ring={flood.flood} className="max-sm:hidden" />
-                <span className="flex flex-col">
-                  <span className="t-dispn whitespace-nowrap text-[22px] md:text-[28px]">{VARIOUS_NAME}</span>
-                  {compilations?.releases[album.uri_release] && (
-                    <span className="t-mono text-[11px] uppercase" style={{ color: flood.sub }}>
-                      {compilations.releases[album.uri_release].artists} artists
-                    </span>
-                  )}
-                </span>
-              </Link>
-            ) : (
-              <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
-                <img
-                  src={getArtistAvatarFromData(artist.uri_artist)}
-                  alt=""
-                  onError={handleImageError}
-                  className="h-10 w-10 rounded-full object-cover max-sm:hidden md:h-11 md:w-11"
-                />
-                <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
-              </Link>
-            )}
-            {i < all.length - 1 && <span aria-hidden className="t-mono opacity-60">/</span>}
-          </React.Fragment>
-        ))}
-      </div>
-      <h1 className="t-cond m-0" style={{ fontSize: `clamp(48px, ${Math.min(10, 64 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}>
-        {title}
-      </h1>
-      <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: flood.sub }}>
-        {Number.isFinite(year) && <span>{year}</span>}
-        {labelName && <span>{labelName}</span>}
-        {isBox ? (
-          <span>{boxDiscs.length} albums</span>
-        ) : (
-          scrobbleRows.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{scrobbleRows.length} tracks</span>
-        )}
-        {totalDuration && <span>{totalDuration}</span>}
-      </div>
+  // The hero's parts: the box set's cover hero and every other record's room band share them.
+  const artistLine = (
+    <div className="flex flex-wrap items-center gap-3">
+      {(album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }]).map((artist, i, all) => (
+        <React.Fragment key={artist.uri_artist || artist.name}>
+          {isVarious(artist.name) ? (
+            // A compilation: the faces of who plays on it, and how many do.
+            <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
+              <CompilationFaces artists={linkedArtists(compilations, album.uri_release)} ring={flood.flood} className="max-sm:hidden" />
+              <span className="flex flex-col">
+                <span className="t-dispn whitespace-nowrap text-[22px] md:text-[28px]">{VARIOUS_NAME}</span>
+                {compilations?.releases[album.uri_release] && (
+                  <span className="t-mono text-[11px] uppercase" style={{ color: flood.sub }}>
+                    {compilations.releases[album.uri_release].artists} artists
+                  </span>
+                )}
+              </span>
+            </Link>
+          ) : (
+            <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
+              <img
+                src={getArtistAvatarFromData(artist.uri_artist)}
+                alt=""
+                onError={handleImageError}
+                className="h-10 w-10 rounded-full object-cover max-sm:hidden md:h-11 md:w-11"
+              />
+              <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
+            </Link>
+          )}
+          {i < all.length - 1 && <span aria-hidden className="t-mono opacity-60">/</span>}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+  const heroNotes = (
+    <>
       {album.members && album.members.length > 0 && (
         <p className="m-0 text-[14px]" style={{ color: flood.sub }}>
           With{' '}
@@ -962,18 +955,68 @@ export function AlbumDetailPage() {
           <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
       )}
-      <div className="pill-row-compact mt-1 flex flex-wrap gap-2.5">
-        {!isBox && tracks.length > 0 && (
-          <AlbumScrobbleButton
-            album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
-            tone={{ background: flood.ink, color: flood.flood }}
-            mobileLabel="Scrobble"
-            key={albumPath}
-            onProgress={onScrobbleProgress}
-            leadInMs={SCENE_LEAD_IN_MS}
-            trackMs={SCENE_TRACK_MS}
-          />
+    </>
+  );
+  const scrobbleButton = !isBox && tracks.length > 0 && (
+    <AlbumScrobbleButton
+      album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
+      tone={{ background: flood.ink, color: flood.flood }}
+      mobileLabel="Scrobble"
+      key={albumPath}
+      onProgress={onScrobbleProgress}
+      leadInMs={SCENE_LEAD_IN_MS}
+      trackMs={SCENE_TRACK_MS}
+    />
+  );
+  // The scrobble's progress while it plays, else the genres.
+  const readout = showScrobbleReadout ? (
+      <div className="scrobble-readout flex min-h-[30px] items-baseline gap-3.5" aria-live="polite">
+        <span className="t-kicker">{scenePhase === 'done' ? 'Done' : 'Now'}</span>
+        <span className="t-dispn truncate text-[17px] md:text-[20px]">
+          {scenePhase === 'done'
+            ? scrobbleScene.successful === scrobbleScene.total
+              ? `All ${scrobbleScene.total} tracks scrobbled`
+              : `${scrobbleScene.successful} of ${scrobbleScene.total} tracks scrobbled`
+            : nowRow
+              ? `${nowRow.position ? `${nowRow.position}  ` : ''}${nowRow.name}`
+              : ''}
+        </span>
+      </div>
+    ) : cleanGenresList.length > 0 && (
+      <div className="flex flex-wrap gap-2">
+        {cleanGenresList.slice(0, 5).map(genre => (
+          <Link
+            key={genre}
+            to={`/albums/1?genre=${encodeURIComponent(genre)}`}
+            className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100"
+            style={{ borderColor: 'currentColor' }}
+          >
+            {genre}
+          </Link>
+        ))}
+      </div>
+    );
+
+  const heroText = (
+    <div className="flex flex-col gap-2.5 sm:gap-5 lg:gap-6">
+      {isBox && <span className="t-kicker">Box set</span>}
+      {artistLine}
+      <h1 className="t-cond m-0" style={{ fontSize: `clamp(48px, ${Math.min(10, 64 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}>
+        {title}
+      </h1>
+      <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: flood.sub }}>
+        {Number.isFinite(year) && <span>{year}</span>}
+        {labelName && <span>{labelName}</span>}
+        {isBox ? (
+          <span>{boxDiscs.length} albums</span>
+        ) : (
+          scrobbleRows.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{scrobbleRows.length} tracks</span>
         )}
+        {totalDuration && <span>{totalDuration}</span>}
+      </div>
+      {heroNotes}
+      <div className="pill-row-compact mt-1 flex flex-wrap gap-2.5">
+        {scrobbleButton}
         {serviceLinks.map(s => (
           <PillLink key={s.label} to={s.url} iconOnlyOnMobile>
             {s.label}
@@ -985,44 +1028,123 @@ export function AlbumDetailPage() {
           <span className="sm:hidden">Thread</span>
         </Link>
       </div>
-      {showScrobbleReadout ? (
-        <div className="scrobble-readout flex min-h-[30px] items-baseline gap-3.5" aria-live="polite">
-          <span className="t-kicker">{scenePhase === 'done' ? 'Done' : 'Now'}</span>
-          <span className="t-dispn truncate text-[17px] md:text-[20px]">
-            {scenePhase === 'done'
-              ? scrobbleScene.successful === scrobbleScene.total
-                ? `All ${scrobbleScene.total} tracks scrobbled`
-                : `${scrobbleScene.successful} of ${scrobbleScene.total} tracks scrobbled`
-              : nowRow
-                ? `${nowRow.position ? `${nowRow.position}  ` : ''}${nowRow.name}`
-                : ''}
-          </span>
-        </div>
-      ) : cleanGenresList.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {cleanGenresList.slice(0, 5).map(genre => (
-            <Link
-              key={genre}
-              to={`/albums/1?genre=${encodeURIComponent(genre)}`}
-              className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100"
-              style={{ borderColor: 'currentColor' }}
-            >
-              {genre}
-            </Link>
-          ))}
-        </div>
-      )}
+      {readout}
     </div>
+  );
+
+  // Every other record: the room, then one band in the sleeve's flood with the
+  // credit on the left and the actions (scrobble, the services, the thread) on the right.
+  const pressingLine = [
+    detailedAlbum?.formats?.[0] ?? album.format_primary,
+    discCount > 1 ? `${discCount} discs` : null,
+    discColours.length ? discColours.join(' & ') : null,
+    labelName,
+    Number.isFinite(year) ? String(year) : null,
+    detailedAlbum?.country,
+  ].filter(Boolean).join(' · ');
+  const bandArtists = album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }];
+  const roomHero = !isBox && (
+    <>
+      {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
+      <div className="relative -mt-16 md:-mt-[84px]">
+        <ReleaseRoom
+          records={[
+            {
+              key: album.uri_release,
+              room: releaseRoomFor(album),
+              cover: getAlbumImageFromData(album.uri_release, 'hi-res'),
+              alt: `${title} by ${album.release_artist}`,
+              look: looks[0] ?? null,
+              labelColour: flood.ground,
+            },
+          ]}
+          active={0}
+          tint={flood.flood}
+          fast={scenePhase === 'play'}
+          sticker={
+            <HeroSticker
+              sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
+              scene={scrobbleScene}
+              size="lg"
+              className="-right-12 -top-8 hidden md:flex"
+            />
+          }
+          className="h-[clamp(460px,78svh,940px)]"
+        />
+      </div>
+      <section className="flood-surface relative z-[2]" style={{ background: flood.flood, color: flood.ink }}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:gap-10 md:px-10 lg:px-14">
+          <div className="min-w-0 flex-1">
+            <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] md:text-[11px]" style={{ color: flood.sub }}>
+              {pressingLine}
+            </p>
+            <div className="room-title-box">
+              <FitTitle key={albumPath} max={96} min={20} fitHeight className="t-cond whitespace-nowrap leading-[0.9]">
+                {title}
+              </FitTitle>
+            </div>
+            <p className="m-0 flex min-w-0 items-baseline gap-x-3 truncate">
+              {bandArtists.map((artist, i) => (
+                <React.Fragment key={artist.uri_artist || artist.name}>
+                  {i > 0 && <span aria-hidden className="t-mono opacity-60">/</span>}
+                  <Link to={artist.uri_artist} className="t-dispn shrink-0 text-[18px] hover:underline md:text-[22px]">
+                    {isVarious(artist.name) ? VARIOUS_NAME : artist.name}
+                  </Link>
+                </React.Fragment>
+              ))}
+              <span className="t-mono truncate text-[11px] uppercase opacity-80 md:text-[12px]" aria-live="polite">
+                {showScrobbleReadout
+                  ? scenePhase === 'done'
+                    ? scrobbleScene.successful === scrobbleScene.total
+                      ? `All ${scrobbleScene.total} tracks scrobbled`
+                      : `${scrobbleScene.successful} of ${scrobbleScene.total} tracks scrobbled`
+                    : nowRow
+                      ? `Now · ${nowRow.position ? `${nowRow.position} ` : ''}${nowRow.name}`
+                      : ''
+                  : cleanGenresList.slice(0, 3).join(' · ')}
+              </span>
+            </p>
+            {heroNotes}
+          </div>
+          <div className="flex shrink-0 flex-wrap items-center gap-2.5">
+            {scrobbleButton}
+            {serviceLinks.map(s => {
+              const Brand = serviceIconFor(s.url);
+              return (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon-btn h-11 w-11 border-2 border-current"
+                  aria-label={s.label}
+                  title={s.label}
+                >
+                  {Brand ? <Brand className="h-5 w-5" aria-hidden /> : <ArrowUpRight className="h-5 w-5" aria-hidden />}
+                </a>
+              );
+            })}
+            <Link
+              to={threadFromAlbum(album.uri_release)}
+              className="icon-btn h-11 w-11 border-2 border-current"
+              aria-label="Follow the thread"
+              title="Follow the links from this record in The Thread"
+            >
+              <Waypoints className="h-5 w-5" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 
   return (
     <div style={{ background: flood.ground }} className="flood-surface -mb-24 pb-24">
-      <CoverHero
-        flood={flood}
-        splitAt="md"
-        artClassName={isBox ? undefined : 'max-md:w-full'}
-        art={
-          isBox ? (
+      {isBox ? (
+        <CoverHero
+          flood={flood}
+          splitAt="md"
+          art={
             <BoxHeroArt
               boxUri={album.uri_release}
               boxTitle={title}
@@ -1032,26 +1154,15 @@ export function AlbumDetailPage() {
               flood={flood}
               added={album.date_added}
             />
-          ) : (
-            <HeroRecord
-              src={getAlbumImageFromData(album.uri_release, 'hi-res')}
-              alt={`${title} by ${album.release_artist}`}
-              labelColour={flood.ground}
-              labelCover={getAlbumImageFromData(album.uri_release, 'hi-res')}
-              looks={looks}
-              scene={scrobbleScene}
-              ringColour={flood.flood}
-              sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
-              stickerOnMobile={false}
-              discOnMobile={false}
-            />
-          )
-        }
-      >
-        {heroText}
-      </CoverHero>
+          }
+        >
+          {heroText}
+        </CoverHero>
+      ) : (
+        roomHero
+      )}
 
-      <div className={cn('mx-auto w-full max-w-[1640px] px-5 md:px-10 lg:px-14', AFTER_HERO)} style={{ color: 'var(--cream)' }}>
+      <div className={cn('mx-auto w-full max-w-[1640px] px-5 md:px-10 lg:px-14', isBox ? AFTER_HERO : 'pt-16 lg:pt-24')} style={{ color: 'var(--cream)' }}>
         {isBox && (
           <div className="mb-20">
             <BoxContents

@@ -19,6 +19,8 @@ export interface FloodState {
   ground?: string | null;
   /** Pressing colour of the record the page is showing (a `vinyl_colours` entry); the footer's record takes it. */
   vinyl?: string | null;
+  /** The page opens on a room photo (ReleaseRoom), so the header is see-through over it until scrolled. */
+  room?: boolean;
 }
 
 export interface PageFloodExtras {
@@ -28,6 +30,8 @@ export interface PageFloodExtras {
   ground?: string | null;
   /** The record's pressing colour, e.g. "Red Smoke", so the footer's record matches. */
   vinyl?: string | null;
+  /** The page opens on a room photo, which runs up under a see-through header. */
+  room?: boolean;
 }
 
 export type SetFlood = (next: FloodState | null) => void;
@@ -49,11 +53,11 @@ export function useFloodValue(): FloodState {
 export function usePageFlood(
   flood: string | null | undefined,
   ink: string | null | undefined,
-  { cover = null, ground = null, vinyl = null }: PageFloodExtras = {},
+  { cover = null, ground = null, vinyl = null, room = false }: PageFloodExtras = {},
 ) {
   const setFlood = useContext(FloodSetterContext);
   useEffect(() => {
-    setFlood(flood && ink ? { flood, ink, cover, ground, vinyl } : null);
-  }, [flood, ink, cover, ground, vinyl, setFlood]);
+    setFlood(flood && ink ? { flood, ink, cover, ground, vinyl, room } : null);
+  }, [flood, ink, cover, ground, vinyl, room, setFlood]);
   useEffect(() => () => setFlood(null), [setFlood]);
 }

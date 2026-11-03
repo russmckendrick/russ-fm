@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release room — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--
+  The album page hero as a listening room, after the /tv rooms.
+  Rooms: Codex photos with a chroma-green sleeve board (cut out, the real sleeve
+  sits behind it) and a chroma-green record on the turntable (turned to grey
+  plus a mask, so the pressing colour can be multiplied onto it).
+  Rooms: python3 mockups/release/process-rooms.py  (rooms/*.png → assets/)
+  View: Vite dev server, /mockups/release/?album=<slug>&room=<id>
+-->
+<link rel="stylesheet" href="release.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><span class="logo-disc"></span>RUSS.FM</a>
+  <nav><a>Home</a><a class="on">Albums</a><a>Artists</a><a>TV</a><a>Explore</a><a>Browse</a><a>Stats</a><a>Wrapped</a></nav>
+  <div class="nav-r"><span class="search">Search the collection</span><span class="pill-o">Shuffle</span></div>
+</header>
+
+<section class="room" id="room" aria-label="Listening room">
+  <div class="sleeve-slot" id="sleeve"><img alt=""></div>
+  <!-- The record on the platter, under the photo so the tonearm sits on top. -->
+  <div class="vinyl" id="vinyl" aria-hidden="true">
+    <div class="vinyl-grooves"><div class="vinyl-label" id="vlabel"><img alt=""></div></div>
+  </div>
+  <img class="room-img" id="roomImg" alt="">
+  <div class="room-tint" id="tint" aria-hidden="true"></div>
+  <div class="sticker" id="sticker"></div>
+</section>
+
+<section class="band" id="band" aria-label="This record">
+  <div class="wrap band-row">
+    <div class="transport">
+      <button class="icon-btn sm" title="Previous addition"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+      <button class="icon-btn lg solid" title="Scrobble the album"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="2.4" fill="var(--flood)"/></svg></button>
+      <button class="icon-btn sm" title="Next addition"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+    </div>
+    <div class="credit">
+      <div class="kicker" id="kicker"></div>
+      <div class="title-box"><h1 class="t-cond" id="title"></h1></div>
+      <div class="byline"><a id="artist"></a><span id="genres"></span></div>
+    </div>
+    <div class="extras" id="extras"></div>
+  </div>
+</section>
+
+<main class="ground" id="ground">
+  <div class="wrap">
+    <section class="story">
+      <h2 class="h-sec t-wide">The story</h2>
+      <p id="story"></p>
+    </section>
+    <section>
+      <div class="sec-head"><h2 class="h-sec t-wide">Tracklist</h2><span class="t-mono dim" id="tl-meta"></span></div>
+      <div class="sides" id="sides"></div>
+    </section>
+  </div>
+</main>
+
+<aside class="mock-ctl" id="ctl"></aside>
+<script type="module" src="release.js"></script>
+</body>
+</html>
