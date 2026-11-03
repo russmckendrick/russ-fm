@@ -123,6 +123,18 @@ getTvRoomUrl('electronic', 'medium'); // "/tv-rooms/electronic-medium.webp"
 The `/tv` room photos (`hi-res` 3072px, `medium` 1536px, screen cut out). They are site
 assets in `public/tv-rooms/`, served with the app, not from R2.
 
+### getReleaseRoomUrl
+
+```typescript
+getReleaseRoomUrl('metal', 'medium'); // "/release-rooms/metal-medium.webp"
+```
+
+The album and home heroes' listening-room photos (`hi-res` 4608px, `medium`
+3072px, stand and record cut out), one per `/tv` room, in
+`public/release-rooms/`. `releaseRoomFor(album)` in `src/lib/releaseRooms.ts`
+picks a record's room (`tvRoomFor()` in `src/lib/tv.ts`). See
+[release room](./release-room.md).
+
 ### getArtistImageFromData
 
 Extract slug from artist data and get image.

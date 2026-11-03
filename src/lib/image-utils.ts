@@ -48,6 +48,11 @@ export function getTvRoomUrl(room: string, size: 'hi-res' | 'medium' = 'hi-res')
   return `/tv-rooms/${room}-${size}.webp`;
 }
 
+/** A listening room photo for the album hero (src/lib/releaseRooms.ts). */
+export function getReleaseRoomUrl(room: string, size: 'hi-res' | 'medium' = 'hi-res'): string {
+  return `/release-rooms/${room}-${size}.webp`;
+}
+
 /**
  * Get album OG image URL (for social media sharing)
  * Always returns absolute URL for OG/Twitter meta tags

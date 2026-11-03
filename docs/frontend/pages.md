@@ -13,9 +13,9 @@ This document covers the route-level page components in russ.fm.
 
 | Route | Structure |
 |-------|-----------|
-| `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
+| `/` | `ReleaseRoom` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
-| `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
+| `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
@@ -101,34 +101,17 @@ flowchart TB
 The home page sections are local components in `HomePage.tsx`; the old
 `src/components/home/` directory has been removed.
 
-- **Hero** — `CoverHero` with a `HeroRecord` for each of the latest
-  `numberOfFeaturedAlbums` additions (boxset members excluded). The page
-  flood fades to each record's colour (`floodFor` over the sleeve palette,
-  which already folds in Apple Music artwork colours at build time) and the active disc slides
-  out and its "Added" sticker appears from `md` up (`stickerOnMobile={false}`
-  drops it on phones). The text column shows the title, artist,
-  original year / label / format / sides / tracks (read from each record's
-  detailed JSON), with the "View album" pill on the artist row (right-aligned
-  and smaller below `md`, straight after the name from `md` up; long names
-  wrap beside it rather than pushing it down). Streaming links live on the
-  album page, not the home hero. The text
-  slides are stacked absolutely and the stack's height follows the active
-  slide (measured with a `ResizeObserver`, eased with a height transition),
-  so a one-line title doesn't reserve the space a two-line title needs. The
-  title (`t-cond`) is sized by its longest word and by its total length, so
-  a long edition title ("Carved In Sand Limited MMXXVI MWIS Edition") stays
-  at about four lines rather than towering over the sleeve. From `lg` up the controls sit under the
-  text column; below `lg` they render after the `CoverHero`, under the
-  overhanging sleeve on the dark ground (the section after the hero drops
-  to `pt-16` below `lg` to make room). Both copies come from one
-  `controls()` render; the hidden one is `display: none`, so its progress
-  animation never runs and only the visible copy advances the rotation.
-  Below `md` the numbered bars stretch to share the width between the 40px
-  previous/next buttons so all eight fit a phone; from `md` up the bars are
-  fixed-width and the buttons are 48px.
+- **Hero** — a `ReleaseRoom` with the latest `numberOfFeaturedAlbums`
+  additions (boxset members excluded), each in its own room, crossfading
+  between them (see [release room](./release-room.md)). The page flood fades
+  to each record's colour (`floodFor` over the sleeve palette). Below the
+  room, a band in the flood: original year / label / format / sides / tracks
+  (from each record's detailed JSON), the title in a one-line box (links to
+  the album), the artist and a "View album" link. The records' credits share
+  one grid cell, so the band never changes height. The controls sit on the
+  band's right (under the credit below `lg`).
   Numbered progress bars pick a record, flanked by previous and next
-  buttons; there is no pause control. Only the active `HeroRecord` spins
-  (`spinning={on}`). The active bar is a CSS animation (`.hero-progress`
+  buttons; there is no pause control. Only the record on show spins. The active bar is a CSS animation (`.hero-progress`
   in `src/styles/player.css`, `scaleX` 0 → 1 over `autoRotateInterval`)
   and its `onAnimationEnd` advances to the next record, so there is no
   interval timer. Under
@@ -220,31 +203,27 @@ hero is the flood colour, which the nav also takes. Accents below the hero
 (links, kickers, track numbers) use `flood.glow`, the flood lifted to 3:1
 on the ground.
 
-**Hero** (`CoverHero` + `HeroRecord`):
+**Hero** — the record's listening room (`ReleaseRoom`, see
+[release room](./release-room.md)): the sleeve on a stand, the pressing
+(disc 1, `discLooks`) playing on the turntable, the "Added" / "Scrobbled"
+sticker (`HeroSticker`) on the sleeve from `md` up. Box sets keep the cover
+hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 
-- Artist avatars and names (multi-artist support), the title in `t-cond`
-  scaled to its longest word, and original year / label / sides / tracks /
-  duration. The year is `originalYear()` (see
+**Band** (one row in the flood):
+
+- Format / discs / pressing colours / label / original year / country, then
+  the title in a one-line box (`.room-title-box`), then the artists and the
+  genres. The year is `originalYear()` (see
   [utilities](./utilities.md#release-years-srclibreleaseyearts)), not the
-  pressing's date.
-- **Compilations** — a "Various" credit reads "Various Artists", links to
-  `/artist/various`, and its picture is `CompilationFaces`: the avatars of up
-  to four track artists with a page (else the Various avatar), with how many
-  artists the record credits under the name. The page title says "Various
-  Artists" too.
+  pressing's date. A "Various" credit reads "Various Artists".
 - **Band line-up** — when `collection.json` carries `members`, a "With …"
-  line sits under the title; members with an artist page are linked.
+  line sits under the artists; members with an artist page are linked.
   Member credits (`role: "member"` in the album JSON) are left out of the
-  artist bio section.
-- "From the box set" pill for boxset members.
-- `AlbumScrobbleButton` as the main action (large, solid). While it runs
-  the disc slides further out and spins at 45.
-- Service pills (Spotify, Apple Music, Discogs) and genre links to
-  `/albums/1?genre=…`.
-- Sticker with the date added.
-- Layout: text then sleeve on phones; from `md` the sleeve and text sit side
-  by side (`CoverHero splitAt="md"`, cover 40vw), so on a portrait tablet the
-  whole hero is on the first screen; from `lg` the desktop sizes take over.
+  artist bio section. "From the box set" pill for boxset members.
+- Actions on the right: `AlbumScrobbleButton` (the record spins at 45 while
+  it runs, and the genres give way to the track being scrobbled), then icon
+  buttons with the brand icons for Spotify, Apple Music and Discogs, and the
+  Thread.
 
 **Main column:**
 

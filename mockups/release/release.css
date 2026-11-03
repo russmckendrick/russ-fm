@@ -1,0 +1,136 @@
+:root {
+  --cream: #fbf7ef;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-grot: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--cream); font-family: var(--font-grot); }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1490px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); }
+.t-cond { font-family: var(--font-display); font-stretch: 66%; font-weight: 900; line-height: 0.86; letter-spacing: -0.005em; text-transform: uppercase; margin: 0; white-space: nowrap; }
+.t-wide { font-family: var(--font-display); font-stretch: 125%; font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; }
+.t-mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
+.dim { opacity: 0.6; }
+
+/* ---- see-through header over the room ---- */
+.nav {
+  position: absolute; z-index: 10; inset: 0 0 auto; height: 72px;
+  display: flex; align-items: center; gap: 32px; padding: 0 clamp(16px, 4vw, 56px);
+  color: var(--cream); background: linear-gradient(rgba(10, 8, 6, 0.55), transparent);
+}
+.logo { display: flex; align-items: center; gap: 10px; font: 900 22px/1 var(--font-display); font-stretch: 125%; }
+.logo-disc { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle, var(--flood) 0 30%, #111 31% 100%); box-shadow: 0 0 0 2px var(--cream); }
+.nav nav { display: flex; gap: 6px; font-weight: 600; font-size: 15px; }
+.nav nav a { padding: 8px 14px; border-radius: 99px; }
+.nav nav a.on { background: var(--cream); color: #0e0d0c; }
+.nav-r { margin-left: auto; display: flex; gap: 12px; font-size: 14px; font-weight: 600; }
+.search, .pill-o { border: 2px solid currentColor; border-radius: 99px; padding: 8px 18px; }
+.search { min-width: 240px; opacity: 0.85; font-weight: 400; }
+@media (max-width: 1100px) { .nav nav, .search { display: none; } }
+
+/* ---- the room ---- */
+.room { position: relative; overflow: hidden; height: clamp(560px, 84vh, 940px); background: #0b0907; }
+.room > * { position: absolute; }
+.sleeve-slot { z-index: 1; background: #111; }
+.sleeve-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.room-img { z-index: 2; max-width: none; pointer-events: none; user-select: none; }
+.room-tint { z-index: 3; pointer-events: none; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; mix-blend-mode: color; opacity: 0.25; }
+
+/* The record on the platter: the site's .vinyl (player.css), squashed into the
+   turntable's perspective. Grooves and label turn; the light on it stays put.
+   The disc reaches past the record's edge (--edge marks where the photo's
+   outline is), so the rim shading sits at --edge. */
+.vinyl {
+  z-index: 1; border-radius: 50%; overflow: hidden;
+  background: var(--vinyl-body, #0d0d0d);
+  box-shadow: inset 0 0 0 1px var(--vinyl-rim, #000);
+  filter: brightness(var(--room-light, 1));
+}
+/* The pressing's pattern turns with the record (as on the site); the grooves sit
+   over it in overlay, which lightens and darkens without greying the colours. */
+.vinyl-grooves {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: var(--vinyl-pattern, none);
+  animation: spin-33 6s linear infinite;
+}
+.vinyl-grooves::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; mix-blend-mode: overlay;
+  background:
+    radial-gradient(circle closest-side, transparent 0 45%, rgba(255,255,255,0.28) 45.6% 46.4%, transparent 47% 58%, rgba(255,255,255,0.24) 58.4% 59.2%, transparent 59.8% 71%, rgba(255,255,255,0.24) 71.4% 72.1%, transparent 72.7% 100%),
+    repeating-radial-gradient(circle closest-side, rgba(255,255,255,0.16) 0, rgba(0,0,0,0.16) 0.3%, rgba(255,255,255,0.16) 0.6%);
+}
+/* Light from the room: a broad sheen either side, the far edge in shade, the rim darker. */
+.vinyl::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+  background:
+    radial-gradient(circle closest-side, transparent 0 calc(var(--edge) - 3%), rgba(0,0,0,0.3) var(--edge)),
+    conic-gradient(from 20deg, transparent 0 4%, rgba(255,255,255,0.22) 12%, transparent 22% 48%, rgba(255,255,255,0.15) 58%, transparent 70%),
+    linear-gradient(180deg, rgba(0,0,0,0.14), transparent 40%, transparent 85%, rgba(0,0,0,0.08));
+  filter: blur(2px);
+}
+.vinyl-label { position: absolute; z-index: 1; border-radius: 50%; overflow: hidden; background: var(--ground); box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3); }
+.vinyl-label img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.45); }
+.vinyl-label::before {
+  content: ''; position: absolute; z-index: 1; width: 9%; height: 9%; left: 45.5%; top: 45.5%;
+  border-radius: 50%; background: radial-gradient(circle, #ddd 0 30%, #777 60%, #222);
+}
+@keyframes spin-33 { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .vinyl-grooves { animation: none; } }
+.sticker {
+  z-index: 4; border-radius: 50%; background: #121110; color: var(--cream);
+  display: grid; place-content: center; text-align: center; transform: rotate(-8deg);
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.7), inset 0 0 0 3px rgba(255, 255, 255, 0.06);
+  font-family: var(--font-display);
+}
+.sticker small { font: 600 0.62em/1.2 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.75; }
+.sticker b { font-weight: 900; font-stretch: 66%; font-size: 2.1em; line-height: 0.9; text-transform: uppercase; }
+
+/* ---- the band: one slim row in the sleeve's flood ---- */
+.band { background: var(--flood); color: var(--ink); }
+.band-row { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 36px); padding-block: 22px; min-height: 130px; }
+.transport { display: flex; align-items: center; gap: 8px; flex: none; }
+.icon-btn {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid currentColor; background: none; color: inherit; cursor: pointer;
+  font: 700 12px/1 var(--font-mono); transition: transform 0.2s;
+}
+.icon-btn:hover { transform: scale(1.08); }
+.icon-btn.sm { border: 0; background: var(--ink); color: var(--flood); font-size: 14px; }
+.icon-btn.lg { width: 56px; height: 56px; }
+.icon-btn.solid { background: var(--ink); color: var(--flood); border: 0; }
+.credit { flex: 1; min-width: 0; }
+.kicker { font: 600 11px/1 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.title-box { overflow: hidden; }
+.byline { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-top: 8px; }
+.byline a { font: 800 22px/1 var(--font-display); }
+.byline span { font: 400 12px/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
+.extras { display: flex; gap: 8px; flex: none; }
+@media (max-width: 760px) {
+  .band-row { flex-wrap: wrap; }
+  .credit { order: -1; flex-basis: 100%; }
+}
+
+/* ---- below ---- */
+.ground { padding-block: 72px 140px; }
+.h-sec { font-size: clamp(36px, 5vw, 64px); margin: 0 0 20px; line-height: 0.9; }
+.story p { max-width: 70ch; font-size: 17px; line-height: 1.6; opacity: 0.85; margin: 0 0 64px; }
+.sec-head { display: flex; align-items: baseline; gap: 18px; }
+.sides { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px 56px; }
+.side h3 { font-size: 30px; margin: 10px 0 12px; display: flex; align-items: center; gap: 12px; }
+.side-dot { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle, var(--ground) 0 18%, var(--flood) 20%); }
+.side ol { list-style: none; margin: 0; padding: 0; }
+.side li { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); font-weight: 600; }
+.side .pos, .side .dur { font: 400 12px/1.6 var(--font-mono); opacity: 0.55; }
+.side .pos { color: var(--flood); opacity: 1; }
+
+/* ---- mock controls ---- */
+.mock-ctl {
+  position: fixed; z-index: 50; right: 14px; top: 84px; max-width: 300px; max-height: calc(100vh - 100px); overflow-y: auto;
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 12px;
+  background: rgba(14, 13, 12, 0.88); border-radius: 14px; font: 11px/1 var(--font-mono);
+  backdrop-filter: blur(8px);
+}
+.mock-ctl b { flex-basis: 100%; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6; margin-top: 4px; }
+.mock-ctl a { padding: 6px 9px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.2); text-transform: capitalize; }
+.mock-ctl a.on { background: var(--cream); color: #0e0d0c; }

@@ -15,13 +15,14 @@ import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
 import {
   AFTER_HERO,
-  CoverHero,
-  HeroRecord,
-  PillLink,
+  FitTitle,
   RecordTile,
   SectionHeading,
+  Sticker,
   usePageFlood,
 } from '@/components/player';
+import { ReleaseRoom, type RoomRecord } from '@/components/album/ReleaseRoom';
+import { releaseRoomFor } from '@/lib/releaseRooms';
 
 interface FeaturedDetail {
   tracks: number;
@@ -103,18 +104,6 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [featured.map(a => a.uri_release).join('|')]);
 
-  // The slides share one spot; the stack takes the active slide's height so a
-  // short title doesn't leave the gap a long one would need.
-  const activeSlide = useRef<HTMLDivElement>(null);
-  const [slideHeight, setSlideHeight] = useState<number>();
-  useEffect(() => {
-    const el = activeSlide.current;
-    if (!el) return;
-    const ro = new ResizeObserver(() => setSlideHeight(el.offsetHeight));
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [index, featured.length]);
-
   const count = featured.length;
   const go = useCallback((i: number) => {
     if (!count) return;
@@ -127,7 +116,22 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   usePageFlood(
     current ? flood.flood : null,
     current ? flood.ink : null,
-    current ? { cover: getAlbumImageFromData(current.uri_release, 'hi-res'), ground: flood.ground, vinyl: current.vinyl_colours?.[0] } : undefined,
+    current ? { cover: getAlbumImageFromData(current.uri_release, 'hi-res'), ground: flood.ground, vinyl: current.vinyl_colours?.[0], room: true } : undefined,
+  );
+  // Every featured record in its room; the room crossfades between them (and between rooms).
+  const records: RoomRecord[] = useMemo(
+    () =>
+      featured.map((album, i) => ({
+        key: album.uri_release,
+        room: releaseRoomFor(album),
+        cover: getAlbumImageFromData(album.uri_release, 'hi-res'),
+        alt: `${album.release_name} by ${album.release_artist}`,
+        look: discLooks(album.vinyl_colours)[0] ?? null,
+        labelColour: floods[i].ground,
+        href: album.uri_release,
+      })),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [featured.map(a => a.uri_release).join('|'), colours],
   );
 
   if (!current) {
@@ -176,99 +180,81 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
 
   return (
     <>
-      <CoverHero
-        flood={flood}
-        art={
-          <div className="grid">
+      {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
+      <div className="relative -mt-16 md:-mt-[84px]">
+        <ReleaseRoom
+          records={records}
+          active={index}
+          tint={flood.flood}
+          sticker={
+            <Sticker
+              key={current.uri_release}
+              date={current.date_added}
+              background={flood.ground}
+              color={flood.flood}
+              className="-right-12 -top-8 hidden md:flex"
+            />
+          }
+          className="h-[clamp(460px,78svh,940px)]"
+        />
+      </div>
+      <section
+        className="flood-surface relative z-[2] transition-colors duration-700"
+        style={{ background: flood.flood, color: flood.ink }}
+      >
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-14">
+          {/* The records' credits share one grid cell, so the band never changes height between them. */}
+          <div className="grid min-w-0 flex-1">
             {featured.map((album, i) => {
               const on = i === index;
+              const d = details[album.uri_release];
               const f = floods[i];
+              const kicker = [
+                originalYear(album),
+                d?.label,
+                album.format_primary,
+                d && d.tracks > 0 ? `${d.sides > 1 ? `${d.sides} sides · ` : ''}${d.tracks} tracks` : null,
+              ].filter(Boolean).join(' · ');
               return (
                 <div
                   key={album.uri_release}
                   className={cn(
-                    '[grid-area:1/1] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.8,.2,1)]',
-                    on ? 'opacity-100 delay-200' : 'pointer-events-none translate-y-10 rotate-[-1.5deg] scale-[.97] opacity-0',
+                    'min-w-0 transition-[opacity,transform] duration-700 [grid-area:1/1] motion-reduce:transition-none',
+                    on ? 'translate-y-0 opacity-100 delay-200' : 'pointer-events-none translate-y-3 opacity-0',
                   )}
                   aria-hidden={!on}
                 >
-                  <Link to={album.uri_release} tabIndex={on ? 0 : -1} aria-label={`${album.release_name} by ${album.release_artist}`}>
-                    <HeroRecord
-                      src={getAlbumImageFromData(album.uri_release, 'hi-res')}
-                      alt=""
-                      labelColour={f.ground}
-                      looks={discLooks(album.vinyl_colours)}
-                      labelText={album.release_artist.toUpperCase()}
-                      discOut={on ? 15 : 0}
-                      spinning={on}
-                      eager={i === 0}
-                      sticker={on ? { date: album.date_added, background: f.ground, color: f.flood } : undefined}
-                      stickerOnMobile={false}
-                    />
+                  <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] md:text-[11px]" style={{ color: f.sub }}>
+                    {kicker || '\u00a0'}
+                  </p>
+                  <Link to={album.uri_release} tabIndex={on ? 0 : -1} className="room-title-box">
+                    <FitTitle max={96} min={20} fitHeight className="t-cond whitespace-nowrap leading-[0.9]">
+                      {album.release_name.trim()}
+                    </FitTitle>
                   </Link>
+                  <p className="m-0 flex min-w-0 items-baseline gap-x-4 truncate">
+                    <Link
+                      to={album.artists?.[0]?.uri_artist ?? album.uri_artist}
+                      tabIndex={on ? 0 : -1}
+                      className="t-dispn truncate text-[18px] hover:underline md:text-[22px]"
+                    >
+                      {album.release_artist}
+                    </Link>
+                    <Link
+                      to={album.uri_release}
+                      tabIndex={on ? 0 : -1}
+                      className="t-mono inline-flex shrink-0 items-center gap-1 text-[11px] font-bold uppercase hover:underline md:text-[12px]"
+                    >
+                      View album <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                    </Link>
+                  </p>
                 </div>
               );
             })}
           </div>
-        }
-      >
-        <div
-          className="relative transition-[height] duration-700 ease-[cubic-bezier(.2,.8,.2,1)] motion-reduce:transition-none"
-          style={{ height: slideHeight }}
-        >
-          {featured.map((album, i) => {
-            const on = i === index;
-            const d = details[album.uri_release];
-            const f = floods[i];
-            const title = album.release_name.trim();
-            const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
-            // Size by the longest word (no breaks) and by total length, so a long title stays ~4 lines and the hero keeps its height.
-            const chars = Math.max(title.length, 12);
-            const capPx = Math.min(120, Math.floor(420 / (longest * 0.52)), Math.floor(1680 / (chars * 0.52)));
-            const minPx = Math.min(52, Math.max(32, Math.floor(1600 / chars)));
-            return (
-              <div
-                key={album.uri_release}
-                ref={on ? activeSlide : undefined}
-                className={cn(
-                  'absolute inset-x-0 top-0 flex flex-col gap-4 transition-[opacity,transform] duration-700 md:gap-5 lg:gap-6',
-                  on ? 'translate-y-0 opacity-100 delay-200' : 'pointer-events-none translate-y-7 opacity-0',
-                )}
-                aria-hidden={!on}
-              >
-                <div className="flex items-center justify-between gap-4 md:justify-start md:gap-6">
-                  <Link to={album.artists?.[0]?.uri_artist ?? album.uri_artist} tabIndex={on ? 0 : -1} className="t-dispn min-w-0 break-words text-[22px] leading-[1.1] md:text-[30px]">
-                    {album.release_artist}
-                  </Link>
-                  <PillLink
-                    to={album.uri_release}
-                    solid={{ background: f.ink, color: f.flood }}
-                    className="shrink-0 max-md:min-h-10 max-md:px-4 max-md:text-[13px]"
-                  >
-                    View album
-                  </PillLink>
-                </div>
-                <h1
-                  className="t-cond m-0"
-                  style={{ fontSize: `clamp(${minPx}px, ${Math.min(9, 60 / longest, 240 / chars)}vw, ${capPx}px)` }}
-                >
-                  {title}
-                </h1>
-                <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: f.sub }}>
-                  {originalYear(album) && <span>{originalYear(album)}</span>}
-                  {d?.label && <span>{d.label}</span>}
-                  {album.format_primary && <span>{album.format_primary}</span>}
-                  {d && d.tracks > 0 && <span>{d.sides > 1 ? `${d.sides} sides · ` : ''}{d.tracks} tracks</span>}
-                </div>
-              </div>
-            );
-          })}
+          {controls('flex shrink-0')}
         </div>
-
-        {controls("mt-10 hidden lg:flex")}
-      </CoverHero>
-      {/* Below lg the controls sit under the overhanging sleeve, off the flood. */}
-      <div className="mx-auto w-full max-w-[1640px] px-5 pt-[72px] md:px-10 lg:hidden">{controls('flex')}</div>
+      </section>
     </>
   );
 }

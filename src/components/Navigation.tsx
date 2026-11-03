@@ -59,7 +59,7 @@ const SOLID_AFTER = 120;
 
 export function Navigation() {
   const location = useLocation();
-  const { flood, ink, cover, vinyl, ground } = useFloodValue();
+  const { flood, ink, cover, vinyl, ground, room } = useFloodValue();
   const markLook = useMemo(() => vinylLook(vinyl), [vinyl]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
@@ -132,10 +132,11 @@ export function Navigation() {
     return location.pathname === item.path || (item.path === "/" && location.pathname === "/home");
   };
 
-  // The TV pages (not the guide) run their room photo up under the header, so
-  // at the top it is see-through with cream text instead of the flood.
+  // The TV pages (not the guide) and pages that open on a listening room (album,
+  // home) run their room photo up under the header, so at the top it is
+  // see-through with cream text instead of the flood.
   const onTv = location.pathname === "/tv" || location.pathname.startsWith("/tv/");
-  const overRoom = onTv && location.pathname !== "/tv/guide" && !scrolled && !menuOpen;
+  const overRoom = ((onTv && location.pathname !== "/tv/guide") || !!room) && !scrolled && !menuOpen;
   // An artist page runs its portrait up under the header too, but keeps the flood's ink.
   const overPortrait = /^\/artist\/[^/]+\/*$/.test(location.pathname) && !scrolled && !menuOpen;
   const solid = scrolled || menuOpen;

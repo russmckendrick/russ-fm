@@ -171,7 +171,7 @@ const EPOCH = Date.UTC(2026, 0, 1);
 
 export const TV_LATEST = 'latest';
 
-function genreChannelsFor(release: TvRelease): string[] {
+function genreChannelsFor(release: Pick<TvRelease, 'genres' | 'styles'>): string[] {
   const genres = release.genres.map(g => g.toLowerCase());
   const styles = release.styles.map(s => s.toLowerCase());
   const hits: string[] = [];
@@ -353,6 +353,11 @@ export function albumVideosRelease(album: Album, videos: Array<{ id: string; tit
 /** The room of a release's first genre channel. */
 function roomFor(slugs: string[]): TvRoomId {
   return GENRE_CHANNELS.find(c => c.slug === slugs[0])?.room ?? 'shelves';
+}
+
+/** The room for a record's genres and styles; the album page's listening room uses the same one. */
+export function tvRoomFor(genres: string[], styles: string[]): TvRoomId {
+  return roomFor(genreChannelsFor({ genres, styles }));
 }
 
 /** Artist names compared loosely: case, accents, punctuation and Discogs' "(2)" suffixes aside. */
