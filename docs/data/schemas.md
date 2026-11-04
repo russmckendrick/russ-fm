@@ -68,7 +68,7 @@ Main collection index used for album listings.
 | albums[].vinyl_colours | string[]? | Present only when the pressing is coloured vinyl: the colour of each vinyl disc set as Discogs words it (`["Red"]`, `["Blue Translucent"]`, `["Yellow Transparent", "Blue Transparent"]` for two LPs), in order without repeats. Black vinyl, other formats and releases whose colour is not recorded omit it. See [Pressing detail](#pressing-detail-format_details--vinyl_colours) |
 | albums[].labels | string[] | Record label names; powers `/labels` and `/label/:slug` |
 | albums[].country | string \| null | Discogs release country; powers `/countries` and `/country/:slug` |
-| albums[].lastfm_listeners | number \| null | Last.fm `album.getInfo` listener count; powers the Stats "Hidden gems" section |
+| albums[].lastfm_listeners | number \| null | Last.fm `album.getInfo` listener count. (/stats reads listeners and plays from the album JSON instead, which covers more records.) |
 | albums[].artists | object[] | Headline artist objects (band-member credits are excluded — see `members`) |
 | albums[].members | object[]? | Present only when the release credits a band's line-up: `[{name, uri_artist, json_detailed_artist}]` in credit order. The link fields are null when the member has no published artist page |
 | albums[].images_uri_release | object | Album image paths |
@@ -794,6 +794,51 @@ Short keys keep it small:
   stops at its last month) — the cover's graph.
 
 Image paths are not stored: the page builds them with `src/lib/image-utils.ts`.
+
+### stats.json
+
+`public/stats/stats.json`, for `/stats`. `scripts/generate-stats.ts` reads
+`collection.json`, every album and artist JSON, `album-colors.json` and
+`public/explore/explore.json`; `scripts/lib/stats-data.ts` counts. The type
+is `StatsData` in `src/types/stats.ts`. Box set members are left out. The
+scrapper's service fields are Python repr strings (`LastFmData(playcount=…,
+tags=[…])`), read with `reprField` / `reprTags`.
+
+- `totals`: records, artists, kg, hours (run time where 60% of tracks are
+  timed), discs, tracks, coloured, `metres` (3.5 mm a sleeve, so a little
+  short), `plays` (Last.fm album plays summed, over `playsKnown` records),
+  `deep` (records under 1,000 listeners), `oldest`/`newest` original year,
+  `since`.
+- `holders[]`: the shelf's pool of facts, `{ stat, label, s, note }`: the
+  figure, what it counts, the album slug under it and why that record. The
+  page shows six at random, each on a different record. The same list is
+  also written alone to `public/stats/facts.json` for the home page.
+- `records[]`: one per record, by date added. `s`, `t`, `by`, `a` artist
+  slugs, `d` date added, `y` original year, `p` pressing year, `f` sleeve
+  flood, `fam` genre family, `lis`/`pc` Last.fm listeners and plays.
+- `artists[]`: one per artist, most collected first. Records, first added,
+  lead sleeve colour, `cc` home country, and from TheAudioDB `formed`,
+  `born`, `split` (yes/no; it gives no year), `died`, `mood`, `gender`, plus
+  Last.fm `lis`.
+- `families[]`: genre families with one sleeve colour each (picked as
+  Wrapped picks them).
+- `perYear`: records added each year.
+- `piles[]`: per year added, the discs in order (`[size, colour or null]`),
+  kg, hours, coloured, the heaviest and last record.
+- `boards`: `written` (by songs, with `songs`), `produced` (not counting an
+  artist producing their own record), `engineered` (recorded or mixed),
+  `mastered`, `cut`, `labels`. Each row is `{ name, n, s }` with up to 14
+  slugs, newest first. Names lose Discogs' " (2)"; Various, Traditional and
+  Unknown are skipped. Credits are the release's own plus every track's.
+- `sleeves`: `design` and `photo` rows, the same shape.
+- `owners`: `known` records with an Apple Music ℗ line and `groups`:
+  Universal, Sony, Warner, BMG, Concord (matched on their labels' names in
+  the line) or Independent.
+- `specs[]`: pressing details matched in the Discogs format text (180 g,
+  45 RPM, gatefold, numbered, Record Store Day, etched…), plus coloured
+  vinyl.
+- `tags[]`: Last.fm's most-used album tags, leaving out tags that are just
+  the artist's name.
 
 ---
 

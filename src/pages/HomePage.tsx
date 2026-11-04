@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shuffle, SkipBack, SkipForward } from 'lucide-react';
 import { appConfig } from '@/config/app.config';
@@ -7,12 +7,15 @@ import { discLooks } from '@/lib/vinylLook';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { buildFacetValues, FACETS } from '@/lib/browseFacets';
-import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
+import { getAlbumImageFromData, getAlbumImageUrl, getArtistImageFromData } from '@/lib/image-utils';
+import { pickHolders } from '@/lib/statsShelf';
+import { ArtistCard } from '@/components/ArtistCard';
 import { BOLD_VIVID, floodFor, inkOn, type Flood } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
+import type { StatsHolder } from '@/types/stats';
 import {
   AFTER_HERO,
   FitTitle,
@@ -38,8 +41,6 @@ interface HeroDetailJson {
 
 const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
 const HERO_MS = appConfig.homepage.hero.autoRotateInterval;
-/** Side-by-side headings (Most collected, Genres) step down so "Most collected" stays on one line in a half column. */
-const PAIR_HEADING = 'xl:[&>h2]:text-[44px] 2xl:[&>h2]:text-[52px]';
 
 export function HomePage() {
   usePageTitle('russ.fm — record collection');
@@ -58,13 +59,9 @@ export function HomePage() {
       <Hero featured={featured} colours={colours} />
       <div className={cn('mx-auto flex w-full max-w-[1640px] flex-col gap-20 px-5 pb-10 md:px-10 lg:gap-24 lg:px-14', AFTER_HERO, 'pt-16')}>
         <LatestAdditions recent={recent} colours={colours} />
-        <div className="flex flex-col gap-10">
-          <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-20">
-            <MostCollected albums={albums} />
-            <Genres albums={albums} colours={colours} />
-          </div>
-          <Counts albums={albums} />
-        </div>
+        <MostCollected albums={albums} colours={colours} />
+        <Genres albums={albums} colours={colours} />
+        <Facts />
         <RandomPicks albums={albums} colours={colours} />
         <BrowseByColour albums={albums} colours={colours} />
       </div>
@@ -288,42 +285,37 @@ function LatestAdditions({ recent, colours }: { recent: Album[]; colours: Record
 
 /* ------------------------------------------------------ Most collected -- */
 
-function MostCollected({ albums }: { albums: Album[] }) {
-  const top = useMemo(() => {
-    const map = new Map<string, { name: string; uri: string; count: number }>();
-    albums.forEach(a => {
-      a.artists?.forEach(artist => {
-        if (!artist.uri_artist || artist.name === 'Various') return;
-        const e = map.get(artist.uri_artist) ?? { name: artist.name, uri: artist.uri_artist, count: 0 };
-        e.count += 1;
+/** The six most collected artists as taped-up prints, as on the /artists wall. */
+function MostCollected({ albums, colours }: { albums: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
+  const { top, artistCount } = useMemo(() => {
+    const map = new Map<string, { name: string; uri: string; albums: Album[] }>();
+    for (const a of albums) {
+      for (const artist of a.artists ?? []) {
+        if (!artist.uri_artist || artist.name === 'Various') continue;
+        const e = map.get(artist.uri_artist) ?? { name: artist.name, uri: artist.uri_artist, albums: [] };
+        e.albums.push(a);
         map.set(artist.uri_artist, e);
-      });
-    });
-    return [...map.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+      }
+    }
+    const latestFirst = (x: Album[]) => [...x].sort((m, n) => n.date_added.localeCompare(m.date_added));
+    return {
+      top: [...map.values()].sort((x, y) => y.albums.length - x.albums.length).slice(0, 6).map(e => ({ ...e, albums: latestFirst(e.albums) })),
+      artistCount: map.size,
+    };
   }, [albums]);
-  const artistCount = useMemo(() => new Set(albums.flatMap(a => a.artists?.map(x => x.name) ?? [])).size, [albums]);
 
   return (
     <section className="flex flex-col gap-8">
-      <SectionHeading className={PAIR_HEADING} title="Most collected" link={{ to: '/artists/1', label: `${artistCount.toLocaleString('en-GB')} artists` }} />
-      <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6 xl:grid-cols-3">
-        {top.map(artist => (
-          <Link key={artist.uri} to={artist.uri} className="group flex flex-col gap-3.5">
-            <div className="aspect-square overflow-hidden rounded-full bg-[color:var(--ground-3)]">
-              <img
-                src={getArtistImageFromData(artist.uri, 'medium')}
-                alt={artist.name}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="flex min-w-0 flex-col gap-1">
-              <span className="text-[16px] font-bold leading-tight">{artist.name}</span>
-              <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">
-                {artist.count} {artist.count === 1 ? 'record' : 'records'}
-              </span>
-            </div>
-          </Link>
+      <SectionHeading title="Most collected" link={{ to: '/artists/1', label: `${artistCount.toLocaleString('en-GB')} artists` }} />
+      <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:gap-x-6 lg:grid-cols-6">
+        {top.map(e => (
+          <ArtistCard
+            key={e.uri}
+            artist={{ name: e.name, uri: e.uri, albumCount: e.albums.length, image: getArtistImageFromData(e.uri, 'medium') }}
+            records={e.albums.slice(0, 3)}
+            palette={colours?.[e.albums[0].uri_release] ?? null}
+            print
+          />
         ))}
       </div>
     </section>
@@ -332,65 +324,85 @@ function MostCollected({ albums }: { albums: Album[] }) {
 
 /* -------------------------------------------------------------- Genres -- */
 
+/**
+ * The biggest genres as record-bin dividers, like the /albums run dividers: a card
+ * in the colour of a recent bold sleeve from the genre, with the genre's three
+ * latest records standing behind it and rising on hover.
+ */
 function Genres({ albums, colours }: { albums: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
-  const genres = useMemo(() => buildFacetValues(FACETS.genre, albums).slice(0, 14), [albums]);
-  const genreColour = useMemo(() => {
-    const out: Record<string, string> = {};
-    if (!colours) return out;
+  const bins = useMemo(() => {
     const byDate = [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added));
-    for (const g of genres) {
-      const hit = byDate.find(a => FACETS.genre.extract(a).includes(g.name) && (colours[a.uri_release]?.vivid ?? 0) >= BOLD_VIVID);
-      out[g.name] = hit ? colours[hit.uri_release].flood : '#e8e2d6';
-    }
-    return out;
-  }, [albums, colours, genres]);
-
-  const max = genres[0]?.count ?? 1;
+    return buildFacetValues(FACETS.genre, albums).slice(0, 8).map(g => {
+      const inGenre = byDate.filter(a => FACETS.genre.extract(a).includes(g.name));
+      const bold = colours && inGenre.find(a => (colours[a.uri_release]?.vivid ?? 0) >= BOLD_VIVID);
+      return { ...g, colour: bold ? colours[bold.uri_release].flood : '#e8e2d6', sleeves: inGenre.slice(0, 3) };
+    });
+  }, [albums, colours]);
 
   return (
     <section className="flex flex-col gap-8">
-      <SectionHeading className={PAIR_HEADING} title="Genres" link={{ to: '/genres', label: 'All genres' }} />
-      <div className="flex flex-wrap content-start gap-3">
-        {genres.map(g => {
-          const bg = genreColour[g.name] ?? '#e8e2d6';
-          const fs = Math.round(16 + (g.count / max) * 16);
-          return (
-            <Link
-              key={g.slug}
-              to={`/genre/${g.slug}`}
-              className="chip"
-              style={{ background: bg, color: inkOn(bg), fontSize: fs, padding: `${Math.round(fs * 0.45)}px ${Math.round(fs * 0.9)}px` }}
-            >
-              <span className="t-dispn">{g.name}</span>
-              <span className="t-mono text-[12px] font-bold opacity-75">{g.count.toLocaleString('en-GB')}</span>
-            </Link>
-          );
-        })}
+      <SectionHeading title="Genres" link={{ to: '/genres', label: 'All genres' }} />
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 md:gap-x-6 xl:grid-cols-8">
+        {bins.map((g, i) => (
+          <Link key={g.slug} to={`/genre/${g.slug}`} className={cn('genre-bin', i >= 4 && 'max-sm:hidden')} style={{ '--bin': g.colour, '--bin-ink': inkOn(g.colour) } as CSSProperties}>
+            <span className="genre-bin-sleeves" aria-hidden>
+              {g.sleeves.map((a, i) => (
+                <img key={a.uri_release} src={getAlbumImageFromData(a.uri_release, 'medium')} alt="" loading="lazy" style={{ '--i': i } as CSSProperties} />
+              ))}
+            </span>
+            <span className="genre-bin-card">
+              {/* Sized to the longest word, so a name never breaks inside a word. */}
+              <span className="t-disp genre-bin-name" style={{ fontSize: `${Math.min(17, 80 / (Math.max(...g.name.split(/[\s-]+/).map(w => w.length)) * 0.78))}cqw` }}>
+                {g.name}
+              </span>
+              <span className="t-mono genre-bin-count">{g.count.toLocaleString('en-GB')} records</span>
+            </span>
+          </Link>
+        ))}
       </div>
     </section>
   );
 }
 
-/* -------------------------------------------------------------- Counts -- */
+/* --------------------------------------------------------------- Facts -- */
 
-function Counts({ albums }: { albums: Album[] }) {
-  const vinyl = albums.filter(a => a.format_primary === 'Vinyl').length;
-  const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
-  const artists = new Set(albums.flatMap(a => a.artists?.map(x => x.name) ?? [])).size;
+/**
+ * Six facts from /stats, drawn at random on each visit: each record with a card
+ * pinned under it, as on the /stats shelf. The facts come from public/stats/facts.json
+ * (scripts/generate-stats.ts), a few KB.
+ */
+function Facts() {
+  const [facts, setFacts] = useState<StatsHolder[] | null>(null);
+  useEffect(() => {
+    let alive = true;
+    fetch('/stats/facts.json')
+      .then(r => (r.ok ? (r.json() as Promise<StatsHolder[]>) : Promise.reject(new Error(String(r.status)))))
+      .then(pool => alive && setFacts(pickHolders(pool, 6)))
+      .catch(() => alive && setFacts([]));
+    return () => {
+      alive = false;
+    };
+  }, []);
+  if (facts && !facts.length) return null;
+
   return (
-    <dl className="m-0 grid grid-cols-2 gap-x-6 border-t-2 border-[color:var(--cream)] md:grid-cols-4">
-      {[
-        ['Records', albums.length],
-        ['On vinyl', vinyl],
-        ['Box sets', boxsets],
-        ['Artists', artists],
-      ].map(([label, value]) => (
-        <div key={label} className="flex min-w-0 flex-col-reverse gap-1.5 py-5">
-          <dt className="t-kicker text-[color:var(--cream-dim)]">{label}</dt>
-          <dd className="t-disp m-0 text-[36px] md:text-[44px] lg:text-[56px]">{Number(value).toLocaleString('en-GB')}</dd>
-        </div>
-      ))}
-    </dl>
+    <section className="flex flex-col gap-8">
+      <SectionHeading title="By the numbers" link={{ to: '/stats', label: 'All the stats' }} />
+      <div className="grid min-h-[260px] grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 md:gap-x-6 xl:grid-cols-6">
+        {(facts ?? []).map((f, i) => (
+          <Link key={f.s} to={`/album/${f.s}/`} className="fact-pin" aria-label={`${f.stat} ${f.label}. ${f.note}`}>
+            <span className="fact-pin-sleeve">
+              <img src={getAlbumImageUrl(f.s, 'medium')} alt="" loading="lazy" />
+            </span>
+            <span className="stats-tag" style={{ rotate: `${[-1.8, 1.2, -0.6, 1.6, -1.2, 0.8][i % 6]}deg` }}>
+              <b>{f.stat}</b>
+              <small>{f.label}</small>
+              <em>{f.note}</em>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 

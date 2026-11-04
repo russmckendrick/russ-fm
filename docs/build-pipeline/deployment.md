@@ -20,6 +20,7 @@ flowchart TB
         Images[Process Images]
         Colors[Generate Colors]
         Wrapped[Build Wrapped]
+        Stats[Generate Stats]
         OG[Generate OG]
     end
 
@@ -36,7 +37,8 @@ flowchart TB
     Assets --> Images
     Images --> Colors
     Colors --> Wrapped
-    Wrapped --> OG
+    Wrapped --> Stats
+    Stats --> OG
 
     OG --> Deploy
     Deploy --> R2
@@ -122,6 +124,7 @@ deploy:
         pnpm run generate-colors
         pnpm run generate-explore       # /explore graph and atlases into public/explore/ (build:wrapped reads it)
         pnpm run build:wrapped
+        pnpm run generate-stats         # /stats, counted from the album and artist JSON
         pnpm run generate-sitemap
         pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
         pnpm run generate-og-sections   # TV and genre cards into public/og/

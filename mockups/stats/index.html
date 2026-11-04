@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stats — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--
+  /stats as a place plus an all-time Wrapped.
+  Photo: /assets/stats/stats.png (Codex) → 4x upscale → 3072 → ../index-headers/key-slots.py → assets/.
+  Data: node mockups/stats/build-data.mjs (merges ../wrapped/data/YYYY.json into data/all.json).
+  View: Vite dev server, /mockups/stats/
+-->
+<link rel="stylesheet" href="../release/release.css">
+<link rel="stylesheet" href="../index-headers/index-headers.css">
+<link rel="stylesheet" href="../wrapped/wrapped.css">
+<link rel="stylesheet" href="../wrapped/chapters/credits.css">
+<link rel="stylesheet" href="stats.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><span class="logo-disc"></span>RUSS.FM</a>
+  <nav><a>Home</a><a>Albums</a><a>Artists</a><a>TV</a><a>Explore</a><a>Browse</a><a class="on">Stats</a><a>Wrapped</a></nav>
+  <div class="nav-r"><span class="search">Search the collection</span><span class="pill-o">Shuffle</span></div>
+</header>
+
+<section class="room" id="room" aria-label="The collection in numbers">
+  <img class="room-shade" id="shade" alt="" aria-hidden="true">
+  <img class="room-img" id="roomImg" alt="">
+  <div class="room-tint" id="tint" aria-hidden="true"></div>
+</section>
+
+<section class="band" aria-label="Stats">
+  <div class="wrap band-row">
+    <h1 class="band-title t-wide">Stats <span id="count"></span></h1>
+    <dl class="meta" id="meta"></dl>
+  </div>
+</section>
+
+<main class="chapters">
+  <section class="chapter" id="growth"></section>
+  <section class="chapter" id="origins"></section>
+  <section class="chapter" id="pile"></section>
+  <section class="chapter" id="longhaul"></section>
+  <section class="chapter" id="decades"></section>
+  <section class="chapter" id="credits"></section>
+  <section class="chapter" id="shelf"></section>
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

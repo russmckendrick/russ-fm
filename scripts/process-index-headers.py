@@ -1,4 +1,4 @@
-"""Key the /albums and /artists headers (src/components/browse/IndexRoom.tsx).
+"""Key the /albums, /artists and /stats headers (src/components/browse/IndexRoom.tsx).
 
 Each photo (a Codex original in assets/index-headers/<id>.png) has a row of
 solid chroma-key green slots: sleeves on a record-shop ledge for albums,

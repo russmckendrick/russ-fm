@@ -5,7 +5,7 @@ posters in a row) instead of one. The green's own shading becomes one
 full-frame multiply layer, so the shop's light falls across whatever shows
 through the holes.
 
-    uv run --with numpy --with scipy --with pillow mockups/index-headers/key-slots.py <upscaled.png> <id>
+    uv run --with numpy --with scipy --with pillow mockups/index-headers/key-slots.py <upscaled.png> <id> [out-dir]
 
 Writes assets/<id>.webp (RGBA, holes), assets/<id>-shade.webp and the slot
 boxes (fractions of the frame, left to right) into assets/slots.json.
@@ -18,7 +18,7 @@ import numpy as np
 from PIL import Image
 from scipy import ndimage
 
-OUT = Path(__file__).resolve().parent / 'assets'
+OUT = Path(sys.argv[3]) if len(sys.argv) > 3 else Path(__file__).resolve().parent / 'assets'
 OUT.mkdir(exist_ok=True)
 src, rid = Path(sys.argv[1]), sys.argv[2]
 

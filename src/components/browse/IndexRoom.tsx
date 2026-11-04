@@ -9,6 +9,8 @@ interface IndexRoomProps {
   renderSlot: (i: number, size: { width: number; height: number }) => ReactNode;
   /** Extra classes on each slot's box (e.g. `artist-poster`). */
   slotClassName?: string;
+  /** What sits over the photo at slot `i` (a tag hung under a sleeve on /stats); boxed like the slot but not clipped. */
+  renderOver?: (i: number) => ReactNode;
   /** The page's flood: a colour layer over the whole photo, slots too. */
   tint: string;
   /** Pixels at the top covered by the see-through header (its height by default); the row centres below them. */
@@ -17,14 +19,14 @@ interface IndexRoomProps {
 }
 
 /**
- * The /albums and /artists headers: a Codex photo with a row of slots cut out
+ * The /albums, /artists and /stats headers: a Codex photo with a row of slots cut out
  * of it (scripts/process-index-headers.py) — sleeves on a record-shop ledge,
- * posters on a fly-posting wall — after the album room and the artist poster
+ * posters on a fly-posting wall, record shelving on /stats — after the album room and the artist poster
  * wall. Under the photo sit whatever shows through each slot and the photo's
  * own light on them (the shade layer, multiplied). It shares the artist
  * wall's layer, shade, photo and tint styles (player.css).
  */
-export function IndexRoom({ room, renderSlot, slotClassName, tint, topInset, className }: IndexRoomProps) {
+export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, topInset, className }: IndexRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // The photo shows once it has decoded, so the slots never show without it.
@@ -101,6 +103,15 @@ export function IndexRoom({ room, renderSlot, slotClassName, tint, topInset, cla
             }
           />
           <div className="artist-wall-tint" aria-hidden style={{ ...g.img, background: tint }} />
+          {renderOver &&
+            g.slots.map((style, i) => {
+              const over = renderOver(i);
+              return over ? (
+                <div key={i} className="index-room-over" style={style}>
+                  {over}
+                </div>
+              ) : null;
+            })}
         </div>
       )}
     </div>

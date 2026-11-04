@@ -13,7 +13,7 @@ This document covers the route-level page components in russ.fm.
 
 | Route | Structure |
 |-------|-----------|
-| `/` | `ReleaseRoom` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
+| `/` | `ReleaseRoom` rotating through the latest additions → Latest additions row → Most collected (taped prints) → Genres (bin dividers) → By the numbers (random /stats facts pinned under sleeves) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
@@ -23,7 +23,7 @@ This document covers the route-level page components in russ.fm.
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
 | `/coloured-vinyl` | `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
-| `/stats` | `Stats` title → headline counts → month chart → growth → decades / genres → release years → most collected → formats / countries → labels → latest additions → hidden gems → random picks / artists. All bars take sleeve colours. |
+| `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → twelve chapters from the album and artist data (arrivals, Last.fm reach, home countries, how far in, the pile, spec sheet, time machines, the long haul, decades, behind the glass, sleeve makers, owners) → latest additions. |
 | `/shuffle` (also `/random`) | Split-flap board clatters to a random record; its colour drops down the page and the cover turns back over the spinning record. |
 | `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
@@ -120,9 +120,17 @@ The home page sections are local components in `HomePage.tsx`; the old
   so opening one from the hero needs no further fetch.
 - **Latest additions** — horizontal `shelf-scroll` row of `RecordTile`s,
   with the number added this year as the note.
-- **Most collected** — top six artists by record count.
-- **Genres** — genre chips sized by count and coloured by the flood of the
-  newest bold sleeve in the genre (`vivid` ≥ `BOLD_VIVID`, else `#e8e2d6`), then headline counts (records, on vinyl, box sets, artists).
+- **Most collected** — the top six artists by record count as `ArtistCard print`:
+  taped-up prints, as on the /artists wall, with their latest sleeves fanning out
+  on hover.
+- **Genres** — the eight biggest genres as record-bin dividers (`.genre-bin`,
+  player.css), like the /albums run dividers: a card in the flood of the newest
+  bold sleeve in the genre (`vivid` ≥ `BOLD_VIVID`, else `#e8e2d6`), with the
+  name sized to its longest word and the genre's three latest sleeves standing
+  behind, rising on hover. Phones show four.
+- **By the numbers** — six facts drawn at random from `public/stats/facts.json`
+  (the /stats shelf's pool, written by `generate-stats`) with `pickHolders`, each
+  a sleeve with the /stats card pinned under it (`.fact-pin`). Links to `/stats`.
 - **Random picks** — `RecordTile` grid with a Shuffle pill; tiles show the
   original year.
 - **Browse by colour** — recent bold vinyl sleeves (`vivid` ≥ `BOLD_VIVID`)
@@ -483,36 +491,61 @@ out.
 
 **Route:** `/stats`
 
-Collection statistics. Every bar and chart takes colours from the sleeves
-it counts: a month is a stack of that month's records, a genre or decade
-takes the colour of a representative record. Boxset members are excluded.
+The collection as a place, then twelve chapters counted from every album and
+artist file.
 
-**Sections**, ordered so sleeves and portraits alternate with charts, and
-paired into columns on `lg`+ (stacked below that) with the artwork side
-swapping from row to row:
+- **The shelf:** `IndexRoom` with the `stats` photo, an oak cube unit (see
+  [index-headers.md](./index-headers.md)). Six records stand face out, each
+  with a card pinned underneath (`renderOver`, `.stats-tag`). The cards are
+  six facts drawn at random from the ~40 in `stats.json`'s `holders`
+  (`pickHolders`, `src/lib/statsShelf.ts`), no two on the same record, so
+  the shelf changes on every visit. A fact is a figure, what it counts and
+  a record that goes with it: 11.4 bn Last.fm plays over the most played
+  record, 805 kg over the heaviest, 775 songs by David Bowie over one of
+  them, 82 etched sides over the latest etched record, and so on.
+- **The band:** `Stats` with the record count, then Since, Artists, Discs,
+  Shelf. The header is see-through over the photo; the flood is the latest
+  additions'.
+- **The chapters** (`src/pages/stats/StatsStory.tsx`, lazy-loaded with d3):
+  each is `chapters/<id>.ts`, a factory with `render(view)` / `dispose()` in
+  the Wrapped story's pattern, styled under `.ws` (`stats.css` on top of
+  Wrapped's `story.css` and `credits.css`). `kit.ts` holds the shared view
+  (`statsView`: image URLs and lookups), tooltips and the dot swarm.
+  1. **Arrivals** (`growth`): records added each month, stacked by genre
+     family in the families' sleeve colours.
+  2. **Mainstream to deep cuts** (`reach`): every record with a Last.fm
+     count in a swarm by listeners (log scale), the plays added up, the six
+     most and least heard, and Last.fm's tags.
+  3. **Where it comes from** (`origins`): artists' home countries on a world
+     map (`world-atlas` 110m, `topojson-client`) and the top eight with
+     faces. The alpha-2 → ISO numeric table only lists countries the
+     collection has; an artist from elsewhere is left off until it's added.
+  4. **How far in** (`artists`): the 30 most collected acts from the year
+     they started (TheAudioDB) to their first record here, deaths marked,
+     then TheAudioDB moods and line-ups.
+  5. **The pile** (`pile`): every disc stacked flat on a canvas, a pile a
+     year, to scale, coloured pressings in colour.
+  6. **Spec sheet** (`specs`): pressing details from the Discogs format
+     text, each a card with a fan of sleeves.
+  7. **Time machines** (`timemachine`): an arc per record from its original
+     year to its pressing year.
+  8. **The long haul** (`longhaul`): the 16 most collected artists, a dot per
+     record on the day it arrived.
+  9. **Decades** (`decades`): every record as a dot by original year.
+  10. **Behind the glass** (`credits`): songwriters (by songs written),
+      producers, recording and mixing engineers, mastering, lacquer cutting
+      and labels, each with a strip of sleeves.
+  11. **Who made the sleeves** (`sleeves`): designers and photographers,
+      each with a wall of their covers.
+  12. **Who owns it** (`owners`): the Apple Music ℗ line filed under the
+      major that owns the label, or independent, one square per record.
+- **Latest additions:** a shelf of sleeves from `collection.json`, box set
+  members left out.
 
-- Title band ("Since" the first addition) in the latest additions' colour
-- Headline counts (records, artists, genres, records per artist), each in
-  a sleeve colour, then smaller counts (labels, countries, one-record
-  artists, artists with 5+, busiest month)
-- Latest additions (a shelf of sleeves, full width)
-- Most collected artists (7 cols) | Genres (5 cols, 13 bars)
-- Added per month (one block per record, full width)
-- Decades (5 cols) | **Hidden gems** (7 cols, 8 sleeves under
-  `redesignConfig.stats.hiddenGemsListenersThreshold` Last.fm listeners)
-- Golden year (with four of its sleeves) | top release years
-- Random picks (full width)
-- Cumulative growth (8 cols) | Formats (`format_primary`, 4 cols)
-- Labels (28 chips) | Countries
-- Random artists
-
-Decades, release years and the release-year colour groups use the
-original year (`originalYear()`). Links go to `/decades`, `/genres`,
-`/genre/:slug`, `/labels`, `/countries`.
-
-Counts are driven by `redesignConfig.stats`. The aggregations read fields
-denormalised into `collection.json` (`format_primary`, `labels`,
-`country`, `lastfm_listeners`); there are no per-album JSON fetches.
+The data is `public/stats/stats.json` (`StatsData`, `src/types/stats.ts`),
+built by `pnpm run generate-stats`. See
+[schemas.md](../data/schemas.md#statsjson). The mockup it started from is
+`mockups/stats/`.
 
 ---
 

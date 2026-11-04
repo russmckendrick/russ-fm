@@ -35,7 +35,7 @@ export function vinyl(text: string): StoryVinyl | null {
   return { n: text, hex: hex.length ? hex.slice(0, 3) : ['#dfe6ea'], glass, see, pat };
 }
 
-const secs = (d?: string) => {
+export const secs = (d?: string) => {
   const m = /^(\d+):(\d\d)(?::(\d\d))?$/.exec(d ?? '');
   if (!m) return 0;
   return m[3] ? +m[1] * 3600 + +m[2] * 60 + +m[3] : +m[1] * 60 + +m[2];
