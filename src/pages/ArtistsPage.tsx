@@ -1,9 +1,14 @@
-import { Fragment, useState, useEffect, useCallback, type CSSProperties, type ReactNode } from 'react';
+import { Fragment, useState, useEffect, useCallback, useMemo, type CSSProperties, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Search, X } from 'lucide-react';
 import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArtistCard, ArtistPhoto } from '@/components/ArtistCard';
 import { PageContainer } from '@/components/layout';
 import { FloodBand, useRecordsFlood } from '@/components/player';
+import { IndexRoom } from '@/components/browse/IndexRoom';
+import { indexRoomSlotAspect, indexRoomSlots } from '@/lib/indexHeaders';
+import { IndexPoster } from '@/components/browse/IndexPoster';
+import { RunDivider } from '@/components/browse/RunDivider';
+import { letterOf, monthRun, type Run } from '@/lib/runs';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { cn } from '@/lib/utils';
@@ -38,27 +43,17 @@ const SORT_OPTIONS: Array<{ value: string; label: string }> = [
 /** Records an artist needs for a double-size tile in the grid. */
 const FEATURE_MIN_RECORDS = 5;
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-/** The A–Z bucket for a name: its first letter, accents dropped, or "#" for digits and punctuation. */
-function letterOf(name: string): string {
-  const first = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase();
-  return /[A-Z]/.test(first) ? first : '#';
-}
 
 /**
  * The run a card is filed under in the grid, each led by a divider card: the
  * first letter in A–Z, the month of their latest record in Latest added.
  */
-function runOf(artist: Pick<Artist, 'name' | 'latestAlbum'>, sortBy: string): { key: string; label: string; year?: string } | null {
+function runOf(artist: Pick<Artist, 'name' | 'latestAlbum'>, sortBy: string): Run | null {
   if (sortBy === 'name') {
     const letter = letterOf(artist.name);
     return { key: letter, label: letter };
   }
-  if (sortBy === 'latest') {
-    const [year, month] = artist.latestAlbum.split('-');
-    return { key: `${year}-${month}`, label: MONTHS[Number(month) - 1] ?? month, year };
-  }
+  if (sortBy === 'latest') return monthRun(artist.latestAlbum);
   return null;
 }
 
@@ -391,8 +386,14 @@ export function ArtistsPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedArtists = filteredArtists.slice(startIndex, endIndex);
+  // Page 1 without filters opens on a fly-posting wall (IndexRoom) of the most collected artists.
+  const posters = useMemo(
+    () => [...artists].sort((a, b) => b.albumCount - a.albumCount || a.name.localeCompare(b.name)).slice(0, indexRoomSlots('artists')),
+    [artists],
+  );
+  const showWall = currentPage === 1 && !searchTerm && selectedLetter === 'all' && posters.length === indexRoomSlots('artists');
   // The header band and page ground take the colours of the first artists' latest records.
-  const flood = useRecordsFlood(paginatedArtists.map(a => a.latestRelease));
+  const flood = useRecordsFlood(paginatedArtists.map(a => a.latestRelease), undefined, showWall);
 
   // Generate page numbers for pagination
   const getPageNumbers = () => {
@@ -459,6 +460,52 @@ export function ArtistsPage() {
 
   return (
     <>
+      {showWall && !pending ? (
+        <>
+          {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
+          <IndexRoom
+            room="artists"
+            tint={flood?.top ?? 'transparent'}
+            slotClassName="artist-poster"
+            className="-mt-16 h-[clamp(380px,110vw,560px)] md:-mt-[84px] md:h-[clamp(440px,64svh,700px)]"
+            renderSlot={(i, size) => {
+              const a = posters[i];
+              return a ? (
+                <IndexPoster
+                  uri={a.uri}
+                  name={a.name}
+                  records={a.albumCount}
+                  flood={floodFor(colorMap?.[a.latestRelease] ?? null).flood}
+                  aspect={indexRoomSlotAspect('artists', i)}
+                  width={size.width}
+                />
+              ) : null;
+            }}
+          />
+          <section className="flood-surface relative z-[2]" style={flood ? { background: flood.background, color: flood.ink } : undefined}>
+            <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[120px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+              <h1 className="t-disp m-0 flex items-baseline gap-x-4 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">
+                Artists
+                <span className="opacity-35" aria-label={`${countLabel} artists`}>{countLabel}</span>
+              </h1>
+              {mostCollected && (
+                <dl className="m-0 grid min-w-0 grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 md:ml-auto md:flex md:gap-9 md:overflow-hidden">
+                  {([
+                    ['Records', collection.length.toLocaleString('en-GB')],
+                    ['Most collected', <Link key="m" to={mostCollected.uri} className="underline decoration-[color:var(--cream-rule)] underline-offset-4 hover:decoration-current">{mostCollected.name}, {mostCollected.albumCount.toLocaleString('en-GB')}</Link>],
+                    [`New in ${thisYear}`, newThisYear.toLocaleString('en-GB')],
+                  ] as const).map(([k, v]) => (
+                    <div key={k} className="min-w-0">
+                      <dt className="t-kicker text-[10px]" style={flood ? { color: flood.sub } : undefined}>{k}</dt>
+                      <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+            </div>
+          </section>
+        </>
+      ) : (
       <FloodBand flood={flood}>
         {/* Title + count ------------------------------------------------- */}
         <header className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
@@ -485,6 +532,7 @@ export function ArtistsPage() {
           </p>
         )}
       </FloodBand>
+      )}
 
       <PageContainer className="text-[color:var(--cream)]">
         {/* Controls ------------------------------------------------------- */}
@@ -592,7 +640,7 @@ export function ArtistsPage() {
           <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6" aria-live="polite" aria-busy>
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="flex flex-col items-center p-2">
-                <div className="aspect-square w-full animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
+                <div className="aspect-square w-full animate-pulse bg-[var(--ground-3)] motion-reduce:animate-none" />
                 <div className="mt-5 h-4 w-2/3 animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
               </div>
             ))}
@@ -624,6 +672,7 @@ export function ArtistsPage() {
                       feature={feature}
                       records={latestRecords(artist, 3)}
                       palette={colorMap?.[artist.latestRelease] ?? null}
+                      print
                       className={feature ? 'sm:col-span-2 sm:row-span-2' : undefined}
                     />
                   </Fragment>
@@ -675,29 +724,6 @@ export function ArtistsPage() {
         )}
       </PageContainer>
     </>
-  );
-}
-
-/**
- * A rack divider leading each run in the grid (a letter in A–Z, a month in
- * Latest added): a card as wide as an artist photo and as tall as the whole
- * tile, with a tab on top, the label large and the run's artist count below.
- */
-function RunDivider({ label, year, count }: { label: string; year?: string; count: number }) {
-  const artistsLabel = `${count.toLocaleString('en-GB')} ${count === 1 ? 'artist' : 'artists'}`;
-  return (
-    <div className="flex min-w-0 flex-col p-2 pt-5">
-      <div className="relative min-h-full flex-1 [container-type:inline-size]">
-        <span aria-hidden className="absolute -top-3 left-[12%] h-6 w-2/5 rounded-t-xl bg-[var(--cream)]" />
-        <div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-[var(--cream)] p-[9cqw] text-[color:var(--ground)]">
-          <h2 className={cn('t-disp m-0 leading-[0.8]', label.length > 1 ? 'text-[36cqw]' : 'text-[78cqw]')}>
-            {label}
-            {year && <span className="mt-[4cqw] block text-[20cqw] opacity-60">{year}</span>}
-          </h2>
-          <span className="t-mono text-[11px] font-bold uppercase md:text-[12px]">{artistsLabel}</span>
-        </div>
-      </div>
-    </div>
   );
 }
 

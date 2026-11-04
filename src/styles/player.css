@@ -396,6 +396,62 @@ body {
   }
 }
 
+/* Artist print (ArtistCard `print`, /artists): the photo printed square on a
+   paper border, a little askew (--tilt), taped up in the colour of their latest
+   sleeve (--accent) and scuffed like the posters; it straightens on hover. */
+.artist-print {
+  position: relative;
+  padding: 5.5%;
+  background: #efe6d4;
+  transform: rotate(var(--tilt, 0deg));
+  box-shadow:
+    0 18px 36px -16px rgba(0, 0, 0, 0.75),
+    0 2px 5px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.artist-print > div > img {
+  filter: saturate(0.9) contrast(1.04) sepia(0.1);
+}
+
+/* The tape: across the top edge, a touch of the paper showing through. */
+.artist-print::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -4%;
+  left: 50%;
+  width: 36%;
+  height: 10%;
+  background: color-mix(in oklab, var(--accent) 78%, #efe6d4);
+  opacity: 0.92;
+  transform: translateX(-50%) rotate(calc(var(--tilt, 0deg) * -2));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.artist-print::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url('/artist-walls/poster-wear.webp') center / cover;
+  mix-blend-mode: screen;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.group:hover .artist-print,
+.group:focus-visible .artist-print {
+  transform: rotate(0deg) translateY(-2%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-print {
+    transition: none;
+  }
+}
+
 /* --- Artist poster wall (artist hero) --------------------------------------- */
 /* src/components/artist/PosterWall.tsx. The wall photo has its poster cut out
    (only the green, so torn corners keep the wall) and sits over the poster and
@@ -524,6 +580,47 @@ body {
   .artist-wall-layer {
     transition: none;
   }
+}
+
+/* --- Index headers (/albums, /artists) ---------------------------------- */
+/* src/components/browse/IndexRoom.tsx: a row of slots under a photo, on the
+   artist wall's layer, shade, photo and tint above. /artists slots are
+   .artist-poster too. */
+.index-room-slot {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.index-room-sleeve {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  outline-offset: -4px;
+}
+
+.index-room-sleeve img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s var(--ease-out);
+}
+
+.index-room-sleeve:hover img {
+  filter: brightness(1.12);
+}
+
+/* The poster link fills it; the name keeps clear of a torn bottom or right-hand corner. */
+.index-room-poster {
+  position: absolute;
+  inset: 0;
+  outline-offset: -4px;
+}
+
+.index-room-poster .artist-poster-foot {
+  inset: auto calc(var(--u) * 16) calc(var(--u) * 15) calc(var(--u) * 7);
 }
 
 /* --- Hero record scrobble scene ------------------------------------------ */

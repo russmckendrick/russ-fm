@@ -31,6 +31,11 @@ interface ArtistCardProps {
    * hidden behind the photo and fan out above it on hover.
    */
   records?: Array<Pick<Album, "uri_release" | "release_name">>;
+  /**
+   * A photo print instead of the round photo (/artists): square, on a paper
+   * border, taped up in the colour of their latest sleeve and a little askew.
+   */
+  print?: boolean;
   /** What `albumCount` counts, singular and plural (default records). */
   unit?: [string, string];
   onClick?: () => void;
@@ -53,7 +58,14 @@ const FAN: Record<number, Array<[number, number, number]>> = {
  * `records`, up to three sleeves are tucked behind the photo and fan out
  * above it on hover, the latest in the middle and on top.
  */
-export function ArtistCard({ artist, palette, feature = false, records, unit = ["record", "records"], onClick, className }: ArtistCardProps) {
+/** A steady tilt per name, -2° to 2°, so a wall of prints never lines up and never reshuffles. */
+function tiltOf(name: string): number {
+  let h = 0;
+  for (const c of name) h = (h * 31 + c.charCodeAt(0)) | 0;
+  return ((Math.abs(h) % 41) - 20) / 10;
+}
+
+export function ArtistCard({ artist, palette, feature = false, records, print = false, unit = ["record", "records"], onClick, className }: ArtistCardProps) {
   const colours = floodFor(palette);
   const count = artist.albumCount;
   const fan = (records ?? []).slice(0, 3);
@@ -63,7 +75,7 @@ export function ArtistCard({ artist, palette, feature = false, records, unit = [
   const peek = fan.length ? () => setPeeked(true) : undefined;
 
   const content = (
-    <div className="flex min-w-0 flex-col items-center text-center" style={{ "--accent": colours.flood } as CSSProperties}>
+    <div className="flex min-w-0 flex-col items-center text-center" style={{ "--accent": colours.flood, "--tilt": `${tiltOf(artist.name)}deg` } as CSSProperties}>
       <div className={cn("relative aspect-square w-full", fan.length > 0 && "artist-fan")}>
         {fan.length > 0 && (
           <div className="artist-fan-sleeves" aria-hidden>
@@ -87,18 +99,24 @@ export function ArtistCard({ artist, palette, feature = false, records, unit = [
             ))}
           </div>
         )}
-        <ArtistPhoto
-          uri={artist.uri}
-          image={artist.image}
-          size={feature ? 720 : 360}
-          className={cn(
-            "artist-fan-photo h-full w-full",
-            "transition-[box-shadow,transform] duration-300 ease-out motion-reduce:transition-none",
-            feature
-              ? "shadow-[0_0_0_4px_var(--ground),0_0_0_10px_var(--accent)] group-hover:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)] group-focus-visible:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)]"
-              : "shadow-[0_0_0_3px_var(--ground),0_0_0_6px_var(--accent)] group-hover:shadow-[0_0_0_3px_var(--ground),0_0_0_10px_var(--accent)] group-focus-visible:shadow-[0_0_0_3px_var(--ground),0_0_0_10px_var(--accent)]",
-          )}
-        />
+        {print ? (
+          <div className="artist-print artist-fan-photo h-full w-full">
+            <ArtistPhoto uri={artist.uri} image={artist.image} size={feature ? 720 : 360} className="h-full w-full rounded-none" />
+          </div>
+        ) : (
+          <ArtistPhoto
+            uri={artist.uri}
+            image={artist.image}
+            size={feature ? 720 : 360}
+            className={cn(
+              "artist-fan-photo h-full w-full",
+              "transition-[box-shadow,transform] duration-300 ease-out motion-reduce:transition-none",
+              feature
+                ? "shadow-[0_0_0_4px_var(--ground),0_0_0_10px_var(--accent)] group-hover:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)] group-focus-visible:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)]"
+                : "shadow-[0_0_0_3px_var(--ground),0_0_0_6px_var(--accent)] group-hover:shadow-[0_0_0_3px_var(--ground),0_0_0_10px_var(--accent)] group-focus-visible:shadow-[0_0_0_3px_var(--ground),0_0_0_10px_var(--accent)]",
+            )}
+          />
+        )}
       </div>
 
       <h3

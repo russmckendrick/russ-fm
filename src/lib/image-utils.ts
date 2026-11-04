@@ -63,6 +63,15 @@ export function getArtistWallUrl(wall: string, size: 'hi-res' | 'medium' | 'shad
 }
 
 /**
+ * The /albums or /artists header photo (src/components/browse/IndexRoom.tsx):
+ * the photo with its row of slots cut out, or `shade`, the shop's light and
+ * creases for them. Site assets under public/index-headers/.
+ */
+export function getIndexHeaderUrl(room: string, size: 'hi-res' | 'medium' | 'shade' = 'hi-res'): string {
+  return `/index-headers/${room}-${size}.webp`;
+}
+
+/**
  * Get album OG image URL (for social media sharing)
  * Always returns absolute URL for OG/Twitter meta tags
  */

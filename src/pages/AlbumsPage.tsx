@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { Fragment, useEffect, useMemo } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Search, X } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -12,6 +12,10 @@ import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
 import { FloodBand, RecordTile, useRecordsFlood } from '@/components/player';
 import { ColourChips } from '@/components/albums/ColourChips';
+import { IndexRoom } from '@/components/browse/IndexRoom';
+import { indexRoomSlots } from '@/lib/indexHeaders';
+import { RunDivider } from '@/components/browse/RunDivider';
+import { albumRunOf } from '@/lib/runs';
 import type { Album } from '@/types/album';
 
 const SORTS = [
@@ -133,9 +137,26 @@ export function AlbumsPage() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const start = (currentPage - 1) * perPage;
   const visible = filtered.slice(start, start + perPage);
-  // The header band and page ground take the colours of the first records shown.
-  const flood = useRecordsFlood(visible.map(a => a.uri_release));
   const filteredAny = genre !== 'all' || year !== 'all' || format !== 'all' || !!search;
+  // Page 1 of the plain listing opens on a record-shop ledge (IndexRoom): its
+  // first records stand on the shelf and the grid carries on from them.
+  const shelfSize = indexRoomSlots('albums');
+  const shelf = currentPage === 1 && !colourMode && !filteredAny && !loading && visible.length > shelfSize ? visible.slice(0, shelfSize) : null;
+  const tiles = shelf ? visible.slice(shelfSize) : visible;
+  // The grid is filed in runs (a month added, a letter, a decade), each led by
+  // a divider card counting the run across every page.
+  const runCounts = useMemo(() => {
+    const c = new Map<string, number>();
+    filtered.forEach(a => {
+      const run = albumRunOf(a, sort);
+      if (run) c.set(run.key, (c.get(run.key) ?? 0) + 1);
+    });
+    return c;
+  }, [filtered, sort]);
+  // The header band and page ground take the colours of the first records shown.
+  const flood = useRecordsFlood(visible.map(a => a.uri_release), undefined, !!shelf);
+  const thisYear = String(new Date().getFullYear());
+  const addedThisYear = useMemo(() => albums.filter(a => a.date_added.startsWith(thisYear)).length, [albums, thisYear]);
 
   // Colour chip jumps go to the page holding the record at `index`.
   const jumpTo = (index: number) => navigate(pageUrl(Math.floor(index / perPage) + 1));
@@ -160,6 +181,43 @@ export function AlbumsPage() {
             <div className="h-[86px] animate-pulse rounded-[6px] bg-[color:var(--cream-rule)] md:h-[110px]" aria-busy="true" />
           )}
         </FloodBand>
+      ) : shelf ? (
+        <>
+          {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
+          <IndexRoom
+            room="albums"
+            tint={flood?.top ?? 'transparent'}
+            className="-mt-16 h-[clamp(380px,110vw,560px)] md:-mt-[84px] md:h-[clamp(440px,64svh,700px)]"
+            renderSlot={i => {
+              const a = shelf[i];
+              return a ? (
+                <Link to={a.uri_release} className="index-room-sleeve" title={`${a.release_name} — ${a.release_artist}`} aria-label={`${a.release_name} by ${a.release_artist}`}>
+                  <img src={getAlbumImageFromData(a.uri_release, 'medium')} alt="" decoding="async" />
+                </Link>
+              ) : null;
+            }}
+          />
+          <section className="flood-surface relative z-[2]" style={flood ? { background: flood.background, color: flood.ink } : undefined}>
+            <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[120px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+              <h1 className="t-disp m-0 flex items-baseline gap-x-4 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">
+                Albums
+                <span className="opacity-35" aria-label={`${filtered.length} records`}>{filtered.length.toLocaleString('en-GB')}</span>
+              </h1>
+              <dl className="m-0 grid min-w-0 grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4 md:ml-auto md:flex md:gap-9 md:overflow-hidden">
+                {[
+                  ['Vinyl', (formatCounts['Vinyl'] ?? 0).toLocaleString('en-GB')],
+                  ['Box sets', (formatCounts['Box Set'] ?? 0).toLocaleString('en-GB')],
+                  [`Added in ${thisYear}`, addedThisYear.toLocaleString('en-GB')],
+                ].map(([k, v]) => (
+                  <div key={k} className="min-w-0">
+                    <dt className="t-kicker text-[10px]" style={flood ? { color: flood.sub } : undefined}>{k}</dt>
+                    <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        </>
       ) : (
         <FloodBand flood={flood}>
           <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
@@ -255,14 +313,16 @@ export function AlbumsPage() {
             <ColourWall albums={visible} colours={colours} />
           ) : (
             <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-7 xl:grid-cols-6">
-              {visible.map(a => (
-                <RecordTile
-                  key={a.uri_release}
-                  album={a}
-                  palette={colours?.[a.uri_release]}
-                  meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')}
-                />
-              ))}
+              {tiles.map((a, i) => {
+                const run = albumRunOf(a, sort);
+                const newRun = run && (i === 0 || albumRunOf(tiles[i - 1], sort)?.key !== run.key);
+                return (
+                  <Fragment key={a.uri_release}>
+                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} unit={['record', 'records']} />}
+                    <RecordTile album={a} palette={colours?.[a.uri_release]} meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')} />
+                  </Fragment>
+                );
+              })}
             </div>
           )}
         </div>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albums header — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--
+  The /albums index header as a place, after the album room and artist poster wall.
+  Photo: /assets/index-headers/albums.png (Codex) → 2x upscale → key-slots.py → assets/.
+  View: Vite dev server, /mockups/index-headers/albums.html
+-->
+<link rel="stylesheet" href="../release/release.css">
+<link rel="stylesheet" href="../artist-room/artist-room.css">
+<link rel="stylesheet" href="index-headers.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><span class="logo-disc"></span>RUSS.FM</a>
+  <nav><a>Home</a><a class="on">Albums</a><a>Artists</a><a>TV</a><a>Explore</a><a>Browse</a><a>Stats</a><a>Wrapped</a></nav>
+  <div class="nav-r"><span class="search">Search the collection</span><span class="pill-o">Shuffle</span></div>
+</header>
+
+<section class="room" id="room" aria-label="Albums">
+  <img class="room-shade" id="shade" alt="" aria-hidden="true">
+  <img class="room-img" id="roomImg" alt="">
+  <div class="room-tint" id="tint" aria-hidden="true"></div>
+</section>
+
+<section class="band" aria-label="The collection">
+  <div class="wrap band-row">
+    <h1 class="band-title t-wide">Albums <span id="count"></span></h1>
+    <dl class="meta" id="meta"></dl>
+  </div>
+</section>
+
+<main class="ground">
+  <div class="wrap"><div class="grid" id="grid"></div></div>
+</main>
+
+<aside class="mock-ctl" id="ctl"></aside>
+<script type="module" src="albums.js"></script>
+</body>
+</html>
