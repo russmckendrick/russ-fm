@@ -365,67 +365,44 @@ Loads the collection through the shared `loadCollection()`.
 
 **Route:** `/artist/:slug`
 
-The top of the page is one solid colour: the sleeve of the artist's newest
-addition, skipping monochrome (`vivid` 0) sleeves, via `newestFlood(uris, map)`.
-(Picking the most vivid sleeve instead let saturated red covers win almost
-half of all artist pages.)
-The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
-swatch tints the rest of the page. No gradients. Once the photo's notes load,
-the flood is the hero photo's own colour instead (below), on phones and desktop.
+The page takes the colour of the artist's newest addition, skipping
+monochrome (`vivid` 0) sleeves, via `newestFlood(uris, map)`. (Picking the
+most vivid sleeve instead let saturated red covers win almost half of all
+artist pages.) The nav follows it via `usePageFlood`, and the sleeve's dark
+`ground` swatch tints the rest of the page.
 
-- **Header, from `lg`** — every artist hero is the same height (the grid row is fixed at
-  56vh, clamped to 420–540px, with 2.5rem of flood above and below, and the 84px header
-  it runs up under). The photo is the artist's TheAudioDB fanart when there is any (732
-  artists; `fanart` in the `-image.json`, a colour photo unless they only have black and
-  white, and black-and-white fanart only when their own photo is black and white too), else their own photo, shown in its own colour (`ArtistHeroPhoto`,
-  `.artist-hero-photo` in `player.css`): no greyscale print, no blend. `heroPhotoLayout`
-  in `src/lib/artistImage.ts` places it:
-  - on the side its people are on, always at the flood's full height;
-  - the text column is the same for every artist, 44% of the page (440–760px), narrowing
-    to 320px only when a wide band of faces needs the room; a right-hand photo puts the
-    text on the left (`heroGrid` reorders the grid);
-  - the faces are centred in the space beside the text: the photo slides outwards,
-    cropping its outer edge, but never so far that the outermost face is cut, nor so far
-    in that the page edge shows;
-  - it fades out (smootherstep, `fadeMask`) from just past the faces to just into the text.
-  The flood is the photo's own colour where it fades out: the average of the
-  `-image.json`'s colour strips (`columns`) across the fade, decided at build time
-  because a canvas can't read pixels from R2 without CORS. Ink suits it (`inkOn`) and the
-  page under it is the site's dark tinted by it (`photoFlood`). Before the notes load, and
-  for notes from before v5 (no colour strips), the hero falls back to the portrait below.
-  If the photo fails to load, likewise.
-- **Header, phones** — the same hero image as desktop (the fanart, or the image chosen in the
-  scrapper, else the artist photo) runs edge to edge in its own colour (`ArtistPortrait`,
-  `.artist-portrait` in `player.css`), a square crop on phones and 3:2 from `sm` (plus the
-  header's height, which it runs up under). `phoneCrop` in `src/lib/artistImage.ts` places it
-  round the faces (else the people, else the subject): a photo wider than the box shows its
-  full height and slides across to centre them; a narrower one shows its full width with them
-  in its upper part. It fades out at the bottom into the flood, the average of the
-  `-image.json`'s `bottoms` (the bottom eighth of each colour strip) across the crop, so the
-  fade meets it without a step (notes without `bottoms`: the photo's bottom edge). If the image
-  fails to load, the artist photo takes its place. The text column is pulled up over the faded
-  bottom (22% of the photo's height on phones, 16% from `sm`) so the name sits in the photo
-  like a poster title and the stats and links reach the first screen. The name's `FitTitle`
-  has `min={28}` so a long single word never breaks mid-word.
-- **Header, everywhere** — until the `-image.json` loads (and for an artist without
-  one) the flood is the newest sleeve's. From `lg` without an `ArtistHeroPhoto` (the
-  notes still loading, or the photo failing to load) the portrait sits in a column as
-  wide as the photo at the hero's height (`portraitColumn`), placed by `portraitLayout`,
-  and fades out over its right side and a short lead-out of its own edge colours. The
-  hero is pulled up under the header, which is a scrim of the flood there until you
-  scroll (see `Navigation` in [components.md](./components.md)). The name is a `FitTitle`
-  (up to 240px) with `fitHeight`, so it grows to fill a wide column and shrinks until the
-  whole text column fits. Then stats as tinted chips, value then label
-  (records, box sets, "Released" with the earliest to the latest original
-  year, or the one year when they match, Last.fm listeners), service
-  pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
-  to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
-  available, otherwise a constructed URL.
-  (Until 2026-10-25 the photo was printed into the sleeve's flood in greyscale, with
-  the people brought back in colour through a Vision matte; that treatment and the
-  `matte` / `spill` notes are gone.)
-- **Biography** — its own full-width section under the hero and above the
-  discography, set in columns (one on phones, two from `md`, three from
+- **Header** — the artist's fly-poster on a wall (`PosterWall`; see
+  [artist poster wall](./artist-wall.md)). There is one wall per `/tv` room,
+  picked by `artistWallFor()`: the room most of their records play in. The
+  poster has:
+  - **Photo:** their fanart, else their own photo, cropped round the faces
+    (`phoneCrop`).
+  - **Name:** the page's `h1`, overprinted.
+  - **Sleeves:** the newest four, each linking to its record.
+  The poster is worn into the wall by the wall's own shade and a
+  scuffed-ink texture, and the whole wall is tinted with the flood. The
+  header is see-through over it (`room: true`).
+- **Band** — one row in the flood with facts and links only, since the
+  poster carries the name. The facts are a `<dl>`:
+  - From and Formed
+  - Records, Soundtracks, Box sets
+  - Released: the earliest to the latest original year, or the one year
+    when they match
+  - Last.fm listeners
+  - three genre links to `/genre/:slug`
+  The links are icon buttons:
+  - the artist's TV channel, when there are videos
+  - Spotify, Apple Music, Last.fm, Discogs and Wikipedia, with brand icons
+    (`serviceIconFor`)
+  - the Thread
+  Wikipedia uses the stored `wikipedia_url` when available, otherwise a
+  constructed URL.
+  (Before 2026-11-04 the header was the photo itself: the fanart in its own
+  colour, faded into a flood of the photo's colour, with the name, stat
+  chips and service pills beside it. Before 2026-10-25 it was a greyscale
+  print in the sleeve's flood.)
+- **Biography** — its own full-width section under the band and above the
+  discography (the Various Artists page's one-line biography too), set in columns (one on phones, two from `md`, three from
   `xl`). It uses the longer of `biography` and Last.fm's full
   `services.lastfm.bio_content` (tags and the "Read more on Last.fm" /
   licence tail stripped), shows whole paragraphs up to about 1,500
@@ -459,11 +436,11 @@ keys the page by slug, so moving to another artist mounts a fresh page.
 **Various Artists (`/artist/various`):** the page for every record credited to Discogs'
 "Various" placeholder, rendered by the same component (`various` is true for the slug):
 
-- The hero shows "Various Artists" (Discogs calls it "Various"), with Records, Soundtracks and
-  the release span, the one-line biography from the scrapper under the stats, and only the
-  Discogs link (no Wikipedia fallback, no genre chips, no Thread). Its photo is generated
-  artwork (fanned record sleeves) and its desktop hero is `various-fanart01.jpg`, the wide
-  version.
+- The poster says "Various Artists" (Discogs calls it "Various"), and the band has Records,
+  Soundtracks and the release span and only the Discogs link (no Wikipedia fallback, no
+  genres, no Thread). The one-line biography from the scrapper is the Biography section.
+  Its photo is generated artwork (fanned record sleeves); the poster uses
+  `various-fanart01.jpg`, the wide version.
 - The discography is `VariousShelves`: All, Soundtracks, Anthologies, Series and Tributes
   (`shelfOf()` in `src/lib/compilations.ts`), newest additions first, 24 tiles then Show all.
   Each tile's meta is its shelf (on All), how many artists are credited on it, and its year.

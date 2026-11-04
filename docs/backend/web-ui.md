@@ -130,7 +130,7 @@ change. The artist page's header shows that photo, centred on its faces (`photo`
 ### Images and the upscaler
 
 Artist and release pages have an **Images** tab (`web/src/components/ImagesPanel.tsx`): the
-artist's photo and every TheAudioDB fanart file (the one the site's desktop hero uses is
+artist's photo and every TheAudioDB fanart file (the one the site's artist poster uses is
 marked *site hero*), or the album's cover, each with its size and an **Upscale** button. It
 runs `src/upscale.rs` there and then (a few seconds an image): Upscayl's `upscayl-bin`
 (Real-ESRGAN) upscales 4×, the result is resized to the target (photos and covers under
@@ -139,8 +139,8 @@ JPEG. The original is kept under `scrapper/backups/upscale-originals/` (logged i
 `log.jsonl`) and **Restore original** puts it back. An image already at its target offers
 **Upscale 2× anyway**. Without Upscayl the tab says so and the buttons are off.
 
-For an artist, each card also has **Use as hero** (the image the site's desktop hero shows)
-and, on fanart, **Use as artist photo** (the site's avatar, artist cards and phone hero use it
+For an artist, each card also has **Use as hero** (the image on the site's artist poster)
+and, on fanart, **Use as artist photo** (the site's avatar and artist cards use it
 instead of the downloaded photo). They save the **Hero image** / **Artist photo** fields
 (`raw_data.overrides.hero` / `.photo`) and start `generate-artist-images --only <slug>` so the
 site follows; badges show the *site hero* and *artist photo*, marked *chosen* when picked by

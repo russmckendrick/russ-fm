@@ -135,6 +135,19 @@ The album and home heroes' listening-room photos (`hi-res` 4608px, `medium`
 picks a record's room (`tvRoomFor()` in `src/lib/tv.ts`). See
 [release room](./release-room.md).
 
+### getArtistWallUrl
+
+```typescript
+getArtistWallUrl('punk', 'medium'); // "/artist-walls/punk-medium.webp"
+getArtistWallUrl('punk', 'shade');  // "/artist-walls/punk-shade.webp"
+```
+
+The artist hero's wall photos (`hi-res` 4608px, `medium` 3072px, the poster
+cut out) and each wall's `shade` for its poster, one per `/tv` room, in
+`public/artist-walls/`. `artistWallFor(records)` in `src/lib/artistWalls.ts`
+picks an artist's wall: the room most of their records play in. See
+[artist poster wall](./artist-wall.md).
+
 ### getArtistImageFromData
 
 Extract slug from artist data and get image.
@@ -451,7 +464,8 @@ panel, and the album and artist pages. The album page shows the pressing's own d
 
 ## Artist Images (`src/lib/artistImage.ts`)
 
-For the artist hero portrait (`ArtistPortrait`). The data comes from
+For the artist's photo on the artist poster (`PosterWall`) and the round
+frame on `ArtistCard`. The data comes from
 `scripts/generate-artist-images.js`; see
 [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) for how
 to generate it and [schemas.md](../data/schemas.md#artist-image-json-artistslugslug-imagejson)
@@ -459,16 +473,10 @@ for the shape.
 
 - `useArtistImageInfo(uriArtist)`: the photo's `ArtistImageInfo`, cached per URL;
   `undefined` while loading, `null` when there is no file.
-- `portraitColumn(info, rowHeight)`: the desktop photo column's CSS width, the
-  photo's width at the hero's height (320px to 50vw).
-- `portraitLayout(info, stageW, stageH, textX, harsh)`: the desktop placement (photo
-  size, the short lead-out past its right edge, right fade in stage px).
-- `liftedPortraitFilter(backdropLuminance?)`: the portrait's CSS filter when a dark
-  backdrop multiplies into a pale flood: greyscale, then contrast and brightness
-  solved so blacks land near 0.28 (easing to 0.12 for a mid-dark backdrop) and the
-  backdrop at 0.53, brightness capped at 1.8.
-- `edgeGradient(edge, direction, start?, length?)`: an edge's colour profile as a
-  CSS gradient, for carrying the photo on past that edge.
+- `phoneCrop(photo, boxAspect)`: how a photo (fanart or the artist's own) is cropped
+  into a box `boxAspect` wide over tall, as an `object-position`, round the faces,
+  else the people, else the subject. The artist poster uses it with the poster's
+  shape.
 - `focusPosition(info)`: `object-position` for the phone crop, centred on the faces.
 - `circleCrop(info)`: where the photo sits in `ArtistCard`'s round frame, as
   percentages of the frame (`width`, `height`, `left`, `top`), plus the hover

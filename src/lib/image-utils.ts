@@ -54,6 +54,15 @@ export function getReleaseRoomUrl(room: string, size: 'hi-res' | 'medium' = 'hi-
 }
 
 /**
+ * A fly-poster wall for the artist hero (src/lib/artistWalls.ts): the photo
+ * with the poster cut out, or `shade`, the wall's light and creases for the
+ * poster. Site assets under public/artist-walls/.
+ */
+export function getArtistWallUrl(wall: string, size: 'hi-res' | 'medium' | 'shade' = 'hi-res'): string {
+  return `/artist-walls/${wall}-${size}.webp`;
+}
+
+/**
  * Get album OG image URL (for social media sharing)
  * Always returns absolute URL for OG/Twitter meta tags
  */

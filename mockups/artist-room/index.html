@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artist poster — mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--
+  The artist page hero as a fly-poster pasted on a wall, after the album's listening room.
+  One wall per /tv room (tvRoomFor, the artist's most common room across their records).
+  Walls: walls/generate.sh (Codex) → upscale 2x → key-walls.py → assets/walls/.
+  View: Vite dev server, /mockups/artist-room/?artist=<slug>&room=<tv room id>
+-->
+<link rel="stylesheet" href="../release/release.css">
+<link rel="stylesheet" href="artist-room.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><span class="logo-disc"></span>RUSS.FM</a>
+  <nav><a>Home</a><a>Albums</a><a class="on">Artists</a><a>TV</a><a>Explore</a><a>Browse</a><a>Stats</a><a>Wrapped</a></nav>
+  <div class="nav-r"><span class="search">Search the collection</span><span class="pill-o">Shuffle</span></div>
+</header>
+
+<section class="room" id="room" aria-label="Artist">
+  <div class="poster" id="poster"></div>
+  <div class="poster-shade" id="shade" aria-hidden="true"></div>
+  <img class="room-img" id="roomImg" alt="">
+  <div class="room-tint" id="tint" aria-hidden="true"></div>
+</section>
+
+<section class="band" aria-label="About this artist">
+  <div class="wrap band-row">
+    <dl class="meta" id="meta"></dl>
+    <div class="extras" id="extras"></div>
+  </div>
+</section>
+
+<main class="ground">
+  <div class="wrap">
+    <section class="story"><h2 class="h-sec t-wide">The story</h2><p id="story"></p></section>
+    <section><h2 class="h-sec t-wide">In the collection</h2><div class="records" id="records"></div></section>
+  </div>
+</main>
+
+<aside class="mock-ctl" id="ctl"></aside>
+<script type="module" src="artist-room.js"></script>
+</body>
+</html>

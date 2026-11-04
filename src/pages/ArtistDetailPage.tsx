@@ -1,21 +1,20 @@
-import { useState, useEffect, useMemo, type CSSProperties } from 'react';
+import { useState, useEffect, useMemo, type ReactNode } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Tv, Waypoints } from 'lucide-react';
+import { ArrowUpRight, Tv, Waypoints } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
-import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
+import { PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
+import { serviceIconFor } from '@/components/player/service-icon';
+import { PosterWall } from '@/components/artist/PosterWall';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
-import { heroPhotoLayout, heroPhotoOf, phoneCrop, portraitColumn, useArtistImageInfo, type ArtistImageInfo, type HeroPhotoLayout } from '@/lib/artistImage';
-import { ArtistPortrait } from '@/components/player/ArtistPortrait';
-import { ArtistHeroPhoto } from '@/components/player/ArtistHeroPhoto';
+import { phoneCrop, useArtistImageInfo, type HeroPhoto } from '@/lib/artistImage';
+import { artistWallFor } from '@/lib/artistWalls';
 import { AlsoAppearsOn } from '@/components/various/AlsoAppearsOn';
 import { VariousShelves } from '@/components/various/VariousShelves';
 import { WhoTurnsUp } from '@/components/various/WhoTurnsUp';
 import { useCompilations } from '@/components/various/useCompilations';
 import { VARIOUS_NAME, VARIOUS_SLUG, shelfOf } from '@/lib/compilations';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { useViewportSize } from '@/hooks/useViewportSize';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
@@ -24,7 +23,7 @@ import { artistMatcher } from '@/lib/artistMatch';
 import { threadFromArtist } from '@/lib/explore/links';
 import { artistChannel, loadTv } from '@/lib/tv';
 import { slugify } from '@/lib/browseFacets';
-import { floodFor, GROUND, inkOn, subInk } from '@/lib/sleeveColour';
+import { floodFor } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { cn } from '@/lib/utils';
 import { getAlbumImageFromData, getArtistFanartFromData, getArtistImageFromData, getArtistOGImageUrl, getArtistPhotoFromData } from '@/lib/image-utils';
@@ -183,50 +182,27 @@ export function ArtistDetailPage() {
     [order, byAdded, albums],
   );
 
-  // The top of the page is one solid colour: the newest addition's sleeve,
-  // skipping monochrome ones. Its dark swatch grounds the rest of the page.
+  // The page takes the newest addition's sleeve colour, skipping monochrome
+  // ones: the band under the hero, the wall's tint and the name's overprint.
+  // Its dark swatch grounds the rest of the page.
   const colourMap = useAlbumColorMap();
-  const sleeveFlood = useMemo(
+  const flood = useMemo(
     () => newestFlood(byAdded.map(a => a.uri_release), colourMap) ?? bandFromFlood(floodFor(null)),
     [byAdded, colourMap],
   );
-  // The hero photo is the artist's TheAudioDB fanart when there is any (or
-  // the image chosen in the scrapper), else their own photo, always in its own
-  // colour, and the flood is the photo's own colour where it fades out, so they
-  // meet without a step. From lg it is placed by its faces (heroPhotoLayout)
-  // and fades out before the text; below lg the same image is cropped round
-  // the faces into the square (3:2 from sm) box (phoneCrop) and fades out at its
-  // bottom into the colour along the bottom of the crop. The sleeve's flood
-  // holds until the photo's notes load (and for an artist without any).
-  const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
-  const desktop = useMediaQuery('(min-width: 1024px)');
-  const tablet = useMediaQuery('(min-width: 640px)');
-  const [viewW, viewH] = useViewportSize();
-  const [failedHero, setFailedHero] = useState<string | null>(null);
-  const heroSource = imageInfo ? heroPhotoOf(imageInfo) : null;
-  const heroSrc = heroSource && artistPath
-    ? heroSource.fanart
-      ? getArtistFanartFromData(`/artist/${artistPath}/`, heroSource.fanart)
-      : getArtistPhotoFromData(`/artist/${artistPath}/`, imageInfo?.source)
-    : null;
-  const heroPhoto = heroSource && heroSrc !== failedHero ? heroSource.photo : null;
-  const hero = useMemo(
-    () => (desktop && heroPhoto ? heroPhotoLayout(heroPhoto, viewW, heroHeight(viewH)) : null),
-    [desktop, heroPhoto, viewW, viewH],
-  );
-  const phone = useMemo(() => (!desktop && heroPhoto ? phoneCrop(heroPhoto, tablet ? 3 / 2 : 1) : null), [desktop, tablet, heroPhoto]);
-  // Notes from before the bottom colours: the photo's bottom edge (right for its own photo).
-  const bottomColour = phone?.flood ?? (heroSource?.fanart ? null : imageInfo?.edges.bottom.colour);
-  const flood = useMemo(
-    () => (hero ? photoFlood(hero.flood) : bottomColour ? photoFlood(bottomColour) : sleeveFlood),
-    [hero, bottomColour, sleeveFlood],
-  );
+  // The hero is the artist's fly-poster on a wall (PosterWall): the room most
+  // of their records play in, as the album page's listening room. The header
+  // is see-through over it.
+  const wall = useMemo(() => artistWallFor(byAdded), [byAdded]);
   usePageFlood(
     byAdded.length ? flood.top : null,
     byAdded.length ? flood.ink : null,
-    byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground, vinyl: byAdded[0].vinyl_colours?.[0] } : undefined,
+    byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground, vinyl: byAdded[0].vinyl_colours?.[0], room: true } : undefined,
   );
-  const [heroText, setHeroText] = useState<HTMLDivElement | null>(null);
+  // The poster's photo: their TheAudioDB fanart, else their own photo (the
+  // image chosen in the scrapper when there is one), cropped round its faces.
+  const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
+  const [failedFanart, setFailedFanart] = useState<string | null>(null);
 
   useEffect(() => {
     if (!artistJsonUrl) return;
@@ -318,6 +294,16 @@ export function ArtistDetailPage() {
   const bio = pickBiography(artistData);
 
   const artistUri = `/artist/${artistPath}/`;
+  const fanart = imageInfo?.fanart;
+  const fanartSrc = fanart ? getArtistFanartFromData(artistUri, fanart.file) : null;
+  const onFanart = !!fanartSrc && fanartSrc !== failedFanart;
+  const posterSrc = onFanart && fanartSrc ? fanartSrc : getArtistPhotoFromData(artistUri, imageInfo?.source);
+  const posterPhoto: HeroPhoto | null = onFanart && fanart
+    ? fanart
+    : imageInfo
+      ? { width: imageInfo.width, height: imageInfo.height, faces: imageInfo.faces, people: imageInfo.people, salient: null, columns: [] }
+      : null;
+  const posterPosition = posterPhoto ? phoneCrop(posterPhoto, (wall.poster.width * wall.aspect) / wall.poster.height).position : undefined;
   // The Thread only knows artists credited on a record, not players known only from a band's line-up.
   const { matches: isThisArtist } = artistMatcher(artistPath || '');
   const threadUri = artistPath === 'various' ? null : (albums.flatMap(a => a.artists ?? []).find(a => isThisArtist(a.uri_artist))?.uri_artist ?? null);
@@ -342,7 +328,10 @@ export function ArtistDetailPage() {
   const years = albums.map(originalYear).filter((y): y is number => y !== null);
   const firstYear = years.length ? Math.min(...years) : null;
   const latestYear = years.length ? Math.max(...years) : null;
-  const stats: Array<[string, string]> = [
+  // The band under the poster: facts and links only (the poster carries the name).
+  const facts: Array<[string, ReactNode]> = [
+    ...(artistData?.country && !various ? [['From', artistData.country] as [string, ReactNode]] : []),
+    ...(artistData?.formed_date && !various ? [['Formed', String(artistData.formed_date).slice(0, 4)] as [string, ReactNode]] : []),
     ['Records', String(albums.length)],
     ...(soundtracks ? [['Soundtracks', String(soundtracks)] as [string, string]] : []),
     ...(boxsets ? [['Box sets', String(boxsets)] as [string, string]] : []),
@@ -350,107 +339,94 @@ export function ArtistDetailPage() {
       ? [['Released', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
       : []),
     ...(listeners != null ? [['Last.fm listeners', numberShort(Number(listeners))] as [string, string]] : []),
+    ...(!various && cleanGenres.length
+      ? [[
+          'Genres',
+          cleanGenres.slice(0, 3).map((g, i) => (
+            <span key={g}>
+              {i > 0 && ', '}
+              <Link to={`/genre/${slugify(g)}`} className="hover:underline">{g}</Link>
+            </span>
+          )),
+        ] as [string, ReactNode]]
+      : []),
   ];
 
   return (
     <div>
-      {/* Pulled up under the sticky header (64px, 84px from md), which is
-          see-through at the top of an artist page, so the photo runs into it. */}
-      <div className={cn('flood-surface -mt-16 md:-mt-[84px]', hero && 'relative overflow-hidden')} style={{ background: flood.background, color: flood.ink }}>
-        {hero && heroSrc && <ArtistHeroPhoto src={heroSrc} layout={hero} onError={() => setFailedHero(heroSrc)} />}
-        {/* From lg every artist hero is the same height (the one grid row is
-            fixed: 56vh, between 420 and 540px). The photo column starts at the
-            page edge and is as wide as the photo at that height
-            (portraitColumn); the text takes the rest, its right edge in line
-            with the page, and the name grows or shrinks to fit it (FitTitle
-            fitHeight). */}
-        <section
-          className="relative mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-[calc(4rem+1.5rem)] md:px-10 md:pt-[calc(84px+1.5rem)] lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-[calc(84px+2.5rem)]"
-          style={heroGrid(imageInfo, hero)}
-        >
-          {/* Below lg the photo, in its own colour, runs edge to edge and up
-              under the header, square below it on phones and 3:2 from sm, and
-              fades out at the bottom into the flood (its own bottom-edge
-              colour); from lg the portrait's stage fills the flood's height
-              (see ArtistPortrait), when there's no ArtistHeroPhoto. */}
-          <div
-            className="relative -mx-5 -mt-[calc(4rem+1.5rem)] h-[calc(100vw+5.5rem)] w-[calc(100%+2.5rem)] sm:h-[calc(66.667vw+5.5rem)] md:-mx-10 md:-mt-[calc(84px+1.5rem)] md:h-[calc(66.667vw+84px+1.5rem)] md:w-[calc(100%+5rem)] lg:mx-0 lg:mt-0 lg:h-full lg:w-full"
-            style={hero?.side === 'right' ? { order: 2 } : undefined}
-          >
-            {/* From lg the photo is usually ArtistHeroPhoto, in the flood above; this cell then just holds its side. */}
-            {!hero && (
-              <ArtistPortrait
-                src={phone && heroSrc ? heroSrc : getArtistPhotoFromData(artistUri, imageInfo?.source)}
-                alt={artistName}
-                info={imageInfo}
-                textEl={heroText}
-                position={phone?.position}
-                onError={phone && heroSrc ? () => setFailedHero(heroSrc) : undefined}
-              />
-            )}
-          </div>
-          {/* Below lg the text is pulled up over the faded bottom of the
-              photo (22% of its height on phones, 16% from sm, worked from the
-              full-bleed width, plus the grid gap), so the name sits in the
-              photo like a poster title. */}
-          <div ref={setHeroText} className="relative -mt-[calc(22vw+2rem)] flex min-w-0 flex-col gap-7 sm:-mt-[calc(10.7vw+2rem)] lg:mt-0 lg:justify-center">
-            <FitTitle max={240} min={28} fitHeight className="t-disp">{artistName}</FitTitle>
-            {/* Stats are tinted chips (value, then label), not outlined, so they don't read as links. */}
-            <dl className="m-0 flex flex-wrap gap-2">
-              {stats.map(([k, v]) => (
-                <div key={k} className="flex flex-row-reverse items-baseline justify-end gap-2 rounded-full px-4 py-2" style={{ background: 'color-mix(in srgb, currentColor 12%, transparent)' }}>
-                  <dt className="t-kicker text-[11px]">{k}</dt>
-                  <dd className="t-disp m-0 text-[20px] md:text-[22px]">{v}</dd>
-                </div>
-              ))}
-            </dl>
-            {various && bio && (
-              <p className="m-0 max-w-[52ch] text-[17px] leading-[1.6] md:text-[18px]" style={{ color: flood.sub }}>
-                {bio}
-              </p>
-            )}
-            <div className="flex flex-wrap gap-2.5">
-              {/* Only the first pill in the row is filled: Watch when there are videos. */}
-              {tvVideos > 0 && (
-                <Link
-                  to={`/tv/artist/${artistPath}`}
-                  className="pill pill-solid"
-                  style={{ background: flood.ink, color: flood.top }}
-                  title={`${artistName} on russ.fm/tv`}
-                >
-                  <Tv className="h-[18px] w-[18px] shrink-0" aria-hidden />
-                  Watch {tvVideos} video{tvVideos === 1 ? '' : 's'}
-                </Link>
-              )}
-              {services.map((s, i) => (
-                <PillLink key={s.label} to={s.url} solid={i === 0 && tvVideos === 0 ? { background: flood.ink, color: flood.top } : undefined}>
-                  {s.label}
-                </PillLink>
-              ))}
-              {threadUri && (
-                <Link to={threadFromArtist(threadUri)} className="pill" title={`Follow the links from ${artistName} in The Thread`}>
-                  <Waypoints className="h-[18px] w-[18px] shrink-0" aria-hidden />
-                  Follow the thread
-                </Link>
-              )}
-            </div>
-            {!various && cleanGenres.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {cleanGenres.slice(0, 8).map(g => (
-                  <Link key={g} to={`/genre/${slugify(g)}`} className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100" style={{ borderColor: 'currentColor' }}>
-                    {g}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
-
-        <div className="h-16 lg:h-10" />
+      {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
+      <div className="artist-wall relative -mt-16 h-[clamp(420px,125vw,940px)] md:-mt-[84px] md:h-[clamp(460px,78svh,940px)]">
+        {imageInfo !== undefined && (
+          <PosterWall
+            wall={wall}
+            photo={posterSrc}
+            photoPosition={posterPosition}
+            onPhotoError={onFanart && fanartSrc ? () => setFailedFanart(fanartSrc) : undefined}
+            name={artistName}
+            sleeves={uniqueTitles(byAdded).slice(0, 4).map(a => ({
+              key: a.uri_release,
+              src: getAlbumImageFromData(a.uri_release, 'medium'),
+              title: a.release_name,
+              href: a.uri_release,
+            }))}
+            tint={flood.top}
+            className="h-full"
+          />
+        )}
       </div>
+      <section className="flood-surface relative z-[2]" style={{ background: flood.background, color: flood.ink }}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[84px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+          <dl className="m-0 grid min-w-0 flex-1 grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 md:flex md:gap-9 md:overflow-hidden">
+            {facts.map(([k, v]) => (
+              <div key={k} className={cn('min-w-0', k === 'Genres' && 'col-span-2 sm:col-span-1')}>
+                <dt className="t-kicker text-[10px]" style={{ color: flood.sub }}>{k}</dt>
+                <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="flex shrink-0 flex-wrap items-center gap-2.5">
+            {tvVideos > 0 && (
+              <Link
+                to={`/tv/artist/${artistPath}`}
+                className="icon-btn h-11 w-11 border-2 border-current"
+                aria-label={`Watch ${tvVideos} video${tvVideos === 1 ? '' : 's'} on russ.fm/tv`}
+                title={`Watch ${tvVideos} video${tvVideos === 1 ? '' : 's'} on russ.fm/tv`}
+              >
+                <Tv className="h-5 w-5" aria-hidden />
+              </Link>
+            )}
+            {services.map(s => {
+              const Brand = serviceIconFor(s.url);
+              return (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon-btn h-11 w-11 border-2 border-current"
+                  aria-label={s.label}
+                  title={s.label}
+                >
+                  {Brand ? <Brand className="h-5 w-5" aria-hidden /> : <ArrowUpRight className="h-5 w-5" aria-hidden />}
+                </a>
+              );
+            })}
+            {threadUri && (
+              <Link
+                to={threadFromArtist(threadUri)}
+                className="icon-btn h-11 w-11 border-2 border-current"
+                aria-label="Follow the thread"
+                title={`Follow the links from ${artistName} in The Thread`}
+              >
+                <Waypoints className="h-5 w-5" aria-hidden />
+              </Link>
+            )}
+          </div>
+        </div>
+      </section>
 
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
-        {bio && !various && (
+        {bio && (
           <section className="flex flex-col gap-8">
             <SectionHeading title="Biography" />
             <Bio text={bio} />
@@ -681,37 +657,15 @@ function formatAdded(value: string): string {
   return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-/** The artist hero's one row from lg: every hero is this tall. */
-const HERO_ROW = 'clamp(420px, 56vh, 540px)';
-
-/** The flood's height from lg (px): HERO_ROW, 2.5rem above and below, and the 84px header it runs up under. */
-function heroHeight(viewH: number): number {
-  return Math.min(540, Math.max(420, viewH * 0.56)) + 84 + 80;
-}
-
-/**
- * The hero grid's columns. With ArtistHeroPhoto the photo's column is an
- * empty cell on its side, ending the 4rem gap before where heroPhotoLayout
- * starts the text; a right-hand photo puts the text first, padded in from the
- * left as it usually is from the right. Otherwise (phones, older notes) the
- * column is sized to the portrait (portraitColumn).
- */
-function heroGrid(info: ArtistImageInfo | null | undefined, hero: HeroPhotoLayout | null): CSSProperties {
-  if (!hero) return { '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(info, HERO_ROW) } as CSSProperties;
-  const photoCol = `${Math.max(0, Math.round(hero.textStart - 64))}px`;
-  if (hero.side === 'left') return { '--hero-row': HERO_ROW, '--portrait-col': photoCol } as CSSProperties;
-  return {
-    '--hero-row': HERO_ROW,
-    gridTemplateColumns: `minmax(0, 1fr) ${photoCol}`,
-    paddingLeft: 'max(3.5rem, calc((100vw - 1640px) / 2 + 3.5rem))',
-    paddingRight: 0,
-  } as CSSProperties;
-}
-
-/** A hero band in the photo's own colour: ink to suit, and the site's dark tinted by it for the page under it. */
-function photoFlood(colour: string): ReturnType<typeof bandFromFlood> {
-  const ink = inkOn(colour);
-  return bandFromFlood({ flood: colour, ink, sub: subInk(ink), ground: GROUND, glow: colour, secondary: null });
+/** One record per title, newest first: two pressings of a record show once on the poster. */
+function uniqueTitles<T extends { release_name: string }>(albums: T[]): T[] {
+  const seen = new Set<string>();
+  return albums.filter(a => {
+    const key = a.release_name.toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 type DiscographyOrder = 'added' | 'year';

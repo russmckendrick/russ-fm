@@ -145,6 +145,21 @@ Props: `records` (`RoomRecord[]`: `key`, `room`, `cover`, `alt`, `look`,
 to the header height), `zoom`. See [release room](./release-room.md).
 `HeroSticker` (from `HeroRecord.tsx`) is exported for its sticker.
 
+## Poster wall (`src/components/artist/PosterWall.tsx`)
+
+`PosterWall` is the artist hero: the artist's fly-poster on a wall photo,
+with the poster cut out. Props:
+
+- `wall` (`ArtistWall`)
+- `photo`, and optional `photoPosition` and `onPhotoError`
+- `name` (overprinted, the page's `h1`)
+- `sleeves` (`PosterSleeve[]`: `key`, `src`, `title`, `href`, up to four)
+- `tint` (the flood)
+- `topInset` (defaults to the header height)
+- `zoom`
+
+See [artist poster wall](./artist-wall.md).
+
 ## Album components (`src/components/album/BoxSet.tsx`)
 
 Used by `AlbumDetailPage` when the album has `boxset_contents`. The disc
