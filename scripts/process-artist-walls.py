@@ -1,19 +1,22 @@
 """Key the artist page's fly-poster walls (src/lib/artistWalls.ts).
 
-Each wall photo (Codex, prompts in mockups/artist-room/walls/generate.sh) has
-one landscape poster printed solid chroma-key green that carries the wall's
+Each wall photo (a Codex original in assets/artist-walls/<room-id>.png, made by
+assets/artist-walls/generate.sh) has one landscape poster printed solid chroma-key green that carries the wall's
 light and wear as shading: wrinkles, glue bubbles, creases, the lamp's falloff,
 torn corners. Only the green is cut out, so the torn corners keep the wall over
 the artist's poster, and the green's own shading becomes a multiply layer.
 
     uv run --with numpy --with scipy --with pillow \
-        scripts/process-artist-walls.py <dir of upscaled <room-id>.png> [room-id ...]
+        scripts/process-artist-walls.py [room-id ...]
+
+With no ids, every wall in assets/artist-walls/. The originals are upscaled 4x
+first (scripts/lib/upscale.py, cached in assets/.upscaled/artist-walls/).
 
 Writes public/artist-walls/<id>-{hi-res,medium}.webp (4608 / 3072 wide),
 <id>-shade.webp (the poster's box, 1200 wide), and the poster's box into
-src/config/artist-walls.json (other walls' entries are kept). With
---wear <png> it also writes public/artist-walls/poster-wear.webp, the
-scuffed-ink texture screened over every poster.
+src/config/artist-walls.json (other walls' entries are kept). It also writes
+public/artist-walls/poster-wear.webp, the scuffed-ink texture screened over
+every poster, from assets/textures/poster-wear.png.
 """
 import json
 import sys
@@ -22,6 +25,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from scipy import ndimage
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+from upscale import ASSETS, originals, upscaled  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'artist-walls'
@@ -32,18 +38,12 @@ def ramp(x, lo, hi):
     return np.clip((x - lo) / (hi - lo), 0, 1)
 
 
-args = sys.argv[1:]
 OUT.mkdir(parents=True, exist_ok=True)
-if '--wear' in args:
-    i = args.index('--wear')
-    Image.open(args[i + 1]).convert('L').save(OUT / 'poster-wear.webp', quality=82, method=6)
-    del args[i:i + 2]
-    print('poster-wear.webp')
-if not args:
-    sys.exit(0)
+Image.open(ASSETS / 'textures' / 'poster-wear.png').convert('L').save(OUT / 'poster-wear.webp', quality=82, method=6)
+print('poster-wear.webp')
 
-src_dir = Path(args[0])
-ids = args[1:] or sorted(p.stem for p in src_dir.glob('*.png'))
+ids = originals('artist-walls', sys.argv[1:])
+src_dir = upscaled('artist-walls', ids)
 meta = json.loads(CONFIG.read_text()) if CONFIG.exists() else {}
 for rid in ids:
     img = np.asarray(Image.open(src_dir / f'{rid}.png').convert('RGB')).astype(np.float32)

@@ -111,27 +111,27 @@ an artist with none gets the living room (`shelves`). The 15 walls:
 
 ### Making or redoing a wall
 
-1. Generate the photo with Codex: `sh mockups/artist-room/walls/generate.sh <room-id>`.
-   The script holds every wall's prompt. It skips walls that already have
-   an original, so move one aside to redo it.
+1. Generate the photo with Codex: `sh assets/artist-walls/generate.sh <room-id>`.
+   The script holds every wall's prompt and saves the photo as
+   `assets/artist-walls/<room-id>.png`, with its prompt log as `.txt`. It
+   skips walls that already have an original, so move one aside to redo it.
    - The prompt asks for one landscape (4:3) poster, square to camera,
      about 46% of the width.
    - The poster is printed solid chroma-key green (`#00FF00`). It must
      carry the scene's light and wear only as shading on the green,
      including one torn corner and a small rip.
    - Nothing else may be green.
-   - Codex returns these at 1448×1086. The originals and their prompts are
-     in `mockups/artist-room/walls/originals/`.
-2. Upscale it 4× locally (the `codex-image` finisher,
-   `finish.sh <dir> --upscale-only --scale 4`) into a folder of
-   `<room-id>.png` files. Keep that folder outside the one Codex is
-   writing to.
-3. Key it:
+   - Codex returns these at 1448×1086. See
+     [assets/README.md](../../assets/README.md).
+2. Key it:
 
    ```bash
    uv run --with numpy --with scipy --with pillow \
-     scripts/process-artist-walls.py mockups/artist-room/walls-4x <room-id>
+     scripts/process-artist-walls.py <room-id>
    ```
+
+   With no id it does every wall. The script upscales the original 4× first
+   (the `codex-image` finisher, cached in `assets/.upscaled/artist-walls/`).
 
    - **Cut:** only the green, soft on how green each pixel is. Torn
      corners and curls keep the wall over the poster.
@@ -140,9 +140,10 @@ an artist with none gets the living room (`shelves`). The 15 walls:
    - **Despill:** clears any green within a few pixels of the poster, so
      no fringe shows on its edges and curls.
    - The script warns when less than 70% of the poster's box keyed.
-   - `--wear <png>` rewrites `poster-wear.webp` from a texture: a black
-     printed poster with the ink scuffed and rubbed to the paper.
-4. A new room id must exist in `TV_ROOMS` (`src/lib/tv.ts`).
+   - Every run also rewrites `poster-wear.webp` from
+     `assets/textures/poster-wear.png`: a black printed poster with the ink
+     scuffed and rubbed to the paper.
+3. A new room id must exist in `TV_ROOMS` (`src/lib/tv.ts`).
 
 The mockup the design came from is `mockups/artist-room/`. Open it at
 `/mockups/artist-room/?artist=<slug>&room=<id>` on the dev server.

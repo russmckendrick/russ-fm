@@ -11,6 +11,7 @@
 - Backend collection run (from anywhere once installed): `scrapper collection --resume` (or `cd scrapper && cargo run -- collection --resume`)
 - Draft a Discogs submission for a record that isn't on Discogs yet: `cd discogs-sub && cargo run -- draft "Artist" "Title" -i` (see `docs/backend/discogs-sub.md`)
 - After the scrapper adds artists (macOS only, commit the output): `pnpm run generate-artist-images` (new photos only; `-- --full` redoes all, `-- --only <slug>` one artist)
+- Room and wall photos: the Codex originals live in `assets/`, and `scripts/process-release-rooms.py` / `scripts/process-artist-walls.py` turn them into `public/` (see `assets/README.md`)
 
 ## Universal Rules
 

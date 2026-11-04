@@ -74,23 +74,25 @@ record plays in the same room on its album page, the home page and TV.
    with flat chroma-key green (`#00FF00`), left of centre, about 30% of the
    width; and a turntable right of centre, seen from slightly above, with a
    flat green record, a small white centre label and the tonearm on the
-   record. Nothing else green. The originals and their prompts are in
-   `mockups/release/rooms/genre/`.
-2. Upscale it 4× locally (the `codex-image` finisher,
-   `finish.sh <room>.png --upscale-only --scale 4`) into a folder of
-   `<room-id>.png` files. Keep that folder outside the folder Codex is
-   writing to: a running `codex-image.sh` collects every new image there.
-3. Key it:
+   record. Nothing else green. Generate into a folder of its own (a running
+   `codex-image.sh` collects every new image in its output folder), then save
+   it as `assets/release-rooms/<room-id>.png` with its prompt log as
+   `<room-id>.txt`. All the originals and their prompts are there (see
+   [assets/README.md](../../assets/README.md)).
+2. Key it:
 
    ```bash
    uv run --with numpy --with scipy --with opencv-python-headless --with pillow \
-     scripts/process-release-rooms.py mockups/release/rooms/genre-4x <room-id>
+     scripts/process-release-rooms.py <room-id>
    ```
+
+   With no id it does every room. The script upscales the original 4× first
+   (the `codex-image` finisher, cached in `assets/.upscaled/release-rooms/`).
 
    The record's outline is an ellipse fitted to its green, drawn
    anti-aliased; inside it only what is clearly not record (the tonearm and
    cartridge) stays. The script warns when key green is still visible.
-4. A new room id must exist in `TV_ROOMS` (`src/lib/tv.ts`).
+3. A new room id must exist in `TV_ROOMS` (`src/lib/tv.ts`).
 
 `scripts/make-vinyl-textures.py` redraws the record textures (seeded, so a
 rerun gives the same record).

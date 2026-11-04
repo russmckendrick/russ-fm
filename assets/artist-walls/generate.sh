@@ -1,21 +1,25 @@
 #!/bin/sh
 # One fly-poster wall per /tv room id (src/lib/tv.ts), like the release rooms.
 # Each Codex photo has one landscape poster printed solid chroma-key green that carries
-# the wall's light and wear as shading; key-walls.py turns that into the hole + a shade layer.
-# Usage: sh generate.sh [room-id ...]   (originals land in walls/originals/<id>.png)
+# the wall's light and wear as shading; scripts/process-artist-walls.py turns that into the hole + a shade layer.
+# Usage: sh assets/artist-walls/generate.sh [room-id ...]   (originals land beside it as <id>.png)
+# Then: scripts/process-artist-walls.py <room-id>
 set -e
 cd "$(dirname "$0")"
-S="$HOME/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/101d82c5-a6de-481c-aa0e-80962c9c0afa/1d01d8d8-7536-418b-9a72-fdb20b35f4ed/skills/codex-image/scripts/codex-image.sh"
+# The codex-image skill's generator; CODEX_IMAGE_GEN overrides where it is.
+S="${CODEX_IMAGE_GEN:-$(ls -t "$HOME"/Library/Application\ Support/Claude/local-agent-mode-sessions/skills-plugin/*/*/skills/codex-image/scripts/codex-image.sh "$HOME"/.claude/skills/codex-image/scripts/codex-image.sh 2>/dev/null | head -1)}"
+[ -n "$S" ] || { echo "No codex-image.sh found: set CODEX_IMAGE_GEN" >&2; exit 1; }
 BASE="Photoreal photograph, eye-level, camera perfectly square-on to the wall, 35mm lens, cinematic, fine detail, film grain, no people, no readable text anywhere, no logos, no brand names. CENTRE OF FRAME: one big LANDSCAPE paper poster (4:3, wider than tall, about 46 percent of the image width, its centre slightly above the middle of the image), facing the camera dead-on with straight level edges. The poster is old wheat-pasted paper printed solid bright chroma-key green (#00FF00); it shows the scene's real light and wear only as shading on the green: soft wrinkles, glue bubbles, a fold crease or two, the lamp light falling off across it, light grime; it stays clearly saturated green everywhere. One corner is torn away and one edge has a small rip, showing the wall beneath. Around it: older torn, weathered, faded posters and flyers with abstract shapes and NO readable text. Nothing else in the image is green; plants are deep olive."
-# Each wall generates in its own folder (codex-image.sh collects every new image in
-# its output folder), then moves to originals/<id>.png + .txt. A wall with an original is skipped.
+# Each wall generates in a temporary folder (codex-image.sh collects every new
+# image in its output folder, so never this one), then lands here as <id>.png + .txt.
+# A wall that already has an original is skipped: move it aside to redo it.
 declare_room() {
   [ -z "$ONLY" ] || echo " $ONLY " | grep -q " $1 " || return 0
-  [ -f "originals/$1.png" ] && return 0
-  mkdir -p "$1" originals
-  bash "$S" -p "$BASE SETTING: $2" -s 1536x1024 -q high -o "$1" -t 600
-  f=$(ls "$1"/*.png | head -1)
-  mv "$f" "originals/$1.png" && mv "${f%.png}.txt" "originals/$1.txt" && rm -rf "$1"
+  [ -f "$1.png" ] && return 0
+  tmp=$(mktemp -d)
+  bash "$S" -p "$BASE SETTING: $2" -s 1536x1024 -q high -o "$tmp" -t 600
+  f=$(ls "$tmp"/*.png | head -1)
+  mv "$f" "$1.png" && mv "${f%.png}.txt" "$1.txt" && rm -rf "$tmp"
 }
 ONLY="$*"
 declare_room shelves "the red-brick side wall of an independent record shop on a quiet street, late afternoon sun, a bike locked to a drainpipe, warm light."
