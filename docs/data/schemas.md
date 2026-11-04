@@ -444,12 +444,12 @@ typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
 | `subject` | `[x0, y0, x1, y1]` fractions: people and faces combined, else the salient area; `null` when nothing is found |
 | `focus` | `[x, y]` fractions: centre of the faces, else the upper part of the subject; `null` when nothing is found. Sets the phone crop |
 | `backdrop` | Top quarter plus outer columns: average `colour`, relative `luminance`, `even` (1 = flat), and `tone` (`light`/`dark`; `report-artist-images --all` lists dark ones) |
-| `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo. `bottom.colour` is the phone hero's flood |
+| `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge. The old artist hero extended the photo with them and used `bottom.colour` as its flood; unused by the site since the poster wall (2026-11-04) |
 | `luminance` | Whole-photo relative luminance |
 | `chroma` | (v4) How colourful the photo is, 0–1: the 95th percentile of each pixel's channel spread (max − min). Under 0.06 is black and white (about a quarter of the photos); `report-artist-images` flags those. The `matte` and `spill` of v4 were dropped in v5 |
-| `columns` | (v5) Average colour of 32 vertical strips across the photo, left to right. The desktop hero's flood is the average of the strips where the photo fades out |
-| `bottoms` | (v5) Average colour of the bottom eighth of each of those strips. The phone hero's flood is the average of the ones its crop shows. `fanart` carries its own `columns` and `bottoms` too |
-| `fanart` | (v5) The TheAudioDB fanart the desktop hero uses instead of the photo, when the artist has any: `file` (`{slug}-fanart0N.jpg`, next to the photo), its size, Vision's `faces`/`people`/`salient` boxes (`[x, y, w, h]` fractions), `chroma` and `columns` as above. Missing for the ~500 artists without fanart |
+| `columns` | (v5) Average colour of 32 vertical strips across the photo, left to right. Was the desktop hero's flood until the poster wall replaced it (2026-11-04); unused by the site now |
+| `bottoms` | (v5) Average colour of the bottom eighth of each of those strips. `phoneCrop` averages the ones its crop shows. `fanart` carries its own `columns` and `bottoms` too |
+| `fanart` | (v5) The TheAudioDB fanart the artist poster uses instead of the photo, when the artist has any: `file` (`{slug}-fanart0N.jpg`, next to the photo), its size, Vision's `faces`/`people`/`salient` boxes (`[x, y, w, h]` fractions), `chroma` and `columns` as above. Missing for the ~500 artists without fanart |
 
 ---
 

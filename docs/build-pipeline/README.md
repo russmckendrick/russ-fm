@@ -269,6 +269,8 @@ dist/
 ├── tv.json              # /tv videos, written by the scrapper
 ├── compilations.json    # who plays on the "Various" records, written by the scrapper
 ├── tv-rooms/            # /tv room photos (site assets, not R2)
+├── release-rooms/       # album and home listening rooms (site assets, not R2)
+├── artist-walls/        # artist poster walls (site assets, not R2)
 ├── sitemap.xml
 ├── album-colors.json
 ├── album-swatches.json

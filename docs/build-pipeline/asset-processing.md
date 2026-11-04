@@ -43,7 +43,7 @@ proportions. The dev server's on-demand sizes (`vite.config.ts`) do the same.
 After processing (or copying from the cache), the script hard-links every
 `*-hi-res.jpg` from `public/` into the output directory next to the
 generated `medium` and `avatar` files, plus, for an artist, the fanart its
-`-image.json` uses: the desktop hero's (`fanart.file`) and a chosen artist
+`-image.json` uses: the artist poster's (`fanart.file`) and a chosen artist
 photo (`source`), served as they are; the other fanart files stay local. So
 the output tree is the complete set the R2 sync uploads. Hard links cost no disk space; it falls back to a
 copy across filesystems.
@@ -278,10 +278,10 @@ Two things keep the files current:
 Every artist photo gets a small JSON file next to it,
 `public/artist/<slug>/<slug>-image.json` (about 4 KB), saying where the faces
 and subject are, what colours its backdrop and edges are, how colourful the photo
-is, the colours across it, and which TheAudioDB fanart (if any) the desktop hero
-uses and where its faces are. The artist page uses it to place the hero photo,
-centre the faces beside the text and take the flood from the photo's own colour (see
-[pages.md](../frontend/pages.md), artist header). The shape is in
+is, the colours across it, and which TheAudioDB fanart (if any) the artist poster
+uses and where its faces are. The artist page uses it to pick the poster's photo and
+crop it round the faces (see [artist-wall.md](../frontend/artist-wall.md)); the
+artist card uses it to place the photo in its round frame. The shape is in
 [schemas.md](../data/schemas.md#artist-image-json-artistslugslug-imagejson).
 
 ### Requirements
@@ -365,17 +365,16 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    `chroma`, the 95th percentile of each pixel's channel spread: 0 for a
    black-and-white photo, a little above for a toned print.
 4. **Colour strips** (sharp): the average colour of 32 vertical strips across the
-   photo (`columns`), and of the bottom eighth of each strip (`bottoms`). The
-   desktop hero averages the strips where the photo fades out for its flood, the
-   phone hero the bottoms of the strips its crop shows, so photo and flood meet
-   without a step. Fanart gets both too.
+   photo (`columns`), and of the bottom eighth of each strip (`bottoms`). Fanart
+   gets both too. (The artist hero used them for its flood until the poster wall
+   replaced it on 2026-11-04; `phoneCrop` still returns the crop's bottom colour.)
 5. **Fanart** (v5): when the scrapper has stored TheAudioDB fanart beside the photo
    (`{slug}-fanart01.jpg` …, `scrapper backfill-fanart`), and the artist's
    `raw_data.overrides.fanart` (set with `scrapper artist "<name>" --fanart 1,2` or the
    **Fanart** field, for when TheAudioDB files someone else's photo under them) allows it,
    every one goes through
    Vision and gets its chroma and colour strips. One is
-   picked for the desktop hero: colour photos only unless all are black and
+   picked for the artist poster: colour photos only unless all are black and
    white; among those TheAudioDB's own order, the first with faces and a third
    of the photo clear beside them, else the best scored (faces, room beside them,
    bigger faces). Its notes are written as `fanart`, except when the pick is
@@ -384,7 +383,7 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
    fanart, and 19 of those keep it (their own photo is black and white too).
 6. **Hand-set choices** (from the scrapper, `raw_data.overrides` in `<slug>.json`;
    no file is ever changed for them): `hero` (`photo` or `fanart02`) forces the
-   desktop hero's image over the automatic pick; `photo` (`fanart01`) makes a
+   poster's image over the automatic pick; `photo` (`fanart01`) makes a
    fanart the artist photo: the notes then measure that file instead of the
    `-hi-res.jpg` and say so in `source`, and the site's build makes the
    `medium` and `avatar` sizes from it (below).
@@ -397,9 +396,9 @@ answering, silently. The run warns if any photo gets no answer.
 
 `pnpm run report-artist-images` reads every `-image.json` and lists the photos that
 don't suit the artist hero, most-collected artists first: no photo, tiny (under
-500px), low resolution (under 800px; the desktop hero is about 700px tall, so these
+500px), low resolution (under 800px; the poster is up to about 900px wide, so these
 look soft on a retina screen), no person found, black and white, no face found
-(the hero can't centre on anyone), and faces under 7% of the photo's height. Only
+(the poster can't crop round anyone), and faces under 7% of the photo's height. Only
 the artist's own photo is judged: the 732 artists whose hero uses fanart show that on desktop.
 `--all` adds dark backdrops, which make a dark flood (hundreds, so opt-in). `--issue <name>` narrows it,
 `--limit 0` lists everyone, and `--csv` writes the lot as CSV. After each group,
@@ -426,13 +425,13 @@ It's harmless, just a longer sync.
   `sudo xcode-select -s /Library/Developer/CommandLineTools`.
 - **Helper misbehaves after a macOS or Xcode update**: delete
   `node_modules/.cache/russfm/vision-detect`; the next run recompiles it.
-- **A new artist's portrait isn't placed** (photo just fills the hero, backdrop tone
-  measured in the browser): its `-image.json` is missing, so run the script and
-  commit. The page falls back cleanly, so nothing breaks in the meantime.
+- **A new artist's poster shows their own photo, centred**: its `-image.json` is
+  missing (no fanart pick, no faces), so run the script and commit. The page
+  falls back cleanly, so nothing breaks in the meantime.
 - **Replaced a photo but the placement didn't change**: the default run only fills
   in missing files, so rerun that artist with `--only <slug>`.
-- **Placement looks wrong for one artist**: rerun with `--only <slug>` after
-  replacing the photo. Placement rules live in `portraitLayout()` in
+- **The poster crops an artist badly**: rerun with `--only <slug>` after
+  replacing the photo. The crop rules live in `phoneCrop()` in
   `src/lib/artistImage.ts`, not in the script.
 
 ## OG Image Generation

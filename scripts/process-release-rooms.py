@@ -1,12 +1,16 @@
 """Key the album page's listening rooms (src/lib/releaseRooms.ts).
 
-Each room photo (Codex, see docs/frontend/release-room.md) has two chroma-green
+Each room photo (a Codex original in assets/release-rooms/<room-id>.png, see
+docs/frontend/release-room.md) has two chroma-green
 areas: the square board on the record stand and the record on the turntable.
 Both are cut out: the real sleeve shows through the board, and a spinning CSS
 record in the pressing's colour shows through the platter, under the tonearm.
 
     uv run --with numpy --with scipy --with opencv-python-headless --with pillow \
-        scripts/process-release-rooms.py <dir of upscaled <room-id>.png> [room-id ...]
+        scripts/process-release-rooms.py [room-id ...]
+
+With no ids, every room in assets/release-rooms/. The originals are upscaled 4x
+first (scripts/lib/upscale.py, cached in assets/.upscaled/release-rooms/).
 
 Writes public/release-rooms/<id>-{hi-res,medium}.webp (4608 / 3072 wide) and the stand/record
 geometry into src/config/release-rooms.json (other rooms' entries are kept).
@@ -20,6 +24,9 @@ import numpy as np
 from PIL import Image
 from scipy import ndimage
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+from upscale import originals, upscaled  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'release-rooms'
 CONFIG = ROOT / 'src' / 'config' / 'release-rooms.json'
@@ -29,8 +36,8 @@ def ramp(x, lo, hi):
     return np.clip((x - lo) / (hi - lo), 0, 1)
 
 
-src_dir = Path(sys.argv[1])
-ids = sys.argv[2:] or sorted(p.stem for p in src_dir.glob('*.png'))
+ids = originals('release-rooms', sys.argv[1:])
+src_dir = upscaled('release-rooms', ids)
 meta = json.loads(CONFIG.read_text()) if CONFIG.exists() else {}
 OUT.mkdir(parents=True, exist_ok=True)
 for rid in ids:

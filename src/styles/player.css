@@ -396,119 +396,134 @@ body {
   }
 }
 
-/* --- Artist portrait ------------------------------------------------------ */
-/* ArtistPortrait (src/components/player/ArtistPortrait.tsx), in the photo's
-   own colour (from lg only when there's no ArtistHeroPhoto). The top and
-   page edge stay crisp.
-
-   Below lg: the photo fills its edge-to-edge cell, which runs up under the
-   see-through header (square below it, 3:2 from sm), and fades out at the bottom (a long fade whose stops follow an ease-out curve, so there's
-   no line where it starts) under the name, which overlaps it. From lg the photo's grid column starts at the page edge and is
-   sized to the photo (portraitColumn); the stage runs from the page's top
-   (under the see-through header) to the flood's bottom (the 2.5rem spacer) and 32rem past the
-   column. Once placed (data-placed, sizes from portraitLayout() in
-   src/lib/artistImage.ts) the photo is the flood's full height at the left
-   of the <img> box (object-fit: contain), the box runs a short lead-out past
-   it with a gradient of the photo's own right-edge colours as background,
-   and the right fade (--fade-from to --fade-to) finishes just into the gap
-   before the text. Before it's placed the photo simply fills the stage. */
-
-.artist-stage {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
+/* --- Artist poster wall (artist hero) --------------------------------------- */
+/* src/components/artist/PosterWall.tsx. The wall photo has its poster cut out
+   (only the green, so torn corners keep the wall) and sits over the poster and
+   the wall's own shade for it. --u is 1% of the poster's width. */
+.artist-wall {
+  background: #0b0907;
 }
 
-/* The desktop hero's photo (ArtistHeroPhoto: the TheAudioDB fanart, else the
-   artist's own photo): in its own colour, absolutely placed in the flood by
-   heroPhotoLayout(), masked to fade out before the text. */
-.artist-hero-photo {
+.artist-wall-layer {
   position: absolute;
+  inset: 0;
+  isolation: isolate;
+  opacity: 0;
+  transition: opacity 1.1s var(--ease-out);
+}
+
+.artist-wall-layer.is-on {
+  opacity: 1;
+}
+
+.artist-poster {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  isolation: isolate;
+  background: #e9dfcb;
+  color: #fbf7ef;
+}
+
+/* The photo printed onto the paper: multiply keeps its colour and warms the whites; aged a little. */
+.artist-poster-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  filter: saturate(0.85) contrast(1.06) sepia(0.14);
+}
+
+.artist-poster::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(transparent 50%, rgba(10, 8, 6, 0.6));
+  pointer-events: none;
+}
+
+.artist-poster-foot {
+  position: absolute;
+  z-index: 2;
+  inset: auto calc(var(--u) * 3) calc(var(--u) * 2.6);
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--u) * 3);
+}
+
+/* The name overprinted in cream, a little off register over the flood. FitTitle
+   balances a long name over a few lines (ORCHESTRAL / MANOEUVRES / IN THE DARK). */
+.artist-poster-name {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-stretch: 62%;
+  font-weight: 900;
+  line-height: 0.8;
+  text-transform: uppercase;
+  text-shadow: calc(var(--u) * 0.45) calc(var(--u) * 0.35) 0 var(--flood);
+}
+
+/* The newest sleeves, printed small with a paper border; each links to its record. */
+.artist-poster-sleeves {
+  display: flex;
+  flex: none;
+  gap: calc(var(--u) * 0.9);
+}
+
+.artist-poster-sleeves img {
   display: block;
+  width: calc(var(--u) * 8);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: calc(var(--u) * 0.35) solid #efe6d4;
+  filter: saturate(0.85) sepia(0.14);
+}
+
+/* Scuffed ink: lifts the print back towards the paper, with fold lines and rain streaks. */
+.artist-poster-wear {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: url('/artist-walls/poster-wear.webp') center / cover;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* The wall's own light and creases on the poster, read off the green in the photo. */
+.artist-wall-shade {
+  position: absolute;
+  z-index: 1;
+  background: center / 100% 100% no-repeat;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.artist-wall-photo {
+  position: absolute;
+  z-index: 2;
   max-width: none;
   pointer-events: none;
   user-select: none;
 }
 
-.artist-portrait {
-  --portrait-fade-bottom: linear-gradient(
-    to bottom,
-    #000 40%,
-    rgba(0, 0, 0, 0.94) 52%,
-    rgba(0, 0, 0, 0.82) 62%,
-    rgba(0, 0, 0, 0.64) 71%,
-    rgba(0, 0, 0, 0.44) 79%,
-    rgba(0, 0, 0, 0.26) 86%,
-    rgba(0, 0, 0, 0.12) 92%,
-    rgba(0, 0, 0, 0.04) 97%,
-    transparent 100%
-  );
-  -webkit-mask-image: var(--portrait-fade-bottom);
-  mask-image: var(--portrait-fade-bottom);
-}
-
-.artist-portrait {
+/* The flood over the whole wall, poster included, so the poster sits in the room's light. */
+.artist-wall-tint {
   position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
+  z-index: 3;
+  mix-blend-mode: color;
+  opacity: 0.16;
+  pointer-events: none;
 }
 
-@media (min-width: 1024px) {
-  .artist-stage {
-    top: calc(-2.5rem - 84px);
-    bottom: -2.5rem;
-    left: 0;
-    right: auto;
-    width: calc(100% + 32rem);
+@media (prefers-reduced-motion: reduce) {
+  .artist-wall-layer {
+    transition: none;
   }
-
-  /* No bottom fade on desktop: the photo fills the flood to its bottom edge.
-     The right fade is laid over the whole stage (--stage-w wide, shifted by
-     --el-left) so its stops are in stage px, and follows a smootherstep curve
-     (flat at both ends, 16 stops) so a big step in lightness, a black
-     backdrop into a pale flood, shows no bands. Unplaced, the photo is the
-     whole stage and the fade covers its right half. */
-  .artist-portrait {
-    --a: var(--fade-from, 42%);
-    --b: var(--fade-to, 100%);
-    --portrait-fade-right: linear-gradient(
-      to right,
-      #000 var(--a),
-      rgba(0, 0, 0, 1.000) calc(var(--a) + (var(--b) - var(--a)) * 0.000),
-      rgba(0, 0, 0, 0.997) calc(var(--a) + (var(--b) - var(--a)) * 0.067),
-      rgba(0, 0, 0, 0.981) calc(var(--a) + (var(--b) - var(--a)) * 0.133),
-      rgba(0, 0, 0, 0.942) calc(var(--a) + (var(--b) - var(--a)) * 0.200),
-      rgba(0, 0, 0, 0.878) calc(var(--a) + (var(--b) - var(--a)) * 0.267),
-      rgba(0, 0, 0, 0.790) calc(var(--a) + (var(--b) - var(--a)) * 0.333),
-      rgba(0, 0, 0, 0.683) calc(var(--a) + (var(--b) - var(--a)) * 0.400),
-      rgba(0, 0, 0, 0.562) calc(var(--a) + (var(--b) - var(--a)) * 0.467),
-      rgba(0, 0, 0, 0.438) calc(var(--a) + (var(--b) - var(--a)) * 0.533),
-      rgba(0, 0, 0, 0.317) calc(var(--a) + (var(--b) - var(--a)) * 0.600),
-      rgba(0, 0, 0, 0.210) calc(var(--a) + (var(--b) - var(--a)) * 0.667),
-      rgba(0, 0, 0, 0.122) calc(var(--a) + (var(--b) - var(--a)) * 0.733),
-      rgba(0, 0, 0, 0.058) calc(var(--a) + (var(--b) - var(--a)) * 0.800),
-      rgba(0, 0, 0, 0.019) calc(var(--a) + (var(--b) - var(--a)) * 0.867),
-      rgba(0, 0, 0, 0.003) calc(var(--a) + (var(--b) - var(--a)) * 0.933),
-      rgba(0, 0, 0, 0.000) calc(var(--a) + (var(--b) - var(--a)) * 1.000)
-    );
-    position: absolute;
-    top: 0;
-    left: var(--el-left, 0px);
-    width: var(--el-w, 100%);
-    height: var(--el-h, 100%);
-    max-width: none;
-    -webkit-mask-image: var(--portrait-fade-right);
-    mask-image: var(--portrait-fade-right);
-    -webkit-mask-size: var(--stage-w, 100%) 100%;
-    mask-size: var(--stage-w, 100%) 100%;
-    -webkit-mask-position: calc(-1 * var(--el-left, 0px)) 0;
-    mask-position: calc(-1 * var(--el-left, 0px)) 0;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-
 }
 
 /* --- Hero record scrobble scene ------------------------------------------ */

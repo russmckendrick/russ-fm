@@ -239,8 +239,8 @@ scrapper artist <ARTIST_NAME> [OPTIONS]
 | `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
 | `--perplexity-context` | STRING | - | Extra artist identity context for Perplexity |
 | `--fanart` | STRING | - | Which TheAudioDB fanart the site may use, without re-scraping: `off`, the numbers to use (`1,2`), or `auto` for all. Saved as `raw_data.overrides.fanart` (the **Fanart** field in the TUI and web UI editors) |
-| `--hero` | STRING | - | The image the site's desktop hero shows: `auto`, `photo` (the artist photo), or a fanart (`fanart02`). Saved as `raw_data.overrides.hero` (**Hero image** field) |
-| `--photo` | STRING | - | A fanart the site uses as the artist photo (avatar, cards, phone hero) instead of the downloaded one: `fanart01`, or `auto`. Saved as `raw_data.overrides.photo` (**Artist photo** field) |
+| `--hero` | STRING | - | The image on the site's artist poster: `auto`, `photo` (the artist photo), or a fanart (`fanart02`). Saved as `raw_data.overrides.hero` (**Hero image** field) |
+| `--photo` | STRING | - | A fanart the site uses as the artist photo (avatar, cards) instead of the downloaded one: `fanart01`, or `auto`. Saved as `raw_data.overrides.photo` (**Artist photo** field) |
 
 > `--fanart`, `--hero` and `--photo` change no file on disk and skip the scrape: they only
 > record a choice, kept across re-scrapes, on the record the artist's public JSON was written

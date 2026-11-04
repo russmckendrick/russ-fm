@@ -1,0 +1,47 @@
+/* Artist poster mockup: on top of ../release/release.css (nav, room, band, ground). */
+
+/* The poster sits under the wall photo, which has it cut out; --u is 1% of its width. */
+.poster {
+  position: absolute; z-index: 1; overflow: hidden; background: #e9dfcb; color: #fbf7ef;
+  isolation: isolate;
+}
+.poster-photo { position: absolute; inset: 0; background: #e9dfcb; }
+/* Printed onto paper and aged: multiply keeps the colour and warms the whites. */
+.poster-photo img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: multiply; filter: saturate(0.85) contrast(1.06) sepia(0.14); }
+.poster-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgba(10, 8, 6, 0.6)); }
+
+/* Overprint: the name in cream, a little off register over the record's colour. */
+.poster-foot { position: absolute; inset: auto calc(var(--u) * 3) calc(var(--u) * 2.6); display: flex; align-items: flex-end; gap: calc(var(--u) * 3); }
+.poster-name {
+  flex: 1; min-width: 0; margin: 0; font-family: var(--font-display); font-stretch: 62%; font-weight: 900;
+  text-transform: uppercase; line-height: 0.8; white-space: nowrap; overflow: hidden;
+  text-shadow: calc(var(--u) * 0.45) calc(var(--u) * 0.35) 0 var(--flood);
+}
+/* The newest sleeves, printed small in a row, with a paper border. */
+.poster-sleeves { flex: none; display: flex; gap: calc(var(--u) * 0.9); }
+.poster-sleeves img { width: calc(var(--u) * 8); aspect-ratio: 1; object-fit: cover; display: block; border: calc(var(--u) * 0.35) solid #efe6d4; filter: saturate(0.85) sepia(0.14); }
+
+/* Wear: the scuffed-ink texture lifts the print back towards the paper. */
+.poster-wear { position: absolute; inset: 0; z-index: 2; background: url(assets/wear.webp) center / cover; mix-blend-mode: screen; opacity: 0.5; pointer-events: none; }
+
+/* The wall's own light and wrinkles on the poster, read off the green in the photo. */
+.poster-shade { position: absolute; z-index: 1; background: center / 100% 100% no-repeat; mix-blend-mode: multiply; pointer-events: none; }
+/* The room's colour over everything, poster included, so it sits in the light. */
+.room-tint { opacity: 0.16; }
+
+/* The band: metadata and links only, one row. */
+.band-row { min-height: 0; height: 84px; padding-block: 0; }
+.meta { display: flex; gap: 36px; margin: 0; flex: 1; min-width: 0; overflow: hidden; }
+.meta div { min-width: 0; }
+.meta dt { font: 600 10px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; margin-bottom: 7px; }
+.meta dd { margin: 0; font: 700 16px/1.2 var(--font-grot); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.extras { gap: 10px; }
+.extras .icon-btn { width: 44px; height: 44px; }
+.extras svg { width: 20px; height: 20px; }
+@media (max-width: 760px) { .meta div:nth-child(n + 3) { display: none; } }
+
+/* Below the band: the artist's records. */
+.records { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 28px 22px; }
+.records img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 4px; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.8); }
+.records p { margin: 10px 0 0; font-weight: 700; font-size: 15px; line-height: 1.25; }
+.records small { font: 400 12px/1 var(--font-mono); opacity: 0.6; }
