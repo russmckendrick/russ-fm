@@ -1,0 +1,102 @@
+/* /stats mockup: on top of release.css (nav, room, band), index-headers.css (slots, band row)
+   and wrapped.css (chapter type, stats, tips). */
+
+/* wrapped.css and the band both use --ink; the chapters keep cream whatever the band's flood. */
+.chapters { --ink: #fbf7ef; --ink-2: rgba(251, 247, 239, .72); --ink-3: rgba(251, 247, 239, .5); color: var(--ink); background: #0e0d0c; }
+.chapters .wrap { max-width: 1490px; padding: 0 clamp(16px, 4vw, 56px); }
+.track .num { font-variant-numeric: tabular-nums; }
+
+/* ---- hero: the shelving, with a tag hung under each face-out record ---- */
+.room { height: clamp(560px, 86vh, 900px); }
+.slot.holder { overflow: visible; z-index: 4; }
+.slot.holder img { width: 100%; height: 100%; object-fit: cover; display: block; background: #111; }
+.tag {
+  position: absolute; left: 50%; top: calc(100% - var(--u) * 6); width: calc(var(--u) * 84);
+  translate: -50% 0; rotate: var(--tilt); transform-origin: 50% 0;
+  padding: calc(var(--u) * 6) calc(var(--u) * 6) calc(var(--u) * 5);
+  background: #f3ecdc; color: #17130f; border-radius: 2px;
+  box-shadow: 0 calc(var(--u) * 3) calc(var(--u) * 8) rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(0, 0, 0, .06);
+  transition: rotate .35s var(--ease, ease), translate .35s var(--ease, ease);
+}
+/* the pin */
+.tag::before { content: ''; position: absolute; top: calc(var(--u) * 2.2); left: 50%; width: calc(var(--u) * 3.4); aspect-ratio: 1; translate: -50% 0; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff8, transparent 45%), var(--flood); box-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
+.tag b { display: block; font: 900 calc(var(--u) * 14)/0.9 var(--font-display); font-stretch: 66%; text-transform: uppercase; white-space: nowrap; margin-top: calc(var(--u) * 2); }
+.tag small { display: block; margin-top: calc(var(--u) * 1.5); font: 600 calc(var(--u) * 4.6)/1.1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; }
+.tag em { display: block; margin-top: calc(var(--u) * 4); padding-top: calc(var(--u) * 3); border-top: 1px dashed rgba(0, 0, 0, .3);
+  font: 500 calc(var(--u) * 4.2)/1.3 var(--font-grot); font-style: normal; opacity: .75; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.slot.holder:hover .tag { rotate: 0deg; translate: -50% calc(var(--u) * -2); }
+.slot.holder:hover img { filter: brightness(1.06); }
+
+/* ---- 01 arrivals ---- */
+.gr-stats, .pl-stats, .lh-stats, .dc2-stats { margin: 40px 0 44px; }
+.gr-chart { position: relative; }
+.gr-chart svg { display: block; overflow: visible; }
+.gr-band { fill: rgba(251, 247, 239, .035); }
+.gr-yr { font: 600 11px var(--mono); fill: var(--ink-3); letter-spacing: .08em; }
+.gr-tot { font: 900 15px var(--display); fill: var(--ink-2); }
+.gr-area { stroke: #0e0d0c; stroke-width: .6; }
+.gr-rule { position: absolute; top: 0; bottom: 28px; left: 0; width: 1px; background: var(--ink); opacity: 0; pointer-events: none; transition: opacity .15s; }
+.gr-rule.on { opacity: .7; }
+.gr-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; font-size: 13px; color: var(--ink-2); }
+.gr-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--c); margin-right: 7px; }
+.gr-legend b { color: var(--ink-3); font: 600 11px var(--mono); margin-left: 3px; }
+
+/* ---- 03 the pile ---- */
+.pl-piles { display: grid; grid-template-columns: repeat(auto-fit, minmax(56px, 1fr)); gap: 10px; align-items: end; }
+.pl-pile { display: flex; flex-direction: column; align-items: center; cursor: default; }
+.pl-stack { height: clamp(260px, 40vw, 460px); width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+.pl-stack canvas { width: min(100%, 120px); display: block; transform-origin: bottom; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .5)); }
+.pl-piles.in canvas { animation: pl-rise 1.4s var(--ease) both; }
+.pl-pile:nth-child(n) canvas { animation-delay: calc(var(--i, 0) * 1s); }
+@keyframes pl-rise { from { transform: scaleY(0); } }
+.pl-pile b { margin-top: 12px; font: 900 18px var(--display); }
+.pl-pile span { font: 500 11px var(--mono); color: var(--ink-3); white-space: nowrap; }
+.pl-pile:hover canvas { filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .5)) brightness(1.25); }
+@media (max-width: 700px) { .pl-pile span { display: none; } }
+
+/* ---- 04 the long haul ---- */
+.lh-chart svg { display: block; overflow: visible; }
+.lh-tick { stroke: rgba(251, 247, 239, .08); }
+.lh-yr { font: 600 11px var(--mono); fill: var(--ink-3); }
+.lh-lane { stroke: rgba(251, 247, 239, .16); stroke-width: 1; }
+.lh-name { font: 700 14px var(--grot); fill: var(--ink); }
+.lh-count { font: 600 10px var(--mono); fill: var(--ink-3); }
+.lh-dot { stroke: #0e0d0c; stroke-width: 1.2; cursor: pointer; transition: r .15s; }
+.lh-dot:hover { r: 10; }
+@media (max-width: 640px) { .lh-name { font-size: 11px; } }
+
+/* ---- 05 decades ---- */
+.dc2-field svg { display: block; overflow: visible; }
+.dc2-band { fill: rgba(251, 247, 239, .015); }
+.dc2-band.odd { fill: rgba(251, 247, 239, .045); }
+.dc2-lab { font: 900 40px var(--display); fill: none; stroke: rgba(251, 247, 239, .18); }
+.dc2-dot { stroke: rgba(14, 13, 12, .6); stroke-width: .6; cursor: pointer; }
+.dc2-dot:hover { stroke: var(--ink); stroke-width: 2; }
+
+/* ---- 07 the shelf ---- */
+.sh-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 24px 18px; margin-top: 36px; }
+.sh-h { font-size: clamp(36px, 5vw, 72px); margin-top: 88px; }
+
+/* ---- 02 where it comes from ---- */
+.or-stats { margin: 40px 0 44px; }
+.or-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 40px; align-items: start; }
+@media (max-width: 900px) { .or-grid { grid-template-columns: 1fr; } }
+.or-map svg { display: block; overflow: visible; }
+.or-sphere { fill: rgba(251, 247, 239, .025); stroke: rgba(251, 247, 239, .08); }
+.or-land { fill: rgba(251, 247, 239, .07); stroke: #0e0d0c; stroke-width: .5; }
+.or-land.on { fill: var(--amber); }
+.or-dot { stroke: #0e0d0c; stroke-width: 1.5; fill-opacity: .72; cursor: pointer; transition: opacity .2s; }
+.or-dot.dim { opacity: .25; }
+.or-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.or-list li { transition: opacity .2s; }
+.or-list li.dim { opacity: .35; }
+.or-row { display: flex; justify-content: space-between; font: 700 15px var(--grot); }
+.or-row span { font: 600 12px var(--mono); color: var(--ink-2); }
+.or-bar { height: 4px; margin: 6px 0 7px; background: rgba(251, 247, 239, .08); border-radius: 2px; overflow: hidden; }
+.or-bar i { display: block; height: 100%; width: calc(var(--w) * 100%); background: var(--c); transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease); }
+.or-list.in .or-bar i { transform: none; }
+.or-faces { display: flex; gap: 4px; }
+.or-faces img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; background: #222; }
+.or-foot { margin-top: 24px; font: 500 12px var(--mono); color: var(--ink-3); }
+@media (max-width: 640px) { .dc2-lab { font-size: 15px; } }

@@ -85,19 +85,9 @@ export const redesignConfig = {
     showHoverMeta: true,
   },
 
-  /** Section sizing on the Stats page. */
+  /** The latest additions at the foot of the Stats page (the chapters above come from public/stats/stats.json). */
   stats: {
-    topArtistsCount: 12,
-    topGenresCount: 13,
-    topYearsCount: 5,
     recentAdditionsCount: 12,
-    fromTheCratesCount: 6,
-    randomArtistsCount: 6,
-    decadeBarsMaxDecades: 10,
-    topLabelsCount: 28,
-    topCountriesCount: 10,
-    hiddenGemsCount: 8,
-    hiddenGemsListenersThreshold: 500,
   },
 
   /**

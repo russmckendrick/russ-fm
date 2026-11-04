@@ -1,4 +1,4 @@
-# Index headers (/albums, /artists)
+# Index headers (/albums, /artists, /stats)
 
 Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 [release room](./release-room.md) and [artist poster wall](./artist-wall.md):
@@ -8,6 +8,9 @@ Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
   ninth. The paging doesn't change: the shelf is part of page 1.
 - **/artists:** a fly-posted brick wall. The seven most collected artists each
   have a poster, printed like the artist page's.
+- **/stats:** an oak cube unit in a record room, six records face out, each
+  under a card with a collection fact drawn at random on every visit (see
+  [pages.md](./pages.md#statspage-srcpagesstatspagetsx)). It always shows.
 
 Below the photo is a one-row band in the flood: the `h1` with its count, then
 the collection in numbers.
@@ -39,6 +42,10 @@ layer, shade, photo and tint styles in `player.css`:
 
     There are no sleeves. The name keeps clear of torn bottom and right
     corners.
+- **Over:** an optional `renderOver(i)` draws above the photo in a box the
+  same as slot `i`'s, not clipped (`.index-room-over`). /stats hangs its
+  tags there, since anything inside a slot is covered by the photo outside
+  the hole.
 - **Shade:** one full-frame multiply layer. It carries the photo's own light
   over the slots: the lamp's falloff on the sleeves, the posters' wrinkles.
 - **Photo:** covers the box, the row centred across and below the header. It
@@ -55,7 +62,7 @@ slots (`#00FF00`), facing the camera dead-on, with clear gaps between
 them so each keys as its own blob.
 
 ```bash
-uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats]
 ```
 
 The script upscales 4× (`scripts/lib/upscale.py`, cached in
@@ -72,4 +79,4 @@ fifth the size of the biggest, and writes:
 The number of slots comes from the photo. A new photo with more or fewer
 slots needs no code change.
 
-The mockup these came from is `mockups/index-headers/`.
+The mockups these came from are `mockups/index-headers/` and `mockups/stats/`.

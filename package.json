@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler dev",
-    "build": "rm -rf dist && pnpm run generate-sitemap && pnpm run typecheck && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run generate-explore && pnpm run build:wrapped && pnpm run generate-sitemap && pnpm run generate-og && pnpm run generate-og-sections && pnpm run generate-static-meta",
+    "build": "rm -rf dist && pnpm run generate-sitemap && pnpm run typecheck && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run generate-explore && pnpm run build:wrapped && pnpm run generate-stats && pnpm run generate-sitemap && pnpm run generate-og && pnpm run generate-og-sections && pnpm run generate-static-meta",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-colors": "node scripts/generate-album-colors.js",
     "generate-artist-images": "node scripts/generate-artist-images.js",
@@ -26,6 +26,7 @@
     "build:worker": "pnpm run build:fast && node scripts/build-worker.js",
     "build:worker-cloudflare": "node scripts/build-worker-cloudflare.js",
     "build:wrapped": "tsx scripts/generate-wrapped-data.ts",
+    "generate-stats": "tsx scripts/generate-stats.ts",
     "deploy": "pnpm run build:worker && pnpm exec wrangler deploy",
     "deploy:preview": "pnpm run build:worker && pnpm exec wrangler deploy --env preview",
     "process-images": "tsx scripts/process-images.js",
@@ -73,7 +74,9 @@
     "recharts": "^3.9.1",
     "tailwind-merge": "^3.6.0",
     "three": "0.170.0",
-    "use-debounce": "^10.1.1"
+    "topojson-client": "3.1.0",
+    "use-debounce": "^10.1.1",
+    "world-atlas": "2.0.2"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1076.0",
@@ -85,6 +88,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@types/three": "0.170.0",
+    "@types/topojson-client": "^3.1.5",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.5.2",
     "chalk": "^5.6.2",

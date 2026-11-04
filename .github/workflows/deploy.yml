@@ -103,6 +103,8 @@ jobs:
 
           echo "📊 Generating wrapped data..."
           pnpm run build:wrapped
+          # /stats merges every year's Wrapped story, so it follows build:wrapped
+          pnpm run generate-stats
           pnpm run generate-sitemap
 
           echo "📸 Generating OG images (cache-aware)..."
