@@ -17,7 +17,7 @@ This document covers the route-level page components in russ.fm.
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
-| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
+| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` print grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | Flood band: `BrowseHeader` + what the record shows (all genres, a family, or a lit genre) beside the genre record (`GenreDisc`) → Families (Side A / Side B, colour barcodes) + newest records → Most collected ranked rows + A–Z index, all coloured from sleeves. |
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
@@ -155,6 +155,22 @@ homepage: {
 Paginated album browser. Page number is in the path, filters in the query
 string; changing a filter goes back to page 1 and default values are
 dropped from the URL.
+
+Page 1 with no filters, in any sort but Colour, opens on a record-shop
+ledge (`IndexRoom`). The page's first eight records stand on the shelf,
+and the grid carries on from the ninth. A one-row band below it holds the
+title and count, plus Vinyl, Box sets and Added this year. Any other view
+keeps the `FloodBand` title. See [index headers](./index-headers.md).
+
+In every sort but Colour, the grid of `RecordTile`s is filed in runs. A
+`RunDivider` card leads each run inline, as tall as the tiles, with the
+run's record count across all pages. Each sort has its own run
+(`albumRunOf()` in `src/lib/runs.ts`):
+
+- **Date added:** the month added (`OCT` / `2026`).
+- **A–Z:** the first letter of the title.
+- **Artist:** the first letter of the artist.
+- **Year:** the decade (`1990` / `to 1999`), or `?` when the year is unknown.
 
 **URL Parameters:**
 
@@ -321,19 +337,25 @@ description (`buildAlbumDescription`) also leads with Perplexity.
 
 **Route:** `/artists`, `/artists/:page`
 
+Page 1 with no search or letter opens on a fly-posted wall (`IndexRoom`):
+the seven most collected artists' posters, then a one-row band with the
+title, count and the same facts as the mono line. Any other view shows the
+title band below. See [index headers](./index-headers.md).
+
 - `Artists` title with the count in dim type, and a mono line about the
   whole collection under it: records, the most collected artist (linked) and
   how many artists were first added this year
 - Pill search field and sort pills (A–Z, Most records, Latest added)
 - Scrollable A–Z strip (letters without artists are disabled)
 - Each sort has its own layout:
-  - **A–Z** and **Latest added**: an `ArtistCard` grid
-    (`grid-flow-row-dense`). Each ring takes the flood colour of the artist's
-    latest record from `useAlbumColorMap()`, and the sleeves of their three
-    most recently added records fan out from behind the photo on hover. Artists with 5+ records get a
+  - **A–Z** and **Latest added**: an `ArtistCard` grid of photo prints
+    (`print`, `grid-flow-row-dense`). Each print's tape takes the flood
+    colour of the artist's latest record from `useAlbumColorMap()`. On hover,
+    the print straightens and the sleeves of their three most recently added
+    records fan out from behind it. Artists with 5+ records get a
     double-size `feature` tile (two columns by two rows from `sm` up). A cream
-    divider card (`RunDivider`: label large, the run's artist count, a tab on
-    top) leads each run inline in the grid, as tall as the artist tiles: the
+    divider card (`RunDivider` in `src/components/browse/`: label large, the
+    run's artist count, a tab on top) leads each run inline in the grid, as tall as the artist tiles: the
     first letter in A–Z (digits and punctuation under `#`, accents dropped),
     the month of the latest record in Latest added (`SEP` / `2026`)
   - **Most records**: a ranked list (`RankedArtists`): rank, `ArtistPhoto`,

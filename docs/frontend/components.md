@@ -160,6 +160,18 @@ with the poster cut out. Props:
 
 See [artist poster wall](./artist-wall.md).
 
+`IndexRoom` (`src/components/browse/IndexRoom.tsx`) is the /albums and
+/artists header: a photo with a row of slots cut out. Props:
+
+- `room` (`'albums' | 'artists'`)
+- `renderSlot(i, { width, height })`: what shows through slot `i`
+- `slotClassName`
+- `tint` (the flood)
+- `topInset` (defaults to the header height)
+
+`IndexPoster` is one /artists poster. It is printed like `PosterWall`'s, with
+no sleeves. See [index headers](./index-headers.md).
+
 ## Album components (`src/components/album/BoxSet.tsx`)
 
 Used by `AlbumDetailPage` when the album has `boxset_contents`. The disc
@@ -376,6 +388,16 @@ pushes in on the faces (1.18×, from their middle); photos without faces keep
 the gentle 1.05× zoom. The photo fades in once the notes have loaded, so it
 never jumps from a centre crop.
 
+With `print` (/artists), the photo is a square print instead of a circle
+(`.artist-print` in `player.css`):
+
+- The same crop on a cream paper border, a little askew. The tilt is -2° to
+  2°, worked out from the name, so it never reshuffles.
+- A strip of tape in the latest sleeve's flood instead of the ring.
+- The poster wear screened over it at 22%.
+
+On hover the print straightens and lifts.
+
 | Prop | Type | Description |
 |------|------|-------------|
 | artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils`; `uri` is the `/artist/<slug>/` path |
@@ -383,7 +405,21 @@ never jumps from a centre crop.
 | feature | `boolean` | Bigger tile: larger name, count and ring. The caller spans it (`sm:col-span-2 sm:row-span-2`) |
 | records | `Pick<Album, 'uri_release' \| 'release_name'>[]` | Up to three records, latest first: their sleeves fan out from behind the photo on hover |
 | unit | `[string, string]` | What `albumCount` counts, singular and plural (default `record`, `records`; `WhoTurnsUp` says compilations) |
+| print | `boolean` | A taped, slightly tilted photo print instead of the round photo and ring |
 | onClick | `() => void` | Render as a button instead of a link |
+
+### RunDivider (`src/components/browse/RunDivider.tsx`)
+
+A cream rack divider card inline in a grid, leading each run. It is as tall
+as the tiles, with a tab on top, the label large, an optional small `year`,
+and the run's count (`unit`, default artists). The runs come from
+`src/lib/runs.ts`:
+
+- `letterOf()`: a name's first letter, or `#`.
+- `monthRun()`: a month.
+- `albumRunOf()`: a record's run for an /albums sort.
+
+Used by /artists and /albums.
 
 ### Compilations (`src/components/various/`)
 

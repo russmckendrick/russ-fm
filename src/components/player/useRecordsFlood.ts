@@ -55,16 +55,16 @@ export function bandFromFlood(f: Flood): RecordsFlood {
  * Paint the page (nav, header band, ground) from its leading records. Pass
  * the uris in display order; the result is null until colours have loaded.
  */
-export function useRecordsFlood(uris: Array<string | null | undefined>, count = LEAD): RecordsFlood | null {
+export function useRecordsFlood(uris: Array<string | null | undefined>, count = LEAD, room = false): RecordsFlood | null {
   const map = useAlbumColorMap();
   const key = uris.slice(0, count).join('|');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const flood = useMemo(() => recordsFlood(uris, map, count), [key, map, count]);
-  usePageBand(flood);
+  usePageBand(flood, room);
   return flood;
 }
 
-/** Hand a band's colours to the nav and the page ground. */
-export function usePageBand(band: RecordsFlood | null) {
-  usePageFlood(band?.top, band?.ink, { ground: band?.ground });
+/** Hand a band's colours to the nav and the page ground; `room` makes the nav see-through over a room photo. */
+export function usePageBand(band: RecordsFlood | null, room = false) {
+  usePageFlood(band?.top, band?.ink, { ground: band?.ground, room });
 }

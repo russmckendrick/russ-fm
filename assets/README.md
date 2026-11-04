@@ -8,6 +8,7 @@ serves live in `public/`.
 | --- | --- | --- | --- |
 | `release-rooms/` | Codex listening rooms, one per `/tv` room id | `public/release-rooms/`, `src/config/release-rooms.json` | `scripts/process-release-rooms.py` ([docs](../docs/frontend/release-room.md)) |
 | `artist-walls/` | Codex fly-poster walls, one per `/tv` room id, and `generate.sh` with every prompt | `public/artist-walls/`, `src/config/artist-walls.json` | `scripts/process-artist-walls.py` ([docs](../docs/frontend/artist-wall.md)) |
+| `index-headers/` | Codex photos for the /albums and /artists headers: a shop ledge and a poster wall, each with a row of green slots | `public/index-headers/`, `src/config/index-headers.json` | `scripts/process-index-headers.py` ([docs](../docs/frontend/index-headers.md)) |
 | `textures/` | `poster-wear.png`, the scuffed-ink texture on every artist poster | `public/artist-walls/poster-wear.webp` | `scripts/process-artist-walls.py` |
 | `tv-rooms/` | Codex `/tv` rooms, one per room id | `public/tv-rooms/` | Keyed by hand in September 2026; there is no script yet |
 
@@ -19,11 +20,12 @@ prompt log (prompt, size, date).
 ```bash
 uv run --with numpy --with scipy --with opencv-python-headless --with pillow scripts/process-release-rooms.py [room-id ...]
 uv run --with numpy --with scipy --with pillow scripts/process-artist-walls.py [room-id ...]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists]
 ```
 
 With no ids, each script does every original in its folder.
 
-Both scripts upscale the originals 4× first (`scripts/lib/upscale.py`). The
+The scripts upscale the originals 4× first (`scripts/lib/upscale.py`). The
 upscale uses the `codex-image` skill's local finisher: FSRCNN on the CPU,
 with no paid service. The script finds the finisher under the Claude app's
 skills or `~/.claude/skills`, or set `CODEX_IMAGE_FINISH` to its `finish.sh`.

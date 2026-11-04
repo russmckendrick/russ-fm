@@ -148,6 +148,19 @@ cut out) and each wall's `shade` for its poster, one per `/tv` room, in
 picks an artist's wall: the room most of their records play in. See
 [artist poster wall](./artist-wall.md).
 
+### getIndexHeaderUrl
+
+```typescript
+getIndexHeaderUrl('albums', 'medium'); // "/index-headers/albums-medium.webp"
+getIndexHeaderUrl('artists', 'shade'); // "/index-headers/artists-shade.webp"
+```
+
+The /albums and /artists header photos (`hi-res` 4608px, `medium` 3072px,
+the slots cut out) and each one's full-frame `shade`, in
+`public/index-headers/`. The slot boxes are in `src/config/index-headers.json`
+(`indexRoom`, `indexRoomSlots`, `indexRoomSlotAspect` in
+`src/lib/indexHeaders.ts`). See [index headers](./index-headers.md).
+
 ### getArtistImageFromData
 
 Extract slug from artist data and get image.
