@@ -254,7 +254,16 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 - **About this record** — description with an expand toggle.
 - **Tracklist** — grouped by side (and by LP for multi-disc sets). Each
   side has a small disc and its label; scrobbling is whole-album only, from
-  the hero. Section-header rows render as kickers. Each track deep-links to Spotify when a match exists
+  the hero. Section-header rows render as kickers. Runtime bars
+  (`TracklistSide`): each side shows its running time beside the label and a
+  strip of its tracks to scale under it, and each timed row has a faint bar
+  in the page accent for its share of the side. Hovering a row or its strip
+  segment lights both and shows the share as a percentage. The bars grow in
+  once when the tracklist scrolls into view (only if it starts below the
+  fold; never with reduced motion). Which rows count comes from
+  `sideRuntime()` in `src/lib/tracklistRows.ts`: headings are skipped and a
+  suite counts once, by its movements when they're timed. Styles are the
+  `.tl-*` rules in `src/styles/player.css`. Each track deep-links to Spotify when a match exists
   (matched by normalised title via
   [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)). On a
   compilation, each track's artists link to their artist page when they have
@@ -285,6 +294,15 @@ then says Vinyl) and the logo and footer records follow the same colours. "Sleev
 colours" is a strip of the sleeve's main swatches (`useAlbumSwatches()`),
 each as wide as the share of the sleeve it covers, plus dots for the flood
 and secondary colour; it appears once `album-swatches.json` has loaded.
+The release details are printed on a record's centre label (`ReleaseLabel`,
+`src/components/album/ReleaseLabel.tsx`) in the flood colour and ink: the
+first record company arced over the top (each Discogs label once, without its
+"(2)"; `labelNames()` in `src/lib/releaseLabel.ts`), artist and title above
+the spindle hole (the title over up to three lines, `titleLines()`), the
+other facts below it, and the Format line arced under the bottom. A line that
+would run over the label's edge is squeezed with `textLength`, never cut. The
+SVG is `aria-hidden`; the full details, every label included, are in a
+visually hidden list.
 In the release details "Released" is the original year; "This pressing"
 shows the pressing's own date (detail JSON `released`, else `year`) and
 appears only when it differs. "Format" reads e.g. `Vinyl · Red & Yellow ·

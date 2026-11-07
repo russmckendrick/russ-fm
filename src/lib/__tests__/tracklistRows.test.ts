@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { basePosition, isHeadingRow, isSuiteRow, sidingPosition, vinylSide } from '../tracklistRows';
+import { basePosition, isHeadingRow, isSuiteRow, sideRuntime, sidingPosition, vinylSide } from '../tracklistRows';
 
 describe('tracklistRows', () => {
   it('strips the movement suffix from every Discogs movement style', () => {
@@ -32,5 +32,34 @@ describe('tracklistRows', () => {
     expect(isHeadingRow({ position: '' })).toBe(true);
     expect(isHeadingRow({ position: '', duration_ms: 1000 })).toBe(false);
     expect(isHeadingRow({ position: 'A1' })).toBe(false);
+  });
+});
+
+describe('sideRuntime', () => {
+  it('adds up the timed tracks and skips headings', () => {
+    const rows = [
+      { name: 'Side A', type: 'heading' },
+      { name: 'One', position: 'A1', duration_ms: 60000 },
+      { name: 'Two', position: 'A2' },
+      { name: 'Three', position: 'A3', duration_ms: 120000 },
+    ];
+    expect(sideRuntime(rows)).toEqual({ totalMs: 180000, timed: [1, 3] });
+  });
+
+  it('counts a suite once: by its movements when they are timed', () => {
+    const rows = [
+      { name: '2112', type: 'index', duration_ms: 300000 },
+      { name: 'Overture', position: 'A-I', parent: '2112', duration_ms: 100000 },
+      { name: 'Temples', position: 'A-II', parent: '2112', duration_ms: 200000 },
+    ];
+    expect(sideRuntime(rows)).toEqual({ totalMs: 300000, timed: [1, 2] });
+  });
+
+  it('counts an untimed-movement suite by its own length', () => {
+    const rows = [
+      { name: 'Suite', type: 'index', duration_ms: 300000 },
+      { name: 'Part 1', position: 'A1', parent: 'Suite' },
+    ];
+    expect(sideRuntime(rows)).toEqual({ totalMs: 300000, timed: [0] });
   });
 });

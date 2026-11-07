@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
@@ -25,11 +25,12 @@ import { threadFromAlbum } from '@/lib/explore/links';
 import { AFTER_HERO, CoverHero, FitTitle, HeroSticker, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
 import { serviceIconFor } from '@/components/player/service-icon';
 import { ReleaseRoom } from '@/components/album/ReleaseRoom';
+import { ReleaseLabel } from '@/components/album/ReleaseLabel';
 import { releaseRoomFor } from '@/lib/releaseRooms';
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
 import { boxMemberDiscs, buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
-import { isHeadingRow, isSuiteRow, sidingPosition, vinylSide } from '@/lib/tracklistRows';
+import { isHeadingRow, isSuiteRow, sideRuntime, sidingPosition, vinylSide } from '@/lib/tracklistRows';
 import { CompilationFaces } from '@/components/various/CompilationFaces';
 import { useCompilations } from '@/components/various/useCompilations';
 import { VARIOUS_NAME, isCompilation, isVarious, linkedArtists, trackArtistPage } from '@/lib/compilations';
@@ -1290,15 +1291,17 @@ export function AlbumDetailPage() {
             )}
 
             <section>
-              <h3 className="t-kicker m-0 mb-2 text-[color:var(--cream-dim)]">Release details</h3>
-              <dl className="m-0">
-                {facts.map(([k, v]) => (
-                  <div key={k} className="flex flex-col gap-1.5 border-t py-4" style={{ borderColor: 'var(--cream-rule)' }}>
-                    <dt className="t-kicker text-[11px]" style={{ color: accent }}>{k}</dt>
-                    <dd className="m-0 text-[16px] font-semibold">{v}</dd>
-                  </div>
-                ))}
-              </dl>
+              <h3 className="t-kicker m-0 mb-4 text-[color:var(--cream-dim)]">Release details</h3>
+              {/* Printed on a centre label: the record company over the top, the format under it. */}
+              <ReleaseLabel
+                labels={detailedAlbum?.labels ?? []}
+                format={facts.find(([k]) => k === 'Format')?.[1]}
+                artist={album.release_artist}
+                title={album.release_name}
+                facts={facts.filter(([k]) => k !== 'Label' && k !== 'Format')}
+                paper={flood.flood}
+                ink={flood.ink}
+              />
             </section>
 
             {(detailedAlbum?.services?.spotify?.external_ids?.upc || detailedAlbum?.discogs_id || detailedAlbum?.spotify_id) && (
@@ -1553,94 +1556,180 @@ function Tracklist({
       ? grouping.groups.map(g => ({ heading: g.lpLabel, sides: g.sides }))
       : [{ sides: grouping.groups }];
 
+  // The runtime bars grow in once, when the tracklist scrolls into view. Only when it
+  // starts below the fold: at rest, or already on screen, they're simply drawn.
+  const root = useRef<HTMLDivElement>(null);
+  const [grow, setGrow] = useState<'' | 'tl-pending' | 'tl-seen'>('');
+  useEffect(() => {
+    const el = root.current;
+    if (!el || typeof IntersectionObserver === 'undefined' || el.getBoundingClientRect().top < window.innerHeight) return;
+    setGrow('tl-pending');
+    const io = new IntersectionObserver(
+      entries => {
+        if (entries.some(e => e.isIntersecting)) {
+          setGrow('tl-seen');
+          io.disconnect();
+        }
+      },
+      { threshold: 0.15 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-12">
+    <div ref={root} className={cn('flex flex-col gap-12', grow)}>
       {blocks.map((block, bi) => (
         <div key={bi} className="flex flex-col gap-6">
           {block.heading && blocks.length > 1 && <h3 className="t-kicker m-0" style={{ color: accent }}>{block.heading}</h3>}
           <div className="grid gap-x-14 gap-y-12 md:grid-cols-2">
-            {block.sides.map((side, si) => {
-              const rows = side.tracks.filter(t => t.position || t.duration_ms || t.name);
-              return (
-                <div key={si} className="flex min-w-0 flex-col gap-3">
-                  {side.label && (
-                    <div className="flex flex-wrap items-center gap-3.5">
-                      <div className="relative h-12 w-12 shrink-0">
-                        <Vinyl
-                          label={discColour}
-                          look={lookAt(looks, grouping.type === 'lp' ? bi : Math.floor(si / 2))}
-                          spin={false}
-                          className="inset-0"
-                        />
-                      </div>
-                      <span className="t-disp flex-1 text-[30px] md:text-[36px]">{side.label}</span>
-                    </div>
-                  )}
-                  <ol className="m-0 list-none p-0">
-                    {rows.map((track, i) => {
-                      if (isSuiteRow(track)) {
-                        // A suite heads its movements, which follow it with their own positions.
-                        const duration = getDuration(track);
-                        return (
-                          <li key={i} className="flex items-baseline gap-4 pb-1 pt-4">
-                            <span className="t-kicker flex-1" style={{ color: accent }}>{track.name}</span>
-                            {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
-                          </li>
-                        );
-                      }
-                      if (isHeadingRow(track)) {
-                        return (
-                          <li key={i} className="t-kicker pb-1 pt-4" style={{ color: accent }}>
-                            {track.name}
-                          </li>
-                        );
-                      }
-                      const spotifyId = spotifyIndex.get(normaliseTrackTitle(track.name));
-                      const duration = getDuration(track);
-                      return (
-                        <li key={i} className="flex items-baseline gap-4 border-b py-3.5 text-[16px] md:text-[17px]" style={{ borderColor: 'var(--cream-rule)' }}>
-                          <span className="t-mono min-w-8 shrink-0 whitespace-nowrap text-[12px] font-bold" style={{ color: accent }}>
-                            {track.position || track.track_number || i + 1}
-                          </span>
-                          <span className="min-w-0 flex-1 font-semibold">
-                            {spotifyId ? (
-                              <a href={`https://open.spotify.com/track/${spotifyId}`} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" title="Open on Spotify">
-                                {track.name}
-                              </a>
-                            ) : (
-                              track.name
-                            )}
-                            {track.artists && track.artists.length > 0 && (
-                              <span className="ml-2 text-[13px] font-normal text-[color:var(--cream-dim)]">
-                                {track.artists.map((a, j) => {
-                                  const page = artistPage(a.name);
-                                  return (
-                                    <React.Fragment key={`${a.name}-${j}`}>
-                                      {j > 0 && ', '}
-                                      {page ? (
-                                        <Link to={page} className="underline decoration-1 underline-offset-4 hover:text-[color:var(--cream)]">
-                                          {a.name}
-                                        </Link>
-                                      ) : (
-                                        a.name
-                                      )}
-                                    </React.Fragment>
-                                  );
-                                })}
-                              </span>
-                            )}
-                          </span>
-                          {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
-                        </li>
-                      );
-                    })}
-                  </ol>
-                </div>
-              );
-            })}
+            {block.sides.map((side, si) => (
+              <TracklistSide
+                key={si}
+                side={side}
+                look={lookAt(looks, grouping.type === 'lp' ? bi : Math.floor(si / 2))}
+                accent={accent}
+                discColour={discColour}
+                spotifyIndex={spotifyIndex}
+                getDuration={getDuration}
+                artistPage={artistPage}
+              />
+            ))}
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+/** A side's running time: m:ss, or h:mm:ss for a long CD. */
+function sideTime(ms: number) {
+  const s = Math.round(ms / 1000);
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = String(s % 60).padStart(2, '0');
+  return h ? `${h}:${String(m).padStart(2, '0')}:${sec}` : `${m}:${sec}`;
+}
+
+/**
+ * One side of the tracklist: its record and running time, a strip of its tracks to
+ * scale, and the rows, each with a faint bar for its share of the side. A row and its
+ * strip segment light up together.
+ */
+function TracklistSide({
+  side,
+  look,
+  accent,
+  discColour,
+  spotifyIndex,
+  getDuration,
+  artistPage,
+}: {
+  side: { label: string; tracks: Track[] };
+  look: VinylLook | null;
+  accent: string;
+  discColour: string;
+  spotifyIndex: Map<string, string>;
+  getDuration: (t: Track) => string;
+  artistPage: (name: string) => string | null;
+}) {
+  const [hot, setHot] = useState<number | null>(null);
+  const rows = side.tracks.filter(t => t.position || t.duration_ms || t.name);
+  const { totalMs, timed } = sideRuntime(rows);
+  const share = (t: Track) => (totalMs && t.duration_ms ? t.duration_ms / totalMs : 0);
+  const trackCount = rows.filter(t => !isSuiteRow(t) && !isHeadingRow(t)).length;
+  const hover = (i: number) => ({ onMouseEnter: () => setHot(i), onMouseLeave: () => setHot(null) });
+
+  return (
+    <div className="flex min-w-0 flex-col gap-3" style={{ '--tl-accent': accent } as React.CSSProperties}>
+      {side.label && (
+        <div className="flex flex-wrap items-center gap-3.5">
+          <div className="relative h-12 w-12 shrink-0">
+            <Vinyl label={discColour} look={look} spin={false} className="inset-0" />
+          </div>
+          <span className="t-disp flex-1 whitespace-nowrap text-[30px] md:text-[36px]">{side.label}</span>
+          {totalMs > 0 && (
+            <span className="ml-auto flex items-baseline gap-1.5">
+              <span className="t-dispn text-[20px] tabular-nums md:text-[22px]">{sideTime(totalMs)}</span>
+              <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">{trackCount} {trackCount === 1 ? 'track' : 'tracks'}</span>
+            </span>
+          )}
+        </div>
+      )}
+      {side.label && timed.length > 1 && (
+        <div className="tl-strip" aria-hidden>
+          {timed.map(i => (
+            <i key={i} data-hot={hot === i || undefined} style={{ flexGrow: rows[i].duration_ms }} {...hover(i)} />
+          ))}
+        </div>
+      )}
+      <ol className="m-0 list-none p-0">
+        {rows.map((track, i) => {
+          if (isSuiteRow(track)) {
+            // A suite heads its movements, which follow it with their own positions.
+            const duration = getDuration(track);
+            return (
+              <li key={i} className="flex items-baseline gap-4 pb-1 pt-4">
+                <span className="t-kicker flex-1" style={{ color: accent }}>{track.name}</span>
+                {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
+              </li>
+            );
+          }
+          if (isHeadingRow(track)) {
+            return (
+              <li key={i} className="t-kicker pb-1 pt-4" style={{ color: accent }}>
+                {track.name}
+              </li>
+            );
+          }
+          const spotifyId = spotifyIndex.get(normaliseTrackTitle(track.name));
+          const duration = getDuration(track);
+          const part = timed.includes(i) ? share(track) : 0;
+          return (
+            <li
+              key={i}
+              className={cn('flex items-baseline gap-4 border-b py-3.5 text-[16px] md:text-[17px]', part > 0 && 'tl-row')}
+              style={{ borderColor: 'var(--cream-rule)', ...(part > 0 ? ({ '--share': `${(part * 100).toFixed(1)}%`, '--i': timed.indexOf(i) } as React.CSSProperties) : {}) }}
+              data-hot={hot === i || undefined}
+              {...(part > 0 ? hover(i) : {})}
+            >
+              <span className="t-mono min-w-8 shrink-0 whitespace-nowrap pl-2 text-[12px] font-bold" style={{ color: accent }}>
+                {track.position || track.track_number || i + 1}
+              </span>
+              <span className="min-w-0 flex-1 font-semibold">
+                {spotifyId ? (
+                  <a href={`https://open.spotify.com/track/${spotifyId}`} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" title="Open on Spotify">
+                    {track.name}
+                  </a>
+                ) : (
+                  track.name
+                )}
+                {track.artists && track.artists.length > 0 && (
+                  <span className="ml-2 text-[13px] font-normal text-[color:var(--cream-dim)]">
+                    {track.artists.map((a, j) => {
+                      const page = artistPage(a.name);
+                      return (
+                        <React.Fragment key={`${a.name}-${j}`}>
+                          {j > 0 && ', '}
+                          {page ? (
+                            <Link to={page} className="underline decoration-1 underline-offset-4 hover:text-[color:var(--cream)]">
+                              {a.name}
+                            </Link>
+                          ) : (
+                            a.name
+                          )}
+                        </React.Fragment>
+                      );
+                    })}
+                  </span>
+                )}
+              </span>
+              {part > 0 && <span className="tl-pct t-mono text-[11px] text-[color:var(--cream-dim)]">{Math.round(part * 100)}%</span>}
+              {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 }

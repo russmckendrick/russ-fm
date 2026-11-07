@@ -2180,3 +2180,78 @@ body {
     animation: none;
   }
 }
+
+/* --- Tracklist runtime bars --------------------------------------------- */
+/* Each timed row carries a faint bar for its share of the side (--share), in the
+   page accent (--tl-accent); the strip under the side heading is the side to scale.
+   A row and its strip segment light up together (data-hot). */
+.tl-row {
+  position: relative;
+  isolation: isolate;
+}
+
+.tl-row::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: var(--share);
+  border-radius: 3px;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--tl-accent) 34%, transparent), color-mix(in oklab, var(--tl-accent) 10%, transparent));
+  transform-origin: left;
+  transition: background 0.2s var(--ease-out);
+  pointer-events: none;
+}
+
+.tl-row[data-hot]::before {
+  background: linear-gradient(90deg, color-mix(in oklab, var(--tl-accent) 62%, transparent), color-mix(in oklab, var(--tl-accent) 22%, transparent));
+}
+
+.tl-pct {
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-out);
+}
+
+.tl-row[data-hot] .tl-pct {
+  opacity: 1;
+}
+
+.tl-strip {
+  display: flex;
+  gap: 3px;
+  height: 6px;
+}
+
+.tl-strip i {
+  display: block;
+  flex-basis: 0;
+  min-width: 3px;
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--tl-accent) 70%, transparent);
+  transform-origin: bottom;
+  transition: background 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+.tl-strip i[data-hot] {
+  background: var(--cream);
+  transform: scaleY(1.6);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tl-pending .tl-row::before {
+    transform: scaleX(0.02);
+  }
+
+  .tl-seen .tl-row::before {
+    animation: tl-grow 0.9s var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+
+@keyframes tl-grow {
+  from {
+    transform: scaleX(0.02);
+  }
+}

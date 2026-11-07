@@ -52,3 +52,21 @@ export function sidingPosition<T extends TracklistRowShape & { name?: string }>(
   }
   return basePosition(row);
 }
+
+/**
+ * A side's running time, and which rows make it up (for the tracklist's runtime bars).
+ * Headings are skipped, and a suite counts once: by its movements when they're timed,
+ * otherwise by its own length.
+ */
+export function sideRuntime(rows: Array<TracklistRowShape & { name?: string }>): { totalMs: number; timed: number[] } {
+  const timedSuites = new Set(rows.filter(r => r.parent && r.duration_ms).map(r => r.parent));
+  const timed: number[] = [];
+  let totalMs = 0;
+  rows.forEach((row, i) => {
+    if (!row.duration_ms || isHeadingRow(row)) return;
+    if (isSuiteRow(row) && row.name && timedSuites.has(row.name)) return;
+    timed.push(i);
+    totalMs += row.duration_ms;
+  });
+  return { totalMs, timed };
+}
