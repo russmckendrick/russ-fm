@@ -2099,6 +2099,13 @@ body {
   transition: background-color 0.8s var(--ease-out);
 }
 
+/* The 3D tonearm (RoomArm), over the photo and its tint. */
+.release-room-arm {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
 .release-room-sticker {
   position: absolute;
   z-index: 4;

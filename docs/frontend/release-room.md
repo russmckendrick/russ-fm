@@ -23,6 +23,35 @@ record on the turntable cut out (transparent), and sits over:
   black vinyl and `mix-blend-mode: overlay` on a coloured pressing, so a
   colour isn't washed out.
 
+### The tonearm
+
+The photos have no tonearm, only its base pillar. `RoomArm`
+(`src/components/album/RoomArm.tsx`) draws the arm in 3D over the photo with
+three.js (`src/lib/tonearm.ts`, loaded lazily on first use):
+
+- **Camera.** An orthographic camera tilted down by `asin(ry / rx)`: that is
+  the angle at which the record's circle becomes the photo's ellipse, so the
+  arm lines up with no per-room tuning beyond the pivot. World units are the
+  photo's pixels at 1536 × 1024, with the origin at the spindle on the
+  record's surface.
+- **Model.** Built in code: an S-shaped brushed tube, a gimbal, a knurled
+  counterweight, an anodised headshell, a cartridge with its lead wires, and
+  an arm rest. It is built to prog-art's proportions and scaled to each room
+  by the pivot-to-spindle distance. The stylus sits on the record's surface.
+- **Light.** A neutral studio environment for the reflections, so the metal
+  reads as steel, with warm key and rim lights for the room. Shadow-catcher
+  planes on the record and the plinth darken the photo under the arm.
+- **Motion.** The arm is either down on the lead-in or parked on its rest.
+  Between the two it lifts on the cue, swings, and lowers with a soft settle
+  (`LIFT_MS`, `SWING_MS`, `LOWER_MS`). It draws only while it moves. Reduced
+  motion jumps straight to the pose; without WebGL there is no arm.
+
+`ReleaseRoom` drives it. The arm cues in once its room shows. When the next
+record is in the same room, the record waits for the arm to park, swaps, and
+the arm cues back in (if the arm never reports back, the record swaps after
+3.5 s anyway). A record in another room crossfades the whole room as before,
+and the new room's arm cues in.
+
 A masked `mix-blend-mode: color` layer tints the room with the flood, as on
 `/tv`. The page sets `room: true` in `usePageFlood`, and the header is
 see-through over the room until it scrolls (`overRoom` in `Navigation.tsx`);
@@ -64,8 +93,9 @@ record plays in the same room on its album page, the home page and TV.
 - `public/release-rooms/<room>-{hi-res,medium}.webp`: 4608 and 3072 wide,
   3:2, one per `/tv` room id. `getReleaseRoomUrl(room, size)`.
 - `public/release-rooms/vinyl-{grooves,sheen}.webp`: the record textures.
-- `src/config/release-rooms.json`: each room's board and record geometry,
-  written by the script below.
+- `src/config/release-rooms.json`: each room's board, record and arm-pivot
+  geometry, written by the script below.
+- `assets/release-rooms/arms.json`: the arm pivots, by hand.
 
 ### Making or redoing a room
 
@@ -73,8 +103,11 @@ record plays in the same room on its album page, the home page and TV.
    needs, square to camera, a record stand holding a square board filled
    with flat chroma-key green (`#00FF00`), left of centre, about 30% of the
    width; and a turntable right of centre, seen from slightly above, with a
-   flat green record, a small white centre label and the tonearm on the
-   record. Nothing else green. Generate into a folder of its own (a running
+   flat green record and a small white centre label. The turntable has **no
+   tonearm**: only its short round base pillar, behind and right of the
+   platter. Nothing else green. (The current originals were made by giving
+   Codex the earlier photo, which had an arm, and asking it to take the arm
+   off; their prompt logs say so.) Generate into a folder of its own (a running
    `codex-image.sh` collects every new image in its output folder), then save
    it as `assets/release-rooms/<room-id>.png` with its prompt log as
    `<room-id>.txt`. All the originals and their prompts are there (see
@@ -90,8 +123,12 @@ record plays in the same room on its album page, the home page and TV.
    (the `codex-image` finisher, cached in `assets/.upscaled/release-rooms/`).
 
    The record's outline is an ellipse fitted to its green, drawn
-   anti-aliased; inside it only what is clearly not record (the tonearm and
-   cartridge) stays. The script warns when key green is still visible.
+   anti-aliased. The script warns when key green is still visible.
+
+   Before keying, add the room to `assets/release-rooms/arms.json`: the
+   centre of the arm pillar's top, in px at 1536 × 1024, measured by eye.
+   The script copies it into the room's geometry as `arm`. A room without
+   it has no 3D arm.
 3. A new room id must exist in `TV_ROOMS` (`src/lib/tv.ts`).
 
 `scripts/make-vinyl-textures.py` redraws the record textures (seeded, so a

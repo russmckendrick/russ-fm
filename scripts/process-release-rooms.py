@@ -14,6 +14,11 @@ first (scripts/lib/upscale.py, cached in assets/.upscaled/release-rooms/).
 
 Writes public/release-rooms/<id>-{hi-res,medium}.webp (4608 / 3072 wide) and the stand/record
 geometry into src/config/release-rooms.json (other rooms' entries are kept).
+
+A room whose original has no tonearm (just the arm's base pillar) is listed in
+assets/release-rooms/arms.json with the pillar top's centre, in px at Codex's
+1536 size, measured by eye. The script copies it into the room's geometry as
+`arm`, and the site draws the arm there in 3D (src/lib/tonearm.ts).
 """
 import json
 import sys
@@ -30,6 +35,7 @@ from upscale import originals, upscaled  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'release-rooms'
 CONFIG = ROOT / 'src' / 'config' / 'release-rooms.json'
+ARMS = ROOT / 'assets' / 'release-rooms' / 'arms.json'
 
 
 def ramp(x, lo, hi):
@@ -39,6 +45,7 @@ def ramp(x, lo, hi):
 ids = originals('release-rooms', sys.argv[1:])
 src_dir = upscaled('release-rooms', ids)
 meta = json.loads(CONFIG.read_text()) if CONFIG.exists() else {}
+arms = json.loads(ARMS.read_text()) if ARMS.exists() else {}
 OUT.mkdir(parents=True, exist_ok=True)
 for rid in ids:
     img = np.asarray(Image.open(src_dir / f'{rid}.png').convert('RGB')).astype(np.float32)
@@ -141,6 +148,10 @@ for rid in ids:
                    'rx': round(rx / w * 100, 3), 'ry': round(ry / h * 100, 3),
                    'cover': round(cover, 3), 'hole': round(hole, 3)},
     }
+    if rid in arms:
+        # The 3D arm's pivot: the top of its base pillar, % of the photo.
+        ax, ay = arms[rid]['pivot']
+        meta[rid]['arm'] = {'x': round(ax / 1536 * 100, 3), 'y': round(ay / 1024 * 100, 3)}
     print(rid, meta[rid])
 
 CONFIG.write_text(json.dumps(dict(sorted(meta.items())), indent=2) + '\n')

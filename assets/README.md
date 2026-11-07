@@ -6,7 +6,7 @@ serves live in `public/`.
 
 | Folder | What | Makes | How |
 | --- | --- | --- | --- |
-| `release-rooms/` | Codex listening rooms, one per `/tv` room id | `public/release-rooms/`, `src/config/release-rooms.json` | `scripts/process-release-rooms.py` ([docs](../docs/frontend/release-room.md)) |
+| `release-rooms/` | Codex listening rooms, one per `/tv` room id, with no tonearm (drawn in 3D); `arms.json` holds each arm's pivot | `public/release-rooms/`, `src/config/release-rooms.json` | `scripts/process-release-rooms.py` ([docs](../docs/frontend/release-room.md)) |
 | `artist-walls/` | Codex fly-poster walls, one per `/tv` room id, and `generate.sh` with every prompt | `public/artist-walls/`, `src/config/artist-walls.json` | `scripts/process-artist-walls.py` ([docs](../docs/frontend/artist-wall.md)) |
 | `index-headers/` | Codex photos for the /albums, /artists and /stats headers: a shop ledge, a poster wall and record shelving, each with a row of green slots | `public/index-headers/`, `src/config/index-headers.json` | `scripts/process-index-headers.py` ([docs](../docs/frontend/index-headers.md)) |
 | `textures/` | `poster-wear.png`, the scuffed-ink texture on every artist poster | `public/artist-walls/poster-wear.webp` | `scripts/process-artist-walls.py` |

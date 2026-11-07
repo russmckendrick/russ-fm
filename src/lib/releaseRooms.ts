@@ -21,6 +21,12 @@ export interface ReleaseRoom {
    * fill the cut-out and the label's radius, both in half-widths.
    */
   record: { x: number; y: number; fx: number; fy: number; rx: number; ry: number; cover: number; hole: number };
+  /**
+   * Rooms whose photo has no tonearm, only its base: the top of the base
+   * pillar (% of the photo), where the 3D arm (src/lib/tonearm.ts) pivots.
+   * Without it the arm is part of the photo.
+   */
+  arm?: { x: number; y: number };
   /** How brightly the room lights the record (a brightness filter, by eye from the photo). */
   light: number;
 }
@@ -31,7 +37,7 @@ export const RELEASE_ROOM_ASPECT = 1.5;
 /** Rooms dark enough that a full-brightness record glows; by eye. */
 const LIGHT: Partial<Record<TvRoomId, number>> = {};
 
-const GEOMETRY = geometry as Record<string, Pick<ReleaseRoom, 'sleeve' | 'record'>>;
+const GEOMETRY = geometry as Record<string, Pick<ReleaseRoom, 'sleeve' | 'record' | 'arm'>>;
 
 export const RELEASE_ROOMS: ReleaseRoom[] = TV_ROOMS.filter(r => GEOMETRY[r.id]).map(r => ({
   id: r.id,

@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Vinyl } from '@/components/player';
+import { RoomArm } from './RoomArm';
 import { getReleaseRoomUrl } from '@/lib/image-utils';
 import { RELEASE_ROOM_ASPECT, type ReleaseRoom as Room } from '@/lib/releaseRooms';
 import type { VinylLook } from '@/lib/vinylLook';
@@ -98,6 +99,10 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
  * Several records (the home page) share one room per photo: records in the
  * same room crossfade in place, and a record in another room crossfades the
  * whole room.
+ *
+ * A room with `arm` has no tonearm in its photo; RoomArm draws one in 3D. It
+ * cues in once the room shows, and between two records in that room it lifts
+ * and parks before the record swaps, then cues back in.
  */
 export function ReleaseRoom({ records, active, tint, fast = false, sticker, topInset, zoom = 1.5, className }: ReleaseRoomProps) {
   const box = useRef<HTMLDivElement>(null);
@@ -116,10 +121,19 @@ export function ReleaseRoom({ records, active, tint, fast = false, sticker, topI
   }, []);
 
   // The record on show: the active one once its room's photo is ready; until
-  // then the previous one stays, so switching never fades through black.
+  // then the previous one stays, so switching never fades through black. In a
+  // room with a 3D arm, a record in the same room waits for the arm to park.
   const [shown, setShown] = useState(active);
-  if (shown !== active && records[active] && loaded.has(records[active].room.id)) setShown(active);
+  const target = records[active];
+  const parkFirst = !!target && shown !== active && target.room.id === records[shown]?.room.id && !!target.room.arm;
+  if (shown !== active && target && loaded.has(target.room.id) && !parkFirst) setShown(active);
   const current = records[shown] ?? records[active];
+  // If the arm never reports back (no WebGL), swap anyway.
+  useEffect(() => {
+    if (!parkFirst) return;
+    const t = window.setTimeout(() => setShown(active), 3500);
+    return () => window.clearTimeout(t);
+  }, [parkFirst, active]);
   const currentRoom = current?.room.id ?? null;
   // Only the rooms in play are mounted (a decoded photo is tens of MB): the one
   // on show, the active and next records' (loading) and the one fading out.
@@ -206,6 +220,16 @@ export function ReleaseRoom({ records, active, tint, fast = false, sticker, topI
                 className="release-room-tint"
                 style={{ ...g.img, background: tint, WebkitMaskImage: `url(${medium})`, maskImage: `url(${medium})` }}
               />
+              {room.arm && (
+                <RoomArm
+                  room={room}
+                  img={g.img}
+                  down={on && loaded.has(room.id) && !parkFirst}
+                  onSettled={down => {
+                    if (!down && on && parkFirst) setShown(active);
+                  }}
+                />
+              )}
             </div>
           );
         })}
