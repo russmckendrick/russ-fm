@@ -43,7 +43,7 @@ export default function decades(el: HTMLElement): StatsChapter {
     const within = d3.randomLcg(0.7);
     const sw = swarm(box, recs.map(r => ({ r, x: x(r.y + within()) })), {
       r: narrow ? 2.2 : 3.4,
-      tip: (e, it) => tip.show(e, recordTip(v, it.r, `<span style="color:var(--amber)">${it.r.y}</span> · ${arrived(it.r) - it.r.y!} years old when it arrived in ${arrived(it.r)}`)),
+      tip: (e, it) => tip.show(e, () => recordTip(v, it.r, `<span style="color:var(--amber)">${it.r.y}</span> · ${arrived(it.r) - it.r.y!} years old when it arrived in ${arrived(it.r)}`), it),
     });
     sw.svg.attr('role', 'img').attr('aria-label', 'Every record by original release year');
     const bands = sw.bg.selectAll('g').data(d3.range(lo, hi, 10)).join('g');

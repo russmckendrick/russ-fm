@@ -92,10 +92,11 @@ export default function origins(el: HTMLElement): StatsChapter {
       dots.classed('dim', p => !!id && p.id !== id);
       items.forEach(li => li.classList.toggle('dim', !!id && li.dataset.id !== id));
     };
+    let focused: string | null = null;
     dots.on('pointermove', (e: PointerEvent, p) => {
-      focus(p.id);
-      tip.show(e, `<b>${esc(p.name)} · ${plural(p.n, 'record')}</b>${plural(p.artists.length, 'artist')}: ${p.artists.slice(0, 4).map(a => esc(a.name)).join(', ')}${p.artists.length > 4 ? '…' : ''}`);
-    }).on('pointerleave', () => { tip.hide(); focus(null); });
+      if (focused !== p.id) { focused = p.id; focus(p.id); }
+      tip.show(e, () => `<b>${esc(p.name)} · ${plural(p.n, 'record')}</b>${plural(p.artists.length, 'artist')}: ${p.artists.slice(0, 4).map(a => esc(a.name)).join(', ')}${p.artists.length > 4 ? '…' : ''}`, p);
+    }).on('pointerleave', () => { tip.hide(); focused = null; focus(null); });
     items.forEach(li => {
       li.addEventListener('pointerenter', () => focus(li.dataset.id!));
       li.addEventListener('pointerleave', () => focus(null));

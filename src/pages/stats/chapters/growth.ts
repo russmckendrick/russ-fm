@@ -68,15 +68,18 @@ export default function growth(el: HTMLElement): StatsChapter {
       .attr('class', 'gr-area').attr('fill', s => v.famColour[s.key]).attr('d', area);
 
     const rule = box.querySelector<HTMLElement>('.gr-rule')!;
+    const near = d3.bisector((r: Row) => r.date).center;
     box.addEventListener('pointermove', e => {
-      const row = rows[d3.bisector((r: Row) => r.date).center(rows, x.invert(e.clientX - box.getBoundingClientRect().left))];
+      const row = rows[near(rows, x.invert(e.clientX - box.getBoundingClientRect().left))];
       rule.style.transform = `translateX(${x(row.date)}px)`;
       rule.classList.add('on');
+      tip.show(e, () => {
       const top = fams.map(f => [f, row[f] as number] as const).filter(([, c]) => c).sort((a, b) => b[1] - a[1]).slice(0, 3);
       // The month's best-known records first.
       const sleeves = [...row.list].sort((a, b) => (b.lis ?? 0) - (a.lis ?? 0)).slice(0, 6);
-      tip.show(e, `<b>${label(row.k)} · ${plural(row.list.length, 'record')}</b>${top.map(([f, c]) => `${esc(v.famName[f])} ${c}`).join(' · ')}
-        <div class="thumbs">${sleeves.map(r => `<img src="${v.img(r.s)}" alt="">`).join('')}</div>`);
+      return `<b>${label(row.k)} · ${plural(row.list.length, 'record')}</b>${top.map(([f, c]) => `${esc(v.famName[f])} ${c}`).join(' · ')}
+        <div class="thumbs">${sleeves.map(r => `<img src="${v.img(r.s)}" alt="">`).join('')}</div>`;
+      }, row);
     });
     const leave = () => { tip.hide(); rule.classList.remove('on'); };
     box.addEventListener('pointerleave', leave);

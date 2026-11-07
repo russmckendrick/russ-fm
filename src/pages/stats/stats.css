@@ -6,9 +6,9 @@
   & .st-stats { margin: 40px 0 44px; }
   & .label + .cr-title, & .cr-title { color: var(--amber); margin: 0 0 14px; }
 
-  /* Shared: the swarm's dots (reach, decades) and the lanes' names and ticks (long haul, artists, time machines) */
-  & .sw-dot { stroke: rgba(14, 13, 12, .6); stroke-width: .6; cursor: pointer; }
-  & .sw-dot:hover { stroke: var(--ink); stroke-width: 2; }
+  /* Shared: the swarm's canvas (reach, decades) and the lanes' names and ticks (long haul, artists, time machines) */
+  & .rc-field, & .dc2-field { position: relative; }
+  & .sw-canvas { position: absolute; top: 0; left: 0; display: block; }
   & .lh-chart svg, & .ar-chart svg, & .tm-chart svg, & .dc2-field svg, & .rc-field svg, & .gr-chart svg, & .or-map svg { display: block; overflow: visible; }
   & .lh-tick { stroke: rgba(251, 247, 239, .08); }
   & .lh-yr { font: 600 11px var(--mono); fill: var(--ink-3); }
@@ -79,7 +79,7 @@
   & .pl-piles { display: grid; grid-template-columns: repeat(auto-fit, minmax(56px, 1fr)); gap: 10px; align-items: end; }
   & .pl-pile { display: flex; flex-direction: column; align-items: center; }
   & .pl-stack { height: clamp(260px, 40vw, 460px); width: 100%; display: flex; align-items: flex-end; justify-content: center; }
-  & .pl-stack canvas { width: min(100%, 120px); display: block; transform-origin: bottom; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .5)); transition: filter .2s; }
+  & .pl-stack canvas { width: min(100%, 120px); display: block; transform-origin: bottom; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .5)); }
   & .pl-piles.in canvas { animation: st-rise 1.4s var(--ease) both; animation-delay: calc(var(--i) * 60ms); }
   & .pl-pile:hover canvas { filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .5)) brightness(1.25); }
   & .pl-pile b { margin-top: 12px; font: 900 18px var(--display); }
@@ -130,10 +130,12 @@
 
   /* 12 who owns it */
   & .ow-waffle { display: grid; grid-template-columns: repeat(auto-fill, minmax(9px, 1fr)); gap: 2px; }
+  & .ow-waffle span { display: contents; }
   & .ow-waffle i { aspect-ratio: 1; border-radius: 1px; background: var(--c); opacity: 0; transition: opacity .5s; }
   & .ow-waffle.in i { opacity: .9; }
+  & .ow-waffle.ready i { transition: none; }
   & .ow-waffle.focus i { opacity: .12; }
-  & .ow-waffle.focus i.lit { opacity: 1; }
+  & .ow-waffle.focus .lit i { opacity: 1; }
   & .ow-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px 40px; margin-top: 32px; }
   & .ow-group b i { display: inline-block; width: 10px; height: 10px; margin-right: 8px; border-radius: 2px; background: var(--c); }
   & .ow-group .cr-strip { margin-top: 8px; }
@@ -163,3 +165,12 @@
 }
 
 @keyframes st-rise { from { transform: scaleY(0); } }
+
+/* Chapters are built as they come near the viewport (StatsStory.tsx); until then an empty
+   section holds a screen's height so the ones below stay out of reach. Off screen, a built
+   chapter skips layout and paint, keeping the size it last had. */
+.ws.stats-story > .chapter { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+.ws.stats-story > .chapter.pending { min-height: 100vh; }
+
+/* The /stats tooltips: already 94% opaque, so no backdrop blur to redo under every move. */
+.ws-tip.st-tip { backdrop-filter: none; }

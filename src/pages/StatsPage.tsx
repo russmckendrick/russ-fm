@@ -74,6 +74,7 @@ export function StatsPage() {
   // The band, the see-through header and the page ground take the latest additions' colours.
   const flood = useRecordsFlood(recent.map(a => a.uri_release), undefined, true);
   const palette = (a: Album) => paletteFor(colours, a.uri_release);
+  const titles = useMemo(() => new Map(data?.records.map(r => [r.s, r]) ?? []), [data]);
 
   if (error) {
     return (
@@ -85,7 +86,6 @@ export function StatsPage() {
   }
 
   const t = data?.totals;
-  const titles = new Map(data?.records.map(r => [r.s, r]) ?? []);
 
   return (
     <div className="bg-[var(--ground)] pb-10 text-[color:var(--cream)]">

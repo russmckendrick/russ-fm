@@ -46,7 +46,7 @@ export default function reach(el: HTMLElement): StatsChapter {
     const x = d3.scaleLog([1, d3.max(heard, r => r.lis)! * 1.2], [16, W - 16]).clamp(true);
     const sw = swarm(box, heard.map(r => ({ r, x: x(r.lis) })), {
       r: W < 640 ? 2 : 3,
-      tip: (e, it) => tip.show(e, recordTip(v, it.r, `<span style="color:var(--amber)">${n(it.r.lis!)}</span> listeners · ${n(it.r.pc ?? 0)} plays`)),
+      tip: (e, it) => tip.show(e, () => recordTip(v, it.r, `<span style="color:var(--amber)">${n(it.r.lis!)}</span> listeners · ${n(it.r.pc ?? 0)} plays`), it),
     });
     for (const tick of [10, 100, 1e3, 1e4, 1e5, 1e6].filter(k => x(k) < W - 30)) {
       sw.bg.append('line').attr('class', 'rc-tick').attr('x1', x(tick)).attr('x2', x(tick)).attr('y2', sw.H);

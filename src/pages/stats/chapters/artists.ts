@@ -61,7 +61,7 @@ export default function artists(el: HTMLElement): StatsChapter {
     rows.append('circle').attr('class', 'ar-start').attr('cx', a => x(a.formed)).attr('r', 4);
     rows.append('circle').attr('class', 'ar-first').attr('cx', a => x(a.formed)).attr('r', narrow ? 5 : 7).attr('fill', a => a.f ?? fallback);
     rows.filter(a => !!a.died).append('text').attr('class', 'ar-died').attr('x', a => x(a.died!)).attr('dy', '0.35em').attr('text-anchor', 'middle').text('✕');
-    rows.on('pointermove', (e: PointerEvent, a) => tip.show(e, `<b>${esc(a.name)}</b>Started ${a.formed}${a.born ? ` (born ${a.born})` : ''} · first record here ${new Date(a.first).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}<br>${plural(a.n, 'record')} on the shelves${a.died ? ` · died ${a.died}` : a.split ? ' · split up' : ''}<div class="thumbs"><img src="${v.avatar(a.s)}" alt=""></div>`))
+    rows.on('pointermove', (e: PointerEvent, a) => tip.show(e, () => `<b>${esc(a.name)}</b>Started ${a.formed}${a.born ? ` (born ${a.born})` : ''} · first record here ${new Date(a.first).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}<br>${plural(a.n, 'record')} on the shelves${a.died ? ` · died ${a.died}` : a.split ? ' · split up' : ''}<div class="thumbs"><img src="${v.avatar(a.s)}" alt=""></div>`, a))
       .on('pointerleave', () => tip.hide());
 
     const io = onVisible(box, () => {

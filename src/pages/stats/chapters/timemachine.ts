@@ -48,19 +48,20 @@ export default function timemachine(el: HTMLElement): StatsChapter {
       const a = x(r.y), b = x(Math.max(r.p, r.y + 0.3)), h = tall(r.p - r.y);
       return `M${a},${base} C${a},${base - h * 1.33} ${b},${base - h * 1.33} ${b},${base}`;
     };
-    // Widest arcs first so the short ones draw over them.
-    const paths = svg.append('g').selectAll('path').data([...pressed].sort((a, b) => (b.p - b.y) - (a.p - a.y))).join('path')
+    // Widest arcs first so the short ones draw over them. One clip rect sweeps them in left to
+    // right: a single animated attribute, where a transition per arc ran thousands at once.
+    const clip = `tm-clip-${Math.random().toString(36).slice(2)}`;
+    const reveal = svg.append('clipPath').attr('id', clip).append('rect').attr('y', -H).attr('height', H * 2).attr('width', reduced() ? W : 0);
+    svg.append('g').attr('clip-path', `url(#${clip})`).selectAll('path').data([...pressed].sort((a, b) => (b.p - b.y) - (a.p - a.y))).join('path')
       .attr('class', 'tm-arc').attr('d', arc).attr('stroke', r => r.f ?? fallback)
-      .on('pointermove', (e: PointerEvent, r) => tip.show(e, recordTip(v, r, `First out ${r.y} · this pressing ${r.p}${r.p - r.y >= 1 ? ` · <span style="color:var(--amber)">${r.p - r.y} years on</span>` : ''}`)))
+      .on('pointermove', (e: PointerEvent, r) => tip.show(e, () => recordTip(v, r, `First out ${r.y} · this pressing ${r.p}${r.p - r.y >= 1 ? ` · <span style="color:var(--amber)">${r.p - r.y} years on</span>` : ''}`), r))
       .on('pointerleave', () => tip.hide());
-    // pathLength=1 lets every arc draw in without measuring each one.
-    if (!reduced()) paths.attr('pathLength', 1).attr('stroke-dasharray', '1 1').attr('stroke-dashoffset', 1);
 
     const io = onVisible(box, () => {
-      if (!reduced()) paths.transition().duration(1600).delay((_, i) => (i / pressed.length) * 900).ease(d3.easeCubicOut).attr('stroke-dashoffset', 0);
+      if (!reduced()) reveal.transition().duration(2000).ease(d3.easeCubicInOut).attr('width', W);
       el.querySelectorAll<HTMLElement>('[data-n]').forEach(b => countUp(b, +b.dataset.n!));
     }, { threshold: 0.2 });
-    stops.push(() => { io.disconnect(); paths.interrupt(); tip.hide(); });
+    stops.push(() => { io.disconnect(); reveal.interrupt(); tip.hide(); });
   }
 
   return { render, dispose: () => { cleanup(); unwatch(); tip.remove(); } };

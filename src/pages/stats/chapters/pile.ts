@@ -77,8 +77,7 @@ export default function pile(el: HTMLElement): StatsChapter {
       const node = (e.target as Element).closest<HTMLElement>('.pl-pile');
       if (!node) return tip.hide();
       const p = piles[+node.dataset.i!];
-      const heavy = v.bySlug.get(p.heaviest);
-      tip.show(e, `<b>${p.yr}</b>${plural(p.records, 'record')}, ${plural(p.discs.length, 'disc')}<br>${p.kg.toFixed(1)} kg · ${p.hours} hours · ${p.coloured} coloured${heavy ? `<br>Heaviest: ${esc(heavy.t)}<div class="thumbs"><img src="${v.img(heavy.s)}" alt=""></div>` : ''}`);
+      tip.show(e, () => { const heavy = v.bySlug.get(p.heaviest); return `<b>${p.yr}</b>${plural(p.records, 'record')}, ${plural(p.discs.length, 'disc')}<br>${p.kg.toFixed(1)} kg · ${p.hours} hours · ${p.coloured} coloured${heavy ? `<br>Heaviest: ${esc(heavy.t)}<div class="thumbs"><img src="${v.img(heavy.s)}" alt=""></div>` : ''}`; }, p);
     });
     box.addEventListener('pointerleave', () => tip.hide());
 

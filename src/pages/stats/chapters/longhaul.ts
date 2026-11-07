@@ -52,7 +52,7 @@ export default function longhaul(el: HTMLElement): StatsChapter {
     rows.selectAll<SVGCircleElement, Dot>('circle').data(l => l.recs.map((r, k) => ({ r, k }))).join('circle')
       .attr('class', 'lh-dot').attr('cx', d => x(Date.parse(d.r.d))).attr('cy', d => ((d.k % 3) - 1) * 4)
       .attr('r', narrow ? 4 : 6).attr('fill', d => d.r.f ?? fallback)
-      .on('pointermove', (e: PointerEvent, d) => tip.show(e, recordTip(v, d.r, `added ${new Date(d.r.d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`)))
+      .on('pointermove', (e: PointerEvent, d) => tip.show(e, () => recordTip(v, d.r, `added ${new Date(d.r.d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`), d))
       .on('pointerleave', () => tip.hide());
   }
 

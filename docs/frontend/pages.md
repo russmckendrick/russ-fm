@@ -511,6 +511,29 @@ artist file.
   the Wrapped story's pattern, styled under `.ws` (`stats.css` on top of
   Wrapped's `story.css` and `credits.css`). `kit.ts` holds the shared view
   (`statsView`: image URLs and lookups), tooltips and the dot swarm.
+
+  The page is about 10k elements once every chapter is built, so how it
+  builds them matters:
+  - **Built near the viewport.** `StatsStory` builds a chapter only when its
+    section comes within 1.5 screens (IntersectionObserver), one chapter per
+    task. Until then an empty section is `.pending` (a screen tall). Built
+    chapters have `content-visibility: auto`, so off screen they skip layout
+    and paint.
+  - **The swarm** (`swarm()` in `kit.ts`, used by reach and decades) places
+    its ~3,400 dots with `dodge()`, a deterministic greedy beeswarm that
+    takes a few ms. It used to run a d3 force simulation, which cost over a
+    second per chart. The dots go on a `<canvas>` over an SVG that holds
+    the caller's bands and axis. Hover uses a quadtree, and `play()` lifts
+    the dots from the axis once.
+  - **Single-attribute reveals.** Time machines sweeps its ~3,400 arcs in
+    with one clip rect, like Arrivals, rather than one transition per arc.
+    The owners waffle wraps each group's squares in a `display: contents`
+    span, so hovering a group toggles a few spans, not thousands of squares.
+  - **Resize** (`onWidthChange`) waits until the width has settled for
+    150 ms and changed by more than 40 px before it redraws.
+  - **Tooltips** (`tooltip()`) take their markup as a function plus a key,
+    so moving over the same item only repositions the tip. They have no
+    backdrop blur (`.st-tip`).
   1. **Arrivals** (`growth`): records added each month, stacked by genre
      family in the families' sleeve colours.
   2. **Mainstream to deep cuts** (`reach`): every record with a Last.fm
