@@ -211,6 +211,15 @@ whose path clean-up rewrites any `/artist/` JSON path to the artist's detail fil
 
 ---
 
+### getArtistDetailJsonUrl
+
+The artist's detail JSON, `/artist/<slug>/<slug>.json` (bio, genres, followers and the
+raw Discogs / TheAudioDB data). Site-relative; load it with `loadDetailJson`, which
+caches it. The album page's artist band reads its facts from it (`artistFacts()` in
+`src/lib/artistFacts.ts`).
+
+---
+
 ### handleImageError
 
 Fallback handler for broken images.

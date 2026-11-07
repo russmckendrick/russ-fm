@@ -219,6 +219,12 @@ export function getArtistImageInfoUrl(uriArtist: string): string {
   return `/artist/${slug}/${slug}-image.json`;
 }
 
+/** The artist's detail JSON (bio, facts, raw service data), served with the site. */
+export function getArtistDetailJsonUrl(uriArtist: string): string {
+  const slug = getArtistSlug(uriArtist);
+  return `/artist/${slug}/${slug}.json`;
+}
+
 /**
  * Get artist avatar URL from artist data
  */

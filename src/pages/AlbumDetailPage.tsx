@@ -12,7 +12,7 @@ import { scrobbleableRows, toScrobbleTracks } from '@/lib/scrobbleTracks';
 import { SCENE_LEAD_IN_MS, SCENE_TRACK_MS, useScrobbleScene } from '@/hooks/useScrobbleScene';
 import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
 import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
-import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { getAlbumImageFromData, getAlbumSlug, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColors, useAlbumColorMap, useAlbumSwatches } from '@/hooks/useAlbumColors';
@@ -26,6 +26,7 @@ import { AFTER_HERO, CoverHero, FitTitle, HeroSticker, PillLink, RecordTile, Sec
 import { serviceIconFor } from '@/components/player/service-icon';
 import { ReleaseRoom } from '@/components/album/ReleaseRoom';
 import { ReleaseLabel } from '@/components/album/ReleaseLabel';
+import { ArtistBand } from '@/components/album/ArtistBand';
 import { releaseRoomFor } from '@/lib/releaseRooms';
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
@@ -1235,27 +1236,23 @@ export function AlbumDetailPage() {
               if (wiki !== -1) bio = bio.substring(0, wiki).trim();
               const count = collection.filter(a => a.uri_artist === artistUri || a.artists?.some(x => x.uri_artist === artistUri)).length;
               return (
-                <section key={artist.name} className="flex flex-col gap-6 rounded-[18px] bg-[rgba(0,0,0,.24)] p-6 md:flex-row md:gap-8 md:p-8">
-                  <Link to={artistUri} className="h-32 w-32 shrink-0 overflow-hidden rounded-full md:h-44 md:w-44">
-                    <img src={getArtistImageFromData(artistUri, 'medium')} alt={artist.name} onError={handleImageError} className="h-full w-full object-cover" />
-                  </Link>
-                  <div className="flex min-w-0 flex-col gap-4">
-                    <Link to={artistUri} className="t-disp text-[32px] md:text-[44px]">
-                      {artist.name}
-                    </Link>
-                    <ExpandableBody shouldCollapse={bio.length > 600} fade="#141210">
+                <ArtistBand
+                  key={artist.name}
+                  name={artist.name}
+                  uriArtist={artistUri}
+                  count={count}
+                  flood={flood.flood}
+                  accent={accent}
+                  bio={
+                    <ExpandableBody shouldCollapse={bio.length > 600} fade={flood.ground}>
                       <div className="flex flex-col gap-4 text-[16px] leading-[1.65] text-[color:var(--ink-2)] md:text-[17px]">
                         {bio.split('\n').filter(p => p.trim()).map((p, i) => (
                           <p key={i} className="m-0">{p.trim()}</p>
                         ))}
                       </div>
                     </ExpandableBody>
-                    <Link to={artistUri} className="inline-flex items-center gap-2 self-start font-bold" style={{ color: accent }}>
-                      {count} {count === 1 ? 'record' : 'records'} in the collection
-                      <ArrowRight className="h-4 w-4" aria-hidden />
-                    </Link>
-                  </div>
-                </section>
+                  }
+                />
               );
             })}
           </div>

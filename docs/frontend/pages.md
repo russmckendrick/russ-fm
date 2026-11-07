@@ -275,8 +275,20 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
   russ.fm/tv on the site-wide TV player, always, built from the release's links when `tv.json` lacks the record), not
   a separate section, so an album with dozens of videos costs no extra
   height. The section shows when any of the three is available.
-- **Artist bios** — one panel per credited artist with a biography, with a
-  link to the artist's records in the collection.
+- **Artist bios** — one fan-art band per credited artist with a biography
+  (`ArtistBand`, `src/components/album/ArtistBand.tsx`; the `.artist-band*`
+  styles in `src/styles/player.css`). Their TheAudioDB fanart (their own photo
+  when the image notes name none, or the fanart fails to load) runs as a wide
+  band framed on the detected face, fading into the page ground at the bottom
+  with a wash of the sleeve's flood from the left. Only the name sits over it
+  (the one place it's shown), sized to the band's width (container query
+  units) so its longest word always fits on one line. Under the band, a strip
+  of facts (real name, born or formed, aliases, Spotify followers) and up to
+  four genre chips, from the artist's detail JSON via `artistFacts()` in
+  `src/lib/artistFacts.ts` and left out until it loads; a group (Discogs
+  members, or TheAudioDB's member count above one) reads as formed, since
+  TheAudioDB gives groups a born year too. Then the full-width bio, its
+  "Read more" fade in the page ground, and a link to their records.
 
 **Sidebar:** Last.fm panel in the flood colour (scrobbles, listeners,
 link), release details, identifiers, pressing, sleeve colours, copyright.

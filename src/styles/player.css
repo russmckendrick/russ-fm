@@ -2255,3 +2255,107 @@ body {
     transform: scaleX(0.02);
   }
 }
+
+/* --- Album page artist band ---------------------------------------------- */
+/* The artist's fanart as a wide band, fading into the page at the bottom and
+   washed with the sleeve's colour (--band-flood) from the left, so the name over
+   it stays readable. Its facts and genres sit under it (.artist-band-meta). */
+.artist-band {
+  position: relative;
+  isolation: isolate;
+  /* The name is sized to the band's width (ArtistBand's nameSize). */
+  container-type: inline-size;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(360px, 38vw, 480px);
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--band-flood);
+  color: var(--cream);
+}
+
+.artist-band img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85);
+  transition: transform 1.2s var(--ease-out);
+}
+
+.artist-band:hover img {
+  transform: scale(1.03);
+}
+
+.artist-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--ground) 0%, color-mix(in oklab, var(--ground) 70%, transparent) 22%, transparent 55%),
+    linear-gradient(to right, color-mix(in oklab, var(--band-flood) 60%, transparent), transparent 58%);
+}
+
+.artist-band:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+
+.artist-band-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  padding: clamp(20px, 3.4vw, 32px);
+}
+
+.artist-band-name {
+  text-wrap: balance;
+}
+
+.artist-band-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--cream-rule);
+}
+
+.artist-band-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.artist-band-facts dt {
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.artist-band-facts dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.artist-band-chip {
+  border: 1px solid var(--cream-rule);
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-band img {
+    transition: none;
+  }
+}
