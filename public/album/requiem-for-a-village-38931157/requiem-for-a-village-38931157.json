@@ -33,11 +33,12 @@
       "descriptions": [
         "LP",
         "Album",
+        "Limited Edition",
         "Stereo"
       ],
       "name": "Vinyl",
       "qty": "2",
-      "text": "Oxblood"
+      "text": "Oxblood, Half Speed"
     }
   ],
   "formats": [
@@ -69,10 +70,11 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2026-11-05T06:59:00.068560",
+    "processed_at": "2026-11-07T07:56:24.172800",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "lastfm",
       "wikipedia",
       "perplexity"
@@ -80,7 +82,7 @@
   },
   "release_name_apple_music": "Requiem for a Village",
   "release_name_discogs": "Requiem For A Village",
-  "release_name_spotify": null,
+  "release_name_spotify": "Requiem for a Village",
   "released": "2026-11-06",
   "services": {
     "apple_music": {
@@ -166,10 +168,37 @@
       "generated_at": "2026-11-05T06:58:53.434606",
       "model": "sonar",
       "source": "perplexity"
+    },
+    "spotify": {
+      "album_type": "album",
+      "id": "6SRNqCA1HogMn38sM1nd8Q",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d1a9046e7319b4dd959b722a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d1a9046e7319b4dd959b722a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d1a9046e7319b4dd959b722a",
+          "width": 64
+        }
+      ],
+      "name": "Requiem for a Village",
+      "popularity": null,
+      "release_date": "2026-11-06",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "url": "https://open.spotify.com/album/6SRNqCA1HogMn38sM1nd8Q"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "6SRNqCA1HogMn38sM1nd8Q",
+  "spotify_url": "https://open.spotify.com/album/6SRNqCA1HogMn38sM1nd8Q",
   "styles": [
     "Prog Rock"
   ],
@@ -248,8 +277,21 @@
       "title": "The Old God Is Buried"
     }
   ],
-  "updated_at": "2026-11-05T06:58:56.626515",
-  "videos": [],
+  "updated_at": "2026-11-07T07:56:23.998007",
+  "videos": [
+    "https://www.youtube.com/watch?v=UFEGih4iCFs",
+    "https://www.youtube.com/watch?v=jRHWHkADjMo",
+    "https://www.youtube.com/watch?v=GrkznitWxqY",
+    "https://www.youtube.com/watch?v=bASjs48r43M",
+    "https://www.youtube.com/watch?v=JS7FpeR1z_8",
+    "https://www.youtube.com/watch?v=kaMG5ef7G4w",
+    "https://www.youtube.com/watch?v=2J1rxpUI4BI",
+    "https://www.youtube.com/watch?v=5f9naD_Dx88",
+    "https://www.youtube.com/watch?v=qrVSC4WnxK4",
+    "https://www.youtube.com/watch?v=7PCHND2nRNY",
+    "https://www.youtube.com/watch?v=ZGTa8ZeVZK4",
+    "https://www.youtube.com/watch?v=5LNlS1FN66I"
+  ],
   "vinyl_colours": [
     "Oxblood"
   ],
