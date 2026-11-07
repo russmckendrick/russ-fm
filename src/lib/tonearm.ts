@@ -309,10 +309,24 @@ export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom,
   for (const m of [post, foot, cradle]) m.castShadow = true;
   scene.add(post, foot, cradle);
 
+  // The centre spindle, poking up through the label: a real one is ~7 mm across
+  // and stands ~13 mm proud of a 302 mm record. Polished steel, with a rounded tip.
+  const spR = R * 0.024;
+  const spH = R * 0.085;
+  const spindle = new THREE.Group();
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(spR, spR, spH - spR, 32), arm.chrome);
+  shaft.position.y = (spH - spR) / 2;
+  const tipCap = new THREE.Mesh(new THREE.SphereGeometry(spR, 32, 12, 0, Math.PI * 2, 0, Math.PI / 2), arm.chrome);
+  tipCap.scale.y = 0.9;
+  tipCap.position.y = spH - spR;
+  for (const m of [shaft, tipCap]) m.castShadow = true;
+  spindle.add(shaft, tipCap);
+  scene.add(spindle);
+
   // The canvas covers the deck: the record's right-hand part, the arm's sweep and the rest.
   const left = Math.max(0, sx - R * 0.35);
   const right = Math.min(PW, pivot.x + 110 * scale);
-  const topPx = Math.max(0, pivot.y - 90 * scale);
+  const topPx = Math.max(0, Math.min(pivot.y - 90 * scale, sy - spH * Math.cos(elev) - 10));
   const bottom = Math.min(PH, sy + R * Math.sin(elev) + 120 * scale);
   const camera = new THREE.OrthographicCamera(left - sx, right - sx, sy - topPx, sy - bottom, 1, 10000);
   camera.position.set(0, Math.sin(elev) * 4000, Math.cos(elev) * 4000);

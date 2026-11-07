@@ -38,13 +38,19 @@ three.js (`src/lib/tonearm.ts`, loaded lazily on first use):
   counterweight, an anodised headshell, a cartridge with its lead wires, and
   an arm rest. It is built to prog-art's proportions and scaled to each room
   by the pivot-to-spindle distance. The stylus sits on the record's surface.
+  The same scene draws the centre spindle: a chrome pin with a rounded tip
+  standing out of the label, sized to the record (`R * 0.024` across,
+  `R * 0.085` tall), whose shadow falls on the label.
 - **Light.** A neutral studio environment for the reflections, so the metal
   reads as steel, with warm key and rim lights for the room. Shadow-catcher
   planes on the record and the plinth darken the photo under the arm.
 - **Motion.** The arm is either down on the lead-in or parked on its rest.
   Between the two it lifts on the cue, swings, and lowers with a soft settle
-  (`LIFT_MS`, `SWING_MS`, `LOWER_MS`). It draws only while it moves. Reduced
-  motion jumps straight to the pose; without WebGL there is no arm.
+  (`LIFT_MS`, `SWING_MS`, `LOWER_MS`). Once down, it rides a slight warp in
+  the record: a faint rise and fall (`WARP_LIFT`, about 1–2 px at the stylus)
+  once a turn, timed to the record's spin (`TURN_MS`, or `TURN_FAST_MS` at 45),
+  redrawn at 30 fps. Otherwise it draws only while it moves. Reduced motion
+  jumps straight to the pose with no warp; without WebGL there is no arm.
 
 `ReleaseRoom` drives it. The arm cues in once its room shows. When the next
 record is in the same room, the record waits for the arm to park, swaps, and

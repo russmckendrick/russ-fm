@@ -224,6 +224,7 @@ export function ReleaseRoom({ records, active, tint, fast = false, sticker, topI
                 <RoomArm
                   room={room}
                   img={g.img}
+                  fast={fast}
                   down={on && loaded.has(room.id) && !parkFirst}
                   onSettled={down => {
                     if (!down && on && parkFirst) setShown(active);
