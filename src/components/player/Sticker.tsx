@@ -6,7 +6,9 @@ interface StickerProps {
   label?: string;
   /** Bottom line; defaults to the year. */
   footer?: string;
+  /** The dark of the record (its ground): small print, and the date when `color` is too pale. */
   background: string;
+  /** The record's colour (its flood): the date, printed big. */
   color: string;
   size?: 'lg' | 'sm';
   className?: string;
@@ -14,28 +16,26 @@ interface StickerProps {
 
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-/** Round shop sticker slapped on the sleeve: "Added 25 SEP 2026". */
-export function Sticker({ date, label = 'Added', footer, background, color, size = 'lg', className }: StickerProps) {
+/**
+ * A price-gun label on the sleeve's shrink-wrap: "ADDED / 8 NOV 26" printed
+ * in mono on a small white label with the gun's notched ends, a little
+ * crooked (`.sticker` in player.css). Callers place it inside the sleeve's
+ * top-right corner. `footer` (the "Scrobbled" one's track count) joins the
+ * top line; `background` and `color` are kept for callers but not printed.
+ */
+export function Sticker({ date, label = 'Added', footer, size = 'lg', className }: StickerProps) {
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return null;
-  const dayMonth = `${d.getDate()} ${MONTHS[d.getMonth()]}`;
+  const printed = `${d.getDate()} ${MONTHS[d.getMonth()]} ${String(d.getFullYear()).slice(2)}`;
   const lg = size === 'lg';
   return (
     <div
-      className={cn('sticker', lg ? 'h-[128px] w-[128px]' : 'h-[92px] w-[92px]', className)}
-      style={{ background, color }}
-      aria-label={`${label} ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`}
+      className={cn('sticker t-mono', lg ? 'sticker-lg' : 'sticker-sm', className)}
+      aria-label={`${label} ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}${footer ? `, ${footer}` : ''}`}
       role="img"
     >
-      <span className="t-mono font-bold" style={{ fontSize: lg ? 11 : 9, letterSpacing: '0.12em' }}>
-        {label.toUpperCase()}
-      </span>
-      <span className="t-cond" style={{ fontSize: lg ? 40 : 28, lineHeight: 0.9 }}>
-        {dayMonth}
-      </span>
-      <span className="t-mono font-bold" style={{ fontSize: lg ? 11 : 9 }}>
-        {footer ?? d.getFullYear()}
-      </span>
+      <span className="sticker-top">{footer ? `${label} · ${footer}` : label}</span>
+      <span className="sticker-price">{printed}</span>
     </div>
   );
 }

@@ -14,6 +14,8 @@ interface ReleaseLabelProps {
   paper: string;
   /** The ink on it. */
   ink: string;
+  /** Carry the details in a visually hidden list (default). Off when the page lists them visibly beside it. */
+  describe?: boolean;
 }
 
 // Rough glyph widths, in em, to tell when a line needs squeezing to fit.
@@ -40,7 +42,7 @@ const room = (top: number, bottom: number) => {
  * it, and the format arced under the bottom. Long lines are squeezed to fit, not cut.
  * The SVG is decoration; the same details are in a visually hidden list.
  */
-export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink }: ReleaseLabelProps) {
+export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink, describe = true }: ReleaseLabelProps) {
   const id = useId().replace(/:/g, '');
   const names = labelNames(labels);
   const label = names[0];
@@ -131,26 +133,28 @@ export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink 
           );
         })}
       </svg>
-      <dl className="sr-only">
-        {names.length > 0 && (
-          <>
-            <dt>Label</dt>
-            <dd>{names.join(', ')}</dd>
-          </>
-        )}
-        {facts.map(([k, v]) => (
-          <div key={k}>
-            <dt>{k}</dt>
-            <dd>{v}</dd>
-          </div>
-        ))}
-        {format && (
-          <>
-            <dt>Format</dt>
-            <dd>{format}</dd>
-          </>
-        )}
-      </dl>
+      {describe && (
+        <dl className="sr-only">
+          {names.length > 0 && (
+            <>
+              <dt>Label</dt>
+              <dd>{names.join(', ')}</dd>
+            </>
+          )}
+          {facts.map(([k, v]) => (
+            <div key={k}>
+              <dt>{k}</dt>
+              <dd>{v}</dd>
+            </div>
+          ))}
+          {format && (
+            <>
+              <dt>Format</dt>
+              <dd>{format}</dd>
+            </>
+          )}
+        </dl>
+      )}
     </div>
   );
 }

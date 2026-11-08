@@ -11,7 +11,7 @@ import { isSuiteRow, sidingPosition } from '@/lib/tracklistRows';
 import { discLook, vinylLook } from '@/lib/vinylLook';
 import { cn } from '@/lib/utils';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
-import { Sleeve, Sticker, Vinyl } from '@/components/player';
+import { Sleeve, Vinyl } from '@/components/player';
 
 interface BoxHeroArtProps {
   boxUri: string;
@@ -20,11 +20,10 @@ interface BoxHeroArtProps {
   selected: number;
   onSelect: (i: number) => void;
   flood: Flood;
-  added: string;
 }
 
 /** The box cover with a thick edge, and its albums fanned out behind it. */
-export function BoxHeroArt({ boxUri, boxTitle, discs, selected, onSelect, flood, added }: BoxHeroArtProps) {
+export function BoxHeroArt({ boxUri, boxTitle, discs, selected, onSelect, flood }: BoxHeroArtProps) {
   const boxImage = getAlbumImageFromData(boxUri, 'hi-res');
   return (
     <div className="relative aspect-square w-[88%] lg:w-[82%]">
@@ -70,8 +69,6 @@ export function BoxHeroArt({ boxUri, boxTitle, discs, selected, onSelect, flood,
         <img src={boxImage} alt={`${boxTitle} box set`} className="h-full w-full object-cover" fetchPriority="high" />
         <span className="shrinkwrap" aria-hidden />
       </div>
-      <Sticker date={added} background={flood.ground} color={flood.flood} size="lg" className="-right-6 -top-6 hidden md:flex" />
-      <Sticker date={added} background={flood.ground} color={flood.flood} size="sm" className="-right-3 -top-5 md:hidden" />
     </div>
   );
 }

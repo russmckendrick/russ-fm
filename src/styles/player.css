@@ -1155,28 +1155,92 @@ body {
 
 /* --- Stickers ------------------------------------------------------------- */
 
+/* A price-gun label on the shrink-wrap: white label stock with the gun's
+   notched ends (the masked ::before, so the drop shadow on .sticker follows
+   the notches), mono print, a little crooked, the plastic's shine over it.
+   Callers stick it inside the sleeve's top-right corner. */
 .sticker {
+  --sticker-tilt: -4deg;
   position: absolute;
   z-index: 30;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 2px;
-  border-radius: 50%;
-  transform: rotate(9deg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 0 0 3px rgba(255, 255, 255, 0.3);
-  animation: sticker-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 0.9s both;
+  gap: 1px;
+  color: #1c1b19;
+  line-height: 1;
+  white-space: nowrap;
+  transform: rotate(var(--sticker-tilt));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35)) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.25));
+  animation: sticker-pop 0.45s cubic-bezier(0.3, 1.5, 0.5, 1) 0.9s both;
+}
+
+.sticker-lg {
+  padding: 6px 14px 6px 12px;
+}
+
+.sticker-sm {
+  padding: 4px 11px 4px 9px;
+}
+
+.sticker::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.04)),
+    #f7f5ef;
+  -webkit-mask:
+    radial-gradient(circle 3.5px at 0 50%, transparent 97%, #000) left / 51% 100% no-repeat,
+    radial-gradient(circle 3.5px at 100% 50%, transparent 97%, #000) right / 51% 100% no-repeat;
+  mask:
+    radial-gradient(circle 3.5px at 0 50%, transparent 97%, #000) left / 51% 100% no-repeat,
+    radial-gradient(circle 3.5px at 100% 50%, transparent 97%, #000) right / 51% 100% no-repeat;
+}
+
+.sticker::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 30%, rgba(255, 255, 255, 0.45) 45%, transparent 60%);
+  mix-blend-mode: soft-light;
+}
+
+.sticker-top {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.sticker-price {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sticker-sm .sticker-top {
+  font-size: 6px;
+}
+
+.sticker-sm .sticker-price {
+  font-size: 11px;
 }
 
 @keyframes sticker-pop {
   from {
     opacity: 0;
-    transform: rotate(9deg) scale(0.6);
+    transform: rotate(var(--sticker-tilt)) scale(0.6);
   }
   to {
     opacity: 1;
-    transform: rotate(9deg) scale(1);
+    transform: rotate(var(--sticker-tilt)) scale(1);
   }
 }
 
@@ -1197,22 +1261,22 @@ body {
 @keyframes sticker-return {
   from {
     opacity: 0;
-    transform: rotate(9deg) scale(0.92);
+    transform: rotate(var(--sticker-tilt)) scale(0.92);
   }
   to {
     opacity: 1;
-    transform: rotate(9deg) scale(1);
+    transform: rotate(var(--sticker-tilt)) scale(1);
   }
 }
 
 @keyframes sticker-leave {
   from {
     opacity: 1;
-    transform: rotate(9deg) scale(1);
+    transform: rotate(var(--sticker-tilt)) scale(1);
   }
   to {
     opacity: 0;
-    transform: rotate(9deg) scale(0.96);
+    transform: rotate(var(--sticker-tilt)) scale(0.96);
   }
 }
 

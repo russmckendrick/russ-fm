@@ -42,7 +42,7 @@ interface HeroRecordProps {
 }
 
 const INK = '#0e0d0c';
-const SCROBBLED_STICKER = { background: 'var(--cream)', color: INK };
+const SCROBBLED_STICKER = { background: INK, color: '#fbf7ef' };
 
 /**
  * The scrobble ring's lit, unlit and finished segment colours. Black vinyl takes the page's
@@ -136,8 +136,8 @@ export function HeroRecord({
       />
       {sticker && (
         <>
-          <HeroSticker sticker={sticker} scene={scene} size="lg" className="-right-12 -top-6 hidden md:flex" />
-          {stickerOnMobile && <HeroSticker sticker={sticker} scene={scene} size="sm" className="-right-2 -top-5 md:hidden" />}
+          <HeroSticker sticker={sticker} scene={scene} size="lg" className="right-[4%] top-[4%] hidden md:flex" />
+          {stickerOnMobile && <HeroSticker sticker={sticker} scene={scene} size="sm" className="right-[4%] top-[4%] md:hidden" />}
         </>
       )}
     </div>
@@ -146,24 +146,27 @@ export function HeroRecord({
 
 /**
  * The shop sticker. After a scrobble it swaps to a cream "Scrobbled" one,
- * which later crossfades back to "Added".
+ * which later crossfades back to "Added". With `showAdded={false}` (the album
+ * page, whose metadata row carries the date) only the "Scrobbled" one shows.
  */
 export function HeroSticker({
   sticker,
   scene,
   size,
   className,
+  showAdded = true,
 }: {
   sticker: NonNullable<HeroRecordProps['sticker']>;
   scene?: ScrobbleScene;
   size: 'lg' | 'sm';
   className: string;
+  showAdded?: boolean;
 }) {
   const stamp = scene?.stamp ?? 'added';
   const showScrobbled = !!scene?.stampedAt && (stamp === 'scrobbled' || stamp === 'returning');
   return (
     <>
-      {stamp !== 'scrobbled' && (
+      {showAdded && stamp !== 'scrobbled' && (
         <Sticker
           key="added"
           {...sticker}

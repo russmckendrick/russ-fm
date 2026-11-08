@@ -20,7 +20,7 @@ All exported from `@/components/player`.
 | `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. The album page passes `scene` (from `useScrobbleScene`) and `ringColour` for the scrobble scene; `ringColour` lights the ring on black vinyl, while a coloured disc gets cream (or ink when `look.light`). |
 | `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
-| `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker; `label` and `footer` make the "Scrobbled 26 SEP · 11 tracks" one. |
+| `Sticker` | `Sticker.tsx` | Price-gun label (white stock with notched ends, mono print, a little crooked) stuck inside the sleeve's top-right corner. The home hero, album page and box sets no longer show an "Added" one (the date is in their metadata rows); it is the album page's "Scrobbled · 11 tracks" stamp and Wrapped's labels. |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. Its disc takes the pressing's colour on hover. |
 | `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break; the artist hero uses `min={28}` so a long single-word name ("HOUSEMARTINS", "65DAYSOFSTATIC") fits a phone column whole. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
@@ -87,9 +87,10 @@ frantic at that size; the scrobble scene's `spin-45` is unchanged. Each disc's o
   ink and rim of a coloured pressing, applied as `--vinyl-body` /
   `--vinyl-pattern` / `--vinyl-groove` / `--vinyl-rim`; `.vinyl-lit` honours
   them too), `spin`, `fast`, `text`. Always `aria-hidden`.
-- `Sticker` — `date` (ISO), `label` (default `Added`), `background`,
-  `color`, `size` (`lg` 128px, `sm` 92px). Renders nothing for an invalid
-  date; carries an `aria-label` with the full date.
+- `Sticker` — `date` (ISO), `label` (default `Added`), `footer` (joins the
+  top line), `size` (`lg` / `sm` padding and type). `background` and `color`
+  are accepted but not printed. Renders nothing for an invalid date; carries
+  an `aria-label` with the full date.
 
 ### RecordTile
 
@@ -160,7 +161,7 @@ Props: `records` (`RoomRecord[]`: `key`, `room`, `cover`, `alt`, `look`,
 `labelColour`, optional `href`), `active`, `tint` (the flood), `fast`
 (scrobbling), `sticker` (laid over the sleeve's box), `topInset` (defaults
 to the header height), `zoom`. See [release room](./release-room.md).
-`HeroSticker` (from `HeroRecord.tsx`) is exported for its sticker.
+`HeroSticker` (from `HeroRecord.tsx`) is exported for its sticker; `showAdded={false}` (the album page) shows only the "Scrobbled" stamp.
 
 ## Poster wall (`src/components/artist/PosterWall.tsx`)
 
@@ -196,7 +197,7 @@ list comes from `buildBoxDiscs()` in [`src/lib/boxDiscs.ts`](./utilities.md#box-
 
 | Component | Props | Role |
 |-----------|-------|------|
-| `BoxHeroArt` | `boxUri`, `boxTitle`, `discs`, `selected`, `onSelect`, `flood`, `added` | Hero art: the box cover with a thick stacked edge, its albums fanned out behind it (the selected one pulled out) and a sticker. Each fanned sleeve is a button that selects that disc. |
+| `BoxHeroArt` | `boxUri`, `boxTitle`, `discs`, `selected`, `onSelect`, `flood` | Hero art: the box cover with a thick stacked edge and its albums fanned out behind it (the selected one pulled out); the added date is in the hero's kicker row. Each fanned sleeve is a button that selects that disc. |
 | `BoxContents` | `boxUri`, `discs`, `selected`, `onSelect`, `colours`, `boxFlood`, `artist` | "In this box" section: a tab row of sleeves and a panel in the selected album's flood colour with its sleeve and disc, tracklist grouped by side, a scrobble button for that disc and an "Open album page" link when the disc has its own page. |
 
 Discs with no linked album page use the box cover with a "From the box"

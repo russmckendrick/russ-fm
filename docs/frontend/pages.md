@@ -127,7 +127,9 @@ The home page sections are local components in `HomePage.tsx`; the old
   player.css), like the /albums run dividers: a card in the flood of the newest
   bold sleeve in the genre (`vivid` ≥ `BOLD_VIVID`, else `#e8e2d6`), with the
   name sized to its longest word and the genre's three latest sleeves standing
-  behind, rising on hover. Phones show four.
+  behind, rising on hover. The card and its tab are the same textured card
+  stock as the run dividers (`--stock-grain-neutral` plus the inverted
+  `poster-wear` scuffs), over the genre's own colour. Phones show four.
 - **By the numbers** — six facts drawn at random from `public/stats/facts.json`
   (the /stats shelf's pool, written by `generate-stats`) with `pickHolders`, each
   a sleeve with the /stats card pinned under it (`.fact-pin`). Links to `/stats`.
@@ -229,8 +231,10 @@ on the ground.
 
 **Hero** — the record's listening room (`ReleaseRoom`, see
 [release room](./release-room.md)): the sleeve on a stand, the pressing
-(disc 1, `discLooks`) playing on the turntable, the "Added" / "Scrobbled"
-sticker (`HeroSticker`) on the sleeve from `md` up. Box sets keep the cover
+(disc 1, `discLooks`) playing on the turntable, and the "Scrobbled" stamp
+(`HeroSticker`, `showAdded={false}`) on the sleeve from `md` up after a
+scrobble. The added date ends the pressing line in the flood band ("Added 8
+Nov 2026"); box sets put it at the end of the hero's kicker row. Box sets keep the cover
 hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 
 **Band** (one row in the flood):
@@ -313,8 +317,22 @@ first record company arced over the top (each Discogs label once, without its
 the spindle hole (the title over up to three lines, `titleLines()`), the
 other facts below it, and the Format line arced under the bottom. A line that
 would run over the label's edge is squeezed with `textLength`, never cut. The
-SVG is `aria-hidden`; the full details, every label included, are in a
-visually hidden list.
+SVG is `aria-hidden` (`describe={false}`): under it a visible list
+(`allDetails`) carries every detail the page holds, since the label fits five
+facts and the hero's pressing line keeps to format, label, year and the added
+date. In order: Label (all of them), Format (name and colours), Discs, Sides,
+Tracks, Running time, Released, This pressing, Country, Genres, Styles and
+Added, each shown only when known. Every value with a page links to it
+(`DetailLink`): each label to `/label/…` (shown once without Discogs' "(2)",
+linked by the full name as the label pages slug it), the format to
+`/albums/1?format=…` and its colours to `/coloured-vinyl`, tracks and running
+time to the tracklist (`#tracklist`), the original year to
+`/albums/1?year=…`, the country to `/country/…`, each genre and style the
+genre facet knows to `/genre/…`, and the added date to the `/albums` page
+that lists the record (`albumsPageOf()`, default sort; box set members
+aren't listed there, so theirs is plain). Discs, sides and the pressing date
+stay plain. Without `describe={false}`, `ReleaseLabel`
+puts the details in a visually hidden list instead.
 In the release details "Released" is the original year; "This pressing"
 shows the pressing's own date (detail JSON `released`, else `year`) and
 appears only when it differs. "Format" reads e.g. `Vinyl · Red & Yellow ·

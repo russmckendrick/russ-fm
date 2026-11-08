@@ -4,7 +4,10 @@ import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
+import { getCleanGenres, getCleanGenresFromArray, getCleanGenreTermsFromAlbum } from '@/lib/genreUtils';
+import { slugify } from '@/lib/browseFacets';
+import { labelNames } from '@/lib/releaseLabel';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { youTubeVideos } from '@/lib/youtube';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
@@ -892,6 +895,53 @@ export function AlbumDetailPage() {
     ['Styles', (detailedAlbum?.styles ?? []).slice(0, 3).join(', ')],
   ].filter((f): f is [string, string] => !!f[1]) as Array<[string, string]>;
 
+  // Every detail the page holds, listed under the centre label in the sidebar
+  // (the label only fits five, and the hero's line keeps to a few). Each value
+  // links wherever the site has a page for it.
+  const genreSlugs = new Set(getCleanGenreTermsFromAlbum(album).map(slugify));
+  const rawLabels = [...(album.labels ?? []), ...(detailedAlbum?.labels ?? [])];
+  const rawLabel = (name: string) => rawLabels.find(l => l.replace(/\s*\(\d+\)$/, '').trim() === name) ?? name;
+  const linkList = (names: string[], href: (name: string) => string | null) =>
+    names.map((name, i) => {
+      const to = href(name);
+      return (
+        <React.Fragment key={name}>
+          {i > 0 && ', '}
+          {to ? <DetailLink to={to}>{name}</DetailLink> : name}
+        </React.Fragment>
+      );
+    });
+  const formatName = (inherited.length ? 'Vinyl' : null) ?? detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record';
+  const addedPage = album.boxset ? null : albumsPageOf(rawCollection, album.uri_release);
+  const origYear = originalYear(album);
+  const allDetails: Array<[string, React.ReactNode]> = [
+    // Each Discogs label once (catalogue entries repeat them), shown without its
+    // "(2)" but linked by the full name, as the /label pages slug it.
+    ['Label', detailedAlbum?.labels?.length ? linkList(labelNames(detailedAlbum.labels), name => `/label/${slugify(rawLabel(name))}`) : null],
+    [
+      'Format',
+      <>
+        {album.format_primary ? <DetailLink to={`/albums/1?format=${encodeURIComponent(album.format_primary)}`}>{formatName}</DetailLink> : formatName}
+        {discColours.length > 0 && (
+          <>
+            {' · '}
+            <DetailLink to="/coloured-vinyl">{discColours.join(' & ')}</DetailLink>
+          </>
+        )}
+      </>,
+    ],
+    ['Discs', discCount > 1 ? String(discCount) : null],
+    ['Sides', sideCount > 1 ? String(sideCount) : null],
+    ['Tracks', scrobbleRows.length ? <DetailLink to="#tracklist">{scrobbleRows.length}</DetailLink> : null],
+    ['Running time', totalDuration ? <DetailLink to="#tracklist">{totalDuration}</DetailLink> : null],
+    ['Released', origYear ? <DetailLink to={`/albums/1?year=${origYear}`}>{origYear}</DetailLink> : Number.isFinite(year) ? String(year) : null],
+    ['This pressing', pressingDate(detailedAlbum, year) || null],
+    ['Country', detailedAlbum?.country ? <DetailLink to={`/country/${slugify(detailedAlbum.country)}`}>{detailedAlbum.country}</DetailLink> : null],
+    ['Genres', album.genre_names?.length ? linkList(album.genre_names, name => (genreSlugs.has(slugify(name)) ? `/genre/${slugify(name)}` : null)) : null],
+    ['Styles', detailedAlbum?.styles?.length ? linkList(detailedAlbum.styles, name => (genreSlugs.has(slugify(name)) ? `/genre/${slugify(name)}` : null)) : null],
+    ['Added', addedPage ? <DetailLink to={`/albums/${addedPage}`}>{formatDate(album.date_added)}</DetailLink> : formatDate(album.date_added)],
+  ].filter((f): f is [string, React.ReactNode] => f[1] != null && f[1] !== '');
+
   const serviceLinks = [
     detailedAlbum?.services?.spotify?.url && { label: 'Spotify', url: detailedAlbum.services.spotify.url },
     detailedAlbum?.services?.apple_music?.url && { label: 'Apple Music', url: detailedAlbum.services.apple_music.url },
@@ -1015,6 +1065,7 @@ export function AlbumDetailPage() {
           scrobbleRows.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{scrobbleRows.length} tracks</span>
         )}
         {totalDuration && <span>{totalDuration}</span>}
+        {isBox && album.date_added && <span>Added {formatDate(album.date_added)}</span>}
       </div>
       {heroNotes}
       <div className="pill-row-compact mt-1 flex flex-wrap gap-2.5">
@@ -1042,7 +1093,7 @@ export function AlbumDetailPage() {
     discColours.length ? discColours.join(' & ') : null,
     labelName,
     Number.isFinite(year) ? String(year) : null,
-    detailedAlbum?.country,
+    album.date_added ? `Added ${formatDate(album.date_added)}` : null,
   ].filter(Boolean).join(' · ');
   const bandArtists = album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }];
   const roomHero = !isBox && (
@@ -1067,8 +1118,9 @@ export function AlbumDetailPage() {
             <HeroSticker
               sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
               scene={scrobbleScene}
+              showAdded={false}
               size="lg"
-              className="-right-12 -top-8 hidden md:flex"
+              className="right-[4%] top-[4%] hidden md:flex"
             />
           }
           className="h-[clamp(460px,78svh,940px)]"
@@ -1077,7 +1129,7 @@ export function AlbumDetailPage() {
       <section className="flood-surface relative z-[2]" style={{ background: flood.flood, color: flood.ink }}>
         <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:gap-10 md:px-10 lg:px-14">
           <div className="min-w-0 flex-1">
-            <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] md:text-[11px]" style={{ color: flood.sub }}>
+            <p className="t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]" style={{ color: flood.sub }}>
               {pressingLine}
             </p>
             <div className="room-title-box">
@@ -1154,7 +1206,6 @@ export function AlbumDetailPage() {
               selected={boxSelected}
               onSelect={setBoxSelected}
               flood={flood}
-              added={album.date_added}
             />
           }
         >
@@ -1199,7 +1250,7 @@ export function AlbumDetailPage() {
             )}
 
             {!isBox && sides && tracks.length > 0 && (
-              <section className="flex flex-col gap-8">
+              <section id="tracklist" className="flex scroll-mt-28 flex-col gap-8">
                 <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
                   <h2 className="t-disp m-0 text-[34px] md:text-[48px]">Tracklist</h2>
                   <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">
@@ -1298,7 +1349,16 @@ export function AlbumDetailPage() {
                 facts={facts.filter(([k]) => k !== 'Label' && k !== 'Format')}
                 paper={flood.flood}
                 ink={flood.ink}
+                describe={false}
               />
+              <dl className="m-0 mt-6">
+                {allDetails.map(([k, v]) => (
+                  <div key={k} className="flex items-baseline justify-between gap-6 border-t py-2.5" style={{ borderColor: 'var(--cream-rule)' }}>
+                    <dt className="t-kicker shrink-0 text-[11px] text-[color:var(--cream-dim)]">{k}</dt>
+                    <dd className="m-0 text-right text-[14px]">{v}</dd>
+                  </div>
+                ))}
+              </dl>
             </section>
 
             {(detailedAlbum?.services?.spotify?.external_ids?.upc || detailedAlbum?.discogs_id || detailedAlbum?.spotify_id) && (
@@ -1446,6 +1506,35 @@ function pressingDate(detail: { released?: string; year?: number } | null, origi
   const year = detail.year ?? Number.parseInt(String(detail.released ?? '').slice(0, 4), 10);
   if (!Number.isFinite(year) || year === original) return '';
   return detail.released && detail.released.length >= 7 ? formatDate(detail.released) : String(year);
+}
+
+/** /albums in its default order (newest added first), cached per collection. */
+const addedOrder = new WeakMap<object, Map<string, number>>();
+
+/** The /albums page (default sort, no filters) that lists the record, or null. */
+function albumsPageOf(collection: CollectionAlbum[], uri: string): number | null {
+  let order = addedOrder.get(collection);
+  if (!order) {
+    const listed = [...excludeBoxsetMembers(collection)].sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime());
+    order = new Map(listed.map((a, i) => [a.uri_release, i]));
+    addedOrder.set(collection, order);
+  }
+  const i = order.get(uri);
+  return i === undefined ? null : Math.floor(i / appConfig.pagination.itemsPerPage.albums) + 1;
+}
+
+/** A linked value in the sidebar's release details. */
+function DetailLink({ to, children }: { to: string; children: React.ReactNode }) {
+  const className = 'underline decoration-[color:var(--cream-rule)] decoration-1 underline-offset-4 transition-colors hover:decoration-current';
+  return to.startsWith('#') ? (
+    <a href={to} className={className}>
+      {children}
+    </a>
+  ) : (
+    <Link to={to} className={className}>
+      {children}
+    </Link>
+  );
 }
 
 function formatDate(value: string): string {

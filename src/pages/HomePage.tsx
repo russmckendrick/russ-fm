@@ -21,21 +21,17 @@ import {
   FitTitle,
   RecordTile,
   SectionHeading,
-  Sticker,
   usePageFlood,
 } from '@/components/player';
 import { ReleaseRoom, type RoomRecord } from '@/components/album/ReleaseRoom';
 import { releaseRoomFor } from '@/lib/releaseRooms';
 
 interface FeaturedDetail {
-  tracks: number;
-  sides: number;
   label?: string;
 }
 
 /** The fields the hero reads from a release's detail JSON. */
 interface HeroDetailJson {
-  tracklist?: Array<{ position?: string }>;
   labels?: string[];
 }
 
@@ -85,16 +81,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
       loadDetailJson<HeroDetailJson>(album.json_detailed_release)
         .then(d => {
           if (!d) return;
-          const positions: string[] = (d.tracklist ?? []).map((t: { position?: string }) => t.position ?? '').filter(Boolean);
-          const sides = new Set(positions.map(p => p[0]).filter(c => /[A-Z]/i.test(c))).size;
-          setDetails(prev => ({
-            ...prev,
-            [album.uri_release]: {
-              tracks: positions.length,
-              sides,
-              label: d.labels?.[0],
-            },
-          }));
+          setDetails(prev => ({ ...prev, [album.uri_release]: { label: d.labels?.[0] } }));
         })
         .catch(() => {});
     });
@@ -183,15 +170,6 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
           records={records}
           active={index}
           tint={flood.flood}
-          sticker={
-            <Sticker
-              key={current.uri_release}
-              date={current.date_added}
-              background={flood.ground}
-              color={flood.flood}
-              className="-right-12 -top-8 hidden md:flex"
-            />
-          }
           className="h-[clamp(460px,78svh,940px)]"
         />
       </div>
@@ -210,7 +188,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                 originalYear(album),
                 d?.label,
                 album.format_primary,
-                d && d.tracks > 0 ? `${d.sides > 1 ? `${d.sides} sides · ` : ''}${d.tracks} tracks` : null,
+                album.date_added ? `Added ${formatShort(album.date_added)} ${album.date_added.slice(0, 4)}` : null,
               ].filter(Boolean).join(' · ');
               return (
                 <div
@@ -221,7 +199,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                   )}
                   aria-hidden={!on}
                 >
-                  <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] md:text-[11px]" style={{ color: f.sub }}>
+                  <p className="t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]" style={{ color: f.sub }}>
                     {kicker || '\u00a0'}
                   </p>
                   <Link to={album.uri_release} tabIndex={on ? 0 : -1} className="room-title-box">
