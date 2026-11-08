@@ -440,46 +440,60 @@ It's harmless, just a longer sync.
 
 ```mermaid
 flowchart LR
-    Data[Album Data] --> Template[React Template]
-    Colors[Album Colors] --> Template
-    Template --> Satori[Satori]
-    Satori --> SVG[SVG Output]
-    SVG --> Sharp[Sharp]
-    Sharp --> PNG[OG Image PNG]
+    Photo[Room / wall / ledge photo] --> Scene[cutoutScene: artwork in the cut-outs, shade, flood tint]
+    Art[Sleeve or artist photo] --> Scene
+    Scene --> Card[Satori card: scene + flood band]
+    Colors[Album colours] --> Card
+    Card --> Sharp[Sharp]
+    Sharp --> PNG[og-image.png]
 ```
 
 ### Generate OG Script
 
-**File:** `scripts/generate-og-images.mjs`
+**File:** `scripts/generate-og-images.ts` (run with `tsx`), sharing its pieces with the
+TV and genre cards through `scripts/lib/og-kit.ts`: the Archivo / JetBrains Mono
+fonts in `scripts/og-fonts/`, the satori helpers, and `cutoutScene()`, which
+composites real artwork into a site photo's cut-outs (the album page's listening
+rooms, the artists' poster walls, the /albums ledge), multiplies the photo's shade
+layer over it where it has one, tints the room with the sleeve's flood (soft-light)
+and crops a 1200×420 window. Every card is that scene over a 210px flood band.
 
 **Usage:**
 ```bash
-pnpm run generate-og
+pnpm run generate-og                                   # everything, into dist/
 
-# With caching
+# With caching (CI)
 pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
+
+# One kind, or the cards whose name or slug contains some text (handy for checking a design)
+pnpm run generate-og -- /tmp/og --only album --match "requiem"
 ```
 
 ### Image Types
 
-| Type | Caching | Notes |
-|------|---------|-------|
-| Album OG | Cached | Only regenerates if missing from cache |
-| Artist OG | Cached | Only regenerates if missing from cache |
-| Generic Site OG | **Always regenerated** | Shows "last 4 albums added", must stay current |
+| File | Caching | Card |
+|------|---------|------|
+| `album/<slug>/og-image.png` | Cached | The record's listening room (`tvRoomFor` → `src/config/release-rooms.json`, as the album page's hero): the sleeve on its stand and a black disc on the platter with the sleeve printed on its label, framed so stand and turntable fill the card; band with year · label · format in mono, the title in Archivo condensed and the artist |
+| `artist/<slug>/og-image.png` | Cached | The artist's poster wall (the room most of their records play in, `src/config/artist-walls.json`): their fanart (else their photo, else their newest sleeve) cropped round the faces into the poster, under the wall's shade; band with "Artist · N records · top style" and the name |
+| `og-image.png` | **Always redrawn** | The /albums ledge (`src/config/index-headers.json`) with the eight newest sleeves (box set members excluded) on the shelf; band with "RUSS.FM" in Archivo extended and the record and artist counts |
 
-The generic `og-image.png` is always regenerated on each build because it displays the most recently added albums, which changes whenever new albums are added to the collection.
+The band takes the lead sleeve's flood and ink (`album-colors.json`): the record's
+own, the artist's newest record's, and for the site the most vivid of the newest
+three. Text goes through `latin()`, since the font subsets only draw Latin.
 
-### Artist Card Image Fallback
+Cards are PNG with a dithered 256-colour palette, about 250KB each (a full-colour
+PNG of the same scene is about 1MB). The file names stay `og-image.png` because
+`generate-static-meta.mjs`, `build-worker.js` and the R2 sync all expect them.
 
-An artist card needs one image. `resolveArtistImagePath()` tries, in order:
+### Design versions and the cache
 
-1. The declared hi-res path (`images_uri_artist['hi-res']`, or
-   `artist/<slug>/<slug>-hi-res.jpg`).
-2. The same path with a `.jpeg` or `.png` extension.
-3. The cover of the artist's most recently added album.
-
-If none exists the artist is skipped with a warning rather than an error.
+Album and artist cards already in the target are kept, so CI only draws new
+records. The target holds `og-version.txt`; when it doesn't match `OG_VERSION` at
+the top of the script, every card is drawn again and the file is rewritten at the
+end of a full run. **Bump `OG_VERSION` whenever the card design changes**, or the
+cache keeps serving the old cards. A full redraw takes about 0.27s a card (roughly
+20 minutes for the whole collection). `--only` and `--match` runs never write the
+version file.
 
 ### Artist Skip List
 
@@ -490,20 +504,18 @@ for example session musicians with no artwork anywhere:
 { "artists": ["chris-hague", "joel-white", "ocean-machine"] }
 ```
 
-`generate-og-images.mjs` skips them before doing any work (reported as
-"skipped" in the summary), and `generate-static-meta.mjs` points their
-page's `og:image` at the site-wide `/og-image.png` instead of the per-artist
-card, so social previews never reference a missing file.
-Every image is also normalised through Sharp to a real JPEG before being
-embedded, because the card uses a `data:image/jpeg` URI and Satori parses
-the JPEG header. A PNG saved with a `.jpg` extension used to fail with
-"Offset is outside the bounds of the DataView" on every run.
+`generate-og-images.ts` skips them before doing any work, and
+`generate-static-meta.mjs` points their page's `og:image` at the site-wide
+`/og-image.png` instead of the per-artist card, so social previews never reference
+a missing file. Artists with no image at all are reported ("no artwork") and
+skipped too.
 
 ### TV and genre cards
 
 **File:** `scripts/generate-og-sections.ts` (`pnpm run generate-og-sections`, add
-`-- --only tv` or `-- --only genres` for one set). It runs in `pnpm run build` and in
-the deploy workflow after `generate-og`, and writes 1200×630 JPEGs to `public/og/`
+`-- --only tv` or `-- --only genres` for one set). It shares `scripts/lib/og-kit.ts` with
+`generate-og-images.ts`, runs in `pnpm run build` and in the deploy workflow after
+`generate-og`, and writes 1200×630 JPEGs to `public/og/`
 (gitignored, rebuilt every run in about 30 seconds) so the worker build ships them:
 
 | File | Page | Card |

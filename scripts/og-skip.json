@@ -1,5 +1,5 @@
 {
-  "_comment": "Artists (by slug) that never get an OG card generated. generate-og-images.mjs skips them and generate-static-meta.mjs points their og:image at the site-wide /og-image.png instead of the per-artist card.",
+  "_comment": "Artists (by slug) that never get an OG card generated. generate-og-images.ts skips them and generate-static-meta.mjs points their og:image at the site-wide /og-image.png instead of the per-artist card.",
   "artists": [
     "chris-hague",
     "joel-white",

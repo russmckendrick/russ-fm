@@ -7,54 +7,21 @@
  *   og/genres.jpg, og/genre/<slug>.jpg
  *   og/manifest.json   channel list for scripts/generate-static-meta.mjs
  *
- * Cards use the player design: a sleeve's colours, Archivo condensed and
- * extended display type (static instances in scripts/og-fonts/), and records
+ * Cards use the player design (shared pieces in scripts/lib/og-kit.ts): a
+ * sleeve's colours, Archivo condensed and extended display type, and records
  * as objects. TV cards put a sleeve on the set of the channel's room.
  *
  *   pnpm run generate-og-sections            # everything
  *   pnpm run generate-og-sections -- --only tv|genres
  */
-import satori from 'satori';
-import sharp from 'sharp';
+import sharp, { type OverlayOptions } from 'sharp';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { buildChannels, slotsBetween, TV_ROOM_ASPECT, TV_ROOMS, type TvChannel, type TvData } from '../src/lib/tv';
 import type { Album } from '../src/types/album';
+import { condSize, CREAM, h, hexRgb, INK, kicker, latin, NEUTRAL, plural, publicDir, render, root, W, H, wordmark, type Node, type Palette } from './lib/og-kit';
 
-const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const publicDir = path.join(root, 'public');
 const outDir = path.join(publicDir, 'og');
-const W = 1200;
-const H = 630;
-
-const INK = '#0e0d0c';
-const CREAM = '#fbf7ef';
-const NEUTRAL = { flood: '#e8e2d6', ink: INK, ground: '#1c1916', glow: '#e8e2d6', secondary: null as string | null, vivid: 0 };
-
-type Palette = typeof NEUTRAL;
-type Node = { type: string; props: Record<string, unknown> };
-
-const font = (file: string) => fs.readFile(path.join(root, 'scripts/og-fonts', file));
-const fonts = [
-  { name: 'Cond', data: await font('archivo-condensed-black.ttf'), weight: 900 as const, style: 'normal' as const },
-  { name: 'Ext', data: await font('archivo-extended-black.ttf'), weight: 900 as const, style: 'normal' as const },
-  { name: 'Semi', data: await font('archivo-semiexpanded-extrabold.ttf'), weight: 800 as const, style: 'normal' as const },
-  { name: 'Mono', data: await font('jetbrains-mono-medium.ttf'), weight: 500 as const, style: 'normal' as const },
-  { name: 'Grot', data: await font('hanken-grotesk-semibold.ttf'), weight: 600 as const, style: 'normal' as const },
-];
-
-/** A satori element. Every div gets flex so multi-child boxes lay out. */
-function h(type: string, style: Record<string, unknown>, children?: unknown, extra: Record<string, unknown> = {}): Node {
-  const s = type === 'div' ? { display: 'flex', ...style } : style;
-  return { type, props: { style: s, children, ...extra } };
-}
-
-async function render(node: Node, file: string) {
-  const svg = await satori(node as never, { width: W, height: H, fonts });
-  await fs.mkdir(path.dirname(file), { recursive: true });
-  await sharp(Buffer.from(svg)).jpeg({ quality: 86, mozjpeg: true }).toFile(file);
-}
 
 // ---------------------------------------------------------------------------
 // Data
@@ -95,22 +62,6 @@ async function firstWithSleeve(albums: Album[]): Promise<Album | null> {
 
 // ---------------------------------------------------------------------------
 // Shared pieces
-
-const wordmark = (colour: string, size = 26) => h('div', { fontFamily: 'Ext', fontSize: size, color: colour, letterSpacing: -0.5 }, 'RUSS.FM');
-
-const kicker = (text: string, colour: string, size = 20) =>
-  h('div', { fontFamily: 'Mono', fontSize: size, color: colour, opacity: 0.75, letterSpacing: 2, textTransform: 'uppercase' }, text);
-
-/** Condensed display size for text in a box: the longest word fits the width. */
-function condSize(text: string, width: number, max: number, min = 56) {
-  const longest = Math.max(...text.toUpperCase().split(/\s+/).map(w => w.length), 1);
-  // Archivo condensed black caps run about 0.56em wide (hyphens and W/M wider).
-  const em = 0.56;
-  let size = Math.min(max, width / (longest * em));
-  // Three lines at most: shrink when the whole title would need more.
-  if ((text.length * em * size) / width > 3) size = (width * 3) / (text.length * em);
-  return Math.max(min, Math.floor(size));
-}
 
 /** A record: the sleeve with its disc slid out to the right, label in the sleeve's ground. */
 function record(src: string, size: number, p: Palette, left: number, top: number): Node {
@@ -181,11 +132,6 @@ function genreGroups(): Map<string, GenreGroup> {
   return groups;
 }
 
-/** Drop characters the Latin font subsets can't draw (they render as boxes). */
-const latin = (text: string) => text.replace(/[^\u0020-\u024f\u2018-\u201d\u2013\u2014\u2026]/g, '').trim();
-
-const plural = (n: number, word: string) => `${n.toLocaleString('en-GB')} ${word}${n === 1 ? '' : 's'}`;
-
 async function genreCard(slug: string, g: GenreGroup) {
   const lead = leadOf(g.albums);
   const p = palette(lead.uri_release);
@@ -242,10 +188,6 @@ async function genresIndexCard(groups: Map<string, GenreGroup>) {
 // TV
 
 const ROOM_H = 440;
-const hexRgb = (hex: string) => {
-  const n = Number.parseInt(hex.slice(1), 16);
-  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
-};
 
 /**
  * The channel's room with a sleeve playing on the set, tinted with the
@@ -272,7 +214,7 @@ async function roomShot(roomId: string, album: Album | null, p: Palette): Promis
     .png()
     .toBuffer();
 
-  const layers: sharp.OverlayOptions[] = [];
+  const layers: OverlayOptions[] = [];
   const sx = Math.round((s.left / 100) * iw) - 3;
   const sy = Math.round((s.top / 100) * ih) - 3;
   const sw = Math.round((s.width / 100) * iw) + 6;
