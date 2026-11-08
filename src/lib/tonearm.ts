@@ -192,10 +192,12 @@ function buildArm() {
   shell.add(at(mesh(new THREE.BoxGeometry(24, 15, 15), plastic), 31, -14.5, 0));
   shell.add(at(mesh(new THREE.BoxGeometry(10, 4, 0.4), gold), 33, -13, 7.6));
   shell.add(at(mesh(new THREE.BoxGeometry(6, 5, 9), plastic), 44, -19.5, 0));
-  const cantilever = at(mesh(along(new THREE.CylinderGeometry(0.35, 0.5, 7, 8)), gold), 47, -23, 0);
-  cantilever.rotation.z = -0.5;
+  // A short cantilever tucked under the nose, angled down to the groove, with the diamond on its end.
+  const cantilever = at(mesh(along(new THREE.CylinderGeometry(0.22, 0.38, 3.6, 8)), gold), 45.6, -23.4, 0);
+  cantilever.rotation.z = -0.75;
   shell.add(cantilever);
-  const tip = at(new THREE.Object3D(), 50, -25, 0);
+  shell.add(at(mesh(new THREE.SphereGeometry(0.4, 10, 8), chrome), 46.9, -24.65, 0));
+  const tip = at(new THREE.Object3D(), 47, -25, 0);
   shell.add(tip);
   [0xc0392b, 0x2e8b57, 0x2c5aa0, 0xeeeeee].forEach((colour, i) => {
     const z = -4.5 + i * 3;
