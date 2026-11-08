@@ -206,9 +206,40 @@ pub fn vinyl_colours(raw_data: &Value) -> Vec<String> {
     details_from_raw(raw_data).map(|d| colours_from_details(&d)).unwrap_or_default()
 }
 
+/// How many vinyl discs the release holds: the summed `qty` of its Vinyl format entries (a 2LP
+/// with a bonus 7" is 3). Zero for a release with no vinyl, or nothing stored yet.
+pub fn vinyl_discs(raw_data: &Value) -> u32 {
+    let Some(formats) = raw_data.get("discogs").and_then(|d| d.get("formats")).and_then(|f| f.as_array()) else {
+        return 0;
+    };
+    formats
+        .iter()
+        .filter(|f| f.get("name").and_then(|n| n.as_str()) == Some("Vinyl"))
+        .map(|f| match f.get("qty") {
+            Some(Value::String(s)) => s.trim().parse::<u32>().unwrap_or(1),
+            Some(Value::Number(n)) => n.as_u64().map_or(1, |n| n as u32),
+            _ => 1,
+        })
+        .map(|q| q.max(1))
+        .sum()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn vinyl_discs_sums_every_vinyl_entry() {
+        let raw = json!({ "discogs": { "formats": [
+            { "name": "Vinyl", "qty": "2", "descriptions": ["LP"] },
+            { "name": "Vinyl", "qty": 1, "descriptions": ["7\""] },
+            { "name": "CD", "qty": "1" },
+            { "name": "All Media", "qty": "1" },
+        ] } });
+        assert_eq!(vinyl_discs(&raw), 3);
+        assert_eq!(vinyl_discs(&json!({ "discogs": { "formats": [{ "name": "CD", "qty": "2" }] } })), 0);
+        assert_eq!(vinyl_discs(&json!({})), 0);
+    }
 
     fn colours(text: &str) -> Vec<String> {
         let details = vec![json!({ "name": "Vinyl", "qty": "1", "descriptions": [], "text": text })];

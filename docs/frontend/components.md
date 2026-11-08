@@ -99,11 +99,12 @@ frantic at that size; the scrobble scene's `spin-45` is unchanged. Each disc's o
 
 | Prop | Type | Description |
 |------|------|-------------|
-| album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist' \| 'vinyl_colours'>` | Record to show. `vinyl_colours` (optional) paints the disc as the pressing's colour |
+| album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist' \| 'vinyl_colours' \| 'vinyl_discs' \| 'boxset_contents'>` | Record to show. `vinyl_colours` (optional) paints the disc as the pressing's colour; `vinyl_discs` and `boxset_contents` are read by the `flood` variant |
 | palette | `AlbumColorPalette \| null` | Sets the colour bar (the flood, two-tone with the secondary colour when the sleeve has one) and the disc label (the ground) |
 | meta | `ReactNode` | Mono line under the artist |
 | showArtist / showText | `boolean` | Default `true` |
 | to | `string` | Override the link (defaults to the album page) |
+| variant | `'plain' \| 'flood'` | Default `plain`. `flood` mounts the sleeve in a mat of its flood colour (see below) |
 
 The disc slides out of the sleeve on hover and focus (`.rec` in
 `player.css`). It is rendered with `spin={false}`: the disc sits behind
@@ -115,6 +116,22 @@ tiles never carries patterns it has not shown. Callers holding a Wrapped
 release or a search result (no `vinyl_colours`) pass them from
 [`useVinylColours`](./hooks.md#usevinylcolours). The image is always the `medium`
 size.
+
+**Flood variant** (`variant="flood"`, the home page's Latest additions and
+Random picks and the `/albums` grid): the sleeve sits in a mat of its own
+flood colour, the album twin of the artists' paper prints (same 5.5% border
+and shadow), with the secondary sleeve colour as a 4px lip along the foot and
+the text on the ground below. On hover the mat lifts a touch and what is
+inside pops out of the top, as `ArtistCard` fans its sleeves: one disc per LP
+(`vinyl_discs`, capped at four, each painted with `discLook(vinyl_colours, i)`),
+or for a box set the sleeves of up to four of its `boxset_contents`. Landing
+spots are `POP_FAN` in `RecordTile.tsx` (after `ArtistCard`'s fan, items at
+76% of the cover, on the centre label of each disc the sleeve itself); the
+motion is `.rec-pop` in `player.css`. Only the hovered tile's
+discs spin. Member sleeves load on first hover. A horizontal shelf of flood
+tiles clips the pop-out (a scroller clips overflow), so the home row takes
+`pt-40` and pulls itself back up with `-mt-32`, `pointer-events-none` on the
+row (and `auto` on the tiles) keeping the heading's link clickable.
 
 ### PillLink and pills
 
@@ -412,7 +429,13 @@ On hover the print straightens and lifts.
 
 A cream rack divider card inline in a grid, leading each run. It is as tall
 as the tiles, with a tab on top, the label large, an optional small `year`,
-and the run's count (`unit`, default artists). The runs come from
+and the run's count (`unit`, default artists). The card is textured card
+stock (`.run-divider-card` / `.run-divider-tab` in `player.css`: an inline SVG
+grain, a light fall from the top, the `poster-wear` scuffs inverted and
+multiplied, a worn foot). With `sleeves` (up to three `uri_release`s; /albums
+passes each run's first three, which may also be on the shelf beside it) the
+records are filed behind the card with their tops showing, as in the home
+page's genre bins, and rise on hover (`.run-divider-sleeves`). The runs come from
 `src/lib/runs.ts`:
 
 - `letterOf()`: a name's first letter, or `#`.

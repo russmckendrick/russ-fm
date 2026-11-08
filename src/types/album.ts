@@ -47,6 +47,8 @@ export interface Album {
   format_primary?: string | null;
   /** Coloured vinyl only, as Discogs words it (`["Red"]`, `["Red", "Yellow"]`); black vinyl omits it. */
   vinyl_colours?: string[];
+  /** Vinyl discs in the release (summed Discogs `qty`), only when more than one. */
+  vinyl_discs?: number;
   labels?: string[];
   country?: string | null;
   lastfm_listeners?: number | null;

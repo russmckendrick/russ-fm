@@ -432,6 +432,11 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     if !vinyl_colours.is_empty() {
         e.insert("vinyl_colours".into(), json!(vinyl_colours));
     }
+    // Multi-disc vinyl only (a single LP omits it), so a grid tile can show every disc.
+    let vinyl_discs = crate::formats::vinyl_discs(&rec.raw_data);
+    if vinyl_discs > 1 {
+        e.insert("vinyl_discs".into(), json!(vinyl_discs));
+    }
     e.insert("labels".into(), json!(labels));
     e.insert("country".into(), rec.country.clone().map(Value::from).unwrap_or(Value::Null));
     e.insert("lastfm_listeners".into(), lastfm_listeners.map(Value::from).unwrap_or(Value::Null));

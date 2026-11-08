@@ -65,6 +65,7 @@ Main collection index used for album listings.
 | albums[].styles | string[] | Discogs styles (excluding generic "Music"); used by detail page + browse |
 | albums[].formats | string[] | All Discogs format descriptors (Vinyl, LP, Album, Compilation, Box Set, …) |
 | albums[].format_primary | string \| null | Single canonical format bucket: Vinyl / CD / Cassette / Box Set / Digital. Powers the `/albums?format=…` filter and the Stats page format donut. |
+| albums[].vinyl_discs | number? | Vinyl discs in the release: the summed `qty` of its Discogs Vinyl format entries (a 2LP with a bonus 7" is 3). Present only when there is more than one, so single LPs and non-vinyl releases omit it. Grid tiles push out one disc per LP on hover |
 | albums[].vinyl_colours | string[]? | Present only when the pressing is coloured vinyl: the colour of each vinyl disc set as Discogs words it (`["Red"]`, `["Blue Translucent"]`, `["Yellow Transparent", "Blue Transparent"]` for two LPs), in order without repeats. Black vinyl, other formats and releases whose colour is not recorded omit it. See [Pressing detail](#pressing-detail-format_details--vinyl_colours) |
 | albums[].labels | string[] | Record label names; powers `/labels` and `/label/:slug` |
 | albums[].country | string \| null | Discogs release country; powers `/countries` and `/country/:slug` |

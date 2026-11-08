@@ -144,14 +144,18 @@ export function AlbumsPage() {
   const shelf = currentPage === 1 && !colourMode && !filteredAny && !loading && visible.length > shelfSize ? visible.slice(0, shelfSize) : null;
   const tiles = shelf ? visible.slice(shelfSize) : visible;
   // The grid is filed in runs (a month added, a letter, a decade), each led by
-  // a divider card counting the run across every page.
-  const runCounts = useMemo(() => {
+  // a divider card counting the run across every page and filed with the run's first three sleeves.
+  const { runCounts, runSleeves } = useMemo(() => {
     const c = new Map<string, number>();
+    const sl = new Map<string, string[]>();
     filtered.forEach(a => {
       const run = albumRunOf(a, sort);
-      if (run) c.set(run.key, (c.get(run.key) ?? 0) + 1);
+      if (!run) return;
+      c.set(run.key, (c.get(run.key) ?? 0) + 1);
+      const s = sl.get(run.key) ?? [];
+      if (s.length < 3) sl.set(run.key, [...s, a.uri_release]);
     });
-    return c;
+    return { runCounts: c, runSleeves: sl };
   }, [filtered, sort]);
   // The header band and page ground take the colours of the first records shown.
   const flood = useRecordsFlood(visible.map(a => a.uri_release), undefined, !!shelf);
@@ -318,8 +322,8 @@ export function AlbumsPage() {
                 const newRun = run && (i === 0 || albumRunOf(tiles[i - 1], sort)?.key !== run.key);
                 return (
                   <Fragment key={a.uri_release}>
-                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} unit={['record', 'records']} />}
-                    <RecordTile album={a} palette={colours?.[a.uri_release]} meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')} />
+                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} unit={['record', 'records']} sleeves={runSleeves.get(run.key)} />}
+                    <RecordTile album={a} palette={colours?.[a.uri_release]} meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')} variant="flood" />
                   </Fragment>
                 );
               })}

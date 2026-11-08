@@ -136,6 +136,7 @@ export interface Album {
   labels?: Label[];
   formats?: Format[];
   vinyl_colours?: string[];        // coloured vinyl only, e.g. ["Red", "Yellow"]
+  vinyl_discs?: number;            // collection.json only: vinyl disc count, when more than one
   country?: string;
   tracklist?: Track[];
 

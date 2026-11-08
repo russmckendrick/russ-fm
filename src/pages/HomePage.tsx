@@ -268,7 +268,10 @@ function LatestAdditions({ recent, colours }: { recent: Album[]; colours: Record
         note={thisYear ? `${thisYear} added in ${year}` : undefined}
         link={{ to: '/albums/1', label: 'All albums' }}
       />
-      <div className="shelf-scroll -mx-5 mt-2 scroll-px-5 gap-6 px-5 pb-4 pt-6 md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:gap-7 lg:px-14">
+      {/* Tall top padding so the discs a tile pops out on hover are not
+          clipped by the scroller, pulled back up under the heading (which
+          stays clickable through it) so the row sits where it did. */}
+      <div className="shelf-scroll pointer-events-none relative -mx-5 -mt-32 scroll-px-5 gap-6 px-5 pb-4 pt-40 [&>*]:pointer-events-auto md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:gap-7 lg:px-14">
         {recent.slice(0, appConfig.homepage.recentlyAdded.displayCount).map(album => (
           <RecordTile
             key={album.uri_release}
@@ -276,6 +279,7 @@ function LatestAdditions({ recent, colours }: { recent: Album[]; colours: Record
             palette={colours?.[album.uri_release]}
             meta={`${formatShort(album.date_added)}${album.format_primary ? ` · ${album.format_primary}` : ''}`}
             className="w-[168px] shrink-0 md:w-[208px]"
+            variant="flood"
           />
         ))}
       </div>
@@ -422,7 +426,7 @@ function RandomPicks({ albums, colours }: { albums: Album[]; colours: Record<str
       </SectionHeading>
       <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-7">
         {picks.map(album => (
-          <RecordTile key={album.uri_release} album={album} palette={colours?.[album.uri_release]} meta={originalYear(album) ?? undefined} />
+          <RecordTile key={album.uri_release} album={album} palette={colours?.[album.uri_release]} meta={originalYear(album) ?? undefined} variant="flood" />
         ))}
       </div>
     </section>

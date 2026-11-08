@@ -294,6 +294,9 @@ Marble [Memphis Dust]"`). The pressing detail is kept alongside it:
   `output/json.rs`, called by `release_to_value()`), and `collection.json` gains `vinyl_colours`
   after `format_primary` (`output/collection.rs`). Both are omitted when there is nothing to
   say, so uncoloured releases are unchanged.
+- `collection.json` also gains `vinyl_discs` (`formats::vinyl_discs()`: the summed `qty` of the
+  Vinyl entries) after `vinyl_colours`, only for multi-disc vinyl. It needs no backfill: any
+  `scrapper generate-collection` writes it from the stored formats.
 - The backfill patches existing album JSON files in place (`patch_album_fields()`), touching only
   those two keys, so a re-run leaves already-current files byte-identical.
 - The release refresh replaces `raw_data.discogs` wholesale, so it must keep writing `formats`

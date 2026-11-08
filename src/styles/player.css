@@ -361,6 +361,85 @@ body {
   transform: translateX(-6%);
 }
 
+/* Flood mat variant: the sleeve mounted in a mat of its own flood colour,
+   the album twin of the artists' paper prints (same border, same shadow), with
+   the secondary sleeve colour as a thin lip along the foot. The text stays on
+   the ground below, so a row reads as calmly as the prints do.
+
+   Hover pops what is inside out of the top, as the artist cards fan their
+   sleeves: one disc per LP (`vinyl_discs`, each in its pressing colour), or
+   for a box set the sleeves of the albums in it. The cover itself stays put. */
+.rec-flood-mat {
+  position: relative;
+  padding: 5.5%;
+  background: var(--card);
+  box-shadow:
+    inset 0 -4px 0 var(--card-2),
+    0 18px 36px -16px rgba(0, 0, 0, 0.75),
+    0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.rec-flood .rec-flood-stack > .sleeve,
+.rec-flood:hover .rec-flood-stack > .sleeve,
+.rec-flood:focus-visible .rec-flood-stack > .sleeve {
+  transform: none;
+}
+
+.rec-pop {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* its own stack, so a fanned item never climbs over the cover */
+}
+
+/* Popped items, three-quarters of the cover: tucked out of sight behind it,
+   then fanned above it pivoting near their foot, like a hand of cards. */
+.rec-pop > .vinyl,
+.rec-pop > .sleeve,
+.rec-flood:hover .rec-pop > .vinyl {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 76%;
+  height: 76%;
+  transform-origin: 50% 100%;
+}
+
+.rec-pop > * {
+  transform: none;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.rec-flood:hover .rec-pop > *,
+.rec-flood:focus-visible .rec-pop > * {
+  transform: translate(var(--px, 0), var(--py, -84%)) rotate(var(--pr, 0deg)) scale(1.04);
+}
+
+/* The mat lifts a touch, as the prints do. */
+.rec-flood-mat {
+  transition: transform 0.5s var(--ease-out);
+}
+
+.rec-flood:hover .rec-flood-mat,
+.rec-flood:focus-visible .rec-flood-mat {
+  transform: translateY(-2%);
+}
+
+/* Only the hovered tile's discs turn, so a wall of them costs nothing. */
+.rec-flood:hover .rec-pop .vinyl-grooves,
+.rec-flood:focus-visible .rec-pop .vinyl-grooves {
+  animation: spin-33 3.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rec-pop > * {
+    transition: none;
+  }
+  .rec-flood:hover .rec-pop .vinyl-grooves,
+  .rec-flood:focus-visible .rec-pop .vinyl-grooves {
+    animation: none;
+  }
+}
+
 /* Artist card (ArtistCard with `records`): up to three sleeves hidden behind
    the round photo (small enough that their corners stay inside the circle)
    fan out above it on hover, pivoting near their foot like a hand of cards. */
@@ -775,12 +854,19 @@ body {
   aspect-ratio: 1 / 0.9;
   padding: 9cqw;
   border-radius: 16px;
-  background: var(--bin);
+  background-color: var(--bin);
+  background-image:
+    var(--stock-grain-neutral),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12));
+  background-size: 160px 160px, 100% 100%;
   color: var(--bin-ink);
-  box-shadow: 0 18px 30px -18px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+    inset 0 -14px 26px -16px rgba(0, 0, 0, 0.45),
+    0 18px 30px -18px rgba(0, 0, 0, 0.8);
 }
 
-/* the divider's tab */
+/* the divider's tab, in the same stock */
 .genre-bin-card::before {
   content: '';
   position: absolute;
@@ -789,7 +875,27 @@ body {
   width: 40%;
   height: 22px;
   border-radius: 12px 12px 0 0;
-  background: var(--bin);
+  background-color: var(--bin);
+  background-image: var(--stock-grain-neutral), linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14));
+  background-size: 160px 160px, 100% 100%;
+}
+
+/* the scuffs */
+.genre-bin-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: url('/artist-walls/poster-wear.webp') center / cover;
+  filter: invert(1) grayscale(1);
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+}
+
+.genre-bin-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .genre-bin-name {
@@ -805,6 +911,78 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .genre-bin-sleeves img {
+    transition: none;
+  }
+}
+
+/* Card stock, shared by the rack dividers (RunDivider) and the genre bins:
+   a fine grain (--stock-grain, tinted warm on cream, neutral on colour), a
+   light fall from the top, the posters' scuffs inverted to dark wear, and a
+   worn foot. Each card keeps its own colour underneath. */
+:root {
+  --stock-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.27 0 0 0 0 0.16 0 0 0 0.38 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --stock-grain-neutral: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* RunDivider card stock: cream board with a fine warm grain, a light fall
+   from the top, the posters' scuffs (inverted, so they read as dark wear on a
+   light card) and a slightly worn, darker foot. The tab shares the grain. */
+.run-divider-card,
+.run-divider-tab {
+  background-color: var(--cream);
+  background-image:
+    var(--stock-grain),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 40%, rgba(120, 90, 50, 0.12));
+  background-size: 160px 160px, 100% 100%;
+}
+
+.run-divider-card {
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(90, 70, 40, 0.12),
+    inset 0 -14px 26px -16px rgba(90, 65, 30, 0.45),
+    0 18px 30px -18px rgba(0, 0, 0, 0.8);
+}
+
+.run-divider-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url('/artist-walls/poster-wear.webp') center / cover;
+  filter: invert(1) grayscale(1);
+  mix-blend-mode: multiply;
+  opacity: 0.16;
+}
+
+.run-divider-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* RunDivider with `sleeves` (/albums): the run's first records filed behind
+   the card, tops showing above it as in the genre bins, rising on hover. */
+.run-divider-sleeves img {
+  position: absolute;
+  z-index: 0;
+  top: calc(-24cqw + var(--i) * 3cqw);
+  left: calc(8% + var(--i) * 15%);
+  width: 58%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  rotate: calc((var(--i) - 1) * 4deg);
+  transition: translate 0.45s var(--ease-out);
+  transition-delay: calc(var(--i) * 40ms);
+}
+
+.run-divider-filed:hover .run-divider-sleeves img {
+  translate: 0 -14cqw;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .run-divider-sleeves img {
     transition: none;
   }
 }
