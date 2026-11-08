@@ -168,7 +168,8 @@ dropped from the URL.
 
 Page 1 with no filters, in any sort but Colour, opens on a record-shop
 ledge (`IndexRoom`). The page's first eight records stand on the shelf,
-and the grid carries on from the ninth. A one-row band below it holds the
+and the grid below still starts from the first, so each run under its
+divider is complete (the shelf's records show twice). A one-row band below it holds the
 title and count, plus Vinyl, Box sets and Added this year. Any other view
 keeps the `FloodBand` title. See [index headers](./index-headers.md).
 

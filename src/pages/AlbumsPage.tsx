@@ -139,10 +139,11 @@ export function AlbumsPage() {
   const visible = filtered.slice(start, start + perPage);
   const filteredAny = genre !== 'all' || year !== 'all' || format !== 'all' || !!search;
   // Page 1 of the plain listing opens on a record-shop ledge (IndexRoom): its
-  // first records stand on the shelf and the grid carries on from them.
+  // first records stand on the shelf, and the grid still lists them too, so
+  // each run under its divider is complete.
   const shelfSize = indexRoomSlots('albums');
   const shelf = currentPage === 1 && !colourMode && !filteredAny && !loading && visible.length > shelfSize ? visible.slice(0, shelfSize) : null;
-  const tiles = shelf ? visible.slice(shelfSize) : visible;
+  const tiles = visible;
   // The grid is filed in runs (a month added, a letter, a decade), each led by
   // a divider card counting the run across every page and filed with the run's first three sleeves.
   const { runCounts, runSleeves } = useMemo(() => {
