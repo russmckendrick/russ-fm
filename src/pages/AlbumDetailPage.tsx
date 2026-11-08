@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { getCleanGenres, getCleanGenresFromArray, getCleanGenreTermsFromAlbum } from '@/lib/genreUtils';
+import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { slugify } from '@/lib/browseFacets';
 import { labelNames } from '@/lib/releaseLabel';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
@@ -53,6 +53,7 @@ interface Album {
   }>;
   members?: AlbumMember[];
   genre_names: string[];
+  styles?: string[];
   uri_release: string;
   uri_artist: string;
   date_added: string;
@@ -898,7 +899,8 @@ export function AlbumDetailPage() {
   // Every detail the page holds, listed under the centre label in the sidebar
   // (the label only fits five, and the hero's line keeps to a few). Each value
   // links wherever the site has a page for it.
-  const genreSlugs = new Set(getCleanGenreTermsFromAlbum(album).map(slugify));
+  // The genre facet's terms for this record (getCleanGenreTermsFromAlbum's rule, on the page's own album shape).
+  const genreSlugs = new Set(getCleanGenresFromArray([...(album.genre_names ?? []), ...(album.styles ?? [])], album.release_artist).map(slugify));
   const rawLabels = [...(album.labels ?? []), ...(detailedAlbum?.labels ?? [])];
   const rawLabel = (name: string) => rawLabels.find(l => l.replace(/\s*\(\d+\)$/, '').trim() === name) ?? name;
   const linkList = (names: string[], href: (name: string) => string | null) =>
@@ -914,7 +916,7 @@ export function AlbumDetailPage() {
   const formatName = (inherited.length ? 'Vinyl' : null) ?? detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record';
   const addedPage = album.boxset ? null : albumsPageOf(rawCollection, album.uri_release);
   const origYear = originalYear(album);
-  const allDetails: Array<[string, React.ReactNode]> = [
+  const detailRows: Array<[string, React.ReactNode]> = [
     // Each Discogs label once (catalogue entries repeat them), shown without its
     // "(2)" but linked by the full name, as the /label pages slug it.
     ['Label', detailedAlbum?.labels?.length ? linkList(labelNames(detailedAlbum.labels), name => `/label/${slugify(rawLabel(name))}`) : null],
@@ -940,7 +942,8 @@ export function AlbumDetailPage() {
     ['Genres', album.genre_names?.length ? linkList(album.genre_names, name => (genreSlugs.has(slugify(name)) ? `/genre/${slugify(name)}` : null)) : null],
     ['Styles', detailedAlbum?.styles?.length ? linkList(detailedAlbum.styles, name => (genreSlugs.has(slugify(name)) ? `/genre/${slugify(name)}` : null)) : null],
     ['Added', addedPage ? <DetailLink to={`/albums/${addedPage}`}>{formatDate(album.date_added)}</DetailLink> : formatDate(album.date_added)],
-  ].filter((f): f is [string, React.ReactNode] => f[1] != null && f[1] !== '');
+  ];
+  const allDetails = detailRows.filter(([, v]) => v != null && v !== '');
 
   const serviceLinks = [
     detailedAlbum?.services?.spotify?.url && { label: 'Spotify', url: detailedAlbum.services.spotify.url },
