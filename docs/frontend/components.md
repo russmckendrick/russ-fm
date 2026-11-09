@@ -20,7 +20,7 @@ All exported from `@/components/player`.
 | `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. The album page passes `scene` (from `useScrobbleScene`) and `ringColour` for the scrobble scene; `ringColour` lights the ring on black vinyl, while a coloured disc gets cream (or ink when `look.light`). |
 | `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
-| `Sticker` | `Sticker.tsx` | Price-gun label (white stock with notched ends, mono print, a little crooked) stuck inside the sleeve's top-right corner. The home hero, album page and box sets no longer show an "Added" one (the date is in their metadata rows); it is the album page's "Scrobbled · 11 tracks" stamp and Wrapped's labels. |
+| `Sticker` | `Sticker.tsx` | Price-gun label (white stock with notched ends, mono print, a little crooked) stuck inside the sleeve's top-right corner. The home hero, album page and box sets no longer show an "Added" one (the date is in their metadata rows); it is the `HeroRecord` scene's "Scrobbled · 11 tracks" stamp and Wrapped's labels (the album room's scrobble shows as clouds instead). |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. Its disc takes the pressing's colour on hover. |
 | `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break; the artist hero uses `min={28}` so a long single-word name ("HOUSEMARTINS", "65DAYSOFSTATIC") fits a phone column whole. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
@@ -159,9 +159,10 @@ directly on `<button>`s.
 stand and the record (`Vinyl`, class `room-vinyl`) spinning on a turntable.
 Props: `records` (`RoomRecord[]`: `key`, `room`, `cover`, `alt`, `look`,
 `labelColour`, optional `href`), `active`, `tint` (the flood), `fast`
-(scrobbling), `sticker` (laid over the sleeve's box), `topInset` (defaults
-to the header height), `zoom`. See [release room](./release-room.md).
-`HeroSticker` (from `HeroRecord.tsx`) is exported for its sticker; `showAdded={false}` (the album page) shows only the "Scrobbled" stamp.
+(Shuffle dealing), `overlay` (a render prop laid over the whole room, given
+its size, the header's inset and the record's centre: the album page's `ScrobbleSky`),
+`topInset` (defaults to the header height), `zoom`. See
+[release room](./release-room.md#scrobble-clouds).
 
 ## Poster wall (`src/components/artist/PosterWall.tsx`)
 

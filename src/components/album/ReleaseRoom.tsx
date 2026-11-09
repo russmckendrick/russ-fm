@@ -27,10 +27,10 @@ interface ReleaseRoomProps {
   active: number;
   /** The room takes this colour (the sleeve's flood), like the /tv rooms. */
   tint: string;
-  /** Spin at 45 (while scrobbling). */
+  /** Spin at 45 (while Shuffle deals). */
   fast?: boolean;
-  /** Laid over the active sleeve's box (the shop sticker positions itself on its corner). */
-  sticker?: ReactNode;
+  /** Laid over the whole room, given its size, the header's inset (`top`) and where the record on show sits (the album page's scrobble clouds). */
+  overlay?: (room: { width: number; height: number; top: number; record: { x: number; y: number } }) => ReactNode;
   /** Pixels at the top covered by the see-through header (its height by default); the stand centres below them. */
   topInset?: number;
   /** How far to move in on the stand: 1 shows more room. */
@@ -104,7 +104,7 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
  * cues in once the room shows, and between two records in that room it lifts
  * and parks before the record swaps, then cues back in.
  */
-export function ReleaseRoom({ records, active, tint, fast = false, sticker, topInset, zoom = 1.5, className }: ReleaseRoomProps) {
+export function ReleaseRoom({ records, active, tint, fast = false, overlay, topInset, zoom = 1.5, className }: ReleaseRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // A room shows once its photo has loaded, so the record never shows without the room round it.
@@ -148,7 +148,7 @@ export function ReleaseRoom({ records, active, tint, fast = false, sticker, topI
   // The sticky header: 64px, 84px from md.
   const inset = topInset ?? (size && size.w >= 768 ? 84 : 64);
   const rooms = [...new Map(records.filter(r => mounted.has(r.room.id)).map(r => [r.room.id, r.room])).values()];
-  const activeSleeve = size && current && loaded.has(current.room.id) ? layout(current.room, size.w, size.h, zoom, inset).sleeve : null;
+  const activeImg = size && current && loaded.has(current.room.id) ? layout(current.room, size.w, size.h, zoom, inset).img : null;
 
   return (
     <div ref={box} className={cn('release-room relative overflow-hidden', className)}>
@@ -234,11 +234,18 @@ export function ReleaseRoom({ records, active, tint, fast = false, sticker, topI
             </div>
           );
         })}
-      {activeSleeve && sticker && (
-        <div className="release-room-sticker" style={activeSleeve}>
-          {sticker}
-        </div>
-      )}
+      {size &&
+        activeImg &&
+        current &&
+        overlay?.({
+          width: size.w,
+          height: size.h,
+          top: inset,
+          record: {
+            x: activeImg.left + (current.room.record.fx / 100) * activeImg.width,
+            y: activeImg.top + (current.room.record.fy / 100) * activeImg.height,
+          },
+        })}
     </div>
   );
 }

@@ -426,7 +426,7 @@ const { scene, onProgress } = useScrobbleScene(albumPath);
 <HeroRecord ... scene={scene} ringColour={flood.flood} />
 ```
 
-`scene.phase` runs `idle → out → lift → play → done → back → idle`; `scene.done` / `scene.total` light the ring; `scene.stamp` runs `added → scrobbled → returning → returned`, fading "Added" back in 10s after the scene ends. Changing `resetKey` (the album path) resets everything. Timings and the full choreography: [design-system.md](./design-system.md).
+`scene.phase` runs `idle → out → lift → play → done → back → idle`; `scene.done` / `scene.total` light the ring; `scene.stamp` runs `added → scrobbled → returning → returned`, fading "Added" back in 10s after the scene ends. Changing `resetKey` (the album path) resets everything. The album room paces the button with `CLOUD_LEAD_IN_MS` and `cloudTrackMs(tracks)` from the same file and draws the scene as clouds (`ScrobbleSky`); the `SCENE_*` timings are for `HeroRecord`. Timings and the full choreography: [design-system.md](./design-system.md).
 
 ---
 

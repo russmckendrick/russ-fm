@@ -146,27 +146,24 @@ export function HeroRecord({
 
 /**
  * The shop sticker. After a scrobble it swaps to a cream "Scrobbled" one,
- * which later crossfades back to "Added". With `showAdded={false}` (the album
- * page, whose metadata row carries the date) only the "Scrobbled" one shows.
+ * which later crossfades back to "Added".
  */
 export function HeroSticker({
   sticker,
   scene,
   size,
   className,
-  showAdded = true,
 }: {
   sticker: NonNullable<HeroRecordProps['sticker']>;
   scene?: ScrobbleScene;
   size: 'lg' | 'sm';
   className: string;
-  showAdded?: boolean;
 }) {
   const stamp = scene?.stamp ?? 'added';
   const showScrobbled = !!scene?.stampedAt && (stamp === 'scrobbled' || stamp === 'returning');
   return (
     <>
-      {showAdded && stamp !== 'scrobbled' && (
+      {stamp !== 'scrobbled' && (
         <Sticker
           key="added"
           {...sticker}

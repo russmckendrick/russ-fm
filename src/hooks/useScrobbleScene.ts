@@ -35,6 +35,11 @@ export const SCENE_LEAD_IN_MS = 1450;
 /** How long each track holds in the ring before the next one lights. */
 export const SCENE_TRACK_MS = 460;
 
+/** The album room's pacing (ScrobbleSky's clouds): the first track lifts almost at once. */
+export const CLOUD_LEAD_IN_MS = 300;
+/** A cloud per track every this many ms: unhurried for an LP, quicker for a long tracklist (about 9s in all). */
+export const cloudTrackMs = (tracks: number) => Math.round(Math.min(850, Math.max(380, 9000 / Math.max(1, tracks))));
+
 const LIFT_AT_MS = 560;
 const DONE_HOLD_MS = 1500;
 const BACK_MS = 650;

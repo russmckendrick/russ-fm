@@ -16,7 +16,7 @@ record on the turntable cut out (transparent), and sits over:
 - **the record**, the site's `Vinyl` (`room-vinyl`) round the photo's spindle,
   squashed with `scaleY` into the turntable's perspective and sized past the
   cut-out (`cover`), so the tonearm and the platter's rim stay on top. Only
-  the pressing's pattern and the label turn (6s a turn; 45 while scrobbling).
+  the pressing's pattern and the label turn (6s a turn; 45 while Shuffle deals).
   The grooves and the light on the record are round, so they are still layers
   (`::before` / `::after`), pinned to the photo's record outline rather than
   the spindle (in perspective the two are apart). The grooves are white on
@@ -57,6 +57,38 @@ record is in the same room, the record waits for the arm to park, swaps, and
 the arm cues back in (if the arm never reports back, the record swaps after
 3.5 s anyway). A record in another room crossfades the whole room as before,
 and the new room's arm cues in.
+
+### Scrobble clouds
+
+Scrobbling from the album band doesn't speed the record up. Instead
+`ScrobbleSky` (`src/components/album/ScrobbleSky.tsx`), passed as
+`ReleaseRoom`'s `overlay`, lifts each track off the record as a small 3D
+cloud with its position and title on it. It is drawn with three.js
+(`src/lib/scrobbleClouds.ts`), which loads on the first scrobble:
+
+- **Camera.** A perspective camera placed so the z = 0 plane maps 1:1 onto
+  the room's box, so clouds start at the record's centre (the photo's
+  `fx`, `fy`) wherever the layout puts it.
+- **Clouds.** Each one is built from lumpy spheres: a flat-bottomed base, a
+  row of puffs along the label, big billows on top, a crown, and some fill
+  behind so it reads round as it turns. The label is a canvas texture
+  (display font, mono position) on a plane just in front, with an empty
+  ring that fills with a red tick once the count passes the track.
+- **Light.** A warm key from the upper left, a point light in the room's
+  flood from the upper right, a dark red bounce from below, and a faint studio
+  environment.
+- **Motion.** A cloud pops up off the record, rises on a gentle S-curve while
+  it turns, edges towards the camera, and evaporates puff by puff, the edges
+  first (`CLOUD_DRIFT_MS`, 6s). Each rise is capped so the cloud has gone before it reaches the header (`ReleaseRoom` passes its `topInset` as the ceiling). When Last.fm answers, a bigger cloud
+  ("Scrobbled 12 tracks", or "12 of 14") rises more slowly, hangs, and goes.
+  A failed scrobble evaporates whatever is in the air. It draws only while
+  clouds are up. Reduced motion draws nothing (the band's readout says the
+  same), and nor does a browser without WebGL.
+
+The album page paces the button for the clouds: the first track lifts after
+`CLOUD_LEAD_IN_MS` (300 ms), then one every `cloudTrackMs(tracks)`: 850 ms for
+an LP, quicker for a long tracklist (about 9s in all, never under 380 ms).
+There is no sleeve sticker in the room.
 
 A masked `mix-blend-mode: color` layer tints the room with the flood, as on
 `/tv`. The page sets `room: true` in `usePageFlood`, and the header is

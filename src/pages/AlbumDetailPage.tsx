@@ -12,7 +12,7 @@ import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { youTubeVideos } from '@/lib/youtube';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { scrobbleableRows, toScrobbleTracks } from '@/lib/scrobbleTracks';
-import { SCENE_LEAD_IN_MS, SCENE_TRACK_MS, useScrobbleScene } from '@/hooks/useScrobbleScene';
+import { CLOUD_LEAD_IN_MS, cloudTrackMs, useScrobbleScene } from '@/hooks/useScrobbleScene';
 import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
 import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
 import { getAlbumImageFromData, getAlbumSlug, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
@@ -25,9 +25,10 @@ import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 import { threadFromAlbum } from '@/lib/explore/links';
-import { AFTER_HERO, CoverHero, FitTitle, HeroSticker, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
+import { AFTER_HERO, CoverHero, FitTitle, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
 import { serviceIconFor } from '@/components/player/service-icon';
 import { ReleaseRoom } from '@/components/album/ReleaseRoom';
+import { ScrobbleSky } from '@/components/album/ScrobbleSky';
 import { ReleaseLabel } from '@/components/album/ReleaseLabel';
 import { ArtistBand } from '@/components/album/ArtistBand';
 import { releaseRoomFor } from '@/lib/releaseRooms';
@@ -1019,8 +1020,8 @@ export function AlbumDetailPage() {
       mobileLabel="Scrobble"
       key={albumPath}
       onProgress={onScrobbleProgress}
-      leadInMs={SCENE_LEAD_IN_MS}
-      trackMs={SCENE_TRACK_MS}
+      leadInMs={CLOUD_LEAD_IN_MS}
+      trackMs={cloudTrackMs(scrobbleRows.length)}
     />
   );
   // The scrobble's progress while it plays, else the genres.
@@ -1116,16 +1117,17 @@ export function AlbumDetailPage() {
           ]}
           active={0}
           tint={flood.flood}
-          fast={scenePhase === 'play'}
-          sticker={
-            <HeroSticker
-              sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
+          overlay={room => (
+            <ScrobbleSky
               scene={scrobbleScene}
-              showAdded={false}
-              size="lg"
-              className="right-[4%] top-[4%] hidden md:flex"
+              tracks={scrobbleRows}
+              width={room.width}
+              height={room.height}
+              origin={room.record}
+              ceiling={room.top}
+              tint={flood.flood}
             />
-          }
+          )}
           className="h-[clamp(460px,78svh,940px)]"
         />
       </div>

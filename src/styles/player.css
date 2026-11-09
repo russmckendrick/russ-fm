@@ -2319,8 +2319,10 @@ body {
   pointer-events: none;
 }
 
-.release-room-sticker {
+/* The scrobble clouds (ScrobbleSky), over the whole room. */
+.release-room-sky {
   position: absolute;
+  inset: 0;
   z-index: 4;
   pointer-events: none;
 }
@@ -2376,7 +2378,7 @@ body {
   height: var(--label);
 }
 
-/* 33⅓ at the hero record's easy pace; 45 (scrobbling) keeps its speed. */
+/* 33⅓ at the hero record's easy pace; 45 (Shuffle dealing) keeps its speed. */
 .room-vinyl .spin-33 {
   animation-duration: 6s;
 }
