@@ -75,8 +75,8 @@ export function RandomPage() {
 function RandomPageSkeleton() {
   return (
     <div aria-live="polite" aria-busy="true">
-      <div aria-hidden className="relative -mt-16 h-[clamp(300px,46svh,860px)] md:h-[clamp(340px,58svh,860px)] bg-[color:var(--ground)] md:-mt-[84px]" />
-      <div aria-hidden className="h-[clamp(300px,34svh,420px)] animate-pulse bg-[color:var(--ground-2)] motion-reduce:animate-none" />
+      <div aria-hidden className="relative -mt-16 h-[clamp(380px,110vw,560px)] md:h-[clamp(440px,64svh,700px)] bg-[color:var(--ground)] md:-mt-[84px]" />
+      <div aria-hidden className="h-[clamp(240px,30svh,300px)] animate-pulse bg-[color:var(--ground-2)] motion-reduce:animate-none" />
       <p className="sr-only">Loading collection</p>
     </div>
   );

@@ -15,6 +15,8 @@ interface IndexRoomProps {
   tint: string;
   /** Pixels at the top covered by the see-through header (its height by default); the row centres below them. */
   topInset?: number;
+  /** Called once the photo has decoded and starts to fade in. */
+  onLoaded?: () => void;
   className?: string;
 }
 
@@ -26,7 +28,7 @@ interface IndexRoomProps {
  * own light on them (the shade layer, multiplied). It shares the artist
  * wall's layer, shade, photo and tint styles (player.css).
  */
-export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, topInset, className }: IndexRoomProps) {
+export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, topInset, onLoaded, className }: IndexRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // The photo shows once it has decoded, so the slots never show without it.
@@ -99,7 +101,10 @@ export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, t
               e.currentTarget
                 .decode()
                 .catch(() => {})
-                .then(() => setLoaded(true))
+                .then(() => {
+                  setLoaded(true);
+                  onLoaded?.();
+                })
             }
           />
           <div className="artist-wall-tint" aria-hidden style={{ ...g.img, background: tint }} />

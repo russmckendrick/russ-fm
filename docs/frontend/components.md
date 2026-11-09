@@ -159,7 +159,7 @@ directly on `<button>`s.
 stand and the record (`Vinyl`, class `room-vinyl`) spinning on a turntable.
 Props: `records` (`RoomRecord[]`: `key`, `room`, `cover`, `alt`, `look`,
 `labelColour`, optional `href`), `active`, `tint` (the flood), `fast`
-(Shuffle dealing), `overlay` (a render prop laid over the whole room, given
+(the record at 45), `overlay` (a render prop laid over the whole room, given
 its size, the header's inset and the record's centre: the album page's `ScrobbleSky`),
 `topInset` (defaults to the header height), `zoom`. See
 [release room](./release-room.md#scrobble-clouds).
