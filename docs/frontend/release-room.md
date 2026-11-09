@@ -1,6 +1,6 @@
 # Release room (album and home heroes)
 
-The album page, the home page and Shuffle (see [pages.md](./pages.md#randompage-srcpagesrandompagetsx)) open on a listening room: a photo of a
+The album page and the home page open on a listening room: a photo of a
 room with the record's sleeve on a stand and the record playing on a
 turntable, the room tinted with the sleeve's flood, and a slim band in the
 flood below. Box sets keep the cover hero (`CoverHero` + `BoxHeroArt`).
@@ -16,7 +16,7 @@ record on the turntable cut out (transparent), and sits over:
 - **the record**, the site's `Vinyl` (`room-vinyl`) round the photo's spindle,
   squashed with `scaleY` into the turntable's perspective and sized past the
   cut-out (`cover`), so the tonearm and the platter's rim stay on top. Only
-  the pressing's pattern and the label turn (6s a turn; 45 while Shuffle deals).
+  the pressing's pattern and the label turn (6s a turn; 45 when `fast`).
   The grooves and the light on the record are round, so they are still layers
   (`::before` / `::after`), pinned to the photo's record outline rather than
   the spindle (in perspective the two are apart). The grooves are white on

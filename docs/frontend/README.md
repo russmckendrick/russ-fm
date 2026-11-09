@@ -277,7 +277,7 @@ React Router DOM handles all navigation:
 | `/coloured-vinyl` | ColouredVinylPage | Every coloured pressing as a still record, filterable by colour family and pattern |
 | `/labels`, `/decades`, `/countries` | FacetListPage | Every value of one facet |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug` | FacetDetailPage | Records for one value |
-| `/shuffle`, `/random` | RandomPage | Shuffle: listening room with a split-flap band, to a random record |
+| `/shuffle`, `/random` | RandomPage | Shuffle: a light chases along eight records on a shop rail and stops on one |
 | `/search` | SearchResultsPage | Search results |
 
 `App.tsx` renders a `ScrollToTop` component that scrolls to the top on PUSH and REPLACE

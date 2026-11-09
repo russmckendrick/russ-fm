@@ -1465,96 +1465,131 @@ body {
   scroll-snap-align: start;
 }
 
-/* --- Split-flap board (Shuffle page) --------------------------------------
-   The board is the band under the Shuffle room. Tiles size themselves from
-   the board's width (container units), so the same markup works for the
-   30-column desktop board and the 14-column phone board. Flat halves and a split line, no gradients. */
+/* --- Shuffle ledge (/shuffle) ---------------------------------------------
+   src/pages/random/ShuffleScene.tsx: eight sleeves on the rail behind a shop
+   counter (IndexRoom, room "shuffle"). A light chases along the row, each
+   sleeve flipping to a new record as it passes, then stops on the pick. */
 
-.flap-wrap {
-  container-type: inline-size;
-  --flap-gap: clamp(3px, 0.5cqw, 5px);
+.ledge-sleeve {
+  perspective: 600px;
 }
 
-.flap-board {
-  display: flex;
-  flex-direction: column;
-  gap: var(--flap-gap);
-}
-
-.flap-row {
-  display: grid;
-  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-  gap: var(--flap-gap);
-}
-
-.flap-link {
-  display: flex;
-  flex-direction: column;
-  gap: var(--flap-gap);
-  border-radius: 6px;
-}
-
-.flap-link:hover .flap > span {
-  text-decoration: underline;
-  text-underline-offset: 0.08em;
-  text-decoration-thickness: 0.06em;
-}
-
-.flap {
+.ledge-sleeve > a {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 19 / 29;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #161412;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
-.flap::before {
+/* A new record turns in edge-on, like a sleeve flipped round on the rail. */
+.ledge-flip {
+  animation: ledge-flip 0.2s var(--ease-out) both;
+}
+
+@keyframes ledge-flip {
+  from {
+    transform: rotateY(80deg);
+  }
+}
+
+/* The shop light off every sleeve but the lit one. */
+.ledge-dim {
+  position: absolute;
+  inset: 0;
+  background: #080706;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.08s linear;
+}
+
+.ledge-dim.is-dim {
+  opacity: 0.72;
+}
+
+/* The settled row: the others sit back in shadow, a little less dark. */
+.ledge-idle .ledge-dim {
+  transition-duration: 0.6s;
+}
+
+.ledge-idle .ledge-dim.is-dim {
+  opacity: 0.5;
+}
+
+/* The spotlight above each sleeve (drawn over the photo, IndexRoom renderOver).
+   Off: the lamp head and its pool of light on the wall fall into shadow. On:
+   a warm glow, screened, with a hot spot at the lamp's mouth and light spilling
+   onto the sleeve. Lamps snap on and fade off slowly, like filament bulbs. */
+.ledge-lamp {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: -95%;
+  height: 160%;
+  pointer-events: none;
+}
+
+.ledge-lamp::before,
+.ledge-lamp::after {
   content: '';
   position: absolute;
-  inset: 0 0 50% 0;
-  background: #1d1b18;
+  inset: 0;
 }
 
-.flap::after {
-  content: '';
+.ledge-lamp::before {
+  background:
+    radial-gradient(ellipse 11% 14% at 50% 22%, rgba(5, 4, 3, 0.9), transparent 100%),
+    radial-gradient(ellipse 46% 26% at 50% 42%, rgba(5, 4, 3, 0.75), transparent 100%);
+  transition: opacity 0.45s ease-out;
+}
+
+.ledge-lamp::after {
+  background:
+    radial-gradient(ellipse 8% 4% at 50% 28%, rgba(255, 244, 220, 0.95), transparent 100%),
+    radial-gradient(ellipse 44% 26% at 50% 44%, rgba(255, 190, 110, 0.45), transparent 100%),
+    radial-gradient(ellipse 36% 18% at 50% 68%, rgba(255, 220, 170, 0.25), transparent 100%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.45s ease-out;
+}
+
+.ledge-lamp.is-on::before {
+  opacity: 0;
+  transition-duration: 0.05s;
+}
+
+.ledge-lamp.is-on::after {
+  opacity: 1;
+  transition-duration: 0.05s;
+}
+
+/* A price-gun tag stuck under the pick. */
+.ledge-tag {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  margin-top: -0.5px;
-  background: #050504;
-}
-
-.flap > span {
-  position: relative;
-  z-index: 1;
-  color: var(--cream);
-  font-family: var(--font-display);
-  font-size: calc(100cqw / var(--cols) * 1.08);
-  font-stretch: 80%;
-  font-weight: 800;
-  line-height: 1;
+  top: calc(100% + var(--u) * 7);
+  left: 50%;
+  padding: 0.4em 0.75em;
+  font-family: var(--font-mono);
+  font-size: clamp(9px, calc(var(--u) * 7), 12px);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%) rotate(-3deg);
+  animation: ledge-tag 0.35s var(--ease-out) both;
+  pointer-events: none;
 }
 
-.flap-moving::before {
-  background: #24211d;
-}
-
-.flap-moving > span {
-  transform: scaleY(0.82);
+@keyframes ledge-tag {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px) rotate(-8deg) scale(1.15);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .spin-33,
   .spin-45,
   .spin-lazy .vinyl-grooves,
-  .vinyl-cover-in {
+  .vinyl-cover-in,
+  .ledge-flip,
+  .ledge-tag {
     animation: none;
   }
 

@@ -749,39 +749,55 @@ ignored.
 
 - Loads the shared `loadCollection()` (boxset members excluded) and
   `preloadAlbumColors()` together, so the first record lands in its own colour
-- `ShuffleScene` (`src/pages/random/ShuffleScene.tsx`): the record's
-  listening room (`ReleaseRoom`, as on the album page: sleeve on the stand,
-  the pressing on the turntable, 3D arm, room tinted with the sleeve's flood)
-  pulled up under the see-through header (`usePageFlood` with `room: true`),
-  then one band in the flood: the mono pressing line (format, label, year,
-  country), the `FlapBoard` (`src/pages/random/FlapBoard.tsx`) with Artist,
-  Title, then Year and Genre rows, and Shuffle / View album pills beside it
-  from `lg` (under it below)
-- Each shuffle runs two phases:
-  1. **rolling**: the tiles flip to the new record in a left-to-right,
-     top-to-bottom cascade (tiles blank before and after stay still) while the
-     room keeps playing the old record at 45; the new sleeve and its room photo
-     are fetched meanwhile
-  2. **idle**: once the last tile lands the room changes record. In the same
-     room the arm lifts and parks, the record swaps and the arm cues back in;
-     in another room the whole room crossfades. The band, nav and page ground
-     fade to the new colours
-- The room is handed a ring of four record slots: the next record is written
-  into the oldest slot, so the one on show keeps its index (`ReleaseRoom`
-  tracks the record on show by index to park the arm or crossfade). The first
-  board lands on the record the room already shows
-- Board layout comes from `redesignConfig.random`: 30 columns (1 artist row,
-  2 title rows) from 640px up, 14 columns (2 artist rows, 2 title rows) below.
-  Tiles size themselves from the board width with container units. Text is
-  upper-cased with accents stripped; titles that run past the last row end in
-  an ellipsis, and the genre is the first clean genre that fits
-  (`src/lib/splitFlap.ts`)
-- The room is `clamp(300px, 46svh, 860px)` tall on phones and
-  `clamp(340px, 58svh, 860px)` from `md`, so room and band fit one screen
-- Year and genre letters use the next record's `glow`; the Artist and Title
-  rows link to the artist and album, and the sleeve on the stand to the album
-- Reduced motion: tiles and colour switch at once; the room swaps with no arm
-  motion
+- `ShuffleScene` (`src/pages/random/ShuffleScene.tsx`): eight records on the
+  brass rail behind a shop counter (`IndexRoom` with the `shuffle` photo, see
+  [index headers](./index-headers.md)), each under its own spotlight and
+  each linking to its record, pulled up under the see-through header
+  (`usePageFlood` with `room: true`). Below is one band in the pick's flood:
+  the mono pressing line (format, year, label, country), the artist (linked),
+  the condensed title (linked), up to three genres, and Shuffle / View album
+  pills beside it from `lg` (under it below)
+- The band never changes size between records: every row is one line at a
+  fixed height (overflow ends in an ellipsis), the genre row holds its
+  height when a record has none, and the Shuffle pill has a minimum width so
+  "Shuffling" doesn't widen it. The title's box is a fixed
+  `clamp(40px, 7vw, 96px)` tall; its font shrinks to fit the whole title on
+  one line of the text column (`titleSize()`: container units, a condensed
+  capital taken as half an em), down to 28px
+- The page shuffles on arrival: it opens on eight random records with every
+  lamp off and a neutral band reading "Shuffling…" (the record count in the
+  mono line, "Picking a record", and the View album pill greyed out in place). Once the shop photo has decoded
+  (`IndexRoom`'s `onLoaded`), the first chase starts 0.45s later. Until it
+  lands, nothing is picked: no tag, no record colours on the page
+- **Shuffle** sends a light chasing along the rail like a fruit-machine reel:
+  - The whole chase is planned when you press it, so every record it will
+    flip to (and the pick's hi-res sleeve) loads while it runs
+  - Each step switches on the next sleeve's spotlight (`.ledge-lamp`, drawn
+    over the photo's lamp: a warm glow, a hot spot at the lamp's mouth, light
+    spilling onto the sleeve) and dims the rest. Unlit lamps and their pools
+    of light fall into shadow; lamps snap on and fade off over 0.45s like
+    filament bulbs, so a short trail follows the light. That sleeve turns
+    round to a new record (`ledge-flip`) unless it is one of the last
+    `holdSteps`, so the pick is already on show as the light reaches it.
+    No record appears twice on the rail
+  - Step `k` lasts `stepMs + k² × slowMs`: fast to start, slowing into the pick
+  - While it runs, the band goes back to the "Shuffling…" placeholder (the
+    View album pill greyed out) but keeps the last pick's colours, and
+    Shuffle is disabled
+  - Once it stops, the tag sticks under the pick and the band fills in while
+    it, the nav and the page ground fade to the pick's colours. The pick is
+    held in its own state (`picked`), not read from the rail, since the next
+    chase flips its slot over
+- Timings are in `redesignConfig.random` (14–21 steps, 50ms plus 1.1ms × k²,
+  3 held steps: about 1.5 to 4 seconds)
+- The chase only stops on a sleeve that is wholly on screen. On a phone the
+  photo covers the box, so the ends of the rail are cropped and the pick is
+  one of the middle four (`visibleSlots()`, worked out the same way
+  `IndexRoom` places the photo)
+- The rail is `clamp(380px, 110vw, 560px)` tall on phones and
+  `clamp(440px, 64svh, 700px)` from `md`, as on `/albums`
+- Reduced motion: no chase (on arrival too); the rail, pick and colours
+  change at once
 - Loading skeleton (an empty room and band at the scene's sizes), retryable
   error ("Try again") and empty states
 - No audio

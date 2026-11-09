@@ -91,14 +91,17 @@ export const redesignConfig = {
   },
 
   /**
-   * Shuffle page (/shuffle, also /random) split-flap board, laid across the band under
-   * the listening room. `wide` applies from 640px up, `narrow` below. `tickMs` is how
-   * often a flipping tile changes character.
+   * Shuffle page (/shuffle, also /random) ledge chaser. The light takes between
+   * `minSteps` and `maxSteps` steps along the eight sleeves; step `k` lasts
+   * `stepMs + k² × slowMs`, so it runs fast and slows into the pick. The last
+   * `holdSteps` don't flip a sleeve, so the pick is on show as the light reaches it.
    */
   random: {
-    wide: { cols: 30, artistRows: 1, titleRows: 2 },
-    narrow: { cols: 14, artistRows: 2, titleRows: 2 },
-    tickMs: 42,
+    minSteps: 14,
+    maxSteps: 21,
+    stepMs: 50,
+    slowMs: 1.1,
+    holdSteps: 3,
   },
 
   /**

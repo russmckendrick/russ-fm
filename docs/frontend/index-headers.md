@@ -1,4 +1,4 @@
-# Index headers (/albums, /artists, /stats)
+# Index headers (/albums, /artists, /stats, /shuffle)
 
 Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 [release room](./release-room.md) and [artist poster wall](./artist-wall.md):
@@ -11,6 +11,10 @@ Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 - **/stats:** an oak cube unit in a record room, six records face out, each
   under a card with a collection fact drawn at random on every visit (see
   [pages.md](./pages.md#statspage-srcpagesstatspagetsx)). It always shows.
+- **/shuffle:** the brass rail behind a shop counter at night, eight sleeves
+  each under its own spotlight. A light chases along them and stops on the
+  pick (see [pages.md](./pages.md#randompage-srcpagesrandompagetsx)). It
+  draws its own band rather than the one below.
 
 Below the photo is a one-row band in the flood: the `h1` with its count, then
 the collection in numbers.
@@ -42,6 +46,8 @@ layer, shade, photo and tint styles in `player.css`:
 
     There are no sleeves. The name keeps clear of torn bottom and right
     corners.
+- **Loaded:** an optional `onLoaded()` fires once the photo has decoded and
+  starts to fade in (/shuffle starts its first chase from it).
 - **Over:** an optional `renderOver(i)` draws above the photo in a box the
   same as slot `i`'s, not clipped (`.index-room-over`). /stats hangs its
   tags there, since anything inside a slot is covered by the photo outside
@@ -62,7 +68,7 @@ slots (`#00FF00`), facing the camera dead-on, with clear gaps between
 them so each keys as its own blob.
 
 ```bash
-uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle]
 ```
 
 The script upscales 4× (`scripts/lib/upscale.py`, cached in
