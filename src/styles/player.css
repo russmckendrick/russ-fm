@@ -1466,9 +1466,9 @@ body {
 }
 
 /* --- Split-flap board (Shuffle page) --------------------------------------
-   Tiles size themselves from the board's width (container units), so the
-   same markup works for the 20-column desktop board and the 12-column phone
-   board. Flat halves and a split line, no gradients. */
+   The board is the band under the Shuffle room. Tiles size themselves from
+   the board's width (container units), so the same markup works for the
+   30-column desktop board and the 14-column phone board. Flat halves and a split line, no gradients. */
 
 .flap-wrap {
   container-type: inline-size;
@@ -1550,36 +1550,7 @@ body {
   transform: scaleY(0.82);
 }
 
-/* The next record's colour falls down the page like a flap. */
-.flap-drop {
-  transform-origin: 50% 0;
-  animation: flap-drop 0.45s cubic-bezier(0.55, 0, 0.35, 1) both;
-}
-
-@keyframes flap-drop {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-
-/* The cover turns edge-on to show the record behind it, then back. */
-.flap-card {
-  z-index: 2;
-  transition: transform 0.32s cubic-bezier(0.3, 0.7, 0.2, 1);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .flap-drop {
-    animation: none;
-  }
-
-  .flap-card {
-    transition: none;
-  }
-
   .spin-33,
   .spin-45,
   .spin-lazy .vinyl-grooves,

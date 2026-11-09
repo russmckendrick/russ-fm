@@ -68,38 +68,17 @@ export function RandomPage() {
     return <RandomPageMessage title="No records to shuffle" detail="The collection is empty." />;
   }
 
-  return (
-    <PageContainer variant="hero">
-      <ShuffleScene albums={albums} />
-    </PageContainer>
-  );
+  return <ShuffleScene albums={albums} />;
 }
 
+/** Shown while the collection loads: an empty room and an empty band, the same sizes as the scene. */
 function RandomPageSkeleton() {
   return (
-    <PageContainer variant="hero">
-      <RandomPageFallback />
-    </PageContainer>
-  );
-}
-
-/** Shown while the collection loads: a blank sleeve and an empty board. */
-function RandomPageFallback() {
-  return (
-    <section
-      className="mx-auto flex min-h-[calc(100svh-64px)] w-full max-w-[1640px] flex-col items-center gap-5 px-5 pb-6 pt-5 sm:gap-7 sm:pb-8 sm:pt-6 font-grot md:min-h-[calc(100svh-84px)] md:px-10 lg:flex-row lg:gap-[clamp(48px,5vw,96px)] lg:px-14 lg:py-14"
-      aria-live="polite"
-      aria-busy="true"
-    >
-      <div
-        aria-hidden
-        className="aspect-square w-[min(54vw,300px)] shrink-0 animate-pulse bg-[color:var(--ground-3)] motion-reduce:animate-none sm:w-[min(50vw,380px)] lg:w-[clamp(340px,34vw,560px)]"
-      />
-      <div aria-hidden className="w-full min-w-0 lg:max-w-[920px] lg:flex-1">
-        <div className="aspect-[5/2] w-full animate-pulse rounded-lg bg-[color:var(--ground-2)] motion-reduce:animate-none" />
-      </div>
+    <div aria-live="polite" aria-busy="true">
+      <div aria-hidden className="relative -mt-16 h-[clamp(300px,46svh,860px)] md:h-[clamp(340px,58svh,860px)] bg-[color:var(--ground)] md:-mt-[84px]" />
+      <div aria-hidden className="h-[clamp(300px,34svh,420px)] animate-pulse bg-[color:var(--ground-2)] motion-reduce:animate-none" />
       <p className="sr-only">Loading collection</p>
-    </section>
+    </div>
   );
 }
 

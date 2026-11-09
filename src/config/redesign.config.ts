@@ -91,12 +91,13 @@ export const redesignConfig = {
   },
 
   /**
-   * Shuffle page (/shuffle, also /random) split-flap board. `wide` applies from 640px up,
-   * `narrow` below. `tickMs` is how often a flipping tile changes character.
+   * Shuffle page (/shuffle, also /random) split-flap board, laid across the band under
+   * the listening room. `wide` applies from 640px up, `narrow` below. `tickMs` is how
+   * often a flipping tile changes character.
    */
   random: {
-    wide: { cols: 20, artistRows: 1, titleRows: 3 },
-    narrow: { cols: 12, artistRows: 2, titleRows: 3 },
+    wide: { cols: 30, artistRows: 1, titleRows: 2 },
+    narrow: { cols: 14, artistRows: 2, titleRows: 2 },
     tickMs: 42,
   },
 

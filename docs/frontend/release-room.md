@@ -1,6 +1,6 @@
 # Release room (album and home heroes)
 
-The album page and the home page open on a listening room: a photo of a
+The album page, the home page and Shuffle (see [pages.md](./pages.md#randompage-srcpagesrandompagetsx)) open on a listening room: a photo of a
 room with the record's sleeve on a stand and the record playing on a
 turntable, the room tinted with the sleeve's flood, and a slim band in the
 flood below. Box sets keep the cover hero (`CoverHero` + `BoxHeroArt`).

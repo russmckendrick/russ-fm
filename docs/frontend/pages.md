@@ -24,7 +24,7 @@ This document covers the route-level page components in russ.fm.
 | `/coloured-vinyl` | `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
 | `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → twelve chapters from the album and artist data (arrivals, Last.fm reach, home countries, how far in, the pile, spec sheet, time machines, the long haul, decades, behind the glass, sleeve makers, owners) → latest additions. |
-| `/shuffle` (also `/random`) | Split-flap board clatters to a random record; its colour drops down the page and the cover turns back over the spinning record. |
+| `/shuffle` (also `/random`) | The record's listening room over a split-flap band; the board clatters to a random record, then the room changes record and the band takes its colour. |
 | `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
 ## Route Map
@@ -749,32 +749,41 @@ ignored.
 
 - Loads the shared `loadCollection()` (boxset members excluded) and
   `preloadAlbumColors()` together, so the first record lands in its own colour
-- `ShuffleScene` (`src/pages/random/ShuffleScene.tsx`): the cover and its
-  record on the left (centred above the board below 1024px), the `FlapBoard`
-  (`src/pages/random/FlapBoard.tsx`) on the right with Artist, Title, then
-  Year and Genre rows, and Shuffle / View album pills under it
-- Each shuffle runs three phases:
-  1. **rolling**: the cover turns edge-on so the record hidden behind it shows,
-     spinning at 45 with the incoming sleeve on its label, while the tiles
-     flip to the new record in a left-to-right, top-to-bottom cascade (tiles
-     blank before and after stay still)
-  2. **dropping**: the new flood falls down the page like a flap (`.flap-drop`,
-     a hard edge, no blend)
-  3. **idle**: the page, nav (`usePageFlood` with the cover and ground) and
-     text take the new colours and the cover turns back over the record
-- At rest the record sits hidden directly behind the cover; it never slides
-  out on this page
-- Board layout comes from `redesignConfig.random`: 20 columns (1 artist row,
-  3 title rows) from 640px up, 12 columns (2 artist rows, 3 title rows) below.
+- `ShuffleScene` (`src/pages/random/ShuffleScene.tsx`): the record's
+  listening room (`ReleaseRoom`, as on the album page: sleeve on the stand,
+  the pressing on the turntable, 3D arm, room tinted with the sleeve's flood)
+  pulled up under the see-through header (`usePageFlood` with `room: true`),
+  then one band in the flood: the mono pressing line (format, label, year,
+  country), the `FlapBoard` (`src/pages/random/FlapBoard.tsx`) with Artist,
+  Title, then Year and Genre rows, and Shuffle / View album pills beside it
+  from `lg` (under it below)
+- Each shuffle runs two phases:
+  1. **rolling**: the tiles flip to the new record in a left-to-right,
+     top-to-bottom cascade (tiles blank before and after stay still) while the
+     room keeps playing the old record at 45; the new sleeve and its room photo
+     are fetched meanwhile
+  2. **idle**: once the last tile lands the room changes record. In the same
+     room the arm lifts and parks, the record swaps and the arm cues back in;
+     in another room the whole room crossfades. The band, nav and page ground
+     fade to the new colours
+- The room is handed a ring of four record slots: the next record is written
+  into the oldest slot, so the one on show keeps its index (`ReleaseRoom`
+  tracks the record on show by index to park the arm or crossfade). The first
+  board lands on the record the room already shows
+- Board layout comes from `redesignConfig.random`: 30 columns (1 artist row,
+  2 title rows) from 640px up, 14 columns (2 artist rows, 2 title rows) below.
   Tiles size themselves from the board width with container units. Text is
   upper-cased with accents stripped; titles that run past the last row end in
   an ellipsis, and the genre is the first clean genre that fits
   (`src/lib/splitFlap.ts`)
-- Year and genre letters use the record's `glow`; the Artist and Title rows
-  link to the artist and album
-- Reduced motion: tiles and colour switch at once, the cover does not turn
-- Loading skeleton (blank sleeve and board), retryable error ("Try again")
-  and empty states
+- The room is `clamp(300px, 46svh, 860px)` tall on phones and
+  `clamp(340px, 58svh, 860px)` from `md`, so room and band fit one screen
+- Year and genre letters use the next record's `glow`; the Artist and Title
+  rows link to the artist and album, and the sleeve on the stand to the album
+- Reduced motion: tiles and colour switch at once; the room swaps with no arm
+  motion
+- Loading skeleton (an empty room and band at the scene's sizes), retryable
+  error ("Try again") and empty states
 - No audio
 
 ---
