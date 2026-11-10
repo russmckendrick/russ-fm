@@ -464,8 +464,8 @@ longer in the collection are dropped.
 
 ```json
 {
-  "/album/bloom-38528559/": {"v":2,"flood":"#d2d5df","ink":"#0e0d0c","ground":"#1b1b1e","glow":"#d2d5df","secondary":null,"hue":0.762,"vivid":0},
-  "/album/glastonbury-1994-38527017/": {"v":2,"flood":"#05abcb","ink":"#0e0d0c","ground":"#0a232b","glow":"#05abcb","secondary":"#0f5a97","hue":0.605,"vivid":0.94}
+  "/album/bloom-38528559/": {"v":3,"flood":"#d2d5df","ink":"#0e0d0c","ground":"#1b1b1e","glow":"#d2d5df","secondary":null,"hue":0.762,"vivid":0},
+  "/album/glastonbury-1994-38527017/": {"v":3,"flood":"#05abcb","ink":"#0e0d0c","ground":"#0a232b","glow":"#05abcb","secondary":"#0f5a97","hue":0.605,"vivid":0.94}
 }
 ```
 
@@ -473,8 +473,8 @@ longer in the collection are dropped.
 
 | Field | Description |
 |-------|-------------|
-| v | Palette version (currently `2`); the generator redoes entries from older versions |
-| flood | The sleeve's colour, used for heroes, tiles, bars and chips. A pale neutral tinted with the sleeve's own cast when `vivid` is 0 |
+| v | Palette version (currently `3`); the generator redoes entries from older versions |
+| flood | The sleeve's colour, used for heroes, tiles, bars and chips. A pale neutral tinted with the sleeve's own cast when `vivid` is 0. A weak colour is lifted, keeping its hue, to 72% of the strongest sRGB has at that hue and lightness (`liftWeak`; at most 1.9× its own chroma, dull oranges and yellows a little lighter too), so muted warm sleeves don't flood brown; strong colours are the sleeve's own |
 | ink | `#0e0d0c` or `#fbf7ef`, whichever reads better on the flood |
 | ground | The sleeve's own dark (OKLab L 0.17–0.24), used for page bodies and vinyl labels. Never pure black |
 | glow | The flood, lightened (keeping its hue) until it reaches 3:1 on the ground |
@@ -803,12 +803,11 @@ Image paths are not stored: the page builds them with `src/lib/image-utils.ts`.
 `public/explore/explore.json`; `scripts/lib/stats-data.ts` counts. The type
 is `StatsData` in `src/types/stats.ts`. Box set members are left out. The
 scrapper's service fields are Python repr strings (`LastFmData(playcount=…,
-tags=[…])`), read with `reprField` / `reprTags`.
+tags=[…])`), read with `reprField`.
 
 - `totals`: records, artists, kg, hours (run time where 60% of tracks are
   timed), discs, tracks, coloured, `metres` (3.5 mm a sleeve, so a little
-  short), `plays` (Last.fm album plays summed, over `playsKnown` records),
-  `deep` (records under 1,000 listeners), `oldest`/`newest` original year,
+  short), `oldest`/`newest` original year,
   `since`.
 - `holders[]`: the shelf's pool of facts, `{ stat, label, s, note }`: the
   figure, what it counts, the album slug under it and why that record. The
@@ -816,11 +815,11 @@ tags=[…])`), read with `reprField` / `reprTags`.
   also written alone to `public/stats/facts.json` for the home page.
 - `records[]`: one per record, by date added. `s`, `t`, `by`, `a` artist
   slugs, `d` date added, `y` original year, `p` pressing year, `f` sleeve
-  flood, `fam` genre family, `lis`/`pc` Last.fm listeners and plays.
+  flood, `fam` genre family, `lis` Last.fm listeners (only ranks which sleeves
+  stand for a month; never shown, as it is a snapshot).
 - `artists[]`: one per artist, most collected first. Records, first added,
   lead sleeve colour, `cc` home country, and from TheAudioDB `formed`,
-  `born`, `split` (yes/no; it gives no year), `died`, `mood`, `gender`, plus
-  Last.fm `lis`.
+  `born`, `split` (yes/no; it gives no year), `died`, `mood`, `gender`.
 - `families[]`: genre families with one sleeve colour each (picked as
   Wrapped picks them).
 - `perYear`: records added each year.
@@ -838,8 +837,6 @@ tags=[…])`), read with `reprField` / `reprTags`.
 - `specs[]`: pressing details matched in the Discogs format text (180 g,
   45 RPM, gatefold, numbered, Record Store Day, etched…), plus coloured
   vinyl.
-- `tags[]`: Last.fm's most-used album tags, leaving out tags that are just
-  the artist's name.
 
 ---
 

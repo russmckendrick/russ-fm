@@ -1,6 +1,6 @@
 import headers from '@/config/index-headers.json';
 
-/** The /albums, /artists, /stats and /shuffle header photos (scripts/process-index-headers.py); IndexRoom draws them. */
+/** The /albums, /artists, /stats, /shuffle and browse-page header photos (scripts/process-index-headers.py); IndexRoom draws them. */
 export type IndexRoomId = keyof typeof headers;
 
 export interface IndexRoomMeta {

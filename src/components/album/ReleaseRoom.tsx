@@ -151,7 +151,7 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
   const activeImg = size && current && loaded.has(current.room.id) ? layout(current.room, size.w, size.h, zoom, inset).img : null;
 
   return (
-    <div ref={box} className={cn('release-room relative overflow-hidden', className)}>
+    <div ref={box} className={cn('release-room relative overflow-hidden', className)} style={tint && tint !== 'transparent' ? ({ '--room-wash': tint } as CSSProperties) : undefined}>
       {size &&
         rooms.map(room => {
           const g = layout(room, size.w, size.h, zoom, inset);

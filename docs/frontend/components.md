@@ -98,6 +98,9 @@ frantic at that size; the scrobble scene's `spin-45` is unchanged. Each disc's o
 <RecordTile album={album} palette={colourMap?.[album.uri_release]} meta="1977 · Vinyl" />
 ```
 
+Until its cover loads, the sleeve holds a dim wash of the record's flood (`--card`,
+`.rec .sleeve` in `player.css`); `ArtistCard` photos do the same with `--accent`.
+
 | Prop | Type | Description |
 |------|------|-------------|
 | album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist' \| 'vinyl_colours' \| 'vinyl_discs' \| 'boxset_contents'>` | Record to show. `vinyl_colours` (optional) paints the disc as the pressing's colour; `vinyl_discs` and `boxset_contents` are read by the `flood` variant |
@@ -328,11 +331,14 @@ Sticky header that shares the page's flood colour.
   the links keep the flood's ink with a halo of the flood colour (`text-shadow`),
   and the outlined controls (search, Shuffle, Last.fm, menu) get their own pill of
   the flood with the photo blurred behind (`.nav-over-photo` in `player.css`). A
-  scrim of the flood used to sit behind it, but it tinted a box across the photo). On pages that pass a `cover` to `usePageFlood` (home hero,
+  scrim of the flood used to sit behind it, but it tinted a box across the photo). Over a
+  room photo (home, album, /albums, /artists, /stats, /shuffle, /tv) the cream logo and links
+  get a soft dark `text-shadow` instead (`.nav-over-room`), so they read over a pale wall. On pages that pass a `cover` to `usePageFlood` (home hero,
   album, artist) the label carries that sleeve; elsewhere the label is the
   page flood (cream on plain pages) with a printed mark so the spin reads.
   The disc uses `.vinyl-lit` (lit rim and highlights) so it reads on the
-  dark ground. Once scrolled, the header is the page's tinted `--ground`.
+  dark ground. Once scrolled, the header is the page's tinted `--ground`, fully opaque so a
+  title passing under it never shows through.
 - `xl+`: Home / Albums / Artists / TV / Explore links, a Browse dropdown, Stats
   and Wrapped as pills. The current page is a solid pill: ink on the flood
   at the top, the flood itself once scrolled, so the colour follows you

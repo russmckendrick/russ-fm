@@ -1,4 +1,4 @@
-// 05 · The pile: every disc out of its sleeve and stacked flat, a pile a year, drawn to scale.
+// 04 · The pile: every disc out of its sleeve and stacked flat, a pile a year, drawn to scale.
 // Black is black, coloured pressings show in their colour, 7" and 10" sit narrower than 12",
 // and the top disc lies face up with the year's last record's label colour.
 import { countUp, esc, head, onVisible, plural, reduced } from '../../wrapped/story/core';
@@ -58,7 +58,7 @@ export default function pile(el: HTMLElement): StatsChapter {
     const heaviest = piles.reduce((a, b) => (b.kg > a.kg ? b : a));
 
     el.innerHTML = `<div class="wrap">
-      ${head('05', 'Weight and length', 'The pile', `All ${n(t.discs)} discs out of their sleeves and stacked flat, a pile for each year. Black is black; the colour is every coloured pressing, ${Math.round((t.coloured / t.records) * 100)}% of the shelves.`)}
+      ${head('04', 'Weight and length', 'The pile', `All ${n(t.discs)} discs out of their sleeves and stacked flat, a pile for each year. Black is black; the colour is every coloured pressing, ${Math.round((t.coloured / t.records) * 100)}% of the shelves.`)}
       <div class="stats st-stats">
         <div class="stat"><b><span data-n="${t.kg}">0</span> kg</b><span>of vinyl, ${heaviest.yr} the heaviest year at ${Math.round(heaviest.kg)} kg</span></div>
         <div class="stat"><b><span data-n="${t.hours}">0</span> h</b><span>of music: ${Math.round(t.hours / 24)} days played back to back</span></div>

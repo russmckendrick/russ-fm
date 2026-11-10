@@ -23,9 +23,8 @@ export interface StatsRecord {
   f: string | null;
   /** Genre family key (src/lib/genreFamilyDefs.ts) */
   fam: string;
-  /** Last.fm listeners and plays for the album */
+  /** Last.fm listeners: only ranks which sleeves stand for a month, never printed (a snapshot that goes stale) */
   lis: number | null;
-  pc: number | null;
 }
 
 /** A name with how many records it's on, most first, and up to 14 of those records' slugs. */
@@ -57,8 +56,6 @@ export interface StatsArtist {
   mood: string | null;
   /** TheAudioDB: Male, Female or Mixed */
   gender: string | null;
-  /** Last.fm listeners */
-  lis: number | null;
 }
 
 export interface StatsPile {
@@ -85,12 +82,6 @@ export interface StatsTotals {
   coloured: number;
   /** Shelf length in metres, at 3.5 mm a sleeve */
   metres: number;
-  /** Last.fm plays of the records, summed */
-  plays: number;
-  /** Records with a Last.fm play count */
-  playsKnown: number;
-  /** Records under 1,000 Last.fm listeners */
-  deep: number;
   /** Oldest and newest original years */
   oldest: number;
   newest: number;
@@ -129,6 +120,4 @@ export interface StatsData {
   owners: { known: number; groups: StatsRanked[] };
   /** Pressing details (180 g, 45 RPM, numbered…) */
   specs: StatsRanked[];
-  /** Last.fm's most-used tags on the records */
-  tags: Array<{ name: string; n: number }>;
 }

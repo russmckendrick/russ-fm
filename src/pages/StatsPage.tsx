@@ -41,7 +41,7 @@ export function StatsPage() {
   useMetaTags({
     title: 'Collection Statistics | Russ.fm',
     description: data
-      ? `${data.totals.records.toLocaleString('en-GB')} records by ${data.totals.artists.toLocaleString('en-GB')} artists: ${data.totals.kg} kg of vinyl, ${data.totals.hours.toLocaleString('en-GB')} hours of music and ${(data.totals.plays / 1e9).toFixed(1)} billion Last.fm plays.`
+      ? `${data.totals.records.toLocaleString('en-GB')} records by ${data.totals.artists.toLocaleString('en-GB')} artists: ${data.totals.kg} kg of vinyl and ${data.totals.hours.toLocaleString('en-GB')} hours of music.`
       : 'Explore comprehensive statistics about my vinyl and music collection on Russ.fm',
     image: `${appConfig.siteUrl}/og-image.png`,
     url: `${appConfig.siteUrl}/stats`,

@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { BrowseHeader, FacetCard } from '@/components/browse/BrowseHeader';
+import { SleeveRoom, type RoomSleeve } from '@/components/browse/SleeveRoom';
 import { byDateAddedDesc, floodForUri, pickSleeves, summariseFacet } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -45,7 +46,16 @@ export function BrowseIndexPage() {
   }, [albums, colorMap]);
 
   // The header band and page ground take the cards' lead sleeves.
-  const flood = useRecordsFlood([...cards.map(card => card.fan[0]?.uri_release), coloured.fan[0]?.uri_release]);
+  const flood = useRecordsFlood([...cards.map(card => card.fan[0]?.uri_release), coloured.fan[0]?.uri_release], undefined, true);
+  // The header photo: a record-fair stall, one crate per section with its lead sleeve propped in front.
+  // The sections' fans often lead with the same record, so each crate takes the first sleeve not already out.
+  const out = new Set<string>();
+  const stall: Array<RoomSleeve | null> = [...cards, { ...coloured, to: '/coloured-vinyl', title: 'Coloured vinyl' }].map(card => {
+    const pick = card.fan.find(a => !out.has(a.uri_release)) ?? card.fan[0];
+    if (!pick) return null;
+    out.add(pick.uri_release);
+    return { uri: pick.uri_release, to: card.to, label: card.title };
+  });
 
   if (loading) {
     return (
@@ -65,7 +75,8 @@ export function BrowseIndexPage() {
 
   return (
     <>
-      <FloodBand flood={flood}>
+      <SleeveRoom room="browse" tint={flood?.top ?? 'transparent'} sleeves={stall} topShade />
+      <FloodBand flood={flood} className="relative z-[2]">
         <BrowseHeader className="mb-0 md:mb-0" title="Browse" note={`${albums.length.toLocaleString()} records`} />
       </FloodBand>
 

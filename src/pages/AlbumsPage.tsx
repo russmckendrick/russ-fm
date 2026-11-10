@@ -53,9 +53,9 @@ export function AlbumsPage() {
   const perPage = appConfig.pagination.itemsPerPage.albums * (colourMode ? 2 : 1);
 
   usePageTitle(
-    ['Albums', genre !== 'all' && genre, year !== 'all' && year, search && `“${search}”`, currentPage > 1 && `Page ${currentPage}`, 'russ.fm']
+    `${['Albums', genre !== 'all' && genre, year !== 'all' && year, search && `“${search}”`, currentPage > 1 && `Page ${currentPage}`]
       .filter(Boolean)
-      .join(' · '),
+      .join(' · ')} | Russ.fm`,
   );
 
   const albums = useMemo(() => excludeBoxsetMembers(collection), [collection]);
@@ -323,7 +323,7 @@ export function AlbumsPage() {
                 const newRun = run && (i === 0 || albumRunOf(tiles[i - 1], sort)?.key !== run.key);
                 return (
                   <Fragment key={a.uri_release}>
-                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} unit={['record', 'records']} sleeves={runSleeves.get(run.key)} />}
+                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} unit={['record', 'records']} sleeves={runSleeves.get(run.key)} className="col-start-1" />}
                     <RecordTile album={a} palette={colours?.[a.uri_release]} meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')} variant="flood" />
                   </Fragment>
                 );

@@ -1,4 +1,4 @@
-// 07 · Time machines: an arc from the year each record first came out to the year this
+// 06 · Time machines: an arc from the year each record first came out to the year this
 // pressing was made, so the reissues sweep across the decades and the new records sit flat.
 import * as d3 from 'd3';
 import { countUp, esc, head, onVisible, reduced } from '../../wrapped/story/core';
@@ -25,7 +25,7 @@ export default function timemachine(el: HTMLElement): StatsChapter {
     const widest = reissues[0];
 
     el.innerHTML = `<div class="wrap">
-      ${head('07', 'Time machines', 'New pressings of old records', `Each arc runs from the year a record first came out to the year this copy was pressed. Records bought new barely leave the line.`)}
+      ${head('06', 'Time machines', 'New pressings of old records', `Each arc runs from the year a record first came out to the year this copy was pressed. Records bought new barely leave the line.`)}
       <div class="stats st-stats">
         <div class="stat"><b data-n="${same}">0</b><span>pressed within a year of first coming out</span></div>
         <div class="stat"><b data-n="${reissues.length}">0</b><span>pressed ten or more years later</span></div>

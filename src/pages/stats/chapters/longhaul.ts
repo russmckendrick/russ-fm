@@ -1,4 +1,4 @@
-// 08 · The long haul: the most collected artists, a lane each across every year, a dot per record on the day it arrived.
+// 07 · The long haul: the most collected artists, a lane each across every year, a dot per record on the day it arrived.
 import * as d3 from 'd3';
 import { esc, head, plural } from '../../wrapped/story/core';
 import type { StatsArtist, StatsRecord } from '@/types/stats';
@@ -26,7 +26,7 @@ export default function longhaul(el: HTMLElement): StatsChapter {
     const everyYear = lanes.filter(l => new Set(l.recs.map(r => r.d.slice(0, 4))).size === years.length);
 
     el.innerHTML = `<div class="wrap">
-      ${head('08', 'The long haul', 'Who keeps coming back', `The ${lanes.length} most collected artists, each on its own line. Every dot is a record, in its sleeve colour, on the day it arrived.`)}
+      ${head('07', 'The long haul', 'Who keeps coming back', `The ${lanes.length} most collected artists, each on its own line. Every dot is a record, in its sleeve colour, on the day it arrived.`)}
       <div class="stats st-stats">
         <div class="stat"><b>${esc(longest.a.name)}</b><span>the longest run: ${span(longest).toFixed(1)} years from first record to latest</span></div>
         <div class="stat"><b>${esc(best.l.a.name)}</b><span>${plural(best.y[1], 'record')} in ${best.y[0]} alone, the most in one year</span></div>

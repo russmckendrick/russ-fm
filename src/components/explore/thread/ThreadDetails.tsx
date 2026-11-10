@@ -65,7 +65,7 @@ export function ThreadDetails({ d, node, outs, nextAlt, sound, playing, various,
   } else {
     const r = d.albums[node.i];
     const labels = [...new Set(r.l.map(labelName))].join(', ');
-    const meta = [r.y, labels, r.c, r.fmt, r.vc ? `${r.vc} vinyl` : '', r.lis ? `${r.lis.toLocaleString('en-GB')} Last.fm listeners` : ''].filter(Boolean).join(' · ');
+    const meta = [r.y, labels, r.c, r.fmt, r.vc ? `${r.vc} vinyl` : ''].filter(Boolean).join(' · ');
     const lead = r.a.find(x => x !== various);
     mapArtist = lead ?? null;
     page = { to: `/album/${r.slug}`, label: 'Album page' };

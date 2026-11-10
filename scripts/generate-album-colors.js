@@ -37,13 +37,17 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** Bump when the algorithm or output shape changes; older entries are redone. */
-const VERSION = 2;
+const VERSION = 3;
 
 const INK = '#0e0d0c';
 const CREAM = '#fbf7ef';
 /** Minimum candidate score for a flood; below it the sleeve gets a tinted neutral. */
 const VIVID_MIN = 0.3;
 const SAMPLE_SIZE = 72;
+/** A flood weaker than this share of the strongest colour sRGB has at its hue and lightness is lifted to it. */
+const STRENGTH_MIN = 0.72;
+/** The lift never more than this many times the sleeve's own chroma, so it stays the sleeve's colour. */
+const LIFT_MAX = 1.9;
 
 // ---------------------------------------------------------------- colour maths
 
@@ -95,6 +99,36 @@ function lchToHex(L, C, h) {
   }
   const byte = c => Math.round(toGamma(Math.min(1, Math.max(0, c))) * 255);
   return `#${rgb.map(c => byte(c).toString(16).padStart(2, '0')).join('')}`;
+}
+
+/** The most chroma sRGB can show at this lightness and hue. */
+function maxChroma(L, h) {
+  let lo = 0;
+  let hi = 0.4;
+  for (let i = 0; i < 24; i++) {
+    const mid = (lo + hi) / 2;
+    if (inGamut(labToLinearRgb(fromLch(L, mid, h)))) lo = mid;
+    else hi = mid;
+  }
+  return lo;
+}
+
+/**
+ * Lift a weak flood towards full strength, keeping its hue. A colour's strength
+ * is its chroma against the most sRGB has at that hue and lightness: a teal at
+ * C 0.11 is nearly full strength, a red or orange at C 0.11 is two-thirds and
+ * reads as brown. Weak colours come up to STRENGTH_MIN (never past LIFT_MAX
+ * times their own chroma), and dull oranges and yellows are lightened a little
+ * too, since brown is dark orange. Strong colours come back unchanged.
+ */
+function liftWeak({ L, C, h }) {
+  // Already strong enough: the sleeve's own colour, untouched.
+  if (C >= STRENGTH_MIN * maxChroma(L, h)) return { L, C, h };
+  const warm = h >= 15 && h <= 100;
+  const lift = warm && L < 0.66 ? 0.08 * Math.max(0, 1 - Math.abs(h - 58) / 43) : 0;
+  const L2 = warm ? Math.min(Math.max(L, 0.74), L + lift) : L;
+  const C2 = Math.min(Math.max(C, STRENGTH_MIN * maxChroma(L2, h)), C * LIFT_MAX);
+  return { L: L2, C: C2, h };
 }
 
 const hexToRgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
@@ -280,8 +314,8 @@ function paletteFromPixels(pixels, appleColours) {
   let flood;
   let floodLch;
   if (best) {
-    flood = best.hex;
-    floodLch = toLch(best.lab);
+    floodLch = liftWeak(toLch(best.lab));
+    flood = lchToHex(floodLch.L, floodLch.C, floodLch.h);
   } else {
     // Pale neutral in the sleeve's own cast: paper, stone, slate.
     const tint = clusters.filter(c => c.share >= 0.05 && c.C >= 0.015).sort((a, b) => b.C - a.C)[0];

@@ -147,10 +147,14 @@ export function Navigation() {
   // those, so the search results that open under the header stay crisp); the
   // outlined controls (search, Shuffle, Last.fm, menu) get their own pill of
   // the flood (.nav-over-photo).
-  const bg = overPortrait || overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  const bg = overPortrait || overRoom ? "transparent" : menuOpen ? flood : scrolled ? "var(--ground)" : flood;
+  // Over a room photo the links are cream, so their halo is a soft shadow
+  // instead: enough to read over a pale wall (/artists) without a band.
   const halo = overPortrait
     ? `0 0 2px ${flood}, 0 0 10px ${flood}, 0 0 22px color-mix(in oklab, ${flood} 70%, transparent)`
-    : undefined;
+    : overRoom
+      ? "0 1px 2px rgba(11,9,7,.7), 0 0 12px rgba(11,9,7,.6), 0 0 28px rgba(11,9,7,.45)"
+      : undefined;
   // The browser's own toolbar follows the header: the flood, or the page's dark once scrolled.
   const tint = overRoom ? ground ?? GROUND : menuOpen || !scrolled ? flood : ground ?? GROUND;
   // Desktop Safari 26+ ignores theme-color and tints its toolbar from the <body> background,
@@ -171,7 +175,7 @@ export function Navigation() {
   // header has scrolled onto the dark ground, so the colour follows you down.
   // It is solid, so it drops the halo the links get over a photo.
   const activePill = overRoom
-    ? { background: CREAM, color: INK }
+    ? { background: CREAM, color: INK, textShadow: "none" }
     : scrolled && !menuOpen
       ? { background: hasFlood ? flood : CREAM, color: hasFlood ? ink : INK }
       : { background: fg, color: hasFlood ? flood : "var(--ground)", textShadow: "none" };
@@ -183,6 +187,7 @@ export function Navigation() {
           "sticky top-0 z-50 w-full transition-[background-color,color,box-shadow] duration-700",
           solid && !menuOpen && "shadow-[0_1px_0_rgba(251,247,239,.08)]",
           overPortrait && "nav-over-photo",
+          overRoom && "nav-over-room",
         )}
         style={{ background: bg, color: fg, "--nav-flood": flood, "--nav-halo": halo } as CSSProperties}
       >

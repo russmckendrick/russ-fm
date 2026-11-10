@@ -45,4 +45,4 @@ fs.writeFileSync(path.join(PUBLIC, 'stats', 'stats.json'), JSON.stringify(stats)
 // Just the shelf's facts, for the home page's pinned tags (a few KB, not the whole file).
 fs.writeFileSync(path.join(PUBLIC, 'stats', 'facts.json'), JSON.stringify(stats.holders));
 const t = stats.totals;
-console.log(`✓ stats/stats.json: ${t.records} records, ${t.artists} artists, ${t.kg} kg, ${t.hours} h, ${(t.plays / 1e9).toFixed(1)}bn Last.fm plays`);
+console.log(`✓ stats/stats.json: ${t.records} records, ${t.artists} artists, ${t.kg} kg, ${t.hours} h`);

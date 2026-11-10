@@ -43,7 +43,8 @@ export function Vinyl({ label, cover, look, spin = true, fast = false, text, chi
   );
 }
 
-function lookVars(look: VinylLook): CSSProperties {
+/** A pressing's colours as the CSS variables `.vinyl` reads. */
+export function lookVars(look: VinylLook): CSSProperties {
   return {
     '--vinyl-body': look.body,
     '--vinyl-pattern': look.pattern ?? 'none',

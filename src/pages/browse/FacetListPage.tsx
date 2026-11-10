@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { BrowseHeader, FacetCard, type BrowseSection } from '@/components/browse/BrowseHeader';
+import { SleeveRoom, type RoomSleeve } from '@/components/browse/SleeveRoom';
 import {
   byDateAddedDesc,
   floodForUri,
@@ -109,7 +110,17 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
   // The header band and page ground take the lead sleeves of the first cards.
   const flood = useRecordsFlood(
     cardEntries.slice(0, 3).map(e => mostVivid(e.albums, a => a.uri_release, colorMap, 60)?.uri_release),
+    undefined,
+    true,
   );
+  // The header photo (the record-fair stall): the biggest values, each crate with that value's lead sleeve.
+  const out = new Set<string>();
+  const stall: Array<RoomSleeve | null> = entries.slice(0, 5).map(e => {
+    const fan = pickSleeves(e.albums, colorMap, 5);
+    const lead = fan.find(a => !out.has(a.uri_release)) ?? fan[0];
+    if (lead) out.add(lead.uri_release);
+    return lead ? { uri: lead.uri_release, to: `/${facet.singular}/${e.slug}`, label: `${e.display}: ${e.count.toLocaleString()} ${e.count === 1 ? 'record' : 'records'}` } : null;
+  });
 
   if (loading) {
     return (
@@ -143,7 +154,8 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
 
   return (
     <>
-      <FloodBand flood={flood}>
+      <SleeveRoom room="browse" tint={flood?.top ?? 'transparent'} sleeves={stall} topShade />
+      <FloodBand flood={flood} className="relative z-[2]">
         <BrowseHeader
           className="mb-0 md:mb-0"
           title={title}

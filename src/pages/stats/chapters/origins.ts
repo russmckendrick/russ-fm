@@ -1,4 +1,4 @@
-// 03 · Where it comes from: the artists' home countries on a world map, a circle per country sized by its records.
+// 02 · Where it comes from: the artists' home countries on a world map, a circle per country sized by its records.
 import * as d3 from 'd3';
 import { feature } from 'topojson-client';
 import worldUrl from 'world-atlas/countries-110m.json?url';
@@ -52,7 +52,7 @@ export default function origins(el: HTMLElement): StatsChapter {
     const nameOf = (p: Place) => SHORT[p.name] ?? p.name;
 
     el.innerHTML = `<div class="wrap">
-      ${head('03', 'Where it comes from', first.id === '826' ? 'Mostly from home' : 'Where it comes from', `Where the artists are from, for the ${plural(known.length, 'artist')} whose home country is known. Each circle is a country, sized by its records.`)}
+      ${head('02', 'Where it comes from', first.id === '826' ? 'Mostly from home' : 'Where it comes from', `Where the artists are from, for the ${plural(known.length, 'artist')} whose home country is known. Each circle is a country, sized by its records.`)}
       <div class="stats st-stats">
         <div class="stat"><b><span data-n="${pct(first)}">0</span>%</b><span>by artists from ${esc(nameOf(first))}, ${plural(first.n, 'record')}</span></div>
         ${second ? `<div class="stat"><b><span data-n="${pct(second)}">0</span>%</b><span>from ${esc(nameOf(second))}</span></div>` : ''}

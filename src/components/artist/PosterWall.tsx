@@ -82,7 +82,7 @@ export function PosterWall({ wall, photo, photoPosition, onPhotoError, name, sle
   const bleed = 3;
 
   return (
-    <div ref={box} className={cn('artist-wall relative overflow-hidden', className)}>
+    <div ref={box} className={cn('artist-wall relative overflow-hidden', className)} style={tint && tint !== 'transparent' ? ({ '--room-wash': tint } as CSSProperties) : undefined}>
       {g && (
         <div className={cn('artist-wall-layer', loaded === wall.id && printed === photo && 'is-on')}>
           <div

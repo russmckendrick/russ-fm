@@ -39,7 +39,7 @@ const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
 const HERO_MS = appConfig.homepage.hero.autoRotateInterval;
 
 export function HomePage() {
-  usePageTitle('russ.fm — record collection');
+  usePageTitle('Russ.fm - Personal Record Collection');
   const { albums: collection } = useCollection();
   const colours = useAlbumColorMap();
   const albums = useMemo(() => excludeBoxsetMembers(collection), [collection]);
@@ -239,6 +239,13 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
 function LatestAdditions({ recent, colours }: { recent: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
   const year = new Date().getFullYear();
   const thisYear = recent.filter(a => a.date_added?.startsWith(String(year))).length;
+  const shown = recent.slice(0, appConfig.homepage.recentlyAdded.displayCount);
+  // Two copies of one record in the row (a second pressing) say which is which:
+  // the pressing's colour takes the format's place, so they don't read as a repeat.
+  const copyKey = (a: Album) => `${a.release_artist}|${a.release_name}`.toLowerCase();
+  const copies = new Map<string, number>();
+  for (const a of shown) copies.set(copyKey(a), (copies.get(copyKey(a)) ?? 0) + 1);
+  const pressing = (a: Album) => ((copies.get(copyKey(a)) ?? 0) > 1 ? (a.vinyl_colours?.[0] ?? 'Black') : a.format_primary);
   return (
     <section>
       <SectionHeading
@@ -250,12 +257,12 @@ function LatestAdditions({ recent, colours }: { recent: Album[]; colours: Record
           clipped by the scroller, pulled back up under the heading (which
           stays clickable through it) so the row sits where it did. */}
       <div className="shelf-scroll pointer-events-none relative -mx-5 -mt-32 scroll-px-5 gap-6 px-5 pb-4 pt-40 [&>*]:pointer-events-auto md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:gap-7 lg:px-14">
-        {recent.slice(0, appConfig.homepage.recentlyAdded.displayCount).map(album => (
+        {shown.map(album => (
           <RecordTile
             key={album.uri_release}
             album={album}
             palette={colours?.[album.uri_release]}
-            meta={`${formatShort(album.date_added)}${album.format_primary ? ` · ${album.format_primary}` : ''}`}
+            meta={`${formatShort(album.date_added)}${pressing(album) ? ` · ${pressing(album)}` : ''}`}
             className="w-[168px] shrink-0 md:w-[208px]"
             variant="flood"
           />

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildStats, ownerOf, reprField, reprTags, specsOf, type AlbumJson, type CollectionEntry } from "../../../scripts/lib/stats-data";
+import { buildStats, ownerOf, reprField, specsOf, type AlbumJson, type CollectionEntry } from "../../../scripts/lib/stats-data";
 import { pickHolders } from "../statsShelf";
 
 const LASTFM = "LastFmData(mbid='x', url='https://www.last.fm/music/A/B', playcount=24246137, listeners=1049336, tags=['thrash metal', 'Metal', \"rock 'n' roll\"], bio=None)";
@@ -10,10 +10,6 @@ describe("stats data: repr parsing", () => {
     expect(reprField(LASTFM, "url")).toBe("https://www.last.fm/music/A/B");
     expect(reprField(LASTFM, "bio")).toBeNull();
     expect(reprField(undefined, "playcount")).toBeNull();
-  });
-
-  it("reads the tag list, lower-cased", () => {
-    expect(reprTags(LASTFM)).toEqual(["thrash metal", "metal", "rock 'n' roll"]);
   });
 });
 
@@ -69,17 +65,17 @@ describe("stats data: buildStats()", () => {
   });
 
   it("adds up the shelves", () => {
-    expect(stats.totals).toMatchObject({ discs: 12, coloured: 1, plays: 110260, playsKnown: 6, deep: 5, oldest: 1971, newest: 1990, since: "2015-08-01" });
+    expect(stats.totals).toMatchObject({ discs: 12, coloured: 1, oldest: 1971, newest: 1990, since: "2015-08-01" });
     expect(stats.perYear).toEqual({ "2015": 2, "2016": 5 });
   });
 
   it("builds a pool of shelf facts, each tied to a fitting record", () => {
     const fact = (label: string) => stats.holders.find(h => h.label === label);
-    expect(fact("Last.fm plays")).toMatchObject({ s: "c", stat: "0.0 bn" });
     expect(fact("of vinyl")).toMatchObject({ s: "b", note: "Heaviest: 0.8 kg" });
     expect(fact("of music")).toMatchObject({ s: "c", note: "Longest track: 40 min" });
     expect(fact("coloured pressings")).toMatchObject({ s: "d" });
-    expect(fact("under 1,000 listeners")).toMatchObject({ s: "e", stat: "5" });
+    expect(fact("records")).toMatchObject({ stat: "7", note: "The halfway mark: record 4" });
+    expect(stats.holders.some(h => /listener|plays/i.test(`${h.label} ${h.note}`))).toBe(false);
     expect(new Set(stats.holders.map(h => h.s)).size).toBeGreaterThanOrEqual(6);
   });
 
@@ -87,10 +83,6 @@ describe("stats data: buildStats()", () => {
     expect(stats.boards.produced.map(x => x.name)).toEqual(["Flood"]);
     expect(stats.boards.written[0]).toMatchObject({ name: "Roger Waters", n: 1, songs: 1, s: ["c"] });
     expect(stats.sleeves.design[0]).toMatchObject({ name: "Hipgnosis", n: 1 });
-  });
-
-  it("drops tags that are just the artist's name", () => {
-    expect(stats.tags).toEqual([{ name: "prog", n: 6 }]);
   });
 });
 

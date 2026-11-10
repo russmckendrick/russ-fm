@@ -7,9 +7,9 @@
   & .label + .cr-title, & .cr-title { color: var(--amber); margin: 0 0 14px; }
 
   /* Shared: the swarm's canvas (reach, decades) and the lanes' names and ticks (long haul, artists, time machines) */
-  & .rc-field, & .dc2-field { position: relative; }
+  & .dc2-field { position: relative; }
   & .sw-canvas { position: absolute; top: 0; left: 0; display: block; }
-  & .lh-chart svg, & .ar-chart svg, & .tm-chart svg, & .dc2-field svg, & .rc-field svg, & .gr-chart svg, & .or-map svg { display: block; overflow: visible; }
+  & .lh-chart svg, & .ar-chart svg, & .tm-chart svg, & .dc2-field svg, & .gr-chart svg, & .or-map svg { display: block; overflow: visible; }
   & .lh-tick { stroke: rgba(251, 247, 239, .08); }
   & .lh-yr { font: 600 11px var(--mono); fill: var(--ink-3); }
   & .lh-name { font: 700 14px var(--grot); fill: var(--ink); }
@@ -28,20 +28,6 @@
   & .gr-legend b { color: var(--ink-3); font: 600 11px var(--mono); margin-left: 3px; }
 
   /* 02 mainstream to deep cuts */
-  & .rc-tick { stroke: rgba(251, 247, 239, .1); stroke-dasharray: 2 4; }
-  & .rc-lab { font: 600 11px var(--mono); fill: var(--ink-3); }
-  & .rc-ends { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; margin-top: 44px; }
-  & .rc-k { color: var(--amber); margin: 0 0 14px; }
-  & .rc-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
-  & .rc-tile img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 3px; box-shadow: 0 8px 24px rgba(0, 0, 0, .4); transition: transform .3s var(--ease); }
-  & .rc-tile:hover img { transform: translateY(-4px); }
-  & .rc-tile b { display: block; margin-top: 7px; font: 700 12px/1.25 var(--grot); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  & .rc-tile span { display: block; font-size: 11px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  & .rc-tile em { display: block; margin-top: 3px; font: 600 10px var(--mono); font-style: normal; color: var(--amber); }
-  & .rc-ends + .rc-k { margin-top: 44px; }
-  & .rc-tags { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin: 0; max-width: 1100px; }
-  & .rc-tags span { font: 800 calc(var(--s) * 15px)/1.15 var(--display); text-transform: lowercase; color: var(--ink-2); }
-  & .rc-tags b { margin-left: 5px; font: 600 10px var(--mono); color: var(--ink-3); }
 
   /* 03 where it comes from */
   & .or-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 40px; align-items: start; }
@@ -144,8 +130,7 @@
   @media (min-width: 1024px) { & :where(.wrap) { padding: 0 56px; } }
   @media (max-width: 1100px) { & .cr-boards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 900px) {
-    & .or-grid, & .rc-ends, & .ar-facts, & .sl-cols { grid-template-columns: 1fr; }
-    & .rc-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    & .or-grid, & .ar-facts, & .sl-cols { grid-template-columns: 1fr; }
   }
   @media (max-width: 700px) {
     & .pl-pile span { display: none; }

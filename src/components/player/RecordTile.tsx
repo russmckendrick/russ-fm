@@ -104,6 +104,7 @@ export function RecordTile({ album, palette, meta, showArtist = true, showText =
     <Link
       to={to ?? album.uri_release}
       className={cn('rec group block min-w-0', className)}
+      style={palette?.flood ? ({ '--card': palette.flood } as CSSProperties) : undefined}
       onPointerEnter={() => setPeeked(true)}
       onFocus={() => setPeeked(true)}
     >

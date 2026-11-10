@@ -1,4 +1,4 @@
-// 04 · How far in: for the most collected acts, a line from the year they started (TheAudioDB's
+// 03 · How far in: for the most collected acts, a line from the year they started (TheAudioDB's
 // formed year) to the day their first record arrived here, a mark where they died, and the
 // acts' TheAudioDB moods and line-ups below.
 import * as d3 from 'd3';
@@ -32,7 +32,7 @@ export default function artists(el: HTMLElement): StatsChapter {
     const lanes = started.slice(0, TOP).sort((a, b) => a.formed - b.formed);
 
     el.innerHTML = `<div class="wrap">
-      ${head('04', 'How far in', 'Late to the party', `The ${lanes.length} most collected acts, from the year they started to the day their first record arrived on these shelves. A cross marks a death.`)}
+      ${head('03', 'How far in', 'Late to the party', `The ${lanes.length} most collected acts, from the year they started to the day their first record arrived on these shelves. A cross marks a death.`)}
       <div class="stats st-stats">
         <div class="stat"><b data-n="${Math.round(d3.median(gaps)!)}">0</b><span>years, typically, between an act starting out and their first record arriving here</span></div>
         <div class="stat"><b data-n="${fresh}">0</b><span>acts collected within a couple of years of starting</span></div>

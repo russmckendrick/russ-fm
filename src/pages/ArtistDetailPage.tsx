@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowUpRight, Tv, Waypoints } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
 import { PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
+import { ExpandableBody, LinerNotes } from '@/components/player/LinerNotes';
 import { serviceIconFor } from '@/components/player/service-icon';
 import { PosterWall } from '@/components/artist/PosterWall';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -316,7 +317,6 @@ export function ArtistDetailPage() {
 
   const boxsets = various ? 0 : albums.filter(a => a.format_primary === 'Box Set').length;
   const soundtracks = various ? albums.filter(a => shelfOf(a) === 'soundtrack').length : 0;
-  const listeners = artistData?.services?.lastfm?.listeners;
   const services = [
     artistData?.services?.spotify?.url && { label: 'Spotify', url: artistData.services.spotify.url },
     artistData?.services?.apple_music?.url && { label: 'Apple Music', url: artistData.services.apple_music.url },
@@ -338,7 +338,6 @@ export function ArtistDetailPage() {
     ...(firstYear && latestYear
       ? [['Released', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
       : []),
-    ...(listeners != null ? [['Last.fm listeners', numberShort(Number(listeners))] as [string, string]] : []),
     ...(!various && cleanGenres.length
       ? [[
           'Genres',
@@ -428,8 +427,11 @@ export function ArtistDetailPage() {
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
         {bio && (
           <section className="flex flex-col gap-8">
-            <SectionHeading title="Biography" />
-            <Bio text={bio} />
+            {/* The lede opens the section; the heading is kept for screen readers and the outline only. */}
+            <h2 className="sr-only">Biography</h2>
+            <ExpandableBody fade={flood.ground} collapsedMaxHeight={520} spare={300}>
+              <LinerNotes text={bio} wide />
+            </ExpandableBody>
           </section>
         )}
 
@@ -527,45 +529,6 @@ export function ArtistDetailPage() {
   );
 }
 
-/** Roughly how much biography shows before Read more. */
-const BIO_PREVIEW = 1500;
-
-function Bio({ text }: { text: string }) {
-  const [open, setOpen] = useState(false);
-  const paragraphs = text.split(/\n+/).map(p => p.trim()).filter(Boolean);
-  const long = text.length > BIO_PREVIEW + 300;
-
-  // Whole paragraphs up to the preview length; a single long opening
-  // paragraph is cut at a word boundary instead.
-  let shown = paragraphs;
-  if (long && !open) {
-    shown = [];
-    let used = 0;
-    for (const p of paragraphs) {
-      if (used && used + p.length > BIO_PREVIEW) break;
-      shown.push(used + p.length > BIO_PREVIEW * 1.2 ? `${p.slice(0, BIO_PREVIEW).replace(/\s+\S*$/, '')}…` : p);
-      used += p.length;
-    }
-  }
-
-  return (
-    <div className="flex flex-col gap-6">
-      <div className="columns-1 gap-12 md:columns-2 xl:columns-3">
-        {shown.map((p, i) => (
-          <p key={i} className="m-0 mb-4 text-[17px] leading-[1.65] last:mb-0 md:text-[18px]">
-            {p}
-          </p>
-        ))}
-      </div>
-      {long && (
-        <button type="button" className="pill self-start" onClick={() => setOpen(v => !v)} aria-expanded={open}>
-          {open ? 'Show less' : 'Read more'}
-        </button>
-      )}
-    </div>
-  );
-}
-
 /** The longer of the stored biography and Last.fm's full one, cleaned. */
 function pickBiography(data?: ArtistData | null): string | null {
   const short = cleanBiography(data?.biography);
@@ -583,12 +546,6 @@ function cleanBiography(raw?: string): string | null {
   const wiki = bio.indexOf('Full Wikipedia article:');
   if (wiki !== -1) bio = bio.substring(0, wiki).trim();
   return bio || null;
-}
-
-function numberShort(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
-  return n.toLocaleString();
 }
 
 /**

@@ -76,7 +76,7 @@ export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, t
   }
 
   return (
-    <div ref={box} className={cn('artist-wall relative overflow-hidden', className)}>
+    <div ref={box} className={cn('artist-wall relative overflow-hidden', className)} style={tint && tint !== 'transparent' ? ({ '--room-wash': tint } as CSSProperties) : undefined}>
       {g && (
         <div className={cn('artist-wall-layer', loaded && 'is-on')}>
           {g.slots.map((style, i) => {

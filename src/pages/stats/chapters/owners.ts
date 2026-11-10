@@ -1,4 +1,4 @@
-// 12 · Who owns it: the ℗ line Apple Music gives each record, filed under the major that
+// 11 · Who owns it: the ℗ line Apple Music gives each record, filed under the major that
 // owns the label named (or independent), drawn as one square per record.
 import { countUp, esc, head, onVisible, plural, reduced } from '../../wrapped/story/core';
 import { n, strip, type StatsChapter, type StatsView } from '../kit';
@@ -19,7 +19,7 @@ export default function owners(el: HTMLElement): StatsChapter {
     const pct = (c: number) => Math.round((c / known) * 100);
 
     el.innerHTML = `<div class="wrap">
-      ${head('12', 'Who owns it', 'Majors and independents', `Who holds the recordings, from the ℗ line on ${plural(known, 'record')}. Labels are filed under the major that owns them, as the line names it; one square is one record.`)}
+      ${head('11', 'Who owns it', 'Majors and independents', `Who holds the recordings, from the ℗ line on ${plural(known, 'record')}. Labels are filed under the major that owns them, as the line names it; one square is one record.`)}
       <div class="stats st-stats">
         <div class="stat"><b><span data-n="${pct(indie)}">0</span>%</b><span>independent: ${n(indie)} records owned outside the majors</span></div>
         ${majors[0] ? `<div class="stat"><b><span data-n="${pct(majors[0].n)}">0</span>%</b><span>${esc(majors[0].name)}, the biggest of the majors</span></div>` : ''}

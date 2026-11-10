@@ -128,7 +128,7 @@ export function dodge(xs: number[], r: number): number[] {
 }
 
 /**
- * A beeswarm of sleeve-coloured dots along x (decades, Last.fm reach). The layout is
+ * A beeswarm of sleeve-coloured dots along x (decades). The layout is
  * dodge()'d up front; the `bg` svg group takes the caller's bands and axis and the dots go on
  * a canvas above it (thousands of SVG circles were the page's heaviest paint), with hover
  * found through a quadtree. `play()` lifts the dots from the axis into place, once.

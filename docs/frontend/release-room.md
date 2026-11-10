@@ -104,7 +104,9 @@ when both fit (just the stand on phones).
 The home hero passes its latest additions. Records in the same room
 crossfade in place; a record in another room crossfades the whole room.
 A room only shows once its photo has loaded and decoded, and the previous
-record stays up until then, so switching never fades through black. Only
+record stays up until then, so switching never fades through black. Before the first room arrives the
+box holds a dim wash of the flood (`--room-wash`, set from `tint`; `.release-room`
+in `player.css`). Only
 the rooms in play are mounted (on show, the active and next records', and
 the one fading out), because a decoded photo is tens of MB.
 

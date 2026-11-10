@@ -603,7 +603,7 @@ export function ArtistsPage() {
 
         {/* A–Z ------------------------------------------------------------- */}
         <nav aria-label="Filter by first letter" className="-mx-5 mb-10 px-5 md:mx-0 md:px-0">
-          <div className="shelf-scroll gap-1.5 pb-1 md:flex-wrap">
+          <div className="shelf-scroll gap-1.5 pb-1 md:flex-wrap xl:flex-nowrap">
             <LetterPill
               active={selectedLetter === 'all'}
               available
@@ -811,7 +811,8 @@ function LetterPill({
       aria-pressed={active}
       className={cn(
         't-mono flex h-11 shrink-0 items-center justify-center rounded-full text-[13px] font-bold uppercase transition-colors duration-200 motion-reduce:transition-none',
-        wide ? 'px-4' : 'w-11',
+        // From xl the letters share one row (27 pills at 44px wrapped Z onto its own line).
+        wide ? 'px-4' : 'w-11 xl:w-auto xl:min-w-0 xl:max-w-11 xl:flex-1',
         active && 'bg-[var(--cream)] text-[color:var(--ground)]',
         !active && available && 'text-[color:var(--cream)] hover:bg-[var(--ground-3)]',
         !available && 'cursor-default text-[color:var(--cream-dim)] opacity-35',

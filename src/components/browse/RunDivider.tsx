@@ -8,6 +8,8 @@ interface RunDividerProps {
   /** Small under the label: the year of a month, where a decade ends. */
   year?: string;
   count: number;
+  /** Extra classes on the grid cell (e.g. `col-start-1` so the divider opens a row). */
+  className?: string;
   /** What `count` counts, singular and plural. */
   unit?: [string, string];
   /**
@@ -26,11 +28,11 @@ interface RunDividerProps {
  * count below, on scuffed card stock (`.run-divider-card` in player.css).
  * /artists and /albums file their grids with it.
  */
-export function RunDivider({ label, year, count, unit = ['artist', 'artists'], sleeves }: RunDividerProps) {
+export function RunDivider({ label, year, count, unit = ['artist', 'artists'], sleeves, className }: RunDividerProps) {
   const countLabel = `${count.toLocaleString('en-GB')} ${count === 1 ? unit[0] : unit[1]}`;
   const filed = (sleeves ?? []).slice(0, 3);
   return (
-    <div className={cn('flex min-w-0 flex-col p-2', filed.length ? 'run-divider-filed pt-[22%]' : 'pt-5')}>
+    <div className={cn('flex min-w-0 flex-col p-2', filed.length ? 'run-divider-filed pt-[22%]' : 'pt-5', className)}>
       <div className="relative min-h-full flex-1 [container-type:inline-size]">
         {filed.length > 0 && (
           <span className="run-divider-sleeves" aria-hidden>

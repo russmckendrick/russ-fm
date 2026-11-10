@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
-import { FacetFan } from '@/components/browse/BrowseHeader';
+import { SleeveRoom } from '@/components/browse/SleeveRoom';
 import { byDateAddedDesc, floodForUri, heroTitleStyle, pickSleeves } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { RecordTile, SectionHeading, usePageFlood } from '@/components/player';
@@ -186,7 +186,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
   const fan = useMemo(() => pickSleeves(albums, colorMap, 5), [albums, colorMap]);
   const flood = floodForUri(fan[0]?.uri_release, colorMap);
   const ready = Boolean(match && colorMap);
-  usePageFlood(ready ? flood.flood : null, ready ? flood.ink : null, ready ? { ground: flood.ground } : undefined);
+  usePageFlood(ready ? flood.flood : null, ready ? flood.ink : null, ready ? { ground: flood.ground, room: true } : undefined);
 
   usePageTitle(meta ? meta.title : `${facet.listTitle} | Russ.fm`);
   useMetaTags({
@@ -241,13 +241,19 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
 
   return (
     <div className="text-[color:var(--cream)]">
+      {/* The header photo: a record shop's window, five of this value's sleeves on easels. */}
+      <SleeveRoom
+        room="facet"
+        tint={flood.flood}
+        sleeves={fan.map(a => ({ uri: a.uri_release, to: a.uri_release, label: `${a.release_name.trim()} by ${a.release_artist}` }))}
+      />
       <section
         className="flood-surface relative z-[2] overflow-x-clip"
         style={{ background: flood.flood, color: flood.ink }}
         aria-labelledby="facet-title"
       >
-        <div className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-4 md:px-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-end lg:gap-12 lg:px-14 lg:pt-10">
-          <div className="min-w-0 lg:pb-24">
+        <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-4 md:px-10 md:pb-12 lg:px-14 lg:pt-8">
+          <div className="min-w-0">
             <Link
               to={`/${facet.plural}`}
               className="t-kicker -ml-1 inline-flex min-h-[44px] items-center gap-2 px-1 opacity-80 transition-opacity hover:opacity-100"
@@ -259,7 +265,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
               id="facet-title"
               className={cn(
                 titleStyle.condensed ? 't-cond' : 't-disp',
-                'mt-4 break-words [--title-col:calc(100vw-40px)] md:[--title-col:calc(100vw-80px)] lg:[--title-col:min(44vw,720px)]',
+                'mt-4 break-words [--title-col:calc(100vw-40px)] md:[--title-col:calc(100vw-80px)] lg:[--title-col:calc(100vw-112px)]',
               )}
               style={{ fontSize: titleStyle.fontSize }}
             >
@@ -289,17 +295,13 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
               </div>
             )}
           </div>
-
-          <div className="relative -mb-20 w-full max-w-[560px] justify-self-center md:-mb-24 lg:-mb-28 lg:max-w-[720px]">
-            <FacetFan albums={fan} linked large className="group" />
-          </div>
         </div>
       </section>
 
       <section
         ref={gridRef}
         aria-labelledby="facet-records"
-        className="mx-auto w-full max-w-[1640px] scroll-mt-24 px-5 pb-16 pt-28 md:px-10 md:pt-32 lg:px-14 lg:pt-40"
+        className="mx-auto w-full max-w-[1640px] scroll-mt-24 px-5 pb-16 pt-14 md:px-10 md:pt-16 lg:px-14 lg:pt-20"
       >
         <SectionHeading
           title={<span id="facet-records">Records</span>}

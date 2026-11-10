@@ -168,7 +168,7 @@ export function useAlbumColorsWithFallback(albumIdentifier?: string): AlbumColor
   const colors = useAlbumColors(albumIdentifier);
   
   const fallbackColors: AlbumColorPalette = {
-    v: 2,
+    v: 3,
     flood: '#e8e2d6',
     ink: '#0e0d0c',
     ground: '#1c1916',

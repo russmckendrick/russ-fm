@@ -323,7 +323,8 @@ Set document title with cleanup.
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 function AlbumPage({ album }) {
-  usePageTitle(`${album.title} | russ.fm`);
+  // Every title ends ` | Russ.fm`, as in scripts/generate-static-meta.mjs.
+  usePageTitle(`${album.title} | Russ.fm`);
 
   // Title resets on unmount
 }

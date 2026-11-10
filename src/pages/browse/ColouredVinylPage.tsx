@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { BrowseHeader } from '@/components/browse/BrowseHeader';
+import { SleeveRoom } from '@/components/browse/SleeveRoom';
 import { byDateAddedDesc } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { FloodBand, Vinyl, useRecordsFlood } from '@/components/player';
@@ -11,6 +12,7 @@ import { appConfig } from '@/config/app.config';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { useCollection } from '@/lib/collection';
 import { getAlbumImageFromData } from '@/lib/image-utils';
+import { indexRoomSlots } from '@/lib/indexHeaders';
 import { floodFor } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
 import { COLOUR_FAMILIES, PATTERN_TAGS, colourTags, discLooks } from '@/lib/vinylLook';
@@ -64,7 +66,7 @@ export function ColouredVinylPage() {
   const visible = filtered.slice(0, visibleCount);
 
   // The header band and page ground take the colours of the first records shown.
-  const flood = useRecordsFlood(filtered.map(a => a.uri_release));
+  const flood = useRecordsFlood(filtered.map(a => a.uri_release), undefined, true);
 
   const choose = (next: string) => {
     const p = new URLSearchParams(params);
@@ -96,7 +98,28 @@ export function ColouredVinylPage() {
 
   return (
     <>
-      <FloodBand flood={flood}>
+      {/* The header photo: a pressing plant's sample wall, the first pressings shown hanging as discs. */}
+      <SleeveRoom
+        room="coloured"
+        topShade
+        tint={flood?.top ?? 'transparent'}
+        sleeves={filtered.slice(0, indexRoomSlots('coloured')).map(a => ({
+          uri: a.uri_release,
+          to: a.uri_release,
+          label: `${a.release_name.trim()} by ${a.release_artist}, ${(a.vinyl_colours ?? []).join(' and ')}`,
+        }))}
+        renderInside={(s, i) => (
+          <Vinyl
+            label={floodFor(colorMap?.[s.uri]).ground}
+            cover={getAlbumImageFromData(s.uri, 'medium')}
+            look={discLooks(filtered[i]?.vinyl_colours ?? [])[0] ?? null}
+            spin={false}
+            className="room-disc"
+            style={{ inset: 0 }}
+          />
+        )}
+      />
+      <FloodBand flood={flood} className="relative z-[2]">
         <BrowseHeader
           className="mb-0 md:mb-0"
           title="Coloured vinyl"

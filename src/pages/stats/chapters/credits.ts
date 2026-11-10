@@ -1,4 +1,4 @@
-// 10 · Behind the glass: the people on the credits across every record (songwriters by songs
+// 09 · Behind the glass: the people on the credits across every record (songwriters by songs
 // written, then producers, engineers and mixers, mastering, lacquer cutting) and the labels.
 // Drawn with Wrapped's credits boards (credits.css).
 import { esc, head, onVisible, plural } from '../../wrapped/story/core';
@@ -31,7 +31,7 @@ export default function credits(el: HTMLElement): StatsChapter {
     ].filter(Boolean).join(' ');
 
     el.innerHTML = `<div class="wrap">
-      ${head('10', 'Behind the glass', 'Behind the glass', lede)}
+      ${head('09', 'Behind the glass', 'Behind the glass', lede)}
       <div class="cr-boards">${boards.map(b => {
         const max = b.rows[0].songs ?? b.rows[0].n;
         return `<div class="cr-board"><p class="label cr-title">${b.title}</p>

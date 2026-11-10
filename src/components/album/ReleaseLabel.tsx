@@ -1,5 +1,7 @@
 import { useId } from 'react';
+import { lookVars } from '@/components/player/Vinyl';
 import { labelNames, titleLines } from '@/lib/releaseLabel';
+import type { VinylLook } from '@/lib/vinylLook';
 
 interface ReleaseLabelProps {
   /** The record companies, as Discogs lists them; the first is arced over the top. */
@@ -14,6 +16,8 @@ interface ReleaseLabelProps {
   paper: string;
   /** The ink on it. */
   ink: string;
+  /** The pressing the label sits on; black vinyl without one. */
+  look?: VinylLook | null;
   /** Carry the details in a visually hidden list (default). Off when the page lists them visibly beside it. */
   describe?: boolean;
 }
@@ -40,9 +44,12 @@ const room = (top: number, bottom: number) => {
  * The album page's release details, printed on a record's centre label: the record
  * company arced over the top, artist and title above the spindle hole, the facts below
  * it, and the format arced under the bottom. Long lines are squeezed to fit, not cut.
+ * The label sits on a record in the pressing's own colour (`look`): a rim of grooves
+ * round it, paper grain and worn ink on the label, and a spindle hole (`.release-press`
+ * in player.css). The label is bigger than a real one so its print stays readable.
  * The SVG is decoration; the same details are in a visually hidden list.
  */
-export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink, describe = true }: ReleaseLabelProps) {
+export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink, look, describe = true }: ReleaseLabelProps) {
   const id = useId().replace(/:/g, '');
   const names = labelNames(labels);
   const label = names[0];
@@ -58,7 +65,10 @@ export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink,
 
   return (
     <div className="release-label">
-      <svg viewBox="-100 -100 200 200" className="block h-auto w-full max-w-[340px]" aria-hidden>
+      <div className="release-press vinyl vinyl-lit" style={look ? lookVars(look) : undefined} aria-hidden>
+        <div className="vinyl-grooves" />
+        <div className="release-press-label">
+      <svg viewBox="-100 -100 200 200" className="block h-full w-full">
         <defs>
           <radialGradient id={`${id}-paper`} cx="0.42" cy="0.36" r="0.75">
             <stop offset="0" stopColor={ink} stopOpacity="0.1" />
@@ -113,8 +123,6 @@ export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink,
           </text>
         ))}
 
-        <circle r="4.5" fill="var(--ground)" />
-
         {shown.map(([k, v], i) => {
           const y = top + i * step;
           // The room across the label at this height, less a margin.
@@ -133,6 +141,9 @@ export function ReleaseLabel({ labels, artist, title, format, facts, paper, ink,
           );
         })}
       </svg>
+        </div>
+        <span className="release-press-hole" />
+      </div>
       {describe && (
         <dl className="sr-only">
           {names.length > 0 && (

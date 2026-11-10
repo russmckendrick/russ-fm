@@ -1,4 +1,4 @@
-# Index headers (/albums, /artists, /stats, /shuffle)
+# Index headers (/albums, /artists, /stats, /shuffle and the browse pages)
 
 Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 [release room](./release-room.md) and [artist poster wall](./artist-wall.md):
@@ -15,6 +15,24 @@ Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
   each under its own spotlight. A light chases along them and stops on the
   pick (see [pages.md](./pages.md#randompage-srcpagesrandompagetsx)). It
   draws its own band rather than the one below.
+- **/browse and the facet lists (/labels, /decades, /countries):** a record-fair
+  stall (`browse`), five crates on a trestle table with one sleeve propped in
+  front of each. On /browse each crate is a section (Genres, Labels, Decades,
+  Countries, Coloured vinyl) and links to it; on a list it is one of the five
+  biggest values. Each crate takes the first sleeve of its fan that is not
+  already out, so no record shows twice.
+- **/label/:slug, /decade/:slug, /country/:slug, /genre/:slug:** a record
+  shop's window at dusk (`facet`), five of that value's sleeves on easels,
+  each linking to its record. It replaced the fan of sleeves beside the title.
+- **/coloured-vinyl:** a pressing plant's sample wall (`coloured`), six round
+  slots. Each holds a `Vinyl` in the pressing's own look, the sleeve on its
+  label, for the first six records of the current filter.
+
+The browse pages all draw theirs through `SleeveRoom`
+(`src/components/browse/SleeveRoom.tsx`): an `IndexRoom` whose slots are
+links, with the page's usual `FloodBand` below. `topShade` darkens the top of
+a pale photo (`.room-top-shade`) so the see-through header reads over it; the
+stall and the white wall use it. /genres keeps its own record.
 
 Below the photo is a one-row band in the flood: the `h1` with its count, then
 the collection in numbers.
@@ -55,7 +73,8 @@ layer, shade, photo and tint styles in `player.css`:
 - **Shade:** one full-frame multiply layer. It carries the photo's own light
   over the slots: the lamp's falloff on the sleeves, the posters' wrinkles.
 - **Photo:** covers the box, the row centred across and below the header. It
-  fades in once it has decoded.
+  fades in once it has decoded; until then the box holds a dim wash of the
+  flood (`--room-wash`, from `tint`, shared with the artist wall).
 - **Tint:** the page's flood in `color` blend at 16%.
 
 On a phone the photo still covers the box, so only the middle slots show.
@@ -68,8 +87,11 @@ slots (`#00FF00`), facing the camera dead-on, with clear gaps between
 them so each keys as its own blob.
 
 ```bash
-uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle|browse|facet|coloured]
 ```
+
+A slot can be any shape: the hole follows the green, and the config holds its
+bounding box (the discs on `coloured` are circles).
 
 The script upscales 4× (`scripts/lib/upscale.py`, cached in
 `assets/.upscaled/index-headers/`). It keys every green blob at least a

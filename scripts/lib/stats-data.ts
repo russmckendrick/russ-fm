@@ -51,7 +51,6 @@ export interface StatsInput {
 
 // shortcut: one sleeve is ~3.5 mm on the shelf; gatefolds and box sets run longer, so this undercounts a little.
 const SLEEVE_M = 0.0035;
-const DEEP = 1000;
 const STRIP = 14;
 
 const slugOf = (uri: string) => uri.split('/').filter(Boolean).pop() ?? uri;
@@ -66,13 +65,6 @@ export function reprField(text: unknown, key: string): string | null {
   const m = new RegExp(`\\b${key}=(?:'((?:[^'\\\\]|\\\\.)*)'|"((?:[^"\\\\]|\\\\.)*)"|([^,)\\]]+))`).exec(text);
   const v = m ? (m[1] ?? m[2] ?? m[3]) : null;
   return v == null || v === 'None' ? null : v;
-}
-
-/** The tags list from a Last.fm repr string. */
-export function reprTags(text: unknown): string[] {
-  if (typeof text !== 'string') return [];
-  const m = /\btags=\[([^\]]*)\]/.exec(text);
-  return m ? [...m[1].matchAll(/'([^']*)'|"([^"]*)"/g)].map(x => (x[1] ?? x[2]).toLowerCase().trim()).filter(Boolean) : [];
 }
 
 // Who owns the recording, from the ℗ line; the majors by their labels, else independent.
@@ -159,7 +151,6 @@ export function buildStats(input: StatsInput): StatsData {
   const colourOf = new Map<string, Colour>();
   const tallies = Object.fromEntries(ROLES.map(([k]) => [k, new Tally()])) as Record<(typeof ROLES)[number][0], Tally>;
   const labels = new Tally(), owners = new Tally(), specs = new Tally();
-  const tags = new Map<string, number>();
   const piles = new Map<string, StatsPile & { heavyG: number }>();
   const artistRecs = new Map<string, { name: string; recs: StatsRecord[] }>();
   let kgG = 0, runtime = 0, discs = 0, tracks = 0, coloured = 0, ownersKnown = 0;
@@ -178,7 +169,7 @@ export function buildStats(input: StatsInput): StatsData {
       s, t: r.release_name, by: r.release_artist, a: r.artists.map(x => slugOf(x.uri_artist)), d: r.date_added.slice(0, 10),
       y: num(r.year_original), p: num(r.date_release_year?.slice(0, 4)), f: c.flood ?? null,
       fam: familyOf({ styles: r.styles, genre_names: r.genre_names }),
-      lis: num(reprField(lastfm, 'listeners')), pc: num(reprField(lastfm, 'playcount')),
+      lis: num(reprField(lastfm, 'listeners')),
     };
     records.push(rec);
     const names = new Set(r.artists.map(x => x.name.toLowerCase()));
@@ -230,7 +221,6 @@ export function buildStats(input: StatsInput): StatsData {
     if (cp) { ownersKnown++; owners.add(ownerOf(cp), s); }
     for (const sp of specsOf(a, r.formats ?? [])) specs.add(sp, s);
     if (vc.length) specs.add('Coloured vinyl', s);
-    for (const t of new Set(reprTags(lastfm))) if (![...names].includes(t)) tags.set(t, (tags.get(t) ?? 0) + 1);
   }
 
   const artists: StatsArtist[] = [...artistRecs].filter(([k]) => k !== 'various').map(([k, e]) => {
@@ -243,13 +233,11 @@ export function buildStats(input: StatsInput): StatsData {
       formed: num(t.formed_year), born: num(t.born_year), split: t.disbanded === true, died: num(t.died_year),
       mood: typeof t.mood === 'string' && t.mood ? t.mood : null,
       gender: typeof t.gender === 'string' && t.gender ? t.gender : null,
-      lis: num(reprField(j?.raw_data?.lastfm, 'listeners')),
     };
   }).sort((x, y) => y.n - x.n || x.name.localeCompare(y.name));
 
   const perYear: Record<string, number> = {};
   for (const r of records) perYear[r.d.slice(0, 4)] = (perYear[r.d.slice(0, 4)] ?? 0) + 1;
-  const played = records.filter(r => r.pc);
   const years = records.filter(r => r.y).map(r => r.y!);
   const totals: StatsData['totals'] = {
     records: records.length,
@@ -258,9 +246,6 @@ export function buildStats(input: StatsInput): StatsData {
     hours: Math.round(runtime / 3600),
     discs, tracks, coloured,
     metres: Math.round(records.length * SLEEVE_M * 10) / 10,
-    plays: played.reduce((x, r) => x + r.pc!, 0),
-    playsKnown: played.length,
-    deep: records.filter(r => r.lis != null && r.lis < DEEP).length,
     oldest: Math.min(...years),
     newest: Math.max(...years),
     since: records[0].d,
@@ -290,7 +275,6 @@ export function buildStats(input: StatsInput): StatsData {
     sleeves,
     owners: ownership,
     specs: specList,
-    tags: [...tags].sort((x, y) => y[1] - x[1]).slice(0, 40).map(([name, n]) => ({ name, n })),
   };
 }
 
@@ -331,14 +315,10 @@ export function holderPool(x: PoolInput): StatsHolder[] {
   const max = <T>(list: T[], f: (v: T) => number) => list.reduce<T | undefined>((a, b) => (a === undefined || f(b) > f(a) ? b : a), undefined);
   const min = <T>(list: T[], f: (v: T) => number) => max(list, v => -f(v));
   const n = (v: number) => v.toLocaleString('en-GB');
-  const played = x.records.filter(r => r.pc);
   const dated = x.records.filter((r): r is StatsRecord & { y: number } => !!r.y);
   const latestBy = (s: string) => [...x.records].reverse().find(r => r.a.includes(s));
 
   // The shelves as a whole.
-  const most = max(played, r => r.pc!), least = min(played, r => r.pc!);
-  if (most) add(`${(t.plays / 1e9).toFixed(1)} bn`, 'Last.fm plays', most, `Most played: ${Math.round(most.pc! / 1e6)}M plays`);
-  if (least) add(n(t.deep), 'under 1,000 listeners', least, `Least played: ${n(least.pc!)} plays`);
   const heavy = max(x.records, r => x.weights.get(r.s) ?? 0);
   if (heavy) add(`${n(t.kg)} kg`, 'of vinyl', heavy, `Heaviest: ${((x.weights.get(heavy.s) ?? 0) / 1000).toFixed(1)} kg`);
   const long = max(x.records.filter(r => x.longestTrack.get(r.s)), r => x.longestTrack.get(r.s)!);
@@ -350,16 +330,14 @@ export function holderPool(x: PoolInput): StatsHolder[] {
   const oldest = min(dated, r => r.y);
   if (oldest) add(`${t.newest - t.oldest} years`, `of records, ${t.oldest}–${t.newest}`, oldest, `Oldest: first out in ${oldest.y}`);
   add(n(t.coloured), 'coloured pressings', x.latestColoured, 'The latest coloured pressing');
-  const heard = max(x.records, r => r.lis ?? 0);
-  if (heard?.lis) add(n(t.records), 'records', heard, `Most heard: ${Math.round(heard.lis / 1e6 * 10) / 10}M listeners`);
+  const half = Math.floor(x.records.length / 2);
+  if (x.records[half]) add(n(t.records), 'records', x.records[half], `The halfway mark: record ${n(half + 1)}`);
 
   // Artists.
   const top = x.artists[0];
   if (top) add(n(top.n), `by ${top.name}`, latestBy(top.s), 'The most collected artist');
-  const known = x.artists.filter(a => a.lis);
-  const loud = max(known, a => a.lis!), quiet = min(known, a => a.lis!);
-  if (loud) add(n(t.artists), 'artists', latestBy(loud.s), `Biggest: ${loud.name}, ${Math.round(loud.lis! / 1e5) / 10}M listeners`);
-  if (quiet) add(n(quiet.lis!), `Last.fm listener${quiet.lis === 1 ? '' : 's'}`, latestBy(quiet.s), `The smallest artist: ${quiet.name}`);
+  const newest = x.artists.reduce<StatsArtist | undefined>((a, b) => (a === undefined || b.first > a.first ? b : a), undefined);
+  if (newest) add(n(t.artists), 'artists', latestBy(newest.s), `The newest name: ${newest.name}`);
   const ccs = [...new Set(x.artists.map(a => a.cc).filter((c): c is string => !!c))];
   const rareCc = min(ccs, cc => x.artists.filter(a => a.cc === cc).length);
   const rare = rareCc ? x.artists.find(a => a.cc === rareCc) : undefined;

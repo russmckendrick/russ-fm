@@ -1,4 +1,4 @@
-// 09 · Decades: every record placed by the year it first came out, a swarm of sleeve-coloured dots.
+// 08 · Decades: every record placed by the year it first came out, a swarm of sleeve-coloured dots.
 // The all-time take on Wrapped's decades chapter, which swarms sleeves; thousands of sleeves is too many here.
 import * as d3 from 'd3';
 import { countUp, esc, head, onVisible, plural } from '../../wrapped/story/core';
@@ -25,7 +25,7 @@ export default function decades(el: HTMLElement): StatsChapter {
     const oldest = recs.reduce((a, b) => (b.y < a.y ? b : a));
 
     el.innerHTML = `<div class="wrap">
-      ${head('09', 'Decades', 'When it was made', `${plural(recs.length, 'record')}, each placed by the year it first came out. The oldest, ${esc(oldest.t)}, goes back to ${oldest.y}.`)}
+      ${head('08', 'Decades', 'When it was made', `${plural(recs.length, 'record')}, each placed by the year it first came out. The oldest, ${esc(oldest.t)}, goes back to ${oldest.y}.`)}
       <div class="stats st-stats">
         <div class="stat"><b data-n="${d3.median(recs, r => r.y)}" data-plain>0</b><span>the median original year</span></div>
         <div class="stat"><b data-n="${Math.round(d3.mean(recs, r => arrived(r) - r.y)!)}">0</b><span>years old, on average, when it arrived</span></div>

@@ -1,4 +1,4 @@
-// 11 · Who made the sleeves: the designers and photographers credited across the collection,
+// 10 · Who made the sleeves: the designers and photographers credited across the collection,
 // each with a wall of the covers they made.
 import { esc, head, onVisible, plural } from '../../wrapped/story/core';
 import type { StatsRanked } from '@/types/stats';
@@ -19,7 +19,7 @@ export default function sleeves(el: HTMLElement): StatsChapter {
     const lead = design[0], snapper = photo[0];
 
     el.innerHTML = `<div class="wrap">
-      ${head('11', 'Cover stars', 'Who made the sleeves', [
+      ${head('10', 'Cover stars', 'Who made the sleeves', [
         lead && `${esc(lead.name)} designed ${plural(lead.n, 'sleeve')} here`,
         snapper && `${esc(snapper.name)} took the photographs on ${snapper.n}`,
       ].filter(Boolean).join('; ') + '. The designers and photographers on the sleeve credits.')}

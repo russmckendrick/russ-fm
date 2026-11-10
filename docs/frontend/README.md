@@ -228,7 +228,8 @@ the operating system's light/dark setting.
 
 Colour comes from the sleeve, never a fixed accent. Palettes are decided at build time by
 `scripts/generate-album-colors.js` (Apple Music artwork colours included) and written to
-`/public/album-colors.json`, so a sleeve has the same flood on every page:
+`/public/album-colors.json`, so a sleeve has the same flood on every page (`index.html` preloads the file and
+`main.tsx` starts loading it before the first render, so pages open in colour):
 
 - `useAlbumColors(uri)` — palette for one album.
 - `useAlbumColorMap()` — the whole URI → palette map, for grids, shelves and other pages that

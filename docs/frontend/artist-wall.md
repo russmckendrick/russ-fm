@@ -44,7 +44,8 @@ full width, and `clamp(460px, 78svh, 940px)` from `md`.
 
 The wall fades in once two things are ready: the wall photo has decoded,
 and the poster's photo has loaded or failed. So the poster never shows as
-blank paper.
+blank paper. Until then the box holds a dim wash of the page's flood
+(`--room-wash`, from `tint`), not black.
 
 ### The poster's photo
 

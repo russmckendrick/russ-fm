@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
-import { SiLastdotfm } from 'react-icons/si';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
@@ -30,6 +29,7 @@ import { serviceIconFor } from '@/components/player/service-icon';
 import { ReleaseRoom } from '@/components/album/ReleaseRoom';
 import { ScrobbleSky } from '@/components/album/ScrobbleSky';
 import { ReleaseLabel } from '@/components/album/ReleaseLabel';
+import { ExpandableBody, LinerNotes } from '@/components/player/LinerNotes';
 import { ArtistBand } from '@/components/album/ArtistBand';
 import { releaseRoomFor } from '@/lib/releaseRooms';
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
@@ -689,14 +689,14 @@ export function AlbumDetailPage() {
         if (side.sideKey && !side.sideKey.startsWith('disc-')) {
           const sideCode = side.sideKey.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
           const lpNumber = Math.floor(sideCode / 2) + 1;
-          const sideLetter = sideCode % 2 === 0 ? 'A' : 'B';
 
           let lpGroup = lpGroups.find(lp => lp.lpLabel === `LP${lpNumber}`);
           if (!lpGroup) {
             lpGroup = { lpLabel: `LP${lpNumber}`, sides: [] };
             lpGroups.push(lpGroup);
           }
-          lpGroup.sides.push({ label: `Side ${sideLetter}`, tracks: side.tracks });
+          // The side's own letter (C, D on the second LP), as on the label and in the rows' positions.
+          lpGroup.sides.push({ label: `Side ${side.sideKey}`, tracks: side.tracks });
         } else if (side.sideKey.startsWith('disc-')) {
           // Treat disc format as its own LP
           const discNum = side.sideKey.split('-')[1];
@@ -861,7 +861,6 @@ export function AlbumDetailPage() {
     .filter(a => a.uri_artist === album.uri_artist && a.uri_release !== album.uri_release && !a.boxset)
     .sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0))
     .slice(0, 12);
-  const lastfm = detailedAlbum?.services?.lastfm;
   const accent = flood.glow;
   const title = album.release_name.trim();
   const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
@@ -1243,13 +1242,10 @@ export function AlbumDetailPage() {
           <div className="flex min-w-0 flex-col gap-20">
             {description && (
               <section className="flex flex-col gap-6">
-                <h2 className="t-disp m-0 text-[34px] md:text-[48px]">{isBox ? 'About this box set' : 'About this record'}</h2>
-                <ExpandableBody shouldCollapse={description.length > 900} fade={flood.ground}>
-                  <div className="flex flex-col gap-5 text-[18px] leading-[1.65] text-[color:var(--ink-2)] md:text-[19px]">
-                    {description.split('\n').filter(p => p.trim()).map((p, i) => (
-                      <p key={i} className="m-0">{p.trim()}</p>
-                    ))}
-                  </div>
+                {/* The lede opens the section; the heading is kept for screen readers and the outline only. */}
+                <h2 className="sr-only">{isBox ? 'About this box set' : 'About this record'}</h2>
+                <ExpandableBody fade={flood.ground} collapsedMaxHeight={460} spare={280}>
+                  <LinerNotes text={description} />
                 </ExpandableBody>
               </section>
             )}
@@ -1300,7 +1296,7 @@ export function AlbumDetailPage() {
                   flood={flood.flood}
                   accent={accent}
                   bio={
-                    <ExpandableBody shouldCollapse={bio.length > 600} fade={flood.ground}>
+                    <ExpandableBody fade={flood.ground}>
                       <div className="flex flex-col gap-4 text-[16px] leading-[1.65] text-[color:var(--ink-2)] md:text-[17px]">
                         {bio.split('\n').filter(p => p.trim()).map((p, i) => (
                           <p key={i} className="m-0">{p.trim()}</p>
@@ -1314,35 +1310,6 @@ export function AlbumDetailPage() {
           </div>
 
           <aside className="flex flex-col gap-10 md:block md:columns-2 md:gap-12 md:[&>*]:mb-10 md:[&>*]:break-inside-avoid xl:flex xl:columns-auto xl:[&>*]:mb-0 xl:sticky xl:top-28 xl:self-start">
-            {(lastfm?.listeners || lastfm?.playcount) && (
-              <section className="flood-surface flex flex-col gap-4 rounded-[18px] p-6" style={{ background: flood.flood, color: flood.ink }}>
-                <span className="t-kicker inline-flex items-center gap-2">
-                  <SiLastdotfm className="h-4 w-4" aria-hidden /> Last.fm
-                </span>
-                {/* Seven-digit counts don't fit side by side in the 340px sidebar. */}
-                <div className={cn('grid grid-cols-2 gap-3', Math.max(Number(lastfm?.playcount ?? 0), Number(lastfm?.listeners ?? 0)) >= 1e6 && 'xl:grid-cols-1')}>
-                  {lastfm?.playcount !== undefined && (
-                    <div className="flex flex-col gap-1">
-                      <span className="t-cond text-[56px] xl:text-[44px]">{Number(lastfm.playcount).toLocaleString('en-GB')}</span>
-                      <span className="t-kicker text-[11px]">Scrobbles</span>
-                    </div>
-                  )}
-                  {lastfm?.listeners !== undefined && (
-                    <div className="flex flex-col gap-1">
-                      <span className="t-cond text-[56px] xl:text-[44px]">{Number(lastfm.listeners).toLocaleString('en-GB')}</span>
-                      <span className="t-kicker text-[11px]">Listeners</span>
-                    </div>
-                  )}
-                </div>
-                {lastfm?.url && (
-                  <a href={lastfm.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[14px] font-bold">
-                    View on Last.fm
-                    <ArrowUpRight className="h-4 w-4" aria-hidden />
-                  </a>
-                )}
-              </section>
-            )}
-
             <section>
               <h3 className="t-kicker m-0 mb-4 text-[color:var(--cream-dim)]">Release details</h3>
               {/* Printed on a centre label: the record company over the top, the format under it. */}
@@ -1354,6 +1321,7 @@ export function AlbumDetailPage() {
                 facts={facts.filter(([k]) => k !== 'Label' && k !== 'Format')}
                 paper={flood.flood}
                 ink={flood.ink}
+                look={lookAt(looks, 0)}
                 describe={false}
               />
               <dl className="m-0 mt-6">
@@ -1647,40 +1615,28 @@ function Tracklist({
       ? grouping.groups.map(g => ({ heading: g.lpLabel, sides: g.sides }))
       : [{ sides: grouping.groups }];
 
-  // The runtime bars grow in once, when the tracklist scrolls into view. Only when it
-  // starts below the fold: at rest, or already on screen, they're simply drawn.
-  const root = useRef<HTMLDivElement>(null);
-  const [grow, setGrow] = useState<'' | 'tl-pending' | 'tl-seen'>('');
-  useEffect(() => {
-    const el = root.current;
-    if (!el || typeof IntersectionObserver === 'undefined' || el.getBoundingClientRect().top < window.innerHeight) return;
-    setGrow('tl-pending');
-    const io = new IntersectionObserver(
-      entries => {
-        if (entries.some(e => e.isIntersecting)) {
-          setGrow('tl-seen');
-          io.disconnect();
-        }
-      },
-      { threshold: 0.15 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
   return (
-    <div ref={root} className={cn('flex flex-col gap-12', grow)}>
+    <div className="flex flex-col gap-14">
       {blocks.map((block, bi) => (
         <div key={bi} className="flex flex-col gap-6">
-          {block.heading && blocks.length > 1 && <h3 className="t-kicker m-0" style={{ color: accent }}>{block.heading}</h3>}
+          {block.heading && blocks.length > 1 && (
+            <h3 className="m-0 flex items-center gap-3.5">
+              {/* The disc itself, in its pressing colour: the only record in the tracklist. */}
+              {grouping.type === 'lp' && (
+                <span className="relative block h-9 w-9 shrink-0" aria-hidden>
+                  <Vinyl label={discColour} look={lookAt(looks, bi)} spin={false} className="vinyl-lit inset-0" />
+                </span>
+              )}
+              <span className="t-disp text-[20px] md:text-[22px]">{block.heading.replace(/^(LP|Disc)\s*(\d+)$/, '$1 $2')}</span>
+              <span className="h-px flex-1" style={{ background: 'var(--cream-rule)' }} aria-hidden />
+            </h3>
+          )}
           <div className="grid gap-x-14 gap-y-12 md:grid-cols-2">
             {block.sides.map((side, si) => (
               <TracklistSide
                 key={si}
                 side={side}
-                look={lookAt(looks, grouping.type === 'lp' ? bi : Math.floor(si / 2))}
                 accent={accent}
-                discColour={discColour}
                 spotifyIndex={spotifyIndex}
                 getDuration={getDuration}
                 artistPage={artistPage}
@@ -1703,55 +1659,41 @@ function sideTime(ms: number) {
 }
 
 /**
- * One side of the tracklist: its record and running time, a strip of its tracks to
- * scale, and the rows, each with a faint bar for its share of the side. A row and its
- * strip segment light up together.
+ * One side of the tracklist, set like the back of a sleeve: the side's letter large
+ * in the page accent with its running time opposite, over a rule, then the rows with
+ * dot leaders out to each track's time.
  */
 function TracklistSide({
   side,
-  look,
   accent,
-  discColour,
   spotifyIndex,
   getDuration,
   artistPage,
 }: {
   side: { label: string; tracks: Track[] };
-  look: VinylLook | null;
   accent: string;
-  discColour: string;
   spotifyIndex: Map<string, string>;
   getDuration: (t: Track) => string;
   artistPage: (name: string) => string | null;
 }) {
-  const [hot, setHot] = useState<number | null>(null);
   const rows = side.tracks.filter(t => t.position || t.duration_ms || t.name);
-  const { totalMs, timed } = sideRuntime(rows);
-  const share = (t: Track) => (totalMs && t.duration_ms ? t.duration_ms / totalMs : 0);
+  const { totalMs } = sideRuntime(rows);
   const trackCount = rows.filter(t => !isSuiteRow(t) && !isHeadingRow(t)).length;
-  const hover = (i: number) => ({ onMouseEnter: () => setHot(i), onMouseLeave: () => setHot(null) });
+  // "Side C" → the word small, the letter large.
+  const [, word, letter] = /^(\S+)\s+(\S+)$/.exec(side.label) ?? [null, '', side.label];
 
   return (
     <div className="flex min-w-0 flex-col gap-3" style={{ '--tl-accent': accent } as React.CSSProperties}>
       {side.label && (
-        <div className="flex flex-wrap items-center gap-3.5">
-          <div className="relative h-12 w-12 shrink-0">
-            <Vinyl label={discColour} look={look} spin={false} className="inset-0" />
-          </div>
-          <span className="t-disp flex-1 whitespace-nowrap text-[30px] md:text-[36px]">{side.label}</span>
-          {totalMs > 0 && (
-            <span className="ml-auto flex items-baseline gap-1.5">
-              <span className="t-dispn text-[20px] tabular-nums md:text-[22px]">{sideTime(totalMs)}</span>
-              <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">{trackCount} {trackCount === 1 ? 'track' : 'tracks'}</span>
-            </span>
-          )}
-        </div>
-      )}
-      {side.label && timed.length > 1 && (
-        <div className="tl-strip" aria-hidden>
-          {timed.map(i => (
-            <i key={i} data-hot={hot === i || undefined} style={{ flexGrow: rows[i].duration_ms }} {...hover(i)} />
-          ))}
+        <div className="tl-side">
+          <h4 className="m-0 flex items-baseline gap-3">
+            {word && <span className="t-kicker text-[12px] text-[color:var(--cream-dim)]">{word}</span>}
+            <span className="t-disp text-[52px] leading-[0.8] md:text-[64px]" style={{ color: accent }}>{letter}</span>
+          </h4>
+          <span className="flex items-baseline gap-2.5">
+            {totalMs > 0 && <span className="t-dispn text-[22px] tabular-nums md:text-[26px]">{sideTime(totalMs)}</span>}
+            <span className="t-mono text-[11px] uppercase text-[color:var(--cream-dim)]">{trackCount} {trackCount === 1 ? 'track' : 'tracks'}</span>
+          </span>
         </div>
       )}
       <ol className="m-0 list-none p-0">
@@ -1760,7 +1702,7 @@ function TracklistSide({
             // A suite heads its movements, which follow it with their own positions.
             const duration = getDuration(track);
             return (
-              <li key={i} className="flex items-baseline gap-4 pb-1 pt-4">
+              <li key={i} className="flex items-baseline gap-4 px-2 pb-1 pt-4">
                 <span className="t-kicker flex-1" style={{ color: accent }}>{track.name}</span>
                 {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
               </li>
@@ -1768,26 +1710,17 @@ function TracklistSide({
           }
           if (isHeadingRow(track)) {
             return (
-              <li key={i} className="t-kicker pb-1 pt-4" style={{ color: accent }}>
+              <li key={i} className="t-kicker px-2 pb-1 pt-4" style={{ color: accent }}>
                 {track.name}
               </li>
             );
           }
           const spotifyId = spotifyIndex.get(normaliseTrackTitle(track.name));
           const duration = getDuration(track);
-          const part = timed.includes(i) ? share(track) : 0;
           return (
-            <li
-              key={i}
-              className={cn('flex items-baseline gap-4 border-b py-3.5 text-[16px] md:text-[17px]', part > 0 && 'tl-row')}
-              style={{ borderColor: 'var(--cream-rule)', ...(part > 0 ? ({ '--share': `${(part * 100).toFixed(1)}%`, '--i': timed.indexOf(i) } as React.CSSProperties) : {}) }}
-              data-hot={hot === i || undefined}
-              {...(part > 0 ? hover(i) : {})}
-            >
-              <span className="t-mono min-w-8 shrink-0 whitespace-nowrap pl-2 text-[12px] font-bold" style={{ color: accent }}>
-                {track.position || track.track_number || i + 1}
-              </span>
-              <span className="min-w-0 flex-1 font-semibold">
+            <li key={i} className="tl-track text-[16px] md:text-[17px]">
+              <span className="tl-pos t-mono text-[12px] font-bold">{track.position || track.track_number || i + 1}</span>
+              <span className="min-w-0 font-semibold">
                 {spotifyId ? (
                   <a href={`https://open.spotify.com/track/${spotifyId}`} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" title="Open on Spotify">
                     {track.name}
@@ -1815,32 +1748,12 @@ function TracklistSide({
                   </span>
                 )}
               </span>
-              {part > 0 && <span className="tl-pct t-mono text-[11px] text-[color:var(--cream-dim)]">{Math.round(part * 100)}%</span>}
-              {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
+              <span className="tl-leader" aria-hidden />
+              {duration && <span className="t-mono text-[12px] tabular-nums text-[color:var(--cream-dim)]">{duration}</span>}
             </li>
           );
         })}
       </ol>
-    </div>
-  );
-}
-
-/**
- * Collapsible body copy. Clips long text with a fade in the page's ground
- * colour and a "Read more" pill.
- */
-function ExpandableBody({ children, shouldCollapse, fade, collapsedMaxHeight = 300 }: { children: React.ReactNode; shouldCollapse: boolean; fade: string; collapsedMaxHeight?: number }) {
-  const [expanded, setExpanded] = useState(false);
-  if (!shouldCollapse) return <>{children}</>;
-  return (
-    <div>
-      <div className="relative overflow-hidden transition-[max-height] duration-500 ease-out" style={{ maxHeight: expanded ? '4000px' : `${collapsedMaxHeight}px` }}>
-        {children}
-        {!expanded && <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-28" style={{ background: `linear-gradient(to top, ${fade}, transparent)` }} />}
-      </div>
-      <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} className="pill mt-4 border-[color:var(--cream-rule)]">
-        {expanded ? 'Show less' : 'Read more'}
-      </button>
     </div>
   );
 }

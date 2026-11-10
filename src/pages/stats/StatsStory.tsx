@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import type { StatsData } from '@/types/stats';
 import { statsView, type StatsChapter, type StatsChapterFactory } from './kit';
 import growth from './chapters/growth';
-import reach from './chapters/reach';
 import origins from './chapters/origins';
 import artists from './chapters/artists';
 import pile from './chapters/pile';
@@ -20,7 +19,6 @@ import './stats.css';
 
 const CHAPTERS: Array<[id: string, make: StatsChapterFactory]> = [
   ['growth', growth],
-  ['reach', reach],
   ['origins', origins],
   ['artists', artists],
   ['pile', pile],

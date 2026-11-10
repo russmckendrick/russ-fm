@@ -14,16 +14,16 @@ This document covers the route-level page components in russ.fm.
 | Route | Structure |
 |-------|-----------|
 | `/` | `ReleaseRoom` rotating through the latest additions → Latest additions row → Most collected (taped prints) → Genres (bin dividers) → By the numbers (random /stats facts pinned under sleeves) → Random picks → Browse by colour strip. |
-| `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
-| `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
+| `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid (each month or letter `RunDivider` opens a new row), or the colour wall when `sort=colour` → pill pager. |
+| `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` print grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | Flood band: `BrowseHeader` + what the record shows (all genres, a family, or a lit genre) beside the genre record (`GenreDisc`) → Families (Side A / Side B, colour barcodes) + newest records → Most collected ranked rows + A–Z index, all coloured from sleeves. |
-| `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
-| `/coloured-vinyl` | `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
-| `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
-| `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → twelve chapters from the album and artist data (arrivals, Last.fm reach, home countries, how far in, the pile, spec sheet, time machines, the long haul, decades, behind the glass, sleeve makers, owners) → latest additions. |
+| `/browse`, `/labels`, `/decades`, `/countries` | A record-fair stall with a sleeve in front of each crate (`SleeveRoom`, `browse`) → `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
+| `/coloured-vinyl` | A pressing plant's wall of six discs (`SleeveRoom`, `coloured`) → `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
+| `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | A shop window with five of the value's sleeves (`SleeveRoom`, `facet`) → flood band with the title, counts and most collected artists → paginated `RecordTile` grid. |
+| `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → eleven chapters from the album and artist data (arrivals, home countries, how far in, the pile, spec sheet, time machines, the long haul, decades, behind the glass, sleeve makers, owners) → latest additions. |
 | `/shuffle` (also `/random`) | The record's listening room over a split-flap band; the board clatters to a random record, then the room changes record and the band takes its colour. |
 | `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
@@ -120,6 +120,8 @@ The home page sections are local components in `HomePage.tsx`; the old
   so opening one from the hero needs no further fetch.
 - **Latest additions** — horizontal `shelf-scroll` row of `RecordTile`s,
   with the number added this year as the note.
+  Two copies of one record in the row show their pressing colour in place of
+  the format (Village Green, Oxblood), so they don't read as a repeat.
 - **Most collected** — the top six artists by record count as `ArtistCard print`:
   taped-up prints, as on the /artists wall, with their latest sleeves fanning out
   on hover.
@@ -256,16 +258,19 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 
 **Main column:**
 
-- **About this record** — description with an expand toggle.
-- **Tracklist** — grouped by side (and by LP for multi-disc sets). Each
-  side has a small disc and its label; scrobbling is whole-album only, from
-  the hero. Section-header rows render as kickers. Runtime bars
-  (`TracklistSide`): each side shows its running time beside the label and a
-  strip of its tracks to scale under it, and each timed row has a faint bar
-  in the page accent for its share of the side. Hovering a row or its strip
-  segment lights both and shows the share as a percentage. The bars grow in
-  once when the tracklist scrolls into view (only if it starts below the
-  fold; never with reduced motion). Which rows count comes from
+- **About this record** (the heading is visually hidden, so the copy opens the page) — the description as liner notes (`LinerNotes`): the
+  first paragraph set large as a lede, the rest in two columns from `lg`.
+  "Read more" (`ExpandableBody`) only appears when the copy is really long:
+  it is measured, and collapses to 460px only if it runs 280px or more past
+  that (the artist bio: 300px and 220px), so it never opens onto a line or two.
+- **Tracklist** — set like the back of a sleeve, grouped by side (and by LP
+  for multi-disc sets, each under an "LP 1" rule with that disc as a small
+  record in its pressing colour; sides keep their own letters, so the second
+  LP is Side C and Side D). Scrobbling is whole-album only, from the hero.
+  Section-header rows render as kickers. Each side (`TracklistSide`) is
+  headed by its letter, large in the page accent, with the running time and
+  track count opposite, over a rule in the accent. Each row is position,
+  title, dot leaders and time, and tints on hover. The running time comes from
   `sideRuntime()` in `src/lib/tracklistRows.ts`: headings are skipped and a
   suite counts once, by its movements when they're timed. Styles are the
   `.tl-*` rules in `src/styles/player.css`. Each track deep-links to Spotify when a match exists
@@ -295,8 +300,8 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
   TheAudioDB gives groups a born year too. Then the full-width bio, its
   "Read more" fade in the page ground, and a link to their records.
 
-**Sidebar:** Last.fm panel in the flood colour (scrobbles, listeners,
-link), release details, identifiers, pressing, sleeve colours, copyright.
+**Sidebar:** release details, identifiers, pressing, sleeve colours, copyright.
+(There is no Last.fm counts panel: the collection only holds a snapshot of them, so they went stale.)
 "Pressing" (`Pressing` in the page file, from the detail JSON's `format_details`;
 not shown on box sets) lists each vinyl disc set as a small record in its own
 colour, titled with the colour (or "Black") and a mono line of what Discogs
@@ -312,7 +317,11 @@ colours" is a strip of the sleeve's main swatches (`useAlbumSwatches()`),
 each as wide as the share of the sleeve it covers, plus dots for the flood
 and secondary colour; it appears once `album-swatches.json` has loaded.
 The release details are printed on a record's centre label (`ReleaseLabel`,
-`src/components/album/ReleaseLabel.tsx`) in the flood colour and ink: the
+`src/components/album/ReleaseLabel.tsx`) in the flood colour and ink, sitting on a
+record in the pressing's own colour (`look`, the first disc's; `.release-press` in
+`player.css`: a rim of grooves, the run-out ring, worn ink on the paper, a spindle
+hole, and a sheen that turns as the page scrolls where the browser supports
+scroll-driven animation). On the label: the
 first record company arced over the top (each Discogs label once, without its
 "(2)"; `labelNames()` in `src/lib/releaseLabel.ts`), artist and title above
 the spindle hole (the title over up to three lines, `titleLines()`), the
@@ -467,7 +476,6 @@ artist pages.) The nav follows it via `usePageFlood`, and the sleeve's dark
   - Records, Soundtracks, Box sets
   - Released: the earliest to the latest original year, or the one year
     when they match
-  - Last.fm listeners
   - three genre links to `/genre/:slug`
   The links are icon buttons:
   - the artist's TV channel, when there are videos
@@ -481,11 +489,17 @@ artist pages.) The nav follows it via `usePageFlood`, and the sleeve's dark
   chips and service pills beside it. Before 2026-10-25 it was a greyscale
   print in the sleeve's flood.)
 - **Biography** — its own full-width section under the band and above the
-  discography (the Various Artists page's one-line biography too), set in columns (one on phones, two from `md`, three from
-  `xl`). It uses the longer of `biography` and Last.fm's full
-  `services.lastfm.bio_content` (tags and the "Read more on Last.fm" /
-  licence tail stripped), shows whole paragraphs up to about 1,500
-  characters, then a Read more toggle.
+  discography (the Various Artists page's one-line biography too), with no
+  visible heading (it is kept for screen readers). Set as liner notes like the
+  album's About text (`LinerNotes wide`, `src/components/player/LinerNotes.tsx`):
+  the first paragraph large across the page, the rest in as many columns as
+  it can fill: under about 700 characters it spans the full width a size
+  larger, with no columns; otherwise two from
+  `lg`, and three from `xl` past about 1,300. It uses the longer of `biography`
+  and Last.fm's full `services.lastfm.bio_content` (tags and the "Read more on
+  Last.fm" / licence tail stripped). "Read more" (`ExpandableBody`) only
+  appears on a really long one: it collapses to 520px only if the copy runs
+  300px or more past that.
 - **Discography** — `RecordTile`s on the page ground with a two-way
   toggle in the section heading (hidden when the artist has one record):
   - **Recently added** (default) — one grid, newest additions first, each
@@ -540,7 +554,7 @@ out.
 
 **Route:** `/stats`
 
-The collection as a place, then twelve chapters counted from every album and
+The collection as a place, then eleven chapters counted from every album and
 artist file.
 
 - **The shelf:** `IndexRoom` with the `stats` photo, an oak cube unit (see
@@ -549,8 +563,7 @@ artist file.
   six facts drawn at random from the ~40 in `stats.json`'s `holders`
   (`pickHolders`, `src/lib/statsShelf.ts`), no two on the same record, so
   the shelf changes on every visit. A fact is a figure, what it counts and
-  a record that goes with it: 11.4 bn Last.fm plays over the most played
-  record, 805 kg over the heaviest, 775 songs by David Bowie over one of
+  a record that goes with it: 805 kg over the heaviest, 775 songs by David Bowie over one of
   them, 82 etched sides over the latest etched record, and so on.
 - **The band:** `Stats` with the record count, then Since, Artists, Discs,
   Shelf. The header is see-through over the photo; the flood is the latest
@@ -568,7 +581,7 @@ artist file.
     task. Until then an empty section is `.pending` (a screen tall). Built
     chapters have `content-visibility: auto`, so off screen they skip layout
     and paint.
-  - **The swarm** (`swarm()` in `kit.ts`, used by reach and decades) places
+  - **The swarm** (`swarm()` in `kit.ts`, used by decades) places
     its ~3,400 dots with `dodge()`, a deterministic greedy beeswarm that
     takes a few ms. It used to run a d3 force simulation, which cost over a
     second per chart. The dots go on a `<canvas>` over an SVG that holds
@@ -583,33 +596,32 @@ artist file.
   - **Tooltips** (`tooltip()`) take their markup as a function plus a key,
     so moving over the same item only repositions the tip. They have no
     backdrop blur (`.st-tip`).
+  Last.fm listener and play counts are not shown anywhere: the collection only
+  holds a snapshot of them, so the old "Mainstream to deep cuts" chapter went.
   1. **Arrivals** (`growth`): records added each month, stacked by genre
      family in the families' sleeve colours.
-  2. **Mainstream to deep cuts** (`reach`): every record with a Last.fm
-     count in a swarm by listeners (log scale), the plays added up, the six
-     most and least heard, and Last.fm's tags.
-  3. **Where it comes from** (`origins`): artists' home countries on a world
+  2. **Where it comes from** (`origins`): artists' home countries on a world
      map (`world-atlas` 110m, `topojson-client`) and the top eight with
      faces. The alpha-2 → ISO numeric table only lists countries the
      collection has; an artist from elsewhere is left off until it's added.
-  4. **How far in** (`artists`): the 30 most collected acts from the year
+  3. **How far in** (`artists`): the 30 most collected acts from the year
      they started (TheAudioDB) to their first record here, deaths marked,
      then TheAudioDB moods and line-ups.
-  5. **The pile** (`pile`): every disc stacked flat on a canvas, a pile a
+  4. **The pile** (`pile`): every disc stacked flat on a canvas, a pile a
      year, to scale, coloured pressings in colour.
-  6. **Spec sheet** (`specs`): pressing details from the Discogs format
+  5. **Spec sheet** (`specs`): pressing details from the Discogs format
      text, each a card with a fan of sleeves.
-  7. **Time machines** (`timemachine`): an arc per record from its original
+  6. **Time machines** (`timemachine`): an arc per record from its original
      year to its pressing year.
-  8. **The long haul** (`longhaul`): the 16 most collected artists, a dot per
+  7. **The long haul** (`longhaul`): the 16 most collected artists, a dot per
      record on the day it arrived.
-  9. **Decades** (`decades`): every record as a dot by original year.
-  10. **Behind the glass** (`credits`): songwriters (by songs written),
+  8. **Decades** (`decades`): every record as a dot by original year.
+  9. **Behind the glass** (`credits`): songwriters (by songs written),
       producers, recording and mixing engineers, mastering, lacquer cutting
       and labels, each with a strip of sleeves.
-  11. **Who made the sleeves** (`sleeves`): designers and photographers,
+  10. **Who made the sleeves** (`sleeves`): designers and photographers,
       each with a wall of their covers.
-  12. **Who owns it** (`owners`): the Apple Music ℗ line filed under the
+  11. **Who owns it** (`owners`): the Apple Music ℗ line filed under the
       major that owns the label, or independent, one square per record.
 - **Latest additions:** a shelf of sleeves from `collection.json`, box set
   members left out.
