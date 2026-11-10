@@ -266,7 +266,10 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 - **Tracklist** — set like the back of a sleeve, grouped by side (and by LP
   for multi-disc sets, each under an "LP 1" rule with that disc as a small
   record in its pressing colour; sides keep their own letters, so the second
-  LP is Side C and Side D). Scrobbling is whole-album only, from the hero.
+  LP is Side C and Side D). When every heading holds a single side (named
+  sides such as Hounds Of Love / The Ninth Wave, or the discs of a CD set),
+  the sides share one two-column grid, each under its own name, so none sits
+  alone in a half-empty row. Scrobbling is whole-album only, from the hero.
   Section-header rows render as kickers. Each side (`TracklistSide`) is
   headed by its letter, large in the page accent, with the running time and
   track count opposite, over a rule in the accent. Each row is position,

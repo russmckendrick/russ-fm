@@ -1610,10 +1610,17 @@ function Tracklist({
   /** A track artist's page (on a compilation), if they have one. */
   artistPage: (name: string) => string | null;
 }) {
-  const blocks: Array<{ heading?: string; sides: Array<{ label: string; tracks: Track[] }> }> =
+  type Side = { label: string; tracks: Track[]; title?: string };
+  let blocks: Array<{ heading?: string; sides: Side[] }> =
     grouping.type === 'lp'
       ? grouping.groups.map(g => ({ heading: g.lpLabel, sides: g.sides }))
       : [{ sides: grouping.groups }];
+  // Named sides (Hounds Of Love / The Ninth Wave) and the discs of a CD set come as
+  // one side per heading. Each would sit alone in a half-empty row, so they share
+  // one grid instead, each side under its own name.
+  if (blocks.length > 1 && blocks.every(b => b.sides.length === 1)) {
+    blocks = [{ sides: blocks.map(b => ({ ...b.sides[0], title: b.heading })) }];
+  }
 
   return (
     <div className="flex flex-col gap-14">
@@ -1622,7 +1629,7 @@ function Tracklist({
           {block.heading && blocks.length > 1 && (
             <h3 className="m-0 flex items-center gap-3.5">
               {/* The disc itself, in its pressing colour: the only record in the tracklist. */}
-              {grouping.type === 'lp' && (
+              {/^(LP|Disc)\s*\d+$/.test(block.heading) && (
                 <span className="relative block h-9 w-9 shrink-0" aria-hidden>
                   <Vinyl label={discColour} look={lookAt(looks, bi)} spin={false} className="vinyl-lit inset-0" />
                 </span>
@@ -1670,7 +1677,8 @@ function TracklistSide({
   getDuration,
   artistPage,
 }: {
-  side: { label: string; tracks: Track[] };
+  /** `title` is the side's own name ("The Ninth Wave"), set over its letter. */
+  side: { label: string; tracks: Track[]; title?: string };
   accent: string;
   spotifyIndex: Map<string, string>;
   getDuration: (t: Track) => string;
@@ -1684,6 +1692,7 @@ function TracklistSide({
 
   return (
     <div className="flex min-w-0 flex-col gap-3" style={{ '--tl-accent': accent } as React.CSSProperties}>
+      {side.title && <h3 className="t-disp m-0 text-[20px] leading-tight md:text-[24px]">{side.title.replace(/^(LP|Disc)\s*(\d+)$/, '$1 $2')}</h3>}
       {side.label && (
         <div className="tl-side">
           <h4 className="m-0 flex items-baseline gap-3">
