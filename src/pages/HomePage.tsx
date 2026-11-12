@@ -13,6 +13,7 @@ import { ArtistCard } from '@/components/ArtistCard';
 import { BOLD_VIVID, floodFor, inkOn, type Flood } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useGlassBand } from '@/hooks/useGlassBand';
 import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
 import type { StatsHolder } from '@/types/stats';
@@ -69,6 +70,7 @@ export function HomePage() {
 
 function Hero({ featured, colours }: { featured: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
   const [index, setIndex] = useState(0);
+  const [bandRef, bandInset] = useGlassBand<HTMLElement>();
   const [details, setDetails] = useState<Record<string, FeaturedDetail>>({});
   const reduced = useRef(
     typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
@@ -170,20 +172,17 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
           records={records}
           active={index}
           tint={flood.flood}
-          className="h-[clamp(460px,78svh,940px)]"
+          bottomInset={bandInset}
+          className="h-[clamp(460px,78svh,940px)] lg:h-[clamp(620px,96svh,1100px)]"
         />
-      </div>
-      <section
-        className="flood-surface relative z-[2] transition-colors duration-700"
-        style={{ background: flood.flood, color: flood.ink }}
-      >
-        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-14">
+      {/* The credit sits on the room itself, on glass: no band of its own. */}
+      <section ref={bandRef} className="glass-band" style={{ '--band-tint': flood.flood } as CSSProperties}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-5 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-14">
           {/* The records' credits share one grid cell, so the band never changes height between them. */}
           <div className="grid min-w-0 flex-1">
             {featured.map((album, i) => {
               const on = i === index;
               const d = details[album.uri_release];
-              const f = floods[i];
               const kicker = [
                 originalYear(album),
                 d?.label,
@@ -199,7 +198,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                   )}
                   aria-hidden={!on}
                 >
-                  <p className="t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]" style={{ color: f.sub }}>
+                  <p className="glass-sub t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]">
                     {kicker || '\u00a0'}
                   </p>
                   <Link to={album.uri_release} tabIndex={on ? 0 : -1} className="room-title-box">
@@ -230,6 +229,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
           {controls('flex shrink-0')}
         </div>
       </section>
+      </div>
     </>
   );
 }

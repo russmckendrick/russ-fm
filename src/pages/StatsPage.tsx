@@ -1,10 +1,11 @@
-import { lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { RecordTile, SectionHeading, useRecordsFlood } from '@/components/player';
 import { IndexRoom } from '@/components/browse/IndexRoom';
 import { indexRoomSlots } from '@/lib/indexHeaders';
 import { pickHolders } from '@/lib/statsShelf';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { GLASS_STRADDLE_INSET } from '@/hooks/useGlassBand';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { getAlbumImageUrl } from '@/lib/image-utils';
@@ -92,6 +93,7 @@ export function StatsPage() {
       <IndexRoom
         room="stats"
         tint={flood?.top ?? 'transparent'}
+        bottomInset={GLASS_STRADDLE_INSET}
         className="-mt-16 h-[clamp(420px,120vw,620px)] md:-mt-[84px] md:h-[clamp(560px,86svh,900px)]"
         renderSlot={i => {
           const h = holders[i];
@@ -118,8 +120,8 @@ export function StatsPage() {
           );
         }}
       />
-      <section className="flood-surface relative z-[2]" style={flood ? { background: flood.background, color: flood.ink } : undefined}>
-        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[120px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+      <section className="glass-band glass-band-straddle" style={{ '--band-tint': flood?.top ?? 'transparent' } as CSSProperties}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-6 md:min-h-[104px] md:flex-row md:items-center md:gap-10 md:px-10 md:pb-5 lg:px-14">
           <h1 className="t-disp m-0 flex items-baseline gap-x-4 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">
             Stats
             {t && <span className="opacity-35" aria-label={`${t.records} records`}>{t.records.toLocaleString('en-GB')}</span>}
@@ -133,7 +135,7 @@ export function StatsPage() {
                 ['Shelf', `${t.metres} m`],
               ].map(([k, v]) => (
                 <div key={k} className="min-w-0">
-                  <dt className="t-kicker text-[10px]" style={flood ? { color: flood.sub } : undefined}>{k}</dt>
+                  <dt className="glass-sub t-kicker text-[10px]">{k}</dt>
                   <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
                 </div>
               ))}

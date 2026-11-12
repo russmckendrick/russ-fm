@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Shuffle } from 'lucide-react';
-import { usePageFlood } from '@/components/player';
+import { FitTitle, usePageFlood } from '@/components/player';
 import { IndexRoom } from '@/components/browse/IndexRoom';
 import { redesignConfig } from '@/config/redesign.config';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
@@ -13,6 +13,8 @@ import { originalYear } from '@/lib/releaseYear';
 import { isReshuffleState } from '@/lib/shuffleLink';
 import { floodFor, pageGround } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
+import { useGlassBand } from '@/hooks/useGlassBand';
+import { GLASS_TONE } from '@/lib/glassBand';
 import type { Album } from '@/types/album';
 
 const ROOM = 'shuffle';
@@ -36,16 +38,6 @@ function artistHref(album: Album): string {
 /** The band's mono line: what the record is, as on the album page. */
 function pressingLine(album: Album): string {
   return ['Shuffle', album.format_primary, originalYear(album), album.labels?.[0], album.country].filter(Boolean).join(' · ');
-}
-
-/**
- * The title's size: as big as the band allows (40px to 96px), shrunk so the
- * whole title fits one line of the text column (container units; a condensed
- * capital is about half an em wide). Very long titles stop at 28px and end
- * in an ellipsis.
- */
-function titleSize(title: string): string {
-  return `min(clamp(40px, 7vw, 96px), max(28px, calc(100cqw / ${Math.max(6, title.length * 0.5).toFixed(1)})))`;
 }
 
 /**
@@ -100,6 +92,7 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
 
   // The box the photo covers, to know which slots are on screen.
   const wrap = useRef<HTMLDivElement>(null);
+  const [bandRef, bandInset] = useGlassBand<HTMLElement>();
   useLayoutEffect(() => {
     const el = wrap.current;
     if (!el) return;
@@ -231,10 +224,12 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
       </p>
 
       {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
-      <div ref={wrap} className="relative -mt-16 h-[clamp(380px,110vw,560px)] md:-mt-[84px] md:h-[clamp(440px,64svh,700px)]">
+      <div className="relative -mt-16 md:-mt-[84px]">
+      <div ref={wrap} className="relative h-[clamp(420px,120vw,620px)] md:h-[clamp(500px,70svh,770px)] lg:h-[clamp(620px,96svh,1100px)]">
         <IndexRoom
           room={ROOM}
           tint={flood.flood}
+          bottomInset={bandInset}
           className={cn('h-full', !chasing && 'ledge-idle')}
           onLoaded={handleLoaded}
           slotClassName="ledge-sleeve"
@@ -267,68 +262,67 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
         />
       </div>
 
-      <section
-        className="flood-surface relative z-[2] transition-colors duration-700"
-        style={{ background: flood.flood, color: flood.ink }}
-        aria-label="Shuffle"
-      >
-        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-5 px-5 py-6 md:px-10 lg:flex-row lg:items-end lg:gap-10 lg:px-14 lg:py-8">
-          {/* Every row is one line at a fixed height, so the band never changes size between records. */}
-          <div className="flex min-w-0 flex-1 flex-col gap-2.5 [container-type:inline-size] md:gap-3">
-            <p
-              className="t-mono m-0 truncate whitespace-nowrap text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]"
-              style={{ color: flood.sub }}
-            >
-              {showing ? pressingLine(shown) : `Shuffle · ${albums.length.toLocaleString('en-GB')} records`}
-            </p>
-            <p className="t-dispn m-0 truncate whitespace-nowrap text-[20px] leading-[1.2] md:text-[26px]">
+        {/* The credit sits on the room itself, on glass, as on the home and album heroes. */}
+        <section ref={bandRef} className="glass-band" style={{ '--band-tint': flood.flood } as CSSProperties} aria-label="Shuffle">
+          <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-6 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-14">
+            {/* Every row is one line at a fixed height, so the band never changes size between records. */}
+            <div className="min-w-0 flex-1">
+              <p className="glass-sub t-mono m-0 truncate whitespace-nowrap text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]">
+                {showing ? pressingLine(shown) : `Shuffle · ${albums.length.toLocaleString('en-GB')} records`}
+              </p>
               {showing ? (
-                <Link to={artistHref(shown)} className="hover:underline">
-                  {shown.release_artist}
+                <Link to={shown.uri_release} className="room-title-box" title={title}>
+                  <FitTitle key={shown.uri_release} max={96} min={20} fitHeight className="t-cond whitespace-nowrap leading-[0.9]">
+                    {title}
+                  </FitTitle>
                 </Link>
               ) : (
-                <span className="opacity-50">Picking a record</span>
+                <div className="room-title-box">
+                  <FitTitle max={96} min={20} fitHeight className="t-cond whitespace-nowrap leading-[0.9]">
+                    Shuffling…
+                  </FitTitle>
+                </div>
               )}
-            </p>
-            <h1 className="t-cond m-0 flex h-[clamp(40px,7vw,96px)] items-end leading-[0.95]" style={{ fontSize: titleSize(showing ? title : 'Shuffling…') }}>
+              <p className="m-0 flex min-w-0 items-baseline gap-x-4 truncate whitespace-nowrap">
+                {showing ? (
+                  <Link to={artistHref(shown)} className="t-dispn shrink-0 text-[18px] hover:underline md:text-[22px]">
+                    {shown.release_artist}
+                  </Link>
+                ) : (
+                  <span className="t-dispn text-[18px] opacity-50 md:text-[22px]">Picking a record</span>
+                )}
+                {showing && genres.length > 0 && (
+                  <span className="t-mono truncate text-[11px] uppercase opacity-80 md:text-[12px]">{genres.join(' · ')}</span>
+                )}
+              </p>
+            </div>
+            <div className="flex shrink-0 gap-2.5">
+              <button
+                type="button"
+                onClick={shuffle}
+                disabled={chasing}
+                className="pill pill-solid pill-lg flex-1 justify-center sm:min-w-[11.5rem] sm:flex-none"
+                style={GLASS_TONE}
+              >
+                <Shuffle className="h-5 w-5" aria-hidden />
+                {chasing ? 'Shuffling' : 'Shuffle'}
+              </button>
               {showing ? (
-                <Link to={shown.uri_release} className="block min-w-0 max-w-full truncate hover:underline" title={title}>
-                  {title}
+                <Link to={shown.uri_release} className="pill pill-lg max-sm:w-14 max-sm:px-0" aria-label="View album">
+                  <span className="max-sm:sr-only">View album</span>
+                  <ArrowRight className="h-5 w-5" aria-hidden />
                 </Link>
               ) : (
-                <span className="block truncate">Shuffling…</span>
+                // Held in place, greyed out, until the first chase picks a record.
+                <span className="pill pill-lg cursor-default opacity-40 max-sm:w-14 max-sm:px-0" role="link" aria-disabled="true" aria-label="View album">
+                  <span className="max-sm:sr-only">View album</span>
+                  <ArrowRight className="h-5 w-5" aria-hidden />
+                </span>
               )}
-            </h1>
-            <p className="t-kicker m-0 flex gap-x-4 overflow-hidden whitespace-nowrap" style={{ color: flood.sub }}>
-              {showing && genres.length > 0 ? genres.map(g => <span key={g}>{g}</span>) : <span aria-hidden>&nbsp;</span>}
-            </p>
+            </div>
           </div>
-          <div className="flex shrink-0 gap-2.5">
-            <button
-              type="button"
-              onClick={shuffle}
-              disabled={chasing}
-              className="pill pill-solid pill-lg flex-1 justify-center sm:min-w-[11.5rem] sm:flex-none"
-              style={{ background: flood.ink, color: flood.flood }}
-            >
-              <Shuffle className="h-5 w-5" aria-hidden />
-              {chasing ? 'Shuffling' : 'Shuffle'}
-            </button>
-            {showing ? (
-              <Link to={shown.uri_release} className="pill pill-lg max-sm:w-14 max-sm:px-0" aria-label="View album">
-                <span className="max-sm:sr-only">View album</span>
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </Link>
-            ) : (
-              // Held in place, greyed out, until the first chase picks a record.
-              <span className="pill pill-lg cursor-default opacity-40 max-sm:w-14 max-sm:px-0" role="link" aria-disabled="true" aria-label="View album">
-                <span className="max-sm:sr-only">View album</span>
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </span>
-            )}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

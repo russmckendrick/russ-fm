@@ -33,6 +33,8 @@ interface ReleaseRoomProps {
   overlay?: (room: { width: number; height: number; top: number; record: { x: number; y: number } }) => ReactNode;
   /** Pixels at the top covered by the see-through header (its height by default); the stand centres below them. */
   topInset?: number;
+  /** Pixels at the bottom covered by the glass band laid over the room; the stand centres above them. */
+  bottomInset?: number;
   /** How far to move in on the stand: 1 shows more room. */
   zoom?: number;
   className?: string;
@@ -50,8 +52,8 @@ interface Box {
  * sensible size for the box, framing the stand and turntable together when
  * both fit (just the stand on phones), the photo still covering the box.
  */
-function layout(room: Room, w: number, fullH: number, zoom: number, inset: number) {
-  const h = Math.max(1, fullH - inset);
+function layout(room: Room, w: number, fullH: number, zoom: number, inset: number, bottom: number) {
+  const h = Math.max(1, fullH - inset - bottom);
   const s = room.sleeve;
   const d = room.record;
   const target = Math.min(Math.max(w * 0.22 * zoom, Math.min(w * 0.6, 260)), 520 * zoom, h * 0.5 * zoom, h * 0.72);
@@ -104,7 +106,7 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
  * cues in once the room shows, and between two records in that room it lifts
  * and parks before the record swaps, then cues back in.
  */
-export function ReleaseRoom({ records, active, tint, fast = false, overlay, topInset, zoom = 1.5, className }: ReleaseRoomProps) {
+export function ReleaseRoom({ records, active, tint, fast = false, overlay, topInset, bottomInset = 0, zoom = 1.5, className }: ReleaseRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // A room shows once its photo has loaded, so the record never shows without the room round it.
@@ -148,13 +150,13 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
   // The sticky header: 64px, 84px from md.
   const inset = topInset ?? (size && size.w >= 768 ? 84 : 64);
   const rooms = [...new Map(records.filter(r => mounted.has(r.room.id)).map(r => [r.room.id, r.room])).values()];
-  const activeImg = size && current && loaded.has(current.room.id) ? layout(current.room, size.w, size.h, zoom, inset).img : null;
+  const activeImg = size && current && loaded.has(current.room.id) ? layout(current.room, size.w, size.h, zoom, inset, bottomInset).img : null;
 
   return (
     <div ref={box} className={cn('release-room relative overflow-hidden', className)} style={tint && tint !== 'transparent' ? ({ '--room-wash': tint } as CSSProperties) : undefined}>
       {size &&
         rooms.map(room => {
-          const g = layout(room, size.w, size.h, zoom, inset);
+          const g = layout(room, size.w, size.h, zoom, inset, bottomInset);
           const on = room.id === current?.room.id;
           const src = getReleaseRoomUrl(room.id, 'hi-res');
           const medium = getReleaseRoomUrl(room.id, 'medium');

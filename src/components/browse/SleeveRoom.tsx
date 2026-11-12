@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import type { IndexRoomId } from '@/lib/indexHeaders';
 import { cn } from '@/lib/utils';
+import { GLASS_STRADDLE_INSET } from '@/hooks/useGlassBand';
 import { IndexRoom } from './IndexRoom';
 
 export interface RoomSleeve {
@@ -29,15 +30,17 @@ interface SleeveRoomProps {
 /**
  * The browse pages' header photo (/browse, the facet lists and pages,
  * /coloured-vinyl): an IndexRoom whose slots are linked sleeves, pulled up
- * under the see-through header like the /albums ledge. The page's band sits below it.
+ * under the see-through header like the /albums ledge. The page's glass band
+ * straddles its bottom edge (`.glass-band-straddle`).
  */
 export function SleeveRoom({ room, tint, sleeves, renderInside, topShade }: SleeveRoomProps) {
   return (
     <IndexRoom
       room={room}
       tint={tint}
+      bottomInset={GLASS_STRADDLE_INSET}
       // Pulled up under the sticky header (64px, 84px from md), which is see-through here.
-      className={cn('-mt-16 h-[clamp(380px,110vw,560px)] md:-mt-[84px] md:h-[clamp(440px,64svh,700px)]', topShade && 'room-top-shade')}
+      className={cn('-mt-16 h-[clamp(420px,120vw,620px)] md:-mt-[84px] md:h-[clamp(500px,70svh,770px)]', topShade && 'room-top-shade')}
       renderSlot={i => {
         const s = sleeves[i];
         if (!s) return null;

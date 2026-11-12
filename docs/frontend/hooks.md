@@ -311,6 +311,16 @@ const reducedMotion = usePrefersReducedMotion();
 
 The Shuffle page uses both: the board's column count and whether the tiles animate.
 
+### useGlassBand (`src/hooks/useGlassBand.ts`)
+
+For the glass band over the home, album and artist heroes: returns a ref for
+the band and how many pixels of the photo's bottom it covers, which the page
+passes to `ReleaseRoom` / `PosterWall` as `bottomInset`.
+
+```typescript
+const [bandRef, bandInset] = useGlassBand<HTMLElement>();
+```
+
 ---
 
 ## Meta Hooks

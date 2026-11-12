@@ -2,8 +2,8 @@
 
 The album page and the home page open on a listening room: a photo of a
 room with the record's sleeve on a stand and the record playing on a
-turntable, the room tinted with the sleeve's flood, and a slim band in the
-flood below. Box sets keep the cover hero (`CoverHero` + `BoxHeroArt`).
+turntable, the room tinted with the sleeve's flood, and the credit on a
+glass band over the bottom of the photo. Box sets keep the cover hero (`CoverHero` + `BoxHeroArt`).
 
 ## How it is drawn
 
@@ -112,7 +112,18 @@ the one fading out), because a decoded photo is tens of MB.
 
 ### The band
 
-One row in the flood: a details line, the title in `.room-title-box` (a
+The credit sits on the room itself, on glass, rather than on a solid band of
+the flood (`.glass-band` in `player.css`): the photo blurs and darkens behind
+it and runs out into the page ground, the text is cream, and the flood only
+warms the glass (`--band-tint`). From `lg` the whole band lies over the photo,
+and the room is taller to make space (`96svh`, against `78svh` below); under
+`lg` the stacked credit would hide the stand, so the band only straddles the
+photo's bottom edge by 120px (`--glass-over`). `useGlassBand`
+(`src/hooks/useGlassBand.ts`) measures the band and gives the room its
+`bottomInset`, so the stand centres in what the header and the band leave.
+The scrobble pill is cream (`GLASS_TONE`, `src/lib/glassBand.ts`).
+
+One row: a details line, the title in `.room-title-box` (a
 fixed-height, one-line box the title scales into with `FitTitle fitHeight`
 and `whitespace-nowrap`, so the band keeps its height between records), the
 artist line, and actions on the right. The album band's actions are

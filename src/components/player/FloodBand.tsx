@@ -9,6 +9,12 @@ interface FloodBandProps {
   className?: string;
   /** Classes for the inner, max-width container. */
   innerClassName?: string;
+  /**
+   * Under a header photo (SleeveRoom): the band is glass straddling the photo's
+   * bottom edge (`.glass-band-straddle`, player.css) rather than a block of the
+   * flood, which only warms it. The cream tokens keep their own values.
+   */
+  glass?: boolean;
 }
 
 /**
@@ -17,7 +23,14 @@ interface FloodBandProps {
  * `--ground` to the flood), so titles, notes and solid pills written for the
  * dark ground read on the colour without changes.
  */
-export function FloodBand({ flood, children, className, innerClassName }: FloodBandProps) {
+export function FloodBand({ flood, children, className, innerClassName, glass }: FloodBandProps) {
+  if (glass) {
+    return (
+      <div className={cn('glass-band glass-band-straddle', className)} style={{ '--band-tint': flood?.top ?? 'transparent' } as CSSProperties}>
+        <div className={cn('mx-auto w-full max-w-[1640px] px-5 pb-10 md:px-10 md:pb-14 lg:px-14', innerClassName)}>{children}</div>
+      </div>
+    );
+  }
   const style = flood
     ? ({
         background: flood.background,

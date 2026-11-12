@@ -1,8 +1,8 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { artistFacts, type ArtistFactSource } from '@/lib/artistFacts';
-import { focusPosition, useArtistImageInfo } from '@/lib/artistImage';
+import { useArtistImageInfo } from '@/lib/artistImage';
 import { loadDetailJson } from '@/lib/collection';
 import { getArtistDetailJsonUrl, getArtistFanartFromData, getArtistPhotoFromData, handleImageError } from '@/lib/image-utils';
 
@@ -20,12 +20,35 @@ interface ArtistBandProps {
 
 /**
  * The name's size, from the band's width (`cqi`): its longest word must fit on one
- * line inside the padding, so a name never breaks mid-word, with short names capped.
- * The display face, extended and in capitals, runs about 0.9em a letter.
+ * line inside the padding, so a name never breaks mid-word, with short names capped (88px) and the
+ * rest set a fifth under what would fit, so the photo stays the subject.
+ * A long name is also held to about two lines (not below 4.4cqi), so it leaves the
+ * top of the photo to the faces. The display face, extended and in capitals, runs
+ * about 0.9em a letter.
  */
 function nameSize(name: string) {
   const longest = Math.max(4, ...name.split(/\s+/).map(w => w.length));
-  return `min(${(88 / (longest * 0.9)).toFixed(2)}cqi, 128px)`;
+  const word = 88 / (longest * 0.9);
+  const twoLines = Math.max(5.5, 88 / ((name.length / 2) * 0.9 * 1.12));
+  return `min(${(Math.min(word, twoLines) * 0.8).toFixed(2)}cqi, 88px)`;
+}
+
+/** Where the faces sit in the band, as a fraction of its height: above the name. */
+const FACE_LINE = 0.34;
+
+/**
+ * `object-position` for a photo that covers the band, so the point (x, y) of the
+ * photo (fractions) lands at the band's centre across and on FACE_LINE down, as far
+ * as covering allows. A percentage position on its own only does that when little
+ * is cropped; the band crops more than half of a square photo.
+ */
+function coverPosition(photo: { width: number; height: number }, box: { w: number; h: number }, x: number, y: number) {
+  const scale = Math.max(box.w / photo.width, box.h / photo.height);
+  const along = (size: number, room: number, at: number, line: number) => {
+    const spare = size * scale - room;
+    return spare > 1 ? Math.min(1, Math.max(0, (at * size * scale - line * room) / spare)) : 0.5;
+  };
+  return `${(along(photo.width, box.w, x, 0.5) * 100).toFixed(1)}% ${(along(photo.height, box.h, y, FACE_LINE) * 100).toFixed(1)}%`;
 }
 
 /**
@@ -54,14 +77,34 @@ export function ArtistBand({ name, uriArtist, bio, count, flood, accent }: Artis
   const fanart = !failedFanart ? info?.fanart : undefined;
   // Nothing until the image notes say which photo to use.
   const src = info === undefined ? '' : fanart ? getArtistFanartFromData(uriArtist, fanart.file) : getArtistPhotoFromData(uriArtist, info?.source);
-  const face = fanart?.faces?.[0];
-  const position = face
-    ? `${Math.round((face[0] + face[2] / 2) * 100)}% ${Math.round(Math.max(0, face[1] + face[3] / 2 - 0.15) * 100)}%`
-    : focusPosition(info) ?? '50% 25%';
+  // The band's size, to work out how the photo is cropped.
+  const band = useRef<HTMLAnchorElement>(null);
+  const [box, setBox] = useState<{ w: number; h: number } | null>(null);
+  useLayoutEffect(() => {
+    const el = band.current;
+    if (!el) return;
+    const measure = () => setBox({ w: el.clientWidth, h: el.clientHeight });
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  // Frame on the middle of the faces (all of them: a band's line-up), else the photo's focus.
+  const photo = fanart ?? info;
+  const faces = photo?.faces ?? [];
+  const point: [number, number] | null = faces.length
+    ? [
+        (Math.min(...faces.map(f => f[0])) + Math.max(...faces.map(f => f[0] + f[2]))) / 2,
+        (Math.min(...faces.map(f => f[1])) + Math.max(...faces.map(f => f[1] + f[3]))) / 2,
+      ]
+    : !fanart && info?.focus
+      ? info.focus
+      : null;
+  const position = photo && box && point ? coverPosition(photo, box, point[0], point[1]) : '50% 25%';
 
   return (
     <section className="flex flex-col gap-8">
-      <Link to={uriArtist} className="artist-band" style={{ '--band-flood': flood } as React.CSSProperties}>
+      <Link ref={band} to={uriArtist} className="artist-band" style={{ '--band-flood': flood } as React.CSSProperties}>
         {src && (
           <img
             src={src}
@@ -72,7 +115,6 @@ export function ArtistBand({ name, uriArtist, bio, count, flood, accent }: Artis
           />
         )}
         <div className="artist-band-body">
-          <span className="t-kicker opacity-80">The artist</span>
           <span className="t-disp artist-band-name" style={{ fontSize: nameSize(name) }}>
             {name}
           </span>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, type ReactNode } from 'react';
+import { useState, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowUpRight, Tv, Waypoints } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
@@ -7,6 +7,7 @@ import { ExpandableBody, LinerNotes } from '@/components/player/LinerNotes';
 import { serviceIconFor } from '@/components/player/service-icon';
 import { PosterWall } from '@/components/artist/PosterWall';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useGlassBand } from '@/hooks/useGlassBand';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { phoneCrop, useArtistImageInfo, type HeroPhoto } from '@/lib/artistImage';
@@ -241,6 +242,7 @@ export function ArtistDetailPage() {
     ? `${artistData.name} discography — ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection | Russ.fm`
     : 'Loading Artist… | Russ.fm';
   usePageTitle(pageTitle);
+  const [bandRef, bandInset] = useGlassBand<HTMLElement>();
   const artistCanonical = `${appConfig.siteUrl}/artist/${artistPath}`;
   const artistMetaDescription = artistData
     ? buildArtistMetaDescription(artistData, albums.length)
@@ -354,7 +356,7 @@ export function ArtistDetailPage() {
   return (
     <div>
       {/* Pulled up under the sticky header (64px, 84px from md), which is see-through here. */}
-      <div className="artist-wall relative -mt-16 h-[clamp(420px,125vw,940px)] md:-mt-[84px] md:h-[clamp(460px,78svh,940px)]">
+      <div className="artist-wall relative -mt-16 h-[clamp(420px,125vw,940px)] md:-mt-[84px] md:h-[clamp(460px,78svh,940px)] lg:h-[clamp(560px,94svh,1100px)]">
         {imageInfo !== undefined && (
           <PosterWall
             wall={wall}
@@ -369,16 +371,17 @@ export function ArtistDetailPage() {
               href: a.uri_release,
             }))}
             tint={flood.top}
+            bottomInset={bandInset}
             className="h-full"
           />
         )}
-      </div>
-      <section className="flood-surface relative z-[2]" style={{ background: flood.background, color: flood.ink }}>
-        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[84px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+      {/* The facts sit on the wall itself, on glass: no band of their own. */}
+      <section ref={bandRef} className="glass-band" style={{ '--band-tint': flood.top } as CSSProperties}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-6 md:min-h-[72px] md:flex-row md:items-center md:gap-10 md:px-10 md:pb-6 lg:px-14 lg:pb-8">
           <dl className="m-0 grid min-w-0 flex-1 grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 md:flex md:gap-9 md:overflow-hidden">
             {facts.map(([k, v]) => (
               <div key={k} className={cn('min-w-0', k === 'Genres' && 'col-span-2 sm:col-span-1')}>
-                <dt className="t-kicker text-[10px]" style={{ color: flood.sub }}>{k}</dt>
+                <dt className="glass-sub t-kicker text-[10px]">{k}</dt>
                 <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
               </div>
             ))}
@@ -423,8 +426,9 @@ export function ArtistDetailPage() {
           </div>
         </div>
       </section>
+      </div>
 
-      <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
+      <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-12 md:px-10 lg:px-14 lg:pt-14">
         {bio && (
           <section className="flex flex-col gap-8">
             {/* The lede opens the section; the heading is kept for screen readers and the outline only. */}

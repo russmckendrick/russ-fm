@@ -2,6 +2,10 @@
    (story.css) and its credits boards (credits.css). Everything sits under .ws. */
 
 .ws.stats-story {
+  /* The story takes the page's ground (the flood's dark tint, set by the page) rather than
+     the Wrapped story's black, so the page is one colour under the glass band; the charts'
+     ground-coloured strokes follow it. */
+  --ground: inherit;
   & :where(.wrap) { max-width: 1640px; padding: 0 20px; }
   & .st-stats { margin: 40px 0 44px; }
   & .label + .cr-title, & .cr-title { color: var(--amber); margin: 0 0 14px; }
@@ -159,3 +163,6 @@
 
 /* The /stats tooltips: already 94% opaque, so no backdrop blur to redo under every move. */
 .ws-tip.st-tip { backdrop-filter: none; }
+/* The first chapter follows the glass band on the same ground: no rule, and close up to it. */
+.ws.stats-story > .chapter:first-child { border-top: 0; padding-top: 40px; }
+@media (max-width: 767px) { .ws.stats-story > .chapter:first-child { padding-top: 24px; } }

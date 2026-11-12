@@ -1,7 +1,8 @@
-import { Fragment, useEffect, useMemo } from 'react';
+import { Fragment, useEffect, useMemo, type CSSProperties } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Search, X } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { GLASS_STRADDLE_INSET } from '@/hooks/useGlassBand';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { useCollection } from '@/lib/collection';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
@@ -192,7 +193,8 @@ export function AlbumsPage() {
           <IndexRoom
             room="albums"
             tint={flood?.top ?? 'transparent'}
-            className="-mt-16 h-[clamp(380px,110vw,560px)] md:-mt-[84px] md:h-[clamp(440px,64svh,700px)]"
+            bottomInset={GLASS_STRADDLE_INSET}
+            className="-mt-16 h-[clamp(420px,120vw,620px)] md:-mt-[84px] md:h-[clamp(500px,70svh,770px)]"
             renderSlot={i => {
               const a = shelf[i];
               return a ? (
@@ -202,8 +204,8 @@ export function AlbumsPage() {
               ) : null;
             }}
           />
-          <section className="flood-surface relative z-[2]" style={flood ? { background: flood.background, color: flood.ink } : undefined}>
-            <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:min-h-[120px] md:flex-row md:items-center md:gap-10 md:px-10 md:py-3 lg:px-14">
+          <section className="glass-band glass-band-straddle" style={{ '--band-tint': flood?.top ?? 'transparent' } as CSSProperties}>
+            <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-6 md:min-h-[104px] md:flex-row md:items-center md:gap-10 md:px-10 md:pb-5 lg:px-14">
               <h1 className="t-disp m-0 flex items-baseline gap-x-4 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">
                 Albums
                 <span className="opacity-35" aria-label={`${filtered.length} records`}>{filtered.length.toLocaleString('en-GB')}</span>
@@ -215,7 +217,7 @@ export function AlbumsPage() {
                   [`Added in ${thisYear}`, addedThisYear.toLocaleString('en-GB')],
                 ].map(([k, v]) => (
                   <div key={k} className="min-w-0">
-                    <dt className="t-kicker text-[10px]" style={flood ? { color: flood.sub } : undefined}>{k}</dt>
+                    <dt className="glass-sub t-kicker text-[10px]">{k}</dt>
                     <dd className="m-0 mt-1.5 truncate text-[16px] font-bold">{v}</dd>
                   </div>
                 ))}

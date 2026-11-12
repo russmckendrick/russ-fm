@@ -15,6 +15,8 @@ interface IndexRoomProps {
   tint: string;
   /** Pixels at the top covered by the see-through header (its height by default); the row centres below them. */
   topInset?: number;
+  /** Pixels at the bottom covered by the glass band laid over the photo; the row centres above them. */
+  bottomInset?: number;
   /** Called once the photo has decoded and starts to fade in. */
   onLoaded?: () => void;
   className?: string;
@@ -28,7 +30,7 @@ interface IndexRoomProps {
  * own light on them (the shade layer, multiplied). It shares the artist
  * wall's layer, shade, photo and tint styles (player.css).
  */
-export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, topInset, onLoaded, className }: IndexRoomProps) {
+export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, topInset, bottomInset = 0, onLoaded, className }: IndexRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // The photo shows once it has decoded, so the slots never show without it.
@@ -60,7 +62,7 @@ export function IndexRoom({ room, renderSlot, slotClassName, renderOver, tint, t
     const rowLeft = Math.min(...meta.slots.map(s => s.left)), rowRight = Math.max(...meta.slots.map(s => s.left + s.width));
     const rowTop = Math.min(...meta.slots.map(s => s.top)), rowBottom = Math.max(...meta.slots.map(s => s.top + s.height));
     const left = Math.min(0, Math.max(size.w - width, size.w / 2 - ((rowLeft + rowRight) / 200) * width));
-    const top = Math.min(0, Math.max(size.h - height, inset + (size.h - inset) / 2 - ((rowTop + rowBottom) / 200) * height));
+    const top = Math.min(0, Math.max(size.h - height, inset + (size.h - inset - bottomInset) / 2 - ((rowTop + rowBottom) / 200) * height));
     const px = meta.slots.map(s => ({ width: (s.width / 100) * width + bleed * 2, height: (s.height / 100) * height + bleed * 2 }));
     g = {
       img: { left, top, width, height },

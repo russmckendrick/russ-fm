@@ -15,7 +15,7 @@ This document covers the route-level page components in russ.fm.
 |-------|-----------|
 | `/` | `ReleaseRoom` rotating through the latest additions → Latest additions row → Most collected (taped prints) → Genres (bin dividers) → By the numbers (random /stats facts pinned under sleeves) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid (each month or letter `RunDivider` opens a new row), or the colour wall when `sort=colour` → pill pager. |
-| `/album/:slug` | `ReleaseRoom` (the record's listening room) and a band in the sleeve's flood → About → Tracklist by side → Listen → Videos → artist bios → details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
+| `/album/:slug` | `ReleaseRoom` (the record's listening room) with the credit on a glass band over it → About → Tracklist by side → Listen → Videos → artist bios → details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood is the hero photo's own colour (the newest sleeve's until the photo's notes load). |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` print grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
@@ -104,8 +104,8 @@ The home page sections are local components in `HomePage.tsx`; the old
 - **Hero** — a `ReleaseRoom` with the latest `numberOfFeaturedAlbums`
   additions (boxset members excluded), each in its own room, crossfading
   between them (see [release room](./release-room.md)). The page flood fades
-  to each record's colour (`floodFor` over the sleeve palette). Below the
-  room, a band in the flood: original year / label / format / sides / tracks
+  to each record's colour (`floodFor` over the sleeve palette). Over the
+  bottom of the room, a glass band (see [release room](./release-room.md#the-band)): original year / label / format / sides / tracks
   (from each record's detailed JSON), the title in a one-line box (links to
   the album), the artist and a "View album" link. The records' credits share
   one grid cell, so the band never changes height. The controls sit on the
@@ -236,7 +236,7 @@ on the ground.
 [release room](./release-room.md)): the sleeve on a stand, the pressing
 (disc 1, `discLooks`) playing on the turntable, and the "Scrobbled" stamp
 (`HeroSticker`, `showAdded={false}`) on the sleeve from `md` up after a
-scrobble. The added date ends the pressing line in the flood band ("Added 8
+scrobble. The added date ends the pressing line in the glass band ("Added 8
 Nov 2026"); box sets put it at the end of the hero's kicker row. Box sets keep the cover
 hero (`CoverHero` + `BoxHeroArt`) with the full text column.
 
@@ -292,10 +292,14 @@ hero (`CoverHero` + `BoxHeroArt`) with the full text column.
   (`ArtistBand`, `src/components/album/ArtistBand.tsx`; the `.artist-band*`
   styles in `src/styles/player.css`). Their TheAudioDB fanart (their own photo
   when the image notes name none, or the fanart fails to load) runs as a wide
-  band framed on the detected face, fading into the page ground at the bottom
+  band framed on the detected faces (all of them, or the photo's focus):
+  `coverPosition()` works the crop out from the photo's and the band's sizes so
+  they land about a third of the way down, above the name. It fades into the
+  page ground at the bottom
   with a wash of the sleeve's flood from the left. Only the name sits over it
   (the one place it's shown), sized to the band's width (container query
-  units) so its longest word always fits on one line. Under the band, a strip
+  units) so its longest word always fits on one line, and a long name is held
+  to about two lines; it is capped at 88px, with no kicker above it. Under the band, a strip
   of facts (real name, born or formed, aliases, Spotify followers) and up to
   four genre chips, from the artist's detail JSON via `artistFacts()` in
   `src/lib/artistFacts.ts` and left out until it loads; a group (Discogs
@@ -576,6 +580,9 @@ artist file.
   the Wrapped story's pattern, styled under `.ws` (`stats.css` on top of
   Wrapped's `story.css` and `credits.css`). `kit.ts` holds the shared view
   (`statsView`: image URLs and lookups), tooltips and the dot swarm.
+  Unlike Wrapped's black, the chapters sit on the page's ground (the flood's
+  dark tint): `.ws.stats-story` inherits `--ground`, so the whole page is one
+  colour under the glass band.
 
   The page is about 10k elements once every chapter is built, so how it
   builds them matters:
@@ -768,10 +775,14 @@ ignored.
   brass rail behind a shop counter (`IndexRoom` with the `shuffle` photo, see
   [index headers](./index-headers.md)), each under its own spotlight and
   each linking to its record, pulled up under the see-through header
-  (`usePageFlood` with `room: true`). Below is one band in the pick's flood:
-  the mono pressing line (format, year, label, country), the artist (linked),
-  the condensed title (linked), up to three genres, and Shuffle / View album
-  pills beside it from `lg` (under it below)
+  (`usePageFlood` with `room: true`). The credit is a glass band laid out as on
+  the home hero (see [release room](./release-room.md#the-band)): from `lg` the
+  room is `96svh` and the whole band lies over it (`useGlassBand` gives the
+  rail its `bottomInset`); below, it straddles the photo's bottom edge. It holds
+  the mono pressing line (format, year, label, country), the condensed title
+  (linked, `FitTitle` in `.room-title-box`), the artist (linked) with up to
+  three genres beside it, and Shuffle / View album pills on the right from
+  `lg` (under it below)
 - The band never changes size between records: every row is one line at a
   fixed height (overflow ends in an ellipsis), the genre row holds its
   height when a record has none, and the Shuffle pill has a minimum width so

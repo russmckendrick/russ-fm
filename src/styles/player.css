@@ -1566,6 +1566,73 @@ body {
   transition: background-color 0.9s ease, color 0.9s ease;
 }
 
+/* --- Glass band (home, album and artist heroes) ----------------------------
+   The credit under a hero room or wall sits on the photo itself rather than
+   on a solid band of the flood: the photo blurs and darkens behind it and
+   runs out into the page ground. From lg the whole band lies over the
+   photo, which is taller to make room; below, it straddles the photo's bottom
+   edge by --glass-over, so a phone's stacked credit never hides the stand.
+   The room centres its scene above the band (bottomInset, useGlassBand).
+   --band-tint (the flood) only warms the glass. */
+@property --band-tint {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+.glass-band {
+  --glass-over: 120px;
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-1 * var(--glass-over));
+  padding-top: 64px;
+  color: var(--cream);
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.5);
+  transition: --band-tint 0.9s ease;
+}
+
+/* The glass is its own layer so its soft top edge (the mask) never fades the text. */
+.glass-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  --glass: color-mix(in oklab, var(--band-tint) 16%, #120e0c);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--glass) 12%, transparent) 0,
+    color-mix(in srgb, var(--glass) 46%, transparent) calc(var(--glass-over) * 0.34),
+    color-mix(in srgb, var(--glass) 58%, transparent) calc(var(--glass-over) * 0.62),
+    var(--ground) var(--glass-over)
+  );
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 96px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 96px);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  /* .glass-band-straddle (the index rooms, whose bands can be tall) straddles at every width. */
+  .glass-band:not(.glass-band-straddle) {
+    --glass-over: 100%;
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.glass-band .glass-sub {
+  color: color-mix(in srgb, var(--cream) 74%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-band {
+    transition: none;
+  }
+}
+
 /* Horizontal shelves that scroll with the trackpad but hide the bar. */
 .shelf-scroll {
   display: flex;

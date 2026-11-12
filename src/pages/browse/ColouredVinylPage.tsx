@@ -119,7 +119,7 @@ export function ColouredVinylPage() {
           />
         )}
       />
-      <FloodBand flood={flood} className="relative z-[2]">
+      <FloodBand flood={flood} glass>
         <BrowseHeader
           className="mb-0 md:mb-0"
           title="Coloured vinyl"

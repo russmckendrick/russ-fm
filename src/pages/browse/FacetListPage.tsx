@@ -155,7 +155,7 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
   return (
     <>
       <SleeveRoom room="browse" tint={flood?.top ?? 'transparent'} sleeves={stall} topShade />
-      <FloodBand flood={flood} className="relative z-[2]">
+      <FloodBand flood={flood} glass>
         <BrowseHeader
           className="mb-0 md:mb-0"
           title={title}

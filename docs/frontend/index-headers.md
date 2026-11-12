@@ -30,11 +30,20 @@ Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 
 The browse pages all draw theirs through `SleeveRoom`
 (`src/components/browse/SleeveRoom.tsx`): an `IndexRoom` whose slots are
-links, with the page's usual `FloodBand` below. `topShade` darkens the top of
+links, with the page's `FloodBand` below it as glass (`glass`: it straddles
+the photo's bottom edge, see the band note below). `topShade` darkens the top of
 a pale photo (`.room-top-shade`) so the see-through header reads over it; the
 stall and the white wall use it. /genres keeps its own record.
 
-Below the photo is a one-row band in the flood: the `h1` with its count, then
+The band is glass, not a block of the flood (`.glass-band
+.glass-band-straddle` in `player.css`, as on the
+[release room](./release-room.md#the-band)): it overlaps the photo's bottom
+120px at every width, the photo blurring and running out into the page
+ground behind it, with cream text and the flood only warming the glass.
+`IndexRoom` takes `bottomInset` (`GLASS_STRADDLE_INSET`) so its row centres
+above the band. The facet pages' taller band and the browse pages'
+`FloodBand glass` straddle the same way. On /albums, /artists and /stats it
+is one row: the `h1` with its count, then
 the collection in numbers.
 - `/albums`: Vinyl, Box sets, Added this year.
 - `/artists`: Records, Most collected (linked), New this year.

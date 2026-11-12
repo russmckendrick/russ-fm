@@ -26,6 +26,8 @@ interface PosterWallProps {
   tint: string;
   /** Pixels at the top covered by the see-through header (its height by default); the poster centres below them. */
   topInset?: number;
+  /** Pixels at the bottom covered by the glass band laid over the wall; the poster centres above them. */
+  bottomInset?: number;
   /** How far past covering the box the wall is drawn: 1 shows the most wall. */
   zoom?: number;
   className?: string;
@@ -35,12 +37,12 @@ interface PosterWallProps {
  * The photo covers the box (times `zoom`), with the poster centred across and a
  * little above the middle of what the header leaves, the photo still covering it.
  */
-function layout(wall: ArtistWall, w: number, fullH: number, zoom: number, inset: number) {
+function layout(wall: ArtistWall, w: number, fullH: number, zoom: number, inset: number, bottom: number) {
   const width = Math.max(w, fullH * wall.aspect) * zoom;
   const height = width / wall.aspect;
   const p = wall.poster;
   const left = Math.min(0, Math.max(w - width, w / 2 - ((p.left + p.width / 2) / 100) * width));
-  const top = Math.min(0, Math.max(fullH - height, inset + (fullH - inset) * 0.47 - ((p.top + p.height / 2) / 100) * height));
+  const top = Math.min(0, Math.max(fullH - height, inset + (fullH - inset - bottom) * 0.47 - ((p.top + p.height / 2) / 100) * height));
   const poster = { left: left + (p.left / 100) * width, top: top + (p.top / 100) * height, width: (p.width / 100) * width, height: (p.height / 100) * height };
   return { img: { left, top, width, height }, poster };
 }
@@ -55,7 +57,7 @@ function layout(wall: ArtistWall, w: number, fullH: number, zoom: number, inset:
  *  - the wall's own light and creases on the poster (the shade layer, multiplied).
  * A colour layer tints the whole wall, poster too, with the flood, as on /tv.
  */
-export function PosterWall({ wall, photo, photoPosition, onPhotoError, name, sleeves, tint, topInset, zoom = 1.06, className }: PosterWallProps) {
+export function PosterWall({ wall, photo, photoPosition, onPhotoError, name, sleeves, tint, topInset, bottomInset = 0, zoom = 1.06, className }: PosterWallProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // The wall shows once its photo has decoded and the poster's photo has
@@ -75,7 +77,7 @@ export function PosterWall({ wall, photo, photoPosition, onPhotoError, name, sle
 
   // The sticky header: 64px, 84px from md.
   const inset = topInset ?? (size && size.w >= 768 ? 84 : 64);
-  const g = size ? layout(wall, size.w, size.h, zoom, inset) : null;
+  const g = size ? layout(wall, size.w, size.h, zoom, inset, bottomInset) : null;
   const src = getArtistWallUrl(wall.id, 'hi-res');
   const medium = getArtistWallUrl(wall.id, 'medium');
   // The poster runs 3px under the cut-out's edge so no wall-coloured seam shows.

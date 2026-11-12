@@ -2,6 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Waypoints } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useGlassBand } from '@/hooks/useGlassBand';
+import { GLASS_TONE } from '@/lib/glassBand';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { slugify } from '@/lib/browseFacets';
@@ -445,6 +447,7 @@ export function AlbumDetailPage() {
     : 'Loading Album… | Russ.fm';
 
   usePageTitle(pageTitle);
+  const [bandRef, bandInset] = useGlassBand<HTMLElement>();
 
   const canonicalUrl = `${appConfig.siteUrl}/album/${albumPath}`;
   const metaDescription = detailedAlbum
@@ -988,7 +991,7 @@ export function AlbumDetailPage() {
   const heroNotes = (
     <>
       {album.members && album.members.length > 0 && (
-        <p className="m-0 text-[14px]" style={{ color: flood.sub }}>
+        <p className={cn('m-0 text-[14px]', !isBox && 'glass-sub')} style={isBox ? { color: flood.sub } : undefined}>
           With{' '}
           {album.members.map((member, index) => (
             <React.Fragment key={member.name}>
@@ -1015,7 +1018,7 @@ export function AlbumDetailPage() {
   const scrobbleButton = !isBox && tracks.length > 0 && (
     <AlbumScrobbleButton
       album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
-      tone={{ background: flood.ink, color: flood.flood }}
+      tone={isBox ? { background: flood.ink, color: flood.flood } : GLASS_TONE}
       mobileLabel="Scrobble"
       key={albumPath}
       onProgress={onScrobbleProgress}
@@ -1127,13 +1130,14 @@ export function AlbumDetailPage() {
               tint={flood.flood}
             />
           )}
-          className="h-[clamp(460px,78svh,940px)]"
+          bottomInset={bandInset}
+          className="h-[clamp(460px,78svh,940px)] lg:h-[clamp(620px,96svh,1100px)]"
         />
-      </div>
-      <section className="flood-surface relative z-[2]" style={{ background: flood.flood, color: flood.ink }}>
-        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:gap-10 md:px-10 lg:px-14">
+      {/* The credit sits on the room itself, on glass: no band of its own. */}
+      <section ref={bandRef} className="glass-band" style={{ '--band-tint': flood.flood } as React.CSSProperties}>
+        <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-5 md:flex-row md:items-center md:gap-10 md:px-10 lg:px-14">
           <div className="min-w-0 flex-1">
-            <p className="t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]" style={{ color: flood.sub }}>
+            <p className="glass-sub t-mono m-0 text-[10px] uppercase leading-[1.5] tracking-[0.08em] md:text-[11px]">
               {pressingLine}
             </p>
             <div className="room-title-box">
@@ -1193,6 +1197,7 @@ export function AlbumDetailPage() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 

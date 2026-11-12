@@ -3,8 +3,8 @@
 The artist page opens on the artist's fly-poster, pasted on a wall. The
 photo is printed on the paper with the name overprinted and the newest
 sleeves along the bottom. The poster carries the wall's own creases and
-light, and the wall is tinted with the page's flood. Below it is a slim
-band in the flood with facts and links only. It follows the album page's
+light, and the wall is tinted with the page's flood. Over its bottom edge is a slim
+glass band with facts and links only. It follows the album page's
 [release room](./release-room.md).
 
 ## How it is drawn
@@ -57,8 +57,10 @@ their own photo takes its place.
 
 ### The band
 
-The band is one row in the flood (`newestFlood`: the newest addition's
-sleeve, skipping monochrome ones). On the left is a `<dl>`:
+The band is one row on glass over the bottom of the wall (`.glass-band`, as
+on the [release room](./release-room.md#the-band); the wall is `94svh` from
+`lg` to make space), warmed by the flood (`newestFlood`: the newest
+addition's sleeve, skipping monochrome ones). On the left is a `<dl>`:
 
 - From and Formed (when the artist JSON has them)
 - Records, then Soundtracks or Box sets when there are any

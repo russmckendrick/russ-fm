@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState, type CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { SleeveRoom } from '@/components/browse/SleeveRoom';
@@ -248,11 +248,11 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
         sleeves={fan.map(a => ({ uri: a.uri_release, to: a.uri_release, label: `${a.release_name.trim()} by ${a.release_artist}` }))}
       />
       <section
-        className="flood-surface relative z-[2] overflow-x-clip"
-        style={{ background: flood.flood, color: flood.ink }}
+        className="glass-band glass-band-straddle overflow-x-clip"
+        style={{ '--band-tint': flood.flood } as CSSProperties}
         aria-labelledby="facet-title"
       >
-        <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-4 md:px-10 md:pb-12 lg:px-14 lg:pt-8">
+        <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 md:px-10 md:pb-12 lg:px-14">
           <div className="min-w-0">
             <Link
               to={`/${facet.plural}`}
@@ -271,7 +271,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
             >
               {displayName}
             </h1>
-            <p className="t-mono mt-6 text-[13px] uppercase md:text-[14px]" style={{ color: flood.sub }}>
+            <p className="glass-sub t-mono mt-6 text-[13px] uppercase md:text-[14px]">
               {stats.albumCount.toLocaleString()} {stats.albumCount === 1 ? 'record' : 'records'}
               {' · '}
               {stats.artistCount.toLocaleString()} {stats.artistCount === 1 ? 'artist' : 'artists'}
@@ -279,7 +279,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
             </p>
             {stats.topArtists.length > 1 && (
               <div className="mt-6">
-                <h2 className="t-kicker mb-3" style={{ color: flood.sub }}>
+                <h2 className="glass-sub t-kicker mb-3">
                   Most collected
                 </h2>
                 <ul className="flex flex-wrap gap-2">

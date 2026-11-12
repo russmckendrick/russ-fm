@@ -76,7 +76,7 @@ export function BrowseIndexPage() {
   return (
     <>
       <SleeveRoom room="browse" tint={flood?.top ?? 'transparent'} sleeves={stall} topShade />
-      <FloodBand flood={flood} className="relative z-[2]">
+      <FloodBand flood={flood} glass>
         <BrowseHeader className="mb-0 md:mb-0" title="Browse" note={`${albums.length.toLocaleString()} records`} />
       </FloodBand>
 
