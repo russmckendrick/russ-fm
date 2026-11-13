@@ -903,15 +903,19 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   ends moves on. One YouTube refuses (removed, private, embedding disabled) is
   skipped and dropped from the channel's lists for the visit; see "Dead videos" in
   [components.md](./components.md#tv-components-srccomponentstv). Every change shows a burst of static (`.tv-static`).
-- **Now-playing band** is one slim row (about 130px on desktop), like the album page's
-  TV and the full-screen bar: progress as a white line on a dark track along its top
-  edge (so it shows on any sleeve colour) that is also a scrubber (`Scrubber`: click or
-  drag to jump, with a time bubble; arrows ±5s, Page Up/Down ±30s, Home/End), previous/play/
-  next on the left, then channel · time, a one-line title (`.tv-title-box`, 40/46/50px
-  high, `FitTitle` with `fitHeight` up to 52px, so nothing moves between videos) and
-  artist · album · year · label, and the extras on the right as 40px icon buttons
-  (sound, guide, room, full screen). The sound button is the same shape in both
-  states: solid while muted, outlined with sound on. On phones the credit drops below the one row of buttons.
+- **Now-playing band** sits on the room itself, on glass (`.glass-band`, as on the
+  home, album and Shuffle heroes; `useGlassBand` gives `TvRoom` its `bottomInset`, so
+  the set centres above the band). From `lg` the whole band lies over the photo, which
+  is `clamp(640px, 96svh, 1100px)` tall to make room; below, it straddles the photo's
+  bottom edge. The credit is on the left: channel · time (`.glass-sub`), a one-line
+  title (`.room-title-box`, `FitTitle` with `fitHeight` up to 96px, so nothing moves
+  between videos) and artist · album · year · label. On the right are previous/play/
+  next (play is the solid cream `GLASS_TONE`), a hairline, then the extras as 40px
+  icon buttons (sound, guide, room, full screen). The sound button is the same shape
+  in both states: solid while muted, outlined with sound on. Progress is a white line
+  on a pale track along the band's bottom edge (`Scrubber` with `.tv-scrub-foot`:
+  click or drag to jump, with a time bubble; arrows ±5s, Page Up/Down ±30s, Home/End).
+  Below `lg` the buttons drop to one row under the credit.
 - **Header.** On `/tv` and channel pages (not the guide) the room is pulled up under
   the sticky header (`-mt-16 md:-mt-[84px]`, with `TvRoom`'s `topInset` keeping the set
   centred in the visible part), and `Navigation` draws the header see-through with
@@ -919,9 +923,9 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   page the logo is `TvMark` (a little CRT with the current sleeve on its screen) in
   place of the spinning record.
 - **Colour.** The page takes the current record's colours (`usePageFlood` with the
-  sleeve as the logo label and the sleeve's ground), and the now-playing band is the
-  flood. On desktop the record (`HeroRecord`, 230px, disc out, no sticker) hangs from
-  the room into the band.
+  sleeve as the logo label and the sleeve's ground); the flood tints the room and warms
+  the glass band (`--band-tint`). From `xl` the record (`HeroRecord`, 150px, disc out,
+  no sticker) stands at the right end of the band and links to the album.
 - **Full screen** puts the TV layer in full screen, letterboxed, with a slim credit
   bar in the sleeve colour (the album page TV row's scale) that stays up the whole
   time: progress as a line along its top, the sleeve, channel · time, artist, title,

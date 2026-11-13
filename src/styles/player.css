@@ -2024,32 +2024,10 @@ body {
   transition: transform 0.2s, background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
 }
 
-/* Song title: a one-line box the title scales into (FitTitle), so the lines
-   and controls below never move between videos and short titles leave no gap. column-reverse sits the
-   title on the box's bottom edge while any overflow still counts in
-   scrollHeight, which FitTitle's height check reads. */
-.tv-title-box {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 40px;
-  margin: 2px 0 1px;
-  overflow: hidden;
-}
-
-@media (min-width: 640px) {
-  .tv-title-box {
-    height: 46px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .tv-title-box {
-    height: 50px;
-  }
-}
-
-/* The album and home bands' title: one line the title scales into (FitTitle
-   fitHeight), bigger than the TV's, so the band keeps its height between records. */
+/* The album, home and TV bands' title: a one-line box the title scales into
+   (FitTitle fitHeight), so the band keeps its height between records.
+   column-reverse sits the title on the box's bottom edge while any overflow
+   still counts in scrollHeight, which FitTitle's height check reads. */
 .room-title-box {
   display: flex;
   flex-direction: column-reverse;
@@ -2190,6 +2168,17 @@ body {
 
 .tv-scrub-inset {
   top: 0;
+}
+
+/* Along the bottom edge of the TV page's glass band: the track ends on the
+   edge, and is pale, since the glass under it is dark. */
+.tv-scrub-foot {
+  top: auto;
+  bottom: -8px;
+}
+
+.tv-scrub-foot .tv-scrub-track {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .tv-scrub-track {
