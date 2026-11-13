@@ -122,13 +122,11 @@ export function StatsPage() {
       />
       <section className="glass-band glass-band-straddle" style={{ '--band-tint': flood?.top ?? 'transparent' } as CSSProperties}>
         <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 pb-6 md:min-h-[104px] md:flex-row md:items-center md:gap-10 md:px-10 md:pb-5 lg:px-14">
-          <h1 className="t-disp m-0 flex items-baseline gap-x-4 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">
-            Stats
-            {t && <span className="opacity-35" aria-label={`${t.records} records`}>{t.records.toLocaleString('en-GB')}</span>}
-          </h1>
+          <h1 className="t-disp m-0 whitespace-nowrap text-[36px] leading-[0.9] sm:text-[44px] md:text-[64px] lg:text-[84px]">Stats</h1>
           {t && (
-            <dl className="m-0 grid min-w-0 grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4 md:ml-auto md:flex md:gap-9 md:overflow-hidden">
+            <dl className="m-0 grid min-w-0 grid-cols-3 gap-x-6 gap-y-3 sm:grid-cols-5 md:ml-auto md:flex md:gap-9 md:overflow-hidden">
               {[
+                ['Records', t.records.toLocaleString('en-GB')],
                 ['Since', new Date(`${t.since}T12:00:00Z`).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })],
                 ['Artists', t.artists.toLocaleString('en-GB')],
                 ['Discs', t.discs.toLocaleString('en-GB')],

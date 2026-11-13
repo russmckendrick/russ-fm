@@ -62,9 +62,9 @@ export const easeInOut = (t: number) => (t = clamp(t, 0, 1), t < 0.5 ? 4 * t * t
 export const sleeve = (r: Release, cls = '') =>
   `<a class="slv ${cls}" href="/album/${r.s}/"><img loading="lazy" src="${r.img}" alt=""><b>${esc(r.t)}</b><span>${esc(r.by)}</span></a>`;
 
-/** Chapter heading: track number, label, display title and an optional lede. */
+/** Chapter heading: track number (none when empty, as on /stats), label, display title and an optional lede. */
 export const head = (track: string, label: string, title: string, lede = '') => `
-  <div class="track label"><span class="num">${track}</span><span>${esc(label)}</span></div>
+  <div class="track label">${track ? `<span class="num">${track}</span>` : ''}<span>${esc(label)}</span></div>
   <h2 class="display">${title}</h2>${lede ? `<p class="lede">${lede}</p>` : ''}`;
 
 /** Mix a hex colour toward white (k > 0) or black (k < 0). */

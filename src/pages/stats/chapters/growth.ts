@@ -1,4 +1,5 @@
-// 01 · Arrivals: every month since the first record, stacked by genre family in the families' sleeve colours.
+// Arrivals: every month since the first record, stacked by genre family in the families' sleeve
+// colours, with the pace (the average gap between arrivals) among the figures above it.
 import * as d3 from 'd3';
 import { countUp, esc, head, MONTHS_LONG, onVisible, plural, reduced } from '../../wrapped/story/core';
 import type { StatsRecord } from '@/types/stats';
@@ -32,14 +33,18 @@ export default function growth(el: HTMLElement): StatsChapter {
       rows.push(row);
     }
     const peak = rows.reduce((a, b) => (b.list.length > a.list.length ? b : a));
+    // The pace: how long, on average, between one record arriving and the next.
+    const hours = ((Date.parse(recs.at(-1)!.d) - Date.parse(recs[0].d)) / 36e5) / Math.max(1, recs.length - 1);
+    const pace = hours < 48 ? [Math.round(hours), 'h'] : [Math.round(hours / 24), 'days'];
+    const bigYear = Object.entries(v.perYear).reduce((a, b) => (b[1] > a[1] ? b : a));
     const famTotals = fams.map(f => [f, d3.sum(rows, r => r[f] as number)] as const).sort((a, b) => b[1] - a[1]);
 
     el.innerHTML = `<div class="wrap">
-      ${head('01', 'Arrivals', `Every month since ${y0}`, `${plural(recs.length, 'record')} over ${rows.length} months, stacked by genre in the colours of their own sleeves. Hover a month to see what came in.`)}
+      ${head('', 'Arrivals', 'One more won’t hurt', `${plural(recs.length, 'record')} since ${MONTHS_LONG[m0 - 1]} ${y0}, about ${Math.round(recs.length / rows.length)} a month. Each month is stacked by genre in the colours of its own sleeves; hover one to see what came in.`)}
       <div class="stats st-stats">
+        <div class="stat"><b><span data-n="${pace[0]}">0</span> ${pace[1]}</b><span>between one record arriving and the next, on average</span></div>
         <div class="stat"><b>${label(peak.k).replace(' ', '<br>')}</b><span>the busiest month: ${plural(peak.list.length, 'record')}</span></div>
-        <div class="stat"><b data-n="${Math.round(recs.length / rows.length)}">0</b><span>records a month on average</span></div>
-        <div class="stat"><b>${esc(v.famName[famTotals[0][0]])}</b><span>the biggest family, ${plural(famTotals[0][1], 'record')}</span></div>
+        <div class="stat"><b data-n="${bigYear[0]}" data-plain>0</b><span>the biggest year: ${plural(bigYear[1], 'record')}</span></div>
       </div>
       <div class="gr-chart"><svg role="img" aria-label="Records added each month since ${y0}, stacked by genre family"></svg><i class="gr-rule"></i></div>
       <div class="gr-legend">${famTotals.filter(([, c]) => c).map(([f, c]) => `<span style="--c:${v.famColour[f]}"><i></i>${esc(v.famName[f])} <b>${c}</b></span>`).join('')}</div>
@@ -85,7 +90,7 @@ export default function growth(el: HTMLElement): StatsChapter {
     box.addEventListener('pointerleave', leave);
 
     const io = onVisible(box, () => {
-      el.querySelectorAll<HTMLElement>('[data-n]').forEach(b => countUp(b, +b.dataset.n!));
+      el.querySelectorAll<HTMLElement>('[data-n]').forEach(b => countUp(b, +b.dataset.n!, b.dataset.plain !== undefined ? { fmt: x => String(Math.round(x)) } : {}));
       if (!reduced()) reveal.transition().duration(2200).ease(d3.easeCubicInOut).attr('width', W);
     }, { threshold: 0.25 });
     stops.push(() => { io.disconnect(); reveal.interrupt(); leave(); });

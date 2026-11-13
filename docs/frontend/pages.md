@@ -23,7 +23,7 @@ This document covers the route-level page components in russ.fm.
 | `/browse`, `/labels`, `/decades`, `/countries` | A record-fair stall with a sleeve in front of each crate (`SleeveRoom`, `browse`) → `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
 | `/coloured-vinyl` | A pressing plant's wall of six discs (`SleeveRoom`, `coloured`) → `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | A shop window with five of the value's sleeves (`SleeveRoom`, `facet`) → flood band with the title, counts and most collected artists → paginated `RecordTile` grid. |
-| `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → eleven chapters from the album and artist data (arrivals, home countries, how far in, the pile, spec sheet, time machines, the long haul, decades, behind the glass, sleeve makers, owners) → latest additions. |
+| `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → eight chapters from the album and artist data (arrivals, home countries, the long haul, the shelf end to end, spec sheet, when it was made, behind the glass, owners) → latest additions. |
 | `/shuffle` (also `/random`) | The record's listening room over a split-flap band; the board clatters to a random record, then the room changes record and the band takes its colour. |
 | `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
@@ -561,7 +561,7 @@ out.
 
 **Route:** `/stats`
 
-The collection as a place, then eleven chapters counted from every album and
+The collection as a place, then eight chapters counted from every album and
 artist file.
 
 - **The shelf:** `IndexRoom` with the `stats` photo, an oak cube unit (see
@@ -572,8 +572,9 @@ artist file.
   the shelf changes on every visit. A fact is a figure, what it counts and
   a record that goes with it: 805 kg over the heaviest, 775 songs by David Bowie over one of
   them, 82 etched sides over the latest etched record, and so on.
-- **The band:** `Stats` with the record count, then Since, Artists, Discs,
-  Shelf. The header is see-through over the photo; the flood is the latest
+- **The band:** `Stats`, then Records, Since, Artists, Discs, Shelf as
+  labelled figures (the record count is not set dim beside the title as on
+  /albums: unlabelled, it read as noise here). The header is see-through over the photo; the flood is the latest
   additions'.
 - **The chapters** (`src/pages/stats/StatsStory.tsx`, lazy-loaded with d3):
   each is `chapters/<id>.ts`, a factory with `render(view)` / `dispose()` in
@@ -597,7 +598,7 @@ artist file.
     second per chart. The dots go on a `<canvas>` over an SVG that holds
     the caller's bands and axis. Hover uses a quadtree, and `play()` lifts
     the dots from the axis once.
-  - **Single-attribute reveals.** Time machines sweeps its ~3,400 arcs in
+  - **Single-attribute reveals.** When it was made sweeps its ~3,400 arcs in
     with one clip rect, like Arrivals, rather than one transition per arc.
     The owners waffle wraps each group's squares in a `display: contents`
     span, so hovering a group toggles a few spans, not thousands of squares.
@@ -608,31 +609,44 @@ artist file.
     backdrop blur (`.st-tip`).
   Last.fm listener and play counts are not shown anywhere: the collection only
   holds a snapshot of them, so the old "Mainstream to deep cuts" chapter went.
-  1. **Arrivals** (`growth`): records added each month, stacked by genre
-     family in the families' sleeve colours.
-  2. **Where it comes from** (`origins`): artists' home countries on a world
-     map (`world-atlas` 110m, `topojson-client`) and the top eight with
-     faces. The alpha-2 → ISO numeric table only lists countries the
-     collection has; an artist from elsewhere is left off until it's added.
-  3. **How far in** (`artists`): the 30 most collected acts from the year
-     they started (TheAudioDB) to their first record here, deaths marked,
-     then TheAudioDB moods and line-ups.
-  4. **The pile** (`pile`): every disc stacked flat on a canvas, a pile a
-     year, to scale, coloured pressings in colour.
-  5. **Spec sheet** (`specs`): pressing details from the Discogs format
-     text, each a card with a fan of sleeves.
-  6. **Time machines** (`timemachine`): an arc per record from its original
-     year to its pressing year.
-  7. **The long haul** (`longhaul`): the 16 most collected artists, a dot per
-     record on the day it arrived.
-  8. **Decades** (`decades`): every record as a dot by original year.
-  9. **Behind the glass** (`credits`): songwriters (by songs written),
-      producers, recording and mixing engineers, mastering, lacquer cutting
-      and labels, each with a strip of sleeves.
-  10. **Who made the sleeves** (`sleeves`): designers and photographers,
-      each with a wall of their covers.
-  11. **Who owns it** (`owners`): the Apple Music ℗ line filed under the
-      major that owns the label, or independent, one square per record.
+  The chapters carry no numbers: they pass an empty track to Wrapped's
+  `head()`, which then leaves the number out.
+  - **Arrivals** (`growth`): records added each month, stacked by genre
+    family in the families' sleeve colours. The figures above it lead with the
+    average gap between arrivals.
+  - **Where it comes from** (`origins`): one strip split by the artists'
+    home countries in proportion to their records. A country with a sixth
+    of the shelves or more gets its own stretch and the rest share
+    "Elsewhere"; each stretch shows as many of its most collected artists'
+    faces as fit. Every country is a chip underneath, which lights its
+    faces. Country names come from `Intl.DisplayNames`. It replaced a
+    world map.
+  - **The long haul** (`artists`): the 20 most collected acts, a lane each.
+    A line runs from the year the act started (TheAudioDB) to their first
+    record here, then every record is a dot on the day it arrived; a cross
+    marks a death. The x axis is in two pieces: the decades before the
+    collection began take the left third, the collection's own years the
+    rest.
+  - **End to end** (`shelf`): every record as a spine in its sleeve colour
+    on a canvas, in the order added and to scale (3.5 mm a sleeve), over as
+    many rows as the width needs. A divider opens each year and a ruler in
+    metres runs under each row. Hovering a spine names the record and
+    clicking opens it; the years listed below (records, metres, kg, hours,
+    from `piles`) light their run on the shelf. It replaced "The pile",
+    which stacked each year's discs into a cylinder.
+  - **Spec sheet** (`specs`): pressing details from the Discogs format
+    text. The twelve most common are cards with a fan of sleeves, in 6, 4,
+    3 or 2 columns so the last row is never short; the rest are one line
+    of text.
+  - **When it was made** (`decades`): every record as a dot by original
+    year, and under the swarm on the same axis an arc from that year to
+    the pressing year.
+  - **Behind the glass** (`credits`): songwriters (by songs written),
+    producers, recording and mixing engineers, mastering, lacquer cutting,
+    sleeve design, sleeve photography and labels, each with a strip of
+    sleeves. Eight boards, four across on wide screens.
+  - **Who owns it** (`owners`): the Apple Music ℗ line filed under the
+    major that owns the label, or independent, one square per record.
 - **Latest additions:** a shelf of sleeves from `collection.json`, box set
   members left out.
 

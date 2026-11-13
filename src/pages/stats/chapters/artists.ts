@@ -1,14 +1,17 @@
-// 03 · How far in: for the most collected acts, a line from the year they started (TheAudioDB's
-// formed year) to the day their first record arrived here, a mark where they died, and the
-// acts' TheAudioDB moods and line-ups below.
+// The long haul: the most collected acts, a lane each. A line runs from the year the act
+// started (TheAudioDB's formed year) to the day their first record arrived here, then every
+// record since is a dot in its sleeve colour. The axis is in two parts: decades before the
+// collection began, squeezed into the left of the chart, and the collection's own years after.
 import * as d3 from 'd3';
 import { countUp, esc, head, onVisible, plural } from '../../wrapped/story/core';
-import type { StatsArtist } from '@/types/stats';
-import { fallback, n, onWidthChange, tooltip, type StatsChapter, type StatsView } from '../kit';
+import type { StatsArtist, StatsRecord } from '@/types/stats';
+import { fallback, n, onWidthChange, recordTip, tooltip, type StatsChapter, type StatsView } from '../kit';
 
-const TOP = 30;
-type Started = StatsArtist & { formed: number };
-const arrived = (a: StatsArtist) => +a.first.slice(0, 4) + (+a.first.slice(5, 7) - 1) / 12;
+const TOP = 20;
+interface Lane { a: StatsArtist; recs: StatsRecord[] }
+interface Dot { r: StatsRecord; k: number }
+/** A date as a fractional year. */
+const frac = (d: string) => +d.slice(0, 4) + (+d.slice(5, 7) - 1) / 12 + (+d.slice(8, 10) - 1) / 365;
 
 export default function artists(el: HTMLElement): StatsChapter {
   const tip = tooltip();
@@ -20,57 +23,70 @@ export default function artists(el: HTMLElement): StatsChapter {
   function render(v: StatsView) {
     cleanup();
     current = v;
-    const started = v.artists.filter((a): a is Started => !!a.formed && a.formed <= arrived(a));
-    if (started.length < 5) { el.innerHTML = ''; return; }
-    const gaps = started.map(a => arrived(a) - a.formed);
-    const fresh = started.filter(a => arrived(a) - a.formed < 2).length;
-    const split = v.artists.filter(a => a.split).length, died = v.artists.filter(a => a.died).length;
-    // A solo artist who died can also be marked split; count each act once.
-    const gone = v.artists.filter(a => a.split || a.died).length;
-    const moods = d3.rollups(v.artists.filter(a => a.mood), x => x.length, a => a.mood!).sort((a, b) => b[1] - a[1]).slice(0, 8);
-    const gender = d3.rollups(v.artists.filter(a => a.gender), x => x.length, a => a.gender!).sort((a, b) => b[1] - a[1]);
-    const lanes = started.slice(0, TOP).sort((a, b) => a.formed - b.formed);
+    const lanes: Lane[] = v.artists.slice(0, TOP).map(a => ({ a, recs: v.records.filter(r => r.a.includes(a.s)) })).filter(l => l.recs.length);
+    if (!lanes.length) { el.innerHTML = ''; return; }
+    const started = v.artists.filter(a => a.formed && a.formed <= frac(a.first));
+    const gap = d3.median(started, a => frac(a.first) - a.formed!);
+    const best = lanes.map(l => ({ l, y: d3.greatest(d3.rollups(l.recs, x => x.length, r => r.d.slice(0, 4)), d => d[1])! }))
+      .reduce((a, b) => (b.y[1] > a.y[1] ? b : a));
+    const years = Object.keys(v.perYear).map(Number);
+    const everyYear = lanes.filter(l => new Set(l.recs.map(r => r.d.slice(0, 4))).size === years.length);
+    // An act can be both split and dead (a solo artist, say); count each once, deaths first.
+    const died = v.artists.filter(a => a.died).length, gone = v.artists.filter(a => a.split || a.died).length;
 
     el.innerHTML = `<div class="wrap">
-      ${head('03', 'How far in', 'Late to the party', `The ${lanes.length} most collected acts, from the year they started to the day their first record arrived on these shelves. A cross marks a death.`)}
+      ${head('', 'The long haul', 'Late, then loyal', `The ${lanes.length} most collected acts. Each line runs from the year the act started to the day their first record arrived; every dot after that is a record, in its sleeve colour. A cross marks a death.`)}
       <div class="stats st-stats">
-        <div class="stat"><b data-n="${Math.round(d3.median(gaps)!)}">0</b><span>years, typically, between an act starting out and their first record arriving here</span></div>
-        <div class="stat"><b data-n="${fresh}">0</b><span>acts collected within a couple of years of starting</span></div>
-        <div class="stat"><b data-n="${gone}">0</b><span>acts no longer going: ${n(split)} split up, ${n(died)} have died</span></div>
+        ${gap ? `<div class="stat"><b data-n="${Math.round(gap)}">0</b><span>years, typically, between an act starting out and their first record arriving here</span></div>` : ''}
+        <div class="stat"><b>${esc(best.l.a.name)}</b><span>${plural(best.y[1], 'record')} in ${best.y[0]} alone, the most in one year</span></div>
+        <div class="stat"><b data-n="${everyYear.length}">0</b><span>${everyYear.length === 1 ? 'act' : 'acts'} added in every single year${everyYear.length ? `: ${everyYear.map(l => esc(l.a.name)).join(', ')}` : ''}</span></div>
+        <div class="stat"><b data-n="${gone}">0</b><span>acts no longer going: ${n(died)} have died, another ${n(gone - died)} split up</span></div>
       </div>
-      <div class="ar-chart"></div>
-      <div class="ar-facts">
-        ${moods.length ? `<div><p class="label ar-k">Moods, says TheAudioDB</p><p class="ar-chips">${moods.map(([m, c]) => `<span>${esc(m)} <b>${c}</b></span>`).join('')}</p></div>` : ''}
-        ${gender.length ? `<div><p class="label ar-k">Line-ups</p><p class="ar-chips">${gender.map(([g, c]) => `<span>${esc(g)} <b>${c}</b></span>`).join('')}</p></div>` : ''}
-      </div>
-      <p class="ar-foot">From TheAudioDB, which has a start year for ${plural(started.length, 'act')} of ${n(v.artists.length)}, a mood for ${n(d3.sum(moods, m => m[1]))} and a line-up for ${n(d3.sum(gender, g => g[1]))}.</p>
+      <div class="lh-chart"></div>
+      <p class="ar-foot">Start years from TheAudioDB, which has one for ${plural(started.length, 'act')} of ${n(v.artists.length)}.</p>
     </div>`;
 
-    const box = el.querySelector<HTMLElement>('.ar-chart')!;
-    const W = box.clientWidth, narrow = W < 640, lab = narrow ? 112 : 200, rowH = narrow ? 24 : 28, H = lanes.length * rowH + 30;
-    const now = new Date().getFullYear() + 1;
-    const x = d3.scaleLinear([Math.floor(d3.min(lanes, a => a.formed)! / 10) * 10, now], [lab + 16, W - 12]);
+    const box = el.querySelector<HTMLElement>('.lh-chart')!;
+    const W = box.clientWidth, narrow = W < 640, lab = narrow ? 112 : 220, rowH = narrow ? 30 : 36, H = lanes.length * rowH + 30;
+    const begin = frac(v.records[0].d), end = frac(v.records.at(-1)!.d) + 0.1;
+    const formed = lanes.map(l => l.a.formed).filter((y): y is number => !!y && y < begin);
+    const lo = formed.length ? Math.floor(d3.min(formed)! / 10) * 10 : begin;
+    // The break: the years before the collection take the left third (a quarter on a phone).
+    const left = lab + 14, brk = formed.length ? left + (W - left) * (narrow ? 0.25 : 0.34) : left;
+    const x = d3.scaleLinear([lo, begin, end], [left, brk, W - 10]).clamp(true);
     const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
-      .attr('role', 'img').attr('aria-label', 'Each act from the year it started to its first record on the shelves');
-    const decades = d3.range(Math.ceil(x.domain()[0] / 10) * 10, now, 10);
-    svg.append('g').selectAll('line').data(decades).join('line').attr('class', 'lh-tick').attr('x1', x).attr('x2', x).attr('y2', H - 22);
-    svg.append('g').selectAll('text').data(decades).join('text').attr('class', 'lh-yr').attr('x', d => x(d) + 4).attr('y', H - 6).text(d => (narrow ? `’${String(d).slice(2)}` : `${d}s`));
+      .attr('role', 'img').attr('aria-label', `The ${lanes.length} most collected acts: when each started and when each of their records arrived`);
+
+    svg.append('rect').attr('class', 'lh-before').attr('x', left).attr('width', brk - left).attr('height', H - 22);
+    const ticks = [...d3.range(Math.ceil(lo / 10) * 10, begin - 4, narrow ? 20 : 10), ...years.filter(y => y > begin)];
+    const tick = svg.append('g').selectAll('g').data(ticks).join('g');
+    tick.append('line').attr('class', 'lh-tick').attr('x1', x).attr('x2', x).attr('y2', H - 22);
+    tick.append('text').attr('class', 'lh-yr').attr('x', y => x(y) + 4).attr('y', H - 6)
+      .text(y => (y < begin ? (narrow ? `’${String(y).slice(2)}` : `${y}s`) : W < 900 ? `’${String(y).slice(2)}` : String(y)));
+
     const rows = svg.append('g').selectAll('g').data(lanes).join('g').attr('class', 'ar-row').attr('transform', (_, i) => `translate(0,${i * rowH + rowH / 2})`);
-    rows.append('a').attr('href', a => `/artist/${a.s}/`).append('text').attr('class', 'lh-name').attr('x', lab).attr('dy', '0.35em').attr('text-anchor', 'end').text(a => a.name);
-    rows.append('line').attr('class', 'ar-span').attr('x1', a => x(a.formed)).attr('x2', a => x(a.formed)).attr('stroke', a => a.f ?? fallback);
-    rows.append('circle').attr('class', 'ar-start').attr('cx', a => x(a.formed)).attr('r', 4);
-    rows.append('circle').attr('class', 'ar-first').attr('cx', a => x(a.formed)).attr('r', narrow ? 5 : 7).attr('fill', a => a.f ?? fallback);
-    rows.filter(a => !!a.died).append('text').attr('class', 'ar-died').attr('x', a => x(a.died!)).attr('dy', '0.35em').attr('text-anchor', 'middle').text('✕');
-    rows.on('pointermove', (e: PointerEvent, a) => tip.show(e, () => `<b>${esc(a.name)}</b>Started ${a.formed}${a.born ? ` (born ${a.born})` : ''} · first record here ${new Date(a.first).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}<br>${plural(a.n, 'record')} on the shelves${a.died ? ` · died ${a.died}` : a.split ? ' · split up' : ''}<div class="thumbs"><img src="${v.avatar(a.s)}" alt=""></div>`, a))
+    const names = rows.append('a').attr('href', l => `/artist/${l.a.s}/`).append('text').attr('class', 'lh-name').attr('x', lab).attr('dy', '0.35em').attr('text-anchor', 'end');
+    names.append('tspan').text(l => l.a.name);
+    names.append('tspan').attr('class', 'lh-count').attr('dx', 8).text(l => l.recs.length);
+    rows.append('line').attr('class', 'lh-lane').attr('x1', l => x(frac(l.recs[0].d))).attr('x2', l => x(frac(l.recs.at(-1)!.d)));
+    const known = rows.filter(l => !!l.a.formed && l.a.formed <= frac(l.a.first));
+    const span = known.append('line').attr('class', 'ar-span').attr('x1', l => x(l.a.formed!)).attr('x2', l => x(l.a.formed!)).attr('stroke', l => l.a.f ?? fallback);
+    known.append('circle').attr('class', 'ar-start').attr('cx', l => x(l.a.formed!)).attr('r', 4)
+      .on('pointermove', (e: PointerEvent, l) => tip.show(e, () => `<b>${esc(l.a.name)}</b>Started ${l.a.formed}${l.a.born ? ` (born ${l.a.born})` : ''} · first record here ${new Date(l.a.first).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}<br>${plural(l.a.n, 'record')} on the shelves${l.a.died ? ` · died ${l.a.died}` : l.a.split ? ' · split up' : ''}<div class="thumbs"><img src="${v.avatar(l.a.s)}" alt=""></div>`, l))
+      .on('pointerleave', () => tip.hide());
+    rows.filter(l => !!l.a.died).append('text').attr('class', 'ar-died').attr('x', l => x(l.a.died!)).attr('dy', '-0.55em').attr('text-anchor', 'middle').text('✕');
+    rows.selectAll<SVGCircleElement, Dot>('.lh-dot').data(l => l.recs.map((r, k) => ({ r, k }))).join('circle')
+      .attr('class', 'lh-dot').attr('cx', d => x(frac(d.r.d))).attr('cy', d => ((d.k % 3) - 1) * 4)
+      .attr('r', narrow ? 4 : 6).attr('fill', d => d.r.f ?? fallback)
+      .on('pointermove', (e: PointerEvent, d) => tip.show(e, () => recordTip(v, d.r, `added ${new Date(d.r.d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`), d))
       .on('pointerleave', () => tip.hide());
 
     const io = onVisible(box, () => {
       // Each line runs out from the start year to the first record.
-      rows.select('.ar-span').transition().duration(1200).delay((_, i) => i * 30).attr('x2', a => x(arrived(a)));
-      rows.select('.ar-first').transition().duration(1200).delay((_, i) => i * 30).attr('cx', a => x(arrived(a)));
+      span.transition().duration(1200).delay((_, i) => i * 30).attr('x2', l => x(frac(l.a.first)));
       el.querySelectorAll<HTMLElement>('[data-n]').forEach(b => countUp(b, +b.dataset.n!));
-    }, { threshold: 0.15 });
-    stops.push(() => { io.disconnect(); rows.selectAll('*').interrupt(); tip.hide(); });
+    }, { threshold: 0.1 });
+    stops.push(() => { io.disconnect(); span.interrupt(); tip.hide(); });
   }
 
   return { render, dispose: () => { cleanup(); unwatch(); tip.remove(); } };

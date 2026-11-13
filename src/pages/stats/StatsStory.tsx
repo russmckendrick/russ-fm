@@ -5,13 +5,10 @@ import { statsView, type StatsChapter, type StatsChapterFactory } from './kit';
 import growth from './chapters/growth';
 import origins from './chapters/origins';
 import artists from './chapters/artists';
-import pile from './chapters/pile';
+import shelf from './chapters/shelf';
 import specs from './chapters/specs';
-import timemachine from './chapters/timemachine';
-import longhaul from './chapters/longhaul';
 import decades from './chapters/decades';
 import credits from './chapters/credits';
-import sleeves from './chapters/sleeves';
 import owners from './chapters/owners';
 import '../wrapped/story/story.css';
 import '../wrapped/story/chapters/credits.css';
@@ -21,13 +18,10 @@ const CHAPTERS: Array<[id: string, make: StatsChapterFactory]> = [
   ['growth', growth],
   ['origins', origins],
   ['artists', artists],
-  ['pile', pile],
+  ['shelf', shelf],
   ['specs', specs],
-  ['timemachine', timemachine],
-  ['longhaul', longhaul],
   ['decades', decades],
   ['credits', credits],
-  ['sleeves', sleeves],
   ['owners', owners],
 ];
 
@@ -36,7 +30,7 @@ const CHAPTERS: Array<[id: string, make: StatsChapterFactory]> = [
  * chapter builds its own DOM in an empty section; this hands them the data and tears them
  * down on the way out. A chapter is only built once its section comes within a couple of
  * screens of the viewport, one chapter per task, so landing on the page builds the first one
- * or two and the rest follow as you scroll, never all twelve in one long block.
+ * or two and the rest follow as you scroll, never all eight in one long block.
  */
 export default function StatsStory({ data }: { data: StatsData }) {
   const root = useRef<HTMLDivElement>(null);
