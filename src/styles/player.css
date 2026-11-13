@@ -2393,7 +2393,8 @@ body {
 
 /* The record on the platter: .vinyl squashed into the turntable's perspective
    and sized past the record's edge (the photo hides the overhang); --face-x,
-   --face-y and --face place the photo's outline on it, --label is the label's size, --room-light how
+   --face-y and --face place the photo's outline on it, --face-warp is the perspective
+   inside that outline, --label is the label's size, --room-light how
    brightly the room lights it. Only the pattern and the label turn; grooves and
    the light on the record are round, so they sit still over it (nothing is
    re-blended or blurred per frame). Grooves are in overlay, which lightens and
@@ -2411,14 +2412,25 @@ body {
 
 /* Grooves and the light caught in them: textures drawn by
    scripts/make-vinyl-textures.py with the record's edge at the image's, laid
-   on the photo's outline (in perspective its centre is off the spindle). */
+   on the photo's outline (in perspective its centre is off the spindle) and
+   warped inside it (--face-warp) so the inner rings close in on the label. */
+.room-vinyl::before,
+.room-vinyl::after {
+  inset: auto;
+  left: var(--face-x);
+  top: var(--face-y);
+  width: var(--face);
+  height: var(--face);
+  border-radius: 0;
+  transform: var(--face-warp, none);
+}
+
 .room-vinyl::before {
   content: '';
   position: absolute;
-  inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: url('/release-rooms/vinyl-grooves.webp') var(--face-x) var(--face-y) / var(--face) var(--face) no-repeat;
+  background: url('/release-rooms/vinyl-grooves.webp') 0 0 / 100% 100% no-repeat;
 }
 
 /* On a coloured pressing the grooves are lighter shades of it, not white. */
@@ -2429,7 +2441,7 @@ body {
 .room-vinyl::after {
   z-index: 2;
   background:
-    url('/release-rooms/vinyl-sheen.webp') var(--face-x) var(--face-y) / var(--face) var(--face) no-repeat,
+    url('/release-rooms/vinyl-sheen.webp') 0 0 / 100% 100% no-repeat,
     linear-gradient(180deg, rgba(0, 0, 0, 0.12), transparent 40%),
     linear-gradient(rgba(0, 0, 0, calc(1 - var(--room-light, 1))), rgba(0, 0, 0, calc(1 - var(--room-light, 1))));
 }
@@ -2440,6 +2452,12 @@ body {
   top: calc(50% - var(--label) / 2);
   width: var(--label);
   height: var(--label);
+}
+
+/* The label is big enough here to show most of the sleeve: a lighter zoom than
+   the small records' (still enough to push a framed sleeve's border out). */
+.room-vinyl .vinyl-cover {
+  transform: scale(1.15);
 }
 
 /* 33⅓ at the hero record's easy pace; 45 (Shuffle dealing) keeps its speed. */

@@ -17,9 +17,15 @@ record on the turntable cut out (transparent), and sits over:
   squashed with `scaleY` into the turntable's perspective and sized past the
   cut-out (`cover`), so the tonearm and the platter's rim stay on top. Only
   the pressing's pattern and the label turn (6s a turn; 45 when `fast`).
+  The sleeve on the label is zoomed 1.15x, not the small records' 1.45x, so
+  most of the artwork shows.
   The grooves and the light on the record are round, so they are still layers
   (`::before` / `::after`), pinned to the photo's record outline rather than
-  the spindle (in perspective the two are apart). The grooves are white on
+  the spindle (in perspective the two are apart). Inside the outline they
+  are warped with a projective `matrix3d` (`--face-warp`, worked out in
+  `layout()` from the room's geometry), because a ring's centre moves off
+  the spindle with the square of its radius: the outer grooves follow the
+  outline while the run-out closes in evenly round the label. The grooves are white on
   black vinyl and `mix-blend-mode: overlay` on a coloured pressing, so a
   colour isn't washed out.
 

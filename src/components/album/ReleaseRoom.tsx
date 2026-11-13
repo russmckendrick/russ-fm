@@ -79,6 +79,15 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
   // The grooves and light don't turn, so they sit on the record's outline rather
   // than round the spindle: its centre and radius in the unsquashed disc's pixels.
   const faceR = (d.rx / 100) * width;
+  // Rings nearer the middle sit nearer the spindle than the outline does (a
+  // ring's centre moves off it with the square of its radius), so the still
+  // layers get the projection that keeps the outline where it is and puts the
+  // ring at the label's edge round the label: y' = (y + t) / (1 + ty),
+  // x' = x * sqrt(1 - t * t) / (1 + ty), in outline radii.
+  const off = (d.y - d.fy) / d.ry;
+  const r2 = d.hole * d.hole;
+  const t = Math.abs(off) < 1e-4 ? 0 : (Math.sqrt((1 - r2) ** 2 + 4 * off * off * r2) - (1 - r2)) / (2 * off * r2);
+  const warp = `matrix3d(${Math.sqrt(1 - t * t)},0,0,0,0,1,0,${t / faceR},0,0,1,0,0,${t * faceR},0,1)`;
   const record = {
     left: left + (d.x / 100) * width - size / 2,
     top: top + (d.y / 100) * height - size / 2,
@@ -87,6 +96,7 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
     faceX: size / 2 + ((d.fx - d.x) / 100) * width - faceR,
     faceY: size / 2 + ((d.fy - d.y) / 100) * height / squash - faceR,
     face: faceR * 2,
+    warp,
   };
   return { img: { left, top, width, height }, sleeve, record };
 }
@@ -194,6 +204,7 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
                           '--face-x': `${g.record.faceX}px`,
                           '--face-y': `${g.record.faceY}px`,
                           '--face': `${g.record.face}px`,
+                          '--face-warp': g.record.warp,
                           '--label': `${(room.record.hole / room.record.cover) * 100}%`,
                           '--room-light': room.light,
                         } as CSSProperties
