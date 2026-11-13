@@ -5,7 +5,7 @@ import { buildStory, bus, type Chapter, type ChapterFactory } from './core';
 import './story.css';
 
 /** The chapters in page order; each is chapters/<id>.ts with its own <id>.css. */
-const IDS = ['cover', 'record', 'skyline', 'clock', 'weight', 'vinyl', 'artists', 'genres', 'decades', 'credits', 'connections', 'finale'];
+const IDS = ['cover', 'record', 'skyline', 'weight', 'vinyl', 'artists', 'genres', 'decades', 'credits', 'connections', 'finale'];
 const FACTORIES = import.meta.glob<ChapterFactory>('./chapters/*.ts', { eager: true, import: 'default' });
 import.meta.glob('./chapters/*.css', { eager: true });
 

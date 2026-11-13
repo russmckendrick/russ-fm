@@ -1,4 +1,4 @@
-// B6 · Connections: the year's artists as a canvas constellation, tied to each other and to older records on the shelves.
+// Connections: the year's artists as a canvas constellation, tied to each other and to older records on the shelves.
 import * as d3 from 'd3';
 import { $, $$, bus, clamp, countUp, esc, head, onVisible, plural, reduced, type Chapter, type Story } from '../core';
 
@@ -65,7 +65,7 @@ export default function connections(el: HTMLElement): Chapter {
 
     el.innerHTML = `
       <div class="wrap">
-        ${head('B6', 'Connections', 'Connections', `How the year's artists tie into each other and into the rest of the shelves: band members, side projects, aliases and the people credited on both.`)}
+        ${head('', 'Connections', 'Connections', `How the year's artists tie into each other and into the rest of the shelves: band members, side projects, aliases and the people credited on both.`)}
         <div class="stats cn-stats">
           <div class="stat"><b data-n="${links.length}">0</b><span>links between artists</span></div>
           <div class="stat"><b data-n="${bridged}">0</b><span>of the ${plural(fresh.length, 'new artist')} connect to someone already on the shelves</span></div>

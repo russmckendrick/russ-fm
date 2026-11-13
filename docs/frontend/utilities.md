@@ -713,17 +713,12 @@ Pure layout for `GenreDisc`, in disc units (1 = the rim).
 
 ## Wrapped Sleeve Helpers (`src/pages/wrapped/utils/sleeves.ts`)
 
-Wrapped JSON carries slugs instead of `uri_release`, and sometimes its own palette. These
-helpers look colours up in `album-colors.json` first so Wrapped matches the rest of the site.
+Wrapped JSON carries slugs instead of `uri_release`. Colours come with each record in the
+`story` block, so the palette helpers that used to live here are gone.
 
 | Export | Description |
 |--------|-------------|
 | `releaseUri(slug)` / `artistUri(slug)` | `/album/{slug}/` and `/artist/{slug}/` |
-| `paletteForSlug(colours, slug, fallback?)` / `paletteForRelease(colours, release)` | Palette from the map, falling back to the Wrapped palette |
-| `floodForRelease(colours, release)` | `floodFor()` for a Wrapped release |
-| `tileAlbum(release)` | The fields `RecordTile` needs |
-| `groupColour(releases, colours, used?)` | A vivid colour for a group (month, genre, decade), preferring colours not already in `used` so neighbours differ |
-| `formatDay(iso, withYear = true)` | `"25 SEP 2026"` |
 
 ## Genre Utilities (`src/lib/genreUtils.ts`)
 

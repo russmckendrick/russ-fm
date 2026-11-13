@@ -1,4 +1,4 @@
-// B3 · Genres through the year: a streamgraph of the genre families by week, then the eras each family led.
+// Genres through the year: a streamgraph of the genre families by week, then the eras each family led.
 import * as d3 from 'd3';
 import { $, $$, clamp, esc, head, MONTHS, onVisible, plural, reduced, utc, type Chapter, type Release, type Story } from '../core';
 
@@ -69,7 +69,7 @@ export default function genres(el: HTMLElement): Chapter {
     const topKey = keys[0];
     el.innerHTML = `
       <div class="wrap">
-        ${head('B3', 'Genres', 'Genres through the year', `${esc(name[topKey])} led with ${plural(total[topKey], 'record')}. Each stream is a family of genres, as thick as the records added that week.`)}
+        ${head('', 'Genres', 'Genres through the year', `${esc(name[topKey])} led with ${plural(total[topKey], 'record')}. Each stream is a family of genres, as thick as the records added that week.`)}
         <div class="gn-chart"><svg></svg><div class="gn-now"><span></span></div></div>
         <div class="gn-legend">${keys.map(k => `<button class="gn-chip" data-k="${k}" style="--c:${col[k]}"><i></i>${esc(name[k])}<b>${total[k]}</b></button>`).join('')}</div>
         <p class="label gn-eras-k">Eras · who led each stretch</p>

@@ -26,10 +26,6 @@ export interface StoryRelease {
   a: string[];
   /** Date added, YYYY-MM-DD */
   d: string;
-  /** Hour added, UK time, as a fraction (13.5 = 1.30 pm) */
-  h: number | null;
-  /** Weekday added, UK time, 0 = Monday */
-  wd: number | null;
   /** Original release year */
   y: number | null;
   g: string[];

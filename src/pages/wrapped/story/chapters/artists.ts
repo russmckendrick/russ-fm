@@ -1,4 +1,4 @@
-// B2 · Artists: the most collected as a full-bleed fanart hero, the next five as cards, then a bar chart race.
+// Artists: the most collected as a full-bleed fanart hero, the next five as cards, then a bar chart race.
 import { $, $$, clamp, countUp, dim, esc, head, MONTHS_LONG, onVisible, plural, reduced, ymd, type Artist, type Chapter, type Story } from '../core';
 
 // Fanart is landscape and faces sit high; the photo carries its own focus point.
@@ -27,7 +27,7 @@ export default function artists(el: HTMLElement): Chapter {
 
     el.innerHTML = `
       <div class="wrap">
-        ${head('B2', 'Artists', 'Who you collected', `${plural(arts.length, 'artist')} across ${plural(story.releases.length, 'record')}. ${plural(fresh, 'of them was', 'of them were')} new to the collection.`)}
+        ${head('', 'Artists', 'Who you collected', `${plural(arts.length, 'artist')} across ${plural(story.releases.length, 'record')}. ${plural(fresh, 'of them was', 'of them were')} new to the collection.`)}
         <div class="stats ar-stats">
           <div class="stat"><b data-n="${arts.length}">0</b><span>artists</span></div>
           <div class="stat"><b data-n="${fresh}">0</b><span>new to the collection</span></div>

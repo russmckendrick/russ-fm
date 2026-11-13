@@ -9,6 +9,8 @@ interface Sky {
   rise: number | null; visible: boolean; sel: string; hulls: Hull[]; hover: string | null;
   c: number; s: number; t: number; W: number; H: number; x0: number; y0: number; dpr: number;
   ctx: CanvasRenderingContext2D;
+  /** What the last frame showed, so a still skyline isn't redrawn */
+  drawn: string;
 }
 
 function poly(ctx: CanvasRenderingContext2D, pts: Pt[], fill: string) {
@@ -63,7 +65,7 @@ export default function skyline(el: HTMLElement): Chapter {
     const end = Math.min(Date.UTC(y, 11, 31), Date.now());
 
     el.innerHTML = `<div class="wrap">
-      ${head('A2', 'Every day', `Every day of ${y}`, 'One tower for each day, one slab for each record added, in its sleeve colour. Sunday is the front row.')}
+      ${head('', 'Every day', `Every day of ${y}`, 'One tower for each day, one slab for each record added, in its sleeve colour. Sunday is the front row.')}
       <div class="stats sky-stats"></div>
       <div class="sky-tools">
         <div class="sky-toggle" role="group" aria-label="View">
@@ -82,7 +84,7 @@ export default function skyline(el: HTMLElement): Chapter {
       maxN: Math.max(...[...D.byDay.values()].map(l => l.length)),
       lift: { from: 1, to: 1, t0: 0 }, rise: reduced() ? -1e9 : null, visible: false,
       sel: D.biggest, hulls: [], hover: null,
-      c: 0, s: 0, t: 0, W: 0, H: 0, x0: 26, y0: 0, dpr: 1, ctx: cv.getContext('2d')!,
+      c: 0, s: 0, t: 0, W: 0, H: 0, x0: 26, y0: 0, dpr: 1, ctx: cv.getContext('2d')!, drawn: '',
     };
 
     renderFacts(D);
@@ -120,8 +122,15 @@ export default function skyline(el: HTMLElement): Chapter {
       el.querySelectorAll<HTMLElement>('[data-count]').forEach(b => countUp(b, +b.dataset.count!));
     }, { threshold: 0.2 }));
 
+    // The slabs drop in over a couple of seconds and the fold takes under one; after that the
+    // picture only changes with the pointer or the picked day.
+    const riseMs = Math.max(1700 + SK.maxN * 70 + 460, 2700) + 100;
     const loop = (now: number) => {
-      if (SK?.visible) draw(now);
+      if (SK?.visible) {
+        const moving = (SK.rise !== null && now - SK.rise < riseMs) || now - SK.lift.t0 < 1000;
+        const key = `${SK.sel}|${SK.hover}|${SK.rise === null}|${SK.W}x${SK.H}`;
+        if (moving || key !== SK.drawn) { draw(now); SK.drawn = moving ? '' : key; }
+      }
       raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);

@@ -1,4 +1,4 @@
-// A1 · Sleeve by sleeve: every record of the year side by side in the order it came in, each cut to
+// Sleeve by sleeve: every record of the year side by side in the order it came in, each cut to
 // a sliver of its cover. The slivers near the pointer open up, Dock-style, to the full sleeve;
 // left alone, the opening drifts through the year by itself.
 import { $, bus, clamp, esc, head, longDate, MONTHS, onVisible, reduced, type Chapter, type Release, type Story } from '../core';
@@ -14,6 +14,8 @@ export default function record(el: HTMLElement): Chapter {
   let W = 0, H = 0, SIG = 1.4, K = 0;
   let f = 0, tf = 0, front = -1, over = false, quietSince = 0, auto = !reduced(), visible = false, holdUntil = 0;
   let raf = 0, last = performance.now(), lastFetch = 0;
+  // The width last written to each bar, so a frame restyles only the few bars that moved.
+  let drawn = new Float64Array(0);
 
   el.innerHTML = `
     <div class="wrap"><div class="bc-head"></div></div>
@@ -99,8 +101,12 @@ export default function record(el: HTMLElement): Chapter {
     let x = 0;
     for (let i = 0; i < N; i++) {
       pos[i] = x;
-      bars[i].style.width = `${w[i]}px`;
-      if (w[i] > 12) load(i);
+      // Away from the bulge a bar keeps its width from frame to frame; writing it anyway restyles every bar.
+      if (Math.abs(w[i] - drawn[i]) > 0.002) {
+        drawn[i] = w[i];
+        bars[i].style.width = `${w[i]}px`;
+        if (w[i] > 12) load(i);
+      }
       x += w[i];
     }
     // Month labels ride along with the bulge; any that would collide with the one before are hidden.
@@ -156,7 +162,9 @@ export default function record(el: HTMLElement): Chapter {
   /* ---------- what's open ---------- */
   function show() {
     const r = R[front];
-    el.style.setProperty('--flood', r.c.flood || '#e9a23b');
+    const flood = r.c.flood || '#e9a23b';
+    el.style.setProperty('--bc-glow', flood);
+    $('.bc-now', el).style.setProperty('--flood', flood);
     const v = r.vc[0], fam = D!.families.find(x => x.key === r.fam);
     const chips = [
       r.y && r.y !== D!.year ? `${r.y} original` : r.y ? 'New release' : null,
@@ -180,11 +188,12 @@ export default function record(el: HTMLElement): Chapter {
       D = story;
       R = story.releases;
       N = R.length;
-      $('.bc-head', el).innerHTML = head('A1', 'Sleeve by sleeve', `${story.year}, sleeve by sleeve`,
+      $('.bc-head', el).innerHTML = head('', 'Sleeve by sleeve', `${story.year}, sleeve by sleeve`,
         `All ${N} records in the order they came in, each cut to a sliver of its cover. Move along the line to open one up; leave it alone and it drifts through the year.`);
       strip.classList.remove('in');
       strip.innerHTML = R.map((r, i) => `<a class="bar" href="/album/${r.s}/" style="--i:${i};background:${r.c.flood || '#333'}"><img data-src="${r.img}" alt="${esc(r.t)} — ${esc(r.by)}" decoding="async"></a>`).join('');
       bars = [...strip.children] as HTMLAnchorElement[];
+      drawn = new Float64Array(N);
       const firsts: number[] = [];
       R.forEach((r, i) => { const m = +r.d.slice(5, 7) - 1; if (firsts[m] == null) firsts[m] = i; });
       $('.bc-months', el).innerHTML = firsts.map((i, m) => (i == null ? '' : `<span data-i="${i}">${MONTHS[m]}</span>`)).join('');

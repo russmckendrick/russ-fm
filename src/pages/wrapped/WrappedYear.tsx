@@ -8,9 +8,9 @@ import { appConfig } from '@/config/app.config';
 import { loadCollection } from '@/lib/collection';
 import type { WrappedData } from '@/types/wrapped';
 import { YearSelector } from './components/YearSelector';
-import { WrappedPresentation } from './WrappedPresentation';
 
-// The story chapters (and d3) load only when a Wrapped page is opened.
+// The story chapters (and d3) load only when a Wrapped page is opened, the presentation only when it is.
+const WrappedPresentation = lazy(() => import('./WrappedPresentation').then(m => ({ default: m.WrappedPresentation })));
 const WrappedStory = lazy(() => import('./story/WrappedStory'));
 
 type ViewMode = 'grid' | 'presentation';
@@ -129,7 +129,7 @@ export function WrappedYear() {
   if (viewMode === 'presentation') {
     return (
       <div key={yearNum} className="relative">
-        <div className="fixed right-3 top-3 z-[80] flex items-center gap-2 rounded-full bg-[rgba(14,13,12,.92)] p-1.5 text-[color:var(--cream)] shadow-[0_18px_40px_-18px_rgba(0,0,0,.7)] md:right-5 md:top-4">
+        <div className="fixed right-3 top-3 z-[80] flex items-center gap-2 rounded-full border border-white/15 bg-[rgba(20,18,16,.58)] p-1.5 text-[color:var(--cream)] shadow-[0_18px_40px_-18px_rgba(0,0,0,.8)] backdrop-blur-xl backdrop-saturate-150 md:right-5 md:top-4">
           <YearSelector
             currentYear={yearNum}
             availableYears={availableYears}
@@ -147,7 +147,9 @@ export function WrappedYear() {
             <span className="hidden sm:inline">Year page</span>
           </button>
         </div>
-        <WrappedPresentation data={data} availableYears={availableYears} previousYear={previousYear} nextYear={nextYear} />
+        <Suspense fallback={<WrappedSkeleton year={yearNum} />}>
+          <WrappedPresentation data={data} availableYears={availableYears} previousYear={previousYear} nextYear={nextYear} onClose={() => setViewMode('grid')} />
+        </Suspense>
       </div>
     );
   }

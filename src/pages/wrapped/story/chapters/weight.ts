@@ -294,7 +294,7 @@ export default function weight(el: HTMLElement): Chapter {
       const shortest = timed.reduce((a, r) => (r.rt < a.rt ? r : a), timed[0]);
 
       el.innerHTML = `<div class="wrap">
-        ${head('A4', 'By weight and length', 'Weight and length', `Every disc added in ${data.year}, stacked flat and drawn to scale, then the run time of every record with track times, end to end.`)}
+        ${head('', 'By weight and length', 'Weight and length', `Every disc added in ${data.year}, stacked flat and drawn to scale, then the run time of every record with track times, end to end.`)}
         <div class="stats wt-stats">
           <div class="stat"><b data-count="${discs}">0</b><span>discs, across ${plural(recs.length, 'record')}</span></div>
           <div class="stat"><b><span data-count="${discs * 2}">0</span></b><span>sides to play</span></div>

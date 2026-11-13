@@ -105,7 +105,7 @@ export default function vinyl(el: HTMLElement): Chapter {
       const pct = (n: number) => ((n / total) * 100).toFixed(2);
 
       el.innerHTML = `<div class="wrap">
-        ${head('B1', 'Coloured vinyl', 'Not all black', 'Every coloured pressing added this year, slid out of its sleeve, in the order it came in. Pick a colour to see just those; hover one to take it all the way out.')}
+        ${head('', 'Coloured vinyl', 'Not all black', 'Every coloured pressing added this year, slid out of its sleeve, in the order it came in. Pick a colour to see just those; hover one to take it all the way out.')}
         <div class="stats vx-stats">
           <div class="stat"><b><span data-count="${items.length}">0</span><small> / ${total}</small></b><span>records on coloured vinyl</span></div>
           <div class="stat"><b class="vx-word">${esc(top[0])}</b><span>the most common single colour, on ${plural(top[1], 'record')}</span></div>

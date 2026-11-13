@@ -1,4 +1,4 @@
-// B4 · Decades: a beeswarm of the year's sleeves on an original-year axis, with decade bars and the oldest and newest.
+// Decades: a beeswarm of the year's sleeves on an original-year axis, with decade bars and the oldest and newest.
 import * as d3 from 'd3';
 import { $, $$, clamp, countUp, esc, head, onVisible, plural, reduced, type Chapter, type Release, type Story } from '../core';
 
@@ -39,7 +39,7 @@ export default function decades(el: HTMLElement): Chapter {
 
     el.innerHTML = `
       <div class="wrap">
-        ${head('B4', 'Decades', 'When it was made', `Every record from ${story.year}, placed by the year it first came out. The oldest goes back to ${oldest.y}.`)}
+        ${head('', 'Decades', 'When it was made', `Every record from ${story.year}, placed by the year it first came out. The oldest goes back to ${oldest.y}.`)}
         <div class="stats dc-stats">
           <div class="stat"><b data-n="${median}" data-plain>0</b><span>the median original year</span></div>
           <div class="stat"><b data-n="${age}">0</b><span>years old, on average, when it arrived</span></div>
@@ -64,7 +64,20 @@ export default function decades(el: HTMLElement): Chapter {
     const decsBox = $('.dc-decs', el);
     const decsIo = onVisible(decsBox, () => decsBox.classList.add('in'));
     stops.push(() => { statsIo.disconnect(); decsIo.disconnect(); hideTip(); });
-    swarm(story, recs, oldest, newest);
+    // Settling the swarm takes a couple of hundred milliseconds in a big year, so it waits for a
+    // quiet moment after the page is up, or runs at once if the chapter is already coming into view.
+    const field = $('.dc-field', el);
+    let idle = 0, near: IntersectionObserver | null = null;
+    const go = () => {
+      clearTimeout(idle);
+      near?.disconnect();
+      near = null;
+      if (current === story && field.isConnected) swarm(story, recs, oldest, newest);
+    };
+    near = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) go(); }, { rootMargin: '1200px 0px' });
+    near.observe(field);
+    idle = window.setTimeout(go, 1200);
+    stops.push(() => { clearTimeout(idle); near?.disconnect(); });
   }
 
   function swarm(story: Story, recs: Array<Release & { y: number }>, oldest: Release, newest: Release) {

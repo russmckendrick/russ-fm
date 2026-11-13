@@ -1,6 +1,10 @@
+/* The glow behind the strip eases between sleeve colours. It has a property of its own that does not
+   inherit: easing the inherited --flood here restyled every bar in the strip on every frame. */
+@property --bc-glow { syntax: '<color>'; inherits: false; initial-value: #e9a23b; }
+
 .ws {
-  #record { padding: 96px 0 88px; transition: --flood 1s var(--ease);
-    background: radial-gradient(ellipse 80% 60% at 50% 55%, color-mix(in srgb, var(--flood) 34%, transparent), transparent 75%), var(--ground); }
+  #record { padding: 96px 0 88px; transition: --bc-glow 1s var(--ease);
+    background: radial-gradient(ellipse 80% 60% at 50% 55%, color-mix(in srgb, var(--bc-glow) 34%, transparent), transparent 75%), var(--ground); }
   .bc-head { max-width: 980px; }
 
   /* The strip: full bleed, every sleeve a sliver */
@@ -23,7 +27,7 @@
 
   /* What's open */
   .bc-info { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; margin-top: 24px; }
-  .bc-now { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 36px; align-items: start; min-height: 170px; min-width: 0; }
+  .bc-now { transition: --flood 1s var(--ease); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 36px; align-items: start; min-height: 170px; min-width: 0; }
   .bc-when b { display: block; font: 900 clamp(48px, 6vw, 92px)/.85 var(--display); font-stretch: 78%; text-transform: uppercase; color: var(--flood); transition: color .6s; white-space: nowrap; }
   .bc-when span { display: block; margin-top: 10px; font: 600 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
   .bc-what { min-width: 0; }

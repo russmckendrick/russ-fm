@@ -56,7 +56,7 @@ export default function finale(el: HTMLElement): Chapter {
     render(story: Story) {
       D = story;
       el.querySelectorAll('[data-o]').forEach(b => b.setAttribute('aria-pressed', String((b as HTMLElement).dataset.o === 'date')));
-      $('.fin-head', el).innerHTML = head('C', 'The run-out groove', `All ${story.releases.length} of them`,
+      $('.fin-head', el).innerHTML = head('', 'The run-out groove', `All ${story.releases.length} of them`,
         'Every record added this year on one wall. Sort it by when it came in, by sleeve colour, or by artist.');
       const wall = $('.fin-wall', el);
       wall.innerHTML = story.releases.map((r, i) =>

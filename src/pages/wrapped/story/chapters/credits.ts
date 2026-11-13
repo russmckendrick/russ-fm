@@ -1,4 +1,4 @@
-// B5 · Behind the glass: who cut, mastered and produced the year's records, the labels, and the editions as ring meters.
+// Behind the glass: who cut, mastered and produced the year's records, the labels, and the editions as ring meters.
 import { $, esc, head, onVisible, plural, type Chapter, type Release, type Story } from '../core';
 
 const EDITIONS = ['Limited Edition', 'Reissue', 'Remastered', 'Record Store Day', 'Deluxe Edition', 'Numbered', '45 RPM', 'Compilation', 'Special Edition', 'Repress'];
@@ -46,7 +46,7 @@ export default function credits(el: HTMLElement): Chapter {
 
     el.innerHTML = `
       <div class="wrap">
-        ${head('B5', 'Behind the glass', 'Behind the glass', lede)}
+        ${head('', 'Behind the glass', 'Behind the glass', lede)}
         <div class="cr-boards">${boards.map(([title, , rows, verb]) => {
           const max = rows[0][1].length;
           return `

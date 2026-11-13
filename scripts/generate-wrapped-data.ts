@@ -19,18 +19,6 @@ interface ColorPalette {
   vivid: number;
 }
 
-// Default fallback palette
-const defaultPalette: ColorPalette = {
-  v: 2,
-  flood: '#e8e2d6',
-  ink: '#0e0d0c',
-  ground: '#1c1916',
-  glow: '#e8e2d6',
-  secondary: null,
-  hue: 0.12,
-  vivid: 0,
-};
-
 // Load album colors once at startup
 let albumColors: Record<string, ColorPalette> = {};
 try {
@@ -55,72 +43,19 @@ function getAlbumColors(slug: string): ColorPalette | undefined {
 interface OriginalRelease {
   release_name: string;
   release_artist: string;
-  artists: Array<{
-    name: string;
-    uri_artist: string;
-    json_detailed_artist: string;
-    images_uri_artist: {
-      'hi-res': string;
-      medium: string;
-      avatar: string;
-    };
-    biography?: string;
-  }>;
+  artists: Array<{ name: string; uri_artist: string }>;
   genre_names: string[];
   uri_release: string;
-  uri_artist: string;
   date_added: string;
-  date_release_year: string;
   year_original?: number | null;
-  json_detailed_release: string;
-  json_detailed_artist: string;
-  images_uri_release: {
-    'hi-res': string;
-    medium: string;
-    avatar?: string;
-  };
-  images_uri_artist: {
-    'hi-res': string;
-    medium: string;
-    avatar: string;
-  };
   /** Present only on boxset members — they never count towards a year's wrapped. */
   boxset?: unknown;
 }
 
-// Lightweight release for wrapped data
-interface Release {
-  release_name: string;
-  release_artist: string;
-  date_added: string;
-  date_release_year: string;
-  year_original?: number | null;
-  genre_names: string[];
-  slug: string;
-  images: {
-    'hi-res': string;
-    medium: string;
-    avatar?: string;
-  };
-  artists: Array<{
-    name: string;
-    slug: string;
-    images: {
-      'hi-res'?: string;
-      medium?: string;
-      avatar?: string;
-    };
-  }>;
-  colors?: ColorPalette;
-}
-
-interface AlbumDetail {
-  slug: string;
-  styles: string[];
-  formats: Array<{ name: string; qty: string; descriptions?: string[] }>;
-}
-
-
+/**
+ * A year file: the headline numbers and the `story` block. Both /wrapped views draw from
+ * `story` alone, so the per-release and insight lists that older pages read are no longer written.
+ */
 interface WrappedData {
   year: number;
   isYearToDate: boolean;
@@ -135,40 +70,7 @@ interface WrappedData {
     lastAddition: string;
     projectedTotal?: number;
   };
-  releases: Array<{
-    release: Release;
-    albumDetail?: AlbumDetail;
-  }>;
-  insights: {
-    genres: Array<{ name: string; count: number; percentage: number }>;
-    artists: Array<{ name: string; slug: string; count: number; images?: { 'hi-res'?: string; medium?: string; avatar?: string } }>;
-    decades: Array<{ name: string; count: number }>;
-    timeline: Array<{ month: string; count: number; releases: Release[]; dominantColor?: ColorPalette }>;
-    topAlbums: Array<{
-      slug: string;
-      title: string;
-      artist_name: string;
-      images: { 'hi-res': string; medium: string; avatar?: string };
-      date_added: string;
-    }>;
-    topArtists: Array<{
-      name: string;
-      slug: string;
-      count: number;
-      images?: { 'hi-res'?: string; medium?: string; avatar?: string };
-      topAlbum?: {
-        slug: string;
-        title: string;
-        images: { 'hi-res': string; medium: string; avatar?: string };
-      };
-    }>;
-  };
-  theme?: {
-    primary: ColorPalette;
-    secondary: ColorPalette;
-    monthlyPalettes: ColorPalette[];
-  };
-  /** Everything the chapters of /wrapped/:year draw (scripts/lib/wrapped-story.ts) */
+  /** Everything /wrapped/:year draws (scripts/lib/wrapped-story.ts) */
   story: WrappedStory;
 }
 
@@ -267,22 +169,15 @@ function calculateStats(releases: OriginalRelease[]): WrappedData['summary'] {
   };
 }
 
-async function loadAlbumDetail(slug: string): Promise<AlbumDetail | undefined> {
+/** The Discogs styles on an album's own JSON, for the year's top style. */
+function loadStyles(slug: string): string[] {
   try {
     const albumPath = path.join(__dirname, '..', 'public', 'album', slug, `${slug}.json`);
-    if (fs.existsSync(albumPath)) {
-      const data = JSON.parse(fs.readFileSync(albumPath, 'utf-8'));
-      // Only return the fields we need
-      return {
-        slug: data.slug,
-        styles: data.styles || [],
-        formats: data.formats || []
-      };
-    }
+    if (fs.existsSync(albumPath)) return JSON.parse(fs.readFileSync(albumPath, 'utf-8')).styles || [];
   } catch (error) {
     console.error(`Error loading album ${slug}:`, error);
   }
-  return undefined;
+  return [];
 }
 
 async function generateWrappedData(year: number, isYearToDate: boolean = false): Promise<WrappedData> {
@@ -302,193 +197,25 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     new Date(a.date_added).getTime() - new Date(b.date_added).getTime()
   );
 
-  // Create lightweight enriched releases (only store what we need)
-  const enrichedReleases = await Promise.all(
-    yearReleases.map(async (release) => {
-      const albumSlug = getSlugFromUri(release.uri_release);
-      const albumDetail = await loadAlbumDetail(albumSlug);
-
-      // Create a lightweight release object with ALL image sizes
-      const releaseColors = getAlbumColors(albumSlug);
-      const lightRelease: Release = {
-        release_name: release.release_name,
-        release_artist: release.release_artist,
-        date_added: release.date_added,
-        date_release_year: release.date_release_year,
-        year_original: release.year_original ?? null,
-        genre_names: release.genre_names,
-        slug: albumSlug,
-        images: {
-          'hi-res': release.images_uri_release['hi-res'],
-          medium: release.images_uri_release.medium,
-          avatar: release.images_uri_release['hi-res'].replace('-hi-res.jpg', '-avatar.jpg') // Generate avatar path
-        },
-        // Include ALL artist image sizes
-        artists: release.artists.map(artist => ({
-          name: artist.name,
-          slug: getSlugFromUri(artist.uri_artist),
-          images: {
-            'hi-res': artist.images_uri_artist?.['hi-res'],
-            medium: artist.images_uri_artist?.medium,
-            avatar: artist.images_uri_artist?.avatar
-          }
-        })),
-        // Add pre-computed colors from album-colors.json
-        colors: releaseColors
-      };
-
-      return {
-        release: lightRelease,
-        albumDetail,
-      };
-    })
-  );
-
-  // Calculate insights
-  const genreCounts = new Map<string, number>();
-  const artistCounts = new Map<string, { count: number; images?: { 'hi-res'?: string; medium?: string; avatar?: string }; slug: string }>();
-  const decadeCounts = new Map<string, number>();
-  const monthlyData = new Map<string, Release[]>();
+  // What the story builder needs from each record
   const styleCounts = new Map<string, number>();
-
-  // Process enriched data for insights
-  for (const { release, albumDetail } of enrichedReleases) {
-    // Genres
-    release.genre_names?.forEach(genre => {
-      genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-    });
-
-    // Styles from album detail
-    if (albumDetail?.styles) {
-      albumDetail.styles.forEach(style => {
-        styleCounts.set(style, (styleCounts.get(style) || 0) + 1);
-      });
-    }
-
-    // Artists
-    if (release.artists && release.artists.length > 0) {
-      for (const artist of release.artists) {
-        if (artist.name !== 'Various' && artist.name !== 'Various Artists') {
-          const current = artistCounts.get(artist.name) || { count: 0, slug: artist.slug };
-          artistCounts.set(artist.name, {
-            count: current.count + 1,
-            slug: artist.slug,
-            images: {
-              'hi-res': artist.images['hi-res'],
-              medium: artist.images.medium,
-              avatar: artist.images.avatar
-            }
-          });
-        }
-      }
-    }
-
-    // Release decades
-    if (release.year_original || release.date_release_year) {
-      const year = release.year_original ?? parseInt(release.date_release_year);
-      if (!isNaN(year)) {
-        const decade = `${Math.floor(year / 10) * 10}s`;
-        decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
-      }
-    }
-
-    // Timeline
-    const date = new Date(release.date_added);
-    const monthKey = getMonthName(date.getMonth());
-    const monthReleases = monthlyData.get(monthKey) || [];
-    monthReleases.push(release);
-    monthlyData.set(monthKey, monthReleases);
-  }
-
-  // Convert to arrays and sort
-  const genres = [...genreCounts.entries()]
-    .map(([name, count]) => ({
-      name,
-      count,
-      percentage: Math.round((count / yearReleases.length) * 100)
-    }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 10);
-
-  const artists = [...artistCounts.entries()]
-    .map(([name, data]) => ({
-      name,
-      slug: data.slug,
-      count: data.count,
-      images: data.images
-    }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 20);
-
-  const decades = [...decadeCounts.entries()]
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => {
-      // Sort decades chronologically (newest first)
-      const aDecade = parseInt(a.name.replace('s', ''));
-      const bDecade = parseInt(b.name.replace('s', ''));
-      return bDecade - aDecade;
-    });
-
-  const timeline = Array.from({ length: 12 }, (_, i) => {
-    const monthName = getMonthName(i);
-    const releases = monthlyData.get(monthName) || [];
-    // Get dominant color from first release of the month (if any have colors)
-    const dominantColor = releases.length > 0
-      ? (releases.find(r => r.colors)?.colors || undefined)
-      : undefined;
+  const storyReleases = yearReleases.map(release => {
+    const slug = getSlugFromUri(release.uri_release);
+    for (const style of loadStyles(slug)) styleCounts.set(style, (styleCounts.get(style) || 0) + 1);
     return {
-      month: monthName,
-      count: releases.length,
-      releases,
-      dominantColor
-    };
-  });
-
-  // Get top albums (6 for the 3x2 grid) from the lightweight releases
-  const topAlbums = enrichedReleases
-    .slice(0, 6)
-    .map(({ release }) => ({
-      slug: release.slug,
-      title: release.release_name,
-      artist_name: release.release_artist,
-      images: release.images,
-      date_added: release.date_added
-    }));
-
-  // Get top artists with their top albums (4 for the 2x2 grid)
-  const topArtists = artists.slice(0, 4).map((artist) => {
-    // Find the artist's most recent album from this year
-    const artistAlbum = enrichedReleases.find(({ release }) =>
-      release.artists?.some(a => a.slug === artist.slug)
-    );
-
-    if (artistAlbum) {
-      return {
-        name: artist.name,
-        slug: artist.slug,
-        count: artist.count,
-        images: artist.images,
-        topAlbum: {
-          slug: artistAlbum.release.slug,
-          title: artistAlbum.release.release_name,
-          images: artistAlbum.release.images
-        }
-      };
-    }
-
-    return {
-      name: artist.name,
-      slug: artist.slug,
-      count: artist.count,
-      images: artist.images
+      release_name: release.release_name,
+      release_artist: release.release_artist,
+      date_added: release.date_added,
+      year_original: release.year_original ?? null,
+      genre_names: release.genre_names,
+      slug,
+      artists: release.artists.map(artist => ({ name: artist.name, slug: getSlugFromUri(artist.uri_artist) })),
+      colors: getAlbumColors(slug),
     };
   });
 
   const summary = calculateStats(yearReleases);
-
-  // Update top style
-  const topStyle = [...styleCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || 'None';
-  summary.topStyle = topStyle;
+  summary.topStyle = [...styleCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || 'None';
 
   // Add projected total for year to date
   if (isYearToDate) {
@@ -499,31 +226,11 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     summary.projectedTotal = Math.round(yearReleases.length * projectionRate);
   }
 
-  // Build theme object with colors from key albums
-  const firstRelease = enrichedReleases[0]?.release;
-  const lastRelease = enrichedReleases[enrichedReleases.length - 1]?.release;
-
-  const theme = {
-    primary: firstRelease?.colors || defaultPalette,
-    secondary: lastRelease?.colors || defaultPalette,
-    monthlyPalettes: timeline.map(month => month.dominantColor || defaultPalette)
-  };
-
   return {
     year,
     isYearToDate,
     summary,
-    releases: enrichedReleases,
-    insights: {
-      genres,
-      artists,
-      decades,
-      timeline,
-      topAlbums,
-      topArtists
-    },
-    theme,
-    story: buildStory(year, enrichedReleases.map(e => e.release), originalCollection),
+    story: buildStory(year, storyReleases, originalCollection),
   };
 }
 
@@ -556,7 +263,7 @@ async function main() {
       const fileName = year === currentYear ? 'wrapped-ytd.json' : `wrapped-${year}.json`;
       const filePath = path.join(wrappedDir, fileName);
 
-      fs.writeFileSync(filePath, JSON.stringify(wrappedData, null, 2));
+      fs.writeFileSync(filePath, JSON.stringify(wrappedData));
       console.log(`✓ Generated ${fileName}`);
     }
 
@@ -564,7 +271,7 @@ async function main() {
     if (years.has(currentYear)) {
       const standardYearData = await generateWrappedData(currentYear, false);
       const standardPath = path.join(wrappedDir, `wrapped-${currentYear}.json`);
-      fs.writeFileSync(standardPath, JSON.stringify(standardYearData, null, 2));
+      fs.writeFileSync(standardPath, JSON.stringify(standardYearData));
       console.log(`✓ Generated wrapped-${currentYear}.json`);
     }
 

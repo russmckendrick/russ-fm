@@ -13,8 +13,6 @@ const PUBLIC = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 
 const VOCAB = JSON.parse(fs.readFileSync(path.join(PUBLIC, '..', 'src', 'config', 'vinyl-colours.json'), 'utf-8'));
 const EDITIONS = new Set(['Limited Edition', 'Reissue', 'Record Store Day', 'Remastered', 'Compilation', 'Deluxe Edition',
   'Numbered', 'Picture Disc', '45 RPM', 'Repress', 'Special Edition', 'Box Set']);
-const UK = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: 'numeric', minute: 'numeric', weekday: 'short', hourCycle: 'h23' });
-const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 const readJson = (p: string) => {
   try { return JSON.parse(fs.readFileSync(p, 'utf-8')); } catch { return null; }
@@ -99,12 +97,6 @@ export function buildStory(year: number, releases: YearRelease[], collection: Co
   const counts = new Map<string, { name: string; n: number }>();
   const out: StoryRelease[] = releases.map(r => {
     const d = readJson(path.join(PUBLIC, 'album', r.slug, `${r.slug}.json`)) ?? {};
-    let h: number | null = null, wd: number | null = null;
-    if (typeof d.date_added === 'string' && d.date_added.includes('T')) {
-      const parts = Object.fromEntries(UK.formatToParts(new Date(d.date_added)).map(p => [p.type, p.value]));
-      h = Math.round((+parts.hour + +parts.minute / 60) * 100) / 100;
-      wd = WEEKDAYS.indexOf(parts.weekday);
-    }
     const tracks: Array<{ duration?: string }> = d.tracklist ?? [];
     const timed = tracks.map(t => secs(t.duration));
     const rt = tracks.length && timed.filter(Boolean).length >= tracks.length * 0.6 ? timed.reduce((a, b) => a + b, 0) : null;
@@ -116,7 +108,7 @@ export function buildStory(year: number, releases: YearRelease[], collection: Co
     const c = r.colors ?? {};
     return {
       s: r.slug, t: r.release_name, by: r.release_artist, a: r.artists.map(a => a.slug),
-      d: r.date_added, h, wd,
+      d: r.date_added,
       y: r.year_original ?? (Number.isInteger(+d.year) && +d.year > 0 ? +d.year : null),
       g: r.genre_names, st: styles, fam: familyOf({ styles, genre_names: r.genre_names }),
       c: { flood: c.flood, ink: c.ink, ground: c.ground, secondary: c.secondary, hue: c.hue, vivid: c.vivid },

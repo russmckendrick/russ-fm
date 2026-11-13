@@ -692,87 +692,40 @@ from assets.russ.fm, which sends no CORS header.
 
 ### wrapped.json
 
-Year-in-review data structure.
+One file per year in `public/wrapped/` (`wrapped-YYYY.json`, plus `wrapped-ytd.json` for the
+current year), written without indentation by `scripts/generate-wrapped-data.ts`. A file holds
+the headline numbers and the `story` block; both `/wrapped` views draw from `story` alone. The
+per-release `releases` list, `insights` and `theme` that older pages read are no longer written,
+which took the thirteen files from 19 MB to under 5 MB.
 
-```json
-{
-  "years": {
-    "2024": {
-      "year": 2024,
-      "isYearToDate": false,
-      "summary": {
-        "totalAlbums": 42,
-        "totalArtists": 35,
-        "newArtists": 12,
-        "firstAlbum": {...},
-        "lastAlbum": {...}
-      },
-      "releases": [
-        {
-          "release_name": "Album Title",
-          "release_artist": "Artist Name",
-          "date_added": "2024-03-15T10:00:00Z",
-          "date_release_year": 2024,
-          "year_original": 1997,
-          "slug": "artist-album",
-          "images": {...},
-          "colors": {
-            "v": 2,
-            "flood": "#e6752f",
-            "ink": "#0e0d0c",
-            "ground": "#281c12",
-            "glow": "#e6752f",
-            "secondary": "#923026",
-            "hue": 0.134,
-            "vivid": 0.88
-          }
-        }
-      ],
-      "insights": {
-        "genres": {
-          "top": [
-            {"name": "Electronic", "count": 15},
-            {"name": "Rock", "count": 10}
-          ],
-          "distribution": {...}
-        },
-        "decades": {
-          "2020s": 20,
-          "2010s": 12,
-          "2000s": 5,
-          "1990s": 3,
-          "1980s": 2
-        },
-        "timeline": {
-          "January": 3,
-          "February": 5,
-          "March": 8
-        },
-        "topArtists": [
-          {"name": "Artist 1", "count": 5},
-          {"name": "Artist 2", "count": 3}
-        ],
-        "topAlbumsByMonth": {
-          "January": {...},
-          "February": {...}
-        }
-      }
-    }
-  }
+```typescript
+interface WrappedData {
+  year: number;
+  isYearToDate: boolean;
+  summary: {
+    totalReleases: number;
+    uniqueArtists: number;
+    topGenre: string;
+    topStyle: string;
+    avgPerMonth: number;
+    peakMonth: string;
+    firstAddition: string;
+    lastAddition: string;
+    projectedTotal?: number; // year to date only
+  };
+  story?: WrappedStory; // src/types/wrappedStory.ts
 }
 ```
 
 #### The `story` block
 
-Each year file (`public/wrapped/wrapped-YYYY.json`, `wrapped-ytd.json`) also
-carries `story`, built by `scripts/lib/wrapped-story.ts` and drawn by the
-chapters of `/wrapped/:year`. The type is `WrappedStory` in
+Each year file carries `story`, built by `scripts/lib/wrapped-story.ts` and drawn by the
+chapters of `/wrapped/:year` and its presentation. The type is `WrappedStory` in
 `src/types/wrappedStory.ts` (no imports, shared by the script and the site).
 Short keys keep it small:
 
 - `releases[]`: one per record added that year, by date. `s` slug, `t`
-  title, `by` artist, `a` artist slugs, `d` date added, `h`/`wd` hour and
-  weekday added in UK time (from the album JSON's `date_added`), `y`
+  title, `by` artist, `a` artist slugs, `d` date added, `y`
   original year, `g`/`st` genres and styles, `fam` genre family
   (`familyOf` in `src/lib/genreFamilyDefs.ts`), `c` sleeve palette, `rt` run
   time in seconds (only when 60% of tracks have times), `discs`, `size`
@@ -1067,7 +1020,7 @@ interface Format {
 ### Color Palette Type
 
 ```typescript
-// src/hooks/useAlbumColors.ts; ColorPalette in src/types/wrapped.ts is an alias
+// src/hooks/useAlbumColors.ts
 interface AlbumColorPalette {
   v: number;
   flood: string;
@@ -1104,51 +1057,23 @@ interface SearchResult {
 ### Wrapped Types (`src/types/wrapped.ts`)
 
 ```typescript
-interface WrappedRelease {
-  release_name: string;
-  release_artist: string;
-  date_added: string;
-  date_release_year: string;
-  year_original?: number | null;
-  slug: string;
-  images: {
-    'hi-res': string;
-    medium: string;
-  };
-  artists: { name: string; slug: string }[];
-  colors?: ColorPalette;
-}
-
 interface WrappedData {
   year: number;
   isYearToDate: boolean;
-  summary: WrappedSummary;
-  releases: WrappedRelease[];
-  insights: WrappedInsights;
-  theme?: WrappedTheme;
-}
-
-interface WrappedSummary {
-  totalAlbums: number;
-  totalArtists: number;
-  newArtists: number;
-  firstAlbum: WrappedRelease;
-  lastAlbum: WrappedRelease;
-}
-
-interface WrappedInsights {
-  genres: {
-    top: { name: string; count: number }[];
-    distribution: Record<string, number>;
+  summary: {
+    totalReleases: number;
+    uniqueArtists: number;
+    topGenre: string;
+    topStyle: string;
+    avgPerMonth: number;
+    peakMonth: string;
+    firstAddition: string;
+    lastAddition: string;
+    projectedTotal?: number; // year to date only
   };
-  decades: Record<string, number>;
-  timeline: Record<string, number>;
-  topArtists: { name: string; count: number }[];
-  topAlbumsByMonth: Record<string, WrappedRelease>;
+  story?: WrappedStory; // src/types/wrappedStory.ts
 }
 ```
-
----
 
 ## Validation
 

@@ -25,7 +25,7 @@ This document covers the route-level page components in russ.fm.
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | A shop window with five of the value's sleeves (`SleeveRoom`, `facet`) → flood band with the title, counts and most collected artists → paginated `RecordTile` grid. |
 | `/stats` | Record shelving (six face-out records, each under a random collection fact on a pinned tag) → band → eight chapters from the album and artist data (arrivals, home countries, the long haul, the shelf end to end, spec sheet, when it was made, behind the glass, owners) → latest additions. |
 | `/shuffle` (also `/random`) | The record's listening room over a split-flap band; the board clatters to a random record, then the room changes record and the band takes its colour. |
-| `/wrapped/:year` | The year as a scroll of twelve chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → around the clock → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
+| `/wrapped/:year` | The year as a scroll of eleven chapters (`story/WrappedStory.tsx`): cover → sleeve by sleeve → every day → weight and length → coloured vinyl → artists → genres → decades → behind the glass → connections → every sleeve. A floating control switches year or opens the full-screen `Presentation`. |
 
 ## Route Map
 
@@ -996,7 +996,7 @@ derived from the shared collection.
 
 ### WrappedStory (`src/pages/wrapped/story/`)
 
-The year told as a scroll of chapters. `WrappedStory.tsx` renders twelve empty
+The year told as a scroll of chapters. `WrappedStory.tsx` renders eleven empty
 `<section>`s under a `.ws` root and hands each to its chapter in
 `chapters/<id>.ts`: a factory taking the section and returning
 `{ render(story), dispose() }`. The chapters build their own DOM (canvas, SVG,
@@ -1010,20 +1010,32 @@ in the skyline), `play` (the cover's button) and `goto` (a path for the router).
 `story.css` and every `chapters/<id>.css` nest their rules under `.ws`, so the
 generic class names (`.stat`, `.pill`, `.label`) stay on this page.
 
+Chapter headings carry a label and a title but no track number, the same as `/stats`.
+
+Keeping it quick (the busiest year has about 500 records):
+
+- **Sleeve by sleeve** writes a bar's width only when it has changed, so a frame restyles the few
+  bars under the bulge. The glow behind the strip eases through `--bc-glow`, a registered property
+  that does not inherit; easing the inherited `--flood` on the section restyled every bar each frame.
+- **Every day** redraws its canvas only while the slabs are dropping in, the view is folding, or the
+  hovered or picked day changes.
+- **Decades** settles its beeswarm after the page is up (when the chapter comes within 1200px of
+  the screen, or after 1.2s), since the settle takes a couple of hundred milliseconds in a big year.
+- `WrappedPresentation` is a lazy chunk, loaded when the presentation is opened.
+
 | Chapter | What it draws |
 |---------|---------------|
 | `cover` | The year over a drifting 3D wall of its sleeves (a pool of 40), counted-up headline numbers, and a graph of records added every month since the first year: the year on show lit in amber with its busiest month marked, each year's total above it, the monthly average dashed. A sentence compares the year with the last and the average; clicking a year in the graph switches to it. |
-| `record` (A1, Sleeve by sleeve) | Every record of the year side by side as slivers of its cover, opening Dock-style to a full sleeve under the pointer and drifting through the year when left alone. Slivers start as sleeve colours and fetch their covers in batches while the strip is on screen. Below: the date, the record and its pressing chips. |
-| `skyline` (A2, Every day) | A 3D skyline, one tower per day and one slab per record, that folds into a flat calendar; the biggest day is labelled and a picked day shows its sleeves. |
-| `clock` (A3, Around the clock) | When records were added in UK time: a 24-hour dial of sleeve-coloured segments and a weekday × hour dot grid. |
-| `weight` (A4, Weight and length) | Discs, sides, kilograms and hours; the height of every disc in one pile, then the discs as twelve monthly piles (heights to scale, each disc lit in its pressing colour, the month's last sleeve as the top label); run times end to end. |
-| `vinyl` (B1, Not all black) | Every coloured pressing as a disc half out of its sleeve, in the order added, with colour-family filters; three rows until "Show all". |
-| `artists` (B2) | The most collected artist over their fanart, the next five as cards, and a bar race of records per artist through the year. |
-| `genres` (B3) | A streamgraph of the twelve genre families by week, with the family that led each month. |
-| `decades` (B4) | Sleeves in a beeswarm by original year, with decade bars and the oldest and newest records. |
-| `credits` (B5, Behind the glass) | Lacquer cutters, mastering engineers, producers and labels as leaderboards with their sleeves; edition rings. |
-| `connections` (B6) | The year's artists as a constellation linked by members, aliases and shared credits, with older artists they tie to. |
-| `finale` (C) | Every sleeve of the year on one wall, re-sorted by date, colour or artist. |
+| `record` (Sleeve by sleeve) | Every record of the year side by side as slivers of its cover, opening Dock-style to a full sleeve under the pointer and drifting through the year when left alone. Slivers start as sleeve colours and fetch their covers in batches while the strip is on screen. Below: the date, the record and its pressing chips. |
+| `skyline` (Every day) | A 3D skyline, one tower per day and one slab per record, that folds into a flat calendar; the biggest day is labelled and a picked day shows its sleeves. |
+| `weight` (Weight and length) | Discs, sides, kilograms and hours; the height of every disc in one pile, then the discs as twelve monthly piles (heights to scale, each disc lit in its pressing colour, the month's last sleeve as the top label); run times end to end. |
+| `vinyl` (Not all black) | Every coloured pressing as a disc half out of its sleeve, in the order added, with colour-family filters; three rows until "Show all". |
+| `artists` | The most collected artist over their fanart, the next five as cards, and a bar race of records per artist through the year. |
+| `genres` | A streamgraph of the twelve genre families by week, with the family that led each month. |
+| `decades` | Sleeves in a beeswarm by original year, with decade bars and the oldest and newest records. |
+| `credits` (Behind the glass) | Lacquer cutters, mastering engineers, producers and labels as leaderboards with their sleeves; edition rings. |
+| `connections` | The year's artists as a constellation linked by members, aliases and shared credits, with older artists they tie to. |
+| `finale` | Every sleeve of the year on one wall, re-sorted by date, colour or artist. |
 
 The design started from [mylisteningrecord.com](https://mylisteningrecord.com)
 (MIT, Carson Godwin); the approved mockup is in `mockups/wrapped/`.
@@ -1035,39 +1047,48 @@ The design started from [mylisteningrecord.com](https://mylisteningrecord.com)
 
 ### WrappedPresentation (`src/pages/wrapped/WrappedPresentation.tsx`)
 
-Full-screen, snap-scrolling presentation opened from the year page, played
-like a record: seven chapters numbered as tracks (side A is the year, side B
-who and what). Each chapter floods with colour from the records it shows.
+Full-screen, snap-scrolling presentation opened from the year page: eight
+slides drawn from the same `story` block as the year page (`buildStory` in
+`story/core.ts`), so it needs nothing from `insights` or `releases`. It is a
+lazy chunk with its own stylesheet, `presentation.css`, scoped under `.wp`.
 
-| Track | Chapter | What it shows |
-|-------|---------|---------------|
-| A1 | Overview | Kicker, the year in huge `t-disp`, counts that count up on first view (records, artists, per month, busiest month). Three columns of sleeves ride up and down the right side (one row along the bottom on phones). Flood: the first record. |
-| A2 | First & last | Split flood: first record's colour left, last record's right (top/bottom on phones), each with its `HeroRecord` ("First"/"Last" sticker from `md` up), date, title and artist. A round badge on the seam gives the days between them. |
-| A3 | Months | Every record added that month is a spine on that month's stack, in its sleeve colour; stacks scale to the busiest month. Picking a month shows its name, count and a fan of its first sleeves. Dark ground. |
-| A4 | Shelves | The selected month (shared with A3) as a row of `RecordTile`s, with a JAN–DEC switcher. Flood: the month's lead colour. |
-| B1 | Artists | No. 1 artist's portrait blended into the flood of their top album, name in a `FitTitle`, then 2–6 as rows with avatar, bar and count. |
-| B2 | Genres | Full-width bands, each as tall as its genre's count, in the genre's lead sleeve colour; labels scale with band height (container query units). |
-| B3 | Years | The run-out: a large `Vinyl` with the last record on its label, the year, counts, previous/next year pills and every year. Flood: the last record. |
+The look is its own: a near-black ground, each slide lit by a sleeve blurred
+into light (`.wp-bg`) under a vignette, film grain over the lot, cream type,
+and glass panels (`.wp-glass`). A slide sets `--flood` (a sleeve colour) and
+`--accent` is that colour lifted toward cream so it reads as text.
 
-**Chrome:** the site logo (`SpinningMark`, as in the nav) sits top left with
-the current chapter's lead sleeve on its label. The transport is a solid dark
-bar at the bottom: track and label, previous/next, a numbered bar per chapter
-(click to jump) and Play. Play runs each chapter for 9s with a
-`.hero-progress` bar and stops after B3. Arrow Down / Space and Arrow Up still step chapters. The year
-selector and "Year page" button sit top right (`WrappedYear`).
+| Slide | What it shows |
+|-------|---------------|
+| The year | The year in huge numerals that are a window onto a second, brighter wall of sleeves (`.wp-year-fill`: the wall multiplied by white-on-black text, then screened onto the slide) with a cream hairline round them, over a tilted, drifting wall of the year's sleeves (seven marquee rows from a pool of 42). Then a sentence, four counted-up numbers and "Play the year". Nothing between the numerals and the slide may fade or transform, or the black of the cut-out would show; the entrance fades the text colour instead. |
+| First & last | The screen split in two, each half lit by its own sleeve, with the `HeroRecord`, date, title and artist; a glass badge on the seam gives the days between them. Stacks top and bottom on phones. |
+| Month by month | Twelve bars in each month's most vivid sleeve colour. Picking one swaps the month name and the grid of that month's sleeves (15, then "+N more"). Opens on the busiest month. |
+| Artists | The most collected artist's fanart or photo full-bleed with a slow push-in, the name in a `FitTitle`, their records that year, and a glass list of the next five. |
+| Genres | "Mostly <family>" with its share, the genre families as one stacked bar in their colours, then the top eight by name with sleeves and counts. |
+| In colour | Every record with a colour of its own as one bar of a waveform, sorted by hue and as tall as the sleeve is vivid. Black, white and grey sleeves (about a quarter of a year) are left out and counted in the caption: they share one pale flood and drew as a flat grey block. Pointing at a bar names the record; discs show the coloured pressings. |
+| By the numbers | A bento of glass tiles: kilograms of vinyl and discs, hours of music, artists new to the shelves, the oldest and the longest record over their sleeves, and the biggest day. |
+| Run-out | The last record turning over a dimmed wall of sleeves, with previous/next year, "The full year page" and every year. |
 
-**Motion:** entrances (`.wr-rise`, `.wr-pop`, `.wr-spine`, `.wr-band`,
-`.wr-fan`, `.wr-shelf` in `player.css`, staggered with `--d`) play the first
-time a chapter comes round (`data-seen`); discs spin and conveyors run only in
-the visible chapter (`data-active`). Under `prefers-reduced-motion` there are
-no entrances, conveyors or spinning, and counts show their final values.
+**Chrome:** the site logo (`SpinningMark`) sits top left with the slide's lead
+sleeve on its label; the year selector and "Year page" button sit top right
+(`WrappedYear`). The transport is a glass bar at the bottom: slide name and
+count, previous/next, a segment per slide (click to jump) and Play, which runs
+each slide for 8s on a timer. Arrow Down / Space / Arrow Right and Arrow Up /
+Arrow Left step slides, `P` plays or pauses, and Escape goes back to the year
+page (`onClose`).
+
+**Motion:** entrances (`.wp-up`, `.wp-in`, `.wp-grow`, staggered with `--d`)
+play the first time a slide comes round (`data-seen`); the sleeve wall, the
+portrait push-in and discs run only in the visible slide (`data-active`). Under
+`prefers-reduced-motion` there are no entrances or drifting and counts show
+their final values. Nothing animates an inherited custom property, and every
+slide holds 120 fps on the 498-record year.
 
 ### Wrapped components
 
-Both views use the player components plus `YearSelector` and
-`presentation/PresentationContainer`, the `useWrappedNavigation` hook and
-the helpers in `utils/sleeves.ts`. The older bento, card and section
-components have been removed.
+Both views use the player components plus `YearSelector`. The presentation
+also uses the `useWrappedNavigation` hook and the two path helpers in
+`utils/sleeves.ts`. The older bento, card, section and
+`PresentationContainer` components have been removed.
 
 ---
 

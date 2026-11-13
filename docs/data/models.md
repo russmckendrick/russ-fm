@@ -283,47 +283,18 @@ export interface PerplexityServiceData {
 export interface WrappedData {
   year: number;
   isYearToDate: boolean;
-  summary: WrappedSummary;
-  releases: WrappedRelease[];
-  insights: WrappedInsights;
-  theme?: WrappedTheme;
-}
-
-export interface WrappedSummary {
-  totalAlbums: number;
-  totalArtists: number;
-  newArtists: number;
-  firstAlbum: WrappedRelease;
-  lastAlbum: WrappedRelease;
-}
-
-export interface WrappedRelease {
-  release_name: string;
-  release_artist: string;
-  date_added: string;
-  date_release_year: string;
-  year_original?: number | null;
-  slug: string;
-  images: ImageUris;
-  artists: { name: string; slug: string }[];
-  colors?: ColorPalette;
-}
-
-export interface WrappedInsights {
-  genres: {
-    top: { name: string; count: number }[];
-    distribution: Record<string, number>;
+  summary: {
+    totalReleases: number;
+    uniqueArtists: number;
+    topGenre: string;
+    topStyle: string;
+    avgPerMonth: number;
+    peakMonth: string;
+    firstAddition: string;
+    lastAddition: string;
+    projectedTotal?: number; // year to date only
   };
-  decades: Record<string, number>;
-  timeline: Record<string, number>;
-  topArtists: { name: string; count: number }[];
-  topAlbumsByMonth: Record<string, WrappedRelease>;
-}
-
-export interface WrappedTheme {
-  primary: string;
-  secondary: string;
-  accent: string;
+  story?: WrappedStory; // src/types/wrappedStory.ts
 }
 ```
 
@@ -386,9 +357,6 @@ export interface AlbumColorPalette {
 }
 
 export type AlbumSwatch = [string, number]; // [hex, percent of the sleeve]
-
-// src/types/wrapped.ts
-export type ColorPalette = AlbumColorPalette;
 
 export type AlbumColors = Record<string, AlbumColorPalette>;
 ```
