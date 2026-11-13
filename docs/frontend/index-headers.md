@@ -1,4 +1,4 @@
-# Index headers (/albums, /artists, /stats, /shuffle and the browse pages)
+# Index headers (/albums, /artists, /stats, /shuffle, /genres, /search, /tv/guide and the browse pages)
 
 Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 [release room](./release-room.md) and [artist poster wall](./artist-wall.md):
@@ -27,13 +27,24 @@ Page 1 of `/albums` and `/artists` opens on a place, like the detail pages'
 - **/coloured-vinyl:** a pressing plant's sample wall (`coloured`), six round
   slots. Each holds a `Vinyl` in the pressing's own look, the sleeve on its
   label, for the first six records of the current filter.
+- **/genres:** the record library wall of a 1970s radio studio (`genres`),
+  six sleeves on a shelf under picture lights, above the desk's turntables
+  and mixer. Each is the newest record of one of the six biggest families
+  and links to that family on the page.
+- **/search:** an archive's oak card catalogue (`search`), six sleeves stood
+  along its top between two library lamps: the first album results, or the
+  latest additions before anything has been searched.
+- **/tv/guide:** a TV shop's window at night (`guide`), five wood-cased sets.
+  Each screen (the slot follows the tube's rounded shape) shows a YouTube
+  still of what is on one of the first five channels, under scanlines and
+  the channel number (`.guide-set-osd`), and links to the channel.
 
-The browse pages all draw theirs through `SleeveRoom`
+The browse pages, /genres, /search and /tv/guide all draw theirs through `SleeveRoom`
 (`src/components/browse/SleeveRoom.tsx`): an `IndexRoom` whose slots are
 links, with the page's `FloodBand` below it as glass (`glass`: it straddles
 the photo's bottom edge, see the band note below). `topShade` darkens the top of
 a pale photo (`.room-top-shade`) so the see-through header reads over it; the
-stall and the white wall use it. /genres keeps its own record.
+stall and the white wall use it. /genres keeps its own record, below the photo in the band.
 
 The band is glass, not a block of the flood (`.glass-band
 .glass-band-straddle` in `player.css`, as on the
@@ -96,7 +107,7 @@ slots (`#00FF00`), facing the camera dead-on, with clear gaps between
 them so each keys as its own blob.
 
 ```bash
-uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle|browse|facet|coloured]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle|browse|facet|coloured|genres|search|guide]
 ```
 
 A slot can be any shape: the hole follows the green, and the config holds its

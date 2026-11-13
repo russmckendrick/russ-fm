@@ -2,6 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { VinylRecord } from "@phosphor-icons/react";
 import { BrowseHeader } from "@/components/browse/BrowseHeader";
+import { SleeveRoom, type RoomSleeve } from "@/components/browse/SleeveRoom";
+import { indexRoomSlots } from "@/lib/indexHeaders";
 import type { ColourMap } from "@/components/browse/facetSleeves";
 import { GenreDisc } from "@/components/genres/GenreDisc";
 import { genreFlood, genreLead } from "@/components/genres/genreColours";
@@ -123,7 +125,22 @@ export function GenrePage() {
     const lead = leadRecord(newest, colorMap);
     return { band: recordsFlood(newest.map((a) => a.uri_release), colorMap), labelAlbum: lead?.uri_release ?? null };
   }, [colorMap, litGenre, newest, selectedFamily]);
-  usePageBand(band);
+  usePageBand(band, true);
+
+  // The header photo: a radio station's record library, the biggest families'
+  // newest sleeves on the shelf, each a way in to its family.
+  const shelfSleeves = useMemo<RoomSleeve[]>(() => {
+    const out = new Set<string>();
+    return [...families]
+      .sort((a, b) => b.albums.length - a.albums.length)
+      .slice(0, indexRoomSlots("genres"))
+      .flatMap((family) => {
+        const pick = family.newest.find((a) => !out.has(a.uri_release)) ?? family.newest[0];
+        if (!pick) return [];
+        out.add(pick.uri_release);
+        return [{ uri: pick.uri_release, to: `/genres?family=${family.key}`, label: family.name }];
+      });
+  }, [families]);
 
   const labelFlood = floodFor(labelAlbum ? colorMap?.[labelAlbum] : null);
   const shelf = useMemo(() => {
@@ -218,7 +235,8 @@ export function GenrePage() {
 
   return (
     <>
-      <FloodBand flood={band} innerClassName="pb-0 md:pb-0">
+      <SleeveRoom room="genres" tint={band?.top ?? "transparent"} sleeves={shelfSleeves} />
+      <FloodBand flood={band} glass innerClassName="pb-0 md:pb-0">
         <div id="genre-record" className="grid scroll-mt-28 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12">
           <div className="min-w-0 pb-8 md:pb-14">
             {/* The title shares its row with the record from lg, so it steps

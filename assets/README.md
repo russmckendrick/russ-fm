@@ -8,7 +8,7 @@ serves live in `public/`.
 | --- | --- | --- | --- |
 | `release-rooms/` | Codex listening rooms, one per `/tv` room id, with no tonearm (drawn in 3D); `arms.json` holds each arm's pivot | `public/release-rooms/`, `src/config/release-rooms.json` | `scripts/process-release-rooms.py` ([docs](../docs/frontend/release-room.md)) |
 | `artist-walls/` | Codex fly-poster walls, one per `/tv` room id, and `generate.sh` with every prompt | `public/artist-walls/`, `src/config/artist-walls.json` | `scripts/process-artist-walls.py` ([docs](../docs/frontend/artist-wall.md)) |
-| `index-headers/` | Codex photos for the /albums, /artists, /stats, /shuffle and browse-page headers: a shop ledge, a poster wall, record shelving, a spotlit rail behind a shop counter, a record-fair stall (`browse`), a shop window (`facet`) and a pressing plant's sample wall (`coloured`), each with a row of green slots | `public/index-headers/`, `src/config/index-headers.json` | `scripts/process-index-headers.py` ([docs](../docs/frontend/index-headers.md)) |
+| `index-headers/` | Codex photos for the /albums, /artists, /stats, /shuffle, /genres, /search, /tv/guide and browse-page headers: a shop ledge, a poster wall, record shelving, a spotlit rail behind a shop counter, a record-fair stall (`browse`), a shop window (`facet`), a pressing plant's sample wall (`coloured`), a radio studio's record shelf (`genres`), an archive's card catalogue (`search`) and a TV shop's window (`guide`, the screens green), each with a row of green slots | `public/index-headers/`, `src/config/index-headers.json` | `scripts/process-index-headers.py` ([docs](../docs/frontend/index-headers.md)) |
 | `textures/` | `poster-wear.png`, the scuffed-ink texture on every artist poster | `public/artist-walls/poster-wear.webp` | `scripts/process-artist-walls.py` |
 | `tv-rooms/` | Codex `/tv` rooms, one per room id | `public/tv-rooms/` | Keyed by hand in September 2026; there is no script yet |
 
@@ -20,7 +20,7 @@ prompt log (prompt, size, date).
 ```bash
 uv run --with numpy --with scipy --with opencv-python-headless --with pillow scripts/process-release-rooms.py [room-id ...]
 uv run --with numpy --with scipy --with pillow scripts/process-artist-walls.py [room-id ...]
-uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle|browse|facet|coloured]
+uv run --with numpy --with scipy --with pillow scripts/process-index-headers.py [albums|artists|stats|shuffle|browse|facet|coloured|genres|search|guide]
 ```
 
 With no ids, each script does every original in its folder.

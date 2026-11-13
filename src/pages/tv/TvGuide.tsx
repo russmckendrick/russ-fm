@@ -2,9 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FloodBand, useRecordsFlood } from '@/components/player';
+import { SleeveRoom, type RoomSleeve } from '@/components/browse/SleeveRoom';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+import { indexRoomSlots } from '@/lib/indexHeaders';
 import { floodFor } from '@/lib/sleeveColour';
-import { onAir, slotsBetween, videoPath, type TvArtistListing, type TvChannel } from '@/lib/tv';
+import { onAir, slotsBetween, videoPath, youTubeThumb, type TvArtistListing, type TvChannel } from '@/lib/tv';
 import { cn } from '@/lib/utils';
 import { TvArtistChannels } from './TvArtistChannels';
 
@@ -33,7 +35,14 @@ export function TvGuide({ channels, artists, videoCount }: { channels: TvChannel
 
   // The band takes the colour of what is on the first channel right now.
   const lead = channels[0]?.items[onAir(channels[0], now).index];
-  const band = useRecordsFlood([lead?.album.uri_release]);
+  const band = useRecordsFlood([lead?.album.uri_release], undefined, true);
+  // The header photo: a TV shop's window, each set tuned to one of the first channels.
+  const sets = channels.slice(0, indexRoomSlots('guide')).map(ch => ({ ch, airing: ch.items[onAir(ch, now).index] }));
+  const shopWindow: RoomSleeve[] = sets.map(({ ch, airing }) => ({
+    uri: airing.album.uri_release,
+    to: `/tv/${ch.slug}`,
+    label: `CH ${ch.number} · ${ch.name}: ${airing.artist}, ${airing.title}`,
+  }));
 
   const rows = useMemo(
     () => channels.map(ch => ({ ch, slots: slotsBetween(ch, from, to) })),
@@ -45,7 +54,21 @@ export function TvGuide({ channels, artists, videoCount }: { channels: TvChannel
 
   return (
     <>
-      <FloodBand flood={band}>
+      <SleeveRoom
+        room="guide"
+        tint={band?.top ?? 'transparent'}
+        sleeves={shopWindow}
+        renderInside={(_, i) => (
+          <>
+            <img src={youTubeThumb(sets[i].airing.id, 'hq')} alt="" decoding="async" />
+            <span className="tv-scan" aria-hidden />
+            <span className="guide-set-osd t-mono" aria-hidden>
+              CH {sets[i].ch.number}
+            </span>
+          </>
+        )}
+      />
+      <FloodBand flood={band} glass>
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <h1 className="t-disp m-0 text-[44px] md:text-[64px] lg:text-[96px]">Guide</h1>
           <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">

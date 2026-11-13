@@ -4,7 +4,9 @@ import { Search, X } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { PageContainer } from '@/components/layout';
 import { FloodBand, useRecordsFlood } from '@/components/player';
+import { SleeveRoom, type RoomSleeve } from '@/components/browse/SleeveRoom';
 import { useCollection } from '@/lib/collection';
+import { indexRoomSlots } from '@/lib/indexHeaders';
 import { SearchResults } from '@/components/SearchResults';
 import { useManualSearch } from '@/hooks/useSearch';
 import { cn } from '@/lib/utils';
@@ -70,9 +72,12 @@ export function SearchResultsPage() {
   const leadUris = useMemo(() => {
     const hits = results.filter(r => r.type === 'album').map(r => r.url);
     if (hits.length) return hits;
-    return [...collection].sort((a, b) => b.date_added.localeCompare(a.date_added)).slice(0, 3).map(a => a.uri_release);
+    return [...collection].sort((a, b) => b.date_added.localeCompare(a.date_added)).slice(0, indexRoomSlots('search')).map(a => a.uri_release);
   }, [results, collection]);
-  const flood = useRecordsFlood(leadUris);
+  const flood = useRecordsFlood(leadUris, undefined, true);
+  // The header photo: the archive's card catalogue, the first album results (or the latest additions) stood on top.
+  const titles = useMemo(() => new Map(collection.map(a => [a.uri_release, `${a.release_name.trim()} by ${a.release_artist}`])), [collection]);
+  const found: RoomSleeve[] = leadUris.slice(0, indexRoomSlots('search')).map(uri => ({ uri, to: uri, label: titles.get(uri) ?? 'View album' }));
 
   const filters: Array<{ value: TypeFilter; label: string; count: number }> = [
     { value: 'all', label: 'All', count: results.length },
@@ -82,7 +87,8 @@ export function SearchResultsPage() {
 
   return (
     <>
-      <FloodBand flood={flood}>
+      <SleeveRoom room="search" tint={flood?.top ?? 'transparent'} sleeves={found} />
+      <FloodBand flood={flood} glass>
         <header className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
           <h1 className="t-disp m-0 text-[44px] md:text-[72px] lg:text-[96px]">Search</h1>
           {query && !busy && (

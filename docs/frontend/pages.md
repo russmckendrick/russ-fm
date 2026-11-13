@@ -723,6 +723,13 @@ B1–B6 like a record's sides, with the oldest records (by `originalYear()`)
 at the rim and the newest by the label. The ranked list and A–Z still come
 from `getGenreExplorer()`.
 
+The page opens on a header photo (`SleeveRoom room="genres"`, a radio station's
+record library, see [index headers](./index-headers.md)): the six biggest
+families each have their newest sleeve on the shelf, linking to
+`/genres?family=<key>`. The title, detail and record sit below it in a
+`FloodBand glass`, and the header is see-through over the photo
+(`usePageBand(band, true)`).
+
 **Route:** `/genres`
 
 **URL Parameters:**
@@ -935,7 +942,10 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   one round to the one before this, as a wrapping grid with the channel's video count)
   and **Channels**, each tile in the colour of what it is airing now (refreshed every
   30 seconds).
-- **Guide** (`src/pages/tv/TvGuide.tsx`): a `FloodBand` in the colour of what channel
+- **Guide** (`src/pages/tv/TvGuide.tsx`): a header photo (`SleeveRoom room="guide"`,
+  a TV shop's window: each of its five sets shows a YouTube still of what is airing on
+  one of the first five channels, with scanlines and the channel number, and links to
+  that channel), a `FloodBand glass` warmed by the colour of what channel
   01 is airing, then a half-hour grid of every channel from the current half hour
   (earlier/later buttons, up to three hours ahead). Blocks are sized by duration and
   coloured by sleeve; finished ones are dimmed, the one on air is outlined, and a line
@@ -968,7 +978,10 @@ shadowed (none is). The data files under `public/explore/` are served as files b
 
 **Route:** `/search`
 
-`Search` title with the result count, a search field, pills to filter by
+A header photo (`SleeveRoom room="search"`, an archive's card catalogue: the
+first six album results stand on it, or the latest additions before a search or
+when only artists match, each linking to its record), then on glass
+(`FloodBand glass`) the `Search` title with the result count; below, a search field, pills to filter by
 All / Albums / Artists (with counts), then `SearchResults` in the `grid`
 layout.
 

@@ -265,11 +265,12 @@ Genre colours for the lists come from [`genreColours.ts`](./utilities.md#genre-c
   turns to mush at 16px.
 - `TvMark` (`size`, `cover`, `screen`): the header logo on `/tv` pages, a small CRT in
   the header's text colour with the page's sleeve on its screen.
-- `Scrubber` (`elapsed`, `duration`, `onSeek`): the progress line along a bar's top
+- `Scrubber` (`elapsed`, `duration`, `onSeek`): the progress line along a bar's
   edge as a `role="slider"`. Pointer click/drag (pointer capture, touch-friendly),
   a taller hit area than the line, a knob and time bubble while dragging, and arrow /
   Page / Home / End keys. `tv-scrub-inset` keeps it inside a clipped box (the
-  full-screen bar). Used on /tv's now-playing band, the full-screen credit and the
+  full-screen bar); `tv-scrub-foot` runs it along the bottom edge of a glass band,
+  on a pale track. Used on /tv's now-playing band, the full-screen credit and the
   album page's `AlbumTv` row.
 - `AlbumTv` is the album page's YouTube tab: a mini russ.fm/tv. It builds the
   record's own channel from `tv.json` (`albumChannel()` in `src/lib/tv.ts`: release
@@ -277,8 +278,10 @@ Genre colours for the lists come from [`genreColours.ts`](./utilities.md#genre-c
   the album URL) and shows the room (`TvRoom` at
   `zoom={1.5}`, a little closer than /tv, so the set fills most of the box, with
   a YouTube still under the glass via its `picture` prop until switched on), a
-  slim sleeve-coloured now-playing row
-  (progress along the top, a `Scrubber` like /tv's once it is on, so you can
+  slim now-playing row on glass over the bottom of the room (`.glass-band
+  .album-tv-band`, laid over the photo at every width; `useGlassBand` gives the
+  room its `bottomInset`; the sleeve colour only warms the glass)
+  (progress along the bottom edge, a `Scrubber` like /tv's once it is on, so you can
   drag or click to seek; previous/play/next, position and title, then
   icon buttons for sound, full screen, YouTube and /tv; the /tv one links to the
   video on the channel it airs on, `item.airsOn`: the record's genre channel, or

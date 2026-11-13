@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useState, type SyntheticEvent } from 'react';
+import { useCallback, useEffect, useState, type CSSProperties, type SyntheticEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
 import { Scrubber } from './Scrubber';
 import { SoundIcon } from './SoundIcon';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+import { useGlassBand } from '@/hooks/useGlassBand';
+import { GLASS_TONE } from '@/lib/glassBand';
 import { floodFor } from '@/lib/sleeveColour';
 import { albumChannel, albumVideosRelease, formatDuration, loadTv, TV_ROOMS, videoPath, youTubeThumb, type TvChannel } from '@/lib/tv';
 import { cn } from '@/lib/utils';
@@ -88,6 +90,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
   const on = tv.active && tv.channel?.slug === channel.slug;
   const [picked, setPicked] = useState(0);
+  const [bandRef, bandInset] = useGlassBand<HTMLElement>();
   // The videos still worth showing: dead ones (refused by YouTube, or with a
   // missing thumbnail) drop out of the list, the count and next/previous.
   const live = channel.items.map((_, i) => i).filter(i => !tv.dead.has(channel.items[i].id));
@@ -139,7 +142,6 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
   };
 
   const btn = { background: f.ink, color: f.flood };
-  const outline = { color: f.ink };
   const many = live.length > 1;
   // Every video has turned out dead.
   if (!live.length) {
@@ -148,12 +150,14 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
   return (
     <div className="tv overflow-hidden rounded-[14px]">
+      <div className="relative">
       <TvRoom
         room={room}
         tint={f.flood}
         slotRef={on ? slotRef : undefined}
         zoom={1.5}
-        className="h-[260px] sm:h-[340px] lg:h-[400px]"
+        bottomInset={bandInset}
+        className="h-[320px] sm:h-[400px] lg:h-[470px]"
         picture={
           on ? undefined : (
             <>
@@ -196,32 +200,27 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
         }
       />
 
-      {/* Now playing: one slim row, with the progress along the top: a
-          scrubber like /tv's while it's on, a plain line before. */}
-      <section className="tv-band relative px-3 pb-3 pt-4 md:px-4" style={{ background: f.flood, color: f.ink }} aria-label="Now playing">
-        {on ? (
-          <Scrubber elapsed={elapsed} duration={duration} onSeek={seek} />
-        ) : (
-          <div className="absolute inset-x-0 top-0 h-1.5 bg-[rgba(0,0,0,.35)]" aria-hidden />
-        )}
-
+      {/* Now playing: one slim row on glass over the room, as on /tv, with the
+          progress along its bottom edge: a scrubber while it's on, a plain
+          line before. */}
+      <section ref={bandRef} className="glass-band album-tv-band px-3 pb-4 md:px-4" style={{ '--band-tint': f.flood } as CSSProperties} aria-label="Now playing">
         <div className="flex items-center gap-2 md:gap-3">
           {many && (
-            <button type="button" className="icon-btn h-9 w-9 shrink-0" style={btn} onClick={() => step(-1)} aria-label="Previous video">
+            <button type="button" className="icon-btn h-9 w-9 shrink-0 border-2 border-current" onClick={() => step(-1)} aria-label="Previous video">
               <SkipBack className="h-4 w-4 fill-current" aria-hidden />
             </button>
           )}
-          <button type="button" className="icon-btn h-11 w-11 shrink-0" style={btn} onClick={playPause} aria-label={on && player.playing ? 'Pause' : 'Play'}>
+          <button type="button" className="icon-btn h-11 w-11 shrink-0" style={GLASS_TONE} onClick={playPause} aria-label={on && player.playing ? 'Pause' : 'Play'}>
             {on && player.playing ? <Pause className="h-5 w-5 fill-current" aria-hidden /> : <Play className="h-5 w-5 fill-current" aria-hidden />}
           </button>
           {many && (
-            <button type="button" className="icon-btn h-9 w-9 shrink-0" style={btn} onClick={() => step(1)} aria-label="Next video">
+            <button type="button" className="icon-btn h-9 w-9 shrink-0 border-2 border-current" onClick={() => step(1)} aria-label="Next video">
               <SkipForward className="h-4 w-4 fill-current" aria-hidden />
             </button>
           )}
 
           <div className="ml-1 min-w-0 flex-1">
-            <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] opacity-75 md:text-[11px]">
+            <p className="glass-sub t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
               {position + 1} of {live.length}
               {on ? ` · ${formatDuration(elapsed)}` : ''}
               {duration ? `${on ? ' / ' : ' · '}${formatDuration(duration)}` : ''}
@@ -235,7 +234,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
             <button
               type="button"
               className={cn('icon-btn h-9 w-9 shrink-0', !player.muted && 'border-2 border-current')}
-              style={player.muted ? btn : outline}
+              style={player.muted ? GLASS_TONE : undefined}
               onClick={player.muted ? player.unmute : player.mute}
               aria-label={player.muted ? 'Sound on' : 'Mute'}
               title={player.muted ? 'Sound on' : 'Mute'}
@@ -244,7 +243,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
             </button>
           )}
           {on && (
-            <button type="button" className="icon-btn hidden h-9 w-9 shrink-0 border-2 border-current sm:inline-flex" style={outline} onClick={tv.toggleFullscreen} aria-label="Full screen" title="Full screen">
+            <button type="button" className="icon-btn hidden h-9 w-9 shrink-0 border-2 border-current sm:inline-flex" onClick={tv.toggleFullscreen} aria-label="Full screen" title="Full screen">
               <Maximize className="h-4 w-4" aria-hidden />
             </button>
           )}
@@ -253,7 +252,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
             target="_blank"
             rel="noopener noreferrer"
             className="icon-btn hidden h-9 w-9 shrink-0 border-2 border-current sm:inline-flex"
-            style={outline}
+           
             aria-label="Watch on YouTube"
             title="Watch on YouTube"
           >
@@ -262,14 +261,21 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
           <Link
             to={item.airsOn ? videoPath(item.airsOn, item) : '/tv'}
             className="icon-btn hidden h-9 w-9 shrink-0 border-2 border-current sm:inline-flex"
-            style={outline}
+           
             aria-label="Watch on russ.fm/tv"
             title="Watch on russ.fm/tv"
           >
             <Tv className="h-4 w-4" aria-hidden />
           </Link>
         </div>
+
+        {on ? (
+          <Scrubber className="tv-scrub-foot" elapsed={elapsed} duration={duration} onSeek={seek} />
+        ) : (
+          <div className="absolute inset-x-0 bottom-0 h-1.5 bg-[rgba(255,255,255,.22)]" aria-hidden />
+        )}
       </section>
+      </div>
 
       {/* The running order. */}
       {many && (
