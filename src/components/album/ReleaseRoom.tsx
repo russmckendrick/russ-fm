@@ -113,8 +113,9 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
  * whole room.
  *
  * A room with `arm` has no tonearm in its photo; RoomArm draws one in 3D. It
- * cues in once the room shows, and between two records in that room it lifts
- * and parks before the record swaps, then cues back in.
+ * cues in once the room shows, and before the next record it lifts and parks:
+ * then the record swaps under it (same room) or the room crossfades (another
+ * room), and the arm cues back in.
  */
 export function ReleaseRoom({ records, active, tint, fast = false, overlay, topInset, bottomInset = 0, zoom = 1.5, className }: ReleaseRoomProps) {
   const box = useRef<HTMLDivElement>(null);
@@ -134,18 +135,25 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
 
   // The record on show: the active one once its room's photo is ready; until
   // then the previous one stays, so switching never fades through black. In a
-  // room with a 3D arm, a record in the same room waits for the arm to park.
+  // room with a 3D arm, the arm lifts and parks first, whether the next record
+  // is in this room (the record swaps under it) or another (the room crossfades).
   const [shown, setShown] = useState(active);
+  // The record whose arm has parked, ready for the swap.
+  const [parked, setParked] = useState<number | null>(null);
   const target = records[active];
-  const parkFirst = !!target && shown !== active && target.room.id === records[shown]?.room.id && !!target.room.arm;
-  if (shown !== active && target && loaded.has(target.room.id) && !parkFirst) setShown(active);
+  const parkFirst = !!target && shown !== active && !!records[shown]?.room.arm && parked !== shown;
+  if (shown !== active && target && loaded.has(target.room.id) && !parkFirst) {
+    setShown(active);
+    setParked(null);
+  }
+  if (shown === active && parked !== null) setParked(null);
   const current = records[shown] ?? records[active];
   // If the arm never reports back (no WebGL), swap anyway.
   useEffect(() => {
     if (!parkFirst) return;
-    const t = window.setTimeout(() => setShown(active), 3500);
+    const t = window.setTimeout(() => setParked(shown), 3500);
     return () => window.clearTimeout(t);
-  }, [parkFirst, active]);
+  }, [parkFirst, shown]);
   const currentRoom = current?.room.id ?? null;
   // Only the rooms in play are mounted (a decoded photo is tens of MB): the one
   // on show, the active and next records' (loading) and the one fading out.
@@ -240,7 +248,7 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
                   fast={fast}
                   down={on && loaded.has(room.id) && !parkFirst}
                   onSettled={down => {
-                    if (!down && on && parkFirst) setShown(active);
+                    if (!down && on && parkFirst) setParked(shown);
                   }}
                 />
               )}

@@ -67,11 +67,11 @@ three.js (`src/lib/tonearm.ts`, loaded lazily on first use):
   redrawn at 30 fps. Otherwise it draws only while it moves. Reduced motion
   jumps straight to the pose with no warp; without WebGL there is no arm.
 
-`ReleaseRoom` drives it. The arm cues in once its room shows. When the next
-record is in the same room, the record waits for the arm to park, swaps, and
-the arm cues back in (if the arm never reports back, the record swaps after
-3.5 s anyway). A record in another room crossfades the whole room as before,
-and the new room's arm cues in.
+`ReleaseRoom` drives it. The arm cues in once its room shows. Before the
+next record it lifts and parks, whichever room that record is in: then the
+record swaps under it (same room) or the whole room crossfades (another room,
+once its photo has loaded), and the arm cues back in. If the arm never reports
+back, the swap goes ahead after 3.5 s anyway.
 
 ### Scrobble clouds
 
