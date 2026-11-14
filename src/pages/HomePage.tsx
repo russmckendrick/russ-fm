@@ -25,6 +25,7 @@ import {
   usePageFlood,
 } from '@/components/player';
 import { ReleaseRoom, type RoomRecord } from '@/components/album/ReleaseRoom';
+import { ARM_MOVE_MS } from '@/components/album/RoomArm';
 import { releaseRoomFor } from '@/lib/releaseRooms';
 
 interface FeaturedDetail {
@@ -38,6 +39,8 @@ interface HeroDetailJson {
 
 const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
 const HERO_MS = appConfig.homepage.hero.autoRotateInterval;
+/** The arm starts to park this long before the timer is up, so it has just settled when the record changes. */
+const PARK_LEAD_MS = ARM_MOVE_MS + 120;
 
 export function HomePage() {
   usePageTitle('Russ.fm - Personal Record Collection');
@@ -69,7 +72,12 @@ export function HomePage() {
 /* --------------------------------------------------------------- Hero -- */
 
 function Hero({ featured, colours }: { featured: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
+  // `index` is the record asked for (the controls follow it at once); `view`
+  // is the one the room is showing, which trails it while the arm parks. The
+  // credit and the colours follow the room, so everything changes together.
   const [index, setIndex] = useState(0);
+  const [view, setView] = useState(0);
+  const [ending, setEnding] = useState(false);
   const [bandRef, bandInset] = useGlassBand<HTMLElement>();
   const [details, setDetails] = useState<Record<string, FeaturedDetail>>({});
   const reduced = useRef(
@@ -97,8 +105,8 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   }, [count]);
 
   const floods: Flood[] = featured.map(a => floodFor(colours?.[a.uri_release]));
-  const current = featured[index];
-  const flood = floods[index] ?? floodFor(null);
+  const current = featured[view] ?? featured[index];
+  const flood = floods[view] ?? floods[index] ?? floodFor(null);
   usePageFlood(
     current ? flood.flood : null,
     current ? flood.ink : null,
@@ -119,6 +127,14 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [featured.map(a => a.uri_release).join('|'), colours],
   );
+
+  // Auto-rotating, the arm lifts off just before the timer is up.
+  useEffect(() => {
+    setEnding(false);
+    if (reduced.current || count < 2) return;
+    const t = window.setTimeout(() => setEnding(true), Math.max(0, HERO_MS - PARK_LEAD_MS));
+    return () => window.clearTimeout(t);
+  }, [index, count]);
 
   if (!current) {
     return <div className="h-[70vh] bg-[color:var(--ground)]" aria-busy="true" />;
@@ -171,6 +187,8 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
         <ReleaseRoom
           records={records}
           active={index}
+          ending={ending}
+          onShown={setView}
           tint={flood.flood}
           bottomInset={bandInset}
           className="h-[clamp(460px,78svh,940px)] lg:h-[clamp(620px,96svh,1100px)]"
@@ -181,7 +199,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
           {/* The records' credits share one grid cell, so the band never changes height between them. */}
           <div className="grid min-w-0 flex-1">
             {featured.map((album, i) => {
-              const on = i === index;
+              const on = i === view;
               const d = details[album.uri_release];
               const kicker = [
                 originalYear(album),

@@ -73,6 +73,16 @@ record swaps under it (same room) or the whole room crossfades (another room,
 once its photo has loaded), and the arm cues back in. If the arm never reports
 back, the swap goes ahead after 3.5 s anyway.
 
+When the park happens depends on who knows the change is coming. The home
+hero sets `ending` about two seconds before its timer is up
+(`ARM_MOVE_MS` plus a little), so the arm parks at its normal pace and the
+swap lands the moment `active` changes. A change with no warning (a click on
+next, previous or a numbered bar) parks at twice the speed (`quick`) and then
+swaps. Either way `onShown` reports the record actually on show, which the
+hero uses for its credit and colours, so the text never runs ahead of the
+room. Of the hero's 10 s per record, the arm cues in for about 2.5 s, plays
+for about 5.5 s and parks for 2 s.
+
 ### Scrobble clouds
 
 Scrobbling from the album band doesn't speed the record up. Instead

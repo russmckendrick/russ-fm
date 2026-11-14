@@ -12,12 +12,18 @@ interface RoomArmProps {
   onSettled?: (down: boolean) => void;
   /** The record is spinning at 45 (scrobbling): the warp comes round faster. */
   fast?: boolean;
+  /** Park in about half the time: someone asked for the next record and is waiting. */
+  quick?: boolean;
 }
 
 // Timings of the cue and the swing, ms.
 const LIFT_MS = 380;
 const SWING_MS = 950;
 const LOWER_MS = 650;
+/** How long the arm takes to lift, swing and settle (to park, or to play after the cue's delay). */
+export const ARM_MOVE_MS = LIFT_MS + SWING_MS + LOWER_MS;
+/** A quick park's share of that. */
+const QUICK = 0.5;
 /** Before it cues in: lets a room or a record crossfade in first. */
 const CUE_DELAY_MS = 500;
 
@@ -47,12 +53,14 @@ const easeSettle = (t: number) => 1 - Math.pow(1 - t, 3) * Math.cos(t * 2.2);
  * renderer (src/lib/tonearm.ts) and copied onto this 2D canvas, so a new room
  * costs no new WebGL context or shaders. Without WebGL it draws nothing.
  */
-export function RoomArm({ room, img, down, onSettled, fast = false }: RoomArmProps) {
+export function RoomArm({ room, img, down, onSettled, fast = false, quick = false }: RoomArmProps) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const [arm, setArm] = useState<Tonearm | null>(null);
   const pose = useRef<ArmPose | null>(null);
   const settled = useRef(onSettled);
   settled.current = onSettled;
+  const hurry = useRef(quick);
+  hurry.current = quick;
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
@@ -95,11 +103,12 @@ export function RoomArm({ room, img, down, onSettled, fast = false }: RoomArmPro
       return;
     }
     // Lift, swing, lower; each from wherever the last move left the arm.
+    const k = !down && hurry.current ? QUICK : 1;
     const steps: { ms: number; to: Partial<ArmPose>; ease?: (t: number) => number }[] = [
       ...(down ? [{ ms: CUE_DELAY_MS, to: {} }] : []),
-      { ms: LIFT_MS, to: { lift: 1 } },
-      { ms: SWING_MS, to: { yaw: goal.yaw } },
-      { ms: LOWER_MS, to: { lift: goal.lift }, ease: easeSettle },
+      { ms: LIFT_MS * k, to: { lift: 1 } },
+      { ms: SWING_MS * k, to: { yaw: goal.yaw } },
+      { ms: LOWER_MS * k, to: { lift: goal.lift }, ease: easeSettle },
     ];
     let frame = 0;
     let step = 0;

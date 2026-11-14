@@ -29,6 +29,14 @@ interface ReleaseRoomProps {
   tint: string;
   /** Spin at 45 (while Shuffle deals). */
   fast?: boolean;
+  /**
+   * The record on show is about to change (the home hero's timer is nearly
+   * up): the arm lifts and parks now, at its own pace, so the swap can happen
+   * the moment `active` changes. Without it the arm parks, quickly, after the change.
+   */
+  ending?: boolean;
+  /** Called with the index of the record on show whenever it changes (it trails `active` while the arm parks or a photo loads). */
+  onShown?: (index: number) => void;
   /** Laid over the whole room, given its size, the header's inset (`top`) and where the record on show sits (the album page's scrobble clouds). */
   overlay?: (room: { width: number; height: number; top: number; record: { x: number; y: number } }) => ReactNode;
   /** Pixels at the top covered by the see-through header (its height by default); the stand centres below them. */
@@ -115,9 +123,10 @@ function layout(room: Room, w: number, fullH: number, zoom: number, inset: numbe
  * A room with `arm` has no tonearm in its photo; RoomArm draws one in 3D. It
  * cues in once the room shows, and before the next record it lifts and parks:
  * then the record swaps under it (same room) or the room crossfades (another
- * room), and the arm cues back in.
+ * room), and the arm cues back in. Told a change is coming (`ending`) it parks
+ * ahead of it; otherwise it parks quickly once `active` has changed.
  */
-export function ReleaseRoom({ records, active, tint, fast = false, overlay, topInset, bottomInset = 0, zoom = 1.5, className }: ReleaseRoomProps) {
+export function ReleaseRoom({ records, active, tint, fast = false, ending = false, onShown, overlay, topInset, bottomInset = 0, zoom = 1.5, className }: ReleaseRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   // A room shows once its photo has loaded, so the record never shows without the room round it.
@@ -146,8 +155,15 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
     setShown(active);
     setParked(null);
   }
-  if (shown === active && parked !== null) setParked(null);
   const current = records[shown] ?? records[active];
+  // The arm is down unless a swap is waiting on it or one is coming.
+  const armDown = !!current && loaded.has(current.room.id) && !parkFirst && !(ending && shown === active);
+  if (armDown && shown === active && parked !== null) setParked(null);
+  const shownCb = useRef(onShown);
+  shownCb.current = onShown;
+  useEffect(() => {
+    shownCb.current?.(shown);
+  }, [shown]);
   // If the arm never reports back (no WebGL), swap anyway.
   useEffect(() => {
     if (!parkFirst) return;
@@ -246,9 +262,11 @@ export function ReleaseRoom({ records, active, tint, fast = false, overlay, topI
                   room={room}
                   img={g.img}
                   fast={fast}
-                  down={on && loaded.has(room.id) && !parkFirst}
+                  down={on && armDown}
+                  quick={parkFirst}
                   onSettled={down => {
-                    if (!down && on && parkFirst) setParked(shown);
+                    // Parked with a swap waiting or coming; not the rest it starts from.
+                    if (!down && on && (parkFirst || ending)) setParked(shown);
                   }}
                 />
               )}

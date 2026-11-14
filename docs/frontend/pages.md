@@ -114,7 +114,13 @@ The home page sections are local components in `HomePage.tsx`; the old
   buttons; there is no pause control. Only the record on show spins. The active bar is a CSS animation (`.hero-progress`
   in `src/styles/player.css`, `scaleX` 0 → 1 over `autoRotateInterval`)
   and its `onAnimationEnd` advances to the next record, so there is no
-  interval timer. Under
+  interval timer. The bars follow the record asked for at once; the credit
+  and the page's colours follow the record the room is showing
+  (`ReleaseRoom`'s `onShown`), so they change with the sleeve and the room.
+  About two seconds before the bar fills, the hero tells the room the record
+  is `ending` and the arm lifts and parks, so the swap lands as the bar
+  completes; picking a record by hand parks the arm quickly first (see
+  [release room](./release-room.md#the-tonearm)). Under
   `prefers-reduced-motion` there is no bar and no auto-rotation. The
   featured releases' detail JSON is prefetched through `loadDetailJson()`,
   so opening one from the hero needs no further fetch.
@@ -151,7 +157,7 @@ record's `json_detailed_release`.
 homepage: {
   hero: {
     numberOfFeaturedAlbums: 8, // records in the hero rotation
-    autoRotateInterval: 7000,  // ms per record
+    autoRotateInterval: 10000, // ms per record
   },
   recentlyAdded: { displayCount: 16 },
   randomCollection: { displayCount: 12 },
