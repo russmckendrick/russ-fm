@@ -84,14 +84,21 @@ cloud with its position and title on it. It is drawn with three.js
 - **Camera.** A perspective camera placed so the z = 0 plane maps 1:1 onto
   the room's box, so clouds start at the record's centre (the photo's
   `fx`, `fy`) wherever the layout puts it.
-- **Clouds.** Each one is built from lumpy spheres: a flat-bottomed base, a
-  row of puffs along the label, big billows on top, a crown, and some fill
-  behind so it reads round as it turns. The label is a canvas texture
+- **Clouds.** Each one is built from lumpy, smooth-shaded spheres: a
+  flat-bottomed base, a row of puffs along the label, billows of uneven size
+  on top (one of them a taller crown, off-centre), small puffs tucked in round
+  the ends, and some fill behind so it reads round as it turns. A soft glow
+  on a plane behind hazes the silhouette. The label is a canvas texture
   (display font, mono position) on a plane just in front, with an empty
   ring that fills with a red tick once the count passes the track.
-- **Light.** A warm key from the upper left, a point light in the room's
-  flood from the upper right, a dark red bounce from below, and a faint studio
-  environment.
+- **Light.** The puffs have their own shader (`PUFF_FRAGMENT`), not a lit
+  three.js material: lit puff by puff a cloud looks like a pile of balls. Each
+  puff's normal is blended with the normal of the whole cloud (an ellipsoid
+  round its centre), so the cloud takes the light as one soft volume and the
+  puffs only add relief. A warm key from the upper left, a cool mauve shadow
+  that deepens towards the underside, darker creases between puffs, the
+  room's flood from the upper right and bounced up from below, and a faint
+  glow at the silhouette. There are no scene lights or environment map.
 - **Motion.** A cloud pops up off the record, rises on a gentle S-curve while
   it turns, edges towards the camera, and evaporates puff by puff, the edges
   first (`CLOUD_DRIFT_MS`, 6s). Each rise is capped so the cloud has gone before it reaches the header (`ReleaseRoom` passes its `topInset` as the ceiling). When Last.fm answers, a bigger cloud
