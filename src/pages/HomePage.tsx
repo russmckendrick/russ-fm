@@ -46,7 +46,7 @@ export function HomePage() {
   const albums = useMemo(() => excludeBoxsetMembers(collection), [collection]);
 
   const recent = useMemo(
-    () => [...albums].sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime()),
+    () => [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added)),
     [albums],
   );
   const featured = recent.slice(0, HERO_COUNT);

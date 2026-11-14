@@ -208,10 +208,114 @@ function buildArm() {
   return { yaw, pitch, tip, path, satin, chrome, rubber };
 }
 
-/** Throws when WebGL is unavailable. */
-export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom, 'record' | 'arm'>): Tonearm {
+// ---------- the shared renderer ----------
+/**
+ * One WebGL renderer, environment map and arm model for every room. Building
+ * them (a context, the shaders, the textures) blocks the main thread for a
+ * good part of a second on a slow machine, so it happens once per visit
+ * rather than once per room: a room only adds its own few meshes (shadow
+ * catchers, arm rest, spindle) and its camera, and draws by rendering into the
+ * shared canvas and copying the frame onto its own 2D canvas.
+ */
+interface Engine {
+  renderer: THREE.WebGLRenderer;
+  scene: THREE.Scene;
+  env: THREE.Texture;
+  key: THREE.DirectionalLight;
+  rim: THREE.DirectionalLight;
+  arm: ReturnType<typeof buildArm>;
+  recordShadow: THREE.ShadowMaterial;
+  plinthShadow: THREE.ShadowMaterial;
+  /** The room whose meshes, lights and arm placement are in the scene. */
+  active: object | null;
+  /** Resolves once the shaders have compiled (off the main thread where the browser can). */
+  ready: Promise<void> | null;
+  /** Rooms holding the engine; it is disposed a while after the last lets go. */
+  users: number;
+  idle: number;
+}
+
+let engine: Engine | null = null;
+/** How long the renderer outlives its last room, so moving between pages with rooms reuses it. */
+const ENGINE_IDLE_MS = 30_000;
+
+function getEngine(): Engine {
+  if (engine) return engine;
+  const renderer = new THREE.WebGLRenderer({ canvas: document.createElement('canvas'), antialias: true, alpha: true });
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.85;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.setClearColor(0x000000, 0);
+  // Asking for the link status makes the browser finish compiling there and then.
+  renderer.debug.checkShaderErrors = false;
+  renderer.setPixelRatio(1);
+
+  const scene = new THREE.Scene();
+  // A neutral studio for reflections, so the metal reads as steel; the room's warmth comes from the lights.
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const env = pmrem.fromScene(new RoomEnvironment(), 0.03).texture;
+  scene.environment = env;
+  pmrem.dispose();
+  scene.add(new THREE.HemisphereLight(0xffe2c0, 0x2a1508, 0.35));
+  const key = new THREE.DirectionalLight(0xffd9b0, 1.8);
+  key.castShadow = true;
+  key.shadow.mapSize.set(2048, 2048);
+  key.shadow.radius = 5;
+  key.shadow.bias = -0.0004;
+  const rim = new THREE.DirectionalLight(0xff9a50, 1.3);
+  const arm = buildArm();
+  scene.add(key, rim, arm.yaw);
+
+  engine = {
+    renderer,
+    scene,
+    env,
+    key,
+    rim,
+    arm,
+    // Shadow catchers: they only darken; the photo gives the colour.
+    recordShadow: new THREE.ShadowMaterial({ opacity: 0.5 }),
+    plinthShadow: new THREE.ShadowMaterial({ opacity: 0.42 }),
+    active: null,
+    ready: null,
+    users: 0,
+    idle: 0,
+  };
+  return engine;
+}
+
+function disposeEngine() {
+  const e = engine;
+  if (!e || e.users > 0) return;
+  engine = null;
+  const materials = new Set<THREE.Material>([e.recordShadow, e.plinthShadow]);
+  e.scene.traverse(o => {
+    if (o instanceof THREE.Mesh) {
+      o.geometry.dispose();
+      for (const m of Array.isArray(o.material) ? o.material : [o.material]) materials.add(m);
+    }
+  });
+  for (const m of materials) {
+    for (const v of Object.values(m)) if (v instanceof THREE.Texture) v.dispose();
+    m.dispose();
+  }
+  e.env.dispose();
+  e.renderer.dispose();
+  e.renderer.forceContextLoss();
+}
+
+/**
+ * A room's arm, drawn on `canvas` (a 2D canvas). Rejects when WebGL is
+ * unavailable. The first one of a visit builds the shared renderer and waits
+ * for its shaders; later ones are ready at once.
+ */
+export async function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom, 'record' | 'arm'>): Promise<Tonearm> {
   const pivotPct = room.arm;
   if (!pivotPct) throw new Error('room has no arm pivot');
+  const out = canvas.getContext('2d');
+  if (!out) throw new Error('no 2D canvas');
   const rec = room.record;
   const sx = (rec.x / 100) * PW;
   const sy = (rec.y / 100) * PH;
@@ -229,50 +333,41 @@ export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom,
     scale = Math.hypot(px, pz) / REACH;
   }
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 0.85;
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-  renderer.setClearColor(0x000000, 0);
+  const e = getEngine();
+  window.clearTimeout(e.idle);
+  e.users++;
+  const { renderer, scene, arm, key, rim } = e;
 
-  const scene = new THREE.Scene();
-  // A neutral studio for reflections, so the metal reads as steel; the room's warmth comes from the lights.
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  const env = pmrem.fromScene(new RoomEnvironment(), 0.03).texture;
-  scene.environment = env;
-  pmrem.dispose();
-  scene.add(new THREE.HemisphereLight(0xffe2c0, 0x2a1508, 0.35));
-  const key = new THREE.DirectionalLight(0xffd9b0, 1.8);
-  key.position.set(-260 * scale, 520 * scale, 300 * scale);
-  key.castShadow = true;
-  key.shadow.mapSize.set(2048, 2048);
-  const reach = 420 * scale;
-  Object.assign(key.shadow.camera, { left: -reach, right: reach, top: reach, bottom: -reach, near: 1, far: 3000 * scale });
-  key.shadow.radius = 5;
-  key.shadow.bias = -0.0004;
-  scene.add(key);
-  const rim = new THREE.DirectionalLight(0xff9a50, 1.3);
-  rim.position.set(500 * scale, 260 * scale, -400 * scale);
-  scene.add(rim);
-
-  // Shadow catchers: the record, and the plinth round it. They only darken; the photo gives the colour.
+  // This room's own meshes, in the scene only while it draws.
+  const set = new THREE.Group();
   const plinthY = -17 * scale;
-  const recordShadow = new THREE.Mesh(new THREE.CircleGeometry(R * 1.02, 96), new THREE.ShadowMaterial({ opacity: 0.5 }));
+  const recordShadow = new THREE.Mesh(new THREE.CircleGeometry(R * 1.02, 96), e.recordShadow);
   recordShadow.rotation.x = -Math.PI / 2;
   recordShadow.position.y = 0.2;
   recordShadow.receiveShadow = true;
-  const plinthShadow = new THREE.Mesh(new THREE.RingGeometry(R * 1.12, R * 2.2, 96), new THREE.ShadowMaterial({ opacity: 0.42 }));
+  const plinthShadow = new THREE.Mesh(new THREE.RingGeometry(R * 1.12, R * 2.2, 96), e.plinthShadow);
   plinthShadow.rotation.x = -Math.PI / 2;
   plinthShadow.position.y = plinthY;
   plinthShadow.receiveShadow = true;
-  scene.add(recordShadow, plinthShadow);
+  set.add(recordShadow, plinthShadow);
 
-  const arm = buildArm();
-  arm.yaw.scale.setScalar(scale);
-  arm.yaw.position.set(px, PILLAR_H * scale, pz);
-  scene.add(arm.yaw);
+  const token = {};
+  /** Put this room in the shared scene: its meshes, the lights and the arm at its scale. */
+  const activate = () => {
+    if (e.active === token) return;
+    e.active = token;
+    for (const o of [...scene.children]) if (o.userData.roomSet) scene.remove(o);
+    scene.add(set);
+    key.position.set(-260 * scale, 520 * scale, 300 * scale);
+    const reach = 420 * scale;
+    Object.assign(key.shadow.camera, { left: -reach, right: reach, top: reach, bottom: -reach, near: 1, far: 3000 * scale });
+    key.shadow.camera.updateProjectionMatrix();
+    rim.position.set(500 * scale, 260 * scale, -400 * scale);
+    arm.yaw.scale.setScalar(scale);
+    arm.yaw.position.set(px, PILLAR_H * scale, pz);
+  };
+  set.userData.roomSet = true;
+  activate();
 
   const pose = (p: ArmPose) => {
     arm.yaw.rotation.y = p.yaw;
@@ -309,7 +404,7 @@ export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom,
   cradle.position.set(cradleAt.x, top - 2 * scale, cradleAt.z);
   cradle.rotation.y = rest.yaw;
   for (const m of [post, foot, cradle]) m.castShadow = true;
-  scene.add(post, foot, cradle);
+  set.add(post, foot, cradle);
 
   // The centre spindle, poking up through the label: a real one is ~7 mm across
   // and stands ~13 mm proud of a 302 mm record. Polished steel, with a rounded tip.
@@ -323,7 +418,7 @@ export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom,
   tipCap.position.y = spH - spR;
   for (const m of [shaft, tipCap]) m.castShadow = true;
   spindle.add(shaft, tipCap);
-  scene.add(spindle);
+  set.add(spindle);
 
   // The canvas covers the deck: the record's right-hand part, the arm's sweep and the rest.
   const left = Math.max(0, sx - R * 0.35);
@@ -340,38 +435,56 @@ export function createTonearm(canvas: HTMLCanvasElement, room: Pick<ReleaseRoom,
     height: ((bottom - topPx) / PH) * 100,
   };
 
+  let live = true;
+  const release = () => {
+    if (!live) return;
+    live = false;
+    if (e.active === token) e.active = null;
+    scene.remove(set);
+    set.traverse(o => {
+      if (o instanceof THREE.Mesh) o.geometry.dispose();
+    });
+    if (--e.users === 0) e.idle = window.setTimeout(disposeEngine, ENGINE_IDLE_MS);
+  };
+
+  // Every room uses the same materials and lights, so only the first has shaders to wait for.
+  try {
+    e.ready ??= renderer.compileAsync(scene, camera).then(() => {});
+    await e.ready;
+  } catch (err) {
+    release();
+    throw err;
+  }
+
   let last: ArmPose = rest;
-  return {
+  const tonearm: Tonearm = {
     region,
     play,
     rest,
     resize(cssWidth) {
-      const cssHeight = cssWidth * ((bottom - topPx) / (right - left));
       // Capped: a big hero on a 2x screen would otherwise be a very large canvas.
       const ratio = Math.min(window.devicePixelRatio || 1, 2, 2400 / Math.max(1, cssWidth));
-      renderer.setPixelRatio(ratio);
-      renderer.setSize(cssWidth, cssHeight, false);
-      this.draw(last);
+      canvas.width = Math.max(1, Math.round(cssWidth * ratio));
+      canvas.height = Math.max(1, Math.round(cssWidth * ratio * ((bottom - topPx) / (right - left))));
+      tonearm.draw(last);
     },
     draw(p) {
       last = p;
+      if (!live) return;
+      activate();
       pose(p);
+      // The shared canvas only ever grows, so two rooms drawing in the same
+      // frames (a crossfade) never reallocate it; each draws into its corner.
+      const gl = renderer.domElement;
+      const { width: w, height: h } = canvas;
+      if (gl.width < w || gl.height < h) renderer.setSize(Math.max(gl.width, w), Math.max(gl.height, h), false);
+      renderer.setViewport(0, 0, w, h);
       renderer.render(scene, camera);
+      out.clearRect(0, 0, w, h);
+      // The viewport is measured from the bottom of the shared canvas.
+      out.drawImage(gl, 0, gl.height - h, w, h, 0, 0, w, h);
     },
-    dispose() {
-      scene.traverse(o => {
-        if (o instanceof THREE.Mesh) {
-          o.geometry.dispose();
-          const mats = Array.isArray(o.material) ? o.material : [o.material];
-          for (const m of mats) {
-            for (const v of Object.values(m)) if (v instanceof THREE.Texture) v.dispose();
-            m.dispose();
-          }
-        }
-      });
-      env.dispose();
-      renderer.dispose();
-      renderer.forceContextLoss();
-    },
+    dispose: release,
   };
+  return tonearm;
 }

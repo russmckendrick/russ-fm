@@ -50,6 +50,15 @@ three.js (`src/lib/tonearm.ts`, loaded lazily on first use):
 - **Light.** A neutral studio environment for the reflections, so the metal
   reads as steel, with warm key and rim lights for the room. Shadow-catcher
   planes on the record and the plinth darken the photo under the arm.
+- **One renderer.** Every room's arm is drawn by a single shared WebGL
+  renderer, environment map and arm model (`getEngine` in `tonearm.ts`).
+  Building those (a context, the shaders, the textures) blocks the main
+  thread, so it happens once per visit, with the shaders compiled through
+  `compileAsync`; a room only adds its own shadow catchers, arm rest, spindle
+  and camera. Each `RoomArm` canvas is a 2D canvas: a draw renders into a
+  corner of the shared canvas and copies the frame across. The home hero
+  mounts a new room on most switches, and a renderer per room made every
+  switch stutter. The renderer is disposed 30 s after the last room lets go.
 - **Motion.** The arm is either down on the lead-in or parked on its rest.
   Between the two it lifts on the cue, swings, and lowers with a soft settle
   (`LIFT_MS`, `SWING_MS`, `LOWER_MS`). Once down, it rides a slight warp in

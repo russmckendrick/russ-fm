@@ -43,7 +43,9 @@ const easeSettle = (t: number) => 1 - Math.pow(1 - t, 3) * Math.cos(t * 2.2);
  * The release room's tonearm, in 3D over a photo that has only the arm's base
  * (rooms with `arm` in src/config/release-rooms.json). Moving between down and
  * parked, it lifts on the cue, swings, and lowers. It draws only while moving,
- * and loads three.js on first use. Without WebGL it draws nothing.
+ * and loads three.js on first use. Every room's arm is drawn by one shared
+ * renderer (src/lib/tonearm.ts) and copied onto this 2D canvas, so a new room
+ * costs no new WebGL context or shaders. Without WebGL it draws nothing.
  */
 export function RoomArm({ room, img, down, onSettled, fast = false }: RoomArmProps) {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -57,10 +59,13 @@ export function RoomArm({ room, img, down, onSettled, fast = false }: RoomArmPro
     let live = true;
     let made: Tonearm | null = null;
     import('@/lib/tonearm')
-      .then(({ createTonearm }) => {
-        if (!live || !canvas.current) return;
-        made = createTonearm(canvas.current, room);
-        setArm(made);
+      .then(({ createTonearm }) => (live && canvas.current ? createTonearm(canvas.current, room) : null))
+      .then(arm => {
+        if (!arm) return;
+        // Unmounted while the shaders compiled: hand it straight back.
+        if (!live) return arm.dispose();
+        made = arm;
+        setArm(arm);
       })
       .catch(() => {});
     return () => {
